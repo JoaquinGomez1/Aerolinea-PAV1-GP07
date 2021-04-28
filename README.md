@@ -17,6 +17,12 @@ para saber cual es la url van a su perfil en GitHub > Repositorios > abren el ul
 y debería salirnos que no hay cambios y que el árbol de trabajo está limpio
 
 ## Importante:
+Antes de empezar a trabajar hay que verificar que no haya cambios que no tengamos en nuestra máquina
+Para eso ejecutamos lo siguiente:
+```bash
+- git pull upstream main
+```
+
 Siempre que terminemos de hacer cambios ejecutamos los siguientes comandos:
 ```bash
 - git add .
@@ -24,8 +30,4 @@ Siempre que terminemos de hacer cambios ejecutamos los siguientes comandos:
 - git push
 ```
 
-Antes de empezar a trabajar hay que verificar que no haya cambios que no tengamos en nuestra máquina
-Para eso ejecutamos lo siguiente:
-```bash
-- git pull upstream main
-```
+
