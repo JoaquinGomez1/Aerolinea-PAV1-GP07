@@ -82,7 +82,7 @@
             this.Btn_Minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Btn_Minimizar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Minimizar.Image")));
-            this.Btn_Minimizar.Location = new System.Drawing.Point(847, 3);
+            this.Btn_Minimizar.Location = new System.Drawing.Point(848, 4);
             this.Btn_Minimizar.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Minimizar.Name = "Btn_Minimizar";
             this.Btn_Minimizar.Size = new System.Drawing.Size(22, 24);
@@ -292,8 +292,13 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 49.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label2.Location = new System.Drawing.Point(178, 169);
+=======
+            this.label2.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.label2.Location = new System.Drawing.Point(169, 157);
+>>>>>>> c0467c38f859ceed1b205f660777594ab978726a
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(358, 78);
