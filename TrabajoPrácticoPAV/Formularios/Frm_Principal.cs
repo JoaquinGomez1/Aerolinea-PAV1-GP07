@@ -165,5 +165,10 @@ namespace TrabajoPrácticoPAV
         //    boton.BackColor = Color.FromArgb(10, 0, 120);
         //}
         #endregion
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

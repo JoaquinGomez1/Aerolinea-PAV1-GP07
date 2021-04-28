@@ -46,6 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Backend\Conexion_DB.cs" />
+    <Compile Include="Clase\ComboBox_Aerolinea.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Clase\TextBox_Aerolinea.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Clase\Tratamientos_Especiales.cs" />
     <Compile Include="Formularios\Frm_ABMClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +78,7 @@
     <Compile Include="Formularios\Frm_Principal.Designer.cs">
       <DependentUpon>Frm_Principal.cs</DependentUpon>
     </Compile>
+    <Compile Include="NE_Usuarios\NE_Clientes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formularios\Frm_ABMClientes.resx">

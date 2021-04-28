@@ -63,3 +63,16 @@ C:\Users\Usuario\Documents\TERCER AÑO\PAVI\Teorico\Aerolinea-PAV1-GP07-1\Trabaj
 C:\Users\Usuario\Documents\TERCER AÑO\PAVI\Teorico\Aerolinea-PAV1-GP07-1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.csproj.CoreCompileInputs.cache
 C:\Users\Usuario\Documents\TERCER AÑO\PAVI\Teorico\Aerolinea-PAV1-GP07-1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.exe
 C:\Users\Usuario\Documents\TERCER AÑO\PAVI\Teorico\Aerolinea-PAV1-GP07-1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.pdb
+G:\Programacion\C#\PAV\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\bin\Debug\TrabajoPrácticoPAV.exe.config
+G:\Programacion\C#\PAV\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\bin\Debug\TrabajoPrácticoPAV.exe
+G:\Programacion\C#\PAV\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\bin\Debug\TrabajoPrácticoPAV.pdb
+G:\Programacion\C#\PAV\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.csprojAssemblyReference.cache
+G:\Programacion\C#\PAV\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_ABMClientes.resources
+G:\Programacion\C#\PAV\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_ABMReservas.resources
+G:\Programacion\C#\PAV\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_Configuracion.resources
+G:\Programacion\C#\PAV\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Frm_Principal.resources
+G:\Programacion\C#\PAV\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Properties.Resources.resources
+G:\Programacion\C#\PAV\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.csproj.GenerateResource.cache
+G:\Programacion\C#\PAV\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.csproj.CoreCompileInputs.cache
+G:\Programacion\C#\PAV\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.exe
+G:\Programacion\C#\PAV\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.pdb
