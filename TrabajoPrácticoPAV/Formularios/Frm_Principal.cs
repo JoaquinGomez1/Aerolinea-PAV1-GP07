@@ -166,11 +166,8 @@ namespace TrabajoPrácticoPAV
         //}
         #endregion
 
-<<<<<<< HEAD
-        private void label2_Click(object sender, EventArgs e)
-=======
+
         private void Btn_Configuracion_Click(object sender, EventArgs e)
->>>>>>> c0467c38f859ceed1b205f660777594ab978726a
         {
 
         }

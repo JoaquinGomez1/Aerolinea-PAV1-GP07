@@ -296,7 +296,7 @@
             this.Cmb_TipoDoc.FormattingEnabled = true;
             this.Cmb_TipoDoc.Location = new System.Drawing.Point(191, 144);
             this.Cmb_TipoDoc.Name = "Cmb_TipoDoc";
-            this.Cmb_TipoDoc.Pp_MensajeError = null;
+            this.Cmb_TipoDoc.Pp_MensajeError = "Seleccionar Tipo Doc";
             this.Cmb_TipoDoc.Pp_NombreCampo = null;
             this.Cmb_TipoDoc.Size = new System.Drawing.Size(71, 21);
             this.Cmb_TipoDoc.TabIndex = 19;
@@ -305,7 +305,7 @@
             // 
             this.Txt_telefono.Location = new System.Drawing.Point(190, 107);
             this.Txt_telefono.Name = "Txt_telefono";
-            this.Txt_telefono.Pp_MensajeError = null;
+            this.Txt_telefono.Pp_MensajeError = "Escribe tu telefono";
             this.Txt_telefono.Pp_NombreCampo = null;
             this.Txt_telefono.Size = new System.Drawing.Size(72, 20);
             this.Txt_telefono.TabIndex = 17;
@@ -314,7 +314,7 @@
             // 
             this.Txt_Apellido.Location = new System.Drawing.Point(191, 77);
             this.Txt_Apellido.Name = "Txt_Apellido";
-            this.Txt_Apellido.Pp_MensajeError = null;
+            this.Txt_Apellido.Pp_MensajeError = "Escribe tu apellido";
             this.Txt_Apellido.Pp_NombreCampo = null;
             this.Txt_Apellido.Size = new System.Drawing.Size(72, 20);
             this.Txt_Apellido.TabIndex = 16;
@@ -323,7 +323,7 @@
             // 
             this.Txt_nombre.Location = new System.Drawing.Point(191, 47);
             this.Txt_nombre.Name = "Txt_nombre";
-            this.Txt_nombre.Pp_MensajeError = null;
+            this.Txt_nombre.Pp_MensajeError = "Escribe tu nombre";
             this.Txt_nombre.Pp_NombreCampo = null;
             this.Txt_nombre.Size = new System.Drawing.Size(72, 20);
             this.Txt_nombre.TabIndex = 15;
