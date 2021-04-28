@@ -12,20 +12,20 @@ para saber cual es la url van a su perfil en GitHub > Repositorios > abren el ul
 
 ## Si todo sale bien ejecutamos:
 ```bash
- $ git status
+ git status
 ```
 y debería salirnos que no hay cambios y que el árbol de trabajo está limpio
 
 ## Importante:
 Siempre que terminemos de hacer cambios ejecutamos los siguientes comandos:
 ```bash
-- $ git add .
-- $ git commit -m "<UnMensajeAca>" (por ejemplo "cambie aerOlimpo por aeroPuto")
-- $ git push
+- git add .
+- git commit -m "<UnMensajeAca>" (por ejemplo "cambie aerOlimpo por aeroPuto")
+- git push
 ```
 
 Antes de empezar a trabajar hay que verificar que no haya cambios que no tengamos en nuestra máquina
 Para eso ejecutamos lo siguiente:
 ```bash
-- $ git pull upstream main
+- git pull upstream main
 ```
