@@ -50,3 +50,16 @@ C:\Users\Usuario\Documents\TERCER AÑO\PAVI\Teorico\TrabajoPrácticoPAV.0.0.1\Tr
 C:\Users\Usuario\Documents\TERCER AÑO\PAVI\Teorico\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Properties.Resources.resources
 C:\Users\Usuario\Documents\TERCER AÑO\PAVI\Teorico\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.csproj.GenerateResource.cache
 C:\Users\Usuario\Documents\TERCER AÑO\PAVI\Teorico\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Documents\TERCER AÑO\PAVI\Teorico\Aerolinea-PAV1-GP07-1\TrabajoPrácticoPAV\bin\Debug\TrabajoPrácticoPAV.exe.config
+C:\Users\Usuario\Documents\TERCER AÑO\PAVI\Teorico\Aerolinea-PAV1-GP07-1\TrabajoPrácticoPAV\bin\Debug\TrabajoPrácticoPAV.exe
+C:\Users\Usuario\Documents\TERCER AÑO\PAVI\Teorico\Aerolinea-PAV1-GP07-1\TrabajoPrácticoPAV\bin\Debug\TrabajoPrácticoPAV.pdb
+C:\Users\Usuario\Documents\TERCER AÑO\PAVI\Teorico\Aerolinea-PAV1-GP07-1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.csprojAssemblyReference.cache
+C:\Users\Usuario\Documents\TERCER AÑO\PAVI\Teorico\Aerolinea-PAV1-GP07-1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_ABMClientes.resources
+C:\Users\Usuario\Documents\TERCER AÑO\PAVI\Teorico\Aerolinea-PAV1-GP07-1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_ABMReservas.resources
+C:\Users\Usuario\Documents\TERCER AÑO\PAVI\Teorico\Aerolinea-PAV1-GP07-1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_Configuracion.resources
+C:\Users\Usuario\Documents\TERCER AÑO\PAVI\Teorico\Aerolinea-PAV1-GP07-1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Frm_Principal.resources
+C:\Users\Usuario\Documents\TERCER AÑO\PAVI\Teorico\Aerolinea-PAV1-GP07-1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Properties.Resources.resources
+C:\Users\Usuario\Documents\TERCER AÑO\PAVI\Teorico\Aerolinea-PAV1-GP07-1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.csproj.GenerateResource.cache
+C:\Users\Usuario\Documents\TERCER AÑO\PAVI\Teorico\Aerolinea-PAV1-GP07-1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Documents\TERCER AÑO\PAVI\Teorico\Aerolinea-PAV1-GP07-1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.exe
+C:\Users\Usuario\Documents\TERCER AÑO\PAVI\Teorico\Aerolinea-PAV1-GP07-1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.pdb
