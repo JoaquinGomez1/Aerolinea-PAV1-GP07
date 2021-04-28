@@ -3,8 +3,8 @@
 ### 2 Una vez hecho el fork en el directorio donde queramos que esté el proyecto ejecutamos los siguientes comandos en la terminal 
 (Click derecho en la carpeta del tp > Git Bash Here):
 ```bash
-- git init
 - git clone <url-de-su-repositorio> 
+- git init
 - git remote add upstream https://github.com/JoaquinGomez1/Aerolinea-PAV1-GP07
 ```
 para la url de su repositorio es importante que sea el que esta en su cuenta y no el original.
