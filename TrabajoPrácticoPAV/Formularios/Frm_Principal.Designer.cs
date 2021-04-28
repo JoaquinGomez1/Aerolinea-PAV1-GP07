@@ -82,7 +82,7 @@
             this.Btn_Minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Btn_Minimizar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Minimizar.Image")));
-            this.Btn_Minimizar.Location = new System.Drawing.Point(847, 3);
+            this.Btn_Minimizar.Location = new System.Drawing.Point(848, 4);
             this.Btn_Minimizar.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Minimizar.Name = "Btn_Minimizar";
             this.Btn_Minimizar.Size = new System.Drawing.Size(22, 24);
