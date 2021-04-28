@@ -1,9 +1,9 @@
 # Como contribuir al proyecto:
 ### 1 Hacer fork a este repositorio (Aparece arriba a la derecha)
 ### 2 Una vez hecho el fork en el directorio donde queramos que esté el proyecto ejecutamos los siguientes comandos en la terminal 
-(Click derecho en la carpeta del tp Git Bash Here):
+(Click derecho en la carpeta del tp > Git Bash Here):
 ```bash
-- git clone <url-de-su-repositorio> (Es importante que sea el que esta en su cuenta y no el original)
+- git clone <url-de-su-repositorio> (Es importante que sea el que esta en su cuenta y no el original) (van a su perfil en GitHub > Repositorios > abren el ultimo > copian la url)
 - git remote add upstream https://github.com/JoaquinGomez1/Aerolinea-PAV1-GP07
 ```
 
@@ -17,7 +17,7 @@ y debería salirnos que no hay cambios y que el árbol de trabajo está limpio
 Siempre que terminemos de hacer cambios ejecutamos los siguientes comandos:
 ```bash
 - $ git add .
-- $ git commit -m "<UnMensajeAca>"
+- $ git commit -m "<UnMensajeAca>" (por ejemplo "cambie aerOlimpo por aeroPuto")
 - $ git push
 ```
 
