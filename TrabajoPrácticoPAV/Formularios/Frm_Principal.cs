@@ -13,7 +13,7 @@ using TrabajoPrácticoPAV.Formularios;
 namespace TrabajoPrácticoPAV
 {
     public partial class Frm_Principal : Form
-    { 
+    {
         public Frm_Principal()
         {
             InitializeComponent();
@@ -32,7 +32,7 @@ namespace TrabajoPrácticoPAV
             }
         }
 
-            
+
 
         private void panel1_MouseMove(object sender, MouseEventArgs e)
         {
@@ -63,13 +63,13 @@ namespace TrabajoPrácticoPAV
 
         private void MouseClickButton(object sender, EventArgs e)
         {
-            CambiarColorBoton((Button)sender);
             switch (((Button)sender).Name.ToString())
             {
                 case "Btn_ABMClientes":
-                    AbrirFormulario<Frm_ABMClientes>(); 
+                    AbrirFormulario<Frm_ABMClientes>();
                     break;
-                case "Btn_ABMReservas": AbrirFormulario<Frm_ABMReservas>();
+                case "Btn_ABMReservas":
+                    AbrirFormulario<Frm_ABMReservas>();
                     break;
                 default:
                     MessageBox.Show("Señor usted no está autorizado a usar esto");
@@ -77,7 +77,7 @@ namespace TrabajoPrácticoPAV
                     ((Button)sender).Enabled = false;
                     break;
             }
-                
+
         }
 
         private void Btn_Menu_Click(object sender, EventArgs e)
@@ -129,7 +129,7 @@ namespace TrabajoPrácticoPAV
                 FrmActual = formulario.Name.ToString();
                 formulario.FormClosed += new FormClosedEventHandler(FormCerrado);
                 Btn_Menu.BringToFront();
-                
+
             }
             else
             {
