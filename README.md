@@ -20,7 +20,12 @@ y debería salirnos que no hay cambios y que el árbol de trabajo está limpio
 Antes de empezar a trabajar hay que verificar que no haya cambios que no tengamos en nuestra máquina
 Para eso ejecutamos lo siguiente:
 ```bash
-- git pull upstream main
+- git pull
+```
+En caso de que no funcione ejecutar 
+
+```bash
+- git remote -v
 ```
 
 Siempre que terminemos de hacer cambios ejecutamos los siguientes comandos:
