@@ -35,5 +35,6 @@ Siempre que terminemos de hacer cambios ejecutamos los siguientes comandos:
 - git push
 ```
 Luego vamos a GitHub > van a su perfil > repositories > Aerolinea-PAV1-GP07-1 > Pull requests > New Pull request
+
 Una vez que se acepta el Pull request te llega un mail con la confirmacion y se actualiza el codigo para todos.
 
