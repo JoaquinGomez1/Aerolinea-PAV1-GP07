@@ -296,9 +296,9 @@
             this.label2.Location = new System.Drawing.Point(168, 162);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(366, 78);
+            this.label2.Size = new System.Drawing.Size(358, 78);
             this.label2.TabIndex = 1;
-            this.label2.Text = "AerOpuTO";
+            this.label2.Text = "AerOlimpo";
             // 
             // Btn_Menu
             // 
