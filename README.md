@@ -34,5 +34,5 @@ Siempre que terminemos de hacer cambios ejecutamos los siguientes comandos:
 - git commit -m "<UnMensajeAca>" (por ejemplo "cambie aerOlimpo por aeroPuto")
 - git push
 ```
-
+Luego vamos a GitHub > nuestro perfil > repositories > Aerolinea-PAV1-GP07-1 > Pull requests > New Pull request
 
