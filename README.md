@@ -29,3 +29,7 @@ Para eso ejecutamos lo siguiente:
 ```bash
 - git pull upstream main
 ```
+Luego vamos a GitHub > van a su perfil > repositories > Aerolinea-PAV1-GP07-1 > Pull requests > New Pull request > Create Pull Request > Si se quiere se puede agregar un comentario de los cambios que se hizo > Create pull request
+
+Una vez que se acepta el Pull request te llega un mail con la confirmacion y se actualiza el codigo para todos.
+
