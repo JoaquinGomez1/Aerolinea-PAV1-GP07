@@ -1,0 +1,52 @@
+D:\Enzo\Facultad\01. PAVI\TrabajoPrácticoPAV\TrabajoPrácticoPAV\bin\Debug\TrabajoPrácticoPAV.exe.config
+D:\Enzo\Facultad\01. PAVI\TrabajoPrácticoPAV\TrabajoPrácticoPAV\bin\Debug\TrabajoPrácticoPAV.exe
+D:\Enzo\Facultad\01. PAVI\TrabajoPrácticoPAV\TrabajoPrácticoPAV\bin\Debug\TrabajoPrácticoPAV.pdb
+D:\Enzo\Facultad\01. PAVI\TrabajoPrácticoPAV\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Frm_Principal.resources
+D:\Enzo\Facultad\01. PAVI\TrabajoPrácticoPAV\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Properties.Resources.resources
+D:\Enzo\Facultad\01. PAVI\TrabajoPrácticoPAV\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.csproj.GenerateResource.cache
+D:\Enzo\Facultad\01. PAVI\TrabajoPrácticoPAV\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.csproj.CoreCompileInputs.cache
+D:\Enzo\Facultad\01. PAVI\TrabajoPrácticoPAV\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.exe
+D:\Enzo\Facultad\01. PAVI\TrabajoPrácticoPAV\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.pdb
+D:\Enzo\Facultad\01. PAVI\TrabajoPrácticoPAV\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_ABMClientes.resources
+D:\Enzo\Facultad\01. PAVI\TrabajoPrácticoPAV\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_ABMReservas.resources
+D:\Enzo\Facultad\01. PAVI\TrabajoPrácticoPAV\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_Configuracion.resources
+D:\Enzo\Facultad\01. PAVI\TrabajoPrácticoPAV\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.csprojAssemblyReference.cache
+C:\Users\Lautaro\Desktop\Tato\2021\PAV\TrabajoPrácticoPAV\TrabajoPrácticoPAV\bin\Debug\TrabajoPrácticoPAV.exe.config
+C:\Users\Lautaro\Desktop\Tato\2021\PAV\TrabajoPrácticoPAV\TrabajoPrácticoPAV\bin\Debug\TrabajoPrácticoPAV.exe
+C:\Users\Lautaro\Desktop\Tato\2021\PAV\TrabajoPrácticoPAV\TrabajoPrácticoPAV\bin\Debug\TrabajoPrácticoPAV.pdb
+C:\Users\Lautaro\Desktop\Tato\2021\PAV\TrabajoPrácticoPAV\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.csprojAssemblyReference.cache
+C:\Users\Lautaro\Desktop\Tato\2021\PAV\TrabajoPrácticoPAV\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_ABMClientes.resources
+C:\Users\Lautaro\Desktop\Tato\2021\PAV\TrabajoPrácticoPAV\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_ABMReservas.resources
+C:\Users\Lautaro\Desktop\Tato\2021\PAV\TrabajoPrácticoPAV\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_Configuracion.resources
+C:\Users\Lautaro\Desktop\Tato\2021\PAV\TrabajoPrácticoPAV\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Frm_Principal.resources
+C:\Users\Lautaro\Desktop\Tato\2021\PAV\TrabajoPrácticoPAV\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Properties.Resources.resources
+C:\Users\Lautaro\Desktop\Tato\2021\PAV\TrabajoPrácticoPAV\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.csproj.GenerateResource.cache
+C:\Users\Lautaro\Desktop\Tato\2021\PAV\TrabajoPrácticoPAV\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.csproj.CoreCompileInputs.cache
+C:\Users\Lautaro\Desktop\Tato\2021\PAV\TrabajoPrácticoPAV\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.exe
+C:\Users\Lautaro\Desktop\Tato\2021\PAV\TrabajoPrácticoPAV\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.pdb
+D:\Flor\Documentos\UTN\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\bin\Debug\TrabajoPrácticoPAV.exe.config
+D:\Flor\Documentos\UTN\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\bin\Debug\TrabajoPrácticoPAV.exe
+D:\Flor\Documentos\UTN\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\bin\Debug\TrabajoPrácticoPAV.pdb
+D:\Flor\Documentos\UTN\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.csprojAssemblyReference.cache
+D:\Flor\Documentos\UTN\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_ABMClientes.resources
+D:\Flor\Documentos\UTN\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_ABMReservas.resources
+D:\Flor\Documentos\UTN\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_Configuracion.resources
+D:\Flor\Documentos\UTN\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Frm_Principal.resources
+D:\Flor\Documentos\UTN\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Properties.Resources.resources
+D:\Flor\Documentos\UTN\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.csproj.GenerateResource.cache
+D:\Flor\Documentos\UTN\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.csproj.CoreCompileInputs.cache
+D:\Flor\Documentos\UTN\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.exe
+D:\Flor\Documentos\UTN\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.pdb
+C:\Users\Usuario\Documents\TERCER AÑO\PAVI\Teorico\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.csprojAssemblyReference.cache
+C:\Users\Usuario\Documents\TERCER AÑO\PAVI\Teorico\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.exe
+C:\Users\Usuario\Documents\TERCER AÑO\PAVI\Teorico\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.pdb
+C:\Users\Usuario\Documents\TERCER AÑO\PAVI\Teorico\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\bin\Debug\TrabajoPrácticoPAV.exe.config
+C:\Users\Usuario\Documents\TERCER AÑO\PAVI\Teorico\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\bin\Debug\TrabajoPrácticoPAV.exe
+C:\Users\Usuario\Documents\TERCER AÑO\PAVI\Teorico\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\bin\Debug\TrabajoPrácticoPAV.pdb
+C:\Users\Usuario\Documents\TERCER AÑO\PAVI\Teorico\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_ABMClientes.resources
+C:\Users\Usuario\Documents\TERCER AÑO\PAVI\Teorico\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_ABMReservas.resources
+C:\Users\Usuario\Documents\TERCER AÑO\PAVI\Teorico\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_Configuracion.resources
+C:\Users\Usuario\Documents\TERCER AÑO\PAVI\Teorico\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Frm_Principal.resources
+C:\Users\Usuario\Documents\TERCER AÑO\PAVI\Teorico\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Properties.Resources.resources
+C:\Users\Usuario\Documents\TERCER AÑO\PAVI\Teorico\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.csproj.GenerateResource.cache
+C:\Users\Usuario\Documents\TERCER AÑO\PAVI\Teorico\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.csproj.CoreCompileInputs.cache
