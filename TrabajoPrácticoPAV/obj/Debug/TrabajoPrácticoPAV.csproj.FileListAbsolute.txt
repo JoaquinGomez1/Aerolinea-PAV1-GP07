@@ -105,3 +105,4 @@ D:\Enzo\Facultad\01. PAVI\Git\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\
 D:\Enzo\Facultad\01. PAVI\Git\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.csproj.CoreCompileInputs.cache
 D:\Enzo\Facultad\01. PAVI\Git\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.exe
 D:\Enzo\Facultad\01. PAVI\Git\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.pdb
+g:\programacion\c#\pav\trabajoprácticopav.0.0.1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_ABMViajes.resources
