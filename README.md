@@ -5,7 +5,8 @@
 ```bash
  git clone <url-de-su-repositorio> 
  git init
- git remote add upstream https://github.com/JoaquinGomez1/Aerolinea-PAV1-GP07
+ git remote add -u https://github.com/JoaquinGomez1/Aerolinea-PAV1-GP07
+ git remote add -u <url-de-su-repositorio> 
 ```
 para la url de su repositorio es importante que sea el que esta en su cuenta y no el original.
 para saber cual es la url van a su perfil en GitHub > Repositorios > abren el ultimo > copian la dirección del navegador
@@ -22,11 +23,13 @@ Para eso ejecutamos lo siguiente:
 ```bash
  git pull
 ```
-En caso de que no funcione ejecutar 
-
+En caso de que no funcione tenemos varias soluciones.
+Si el error nos indica 
 ```bash
  git remote -v
 ```
+
+y verificar que el link del repositorio que figura sea este.
 
 Siempre que terminemos de hacer cambios ejecutamos los siguientes comandos:
 ```bash
@@ -38,4 +41,9 @@ Siempre que terminemos de hacer cambios ejecutamos los siguientes comandos:
 Luego vamos a GitHub > van a su perfil > repositories > Aerolinea-PAV1-GP07-1 > Pull requests > New Pull request > Create Pull Request > Si se quiere se puede agregar un comentario de los cambios que se hizo > Create pull request
 
 Una vez que se acepta el Pull request te llega un mail con la confirmacion y se actualiza el codigo para todos.
+
+### <span style="color:blue">Aclaración: </span>
+ Git es una herramienta con muchos beneficios pero que es necesario entender algunas cosas basicas para poder empezar a usarlo adecuadamente.
+ vamos a dejar a disposición la [guia oficial](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository) de Git en la que todos van a poder encontrar mas de una respuesta a algún problema que estén teniendo
+ 
 
