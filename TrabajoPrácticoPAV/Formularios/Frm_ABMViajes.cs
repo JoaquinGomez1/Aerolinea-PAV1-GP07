@@ -1,25 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using TrabajoPrácticoPAV.Backend;
+using TrabajoPrácticoPAV.Clase;
+using static TrabajoPrácticoPAV.Clase.Tratamientos_Especiales;
 
 namespace TrabajoPrácticoPAV.Formularios
 {
     public partial class Frm_ABMViajes : Form
     {
-        //private string duracionEstimadaDelViaje;
-        //private string horarioSalidaDelViaje;
-        //private string horarioLlegadaDelViaje;
 
         public Frm_ABMViajes()
         {
             InitializeComponent();
         }
+
+        private int duracionEstimada { get; set; }
 
         private void label3_Click(object sender, EventArgs e)
         {
@@ -62,6 +57,7 @@ namespace TrabajoPrácticoPAV.Formularios
                 if (esSalidaMenorALlegada)
                 {
                     int duracionEstimadaActual = calcularDiferenciaDelDia(horarioLlegadaMilitar, horarioSalidaMilitar);
+                    duracionEstimada = duracionEstimadaActual;
                     lbl_duracionEstimada.Text = FormatearIntMilitarAString(duracionEstimadaActual);
                 }
 
@@ -71,7 +67,6 @@ namespace TrabajoPrácticoPAV.Formularios
                     lbl_duracionEstimada.Text = FormatearIntMilitarAString(duracionEstimadaActual);
                 }
             }
-
         }
 
         public int convertirAIntMilitar(string horario)
@@ -116,5 +111,29 @@ namespace TrabajoPrácticoPAV.Formularios
 
             return $"{StringMilitar[0]}{StringMilitar[1]}:{StringMilitar[2]}{StringMilitar[3]}hs";
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Tratamientos_Especiales tratamientos = new Tratamientos_Especiales();
+            Resultado esFormularioValido = tratamientos.Validar(this.Controls);
+
+            if (esFormularioValido == Resultado.correcto)
+            {
+                DateTime horarioPresencia = ParseTime(Mtxt_presencia.Text);
+                DateTime horarioSalida = ParseTime(maskedTextBox1.Text);
+                DateTime horarioLlegada = ParseTime(maskedTextBox2.Text);
+
+                Conexion_DB _DB = new Conexion_DB();
+                string sql = @"INSERT INTO Viajes(horarioPresencia, horarioSalida, horarioLlegada, duracionEstimada) 
+                            VALUES(" + $"{horarioPresencia} {horarioSalida} {horarioLlegada} {duracionEstimada}" + ")";
+
+                _DB.Insertar(sql);
+            }
+        }
+
+        // Funcion lambda que convierte un formato de horas y minutos a un objeto DateTime 
+        // El parametro tiene que seguir la siguiente estructura:  "14:00" 
+        // Documentación oficial del método: https://docs.microsoft.com/en-us/dotnet/api/system.datetime.parseexact?view=net-5.0
+        private DateTime ParseTime(string horasYMin) => DateTime.ParseExact(horasYMin, "H:mm", null, System.Globalization.DateTimeStyles.None);
     }
 }

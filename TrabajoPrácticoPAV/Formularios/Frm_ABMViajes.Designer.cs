@@ -31,9 +31,8 @@ namespace TrabajoPrácticoPAV.Formularios
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
+            this.Mtxt_presencia = new System.Windows.Forms.MaskedTextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -45,7 +44,6 @@ namespace TrabajoPrácticoPAV.Formularios
             this.lbl_duracionEstimada = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -63,30 +61,28 @@ namespace TrabajoPrácticoPAV.Formularios
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.Mtxt_presencia);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.lbl_duracionEstimada);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(730, 391);
             this.panel1.TabIndex = 2;
             // 
-            // label10
+            // Mtxt_presencia
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(93, 255);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(93, 13);
-            this.label10.TabIndex = 16;
-            this.label10.Text = "Origen del vuelo ?";
+            this.Mtxt_presencia.Location = new System.Drawing.Point(204, 71);
+            this.Mtxt_presencia.Mask = "00:00";
+            this.Mtxt_presencia.Name = "Mtxt_presencia";
+            this.Mtxt_presencia.Size = new System.Drawing.Size(37, 20);
+            this.Mtxt_presencia.TabIndex = 17;
+            this.Mtxt_presencia.ValidatingType = typeof(System.DateTime);
             // 
             // label8
             // 
@@ -97,15 +93,6 @@ namespace TrabajoPrácticoPAV.Formularios
             this.label8.Size = new System.Drawing.Size(54, 13);
             this.label8.TabIndex = 12;
             this.label8.Text = "Horarios";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(90, 242);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(113, 13);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "Destino final del viaje?";
             // 
             // button2
             // 
@@ -121,6 +108,7 @@ namespace TrabajoPrácticoPAV.Formularios
             this.button2.TabIndex = 14;
             this.button2.Text = "Cargar";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -221,13 +209,6 @@ namespace TrabajoPrácticoPAV.Formularios
             this.label2.TabIndex = 4;
             this.label2.Text = "Horario de presencia";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(186, 66);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
-            // 
             // Frm_ABMViajes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -255,7 +236,6 @@ namespace TrabajoPrácticoPAV.Formularios
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.MaskedTextBox maskedTextBox2;
@@ -263,9 +243,8 @@ namespace TrabajoPrácticoPAV.Formularios
         private System.Windows.Forms.Label lbl_duracionEstimada;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.MaskedTextBox Mtxt_presencia;
     }
 }
