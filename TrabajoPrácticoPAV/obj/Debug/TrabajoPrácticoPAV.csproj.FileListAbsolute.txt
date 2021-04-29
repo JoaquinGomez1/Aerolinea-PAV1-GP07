@@ -63,3 +63,46 @@ C:\Users\Usuario\Documents\TERCER AÑO\PAVI\Teorico\Aerolinea-PAV1-GP07-1\Trabaj
 C:\Users\Usuario\Documents\TERCER AÑO\PAVI\Teorico\Aerolinea-PAV1-GP07-1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.csproj.CoreCompileInputs.cache
 C:\Users\Usuario\Documents\TERCER AÑO\PAVI\Teorico\Aerolinea-PAV1-GP07-1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.exe
 C:\Users\Usuario\Documents\TERCER AÑO\PAVI\Teorico\Aerolinea-PAV1-GP07-1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.pdb
+<<<<<<< HEAD
+G:\Programacion\C#\PAV\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\bin\Debug\TrabajoPrácticoPAV.exe.config
+G:\Programacion\C#\PAV\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\bin\Debug\TrabajoPrácticoPAV.exe
+G:\Programacion\C#\PAV\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\bin\Debug\TrabajoPrácticoPAV.pdb
+G:\Programacion\C#\PAV\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.csprojAssemblyReference.cache
+G:\Programacion\C#\PAV\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_ABMClientes.resources
+G:\Programacion\C#\PAV\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_ABMReservas.resources
+G:\Programacion\C#\PAV\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_Configuracion.resources
+G:\Programacion\C#\PAV\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Frm_Principal.resources
+G:\Programacion\C#\PAV\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Properties.Resources.resources
+G:\Programacion\C#\PAV\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.csproj.GenerateResource.cache
+G:\Programacion\C#\PAV\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.csproj.CoreCompileInputs.cache
+G:\Programacion\C#\PAV\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.exe
+G:\Programacion\C#\PAV\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.pdb
+=======
+C:\Users\Usuario\Desktop\TP PAV\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\bin\Debug\TrabajoPrácticoPAV.exe.config
+C:\Users\Usuario\Desktop\TP PAV\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\bin\Debug\TrabajoPrácticoPAV.exe
+C:\Users\Usuario\Desktop\TP PAV\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\bin\Debug\TrabajoPrácticoPAV.pdb
+C:\Users\Usuario\Desktop\TP PAV\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.csprojAssemblyReference.cache
+C:\Users\Usuario\Desktop\TP PAV\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_ABMClientes.resources
+C:\Users\Usuario\Desktop\TP PAV\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_ABMReservas.resources
+C:\Users\Usuario\Desktop\TP PAV\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_Configuracion.resources
+C:\Users\Usuario\Desktop\TP PAV\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Frm_Principal.resources
+C:\Users\Usuario\Desktop\TP PAV\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Properties.Resources.resources
+C:\Users\Usuario\Desktop\TP PAV\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.csproj.GenerateResource.cache
+C:\Users\Usuario\Desktop\TP PAV\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\TP PAV\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.exe
+C:\Users\Usuario\Desktop\TP PAV\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.pdb
+>>>>>>> c0467c38f859ceed1b205f660777594ab978726a
+D:\Enzo\Facultad\01. PAVI\Git\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\bin\Debug\TrabajoPrácticoPAV.exe.config
+D:\Enzo\Facultad\01. PAVI\Git\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\bin\Debug\TrabajoPrácticoPAV.exe
+D:\Enzo\Facultad\01. PAVI\Git\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\bin\Debug\TrabajoPrácticoPAV.pdb
+D:\Enzo\Facultad\01. PAVI\Git\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.csprojAssemblyReference.cache
+D:\Enzo\Facultad\01. PAVI\Git\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_ABMClientes.resources
+D:\Enzo\Facultad\01. PAVI\Git\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_ABMReservas.resources
+D:\Enzo\Facultad\01. PAVI\Git\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_Configuracion.resources
+D:\Enzo\Facultad\01. PAVI\Git\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Frm_Principal.resources
+D:\Enzo\Facultad\01. PAVI\Git\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Properties.Resources.resources
+D:\Enzo\Facultad\01. PAVI\Git\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.csproj.GenerateResource.cache
+D:\Enzo\Facultad\01. PAVI\Git\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.csproj.CoreCompileInputs.cache
+D:\Enzo\Facultad\01. PAVI\Git\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.exe
+D:\Enzo\Facultad\01. PAVI\Git\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.pdb
+g:\programacion\c#\pav\trabajoprácticopav.0.0.1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_ABMViajes.resources

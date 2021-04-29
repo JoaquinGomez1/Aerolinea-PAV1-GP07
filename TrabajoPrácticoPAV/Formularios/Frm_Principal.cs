@@ -71,6 +71,9 @@ namespace TrabajoPrácticoPAV
                 case "Btn_ABMReservas":
                     AbrirFormulario<Frm_ABMReservas>();
                     break;
+                case "Btn_ABM_Viaje":
+                    AbrirFormulario<Frm_ABMViajes>();
+                    break;
                 default:
                     MessageBox.Show("Señor usted no está autorizado a usar esto");
                     ((Button)sender).BackColor = Color.FromArgb(26, 32, 40);
@@ -165,5 +168,11 @@ namespace TrabajoPrácticoPAV
         //    boton.BackColor = Color.FromArgb(10, 0, 120);
         //}
         #endregion
+
+
+        private void Btn_Configuracion_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
