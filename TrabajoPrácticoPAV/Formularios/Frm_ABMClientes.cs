@@ -55,7 +55,6 @@ namespace TrabajoPrácticoPAV.Formularios
             {
                 MessageBox.Show("Fecha inválida seleccione una fecha anterior a la de hoy");
                 ((MonthCalendar)sender).Focus();
-                return;
             }
 
             MessageBox.Show(((MonthCalendar)sender).SelectionRange.End.ToString());
@@ -66,6 +65,22 @@ namespace TrabajoPrácticoPAV.Formularios
         {
             Tratamientos_Especiales tratamientos = new Tratamientos_Especiales();
             tratamientos.Validar(this.Controls);
+        }
+
+        private void btn_cancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Frm_ABMClientes_Load(object sender, EventArgs e)
+        {
+            Cmb_TipoDoc.CargarCombo();
+            Cmb_Pais.CargarCombo();
+        }
+
+        private void Cmb_Pais_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
