@@ -75,7 +75,7 @@ namespace TrabajoPrácticoPAV
                     AbrirFormulario<Frm_ABMViajes>();
                     break;
                 default:
-                    MessageBox.Show("Esperando implementación")
+                    MessageBox.Show("Esperando implementación");
                     break;
             }
 
