@@ -26,9 +26,8 @@ namespace TrabajoPrácticoPAV.Clase
                         ((TextBox_Aerolinea)item).Focus();
                         return Resultado.error;
                     }
-                    
-                    return Resultado.correcto;
                 }
+
                 if (item.GetType().Name == "ComboBox_Aerolinea")
                 {
                     if (((ComboBox_Aerolinea)item).SelectedIndex == -1)
@@ -37,13 +36,9 @@ namespace TrabajoPrácticoPAV.Clase
                         ((ComboBox_Aerolinea)item).Focus();
                         return Resultado.error;
                     }
-
-                    return Resultado.correcto;
                 }
             }
-
-            // Retornar error por defecto para no tener problemas con condiciones no manejadas
-            return Resultado.error; 
+            return Resultado.correcto;
         }
         public string CostructorInsert(string NombreTabla, Control.ControlCollection controles)
         {

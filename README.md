@@ -23,7 +23,16 @@ Para eso ejecutamos lo siguiente:
 ```bash
  git pull
 ```
-En caso de que no funcione tenemos varias soluciones.
+Es posible que Git nos pida que guardemos los cambios en un commit antes de hacer pull.
+Esto pasa porque se necesita tener guardados nuestros cambios en el entorno local antes de
+intentar traer y fusionar las cosas que están en el repositorio original
+
+Para poder "guardar" los cambios en nuestra máquina necesitamos hacer un commit ejecutando los siguientes comandos
+```bash
+ git add .
+ git commit -m "<UnMensajeAca>"
+```
+
 Si el error nos indica 
 ```bash
  git remote -v
