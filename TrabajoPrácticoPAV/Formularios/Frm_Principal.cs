@@ -75,9 +75,7 @@ namespace TrabajoPrácticoPAV
                     AbrirFormulario<Frm_ABMViajes>();
                     break;
                 default:
-                    MessageBox.Show("Señor usted no está autorizado a usar esto");
-                    ((Button)sender).BackColor = Color.FromArgb(26, 32, 40);
-                    ((Button)sender).Enabled = false;
+                    MessageBox.Show("Esperando implementación");
                     break;
             }
 
