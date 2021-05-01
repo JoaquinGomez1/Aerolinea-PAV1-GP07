@@ -47,9 +47,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Backend\Conexion_DB.cs" />
+    <Compile Include="Clase\Button_Aerolinea.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Clase\ComboBox_Aerolinea.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Clase\Estilo.cs" />
     <Compile Include="Clase\TextBox_Aerolinea.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -148,6 +152,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\gear-wheel-304395_960_720 %281%29 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Avion_Icono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendario_Icono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cliente_Icono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Configuracion_Icono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mundo_Icono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ticket_Icono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tripulacion_Icono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ubicacion_Icono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vuelo_Icono.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
