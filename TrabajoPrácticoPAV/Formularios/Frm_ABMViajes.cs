@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Backend;
 using TrabajoPrácticoPAV.Clase;
@@ -14,7 +15,8 @@ namespace TrabajoPrácticoPAV.Formularios
             InitializeComponent();
         }
 
-        private int duracionEstimada { get; set; }
+        private readonly Conexion_DB _DB = new Conexion_DB();
+        private int duracionEstimadaViaje { get; set; }
 
         private void label3_Click(object sender, EventArgs e)
         {
@@ -23,7 +25,7 @@ namespace TrabajoPrácticoPAV.Formularios
 
         private void Frm_ABMViajes_Load(object sender, EventArgs e)
         {
-
+            CargarDataGrid();
         }
 
         private void maskedTextBox1_TextChanged(object sender, EventArgs e)
@@ -57,13 +59,14 @@ namespace TrabajoPrácticoPAV.Formularios
                 if (esSalidaMenorALlegada)
                 {
                     int duracionEstimadaActual = calcularDiferenciaDelDia(horarioLlegadaMilitar, horarioSalidaMilitar);
-                    duracionEstimada = duracionEstimadaActual;
+                    duracionEstimadaViaje = duracionEstimadaActual;
                     lbl_duracionEstimada.Text = FormatearIntMilitarAString(duracionEstimadaActual);
                 }
 
                 if (!esSalidaMenorALlegada)
                 {
                     int duracionEstimadaActual = horarioLlegadaMilitar - horarioSalidaMilitar;
+                    duracionEstimadaViaje = duracionEstimadaActual;
                     lbl_duracionEstimada.Text = FormatearIntMilitarAString(duracionEstimadaActual);
                 }
             }
@@ -89,25 +92,17 @@ namespace TrabajoPrácticoPAV.Formularios
 
         public string FormatearIntMilitarAString(int IntMilitar)
         {
-
             string StringMilitar = IntMilitar.ToString();
             if (StringMilitar.Length > 4) { return ""; }
 
             if (StringMilitar.Length == 3)
-            {
-
                 StringMilitar = $"0{StringMilitar}";
-            }
 
             if (StringMilitar.Length == 2)
-            {
                 StringMilitar = $"00{StringMilitar}";
-            }
 
             if (StringMilitar.Length == 1)
-            {
                 StringMilitar = $"000{StringMilitar}";
-            }
 
             return $"{StringMilitar[0]}{StringMilitar[1]}:{StringMilitar[2]}{StringMilitar[3]}hs";
         }
@@ -135,10 +130,6 @@ namespace TrabajoPrácticoPAV.Formularios
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            Tratamientos_Especiales tratamientos = new Tratamientos_Especiales();
-            bool esFormularioValido = tratamientos.Validar(this.Controls) == Resultado.correcto;
-            if (!esFormularioValido) return;
-
             bool estanCamposCompletos = ValidarCamposCompletos() == Resultado.correcto;
             if (!estanCamposCompletos) return;
 
@@ -151,20 +142,22 @@ namespace TrabajoPrácticoPAV.Formularios
             bool noEstaHorarioDesfasado = VerificarHorarioDesfasado() == Resultado.correcto;
             if (!noEstaHorarioDesfasado) return;
 
-            bool estaTodoCorrecto = esFormularioValido && estanCamposCompletos && esHorarioPresenciaCorrecto && noEstaHorarioDesfasado;
+            bool estaTodoCorrecto = estanCamposCompletos && esHorarioPresenciaCorrecto && noEstaHorarioDesfasado;
 
             if (estaTodoCorrecto)
             {
                 MessageBox.Show("Resultado correcto");
-                DateTime horarioPresencia = ParseTime(Mtxt_presencia.Text);
-                DateTime horarioSalida = ParseTime(Mtxt_horarioSalida.Text);
-                DateTime horarioLlegada = ParseTime(Mtxt_horarioLlegada.Text);
+                string horarioPresencia = Mtxt_presencia.Text;
+                string horarioSalida = Mtxt_horarioSalida.Text;
+                string horarioLlegada = Mtxt_horarioLlegada.Text;
 
-                Conexion_DB _DB = new Conexion_DB();
-                string sql = @"INSERT INTO Viajes(horarioPresencia, horarioSalida, horarioLlegada, duracionEstimada) 
-                        VALUES(" + $"{horarioPresencia}, {horarioSalida}, {horarioLlegada}, {duracionEstimada}" + ")";
+                string sql = @"INSERT INTO Viaje(horarioPresencia, horarioSalida, horarioLlegada, duracionEstimada) 
+                        VALUES(" + $"'{horarioPresencia}', '{horarioSalida}', '{horarioLlegada}', '{duracionEstimadaViaje}'" + ")";
 
                 _DB.Insertar(sql);
+                // Permite refrescar los datos del data grid con lo que fue ingresado recientemente
+
+                CargarDataGrid();
             }
 
             if (!estaTodoCorrecto)
@@ -244,6 +237,37 @@ namespace TrabajoPrácticoPAV.Formularios
                 }
             }
             return Resultado.correcto;
+        }
+
+        private void CargarDataGrid()
+        {
+            string sql = $"SELECT * FROM VIAJE";
+            DataTable resultadoSelect = _DB.EjecutarSelect(sql);
+
+            if (resultadoSelect.Rows.Count == 0)
+            {
+                datagrid_viajes.Rows.Clear();
+            }
+            else
+            {
+                for (int i = 0; i < resultadoSelect.Rows.Count; i++)
+                {
+                    var table_row = resultadoSelect.Rows[i];
+                    var Dg_row = datagrid_viajes.Rows[i];
+
+                    var duracionEstimadaDeViaje = FormatearIntMilitarAString((int)table_row["duracionEstimada"]);
+
+                    datagrid_viajes.Rows.Add();
+
+                    // Columna del DGrid --- nombre de columna de SQL
+                    Dg_row.Cells[0].Value = table_row["numeroDeViaje"].ToString();
+                    Dg_row.Cells[1].Value = table_row["horarioPresencia"].ToString();
+                    Dg_row.Cells[2].Value = table_row["horarioSalida"].ToString();
+                    Dg_row.Cells[3].Value = table_row["horarioLlegada"].ToString();
+                    Dg_row.Cells[4].Value = duracionEstimadaDeViaje;
+                }
+            }
+
         }
 
         private void button1_Click(object sender, EventArgs e)
