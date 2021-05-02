@@ -9,11 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.Formularios;
+using TrabajoPrácticoPAV.NE_Usuarios;
 
 namespace TrabajoPrácticoPAV.Formularios
 {
     public partial class Frm_ABMClientes : Form
     {
+        Tratamientos_Especiales _TE = new Tratamientos_Especiales();
+
         public Frm_ABMClientes()
         {
             InitializeComponent();
@@ -28,24 +31,9 @@ namespace TrabajoPrácticoPAV.Formularios
         {
         }
 
-        //private void button2_Click(object sender, EventArgs e)
-        //{
-        //    Frm_Principal frmPri = new Frm_Principal();
-        //    frmPri.FormCerrado("Frm_ABMClientes");
-        //    this.Close();
-
-        //}
-
-
-
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void Cal_fecha_nacimiento_DateChanged(object sender, DateRangeEventArgs e)
@@ -76,11 +64,22 @@ namespace TrabajoPrácticoPAV.Formularios
         {
             Cmb_TipoDoc.CargarCombo();
             Cmb_Pais.CargarCombo();
+            DGV_Pasajero.Formatear();
         }
 
         private void Cmb_Pais_SelectedIndexChanged(object sender, EventArgs e)
         {
+            Cmb_Provincia.CargarCombo();
+        }
 
+        private void Btn_Buscar_Click(object sender, EventArgs e)
+        {
+            _TE.ConstructorSelect(this.Controls);
+        }
+
+        private void Cmb_Provincia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Cmb_Ciudad.CargarCombo();
         }
     }
 }

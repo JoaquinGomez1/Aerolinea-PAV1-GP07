@@ -63,16 +63,6 @@ namespace TrabajoPrácticoPAV.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _10418324_aviC3B3n_sobre_grecia {
-            get {
-                object obj = ResourceManager.GetObject("10418324-aviC3B3n-sobre-grecia", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Avion_Icono {
             get {
                 object obj = ResourceManager.GetObject("Avion_Icono", resourceCulture);
@@ -116,6 +106,16 @@ namespace TrabajoPrácticoPAV.Properties {
         internal static System.Drawing.Bitmap ElbpHR6W0AAInBS {
             get {
                 object obj = ResourceManager.GetObject("ElbpHR6W0AAInBS", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ElbpHR6W0AAInBS1 {
+            get {
+                object obj = ResourceManager.GetObject("ElbpHR6W0AAInBS1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

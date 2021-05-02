@@ -53,7 +53,13 @@
     <Compile Include="Clase\ComboBox_Aerolinea.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Clase\DataGridView_Aerolinea.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Clase\Estilo.cs" />
+    <Compile Include="Clase\MaskedTextBox_Aerolinea.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Clase\TextBox_Aerolinea.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -131,9 +137,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controles\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\10418324-aviC3B3n-sobre-grecia.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\gear-wheel-304395_960_720.png" />
