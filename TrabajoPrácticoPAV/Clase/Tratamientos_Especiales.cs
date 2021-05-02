@@ -146,7 +146,7 @@ namespace TrabajoPrácticoPAV.Clase
                     TextBox_Aerolinea txt = (TextBox_Aerolinea)control;
 
                     //Crea la condición que se va a asignar
-                    string condicion = txt.Pp_NombreTabla + "." + txt.Pp_NombreCampo + " = " + txt.Text;
+                    string condicion = txt.Pp_NombreTabla + "." + txt.Pp_NombreCampo + " = " + FormatearDato(txt.Text);
 
                     if (txt.Text != "")
                     {
@@ -170,7 +170,7 @@ namespace TrabajoPrácticoPAV.Clase
                     if (txt.Text != string.Empty)
                     {
                         //Crea la condición que se va a asignar
-                        string condicion = txt.Pp_NombreTabla + "." + txt.Pp_NombreCampo + " = " + txt.Text;
+                        string condicion = txt.Pp_NombreTabla + "." + txt.Pp_NombreCampo + " = " + FormatearDato(txt.Text);
 
                         //Guardar el nombre de las tablas
                         if (tablas == "")
@@ -196,7 +196,7 @@ namespace TrabajoPrácticoPAV.Clase
                     {
                         //Crea la condición que se va a asignar
                         string condicion = cmb.Pp_NombreTabla + "." + cmb.Pp_PkTabla +
-                                    " = " + cmb.SelectedValue.ToString();
+                                    " = " + FormatearDato(cmb.SelectedValue.ToString());
 
                         //Guardar el nombre de la tabla que interviene
                         if (tablas == "")
@@ -214,7 +214,6 @@ namespace TrabajoPrácticoPAV.Clase
                     }
                 }
             }
-
             #region CreadorDeJOIN
             todasTablas = tablas.Split(',');
             todasTablas = todasTablas.Distinct().ToArray();
@@ -253,6 +252,20 @@ namespace TrabajoPrácticoPAV.Clase
             return sql;
 
             #endregion
+        }
+
+        private object FormatearDato(string dato)
+        {
+            try
+            {
+                int entero = int.Parse(dato);
+                return entero;
+            }
+            catch (Exception)
+            {
+                return $"'{dato}'";
+                throw;
+            }
         }
 
         private string ExtraerColumnasGrid(DataGridView_Aerolinea grid)
