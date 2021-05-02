@@ -27,6 +27,7 @@ namespace TrabajoPrácticoPAV.Clase
             if (this.Pp_CampoAceptaNull == true)
             {
                 this.SelectedIndex = -1;
+                this.Text =  "Seleccionar " + Pp_NombreTabla + " ...";
             }
             else
             {

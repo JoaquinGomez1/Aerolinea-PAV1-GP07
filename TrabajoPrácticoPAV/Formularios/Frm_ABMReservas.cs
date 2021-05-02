@@ -21,5 +21,10 @@ namespace TrabajoPrácticoPAV.Formularios
         {
             this.Close();
         }
+
+        private void Frm_ABMReservas_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

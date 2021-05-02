@@ -122,7 +122,7 @@
             this.btn_agregar_fono.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btn_agregar_fono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_agregar_fono.Location = new System.Drawing.Point(270, 83);
-            this.btn_agregar_fono.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_agregar_fono.Margin = new System.Windows.Forms.Padding(2);
             this.btn_agregar_fono.Name = "btn_agregar_fono";
             this.btn_agregar_fono.Size = new System.Drawing.Size(20, 18);
             this.btn_agregar_fono.TabIndex = 7;
@@ -135,7 +135,7 @@
             this.btn_cancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btn_cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cancelar.Location = new System.Drawing.Point(388, 339);
-            this.btn_cancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_cancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(90, 28);
             this.btn_cancelar.TabIndex = 8;
@@ -172,7 +172,7 @@
             this.Cal_fecha_nacimiento.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Cal_fecha_nacimiento.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cal_fecha_nacimiento.Location = new System.Drawing.Point(17, 11);
-            this.Cal_fecha_nacimiento.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.Cal_fecha_nacimiento.Margin = new System.Windows.Forms.Padding(7);
             this.Cal_fecha_nacimiento.MaxSelectionCount = 1;
             this.Cal_fecha_nacimiento.Name = "Cal_fecha_nacimiento";
             this.Cal_fecha_nacimiento.ShowTodayCircle = false;
@@ -185,7 +185,7 @@
             this.btn_registrar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btn_registrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_registrar.Location = new System.Drawing.Point(268, 339);
-            this.btn_registrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_registrar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_registrar.Name = "btn_registrar";
             this.btn_registrar.Size = new System.Drawing.Size(90, 28);
             this.btn_registrar.TabIndex = 7;
@@ -231,7 +231,7 @@
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Location = new System.Drawing.Point(18, 253);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(665, 68);
             this.panel2.TabIndex = 12;
@@ -383,7 +383,7 @@
             this.panel1.Controls.Add(this.Txt_Apellido);
             this.panel1.Controls.Add(this.btn_agregar_fono);
             this.panel1.Location = new System.Drawing.Point(18, 33);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(365, 185);
             this.panel1.TabIndex = 12;
@@ -451,10 +451,11 @@
             this.panel3.Controls.Add(this.label12);
             this.panel3.Controls.Add(this.panel2);
             this.panel3.Location = new System.Drawing.Point(9, 10);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(732, 395);
             this.panel3.TabIndex = 21;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // label11
             // 
@@ -475,7 +476,7 @@
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.Cal_fecha_nacimiento);
             this.panel4.Location = new System.Drawing.Point(422, 33);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(261, 185);
             this.panel4.TabIndex = 21;
@@ -500,7 +501,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Frm_ABMClientes";
             this.Text = "Frm_ABMClientes";
             this.Load += new System.EventHandler(this.Frm_ABMClientes_Load);

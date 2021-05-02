@@ -16,5 +16,10 @@ namespace TrabajoPrácticoPAV.Formularios
         {
             InitializeComponent();
         }
+
+        private void Frm_Configuracion_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

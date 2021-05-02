@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -54,6 +55,12 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Clase\Tratamientos_Especiales.cs" />
+    <Compile Include="Formularios\Frm_ABMAviones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Frm_ABMAviones.Designer.cs">
+      <DependentUpon>Frm_ABMAviones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Frm_ABMClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +79,12 @@
     <Compile Include="Formularios\Frm_ABMViajes.Designer.cs">
       <DependentUpon>Frm_ABMViajes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Frm_AltaAviones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Frm_AltaAviones.Designer.cs">
+      <DependentUpon>Frm_AltaAviones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Frm_Configuracion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,9 +97,13 @@
     <Compile Include="Formularios\Frm_Principal.Designer.cs">
       <DependentUpon>Frm_Principal.cs</DependentUpon>
     </Compile>
+    <Compile Include="NE_Aviones\NE_Avion.cs" />
     <Compile Include="NE_Usuarios\NE_Clientes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\Frm_ABMAviones.resx">
+      <DependentUpon>Frm_ABMAviones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Frm_ABMClientes.resx">
       <DependentUpon>Frm_ABMClientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -95,6 +112,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Frm_ABMViajes.resx">
       <DependentUpon>Frm_ABMViajes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Frm_AltaAviones.resx">
+      <DependentUpon>Frm_AltaAviones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Frm_Configuracion.resx">
       <DependentUpon>Frm_Configuracion.cs</DependentUpon>
