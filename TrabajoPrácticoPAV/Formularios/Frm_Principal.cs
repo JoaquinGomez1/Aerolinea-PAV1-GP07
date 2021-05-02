@@ -95,6 +95,9 @@ namespace TrabajoPrácticoPAV
                 case "Btn_ABM_Viaje":
                     AbrirFormulario<Frm_ABMViajes>();
                     break;
+                case "Btn_ABM_Tramo":
+                    AbrirFormulario<Frm_ABMTramos>();
+                    break;
                 case "Btn_Configuracion":
                     AbrirFormulario<Frm_Configuracion>();
                     break;

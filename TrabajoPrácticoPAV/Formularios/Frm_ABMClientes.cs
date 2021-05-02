@@ -74,7 +74,7 @@ namespace TrabajoPrácticoPAV.Formularios
 
         private void Btn_Buscar_Click(object sender, EventArgs e)
         {
-            _TE.ConstructorSelect(this.Controls);
+            MessageBox.Show(_TE.ConstructorSelect(this.Controls));
         }
 
         private void Cmb_Provincia_SelectedIndexChanged(object sender, EventArgs e)

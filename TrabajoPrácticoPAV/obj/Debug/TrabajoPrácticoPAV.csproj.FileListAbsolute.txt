@@ -109,3 +109,4 @@ g:\programacion\c#\pav\trabajoprácticopav.0.0.1\TrabajoPrácticoPAV\obj\Debug\T
 C:\Users\Usuario\Documents\TERCER AÑO\PAVI\Teorico\Aerolinea-PAV1-GP07-1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_ABMViajes.resources
 D:\Enzo\Facultad\01. PAVI\GIT\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_ABMViajes.resources
 D:\Enzo\Facultad\01. PAVI\GIT\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_Pasajeros.Frm_Consulta_Pasajeros.resources
+D:\Enzo\Facultad\01. PAVI\Git\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_ABMTramos.resources

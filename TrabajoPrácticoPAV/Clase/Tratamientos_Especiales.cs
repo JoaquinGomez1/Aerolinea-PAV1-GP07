@@ -121,7 +121,7 @@ namespace TrabajoPrácticoPAV.Clase
         }
 
 
-        public void ConstructorSelect(Control.ControlCollection controles)
+        public string ConstructorSelect(Control.ControlCollection controles)
         {
             string tablas = "";
             string[] todasTablas;
@@ -250,7 +250,7 @@ namespace TrabajoPrácticoPAV.Clase
             }
 
             sql += atributosTabla + join + condiciones;
-            Clipboard.SetDataObject(sql);
+            return sql;
 
             #endregion
         }
