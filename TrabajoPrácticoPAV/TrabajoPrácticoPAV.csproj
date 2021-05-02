@@ -88,6 +88,12 @@
     <Compile Include="Formularios\Frm_Principal.Designer.cs">
       <DependentUpon>Frm_Principal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Frm_prueba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Frm_prueba.Designer.cs">
+      <DependentUpon>Frm_prueba.cs</DependentUpon>
+    </Compile>
     <Compile Include="NE_Usuarios\NE_Clientes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
