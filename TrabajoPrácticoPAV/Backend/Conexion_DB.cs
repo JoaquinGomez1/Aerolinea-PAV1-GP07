@@ -105,9 +105,11 @@ namespace TrabajoPrácticoPAV.Backend
         {
             Conectar();
             cmd.CommandText = sql;
+            bool comandoEjecutadoCorrectamente = false;
             try
             {
                 cmd.ExecuteNonQuery();
+                comandoEjecutadoCorrectamente = true;
             }
             catch (Exception e)
             {
@@ -118,6 +120,11 @@ namespace TrabajoPrácticoPAV.Backend
                                  + e.Message);
             }
             Desconectar();
+
+            if (comandoEjecutadoCorrectamente)
+            {
+                MessageBox.Show("Formulario cargado correctamente");
+            }
             return ControlTransaccion;
 
 

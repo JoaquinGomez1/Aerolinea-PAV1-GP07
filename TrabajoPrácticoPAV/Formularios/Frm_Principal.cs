@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.Formularios;
 
 namespace TrabajoPrácticoPAV
@@ -18,8 +19,6 @@ namespace TrabajoPrácticoPAV
         {
             InitializeComponent();
         }
-
-        private string FrmActual;
 
         #region Funcionalidades del formulario
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -55,15 +54,37 @@ namespace TrabajoPrácticoPAV
 
         #region Abrir Formularios con Botones del Menu
 
-
-        private void MouseEnterButton(object sender, EventArgs e)
+        private void CambiarColorBoton(Button_Aerolinea boton)
         {
-            ((Button)sender).BringToFront();
+            boton.BackColor = Estilo.ColorBotonPress;
+            boton.Pp_Presionado = true;
+        }
+
+        private void RestaurarColorBoton(Button_Aerolinea boton)
+        {
+            boton.BackColor = Estilo.ColorBoton;
+            boton.Pp_Presionado = false;
+        }
+
+        private void DarColor()
+        {
+            PanelMenu.BackColor = Estilo.ColorFondo;
+            foreach (Button_Aerolinea boton in PanelMenu.Controls)
+            {
+                if (boton.Pp_Presionado)
+                    CambiarColorBoton(boton);
+                else
+                    RestaurarColorBoton(boton);
+            }
+            panel1.BackColor = Estilo.ColorBarra;
+            Btn_Menu.BackColor = Estilo.ColorBoton;
         }
 
         private void MouseClickButton(object sender, EventArgs e)
         {
-            switch (((Button)sender).Name.ToString())
+            Button_Aerolinea boton = ((Button_Aerolinea)sender);
+            CambiarColorBoton(boton);
+            switch (boton.Name.ToString())
             {
                 case "Btn_ABMClientes":
                     AbrirFormulario<Frm_ABMClientes>();
@@ -71,9 +92,19 @@ namespace TrabajoPrácticoPAV
                 case "Btn_ABMReservas":
                     AbrirFormulario<Frm_ABMReservas>();
                     break;
+                case "Btn_ABM_Vuelo":
+                    AbrirFormulario<Frm_ABMVuelo>();
+                    break;
                 case "Btn_ABM_Viaje":
                     AbrirFormulario<Frm_ABMViajes>();
                     break;
+                case "Btn_ABM_Tramo":
+                    AbrirFormulario<Frm_ABMTramos>();
+                    break;
+                case "Btn_Configuracion":
+                    AbrirFormulario<Frm_Configuracion>();
+                    break;
+                
                 default:
                     MessageBox.Show("Esperando implementación");
                     break;
@@ -127,7 +158,6 @@ namespace TrabajoPrácticoPAV
                 PanelFormularios.Tag = formulario;
                 formulario.Show();
                 formulario.BringToFront();
-                FrmActual = formulario.Name.ToString();
                 formulario.FormClosed += new FormClosedEventHandler(FormCerrado);
                 Btn_Menu.BringToFront();
 
@@ -135,7 +165,6 @@ namespace TrabajoPrácticoPAV
             else
             {
                 formulario.BringToFront();
-                FrmActual = formulario.Name.ToString();
                 Btn_Menu.BringToFront();
             }
 
@@ -143,34 +172,24 @@ namespace TrabajoPrácticoPAV
         private void FormCerrado(object sender, FormClosedEventArgs e)
         {
             if (Application.OpenForms["Frm_ABMClientes"] == null)
+                RestaurarColorBoton(Btn_ABMClientes);
+            if (Application.OpenForms["Frm_ABMViajes"] == null)
+                RestaurarColorBoton(Btn_ABM_Viaje);
+            if (Application.OpenForms["Frm_ABMVuelo"] == null)
+                RestaurarColorBoton(Btn_ABM_Viaje);
+            if (Application.OpenForms["Frm_Configuracion"] == null)
             {
-                Btn_ABMClientes.BackColor = Color.FromArgb(159, 133, 74);
+                if(Estilo.EstiloDebeActualizar)
+                    DarColor();
+                RestaurarColorBoton(Btn_Configuracion);
             }
         }
 
         #endregion
 
         #region Cosas rotas 
-        //public void FormCerrado(string form)
-        //{
-        //    switch (form)
-        //    {
-        //        //case "Frm_ABMClientes": Btn_ABMClientes.BackColor = Color.FromArgb(10, 0, 120) ; break;
-        //        //case "Frm_ABMReservas": RestaurarColorBoton(Btn_ABMReservas); break;
-        //        default: break;
-        //    }
-        //}
-
-        //private void RestaurarColorBoton(Button boton, Color color)
-        //{
-        //    boton.BackColor = Color.FromArgb(10, 0, 120);
-        //}
         #endregion
 
 
-        private void Btn_Configuracion_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

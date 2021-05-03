@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Data;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Backend;
 using TrabajoPrácticoPAV.Clase;
+using TrabajoPrácticoPAV.NE_Usuarios;
 using static TrabajoPrácticoPAV.Clase.Tratamientos_Especiales;
 
 namespace TrabajoPrácticoPAV.Formularios
@@ -14,7 +16,9 @@ namespace TrabajoPrácticoPAV.Formularios
             InitializeComponent();
         }
 
-        private int duracionEstimada { get; set; }
+        private readonly Conexion_DB _DB = new Conexion_DB();
+        private int duracionEstimadaViaje { get; set; }
+        private readonly ManejoDeTiempos Tiempo = new ManejoDeTiempos();
 
         private void label3_Click(object sender, EventArgs e)
         {
@@ -23,7 +27,7 @@ namespace TrabajoPrácticoPAV.Formularios
 
         private void Frm_ABMViajes_Load(object sender, EventArgs e)
         {
-
+            CargarTodos();
         }
 
         private void maskedTextBox1_TextChanged(object sender, EventArgs e)
@@ -35,7 +39,6 @@ namespace TrabajoPrácticoPAV.Formularios
         private void maskedTextBox2_TextChanged(object sender, EventArgs e)
         {
             determinarEstimado();
-
         }
 
         private void determinarEstimado()
@@ -51,155 +54,168 @@ namespace TrabajoPrácticoPAV.Formularios
 
             if (ambosCamposCompletados)
             {
-                int horarioLlegadaMilitar = convertirAIntMilitar(horarioLlegada);
-                int horarioSalidaMilitar = convertirAIntMilitar(horarioSalida);
+                int horarioLlegadaMilitar = Tiempo.convertirAIntMilitar(horarioLlegada);
+                int horarioSalidaMilitar = Tiempo.convertirAIntMilitar(horarioSalida);
 
                 if (esSalidaMenorALlegada)
                 {
-                    int duracionEstimadaActual = calcularDiferenciaDelDia(horarioLlegadaMilitar, horarioSalidaMilitar);
-                    duracionEstimada = duracionEstimadaActual;
-                    lbl_duracionEstimada.Text = FormatearIntMilitarAString(duracionEstimadaActual);
+                    int duracionEstimadaActual = Tiempo.calcularDiferenciaDelDia(horarioLlegadaMilitar, horarioSalidaMilitar);
+                    duracionEstimadaViaje = duracionEstimadaActual;
+                    lbl_duracionEstimada.Text = Tiempo.FormatearIntMilitarAString(duracionEstimadaActual);
                 }
 
                 if (!esSalidaMenorALlegada)
                 {
                     int duracionEstimadaActual = horarioLlegadaMilitar - horarioSalidaMilitar;
-                    lbl_duracionEstimada.Text = FormatearIntMilitarAString(duracionEstimadaActual);
+                    duracionEstimadaViaje = duracionEstimadaActual;
+                    lbl_duracionEstimada.Text = Tiempo.FormatearIntMilitarAString(duracionEstimadaActual);
                 }
             }
         }
 
-        public int convertirAIntMilitar(string horario)
+
+        private void button2_Click_1(object sender, EventArgs e)
         {
-            // Suponiendo que tenemos un horario X, convertimos esto en un horario militar.
-            // Ej: 01:40hs = 0140 
-            string horasDelHorario = $"{horario[0]}{horario[1]}"; // 01
-            string minutosDelHorario = $"{horario[3]}{horario[4]}"; // 40
-
-            string temp = $"{horasDelHorario}{minutosDelHorario}"; // 0140
-            return Int32.Parse(temp); // -> convierto a int
-        }
-
-        public int calcularDiferenciaDelDia(int horarioInicial, int horarioFinal)
-        {
-            horarioInicial += 2400;
-            horarioInicial -= horarioFinal;
-            return horarioInicial;
-        }
-
-        public string FormatearIntMilitarAString(int IntMilitar)
-        {
-
-            string StringMilitar = IntMilitar.ToString();
-            if (StringMilitar.Length > 4) { return ""; }
-
-            if (StringMilitar.Length == 3)
-            {
-
-                StringMilitar = $"0{StringMilitar}";
-            }
-
-            if (StringMilitar.Length == 2)
-            {
-                StringMilitar = $"00{StringMilitar}";
-            }
-
-            if (StringMilitar.Length == 1)
-            {
-                StringMilitar = $"000{StringMilitar}";
-            }
-
-            return $"{StringMilitar[0]}{StringMilitar[1]}:{StringMilitar[2]}{StringMilitar[3]}hs";
-        }
-
-        public bool ValidarHorario(int horario, bool horarioDefasado)
-        {
-            string horariodeString = FormatearIntMilitarAString(horario);
-            string horasDelHorario = $"{horariodeString[0]}{horariodeString[1]}";
-            string minutosDelHorario = $"{horariodeString[3]}{horariodeString[4]}";
-            int horasDelHorarioInt = int.Parse(horasDelHorario.ToString());
-            int minutosDelHorarioInt = int.Parse(minutosDelHorario.ToString());
-            if (horasDelHorarioInt > 23)
-            { horarioDefasado = true; };
-            if (minutosDelHorarioInt > 60)
-            { horarioDefasado = true; };
-            return horarioDefasado;
-        }
-        
-        // Funcion lambda que convierte un formato de horas y minutos a un objeto DateTime 
-        // El parametro tiene que seguir la siguiente estructura:  "14:00" 
-        // Documentación oficial del método: https://docs.microsoft.com/en-us/dotnet/api/system.datetime.parseexact?view=net-5.0
-        private DateTime ParseTime(string horasYMin) => DateTime.ParseExact(horasYMin, "H:mm", null, System.Globalization.DateTimeStyles.None);
-
-
-        private void button2_Click_1(object sender, EventArgs e){
-            Tratamientos_Especiales tratamientos = new Tratamientos_Especiales();
-            Resultado esFormularioValido = tratamientos.Validar(this.Controls);
-
-            bool ErrorTextMask = false;
-
-            if (Mtxt_presencia.MaskCompleted == false)
-                { ErrorTextMask = true;}
-
-            if (Mtxt_horarioSalida.MaskCompleted == false)
-                { ErrorTextMask = true;}
-
-            if (Mtxt_horarioLlegada.MaskCompleted == false)
-                { ErrorTextMask = true;}
-
-            if (ErrorTextMask == true)
-                { MessageBox.Show("Complete todos los campos");
-                return;}
+            bool estanCamposCompletos = ValidarCamposCompletos() == Resultado.correcto;
+            if (!estanCamposCompletos) return;
 
             //Verificacion de que la espera entre el horario de presencia y el horario de salida no supere las 4hs.
             //Se hace esta comparacion para luego poder calcular la espera en el aeropuerto incluso si transcurre en dos dias diferentes.
             // Ejemplo: Horario de presencia = 23:00hs, Horario de Salida = 01:00hs, Espera estimada = 2hs (en vez de -22hs).
+            bool esHorarioPresenciaCorrecto = VerificarHorarioPresencia() == Resultado.correcto;
+            if (!esHorarioPresenciaCorrecto) return;
+
+            bool noEstaHorarioDesfasado = VerificarHorarioDesfasado() == Resultado.correcto;
+            if (!noEstaHorarioDesfasado) return;
+
+            bool estaTodoCorrecto = estanCamposCompletos && esHorarioPresenciaCorrecto && noEstaHorarioDesfasado;
+
+            if (estaTodoCorrecto)
+            {
+                MessageBox.Show("Resultado correcto");
+                string horarioPresencia = Mtxt_presencia.Text;
+                string horarioSalida = Mtxt_horarioSalida.Text;
+                string horarioLlegada = Mtxt_horarioLlegada.Text;
+
+                string sql = @"INSERT INTO Viaje(horarioPresencia, horarioSalida, horarioLlegada, duracionEstimada) 
+                        VALUES(" + $"'{horarioPresencia}', '{horarioSalida}', '{horarioLlegada}', '{duracionEstimadaViaje}'" + ")";
+
+                _DB.Insertar(sql);
+                // Permite refrescar los datos del data grid con lo que fue ingresado recientemente
+                CargarTodos();
+            }
+
+            if (!estaTodoCorrecto)
+            {
+                MessageBox.Show("Ocurrio un error en la validación");
+            }
+        }
+
+        private Resultado ValidarCamposCompletos()
+        {
+            bool ErrorTextMask = false;
+
+            if (Mtxt_presencia.MaskCompleted == false)
+            { ErrorTextMask = true; }
+
+            if (Mtxt_horarioSalida.MaskCompleted == false)
+            { ErrorTextMask = true; }
+
+            if (Mtxt_horarioLlegada.MaskCompleted == false)
+            { ErrorTextMask = true; }
+
+            if (ErrorTextMask == true)
+            {
+                MessageBox.Show("Complete todos los campos");
+                return Resultado.error;
+            }
+            return Resultado.correcto;
+        }
+
+        private Resultado VerificarHorarioDesfasado()
+        {
+
+            //Determina si los horarios ingresados superan las 24hs o los 60 min
+            bool horarioDefasado = false;
+            int horariodePresencia = Tiempo.convertirAIntMilitar(Mtxt_presencia.Text);
+            horarioDefasado = Tiempo.ValidarHorario(horariodePresencia, horarioDefasado);
+
+            int horariodeSalida = Tiempo.convertirAIntMilitar(Mtxt_horarioSalida.Text);
+            horarioDefasado = Tiempo.ValidarHorario(horariodeSalida, horarioDefasado);
+
+            int horariodeLlegada = Tiempo.convertirAIntMilitar(Mtxt_horarioLlegada.Text);
+            horarioDefasado = Tiempo.ValidarHorario(horariodeLlegada, horarioDefasado);
+
+            if (horarioDefasado)
+            {
+                MessageBox.Show("El horario ingresado no debe superar las 24hs ni los 60min");
+                return Resultado.error;
+            }
+
+            return Resultado.correcto;
+        }
+
+        private Resultado VerificarHorarioPresencia()
+        {
             bool esPresenciaMenorASalida = String.Compare(Mtxt_horarioSalida.Text, Mtxt_presencia.Text) == -1;
 
-            int horariopresenciaMilitar = convertirAIntMilitar(Mtxt_presencia.Text);
-            int horarioSalidaMilitar = convertirAIntMilitar(Mtxt_horarioSalida.Text);
+            int horariopresenciaMilitar = Tiempo.convertirAIntMilitar(Mtxt_presencia.Text);
+            int horarioSalidaMilitar = Tiempo.convertirAIntMilitar(Mtxt_horarioSalida.Text);
 
             if (esPresenciaMenorASalida)
             {
-                int esperaEstimadaActual = calcularDiferenciaDelDia(horarioSalidaMilitar, horariopresenciaMilitar);
-                if (esperaEstimadaActual > 0400)
-                { MessageBox.Show("El horario de espera en el aeropuerto no debe superar las 4hs"); };
+                int esperaEstimadaActual = Tiempo.calcularDiferenciaDelDia(horarioSalidaMilitar, horariopresenciaMilitar);
+                if (esperaEstimadaActual > 400)
+                {
+                    MessageBox.Show("El horario de espera en el aeropuerto no debe superar las 4hs");
+                    return Resultado.error;
+                };
             }
 
             if (!esPresenciaMenorASalida)
             {
-                int esperaEstimadaActual =  horarioSalidaMilitar - horariopresenciaMilitar;
-                if (esperaEstimadaActual > 0400)
-                { MessageBox.Show("El horario de espera en el aeropuerto no debe superar las 4hs"); };
+                int esperaEstimadaActual = horarioSalidaMilitar - horariopresenciaMilitar;
+                if (esperaEstimadaActual > 400)
+                {
+                    MessageBox.Show("El horario de espera en el aeropuerto no debe superar las 4hs");
+                    return Resultado.error;
+                }
+            }
+            return Resultado.correcto;
+        }
+
+        private void CargarTodos()
+        {
+            NE_Viajes Negocio = new NE_Viajes();
+            DataTable todosLosViajes = Negocio.GetTodosLosViajes();
+            CargarDataGrid(todosLosViajes);
+        }
+
+
+        private void CargarDataGrid(DataTable tabla)
+        {
+            datagrid_viajes.Rows.Clear();
+            if (tabla.Rows.Count == 0)
+            {
+                datagrid_viajes.Rows.Clear();
+                return;
             }
 
-            //Determina si los horarios ingresados superan las 24hs o los 60 min
-            bool horarioDefasado = false;
-            int horariodePresencia = convertirAIntMilitar(Mtxt_presencia.Text);
-            horarioDefasado = ValidarHorario(horariodePresencia, horarioDefasado);
+            for (int i = 0; i < tabla.Rows.Count; i++)
+            {
+                var duracionEstimadaDeViaje = Tiempo.FormatearIntMilitarAString((int)tabla.Rows[i]["duracionEstimada"]);
 
-            int horariodeSalida = convertirAIntMilitar(Mtxt_horarioSalida.Text);
-            horarioDefasado = ValidarHorario(horariodeSalida, horarioDefasado);
+                datagrid_viajes.Rows.Add();
 
-            int horariodeLlegada = convertirAIntMilitar(Mtxt_horarioLlegada.Text);
-            horarioDefasado = ValidarHorario(horariodeLlegada, horarioDefasado);
+                // Columna del DGrid --- nombre de columna de SQL
+                datagrid_viajes.Rows[i].Cells[0].Value = tabla.Rows[i]["numeroDeViaje"].ToString();
+                datagrid_viajes.Rows[i].Cells[1].Value = tabla.Rows[i]["horarioPresencia"].ToString();
+                datagrid_viajes.Rows[i].Cells[2].Value = tabla.Rows[i]["horarioSalida"].ToString();
+                datagrid_viajes.Rows[i].Cells[3].Value = tabla.Rows[i]["horarioLlegada"].ToString();
+                datagrid_viajes.Rows[i].Cells[4].Value = duracionEstimadaDeViaje;
+            }
 
-            if (horarioDefasado == true)
-            { MessageBox.Show("El horario ingresado no debe superar las 24hs ni los 60min"); };
-
-            if (esFormularioValido == Resultado.correcto)
-        {
-            DateTime horarioPresencia = ParseTime(Mtxt_presencia.Text);
-            DateTime horarioSalida = ParseTime(Mtxt_horarioSalida.Text);
-            DateTime horarioLlegada = ParseTime(Mtxt_horarioLlegada.Text);
-
-            Conexion_DB _DB = new Conexion_DB();
-            string sql = @"INSERT INTO Viajes(horarioPresencia, horarioSalida, horarioLlegada, duracionEstimada) 
-                        VALUES(" + $"{horarioPresencia} {horarioSalida} {horarioLlegada} {duracionEstimada}" + ")";
-
-            _DB.Insertar(sql);
         }
-    }
 
         private void button1_Click(object sender, EventArgs e)
         {
