@@ -57,6 +57,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Clase\Estilo.cs" />
+    <Compile Include="Clase\ManejoDeTiempos.cs" />
     <Compile Include="Clase\MaskedTextBox_Aerolinea.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -102,6 +103,7 @@
     </Compile>
     <Compile Include="NE_Usuarios\NE_Clientes.cs" />
     <Compile Include="NE_Usuarios\NE_Tramos.cs" />
+    <Compile Include="NE_Usuarios\NE_Viajes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formularios\Frm_ABMClientes.resx">
