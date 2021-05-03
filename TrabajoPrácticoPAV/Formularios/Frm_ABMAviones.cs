@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.NE_Aviones;
 
+
 namespace TrabajoPrácticoPAV.Formularios
 {
     public partial class Frm_ABMAviones : Form
@@ -50,6 +51,22 @@ namespace TrabajoPrácticoPAV.Formularios
         {
             Frm_AltaAviones alta = new Frm_AltaAviones();
             alta.ShowDialog();
+           
+   
+        }
+
+        private void Frm_ABMAviones_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void btn_actualizar_Click(object sender, EventArgs e)
+        {
+            grid_aviones.Rows.Clear();
+            NE_Avion aviones = new NE_Avion();
+            DataTable tabla = new DataTable();
+            tabla = aviones.RecuperarTodos();
+            CargarGrilla(tabla);
+
         }
     }
 }

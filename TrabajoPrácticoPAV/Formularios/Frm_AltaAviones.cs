@@ -33,6 +33,8 @@ namespace TrabajoPrácticoPAV.Formularios
             this.Close();
         }
 
+ 
+
         private void button1_Click(object sender, EventArgs e)
         {
             NE_Avion avion = new NE_Avion();
@@ -40,9 +42,15 @@ namespace TrabajoPrácticoPAV.Formularios
             avion.Pp_numero_modelo = int.Parse(txt_numero.Text.ToString());
             avion.Pp_id_modelo = int.Parse(cmb_Modelo.SelectedValue.ToString());
 
-
             avion.Insertar();
 
+            this.Close();
+
+        }
+
+        private void Frm_AltaAviones_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            
         }
     }
 }

@@ -124,6 +124,7 @@ namespace TrabajoPrácticoPAV.Formularios
             this.Controls.Add(this.txt_numero);
             this.Name = "Frm_AltaAviones";
             this.Text = "Frm_AltaAviones";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Frm_AltaAviones_FormClosed);
             this.Load += new System.EventHandler(this.Frm_AltaAviones_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
