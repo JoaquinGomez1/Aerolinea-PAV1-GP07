@@ -178,7 +178,7 @@ namespace TrabajoPrácticoPAV.Formularios
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(227)))), ((int)(((byte)(187)))));
-            this.ClientSize = new System.Drawing.Size(1491, 698);
+            this.ClientSize = new System.Drawing.Size(942, 698);
             this.Controls.Add(this.btn_actualizar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label4);

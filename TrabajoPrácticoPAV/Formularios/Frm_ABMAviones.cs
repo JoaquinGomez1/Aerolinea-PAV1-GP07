@@ -57,6 +57,7 @@ namespace TrabajoPrácticoPAV.Formularios
 
         private void Frm_ABMAviones_Load(object sender, EventArgs e)
         {
+
         }
 
         private void btn_actualizar_Click(object sender, EventArgs e)
