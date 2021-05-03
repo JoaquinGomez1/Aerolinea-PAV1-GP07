@@ -31,6 +31,13 @@ namespace TrabajoPrácticoPAV.Formularios
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.datagrid_viajes = new System.Windows.Forms.DataGridView();
+            this.numeroDeViaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horarioPresencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horarioSalida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horarioLlegada = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.duracionEstimada = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label9 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lbl_duracionEstimada = new System.Windows.Forms.Label();
@@ -46,17 +53,10 @@ namespace TrabajoPrácticoPAV.Formularios
             this.Mtxt_horarioSalida = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.datagrid_viajes = new System.Windows.Forms.DataGridView();
-            this.numeroDeViaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.horarioPresencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.horarioSalida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.horarioLlegada = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.duracionEstimada = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.datagrid_viajes)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.datagrid_viajes)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -65,9 +65,9 @@ namespace TrabajoPrácticoPAV.Formularios
             this.label1.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(3, -4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 21);
+            this.label1.Size = new System.Drawing.Size(120, 21);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Cargar Viaje";
+            this.label1.Text = "Registrar Viaje";
             // 
             // panel1
             // 
@@ -85,6 +85,61 @@ namespace TrabajoPrácticoPAV.Formularios
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(730, 391);
             this.panel1.TabIndex = 2;
+            // 
+            // datagrid_viajes
+            // 
+            this.datagrid_viajes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datagrid_viajes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.numeroDeViaje,
+            this.horarioPresencia,
+            this.horarioSalida,
+            this.horarioLlegada,
+            this.duracionEstimada});
+            this.datagrid_viajes.Location = new System.Drawing.Point(67, 203);
+            this.datagrid_viajes.Name = "datagrid_viajes";
+            this.datagrid_viajes.Size = new System.Drawing.Size(557, 150);
+            this.datagrid_viajes.TabIndex = 21;
+            // 
+            // numeroDeViaje
+            // 
+            this.numeroDeViaje.HeaderText = "Id";
+            this.numeroDeViaje.Name = "numeroDeViaje";
+            this.numeroDeViaje.ReadOnly = true;
+            this.numeroDeViaje.Width = 50;
+            // 
+            // horarioPresencia
+            // 
+            this.horarioPresencia.HeaderText = "H. de Presencia";
+            this.horarioPresencia.Name = "horarioPresencia";
+            this.horarioPresencia.ReadOnly = true;
+            // 
+            // horarioSalida
+            // 
+            this.horarioSalida.HeaderText = "H. de Salida";
+            this.horarioSalida.Name = "horarioSalida";
+            this.horarioSalida.ReadOnly = true;
+            // 
+            // horarioLlegada
+            // 
+            this.horarioLlegada.HeaderText = "H. de Llegada";
+            this.horarioLlegada.Name = "horarioLlegada";
+            this.horarioLlegada.ReadOnly = true;
+            // 
+            // duracionEstimada
+            // 
+            this.duracionEstimada.HeaderText = "Duracion Estimada";
+            this.duracionEstimada.Name = "duracionEstimada";
+            this.duracionEstimada.ReadOnly = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label9.Location = new System.Drawing.Point(7, 175);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(132, 21);
+            this.label9.TabIndex = 20;
+            this.label9.Text = "Consultar Viajes";
             // 
             // label6
             // 
@@ -245,61 +300,6 @@ namespace TrabajoPrácticoPAV.Formularios
             this.label2.TabIndex = 4;
             this.label2.Text = "Horario de Presencia";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(7, 175);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(132, 21);
-            this.label9.TabIndex = 20;
-            this.label9.Text = "Consultar Viajes";
-            // 
-            // datagrid_viajes
-            // 
-            this.datagrid_viajes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.datagrid_viajes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.numeroDeViaje,
-            this.horarioPresencia,
-            this.horarioSalida,
-            this.horarioLlegada,
-            this.duracionEstimada});
-            this.datagrid_viajes.Location = new System.Drawing.Point(67, 203);
-            this.datagrid_viajes.Name = "datagrid_viajes";
-            this.datagrid_viajes.Size = new System.Drawing.Size(557, 150);
-            this.datagrid_viajes.TabIndex = 21;
-            // 
-            // numeroDeViaje
-            // 
-            this.numeroDeViaje.HeaderText = "Id";
-            this.numeroDeViaje.Name = "numeroDeViaje";
-            this.numeroDeViaje.ReadOnly = true;
-            this.numeroDeViaje.Width = 50;
-            // 
-            // horarioPresencia
-            // 
-            this.horarioPresencia.HeaderText = "H. de Presencia";
-            this.horarioPresencia.Name = "horarioPresencia";
-            this.horarioPresencia.ReadOnly = true;
-            // 
-            // horarioSalida
-            // 
-            this.horarioSalida.HeaderText = "H. de Salida";
-            this.horarioSalida.Name = "horarioSalida";
-            this.horarioSalida.ReadOnly = true;
-            // 
-            // horarioLlegada
-            // 
-            this.horarioLlegada.HeaderText = "H. de Llegada";
-            this.horarioLlegada.Name = "horarioLlegada";
-            this.horarioLlegada.ReadOnly = true;
-            // 
-            // duracionEstimada
-            // 
-            this.duracionEstimada.HeaderText = "Duracion Estimada";
-            this.duracionEstimada.Name = "duracionEstimada";
-            this.duracionEstimada.ReadOnly = true;
-            // 
             // Frm_ABMViajes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -314,11 +314,11 @@ namespace TrabajoPrácticoPAV.Formularios
             this.Load += new System.EventHandler(this.Frm_ABMViajes_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.datagrid_viajes)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.datagrid_viajes)).EndInit();
             this.ResumeLayout(false);
 
         }
