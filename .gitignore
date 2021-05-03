@@ -364,5 +364,4 @@ FodyWeavers.xsd
 # Custom
 /TrabajoPracticoPAV/.vs
 /TrabajoPracticoPAV/bin/Debug
-/TrabajoPracticoPAV/bin/Release
-/TrabajoPracticoPAV/obj
+/TrabajoPracticoPAV/obj/*
