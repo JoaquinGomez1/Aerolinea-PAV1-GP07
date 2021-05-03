@@ -60,6 +60,15 @@ Una vez que se acepta el Pull request te llega un mail con la confirmacion y se 
 Nota: 
  Todos los del grupo podemos aceptar cualquier pull request en el repositorio original
 
+
+#### Remover Archivos Binarios
+```bash
+git rm -r .vs
+git rm -r ./TrabajoPrácticoPAV/.vs
+git rm -r ./TrabajoPrácticoPAV/obj
+git rm -r ./TrabajoPrácticoPAV/bin
+```
+
 #### ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) `Aclaración`: 
  Git es una herramienta con muchos beneficios pero que es necesario entender algunas cosas basicas para poder empezar a usarlo adecuadamente.
  vamos a dejar a disposición la [guia oficial](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository) de Git en la que todos van a poder encontrar mas de una respuesta a algún problema que estén teniendo
