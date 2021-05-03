@@ -122,3 +122,8 @@ C:\Users\Lautaro\Desktop\tp pav 0.1\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\
 C:\Users\Lautaro\Desktop\tp pav 0.1\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\bin\Debug\TrabajoPrácticoPAV.exe.config
 C:\Users\Lautaro\Desktop\tp pav 0.1\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\bin\Debug\TrabajoPrácticoPAV.exe
 C:\Users\Lautaro\Desktop\tp pav 0.1\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\bin\Debug\TrabajoPrácticoPAV.pdb
+D:\Enzo\Facultad\01. PAVI\GIT\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_Pasajeros.Frm_Consulta_Pasajeros.resources
+D:\Enzo\Facultad\01. PAVI\Git\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_ABMTramos.resources
+G:\Programacion\C#\PAV\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_ABMTramos.resources
+>>>>>>> bb1d0b2b05569fdc0c90d15778fe7fa1095d3d81
+C:\Users\Lautaro\Desktop\tp pav 0.1\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_ABMTramos.resources
