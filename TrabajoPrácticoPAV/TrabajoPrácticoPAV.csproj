@@ -76,6 +76,12 @@
     <Compile Include="Formularios\Frm_ABMViajes.Designer.cs">
       <DependentUpon>Frm_ABMViajes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Frm_ABMVuelo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Frm_ABMVuelo.Designer.cs">
+      <DependentUpon>Frm_ABMVuelo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Frm_Configuracion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,7 @@
     <Compile Include="Formularios\Frm_Principal.Designer.cs">
       <DependentUpon>Frm_Principal.cs</DependentUpon>
     </Compile>
+    <Compile Include="NE_Usuarios\NE_Vuelos.cs" />
     <Compile Include="NE_Usuarios\NE_Clientes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -99,6 +106,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Frm_ABMViajes.resx">
       <DependentUpon>Frm_ABMViajes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Frm_ABMVuelo.resx">
+      <DependentUpon>Frm_ABMVuelo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Frm_Configuracion.resx">
       <DependentUpon>Frm_Configuracion.cs</DependentUpon>
