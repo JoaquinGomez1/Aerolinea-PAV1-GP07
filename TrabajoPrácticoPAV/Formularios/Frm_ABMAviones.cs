@@ -57,6 +57,7 @@ namespace TrabajoPrácticoPAV.Formularios
 
         private void Frm_ABMAviones_Load(object sender, EventArgs e)
         {
+            cmb_Modelo.CargarCombo();
         }
 
         private void btn_actualizar_Click(object sender, EventArgs e)
@@ -66,6 +67,11 @@ namespace TrabajoPrácticoPAV.Formularios
             DataTable tabla = new DataTable();
             tabla = aviones.RecuperarTodos();
             CargarGrilla(tabla);
+
+        }
+
+        private void cmb_Modelo_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }

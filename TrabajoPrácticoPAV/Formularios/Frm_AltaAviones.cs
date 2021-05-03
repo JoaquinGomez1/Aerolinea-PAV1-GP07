@@ -52,5 +52,10 @@ namespace TrabajoPrácticoPAV.Formularios
         {
 
         }
+
+        private void cmb_Modelo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

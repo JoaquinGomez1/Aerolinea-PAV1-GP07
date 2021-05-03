@@ -41,7 +41,7 @@ namespace TrabajoPrácticoPAV.Formularios
             this.IdModelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_alta = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox_Aerolinea1 = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
+            this.cmb_Modelo = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
             this.textBox_Aerolinea1 = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
             ((System.ComponentModel.ISupportInitialize)(this.grid_aviones)).BeginInit();
             this.SuspendLayout();
@@ -50,7 +50,7 @@ namespace TrabajoPrácticoPAV.Formularios
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(49, 87);
+            this.label1.Location = new System.Drawing.Point(43, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 21);
             this.label1.TabIndex = 0;
@@ -58,7 +58,7 @@ namespace TrabajoPrácticoPAV.Formularios
             // 
             // btn_actualizar
             // 
-            this.btn_actualizar.Location = new System.Drawing.Point(440, 217);
+            this.btn_actualizar.Location = new System.Drawing.Point(434, 160);
             this.btn_actualizar.Name = "btn_actualizar";
             this.btn_actualizar.Size = new System.Drawing.Size(96, 36);
             this.btn_actualizar.TabIndex = 9;
@@ -69,7 +69,7 @@ namespace TrabajoPrácticoPAV.Formularios
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(50, 183);
+            this.label4.Location = new System.Drawing.Point(44, 126);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(42, 13);
             this.label4.TabIndex = 8;
@@ -78,7 +78,7 @@ namespace TrabajoPrácticoPAV.Formularios
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(50, 152);
+            this.label3.Location = new System.Drawing.Point(44, 95);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 6;
@@ -86,7 +86,7 @@ namespace TrabajoPrácticoPAV.Formularios
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(271, 539);
+            this.button3.Location = new System.Drawing.Point(265, 482);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(68, 33);
             this.button3.TabIndex = 3;
@@ -95,7 +95,7 @@ namespace TrabajoPrácticoPAV.Formularios
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(163, 539);
+            this.button2.Location = new System.Drawing.Point(157, 482);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(73, 33);
             this.button2.TabIndex = 3;
@@ -109,7 +109,7 @@ namespace TrabajoPrácticoPAV.Formularios
             this.Modelo,
             this.Nombre,
             this.IdModelo});
-            this.grid_aviones.Location = new System.Drawing.Point(53, 259);
+            this.grid_aviones.Location = new System.Drawing.Point(47, 202);
             this.grid_aviones.Name = "grid_aviones";
             this.grid_aviones.Size = new System.Drawing.Size(483, 265);
             this.grid_aviones.TabIndex = 3;
@@ -135,7 +135,7 @@ namespace TrabajoPrácticoPAV.Formularios
             // 
             // btn_alta
             // 
-            this.btn_alta.Location = new System.Drawing.Point(53, 539);
+            this.btn_alta.Location = new System.Drawing.Point(47, 482);
             this.btn_alta.Name = "btn_alta";
             this.btn_alta.Size = new System.Drawing.Size(79, 33);
             this.btn_alta.TabIndex = 3;
@@ -146,30 +146,33 @@ namespace TrabajoPrácticoPAV.Formularios
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(95, 189);
+            this.label2.Location = new System.Drawing.Point(89, 132);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 13);
             this.label2.TabIndex = 1;
             // 
-            // comboBox_Aerolinea1
+            // cmb_Modelo
             // 
-            this.comboBox_Aerolinea1.FormattingEnabled = true;
-            this.comboBox_Aerolinea1.Location = new System.Drawing.Point(129, 180);
-            this.comboBox_Aerolinea1.Name = "comboBox_Aerolinea1";
-            this.comboBox_Aerolinea1.Pp_CampoAceptaNull = false;
-            this.comboBox_Aerolinea1.Pp_MensajeError = null;
-            this.comboBox_Aerolinea1.Pp_NombreCampo = null;
-            this.comboBox_Aerolinea1.Pp_NombreTabla = null;
-            this.comboBox_Aerolinea1.Pp_PkTabla = null;
-            this.comboBox_Aerolinea1.Size = new System.Drawing.Size(166, 21);
-            this.comboBox_Aerolinea1.TabIndex = 7;
+            this.cmb_Modelo.FormattingEnabled = true;
+            this.cmb_Modelo.Location = new System.Drawing.Point(123, 123);
+            this.cmb_Modelo.Name = "cmb_Modelo";
+            this.cmb_Modelo.Pp_CampoAceptaNull = true;
+            this.cmb_Modelo.Pp_MensajeError = null;
+            this.cmb_Modelo.Pp_NombreCampo = "nombre";
+            this.cmb_Modelo.Pp_NombreMora = null;
+            this.cmb_Modelo.Pp_NombreTabla = "Modelo";
+            this.cmb_Modelo.Pp_PkTabla = "idModelo";
+            this.cmb_Modelo.Size = new System.Drawing.Size(166, 21);
+            this.cmb_Modelo.TabIndex = 7;
+            this.cmb_Modelo.SelectedIndexChanged += new System.EventHandler(this.cmb_Modelo_SelectedIndexChanged);
             // 
             // textBox_Aerolinea1
             // 
-            this.textBox_Aerolinea1.Location = new System.Drawing.Point(129, 149);
+            this.textBox_Aerolinea1.Location = new System.Drawing.Point(123, 92);
             this.textBox_Aerolinea1.Name = "textBox_Aerolinea1";
             this.textBox_Aerolinea1.Pp_MensajeError = null;
             this.textBox_Aerolinea1.Pp_NombreCampo = null;
+            this.textBox_Aerolinea1.Pp_NombreTabla = null;
             this.textBox_Aerolinea1.Size = new System.Drawing.Size(166, 20);
             this.textBox_Aerolinea1.TabIndex = 4;
             // 
@@ -178,11 +181,11 @@ namespace TrabajoPrácticoPAV.Formularios
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(227)))), ((int)(((byte)(187)))));
-            this.ClientSize = new System.Drawing.Size(1491, 698);
+            this.ClientSize = new System.Drawing.Size(871, 613);
             this.Controls.Add(this.btn_actualizar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.comboBox_Aerolinea1);
+            this.Controls.Add(this.cmb_Modelo);
             this.Controls.Add(this.grid_aviones);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -213,7 +216,7 @@ namespace TrabajoPrácticoPAV.Formularios
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdModelo;
         private System.Windows.Forms.Label label4;
-        private Clase.ComboBox_Aerolinea comboBox_Aerolinea1;
+        private Clase.ComboBox_Aerolinea cmb_Modelo;
         private System.Windows.Forms.Button btn_actualizar;
     }
 }
