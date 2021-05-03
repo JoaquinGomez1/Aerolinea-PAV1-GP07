@@ -59,15 +59,18 @@ namespace TrabajoPrácticoPAV.Formularios
 
                 if (esSalidaMenorALlegada)
                 {
-                    int duracionEstimadaActual = Tiempo.calcularDiferenciaDelDia(horarioLlegadaMilitar, horarioSalidaMilitar);
+                    int duracionEstimadaActual = Tiempo.calcularDiferenciaDelDia(horarioSalidaMilitar, horarioLlegadaMilitar);
                     duracionEstimadaViaje = duracionEstimadaActual;
+                    duracionEstimadaActual = Tiempo.ValidarMinutos(duracionEstimadaActual);
                     lbl_duracionEstimada.Text = Tiempo.FormatearIntMilitarAString(duracionEstimadaActual);
                 }
 
                 if (!esSalidaMenorALlegada)
                 {
-                    int duracionEstimadaActual = horarioLlegadaMilitar - horarioSalidaMilitar;
+                    horarioSalidaMilitar += 2400;
+                    int duracionEstimadaActual = Tiempo.calcularDiferenciaDelDia(horarioSalidaMilitar, horarioLlegadaMilitar);
                     duracionEstimadaViaje = duracionEstimadaActual;
+                    duracionEstimadaActual = Tiempo.ValidarMinutos(duracionEstimadaActual);
                     lbl_duracionEstimada.Text = Tiempo.FormatearIntMilitarAString(duracionEstimadaActual);
                 }
             }
