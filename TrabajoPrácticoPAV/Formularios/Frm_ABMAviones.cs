@@ -26,6 +26,7 @@ namespace TrabajoPrácticoPAV.Formularios
 
         private void CargarGrilla(DataTable tabla)
         {
+            grid_aviones.Rows.Clear();
             for (int i = 0; i < tabla.Rows.Count; i++)
             {
                 grid_aviones.Rows.Add();
@@ -60,15 +61,51 @@ namespace TrabajoPrácticoPAV.Formularios
             cmb_Modelo.CargarCombo();
         }
 
+        private void btn_buscar_Click(object sender, EventArgs e)
+        {
+            int modelo_up = int.Parse(cmb_Modelo.SelectedIndex.ToString()) + 1;
+            NE_Avion avion = new NE_Avion();
+            if (txt_Numero.Text == string.Empty && cmb_Modelo.SelectedIndex == -1)
+            {
+                MessageBox.Show("Seleccionar alguna opcion o ingresar numero de modelo");
+            }
+
+            if (cmb_Modelo.SelectedIndex != -1 && txt_Numero.Text != "")
+            {
+                CargarGrilla(avion.Recuperar_Mixto(txt_Numero.Text, modelo_up));
+            }
+
+            if (cmb_Modelo.SelectedIndex != -1)
+            {
+                //recuperar por modelo
+            }
+
+            if (txt_Numero.Text != "")
+            {
+                //Recuperar por numero
+            }
+
+            MessageBox.Show(modelo_up.ToString());
+
+
+
+        }
+
         private void btn_actualizar_Click(object sender, EventArgs e)
         {
-            grid_aviones.Rows.Clear();
+
             NE_Avion aviones = new NE_Avion();
             DataTable tabla = new DataTable();
             tabla = aviones.RecuperarTodos();
             CargarGrilla(tabla);
 
         }
+
+        private void textBox_Aerolinea1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
 
         private void cmb_Modelo_SelectedIndexChanged(object sender, EventArgs e)
         {
