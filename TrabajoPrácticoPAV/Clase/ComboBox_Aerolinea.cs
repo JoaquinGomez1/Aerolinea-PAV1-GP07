@@ -10,13 +10,12 @@ namespace TrabajoPrácticoPAV.Clase
 {
     class ComboBox_Aerolinea : ComboBox
     {
-        public string Pp_NombreCampoInsert { get; set; }
         public string Pp_PkTabla { get; set; }
         public string Pp_NombreCampo { get; set; }
         public string Pp_MensajeError { get; set; }
         public string Pp_NombreTabla { get; set; }
         public bool Pp_CampoAceptaNull { get; set; }
-        public bool Pp_EsPk { get; set; }
+        public string Pp_NombreMora { get; set; }
 
         Conexion_DB _BD = new Conexion_DB();
 
@@ -29,6 +28,7 @@ namespace TrabajoPrácticoPAV.Clase
             if (this.Pp_CampoAceptaNull == true)
             {
                 this.SelectedIndex = -1;
+                this.Text = "Seleccionar " + Pp_NombreTabla + " ...";
             }
             else
             {
