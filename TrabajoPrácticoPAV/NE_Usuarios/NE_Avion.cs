@@ -23,7 +23,7 @@ namespace TrabajoPrácticoPAV.NE_Aviones
             //               + " FROM usuarios u join perfiles p "
             //               + " on u.id_perfil = p.id_perfil ";
 
-            string sql = @"SELECT Avion.numeroPorModelo,Modelo.nombre from Avion inner join  Modelo on Avion.idModelo = Modelo.idModelo";
+            string sql = @"SELECT Avion.numeroPorModelo,Modelo.nombre from Avion inner join  Modelo on Avion.idModelo = Modelo.idModelo order by Modelo.nombre, Avion.numeroPorModelo";
 
             return _BD.EjecutarSelect(sql);
         }
@@ -34,5 +34,17 @@ namespace TrabajoPrácticoPAV.NE_Aviones
             _BD.Insertar(sqlInsertar);
         }
 
+        // recuperar mixto
+        public DataTable Recuperar_Mixto(string numero, int modelo)
+        {
+            string sql = @"SELECT Avion.numeroPorModelo, Modelo.nombre from Avion "
+            + " inner join Modelo on Avion.idModelo = Modelo.idModelo "
+            + "  where Avion.numeroPorModelo = " + numero
+            + " and Avion.idModelo = " + modelo;
+            ;
+            return _BD.EjecutarSelect(sql);
+        }
     }
 }
+
+
