@@ -67,7 +67,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(497, 222);
+            this.label1.Location = new System.Drawing.Point(514, 222);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 25);
             this.label1.TabIndex = 15;
@@ -90,10 +90,10 @@
             this.Btn_Registrar.FlatAppearance.BorderSize = 0;
             this.Btn_Registrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_Registrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.Btn_Registrar.Location = new System.Drawing.Point(320, 277);
+            this.Btn_Registrar.Location = new System.Drawing.Point(332, 277);
             this.Btn_Registrar.Margin = new System.Windows.Forms.Padding(3, 25, 3, 3);
             this.Btn_Registrar.Name = "Btn_Registrar";
-            this.Btn_Registrar.Size = new System.Drawing.Size(100, 40);
+            this.Btn_Registrar.Size = new System.Drawing.Size(117, 40);
             this.Btn_Registrar.TabIndex = 4;
             this.Btn_Registrar.Text = "Registrar";
             this.Btn_Registrar.UseVisualStyleBackColor = false;
@@ -106,10 +106,10 @@
             this.Btn_Cancelar.FlatAppearance.BorderSize = 0;
             this.Btn_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_Cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.Btn_Cancelar.Location = new System.Drawing.Point(470, 277);
+            this.Btn_Cancelar.Location = new System.Drawing.Point(482, 277);
             this.Btn_Cancelar.Margin = new System.Windows.Forms.Padding(3, 25, 3, 3);
             this.Btn_Cancelar.Name = "Btn_Cancelar";
-            this.Btn_Cancelar.Size = new System.Drawing.Size(100, 40);
+            this.Btn_Cancelar.Size = new System.Drawing.Size(117, 40);
             this.Btn_Cancelar.TabIndex = 5;
             this.Btn_Cancelar.Text = "Cancelar";
             this.Btn_Cancelar.UseVisualStyleBackColor = false;
@@ -123,7 +123,7 @@
             this.Barra.Location = new System.Drawing.Point(0, 0);
             this.Barra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Barra.Name = "Barra";
-            this.Barra.Size = new System.Drawing.Size(840, 39);
+            this.Barra.Size = new System.Drawing.Size(855, 39);
             this.Barra.TabIndex = 24;
             this.Barra.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BarraSuperior);
             // 
@@ -134,14 +134,14 @@
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(12, 7);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(200, 27);
+            this.label6.Size = new System.Drawing.Size(212, 27);
             this.label6.TabIndex = 4;
-            this.label6.Text = "ELIMINAR TRAMO";
+            this.label6.Text = "REGISTRAR TRAMO";
             // 
             // textBox_Aerolinea2
             // 
             this.textBox_Aerolinea2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox_Aerolinea2.Location = new System.Drawing.Point(216, 219);
+            this.textBox_Aerolinea2.Location = new System.Drawing.Point(233, 219);
             this.textBox_Aerolinea2.Name = "textBox_Aerolinea2";
             this.textBox_Aerolinea2.Pp_EsPk = false;
             this.textBox_Aerolinea2.Pp_MensajeError = "Ingrese la duración del tramo";
@@ -153,7 +153,7 @@
             // textBox_Aerolinea1
             // 
             this.textBox_Aerolinea1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox_Aerolinea1.Location = new System.Drawing.Point(601, 220);
+            this.textBox_Aerolinea1.Location = new System.Drawing.Point(618, 220);
             this.textBox_Aerolinea1.Name = "textBox_Aerolinea1";
             this.textBox_Aerolinea1.Pp_EsPk = false;
             this.textBox_Aerolinea1.Pp_MensajeError = "Ingrese la distancia del tramo";
@@ -166,7 +166,7 @@
             // 
             this.cmb_ASalida.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.cmb_ASalida.FormattingEnabled = true;
-            this.cmb_ASalida.Location = new System.Drawing.Point(216, 78);
+            this.cmb_ASalida.Location = new System.Drawing.Point(233, 78);
             this.cmb_ASalida.Name = "cmb_ASalida";
             this.cmb_ASalida.Pp_CampoAceptaNull = false;
             this.cmb_ASalida.Pp_EsPk = false;
@@ -182,7 +182,7 @@
             // 
             this.cmb_ADestino.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.cmb_ADestino.FormattingEnabled = true;
-            this.cmb_ADestino.Location = new System.Drawing.Point(216, 148);
+            this.cmb_ADestino.Location = new System.Drawing.Point(233, 148);
             this.cmb_ADestino.Name = "cmb_ADestino";
             this.cmb_ADestino.Pp_CampoAceptaNull = false;
             this.cmb_ADestino.Pp_EsPk = false;
@@ -198,7 +198,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(840, 334);
+            this.ClientSize = new System.Drawing.Size(855, 345);
             this.Controls.Add(this.Barra);
             this.Controls.Add(this.Btn_Cancelar);
             this.Controls.Add(this.Btn_Registrar);

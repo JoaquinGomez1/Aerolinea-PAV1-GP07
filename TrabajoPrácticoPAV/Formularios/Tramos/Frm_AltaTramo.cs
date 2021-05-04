@@ -36,20 +36,23 @@ namespace TrabajoPrácticoPAV.Formularios.Tramos
 
         private void Frm_AltaTramo_Load(object sender, EventArgs e)
         {
+            this.BackColor = Estilo.ColorFondoForms;
             Estilo.FormatearEstilo(this.Controls);
             cmb_ADestino.CargarCombo();
             cmb_ASalida.CargarCombo();
+            
         }
 
         private void Btn_Registrar_Click(object sender, EventArgs e)
         {
             if (_TE.Validar(this.Controls) == Tratamientos_Especiales.Resultado.correcto)
             {
-                if (cmb_ADestino.SelectedValue != cmb_ASalida.SelectedValue)
+                if (cmb_ADestino.SelectedIndex != cmb_ASalida.SelectedIndex)
                 {
                     _TE.Validar(this.Controls);
                     string sql = _TE.CostructorInsert("Tramo", this.Controls);
                     _BD.Insertar(sql);
+                    this.Close();
                 }
                 else
                 {

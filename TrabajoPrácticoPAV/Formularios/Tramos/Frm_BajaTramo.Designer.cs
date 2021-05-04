@@ -74,10 +74,10 @@
             this.Btn_Cancelar.FlatAppearance.BorderSize = 0;
             this.Btn_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_Cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.Btn_Cancelar.Location = new System.Drawing.Point(470, 305);
+            this.Btn_Cancelar.Location = new System.Drawing.Point(466, 305);
             this.Btn_Cancelar.Margin = new System.Windows.Forms.Padding(3, 25, 3, 3);
             this.Btn_Cancelar.Name = "Btn_Cancelar";
-            this.Btn_Cancelar.Size = new System.Drawing.Size(100, 40);
+            this.Btn_Cancelar.Size = new System.Drawing.Size(117, 40);
             this.Btn_Cancelar.TabIndex = 41;
             this.Btn_Cancelar.Text = "Cancelar";
             this.Btn_Cancelar.UseVisualStyleBackColor = false;
@@ -90,10 +90,10 @@
             this.Btn_Eliminar.FlatAppearance.BorderSize = 0;
             this.Btn_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_Eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.Btn_Eliminar.Location = new System.Drawing.Point(320, 305);
+            this.Btn_Eliminar.Location = new System.Drawing.Point(328, 305);
             this.Btn_Eliminar.Margin = new System.Windows.Forms.Padding(3, 25, 3, 3);
             this.Btn_Eliminar.Name = "Btn_Eliminar";
-            this.Btn_Eliminar.Size = new System.Drawing.Size(100, 40);
+            this.Btn_Eliminar.Size = new System.Drawing.Size(117, 40);
             this.Btn_Eliminar.TabIndex = 40;
             this.Btn_Eliminar.Text = "Eliminar";
             this.Btn_Eliminar.UseVisualStyleBackColor = false;
