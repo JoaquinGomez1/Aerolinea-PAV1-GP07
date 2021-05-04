@@ -170,7 +170,6 @@ namespace TrabajoPrácticoPAV.Formularios
             this.cmb_Modelo.Pp_CampoAceptaNull = true;
             this.cmb_Modelo.Pp_MensajeError = null;
             this.cmb_Modelo.Pp_NombreCampo = "nombre";
-            this.cmb_Modelo.Pp_NombreMora = null;
             this.cmb_Modelo.Pp_NombreTabla = "Modelo";
             this.cmb_Modelo.Pp_PkTabla = "idModelo";
             this.cmb_Modelo.Size = new System.Drawing.Size(166, 21);
