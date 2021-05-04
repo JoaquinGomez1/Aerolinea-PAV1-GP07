@@ -292,7 +292,7 @@
             this.Cmb_Provincia.Name = "Cmb_Provincia";
             this.Cmb_Provincia.Pp_CampoAceptaNull = true;
             this.Cmb_Provincia.Pp_MensajeError = null;
-            this.Cmb_Provincia.Pp_NombreCampo = "nombreProv";
+            this.Cmb_Provincia.Pp_NombreCampo = "nombreProvincia";
             this.Cmb_Provincia.Pp_NombreTabla = "Provincia";
             this.Cmb_Provincia.Pp_PkTabla = "idProvincia";
             this.Cmb_Provincia.Size = new System.Drawing.Size(100, 24);
@@ -308,7 +308,7 @@
             this.Cmb_Pais.Name = "Cmb_Pais";
             this.Cmb_Pais.Pp_CampoAceptaNull = true;
             this.Cmb_Pais.Pp_MensajeError = null;
-            this.Cmb_Pais.Pp_NombreCampo = "nombre";
+            this.Cmb_Pais.Pp_NombreCampo = "nombrePais";
             this.Cmb_Pais.Pp_NombreTabla = "Pais";
             this.Cmb_Pais.Pp_PkTabla = "idPais";
             this.Cmb_Pais.Size = new System.Drawing.Size(100, 24);
@@ -395,7 +395,7 @@
             this.Txt_telefono.Margin = new System.Windows.Forms.Padding(11, 2, 11, 2);
             this.Txt_telefono.Name = "Txt_telefono";
             this.Txt_telefono.Pp_MensajeError = "Escribe tu telefono";
-            this.Txt_telefono.Pp_NombreCampo = null;
+            this.Txt_telefono.Pp_NombreCampo = "numeroTelefono";
             this.Txt_telefono.Pp_NombreTabla = "Telefono";
             this.Txt_telefono.Size = new System.Drawing.Size(100, 22);
             this.Txt_telefono.TabIndex = 17;
