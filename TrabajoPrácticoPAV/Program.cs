@@ -18,6 +18,8 @@ namespace TrabajoPrácticoPAV
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Frm_ABMAviones());
-        }   
+            //Application.Run(new Frm_Principal());
+
+        }
     }
 }

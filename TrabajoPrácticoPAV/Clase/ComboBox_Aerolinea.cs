@@ -28,11 +28,12 @@ namespace TrabajoPrácticoPAV.Clase
             if (this.Pp_CampoAceptaNull == true)
             {
                 this.SelectedIndex = -1;
+                this.Text = "Seleccionar " + Pp_NombreTabla + " ...";
             }
-            //else
-            //{
-            //    this.SelectedIndex = 0;
-            //}
+            else
+            {
+                this.SelectedIndex = 0;
+            }
         }
 
         public void CargarComboDependiente(string dependencia)

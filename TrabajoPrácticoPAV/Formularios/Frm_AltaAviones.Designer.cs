@@ -44,6 +44,7 @@ namespace TrabajoPrácticoPAV.Formularios
             this.txt_numero.Name = "txt_numero";
             this.txt_numero.Pp_MensajeError = null;
             this.txt_numero.Pp_NombreCampo = null;
+            this.txt_numero.Pp_NombreTabla = null;
             this.txt_numero.Size = new System.Drawing.Size(171, 20);
             this.txt_numero.TabIndex = 0;
             // 
@@ -55,10 +56,12 @@ namespace TrabajoPrácticoPAV.Formularios
             this.cmb_Modelo.Pp_CampoAceptaNull = true;
             this.cmb_Modelo.Pp_MensajeError = null;
             this.cmb_Modelo.Pp_NombreCampo = "nombre";
+            this.cmb_Modelo.Pp_NombreMora = null;
             this.cmb_Modelo.Pp_NombreTabla = "Modelo";
             this.cmb_Modelo.Pp_PkTabla = "idModelo";
             this.cmb_Modelo.Size = new System.Drawing.Size(171, 21);
             this.cmb_Modelo.TabIndex = 1;
+            this.cmb_Modelo.SelectedIndexChanged += new System.EventHandler(this.cmb_Modelo_SelectedIndexChanged);
             // 
             // label1
             // 
