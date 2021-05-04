@@ -67,7 +67,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(112, 221);
+            this.label1.Location = new System.Drawing.Point(497, 222);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 25);
             this.label1.TabIndex = 15;
@@ -77,7 +77,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label5.Location = new System.Drawing.Point(448, 222);
+            this.label5.Location = new System.Drawing.Point(30, 220);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(180, 25);
             this.label5.TabIndex = 16;
@@ -134,26 +134,28 @@
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(12, 7);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(292, 27);
+            this.label6.Size = new System.Drawing.Size(200, 27);
             this.label6.TabIndex = 4;
-            this.label6.Text = "REGISTRAR NUEVO TRAMO";
+            this.label6.Text = "ELIMINAR TRAMO";
             // 
             // textBox_Aerolinea2
             // 
             this.textBox_Aerolinea2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox_Aerolinea2.Location = new System.Drawing.Point(634, 221);
+            this.textBox_Aerolinea2.Location = new System.Drawing.Point(216, 219);
             this.textBox_Aerolinea2.Name = "textBox_Aerolinea2";
+            this.textBox_Aerolinea2.Pp_EsPk = false;
             this.textBox_Aerolinea2.Pp_MensajeError = "Ingrese la duración del tramo";
             this.textBox_Aerolinea2.Pp_NombreCampo = "duracion";
             this.textBox_Aerolinea2.Pp_NombreTabla = "Tramo";
-            this.textBox_Aerolinea2.Size = new System.Drawing.Size(183, 30);
+            this.textBox_Aerolinea2.Size = new System.Drawing.Size(216, 30);
             this.textBox_Aerolinea2.TabIndex = 3;
             // 
             // textBox_Aerolinea1
             // 
             this.textBox_Aerolinea1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox_Aerolinea1.Location = new System.Drawing.Point(216, 219);
+            this.textBox_Aerolinea1.Location = new System.Drawing.Point(601, 220);
             this.textBox_Aerolinea1.Name = "textBox_Aerolinea1";
+            this.textBox_Aerolinea1.Pp_EsPk = false;
             this.textBox_Aerolinea1.Pp_MensajeError = "Ingrese la distancia del tramo";
             this.textBox_Aerolinea1.Pp_NombreCampo = "distancia";
             this.textBox_Aerolinea1.Pp_NombreTabla = "Tramo";
@@ -167,6 +169,7 @@
             this.cmb_ASalida.Location = new System.Drawing.Point(216, 78);
             this.cmb_ASalida.Name = "cmb_ASalida";
             this.cmb_ASalida.Pp_CampoAceptaNull = false;
+            this.cmb_ASalida.Pp_EsPk = false;
             this.cmb_ASalida.Pp_MensajeError = "Ingrese el Aeropuerto de salida";
             this.cmb_ASalida.Pp_NombreCampo = "nombre";
             this.cmb_ASalida.Pp_NombreCampoInsert = "codigoAeropuertoSalida";
@@ -182,6 +185,7 @@
             this.cmb_ADestino.Location = new System.Drawing.Point(216, 148);
             this.cmb_ADestino.Name = "cmb_ADestino";
             this.cmb_ADestino.Pp_CampoAceptaNull = false;
+            this.cmb_ADestino.Pp_EsPk = false;
             this.cmb_ADestino.Pp_MensajeError = "Ingrese el Aeropuerto de destino";
             this.cmb_ADestino.Pp_NombreCampo = "nombre";
             this.cmb_ADestino.Pp_NombreCampoInsert = "codigoAeropuertoDestino";

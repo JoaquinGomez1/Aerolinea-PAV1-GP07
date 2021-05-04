@@ -32,9 +32,10 @@ namespace TrabajoPrácticoPAV.Formularios
 
         private void Frm_ABMTramos_Load(object sender, EventArgs e)
         {
+            this.BackColor = Estilo.ColorFondoForms;
             Estilo.FormatearEstilo(this.Controls);
 
-        grid_tramos.Formatear();
+            grid_tramos.Formatear();
             cmb_ADestino.CargarCombo();
             cmb_ASalida.CargarCombo();
         }
@@ -73,6 +74,8 @@ namespace TrabajoPrácticoPAV.Formularios
             cmb_ASalida.SelectedIndex = -1;
             chb_todos_tramo.Checked = false;
             grid_tramos.Rows.Clear();
+            Btn_Modificar.Enabled = false;
+            Btn_Eliminar.Enabled = false;
         }
 
         private void Btn_Cerrar_Click(object sender, EventArgs e)
@@ -84,14 +87,6 @@ namespace TrabajoPrácticoPAV.Formularios
         {
             Btn_Modificar.Enabled = true;
             Btn_Eliminar.Enabled = true;
-        }
-
-        private void cmb_ADestino_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string sql = _NE.Constructor_select(chb_todos_tramo, cmb_ADestino, cmb_ASalida, "Tramo");
-            CargarGrilla(_BD.EjecutarSelect(sql));
-            Btn_Modificar.Enabled = false;
-            Btn_Eliminar.Enabled = false;
         }
 
         private void Btn_Modificar_Click(object sender, EventArgs e)
@@ -113,17 +108,29 @@ namespace TrabajoPrácticoPAV.Formularios
         private void Btn_Eliminar_Click(object sender, EventArgs e)
         {
             string codigoASalida = _NE.BuscarCodigoAeropuerto(
-    grid_tramos.CurrentRow.Cells["ASalida"].Value.ToString());
+            grid_tramos.CurrentRow.Cells["ASalida"].Value.ToString());
 
             string codigoADestino = _NE.BuscarCodigoAeropuerto(
                 grid_tramos.CurrentRow.Cells["ADestino"].Value.ToString());
 
-            Frm_ModificacionTramo modif = new Frm_ModificacionTramo();
-            modif.codigoASalida = codigoASalida;
-            modif.codigoADestino = codigoADestino;
+            Frm_BajaTramo elim = new Frm_BajaTramo();
+            elim.codigoASalida = codigoASalida;
+            elim.codigoADestino = codigoADestino;
+            elim.ShowDialog();
+        }
 
-            MessageBox.Show($"Codigo ASalida {codigoASalida} codigo ADesitno {codigoADestino}");
-            modif.ShowDialog();
+        private void grid_tramos_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            string codigoASalida = _NE.BuscarCodigoAeropuerto(
+                grid_tramos.CurrentRow.Cells["ASalida"].Value.ToString());
+
+            string codigoADestino = _NE.BuscarCodigoAeropuerto(
+                grid_tramos.CurrentRow.Cells["ADestino"].Value.ToString());
+
+            Frm_ConsultaTramo consulta = new Frm_ConsultaTramo();
+            consulta.codigoADestino = codigoADestino;
+            consulta.codigoASalida = codigoASalida;
+            consulta.ShowDialog();
         }
     }
 }

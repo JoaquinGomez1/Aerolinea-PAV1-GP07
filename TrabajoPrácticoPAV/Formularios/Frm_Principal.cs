@@ -134,16 +134,6 @@ namespace TrabajoPrácticoPAV
 
         #region Colores de Botones
 
-        public void CambiarColorBoton(Button boton)
-        {
-            boton.BackColor = Color.FromArgb(228, 195, 123);
-        }
-
-        private void PanelFormularios_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         #endregion
 
         //Método abrir Form dentro de panel
@@ -172,6 +162,8 @@ namespace TrabajoPrácticoPAV
             }
 
         }
+
+        //Regresa a su color original el botón de un Form cerrado
         private void FormCerrado(object sender, FormClosedEventArgs e)
         {
             if (Application.OpenForms["Frm_ABMClientes"] == null)
@@ -179,11 +171,14 @@ namespace TrabajoPrácticoPAV
             if (Application.OpenForms["Frm_ABMViajes"] == null)
                 RestaurarColorBoton(Btn_ABM_Viaje);
             if (Application.OpenForms["Frm_ABMVuelo"] == null)
-                RestaurarColorBoton(Btn_ABM_Viaje);
+                RestaurarColorBoton(Btn_ABM_Vuelo);
+            if (Application.OpenForms["Frm_ABMTramos"] == null)
+                RestaurarColorBoton(Btn_ABM_Tramo);
+            if (Application.OpenForms["Frm_ABMAviones"] == null)
+                RestaurarColorBoton(Btn_ABMAviones);
             if (Application.OpenForms["Frm_Configuracion"] == null)
             {
-                if(Estilo.EstiloDebeActualizar)
-                    DarColor();
+                DarColor();
                 RestaurarColorBoton(Btn_Configuracion);
             }
         }

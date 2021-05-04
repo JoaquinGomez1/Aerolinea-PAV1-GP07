@@ -28,6 +28,7 @@ namespace TrabajoPrácticoPAV.Clase
                 {
                     case "TrabajoPrácticoPAV.Clase.Button_Aerolinea":
                         ((Button_Aerolinea)item).BackColor = Estilo.ColorBoton;
+                        ((Button)item).ForeColor = Estilo.ColorLetraBoton;
                         break;
                     case "System.Windows.Forms.Button":
                         ((Button)item).BackColor = Estilo.ColorBoton;
@@ -43,6 +44,8 @@ namespace TrabajoPrácticoPAV.Clase
                     case "System.Windows.Forms.Label":
                     case "System.Windows.Forms.TextBox":
                     case "TrabajoPrácticoPAV.Clase.TextBox_Aerolinea":
+                    case "TrabajoPrácticoPAV.Clase.MaskedTextBox_Aerolinea":
+                    case "System.Windows.Forms.MonthCalendar":
                         break;
                     default:
                         MessageBox.Show($"{nombreControl} es un control no admitido, agregar en ESTILOS");

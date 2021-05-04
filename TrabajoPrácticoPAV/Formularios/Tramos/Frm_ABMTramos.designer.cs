@@ -222,6 +222,7 @@
             this.grid_tramos.Size = new System.Drawing.Size(733, 204);
             this.grid_tramos.TabIndex = 2;
             this.grid_tramos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_tramos_CellContentClick);
+            this.grid_tramos.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.grid_tramos_MouseDoubleClick);
             // 
             // cmb_ASalida
             // 
@@ -239,7 +240,6 @@
             this.cmb_ASalida.Pp_PkTabla = "codigo";
             this.cmb_ASalida.Size = new System.Drawing.Size(609, 33);
             this.cmb_ASalida.TabIndex = 5;
-            this.cmb_ASalida.SelectedIndexChanged += new System.EventHandler(this.cmb_ADestino_SelectedIndexChanged);
             // 
             // cmb_ADestino
             // 
@@ -257,7 +257,6 @@
             this.cmb_ADestino.Pp_PkTabla = "codigo";
             this.cmb_ADestino.Size = new System.Drawing.Size(609, 33);
             this.cmb_ADestino.TabIndex = 6;
-            this.cmb_ADestino.SelectedIndexChanged += new System.EventHandler(this.cmb_ADestino_SelectedIndexChanged);
             // 
             // Frm_ABMTramos
             // 

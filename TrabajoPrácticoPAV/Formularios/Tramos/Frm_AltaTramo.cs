@@ -17,10 +17,10 @@ namespace TrabajoPrácticoPAV.Formularios.Tramos
     {
         Tratamientos_Especiales _TE = new Tratamientos_Especiales();
         Conexion_DB _BD = new Conexion_DB();
+
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-
         private extern static void SendMessage(System.IntPtr hWind, int wMsg, int wParam, int lParam);
 
         private void BarraSuperior(object sender, MouseEventArgs e)
@@ -45,9 +45,17 @@ namespace TrabajoPrácticoPAV.Formularios.Tramos
         {
             if (_TE.Validar(this.Controls) == Tratamientos_Especiales.Resultado.correcto)
             {
-                _TE.Validar(this.Controls);
-                string sql = _TE.CostructorInsert("Tramo", this.Controls);
-                _BD.Insertar(sql);
+                if (cmb_ADestino.SelectedValue != cmb_ASalida.SelectedValue)
+                {
+                    _TE.Validar(this.Controls);
+                    string sql = _TE.CostructorInsert("Tramo", this.Controls);
+                    _BD.Insertar(sql);
+                }
+                else
+                {
+                    MessageBox.Show("Los aeropuertos de salida y destino no pueden ser el mismo.");
+                    cmb_ASalida.Focus();
+                }
             }
             else
             {
