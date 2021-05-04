@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.Formularios;
+using TrabajoPrácticoPAV.Formularios.Pasajeros;
 
 namespace TrabajoPrácticoPAV
 {
@@ -87,7 +88,7 @@ namespace TrabajoPrácticoPAV
             switch (boton.Name.ToString())
             {
                 case "Btn_ABMClientes":
-                    AbrirFormulario<Frm_ABMClientes>();
+                    AbrirFormulario<Frm_ABMPasajeros>();
                     break;
                 case "Btn_ABMReservas":
                     AbrirFormulario<Frm_ABMReservas>();
