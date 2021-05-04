@@ -3,6 +3,7 @@ using System.Data;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Backend;
 using TrabajoPrácticoPAV.Clase;
+using TrabajoPrácticoPAV.Clase.Modelos;
 using TrabajoPrácticoPAV.NE_Usuarios;
 using static TrabajoPrácticoPAV.Clase.Tratamientos_Especiales;
 
@@ -16,7 +17,7 @@ namespace TrabajoPrácticoPAV.Formularios
             InitializeComponent();
         }
 
-        private readonly Conexion_DB _DB = new Conexion_DB();
+        private readonly NE_Viajes _NE_Viajes = new NE_Viajes();
         private int duracionEstimadaViaje { get; set; }
         private readonly ManejoDeTiempos Tiempo = new ManejoDeTiempos();
 
@@ -54,24 +55,24 @@ namespace TrabajoPrácticoPAV.Formularios
 
             if (ambosCamposCompletados)
             {
-                int horarioLlegadaMilitar = Tiempo.convertirAIntMilitar(horarioLlegada);
-                int horarioSalidaMilitar = Tiempo.convertirAIntMilitar(horarioSalida);
+                Tiempo.RestarDateTimes(horarioLlegada, horarioSalida);
 
                 if (esSalidaMenorALlegada)
                 {
-                    int duracionEstimadaActual = Tiempo.calcularDiferenciaDelDia(horarioSalidaMilitar, horarioLlegadaMilitar);
+
+                    int duracionEstimadaActual = Tiempo.calcularDiferenciaDelDia(horarioLlegada, horarioSalida);
                     duracionEstimadaViaje = duracionEstimadaActual;
-                    duracionEstimadaActual = Tiempo.ValidarMinutos(duracionEstimadaActual);
                     lbl_duracionEstimada.Text = Tiempo.FormatearIntMilitarAString(duracionEstimadaActual);
                 }
 
                 if (!esSalidaMenorALlegada)
                 {
-                    horarioSalidaMilitar += 2400;
-                    int duracionEstimadaActual = Tiempo.calcularDiferenciaDelDia(horarioSalidaMilitar, horarioLlegadaMilitar);
+                    string horarioResultado = Tiempo.RestarDateTimes(horarioLlegada, horarioSalida);
+                    int duracionEstimadaActual = Tiempo.convertirAIntMilitar(horarioResultado);
+
                     duracionEstimadaViaje = duracionEstimadaActual;
-                    duracionEstimadaActual = Tiempo.ValidarMinutos(duracionEstimadaActual);
-                    lbl_duracionEstimada.Text = Tiempo.FormatearIntMilitarAString(duracionEstimadaActual);
+                    //duracionEstimadaActual = Tiempo.ValidarMinutos(duracionEstimadaActual);
+                    lbl_duracionEstimada.Text = horarioResultado;
                 }
             }
         }
@@ -82,9 +83,6 @@ namespace TrabajoPrácticoPAV.Formularios
             bool estanCamposCompletos = ValidarCamposCompletos() == Resultado.correcto;
             if (!estanCamposCompletos) return;
 
-            //Verificacion de que la espera entre el horario de presencia y el horario de salida no supere las 4hs.
-            //Se hace esta comparacion para luego poder calcular la espera en el aeropuerto incluso si transcurre en dos dias diferentes.
-            // Ejemplo: Horario de presencia = 23:00hs, Horario de Salida = 01:00hs, Espera estimada = 2hs (en vez de -22hs).
             bool esHorarioPresenciaCorrecto = VerificarHorarioPresencia() == Resultado.correcto;
             if (!esHorarioPresenciaCorrecto) return;
 
@@ -95,15 +93,14 @@ namespace TrabajoPrácticoPAV.Formularios
 
             if (estaTodoCorrecto)
             {
-                MessageBox.Show("Resultado correcto");
-                string horarioPresencia = Mtxt_presencia.Text;
-                string horarioSalida = Mtxt_horarioSalida.Text;
-                string horarioLlegada = Mtxt_horarioLlegada.Text;
-
-                string sql = @"INSERT INTO Viaje(horarioPresencia, horarioSalida, horarioLlegada, duracionEstimada) 
-                        VALUES(" + $"'{horarioPresencia}', '{horarioSalida}', '{horarioLlegada}', '{duracionEstimadaViaje}'" + ")";
-
-                _DB.Insertar(sql);
+                Viaje myViaje = new Viaje()
+                {
+                    HorarioLlegada = Mtxt_horarioLlegada.Text,
+                    HorarioSalida = Mtxt_horarioSalida.Text,
+                    HorarioPresencia = Mtxt_presencia.Text,
+                    DuracionEstimada = duracionEstimadaViaje
+                };
+                _NE_Viajes.InsertViaje(myViaje);
                 // Permite refrescar los datos del data grid con lo que fue ingresado recientemente
                 CargarTodos();
             }
@@ -160,6 +157,9 @@ namespace TrabajoPrácticoPAV.Formularios
 
         private Resultado VerificarHorarioPresencia()
         {
+            //Verificacion de que la espera entre el horario de presencia y el horario de salida no supere las 4hs.
+            //Se hace esta comparacion para luego poder calcular la espera en el aeropuerto incluso si transcurre en dos dias diferentes.
+            // Ejemplo: Horario de presencia = 23:00hs, Horario de Salida = 01:00hs, Espera estimada = 2hs (en vez de -22hs).
             bool esPresenciaMenorASalida = String.Compare(Mtxt_horarioSalida.Text, Mtxt_presencia.Text) == -1;
 
             int horariopresenciaMilitar = Tiempo.convertirAIntMilitar(Mtxt_presencia.Text);
@@ -167,7 +167,7 @@ namespace TrabajoPrácticoPAV.Formularios
 
             if (esPresenciaMenorASalida)
             {
-                int esperaEstimadaActual = Tiempo.calcularDiferenciaDelDia(horarioSalidaMilitar, horariopresenciaMilitar);
+                int esperaEstimadaActual = Tiempo.calcularDiferenciaDelDia(Mtxt_horarioSalida.Text, Mtxt_presencia.Text);
                 if (esperaEstimadaActual > 400)
                 {
                     MessageBox.Show("El horario de espera en el aeropuerto no debe superar las 4hs");
@@ -189,8 +189,7 @@ namespace TrabajoPrácticoPAV.Formularios
 
         private void CargarTodos()
         {
-            NE_Viajes Negocio = new NE_Viajes();
-            DataTable todosLosViajes = Negocio.GetTodosLosViajes();
+            DataTable todosLosViajes = _NE_Viajes.GetTodosLosViajes();
             CargarDataGrid(todosLosViajes);
         }
 

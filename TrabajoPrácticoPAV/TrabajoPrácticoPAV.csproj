@@ -61,6 +61,7 @@
     <Compile Include="Clase\MaskedTextBox_Aerolinea.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Clase\Modelos\Viaje.cs" />
     <Compile Include="Clase\TextBox_Aerolinea.cs">
       <SubType>Component</SubType>
     </Compile>

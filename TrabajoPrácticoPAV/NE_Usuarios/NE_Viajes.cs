@@ -1,5 +1,6 @@
 ﻿using System.Data;
 using TrabajoPrácticoPAV.Backend;
+using TrabajoPrácticoPAV.Clase.Modelos;
 
 namespace TrabajoPrácticoPAV.NE_Usuarios
 {
@@ -13,6 +14,14 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             DataTable resultadoSelect = _DB.EjecutarSelect(sql);
 
             return resultadoSelect;
+        }
+
+        public void InsertViaje(Viaje Viaje)
+        {
+            string sql = @"INSERT INTO Viaje(horarioPresencia, horarioSalida, horarioLlegada, duracionEstimada) 
+                        VALUES(" + $"'{Viaje.HorarioPresencia}', '{Viaje.HorarioSalida}', '{Viaje.HorarioLlegada}', '{Viaje.DuracionEstimada}'" + ")";
+
+            _DB.Insertar(sql);
         }
     }
 }
