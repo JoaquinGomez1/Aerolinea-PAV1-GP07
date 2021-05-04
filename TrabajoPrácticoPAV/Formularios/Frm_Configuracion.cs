@@ -35,6 +35,7 @@ namespace TrabajoPrácticoPAV.Formularios
             Estilo.ColorBotonPress = Color.FromArgb(228, 195, 123);
             Estilo.ColorFondo = Color.FromArgb(159, 133, 74);
             Estilo.ColorLetraBoton = Color.FromArgb(0, 0, 0);
+            Estilo.ColorFondoForms = Color.FromArgb(242, 227, 187);
             Estilo.EstiloDebeActualizar = true;
         }
 
@@ -45,12 +46,24 @@ namespace TrabajoPrácticoPAV.Formularios
             Estilo.ColorBotonPress = Color.FromArgb(133, 170, 197);
             Estilo.ColorBarra = Color.FromArgb(5, 8, 70);
             Estilo.ColorLetraBoton = Color.FromArgb(255, 255, 255);
+            Estilo.ColorFondoForms = Color.FromArgb(159, 237, 212);
             Estilo.EstiloDebeActualizar = true;
         }
 
         private void Btn_Salir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Btn_ObsidianBlack_Click(object sender, EventArgs e)
+        {
+            Estilo.ColorFondo = Color.FromArgb(68, 83, 94);
+            Estilo.ColorBoton = Color.FromArgb(0,0,0);
+            Estilo.ColorBotonPress = Color.FromArgb(33, 43, 50);
+            Estilo.ColorBarra = Color.FromArgb(0,0,0);
+            Estilo.ColorLetraBoton = Color.FromArgb(255, 255, 255);
+            Estilo.ColorFondoForms = Color.FromArgb(97, 96, 99);
+            Estilo.EstiloDebeActualizar = true;
         }
     }
 }

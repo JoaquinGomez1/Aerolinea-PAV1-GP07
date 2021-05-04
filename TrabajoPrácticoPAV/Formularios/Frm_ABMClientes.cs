@@ -64,6 +64,8 @@ namespace TrabajoPrácticoPAV.Formularios
 
         private void Frm_ABMClientes_Load(object sender, EventArgs e)
         {
+            this.BackColor = Estilo.ColorFondoForms;
+            Estilo.FormatearEstilo(this.Controls);
             Cmb_TipoDoc.CargarCombo();
             Cmb_Pais.CargarCombo();
             DGV_Pasajero.Formatear();
@@ -76,12 +78,21 @@ namespace TrabajoPrácticoPAV.Formularios
 
         private void Btn_Buscar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("No implementado xd");
+            string join = $" JOIN Ciudad Ciudad ON Pasajero.idCiudad = Ciudad.idCiudad JOIN Provincia Provincia ON " +
+                $"Provincia.idProvincia = Ciudad.idProvincia JOIN Pais Pais ON Pais.idPais = Provincia.idPais JOIN " +
+                $"Tipo_Documento Tipo_Documento ON Pasajero.tipoDoc = Tipo_Documento.tipoDoc JOIN Telefono " +
+                $"ON Pasajero.tipoDoc = Telefono.tipoDoc AND Pasajero.numeroDoc = Telefono.numeroDoc ";
+            MessageBox.Show(_TE.ConstructorSelect(this.Controls, join));
         }
 
         private void Cmb_Provincia_SelectedIndexChanged(object sender, EventArgs e)
         {
             Cmb_Ciudad.CargarCombo();
+        }
+
+        private void btn_cancelar_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -14,28 +14,30 @@ using TrabajoPrácticoPAV.NE_Usuarios;
 
 namespace TrabajoPrácticoPAV.Formularios.Tramos
 {
-    public partial class Frm_BajaTramo : Form
+    public partial class Frm_ConsultaTramo : Form
     {
-        NE_Tramos _NE = new NE_Tramos();
-        Conexion_DB _BD = new Conexion_DB();
-        Tratamientos_Especiales _TE = new Tratamientos_Especiales();
-
-        #region Movimiento desde la barra
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWind, int wMsg, int wParam, int lParam);
-        #endregion
-
-        public string codigoASalida { get; set; }
-        public string codigoADestino { get; set; }
-
-        public Frm_BajaTramo()
+        public Frm_ConsultaTramo()
         {
             InitializeComponent();
         }
 
-        private void Frm_BajaTramo_Load(object sender, EventArgs e)
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWind, int wMsg, int wParam, int lParam);
+
+        public string codigoASalida { get; set; }
+        public string codigoADestino { get; set; }
+
+        NE_Tramos _NE = new NE_Tramos();
+        Conexion_DB _BD = new Conexion_DB();
+
+        private void Btn_Aceptar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Frm_ConsultaTramo_Load(object sender, EventArgs e)
         {
             this.BackColor = Estilo.ColorFondoForms;
             Estilo.FormatearEstilo(this.Controls);
@@ -48,17 +50,6 @@ namespace TrabajoPrácticoPAV.Formularios.Tramos
 
             DataTable tabla = _BD.EjecutarSelect(sql);
             _NE.InsertarDatosEnControles(tabla, this.Controls);
-        }
-
-        private void Btn_Eliminar_Click(object sender, EventArgs e)
-        {
-            string sql = _TE.CostructorUpdateDelete("Tramo", this.Controls, false);
-            _BD.Borrar(sql);
-        }
-
-        private void Btn_Cancelar_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void BarraSuperior_MouseMove(object sender, MouseEventArgs e)

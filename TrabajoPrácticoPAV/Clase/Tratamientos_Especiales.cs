@@ -14,6 +14,119 @@ namespace TrabajoPrácticoPAV.Clase
     {
         public enum Resultado { correcto, error }
 
+
+
+
+
+        public string ConstructorSelect(Control.ControlCollection controles, string join)
+        {
+            string sql = "SELECT ";
+            string condiciones = "";
+            string atributosTabla = "";
+
+            foreach (var control in controles)
+            {
+                //SELECT ATRIBUTOS FROM TABLA
+                if (control.GetType().ToString() == "TrabajoPrácticoPAV.Clase.DataGridView_Aerolinea")
+                {
+                    DataGridView_Aerolinea grid = ((DataGridView_Aerolinea)control);
+                    atributosTabla += $"{ExtraerColumnasGrid(grid)} FROM {grid.Pp_NombreTabla} {grid.Pp_NombreTabla}";
+                }
+
+                //Evaluación TEXTBOX
+                if (control.GetType().ToString() == "TrabajoPrácticoPAV.Clase.TextBox_Aerolinea")
+                {
+                    TextBox_Aerolinea txt = (TextBox_Aerolinea)control;
+
+                    //Crea la condición que se va a asignar
+                    string condicion = $"{txt.Pp_NombreTabla}.{txt.Pp_NombreCampo}={FormatearDato(txt.Text)}";
+
+                    if (txt.Text != "")
+                    {
+                        if (condiciones == "")
+                            condiciones += " WHERE " + condicion;
+                        else
+                            condiciones += " AND " + condicion;
+                    }
+                }
+
+                //Evaluación MASKEDTEXTBOX
+                if (control.GetType().ToString() == "TrabajoPrácticoPAV.Clase.MaskedTextBox_Aerolinea")
+                {
+                    MaskedTextBox_Aerolinea txt = (MaskedTextBox_Aerolinea)control;
+
+                    if (txt.Text != "")
+                    {
+                        //Crea la condición que se va a asignar
+                        string condicion = $"{txt.Pp_NombreTabla}.{txt.Pp_NombreCampo}={FormatearDato(txt.Text)}";
+
+
+                        //Asigna la primer condición
+                        if (condiciones == "")
+                            condiciones += " WHERE " + condicion;
+
+                        //Asigna condiciones subsiguientes
+                        else
+                            condiciones += " AND " + condicion;
+                    }
+                }
+
+                //Evaluación COMBOBOX
+                if (control.GetType().ToString() == "TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea")
+                {
+                    ComboBox_Aerolinea cmb = (ComboBox_Aerolinea)control;
+                    if (cmb.SelectedIndex != -1)
+                    {
+                        //Crea la condición que se va a asignar
+                        string condicion = $"{cmb.Pp_NombreTabla}.{cmb.Pp_PkTabla}=" +
+                            $"{FormatearDato(cmb.SelectedValue.ToString())}";
+
+                        //Asigna la primer condición
+                        if (condiciones == "")
+                            condiciones += " WHERE " + condicion;
+
+                        //Asigna condiciones subsiguientes
+                        else
+                            condiciones += " AND " + condicion;
+                    }
+                }
+            }
+
+            sql += atributosTabla + join + condiciones;
+            Clipboard.SetText(sql);
+            return sql;
+        }
+
+        private object FormatearDato(string dato)
+        {
+            try
+            {
+                int entero = int.Parse(dato);
+                return entero;
+            }
+            catch (Exception)
+            {
+                return $"'{dato}'";
+                throw;
+            }
+        }
+
+        private string ExtraerColumnasGrid(DataGridView_Aerolinea grid)
+        {
+            string nombresColumnas = "";
+            for (int i = 0; i < grid.Columns.Count; i++)
+            {
+                if (nombresColumnas == "")
+                {
+                    nombresColumnas += grid.Pp_NombreTabla + "." + grid.Columns[i].Name.ToString();
+                }
+                else
+                    nombresColumnas += ", " + grid.Pp_NombreTabla + "." + grid.Columns[i].Name.ToString();
+            }
+            return nombresColumnas;
+        }
+
+
         public Resultado Validar(Control.ControlCollection controles)
         {
             foreach (var item in controles)
@@ -79,9 +192,15 @@ namespace TrabajoPrácticoPAV.Clase
             return sql;
         }
 
-        public string CostructorUpdate(string NombreTabla, Control.ControlCollection controles)
+        //Dependiendo de la variable esUpdate va a generar una consulta de actualización o de borrado
+        //MUY IMPORTANTE: En el diseño completar la propiedad Pp_EsPk de los controles
+        public string CostructorUpdateDelete(string NombreTabla, Control.ControlCollection controles, bool esUpdate)
         {
-            string sql = $"UPDATE {NombreTabla}";
+            string sql = "";
+            if (esUpdate)
+                sql = $"UPDATE {NombreTabla}";
+            else
+                sql = $"DELETE FROM {NombreTabla}";
             string condiciones = "";
             string cambios = "";
             string tipoDatoColumna = "";
@@ -91,6 +210,7 @@ namespace TrabajoPrácticoPAV.Clase
 
             Estructura = BuscarEstructuraTabla(NombreTabla);
 
+            if(esUpdate)
             for (int i = 0; i < Estructura.Columns.Count; i++)
             {
                 valorColumna = "";
