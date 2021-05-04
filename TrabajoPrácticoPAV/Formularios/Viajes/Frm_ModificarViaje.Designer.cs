@@ -107,7 +107,6 @@ namespace TrabajoPrácticoPAV.Formularios.Viajes
             this.cmb_numero_viaje.Pp_CampoAceptaNull = false;
             this.cmb_numero_viaje.Pp_MensajeError = "Seleccionar un campo";
             this.cmb_numero_viaje.Pp_NombreCampo = "numeroDeViaje";
-            this.cmb_numero_viaje.Pp_NombreMora = null;
             this.cmb_numero_viaje.Pp_NombreTabla = "Viaje";
             this.cmb_numero_viaje.Pp_PkTabla = "numeroDeViaje";
             this.cmb_numero_viaje.Size = new System.Drawing.Size(88, 21);

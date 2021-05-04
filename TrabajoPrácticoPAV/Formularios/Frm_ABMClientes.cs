@@ -10,12 +10,14 @@ using System.Windows.Forms;
 using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.Formularios;
 using TrabajoPrácticoPAV.NE_Usuarios;
+using TrabajoPrácticoPAV.Backend;
 
 namespace TrabajoPrácticoPAV.Formularios
 {
     public partial class Frm_ABMClientes : Form
     {
         Tratamientos_Especiales _TE = new Tratamientos_Especiales();
+        Conexion_DB _BD = new Conexion_DB();
 
         public Frm_ABMClientes()
         {
@@ -74,7 +76,7 @@ namespace TrabajoPrácticoPAV.Formularios
 
         private void Btn_Buscar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(_TE.ConstructorSelect(this.Controls));
+            MessageBox.Show("No implementado xd");
         }
 
         private void Cmb_Provincia_SelectedIndexChanged(object sender, EventArgs e)
