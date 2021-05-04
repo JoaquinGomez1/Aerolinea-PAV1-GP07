@@ -104,6 +104,9 @@ namespace TrabajoPrácticoPAV
                 case "Btn_Configuracion":
                     AbrirFormulario<Frm_Configuracion>();
                     break;
+                case "Btn_ABMAviones":
+                    AbrirFormulario<Frm_ABMAviones>();
+                    break;
                 
                 default:
                     MessageBox.Show("Esperando implementación");

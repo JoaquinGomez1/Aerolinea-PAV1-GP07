@@ -123,7 +123,6 @@
             this.Cmb_Nromodelo.Pp_CampoAceptaNull = true;
             this.Cmb_Nromodelo.Pp_MensajeError = "linea3";
             this.Cmb_Nromodelo.Pp_NombreCampo = "idModelo";
-            this.Cmb_Nromodelo.Pp_NombreMora = null;
             this.Cmb_Nromodelo.Pp_NombreTabla = "modelo";
             this.Cmb_Nromodelo.Pp_PkTabla = "idModelo";
             this.Cmb_Nromodelo.Size = new System.Drawing.Size(121, 21);
@@ -137,7 +136,6 @@
             this.cmb_Tramo.Pp_CampoAceptaNull = true;
             this.cmb_Tramo.Pp_MensajeError = "linea5";
             this.cmb_Tramo.Pp_NombreCampo = "idTramo";
-            this.cmb_Tramo.Pp_NombreMora = null;
             this.cmb_Tramo.Pp_NombreTabla = "Tramo";
             this.cmb_Tramo.Pp_PkTabla = "idTramo";
             this.cmb_Tramo.Size = new System.Drawing.Size(121, 21);
@@ -151,7 +149,6 @@
             this.cmb_Nroavion.Pp_CampoAceptaNull = true;
             this.cmb_Nroavion.Pp_MensajeError = "linea4";
             this.cmb_Nroavion.Pp_NombreCampo = "numeroPorModelo";
-            this.cmb_Nroavion.Pp_NombreMora = null;
             this.cmb_Nroavion.Pp_NombreTabla = "Avion";
             this.cmb_Nroavion.Pp_PkTabla = "idModelo";
             this.cmb_Nroavion.Size = new System.Drawing.Size(121, 21);

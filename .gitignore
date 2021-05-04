@@ -360,3 +360,8 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# Custom
+/TrabajoPracticoPAV/.vs
+/TrabajoPracticoPAV/bin/Debug
+/TrabajoPracticoPAV/obj/*
