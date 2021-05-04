@@ -41,7 +41,10 @@ namespace TrabajoPrácticoPAV.Formularios.Tramos
             Estilo.FormatearEstilo(this.Controls);
 
             cmb_ADestino.CargarCombo();
+            cmb_ADestino.SelectedValue = codigoADestino;
             cmb_ASalida.CargarCombo();
+            cmb_ASalida.SelectedValue = codigoASalida;
+
             string sql = $"SELECT * FROM Tramo WHERE codigoAeropuertoSalida = '{codigoASalida}' " +
                 $"AND codigoAeropuertoDestino = '{codigoADestino}'";
 
@@ -62,7 +65,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tramos
 
         private void Btn_Modificar_Click(object sender, EventArgs e)
         {
-            string sql = _TE.CostructorUpdate("Tramo", this.Controls);
+            string sql = _TE.CostructorUpdateDelete("Tramo", this.Controls, true);
             _BD.Modificar(sql);
         }
     }

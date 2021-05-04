@@ -62,9 +62,9 @@
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(12, 7);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(292, 27);
+            this.label6.Size = new System.Drawing.Size(217, 27);
             this.label6.TabIndex = 4;
-            this.label6.Text = "REGISTRAR NUEVO TRAMO";
+            this.label6.Text = "MODIFICAR TRAMO";
             // 
             // Btn_Cancelar
             // 
@@ -143,6 +143,7 @@
             this.textBox_Aerolinea2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBox_Aerolinea2.Location = new System.Drawing.Point(634, 214);
             this.textBox_Aerolinea2.Name = "textBox_Aerolinea2";
+            this.textBox_Aerolinea2.Pp_EsPk = false;
             this.textBox_Aerolinea2.Pp_MensajeError = "Ingrese la duración del tramo";
             this.textBox_Aerolinea2.Pp_NombreCampo = "duracion";
             this.textBox_Aerolinea2.Pp_NombreTabla = "Tramo";
@@ -154,6 +155,7 @@
             this.textBox_Aerolinea1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBox_Aerolinea1.Location = new System.Drawing.Point(216, 212);
             this.textBox_Aerolinea1.Name = "textBox_Aerolinea1";
+            this.textBox_Aerolinea1.Pp_EsPk = false;
             this.textBox_Aerolinea1.Pp_MensajeError = "Ingrese la distancia del tramo";
             this.textBox_Aerolinea1.Pp_NombreCampo = "distancia";
             this.textBox_Aerolinea1.Pp_NombreTabla = "Tramo";

@@ -126,6 +126,12 @@
     <Compile Include="Formularios\Tramos\Frm_BajaTramo.Designer.cs">
       <DependentUpon>Frm_BajaTramo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Tramos\Frm_ConsultaTramo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Tramos\Frm_ConsultaTramo.Designer.cs">
+      <DependentUpon>Frm_ConsultaTramo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Tramos\Frm_ModificacionTramo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +189,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Tramos\Frm_BajaTramo.resx">
       <DependentUpon>Frm_BajaTramo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Tramos\Frm_ConsultaTramo.resx">
+      <DependentUpon>Frm_ConsultaTramo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Tramos\Frm_ModificacionTramo.resx">
       <DependentUpon>Frm_ModificacionTramo.cs</DependentUpon>

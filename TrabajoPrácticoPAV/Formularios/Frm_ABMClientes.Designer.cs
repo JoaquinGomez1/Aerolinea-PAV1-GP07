@@ -251,6 +251,7 @@
             this.Msktxt_NumeroDOC.Location = new System.Drawing.Point(283, 237);
             this.Msktxt_NumeroDOC.Mask = "99999999";
             this.Msktxt_NumeroDOC.Name = "Msktxt_NumeroDOC";
+            this.Msktxt_NumeroDOC.Pp_EsPk = false;
             this.Msktxt_NumeroDOC.Pp_NombreCampo = "numeroDoc";
             this.Msktxt_NumeroDOC.Pp_NombreTabla = "Pasajero";
             this.Msktxt_NumeroDOC.Size = new System.Drawing.Size(100, 22);
@@ -264,8 +265,10 @@
             this.Cmb_Ciudad.Margin = new System.Windows.Forms.Padding(11, 2, 11, 2);
             this.Cmb_Ciudad.Name = "Cmb_Ciudad";
             this.Cmb_Ciudad.Pp_CampoAceptaNull = true;
+            this.Cmb_Ciudad.Pp_EsPk = false;
             this.Cmb_Ciudad.Pp_MensajeError = null;
             this.Cmb_Ciudad.Pp_NombreCampo = "nombreCiudad";
+            this.Cmb_Ciudad.Pp_NombreCampoInsert = null;
             this.Cmb_Ciudad.Pp_NombreTabla = "Ciudad";
             this.Cmb_Ciudad.Pp_PkTabla = "idCiudad";
             this.Cmb_Ciudad.Size = new System.Drawing.Size(100, 24);
@@ -277,6 +280,7 @@
             this.Txt_nombre.Location = new System.Drawing.Point(283, 85);
             this.Txt_nombre.Margin = new System.Windows.Forms.Padding(11, 2, 11, 2);
             this.Txt_nombre.Name = "Txt_nombre";
+            this.Txt_nombre.Pp_EsPk = false;
             this.Txt_nombre.Pp_MensajeError = "Escribe tu nombre";
             this.Txt_nombre.Pp_NombreCampo = "nombre";
             this.Txt_nombre.Pp_NombreTabla = "Pasajero";
@@ -291,8 +295,10 @@
             this.Cmb_Provincia.Margin = new System.Windows.Forms.Padding(11, 2, 11, 2);
             this.Cmb_Provincia.Name = "Cmb_Provincia";
             this.Cmb_Provincia.Pp_CampoAceptaNull = true;
+            this.Cmb_Provincia.Pp_EsPk = false;
             this.Cmb_Provincia.Pp_MensajeError = null;
             this.Cmb_Provincia.Pp_NombreCampo = "nombreProvincia";
+            this.Cmb_Provincia.Pp_NombreCampoInsert = null;
             this.Cmb_Provincia.Pp_NombreTabla = "Provincia";
             this.Cmb_Provincia.Pp_PkTabla = "idProvincia";
             this.Cmb_Provincia.Size = new System.Drawing.Size(100, 24);
@@ -307,8 +313,10 @@
             this.Cmb_Pais.Margin = new System.Windows.Forms.Padding(11, 2, 11, 2);
             this.Cmb_Pais.Name = "Cmb_Pais";
             this.Cmb_Pais.Pp_CampoAceptaNull = true;
+            this.Cmb_Pais.Pp_EsPk = false;
             this.Cmb_Pais.Pp_MensajeError = null;
             this.Cmb_Pais.Pp_NombreCampo = "nombrePais";
+            this.Cmb_Pais.Pp_NombreCampoInsert = null;
             this.Cmb_Pais.Pp_NombreTabla = "Pais";
             this.Cmb_Pais.Pp_PkTabla = "idPais";
             this.Cmb_Pais.Size = new System.Drawing.Size(100, 24);
@@ -325,6 +333,7 @@
             this.btn_cancelar.TabIndex = 25;
             this.btn_cancelar.Text = "Cancelar";
             this.btn_cancelar.UseVisualStyleBackColor = true;
+            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click_1);
             // 
             // Txt_numero_calle
             // 
@@ -332,6 +341,7 @@
             this.Txt_numero_calle.Location = new System.Drawing.Point(204, 391);
             this.Txt_numero_calle.Margin = new System.Windows.Forms.Padding(11, 2, 11, 2);
             this.Txt_numero_calle.Name = "Txt_numero_calle";
+            this.Txt_numero_calle.Pp_EsPk = false;
             this.Txt_numero_calle.Pp_MensajeError = null;
             this.Txt_numero_calle.Pp_NombreCampo = null;
             this.Txt_numero_calle.Pp_NombreTabla = null;
@@ -344,6 +354,7 @@
             this.Txt_nombre_calle.Location = new System.Drawing.Point(204, 359);
             this.Txt_nombre_calle.Margin = new System.Windows.Forms.Padding(11, 2, 11, 2);
             this.Txt_nombre_calle.Name = "Txt_nombre_calle";
+            this.Txt_nombre_calle.Pp_EsPk = false;
             this.Txt_nombre_calle.Pp_MensajeError = null;
             this.Txt_nombre_calle.Pp_NombreCampo = null;
             this.Txt_nombre_calle.Pp_NombreTabla = null;
@@ -369,8 +380,10 @@
             this.Cmb_TipoDoc.Margin = new System.Windows.Forms.Padding(11, 2, 11, 2);
             this.Cmb_TipoDoc.Name = "Cmb_TipoDoc";
             this.Cmb_TipoDoc.Pp_CampoAceptaNull = false;
+            this.Cmb_TipoDoc.Pp_EsPk = false;
             this.Cmb_TipoDoc.Pp_MensajeError = "Seleccionar Tipo Doc";
             this.Cmb_TipoDoc.Pp_NombreCampo = "nombreTipoDoc";
+            this.Cmb_TipoDoc.Pp_NombreCampoInsert = null;
             this.Cmb_TipoDoc.Pp_NombreTabla = "Tipo_Documento";
             this.Cmb_TipoDoc.Pp_PkTabla = "tipoDoc";
             this.Cmb_TipoDoc.Size = new System.Drawing.Size(100, 24);
@@ -394,6 +407,7 @@
             this.Txt_telefono.Location = new System.Drawing.Point(283, 161);
             this.Txt_telefono.Margin = new System.Windows.Forms.Padding(11, 2, 11, 2);
             this.Txt_telefono.Name = "Txt_telefono";
+            this.Txt_telefono.Pp_EsPk = false;
             this.Txt_telefono.Pp_MensajeError = "Escribe tu telefono";
             this.Txt_telefono.Pp_NombreCampo = "numeroTelefono";
             this.Txt_telefono.Pp_NombreTabla = "Telefono";
@@ -406,6 +420,7 @@
             this.Txt_Apellido.Location = new System.Drawing.Point(283, 123);
             this.Txt_Apellido.Margin = new System.Windows.Forms.Padding(11, 2, 11, 2);
             this.Txt_Apellido.Name = "Txt_Apellido";
+            this.Txt_Apellido.Pp_EsPk = false;
             this.Txt_Apellido.Pp_MensajeError = "Escribe tu apellido";
             this.Txt_Apellido.Pp_NombreCampo = "apellido";
             this.Txt_Apellido.Pp_NombreTabla = "Pasajero";
