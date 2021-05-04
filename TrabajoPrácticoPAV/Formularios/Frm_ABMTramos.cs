@@ -37,13 +37,17 @@ namespace TrabajoPrácticoPAV.Formularios
             NE_Tramos tramo = new NE_Tramos();
             Conexion_DB _BD = new Conexion_DB();
             Tratamientos_Especiales _TE = new Tratamientos_Especiales();
-            MessageBox.Show(_TE.ConstructorSelect(this.Controls));
-            //string sql = tramo.Constructor_select(chb_todos_tramo, cmb_ADestino, cmb_ASalida, txt_numero, "Tramo");
+            //MessageBox.Show(_TE.ConstructorSelect(this.Controls));
+            string sql = tramo.Constructor_select(chb_todos_tramo, cmb_ADestino, cmb_ASalida, txt_numero, "Tramo");
+            DataTable tabla = _BD.EjecutarSelect(sql);
+            CargarGrilla(tabla);
+            //string sql = _TE.ConstructorSelect(this.Controls);
             //DataTable tabla = _BD.EjecutarSelect(sql);
             //CargarGrilla(tabla);
-            
+
+
         }
-        
+
         private void CargarGrilla (DataTable tabla)
         {
             grid_tramos.Rows.Clear();

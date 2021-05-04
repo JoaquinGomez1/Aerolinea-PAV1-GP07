@@ -92,6 +92,9 @@ namespace TrabajoPrácticoPAV
                 case "Btn_ABMReservas":
                     AbrirFormulario<Frm_ABMReservas>();
                     break;
+                case "Btn_ABM_Vuelo":
+                    AbrirFormulario<Frm_ABMVuelo>();
+                    break;
                 case "Btn_ABM_Viaje":
                     AbrirFormulario<Frm_ABMViajes>();
                     break;
@@ -101,6 +104,7 @@ namespace TrabajoPrácticoPAV
                 case "Btn_Configuracion":
                     AbrirFormulario<Frm_Configuracion>();
                     break;
+                
                 default:
                     MessageBox.Show("Esperando implementación");
                     break;
@@ -170,6 +174,8 @@ namespace TrabajoPrácticoPAV
             if (Application.OpenForms["Frm_ABMClientes"] == null)
                 RestaurarColorBoton(Btn_ABMClientes);
             if (Application.OpenForms["Frm_ABMViajes"] == null)
+                RestaurarColorBoton(Btn_ABM_Viaje);
+            if (Application.OpenForms["Frm_ABMVuelo"] == null)
                 RestaurarColorBoton(Btn_ABM_Viaje);
             if (Application.OpenForms["Frm_Configuracion"] == null)
             {

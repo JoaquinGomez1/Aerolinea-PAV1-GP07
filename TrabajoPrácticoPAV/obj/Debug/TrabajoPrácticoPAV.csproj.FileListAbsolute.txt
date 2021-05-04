@@ -127,3 +127,21 @@ D:\Enzo\Facultad\01. PAVI\Git\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\
 G:\Programacion\C#\PAV\TrabajoPrácticoPAV.0.0.1\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_ABMTramos.resources
 >>>>>>> bb1d0b2b05569fdc0c90d15778fe7fa1095d3d81
 C:\Users\Lautaro\Desktop\tp pav 0.1\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_ABMTramos.resources
+D:\UTN MORA\TERCER AÑO\PAV\TrabajoPracticoPAV\TrabajoPrácticoPAV\bin\Debug\TrabajoPrácticoPAV.exe.config
+D:\UTN MORA\TERCER AÑO\PAV\TrabajoPracticoPAV\TrabajoPrácticoPAV\bin\Debug\TrabajoPrácticoPAV.exe
+D:\UTN MORA\TERCER AÑO\PAV\TrabajoPracticoPAV\TrabajoPrácticoPAV\bin\Debug\TrabajoPrácticoPAV.pdb
+D:\UTN MORA\TERCER AÑO\PAV\TrabajoPracticoPAV\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.csprojAssemblyReference.cache
+D:\UTN MORA\TERCER AÑO\PAV\TrabajoPracticoPAV\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_ABMClientes.resources
+D:\UTN MORA\TERCER AÑO\PAV\TrabajoPracticoPAV\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_ABMReservas.resources
+D:\UTN MORA\TERCER AÑO\PAV\TrabajoPracticoPAV\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_ABMViajes.resources
+D:\UTN MORA\TERCER AÑO\PAV\TrabajoPracticoPAV\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_Configuracion.resources
+D:\UTN MORA\TERCER AÑO\PAV\TrabajoPracticoPAV\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Frm_Principal.resources
+D:\UTN MORA\TERCER AÑO\PAV\TrabajoPracticoPAV\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Properties.Resources.resources
+D:\UTN MORA\TERCER AÑO\PAV\TrabajoPracticoPAV\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.csproj.GenerateResource.cache
+D:\UTN MORA\TERCER AÑO\PAV\TrabajoPracticoPAV\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.csproj.CoreCompileInputs.cache
+D:\UTN MORA\TERCER AÑO\PAV\TrabajoPracticoPAV\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.exe
+D:\UTN MORA\TERCER AÑO\PAV\TrabajoPracticoPAV\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.pdb
+D:\UTN MORA\TERCER AÑO\PAV\TrabajoPracticoPAV\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_ABMVuelo.resources
+>>>>>>> 3ae20c1b1e53014d99411c3c3a708ffcd624bc7b
+>>>>>>> 57b42f46ca963b34a5fccd5fd4adb2c2d53aeb7f
+C:\Users\Lautaro\Desktop\tp pav 0.1\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_ABMVuelo.resources

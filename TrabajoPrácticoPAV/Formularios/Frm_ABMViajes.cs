@@ -3,6 +3,7 @@ using System.Data;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Backend;
 using TrabajoPrácticoPAV.Clase;
+using TrabajoPrácticoPAV.NE_Usuarios;
 using static TrabajoPrácticoPAV.Clase.Tratamientos_Especiales;
 
 namespace TrabajoPrácticoPAV.Formularios
@@ -17,6 +18,7 @@ namespace TrabajoPrácticoPAV.Formularios
 
         private readonly Conexion_DB _DB = new Conexion_DB();
         private int duracionEstimadaViaje { get; set; }
+        private readonly ManejoDeTiempos Tiempo = new ManejoDeTiempos();
 
         private void label3_Click(object sender, EventArgs e)
         {
@@ -25,7 +27,7 @@ namespace TrabajoPrácticoPAV.Formularios
 
         private void Frm_ABMViajes_Load(object sender, EventArgs e)
         {
-            CargarDataGrid();
+            CargarTodos();
         }
 
         private void maskedTextBox1_TextChanged(object sender, EventArgs e)
@@ -37,7 +39,6 @@ namespace TrabajoPrácticoPAV.Formularios
         private void maskedTextBox2_TextChanged(object sender, EventArgs e)
         {
             determinarEstimado();
-
         }
 
         private void determinarEstimado()
@@ -53,79 +54,24 @@ namespace TrabajoPrácticoPAV.Formularios
 
             if (ambosCamposCompletados)
             {
-                int horarioLlegadaMilitar = convertirAIntMilitar(horarioLlegada);
-                int horarioSalidaMilitar = convertirAIntMilitar(horarioSalida);
+                int horarioLlegadaMilitar = Tiempo.convertirAIntMilitar(horarioLlegada);
+                int horarioSalidaMilitar = Tiempo.convertirAIntMilitar(horarioSalida);
 
                 if (esSalidaMenorALlegada)
                 {
-                    int duracionEstimadaActual = calcularDiferenciaDelDia(horarioLlegadaMilitar, horarioSalidaMilitar);
+                    int duracionEstimadaActual = Tiempo.calcularDiferenciaDelDia(horarioLlegadaMilitar, horarioSalidaMilitar);
                     duracionEstimadaViaje = duracionEstimadaActual;
-                    lbl_duracionEstimada.Text = FormatearIntMilitarAString(duracionEstimadaActual);
+                    lbl_duracionEstimada.Text = Tiempo.FormatearIntMilitarAString(duracionEstimadaActual);
                 }
 
                 if (!esSalidaMenorALlegada)
                 {
                     int duracionEstimadaActual = horarioLlegadaMilitar - horarioSalidaMilitar;
                     duracionEstimadaViaje = duracionEstimadaActual;
-                    lbl_duracionEstimada.Text = FormatearIntMilitarAString(duracionEstimadaActual);
+                    lbl_duracionEstimada.Text = Tiempo.FormatearIntMilitarAString(duracionEstimadaActual);
                 }
             }
         }
-
-        public int convertirAIntMilitar(string horario)
-        {
-            // Suponiendo que tenemos un horario X, convertimos esto en un horario militar.
-            // Ej: 01:40hs = 0140 
-            string horasDelHorario = $"{horario[0]}{horario[1]}"; // 01
-            string minutosDelHorario = $"{horario[3]}{horario[4]}"; // 40
-
-            string temp = $"{horasDelHorario}{minutosDelHorario}"; // 0140
-            return Int32.Parse(temp); // -> convierto a int
-        }
-
-        public int calcularDiferenciaDelDia(int horarioInicial, int horarioFinal)
-        {
-            horarioInicial += 2400;
-            horarioInicial -= horarioFinal;
-            return horarioInicial;
-        }
-
-        public string FormatearIntMilitarAString(int IntMilitar)
-        {
-            string StringMilitar = IntMilitar.ToString();
-            if (StringMilitar.Length > 4) { return ""; }
-
-            if (StringMilitar.Length == 3)
-                StringMilitar = $"0{StringMilitar}";
-
-            if (StringMilitar.Length == 2)
-                StringMilitar = $"00{StringMilitar}";
-
-            if (StringMilitar.Length == 1)
-                StringMilitar = $"000{StringMilitar}";
-
-            return $"{StringMilitar[0]}{StringMilitar[1]}:{StringMilitar[2]}{StringMilitar[3]}hs";
-        }
-
-        public bool ValidarHorario(int horario, bool horarioDefasado)
-        {
-            string horariodeString = FormatearIntMilitarAString(horario);
-            string horasDelHorario = $"{horariodeString[0]}{horariodeString[1]}";
-            string minutosDelHorario = $"{horariodeString[3]}{horariodeString[4]}";
-
-            int horasDelHorarioInt = Int32.Parse(horasDelHorario.ToString());
-            int minutosDelHorarioInt = Int32.Parse(minutosDelHorario.ToString());
-
-            if (horasDelHorarioInt > 23 || minutosDelHorarioInt > 60)
-            { horarioDefasado = true; }
-
-            return horarioDefasado;
-        }
-
-        // Funcion lambda que convierte un formato de horas y minutos a un objeto DateTime 
-        // El parametro tiene que seguir la siguiente estructura:  "14:00" 
-        // Documentación oficial del método: https://docs.microsoft.com/en-us/dotnet/api/system.datetime.parseexact?view=net-5.0
-        private DateTime ParseTime(string horasYMin) => DateTime.ParseExact(horasYMin, "H:mm", null, System.Globalization.DateTimeStyles.None);
 
 
         private void button2_Click_1(object sender, EventArgs e)
@@ -156,8 +102,7 @@ namespace TrabajoPrácticoPAV.Formularios
 
                 _DB.Insertar(sql);
                 // Permite refrescar los datos del data grid con lo que fue ingresado recientemente
-
-                CargarDataGrid();
+                CargarTodos();
             }
 
             if (!estaTodoCorrecto)
@@ -192,14 +137,14 @@ namespace TrabajoPrácticoPAV.Formularios
 
             //Determina si los horarios ingresados superan las 24hs o los 60 min
             bool horarioDefasado = false;
-            int horariodePresencia = convertirAIntMilitar(Mtxt_presencia.Text);
-            horarioDefasado = ValidarHorario(horariodePresencia, horarioDefasado);
+            int horariodePresencia = Tiempo.convertirAIntMilitar(Mtxt_presencia.Text);
+            horarioDefasado = Tiempo.ValidarHorario(horariodePresencia, horarioDefasado);
 
-            int horariodeSalida = convertirAIntMilitar(Mtxt_horarioSalida.Text);
-            horarioDefasado = ValidarHorario(horariodeSalida, horarioDefasado);
+            int horariodeSalida = Tiempo.convertirAIntMilitar(Mtxt_horarioSalida.Text);
+            horarioDefasado = Tiempo.ValidarHorario(horariodeSalida, horarioDefasado);
 
-            int horariodeLlegada = convertirAIntMilitar(Mtxt_horarioLlegada.Text);
-            horarioDefasado = ValidarHorario(horariodeLlegada, horarioDefasado);
+            int horariodeLlegada = Tiempo.convertirAIntMilitar(Mtxt_horarioLlegada.Text);
+            horarioDefasado = Tiempo.ValidarHorario(horariodeLlegada, horarioDefasado);
 
             if (horarioDefasado)
             {
@@ -214,12 +159,12 @@ namespace TrabajoPrácticoPAV.Formularios
         {
             bool esPresenciaMenorASalida = String.Compare(Mtxt_horarioSalida.Text, Mtxt_presencia.Text) == -1;
 
-            int horariopresenciaMilitar = convertirAIntMilitar(Mtxt_presencia.Text);
-            int horarioSalidaMilitar = convertirAIntMilitar(Mtxt_horarioSalida.Text);
+            int horariopresenciaMilitar = Tiempo.convertirAIntMilitar(Mtxt_presencia.Text);
+            int horarioSalidaMilitar = Tiempo.convertirAIntMilitar(Mtxt_horarioSalida.Text);
 
             if (esPresenciaMenorASalida)
             {
-                int esperaEstimadaActual = calcularDiferenciaDelDia(horarioSalidaMilitar, horariopresenciaMilitar);
+                int esperaEstimadaActual = Tiempo.calcularDiferenciaDelDia(horarioSalidaMilitar, horariopresenciaMilitar);
                 if (esperaEstimadaActual > 400)
                 {
                     MessageBox.Show("El horario de espera en el aeropuerto no debe superar las 4hs");
@@ -239,33 +184,35 @@ namespace TrabajoPrácticoPAV.Formularios
             return Resultado.correcto;
         }
 
-        private void CargarDataGrid()
+        private void CargarTodos()
         {
-            string sql = $"SELECT * FROM VIAJE";
-            DataTable resultadoSelect = _DB.EjecutarSelect(sql);
+            NE_Viajes Negocio = new NE_Viajes();
+            DataTable todosLosViajes = Negocio.GetTodosLosViajes();
+            CargarDataGrid(todosLosViajes);
+        }
 
-            if (resultadoSelect.Rows.Count == 0)
+
+        private void CargarDataGrid(DataTable tabla)
+        {
+            datagrid_viajes.Rows.Clear();
+            if (tabla.Rows.Count == 0)
             {
                 datagrid_viajes.Rows.Clear();
+                return;
             }
-            else
+
+            for (int i = 0; i < tabla.Rows.Count; i++)
             {
-                for (int i = 0; i < resultadoSelect.Rows.Count; i++)
-                {
-                    var table_row = resultadoSelect.Rows[i];
-                    var Dg_row = datagrid_viajes.Rows[i];
+                var duracionEstimadaDeViaje = Tiempo.FormatearIntMilitarAString((int)tabla.Rows[i]["duracionEstimada"]);
 
-                    var duracionEstimadaDeViaje = FormatearIntMilitarAString((int)table_row["duracionEstimada"]);
+                datagrid_viajes.Rows.Add();
 
-                    datagrid_viajes.Rows.Add();
-
-                    // Columna del DGrid --- nombre de columna de SQL
-                    Dg_row.Cells[0].Value = table_row["numeroDeViaje"].ToString();
-                    Dg_row.Cells[1].Value = table_row["horarioPresencia"].ToString();
-                    Dg_row.Cells[2].Value = table_row["horarioSalida"].ToString();
-                    Dg_row.Cells[3].Value = table_row["horarioLlegada"].ToString();
-                    Dg_row.Cells[4].Value = duracionEstimadaDeViaje;
-                }
+                // Columna del DGrid --- nombre de columna de SQL
+                datagrid_viajes.Rows[i].Cells[0].Value = tabla.Rows[i]["numeroDeViaje"].ToString();
+                datagrid_viajes.Rows[i].Cells[1].Value = tabla.Rows[i]["horarioPresencia"].ToString();
+                datagrid_viajes.Rows[i].Cells[2].Value = tabla.Rows[i]["horarioSalida"].ToString();
+                datagrid_viajes.Rows[i].Cells[3].Value = tabla.Rows[i]["horarioLlegada"].ToString();
+                datagrid_viajes.Rows[i].Cells[4].Value = duracionEstimadaDeViaje;
             }
 
         }

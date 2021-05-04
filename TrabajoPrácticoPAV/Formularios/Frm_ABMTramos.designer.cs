@@ -124,9 +124,10 @@
             this.cmb_ADestino.FormattingEnabled = true;
             this.cmb_ADestino.Location = new System.Drawing.Point(315, 259);
             this.cmb_ADestino.Name = "cmb_ADestino";
-            this.cmb_ADestino.Pp_CampoAceptaNull = false;
+            this.cmb_ADestino.Pp_CampoAceptaNull = true;
             this.cmb_ADestino.Pp_MensajeError = null;
             this.cmb_ADestino.Pp_NombreCampo = "nombre";
+            this.cmb_ADestino.Pp_NombreMora = null;
             this.cmb_ADestino.Pp_NombreTabla = "Aeropuerto";
             this.cmb_ADestino.Pp_PkTabla = "codigo";
             this.cmb_ADestino.Size = new System.Drawing.Size(488, 33);
@@ -138,9 +139,10 @@
             this.cmb_ASalida.FormattingEnabled = true;
             this.cmb_ASalida.Location = new System.Drawing.Point(315, 214);
             this.cmb_ASalida.Name = "cmb_ASalida";
-            this.cmb_ASalida.Pp_CampoAceptaNull = false;
+            this.cmb_ASalida.Pp_CampoAceptaNull = true;
             this.cmb_ASalida.Pp_MensajeError = null;
             this.cmb_ASalida.Pp_NombreCampo = "nombre";
+            this.cmb_ASalida.Pp_NombreMora = null;
             this.cmb_ASalida.Pp_NombreTabla = "Aeropuerto";
             this.cmb_ASalida.Pp_PkTabla = "codigo";
             this.cmb_ASalida.Size = new System.Drawing.Size(488, 33);
@@ -155,7 +157,7 @@
             this.grid_tramos.Name = "grid_tramos";
             this.grid_tramos.Pp_FormatoGrid = "codigo,ID , 50;nombre, Aeropuerto Salida, 250;nombre, Aeropuerto destino, 250;alg" +
     "o, Duración, 75;algo, Distancia, 75";
-            this.grid_tramos.Pp_NombreTabla = null;
+            this.grid_tramos.Pp_NombreTabla = "Aeropuerto";
             this.grid_tramos.ReadOnly = true;
             this.grid_tramos.RowTemplate.Height = 24;
             this.grid_tramos.Size = new System.Drawing.Size(850, 162);
