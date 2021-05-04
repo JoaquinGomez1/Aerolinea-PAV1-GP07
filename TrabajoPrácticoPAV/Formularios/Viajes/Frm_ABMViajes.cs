@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using TrabajoPrácticoPAV.Backend;
 using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.Clase.Modelos;
+using TrabajoPrácticoPAV.Formularios.Viajes;
 using TrabajoPrácticoPAV.NE_Usuarios;
 using static TrabajoPrácticoPAV.Clase.Tratamientos_Especiales;
 
@@ -34,47 +35,34 @@ namespace TrabajoPrácticoPAV.Formularios
         private void maskedTextBox1_TextChanged(object sender, EventArgs e)
         {
             // En este caso solo me interesa delegar la tarea de comparación a la hora de determinar el estimado
-            determinarEstimado();
+            string horarioLlegada = Mtxt_horarioLlegada.Text;
+            string horarioSalida = Mtxt_horarioSalida.Text;
+            mostrarDuracionEstimada(horarioLlegada, horarioSalida);
         }
 
         private void maskedTextBox2_TextChanged(object sender, EventArgs e)
         {
-            determinarEstimado();
-        }
-
-        private void determinarEstimado()
-        {
             string horarioLlegada = Mtxt_horarioLlegada.Text;
             string horarioSalida = Mtxt_horarioSalida.Text;
+            mostrarDuracionEstimada(horarioLlegada, horarioSalida);
+        }
 
+        public void mostrarDuracionEstimada(string horarioLlegada, string horarioSalida)
+        {
             bool llegadaCompletada = horarioLlegada.Length == 5;
             bool salidaCompletada = horarioSalida.Length == 5;
+
             bool ambosCamposCompletados = llegadaCompletada && salidaCompletada;
 
-            bool esSalidaMenorALlegada = String.Compare(horarioLlegada, horarioSalida) == -1;
+            bool esHorarioValido = Tiempo.esHorarioValido(horarioSalida) && Tiempo.esHorarioValido(horarioLlegada);
 
-            if (ambosCamposCompletados)
-            {
-                Tiempo.RestarDateTimes(horarioLlegada, horarioSalida);
+            //if (!esHorarioValido)
+            //{
+            //    MessageBox.Show($"Salida: {horarioSalida}\n Llegada: {horarioLlegada} \n Presencia: {Mtxt_presencia.Text}");
+            //}
 
-                if (esSalidaMenorALlegada)
-                {
-
-                    int duracionEstimadaActual = Tiempo.calcularDiferenciaDelDia(horarioLlegada, horarioSalida);
-                    duracionEstimadaViaje = duracionEstimadaActual;
-                    lbl_duracionEstimada.Text = Tiempo.FormatearIntMilitarAString(duracionEstimadaActual);
-                }
-
-                if (!esSalidaMenorALlegada)
-                {
-                    string horarioResultado = Tiempo.RestarDateTimes(horarioLlegada, horarioSalida);
-                    int duracionEstimadaActual = Tiempo.convertirAIntMilitar(horarioResultado);
-
-                    duracionEstimadaViaje = duracionEstimadaActual;
-                    //duracionEstimadaActual = Tiempo.ValidarMinutos(duracionEstimadaActual);
-                    lbl_duracionEstimada.Text = horarioResultado;
-                }
-            }
+            if (ambosCamposCompletados && esHorarioValido)
+                lbl_duracionEstimada.Text = _NE_Viajes.determinarEstimado(horarioLlegada, horarioSalida);
         }
 
 
@@ -222,6 +210,17 @@ namespace TrabajoPrácticoPAV.Formularios
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Frm_ModificarViaje modificarViaje = new Frm_ModificarViaje();
+            modificarViaje.ShowDialog();
+        }
+
+        private void btn_refrescar_Click(object sender, EventArgs e)
+        {
+            CargarTodos();
         }
     }
 }

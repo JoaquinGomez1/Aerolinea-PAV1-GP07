@@ -90,10 +90,10 @@
     <Compile Include="Formularios\Frm_ABMTramos.designer.cs">
       <DependentUpon>Frm_ABMTramos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Frm_ABMViajes.cs">
+    <Compile Include="Formularios\Viajes\Frm_ABMViajes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Frm_ABMViajes.Designer.cs">
+    <Compile Include="Formularios\Viajes\Frm_ABMViajes.Designer.cs">
       <DependentUpon>Frm_ABMViajes.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Frm_ABMVuelo.cs">
@@ -120,6 +120,12 @@
     <Compile Include="Formularios\Frm_Principal.Designer.cs">
       <DependentUpon>Frm_Principal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Viajes\Frm_ModificarViaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Viajes\Frm_ModificarViaje.Designer.cs">
+      <DependentUpon>Frm_ModificarViaje.cs</DependentUpon>
+    </Compile>
     <Compile Include="NE_Usuarios\NE_Avion.cs" />
     <Compile Include="NE_Usuarios\NE_Vuelos.cs" />
     <Compile Include="NE_Usuarios\NE_Clientes.cs" />
@@ -139,7 +145,7 @@
     <EmbeddedResource Include="Formularios\Frm_ABMTramos.resx">
       <DependentUpon>Frm_ABMTramos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Frm_ABMViajes.resx">
+    <EmbeddedResource Include="Formularios\Viajes\Frm_ABMViajes.resx">
       <DependentUpon>Frm_ABMViajes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Frm_ABMVuelo.resx">
@@ -153,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Frm_Principal.resx">
       <DependentUpon>Frm_Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Viajes\Frm_ModificarViaje.resx">
+      <DependentUpon>Frm_ModificarViaje.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

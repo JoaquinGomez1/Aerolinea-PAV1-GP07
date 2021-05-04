@@ -31,6 +31,8 @@ namespace TrabajoPrácticoPAV.Formularios
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.datagrid_viajes = new System.Windows.Forms.DataGridView();
             this.numeroDeViaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.horarioPresencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,6 +55,7 @@ namespace TrabajoPrácticoPAV.Formularios
             this.Mtxt_horarioSalida = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btn_refrescar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagrid_viajes)).BeginInit();
             this.panel3.SuspendLayout();
@@ -72,6 +75,9 @@ namespace TrabajoPrácticoPAV.Formularios
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.btn_refrescar);
+            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.datagrid_viajes);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label6);
@@ -85,6 +91,25 @@ namespace TrabajoPrácticoPAV.Formularios
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(730, 391);
             this.panel1.TabIndex = 2;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(152, 359);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 23;
+            this.button4.Text = "Borrar";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(71, 359);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 22;
+            this.button3.Text = "Modificar";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // datagrid_viajes
             // 
@@ -300,6 +325,16 @@ namespace TrabajoPrácticoPAV.Formularios
             this.label2.TabIndex = 4;
             this.label2.Text = "Horario de Presencia";
             // 
+            // btn_refrescar
+            // 
+            this.btn_refrescar.Location = new System.Drawing.Point(549, 359);
+            this.btn_refrescar.Name = "btn_refrescar";
+            this.btn_refrescar.Size = new System.Drawing.Size(75, 23);
+            this.btn_refrescar.TabIndex = 24;
+            this.btn_refrescar.Text = "Refrescar";
+            this.btn_refrescar.UseVisualStyleBackColor = true;
+            this.btn_refrescar.Click += new System.EventHandler(this.btn_refrescar_Click);
+            // 
             // Frm_ABMViajes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -349,5 +384,8 @@ namespace TrabajoPrácticoPAV.Formularios
         private System.Windows.Forms.DataGridViewTextBoxColumn horarioLlegada;
         private System.Windows.Forms.DataGridViewTextBoxColumn duracionEstimada;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btn_refrescar;
     }
 }

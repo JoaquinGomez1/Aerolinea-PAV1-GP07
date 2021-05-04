@@ -54,6 +54,23 @@ namespace TrabajoPrácticoPAV.Clase
             return horarioDefasado;
         }
 
+        public bool esHorarioValido(string horario)
+        {
+            // El formato debe ser "hh:mm"
+            if (horario.Length != 5) return false;
+
+            string horasDelHorario = $"{horario[0]}{horario[1]}";
+            string minutosDelHorario = $"{horario[3]}{horario[4]}";
+
+            int minutosInt = Int32.Parse(minutosDelHorario);
+            int horasInt = Int32.Parse(horasDelHorario);
+
+            if (minutosInt > 59) return false;
+            if (horasInt > 23) return false;
+
+            return true;
+        }
+
         public int ValidarMinutos(int horario)
         {
             Array horarioSeparado = separarMindeHoras(horario);
@@ -90,6 +107,7 @@ namespace TrabajoPrácticoPAV.Clase
 
         public int calcularDiferenciaDelDia(string horarioInicial, string horarioFinal)
         {
+            // Retorna int militar con la diferencia de dos horarios 
             DateTime InicialDateTime = ParseTime(horarioInicial);
             DateTime FinalDateTime = ParseTime(horarioFinal);
 
@@ -107,7 +125,6 @@ namespace TrabajoPrácticoPAV.Clase
 
             string Tiempo = $"{final.Subtract(inicial)}";
             string HorasYMinutos = Tiempo.Substring(0, 5);
-
 
             return HorasYMinutos;
         }
