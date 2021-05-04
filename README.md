@@ -4,9 +4,8 @@
 (Click derecho en la carpeta del tp > Git Bash Here):
 ```bash
  git clone <url-de-su-repositorio> 
- git init
- git remote add -u https://github.com/JoaquinGomez1/Aerolinea-PAV1-GP07
- git remote add -u <url-de-su-repositorio> 
+ cd Aerolinea-PAV1-GP07-1 !-- Importante verificar que aparezca "(main)" entre parentesis y en azul al lado del nombre del directorio 
+ git remote add upstream main https://github.com/JoaquinGomez1/Aerolinea-PAV1-GP07 --> Agregamos este repositorio como remoto
 ```
 para la url de su repositorio es importante que sea el que esta en su cuenta y no el original.
 para saber cual es la url van a su perfil en GitHub > Repositorios > abren el ultimo > copian la dirección del navegador
@@ -21,8 +20,23 @@ y debería salirnos que no hay cambios y que el árbol de trabajo está limpio
 Antes de empezar a trabajar hay que verificar que no haya cambios que no tengamos en nuestra máquina
 Para eso ejecutamos lo siguiente:
 ```bash
- git pull
+ git pull upstream main 
 ```
+Es posible que "upstream" sea distinto en la máquina de cada uno
+para estar seguros de que nombre hay que reemplazar en lugar de upstream ponemos
+```bash
+ git remote -v
+```
+Y debería figurarnos el nombre por el que hay que reemplazarlo a la izquierda de la url de este repositorio 
+```
+ ...
+ unNombre https://github.com/JoaquinGomez1/Aerolinea-PAV1-GP07 (fetch)
+ unNombre https://github.com/JoaquinGomez1/Aerolinea-PAV1-GP07 (push)
+```
+Algo asi deberia aparecernos 
+
+
+### Aclaraciones Importantes
 Es posible que Git nos pida que guardemos los cambios en un commit antes de hacer pull.
 Esto pasa porque se necesita tener guardados nuestros cambios en el entorno local antes de
 intentar traer y fusionar las cosas que están en el repositorio original
@@ -33,25 +47,29 @@ Para poder "guardar" los cambios en nuestra máquina necesitamos hacer un commit
  git commit -m "<UnMensajeAca>"
 ```
 
-Si el error nos indica 
-```bash
- git remote -v
-```
-
-y verificar que el link del repositorio que figura sea este.
-
 Siempre que terminemos de hacer cambios ejecutamos los siguientes comandos:
 ```bash
  git add .
- git commit -m "<UnMensajeAca>" (por ejemplo "cambie aerOlimpo por aeroPuto")
+ git commit -m "UnMensajeAca"
  git push
 ```
 
-Luego vamos a GitHub > van a su perfil > repositories > Aerolinea-PAV1-GP07-1 > Pull requests > New Pull request > Create Pull Request > Si se quiere se puede agregar un comentario de los cambios que se hizo > Create pull request
+Luego vamos a GitHub > Su Perfil > Repositorios > Aerolinea-PAV1-GP07-1 > Pull requests > New Pull request > Create Pull Request 
 
 Una vez que se acepta el Pull request te llega un mail con la confirmacion y se actualiza el codigo para todos.
+Nota: 
+ Todos los del grupo podemos aceptar cualquier pull request en el repositorio original
 
-### <span style="color:blue">Aclaración: </span>
+
+#### Remover Archivos Binarios
+```bash
+git rm -r .vs
+git rm -r ./TrabajoPrácticoPAV/.vs
+git rm -r ./TrabajoPrácticoPAV/obj
+git rm -r ./TrabajoPrácticoPAV/bin
+```
+
+#### ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) `Aclaración`: 
  Git es una herramienta con muchos beneficios pero que es necesario entender algunas cosas basicas para poder empezar a usarlo adecuadamente.
  vamos a dejar a disposición la [guia oficial](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository) de Git en la que todos van a poder encontrar mas de una respuesta a algún problema que estén teniendo
  
