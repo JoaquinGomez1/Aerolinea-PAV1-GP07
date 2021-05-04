@@ -41,8 +41,9 @@ namespace TrabajoPrácticoPAV.Formularios
             this.IdModelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_alta = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.btn_buscar = new System.Windows.Forms.Button();
             this.cmb_Modelo = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
-            this.textBox_Aerolinea1 = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
+            this.txt_numero = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
             ((System.ComponentModel.ISupportInitialize)(this.grid_aviones)).BeginInit();
             this.SuspendLayout();
             // 
@@ -151,6 +152,16 @@ namespace TrabajoPrácticoPAV.Formularios
             this.label2.Size = new System.Drawing.Size(0, 13);
             this.label2.TabIndex = 1;
             // 
+            // btn_buscar
+            // 
+            this.btn_buscar.Location = new System.Drawing.Point(354, 110);
+            this.btn_buscar.Name = "btn_buscar";
+            this.btn_buscar.Size = new System.Drawing.Size(75, 23);
+            this.btn_buscar.TabIndex = 10;
+            this.btn_buscar.Text = "buscar";
+            this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click_1);
+            // 
             // cmb_Modelo
             // 
             this.cmb_Modelo.FormattingEnabled = true;
@@ -166,15 +177,15 @@ namespace TrabajoPrácticoPAV.Formularios
             this.cmb_Modelo.TabIndex = 7;
             this.cmb_Modelo.SelectedIndexChanged += new System.EventHandler(this.cmb_Modelo_SelectedIndexChanged);
             // 
-            // textBox_Aerolinea1
+            // txt_numero
             // 
-            this.textBox_Aerolinea1.Location = new System.Drawing.Point(123, 92);
-            this.textBox_Aerolinea1.Name = "textBox_Aerolinea1";
-            this.textBox_Aerolinea1.Pp_MensajeError = null;
-            this.textBox_Aerolinea1.Pp_NombreCampo = null;
-            this.textBox_Aerolinea1.Pp_NombreTabla = null;
-            this.textBox_Aerolinea1.Size = new System.Drawing.Size(166, 20);
-            this.textBox_Aerolinea1.TabIndex = 4;
+            this.txt_numero.Location = new System.Drawing.Point(123, 92);
+            this.txt_numero.Name = "txt_numero";
+            this.txt_numero.Pp_MensajeError = null;
+            this.txt_numero.Pp_NombreCampo = null;
+            this.txt_numero.Pp_NombreTabla = null;
+            this.txt_numero.Size = new System.Drawing.Size(166, 20);
+            this.txt_numero.TabIndex = 4;
             // 
             // Frm_ABMAviones
             // 
@@ -182,6 +193,7 @@ namespace TrabajoPrácticoPAV.Formularios
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(227)))), ((int)(((byte)(187)))));
             this.ClientSize = new System.Drawing.Size(871, 613);
+            this.Controls.Add(this.btn_buscar);
             this.Controls.Add(this.btn_actualizar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label4);
@@ -189,7 +201,7 @@ namespace TrabajoPrácticoPAV.Formularios
             this.Controls.Add(this.grid_aviones);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox_Aerolinea1);
+            this.Controls.Add(this.txt_numero);
             this.Controls.Add(this.btn_alta);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -209,7 +221,7 @@ namespace TrabajoPrácticoPAV.Formularios
         private System.Windows.Forms.Button btn_alta;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView grid_aviones;
-        private Clase.TextBox_Aerolinea textBox_Aerolinea1;
+        private Clase.TextBox_Aerolinea txt_numero;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Modelo;
@@ -218,5 +230,6 @@ namespace TrabajoPrácticoPAV.Formularios
         private System.Windows.Forms.Label label4;
         private Clase.ComboBox_Aerolinea cmb_Modelo;
         private System.Windows.Forms.Button btn_actualizar;
+        private System.Windows.Forms.Button btn_buscar;
     }
 }
