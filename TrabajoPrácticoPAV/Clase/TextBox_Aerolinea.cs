@@ -12,6 +12,5 @@ namespace TrabajoPrácticoPAV.Clase
         public string Pp_NombreTabla { get; set; }
         public string Pp_MensajeError { get; set; }
         public string Pp_NombreCampo { get; set; }
-        public bool Pp_EsPk { get; set; }
     }
 }

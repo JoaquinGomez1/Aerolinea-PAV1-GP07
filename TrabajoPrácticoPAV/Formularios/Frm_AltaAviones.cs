@@ -38,7 +38,11 @@ namespace TrabajoPrácticoPAV.Formularios
         private void button1_Click(object sender, EventArgs e)
         {
             NE_Avion avion = new NE_Avion();
-
+            if (txt_numero.Text.Length > 4 | cmb_Modelo.SelectedIndex == -1 | txt_numero.Text == string.Empty)
+            {
+                MessageBox.Show("Debe ingresar un numero de 4 digitos y seleccionar un modelo de avion");
+                return;
+            }
             avion.Pp_numero_modelo = int.Parse(txt_numero.Text.ToString());
             avion.Pp_id_modelo = int.Parse(cmb_Modelo.SelectedValue.ToString());
 
@@ -54,6 +58,11 @@ namespace TrabajoPrácticoPAV.Formularios
         }
 
         private void cmb_Modelo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }

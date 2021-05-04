@@ -65,7 +65,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 9);
+            this.label1.Location = new System.Drawing.Point(40, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(185, 28);
             this.label1.TabIndex = 0;
@@ -73,8 +73,9 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(24, 161);
+            this.label2.Location = new System.Drawing.Point(95, 161);
             this.label2.Margin = new System.Windows.Forms.Padding(3, 18, 3, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(173, 22);
@@ -84,8 +85,9 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(70, 123);
+            this.label3.Location = new System.Drawing.Point(141, 123);
             this.label3.Margin = new System.Windows.Forms.Padding(3, 18, 3, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(127, 20);
@@ -95,8 +97,9 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(105, 85);
+            this.label4.Location = new System.Drawing.Point(176, 85);
             this.label4.Margin = new System.Windows.Forms.Padding(3, 18, 3, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(93, 20);
@@ -106,12 +109,13 @@
             // 
             // btn_agregar_fono
             // 
+            this.btn_agregar_fono.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_agregar_fono.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btn_agregar_fono.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btn_agregar_fono.FlatAppearance.BorderSize = 3;
             this.btn_agregar_fono.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btn_agregar_fono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_agregar_fono.Location = new System.Drawing.Point(321, 161);
+            this.btn_agregar_fono.Location = new System.Drawing.Point(392, 161);
             this.btn_agregar_fono.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_agregar_fono.Name = "btn_agregar_fono";
             this.btn_agregar_fono.Size = new System.Drawing.Size(27, 22);
@@ -121,8 +125,9 @@
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(-10, 199);
+            this.label6.Location = new System.Drawing.Point(61, 199);
             this.label6.Margin = new System.Windows.Forms.Padding(3, 18, 3, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(207, 20);
@@ -132,8 +137,9 @@
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(-26, 237);
+            this.label7.Location = new System.Drawing.Point(45, 237);
             this.label7.Margin = new System.Windows.Forms.Padding(3, 18, 3, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(223, 22);
@@ -143,8 +149,9 @@
             // 
             // Cal_fecha_nacimiento
             // 
+            this.Cal_fecha_nacimiento.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Cal_fecha_nacimiento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Cal_fecha_nacimiento.Location = new System.Drawing.Point(356, 76);
+            this.Cal_fecha_nacimiento.Location = new System.Drawing.Point(482, 85);
             this.Cal_fecha_nacimiento.MaxSelectionCount = 1;
             this.Cal_fecha_nacimiento.Name = "Cal_fecha_nacimiento";
             this.Cal_fecha_nacimiento.ShowTodayCircle = false;
@@ -163,6 +170,7 @@
             // 
             // label13
             // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(722, 359);
             this.label13.Margin = new System.Windows.Forms.Padding(29, 0, 3, 0);
@@ -174,6 +182,7 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(507, 359);
             this.label5.Margin = new System.Windows.Forms.Padding(29, 0, 3, 0);
@@ -185,6 +194,7 @@
             // 
             // label10
             // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(319, 359);
             this.label10.Margin = new System.Windows.Forms.Padding(29, 0, 3, 0);
@@ -196,6 +206,7 @@
             // 
             // label9
             // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(108, 391);
             this.label9.Name = "label9";
@@ -206,6 +217,7 @@
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(46, 359);
             this.label8.Name = "label8";
@@ -218,7 +230,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(352, 47);
+            this.label11.Location = new System.Drawing.Point(502, 47);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(183, 20);
             this.label11.TabIndex = 22;
@@ -228,7 +240,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(41, 47);
+            this.label14.Location = new System.Drawing.Point(52, 47);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(157, 20);
             this.label14.TabIndex = 14;
@@ -236,10 +248,9 @@
             // 
             // Msktxt_NumeroDOC
             // 
-            this.Msktxt_NumeroDOC.Location = new System.Drawing.Point(212, 237);
+            this.Msktxt_NumeroDOC.Location = new System.Drawing.Point(283, 237);
             this.Msktxt_NumeroDOC.Mask = "99999999";
             this.Msktxt_NumeroDOC.Name = "Msktxt_NumeroDOC";
-            this.Msktxt_NumeroDOC.Pp_EsPk = false;
             this.Msktxt_NumeroDOC.Pp_NombreCampo = "numeroDoc";
             this.Msktxt_NumeroDOC.Pp_NombreTabla = "Pasajero";
             this.Msktxt_NumeroDOC.Size = new System.Drawing.Size(100, 22);
@@ -247,15 +258,14 @@
             // 
             // Cmb_Ciudad
             // 
+            this.Cmb_Ciudad.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Cmb_Ciudad.FormattingEnabled = true;
             this.Cmb_Ciudad.Location = new System.Drawing.Point(816, 359);
             this.Cmb_Ciudad.Margin = new System.Windows.Forms.Padding(11, 2, 11, 2);
             this.Cmb_Ciudad.Name = "Cmb_Ciudad";
             this.Cmb_Ciudad.Pp_CampoAceptaNull = true;
-            this.Cmb_Ciudad.Pp_EsPk = false;
             this.Cmb_Ciudad.Pp_MensajeError = null;
             this.Cmb_Ciudad.Pp_NombreCampo = "nombreCiudad";
-            this.Cmb_Ciudad.Pp_NombreCampoInsert = null;
             this.Cmb_Ciudad.Pp_NombreTabla = "Ciudad";
             this.Cmb_Ciudad.Pp_PkTabla = "idCiudad";
             this.Cmb_Ciudad.Size = new System.Drawing.Size(100, 24);
@@ -263,10 +273,10 @@
             // 
             // Txt_nombre
             // 
-            this.Txt_nombre.Location = new System.Drawing.Point(212, 85);
+            this.Txt_nombre.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Txt_nombre.Location = new System.Drawing.Point(283, 85);
             this.Txt_nombre.Margin = new System.Windows.Forms.Padding(11, 2, 11, 2);
             this.Txt_nombre.Name = "Txt_nombre";
-            this.Txt_nombre.Pp_EsPk = false;
             this.Txt_nombre.Pp_MensajeError = "Escribe tu nombre";
             this.Txt_nombre.Pp_NombreCampo = "nombre";
             this.Txt_nombre.Pp_NombreTabla = "Pasajero";
@@ -275,15 +285,14 @@
             // 
             // Cmb_Provincia
             // 
+            this.Cmb_Provincia.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Cmb_Provincia.FormattingEnabled = true;
             this.Cmb_Provincia.Location = new System.Drawing.Point(618, 359);
             this.Cmb_Provincia.Margin = new System.Windows.Forms.Padding(11, 2, 11, 2);
             this.Cmb_Provincia.Name = "Cmb_Provincia";
             this.Cmb_Provincia.Pp_CampoAceptaNull = true;
-            this.Cmb_Provincia.Pp_EsPk = false;
             this.Cmb_Provincia.Pp_MensajeError = null;
-            this.Cmb_Provincia.Pp_NombreCampo = "nombreProvincia";
-            this.Cmb_Provincia.Pp_NombreCampoInsert = null;
+            this.Cmb_Provincia.Pp_NombreCampo = "nombreProv";
             this.Cmb_Provincia.Pp_NombreTabla = "Provincia";
             this.Cmb_Provincia.Pp_PkTabla = "idProvincia";
             this.Cmb_Provincia.Size = new System.Drawing.Size(100, 24);
@@ -292,15 +301,14 @@
             // 
             // Cmb_Pais
             // 
+            this.Cmb_Pais.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Cmb_Pais.FormattingEnabled = true;
             this.Cmb_Pais.Location = new System.Drawing.Point(394, 359);
             this.Cmb_Pais.Margin = new System.Windows.Forms.Padding(11, 2, 11, 2);
             this.Cmb_Pais.Name = "Cmb_Pais";
             this.Cmb_Pais.Pp_CampoAceptaNull = true;
-            this.Cmb_Pais.Pp_EsPk = false;
             this.Cmb_Pais.Pp_MensajeError = null;
-            this.Cmb_Pais.Pp_NombreCampo = "nombrePais";
-            this.Cmb_Pais.Pp_NombreCampoInsert = null;
+            this.Cmb_Pais.Pp_NombreCampo = "nombre";
             this.Cmb_Pais.Pp_NombreTabla = "Pais";
             this.Cmb_Pais.Pp_PkTabla = "idPais";
             this.Cmb_Pais.Size = new System.Drawing.Size(100, 24);
@@ -310,21 +318,20 @@
             // btn_cancelar
             // 
             this.btn_cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.btn_cancelar.Location = new System.Drawing.Point(582, 439);
+            this.btn_cancelar.Location = new System.Drawing.Point(506, 464);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Pp_Presionado = false;
             this.btn_cancelar.Size = new System.Drawing.Size(120, 34);
             this.btn_cancelar.TabIndex = 25;
             this.btn_cancelar.Text = "Cancelar";
             this.btn_cancelar.UseVisualStyleBackColor = true;
-            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click_1);
             // 
             // Txt_numero_calle
             // 
+            this.Txt_numero_calle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Txt_numero_calle.Location = new System.Drawing.Point(204, 391);
             this.Txt_numero_calle.Margin = new System.Windows.Forms.Padding(11, 2, 11, 2);
             this.Txt_numero_calle.Name = "Txt_numero_calle";
-            this.Txt_numero_calle.Pp_EsPk = false;
             this.Txt_numero_calle.Pp_MensajeError = null;
             this.Txt_numero_calle.Pp_NombreCampo = null;
             this.Txt_numero_calle.Pp_NombreTabla = null;
@@ -333,10 +340,10 @@
             // 
             // Txt_nombre_calle
             // 
+            this.Txt_nombre_calle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Txt_nombre_calle.Location = new System.Drawing.Point(204, 359);
             this.Txt_nombre_calle.Margin = new System.Windows.Forms.Padding(11, 2, 11, 2);
             this.Txt_nombre_calle.Name = "Txt_nombre_calle";
-            this.Txt_nombre_calle.Pp_EsPk = false;
             this.Txt_nombre_calle.Pp_MensajeError = null;
             this.Txt_nombre_calle.Pp_NombreCampo = null;
             this.Txt_nombre_calle.Pp_NombreTabla = null;
@@ -346,25 +353,24 @@
             // DGV_Pasajero
             // 
             this.DGV_Pasajero.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_Pasajero.Location = new System.Drawing.Point(658, 76);
+            this.DGV_Pasajero.Location = new System.Drawing.Point(714, 85);
             this.DGV_Pasajero.Name = "DGV_Pasajero";
             this.DGV_Pasajero.Pp_FormatoGrid = "nombre, Nombre, 100;apellido ,Apellido, 100";
             this.DGV_Pasajero.Pp_NombreTabla = "Pasajero";
             this.DGV_Pasajero.RowTemplate.Height = 24;
-            this.DGV_Pasajero.Size = new System.Drawing.Size(329, 207);
+            this.DGV_Pasajero.Size = new System.Drawing.Size(273, 207);
             this.DGV_Pasajero.TabIndex = 26;
             // 
             // Cmb_TipoDoc
             // 
+            this.Cmb_TipoDoc.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Cmb_TipoDoc.FormattingEnabled = true;
-            this.Cmb_TipoDoc.Location = new System.Drawing.Point(212, 199);
+            this.Cmb_TipoDoc.Location = new System.Drawing.Point(283, 199);
             this.Cmb_TipoDoc.Margin = new System.Windows.Forms.Padding(11, 2, 11, 2);
             this.Cmb_TipoDoc.Name = "Cmb_TipoDoc";
             this.Cmb_TipoDoc.Pp_CampoAceptaNull = false;
-            this.Cmb_TipoDoc.Pp_EsPk = false;
             this.Cmb_TipoDoc.Pp_MensajeError = "Seleccionar Tipo Doc";
             this.Cmb_TipoDoc.Pp_NombreCampo = "nombreTipoDoc";
-            this.Cmb_TipoDoc.Pp_NombreCampoInsert = null;
             this.Cmb_TipoDoc.Pp_NombreTabla = "Tipo_Documento";
             this.Cmb_TipoDoc.Pp_PkTabla = "tipoDoc";
             this.Cmb_TipoDoc.Size = new System.Drawing.Size(100, 24);
@@ -373,7 +379,7 @@
             // btn_registrar
             // 
             this.btn_registrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.btn_registrar.Location = new System.Drawing.Point(429, 439);
+            this.btn_registrar.Location = new System.Drawing.Point(353, 464);
             this.btn_registrar.Name = "btn_registrar";
             this.btn_registrar.Pp_Presionado = false;
             this.btn_registrar.Size = new System.Drawing.Size(120, 34);
@@ -384,22 +390,22 @@
             // 
             // Txt_telefono
             // 
-            this.Txt_telefono.Location = new System.Drawing.Point(212, 161);
+            this.Txt_telefono.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Txt_telefono.Location = new System.Drawing.Point(283, 161);
             this.Txt_telefono.Margin = new System.Windows.Forms.Padding(11, 2, 11, 2);
             this.Txt_telefono.Name = "Txt_telefono";
-            this.Txt_telefono.Pp_EsPk = false;
             this.Txt_telefono.Pp_MensajeError = "Escribe tu telefono";
-            this.Txt_telefono.Pp_NombreCampo = "numeroTelefono";
+            this.Txt_telefono.Pp_NombreCampo = null;
             this.Txt_telefono.Pp_NombreTabla = "Telefono";
             this.Txt_telefono.Size = new System.Drawing.Size(100, 22);
             this.Txt_telefono.TabIndex = 17;
             // 
             // Txt_Apellido
             // 
-            this.Txt_Apellido.Location = new System.Drawing.Point(212, 123);
+            this.Txt_Apellido.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Txt_Apellido.Location = new System.Drawing.Point(283, 123);
             this.Txt_Apellido.Margin = new System.Windows.Forms.Padding(11, 2, 11, 2);
             this.Txt_Apellido.Name = "Txt_Apellido";
-            this.Txt_Apellido.Pp_EsPk = false;
             this.Txt_Apellido.Pp_MensajeError = "Escribe tu apellido";
             this.Txt_Apellido.Pp_NombreCampo = "apellido";
             this.Txt_Apellido.Pp_NombreTabla = "Pasajero";
@@ -409,7 +415,7 @@
             // Btn_Buscar
             // 
             this.Btn_Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.Btn_Buscar.Location = new System.Drawing.Point(280, 439);
+            this.Btn_Buscar.Location = new System.Drawing.Point(204, 464);
             this.Btn_Buscar.Name = "Btn_Buscar";
             this.Btn_Buscar.Pp_Presionado = false;
             this.Btn_Buscar.Size = new System.Drawing.Size(120, 34);
