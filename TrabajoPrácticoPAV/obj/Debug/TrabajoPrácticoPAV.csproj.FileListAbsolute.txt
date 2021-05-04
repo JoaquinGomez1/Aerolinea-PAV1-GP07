@@ -151,3 +151,4 @@ C:\Users\Lautaro\Desktop\tp pav 0.1\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\
 C:\Users\Lautaro\Desktop\tp pav 0.1\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Tramos.Frm_BajaTramo.resources
 C:\Users\Lautaro\Desktop\tp pav 0.1\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Tramos.Frm_ModificacionTramo.resources
 C:\Users\Lautaro\Desktop\tp pav 0.1\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Viajes.Frm_ModificarViaje.resources
+C:\Users\Lautaro\Desktop\tp pav 0.1\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Tramos.Frm_ConsultaTramo.resources

@@ -54,6 +54,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tramos
         {
             string sql = _TE.CostructorUpdateDelete("Tramo", this.Controls, false);
             _BD.Borrar(sql);
+            this.Close();
         }
 
         private void Btn_Cancelar_Click(object sender, EventArgs e)

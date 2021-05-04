@@ -101,7 +101,6 @@ namespace TrabajoPrácticoPAV.Formularios
             modif.codigoASalida = codigoASalida;
             modif.codigoADestino = codigoADestino;
 
-            MessageBox.Show($"Codigo ASalida {codigoASalida} codigo ADesitno {codigoADestino}");
             modif.ShowDialog();
         }
 
