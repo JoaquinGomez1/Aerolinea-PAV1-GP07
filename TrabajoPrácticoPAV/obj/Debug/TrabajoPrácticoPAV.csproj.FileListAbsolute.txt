@@ -153,3 +153,27 @@ C:\Users\Lautaro\Desktop\tp pav 0.1\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\
 C:\Users\Lautaro\Desktop\tp pav 0.1\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Viajes.Frm_ModificarViaje.resources
 C:\Users\Lautaro\Desktop\tp pav 0.1\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Tramos.Frm_ConsultaTramo.resources
 C:\Users\Lautaro\Desktop\tp pav 0.1\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Pasajeros.Frm_ABMPasajeros.resources
+C:\Users\usuario\Desktop\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.csprojAssemblyReference.cache
+C:\Users\usuario\Desktop\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_ABMAviones.resources
+C:\Users\usuario\Desktop\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_ABMClientes.resources
+C:\Users\usuario\Desktop\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_ABMReservas.resources
+C:\Users\usuario\Desktop\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_ABMVuelo.resources
+C:\Users\usuario\Desktop\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_AltaAviones.resources
+C:\Users\usuario\Desktop\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Pasajeros.Frm_ABMPasajeros.resources
+C:\Users\usuario\Desktop\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_ABMTramos.resources
+C:\Users\usuario\Desktop\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_Configuracion.resources
+C:\Users\usuario\Desktop\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Frm_Principal.resources
+C:\Users\usuario\Desktop\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Tramos.Frm_AltaTramo.resources
+C:\Users\usuario\Desktop\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Tramos.Frm_BajaTramo.resources
+C:\Users\usuario\Desktop\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Tramos.Frm_ConsultaTramo.resources
+C:\Users\usuario\Desktop\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Tramos.Frm_ModificacionTramo.resources
+C:\Users\usuario\Desktop\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Frm_ABMViajes.resources
+C:\Users\usuario\Desktop\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Formularios.Viajes.Frm_ModificarViaje.resources
+C:\Users\usuario\Desktop\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.Properties.Resources.resources
+C:\Users\usuario\Desktop\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.csproj.GenerateResource.cache
+C:\Users\usuario\Desktop\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.csproj.CoreCompileInputs.cache
+C:\Users\usuario\Desktop\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.exe
+C:\Users\usuario\Desktop\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\obj\Debug\TrabajoPrácticoPAV.pdb
+C:\Users\usuario\Desktop\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\bin\Debug\TrabajoPrácticoPAV.exe.config
+C:\Users\usuario\Desktop\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\bin\Debug\TrabajoPrácticoPAV.exe
+C:\Users\usuario\Desktop\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\bin\Debug\TrabajoPrácticoPAV.pdb
