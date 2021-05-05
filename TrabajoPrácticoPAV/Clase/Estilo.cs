@@ -35,7 +35,8 @@ namespace TrabajoPrácticoPAV.Clase
                         ((Button)item).ForeColor = Estilo.ColorLetraBoton;
                         break;
                     case "System.Windows.Forms.Panel":
-                        ((Panel)item).BackColor = Estilo.ColorBarra;
+                        if(((Panel)item).Name == "BarraSuperior")
+                            ((Panel)item).BackColor = Estilo.ColorBarra;
                         break;
                     case "TrabajoPrácticoPAV.Clase.DataGridView_Aerolinea":
                     case "System.Windows.Forms.CheckBox":

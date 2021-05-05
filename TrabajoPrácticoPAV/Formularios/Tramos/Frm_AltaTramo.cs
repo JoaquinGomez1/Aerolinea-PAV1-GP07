@@ -23,7 +23,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tramos
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWind, int wMsg, int wParam, int lParam);
 
-        private void BarraSuperior(object sender, MouseEventArgs e)
+        private void BarraSuperior_MouseMove(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);

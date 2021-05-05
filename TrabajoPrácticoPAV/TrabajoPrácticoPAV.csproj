@@ -102,6 +102,12 @@
     <Compile Include="Formularios\Pasajeros\Frm_ABMPasajeros.Designer.cs">
       <DependentUpon>Frm_ABMPasajeros.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Pasajeros\Frm_AltaPasajero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Pasajeros\Frm_AltaPasajero.Designer.cs">
+      <DependentUpon>Frm_AltaPasajero.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Tramos\Frm_ABMTramos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Pasajeros\Frm_ABMPasajeros.resx">
       <DependentUpon>Frm_ABMPasajeros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Pasajeros\Frm_AltaPasajero.resx">
+      <DependentUpon>Frm_AltaPasajero.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Tramos\Frm_ABMTramos.resx">
       <DependentUpon>Frm_ABMTramos.cs</DependentUpon>

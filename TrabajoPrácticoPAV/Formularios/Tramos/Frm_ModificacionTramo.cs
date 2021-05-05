@@ -57,7 +57,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tramos
             this.Close();
         }
 
-        private void BarraSuperior(object sender, MouseEventArgs e)
+        private void BarraSuperior_MouseMove(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);

@@ -14,15 +14,13 @@ namespace TrabajoPrácticoPAV.Clase
     {
         public enum Resultado { correcto, error }
 
-
-
-
-
         public string ConstructorSelect(Control.ControlCollection controles, string join)
         {
             string sql = "SELECT ";
             string condiciones = "";
             string atributosTabla = "";
+            bool todos = false;
+            string nombreTabla = "";
 
             foreach (var control in controles)
             {
@@ -30,7 +28,14 @@ namespace TrabajoPrácticoPAV.Clase
                 if (control.GetType().ToString() == "TrabajoPrácticoPAV.Clase.DataGridView_Aerolinea")
                 {
                     DataGridView_Aerolinea grid = ((DataGridView_Aerolinea)control);
-                    atributosTabla += $"{ExtraerColumnasGrid(grid)} FROM {grid.Pp_NombreTabla} {grid.Pp_NombreTabla}";
+                    nombreTabla = grid.Pp_NombreTabla;
+                    atributosTabla += $"{ExtraerColumnasGrid(grid)} FROM {nombreTabla}";
+                }
+
+                if(control.GetType().ToString() == "System.Windows.Forms.CheckBox")
+                {
+                    if (((CheckBox)control).Checked)
+                        todos = true;
                 }
 
                 //Evaluación TEXTBOX
@@ -91,9 +96,10 @@ namespace TrabajoPrácticoPAV.Clase
                     }
                 }
             }
+            if (atributosTabla == "" || todos)
+                atributosTabla = $" * FROM {nombreTabla} ";
 
             sql += atributosTabla + join + condiciones;
-            Clipboard.SetText(sql);
             return sql;
         }
 

@@ -96,6 +96,7 @@
             // 
             this.Grid_Pasajero.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Grid_Pasajero.Location = new System.Drawing.Point(46, 179);
+            this.Grid_Pasajero.MultiSelect = false;
             this.Grid_Pasajero.Name = "Grid_Pasajero";
             this.Grid_Pasajero.Pp_FormatoGrid = "nombre, Nombre, 175;apellido ,Apellido, 175; tipoDoc, Tipo Documento, 65; numeroD" +
     "oc, Número de documento, 100";
@@ -151,6 +152,7 @@
             this.btn_registrar.TabIndex = 54;
             this.btn_registrar.Text = "Registrar";
             this.btn_registrar.UseVisualStyleBackColor = true;
+            this.btn_registrar.Click += new System.EventHandler(this.btn_registrar_Click);
             // 
             // label3
             // 
