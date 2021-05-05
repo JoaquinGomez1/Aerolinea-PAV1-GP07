@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.NE_Aviones;
 
 
@@ -44,7 +45,10 @@ namespace TrabajoPrácticoPAV.Formularios
         }
 
         private void Frm_ModificarAvion_Load(object sender, EventArgs e)
-        {   cmb_Modelo.CargarCombo();
+        {
+            this.BackColor = Estilo.ColorFondoForms;
+            Estilo.FormatearEstilo(this.Controls);
+            cmb_Modelo.CargarCombo();
             txt_Numero.Text = Pp_numeroSeleccionado;
             cmb_Modelo.SelectedIndex = int.Parse(Pp_idModeloSeleccionado.ToString()) - 1;
         }

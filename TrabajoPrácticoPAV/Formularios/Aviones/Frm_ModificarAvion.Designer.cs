@@ -35,6 +35,8 @@ namespace TrabajoPrácticoPAV.Formularios
             this.panel1 = new System.Windows.Forms.Panel();
             this.txt_Numero = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
             this.cmb_Modelo = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
+            this.lbl_numero = new System.Windows.Forms.Label();
+            this.lbl_modelo = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,10 +63,10 @@ namespace TrabajoPrácticoPAV.Formularios
             // label
             // 
             this.label.AutoSize = true;
-            this.label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label.Location = new System.Drawing.Point(72, 29);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(145, 20);
+            this.label.Size = new System.Drawing.Size(152, 20);
             this.label.TabIndex = 4;
             this.label.Text = "Modificar Campos";
             this.label.Click += new System.EventHandler(this.label_Click);
@@ -72,6 +74,8 @@ namespace TrabajoPrácticoPAV.Formularios
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.lbl_modelo);
+            this.panel1.Controls.Add(this.lbl_numero);
             this.panel1.Controls.Add(this.txt_Numero);
             this.panel1.Controls.Add(this.label);
             this.panel1.Controls.Add(this.cmb_Modelo);
@@ -87,6 +91,7 @@ namespace TrabajoPrácticoPAV.Formularios
             // 
             this.txt_Numero.Location = new System.Drawing.Point(76, 108);
             this.txt_Numero.Name = "txt_Numero";
+            this.txt_Numero.Pp_EsPk = false;
             this.txt_Numero.Pp_MensajeError = null;
             this.txt_Numero.Pp_NombreCampo = null;
             this.txt_Numero.Pp_NombreTabla = null;
@@ -100,21 +105,44 @@ namespace TrabajoPrácticoPAV.Formularios
             this.cmb_Modelo.Location = new System.Drawing.Point(76, 134);
             this.cmb_Modelo.Name = "cmb_Modelo";
             this.cmb_Modelo.Pp_CampoAceptaNull = true;
+            this.cmb_Modelo.Pp_EsPk = false;
             this.cmb_Modelo.Pp_MensajeError = null;
             this.cmb_Modelo.Pp_NombreCampo = "nombre";
+            this.cmb_Modelo.Pp_NombreCampoInsert = null;
             this.cmb_Modelo.Pp_NombreTabla = "Modelo";
             this.cmb_Modelo.Pp_PkTabla = "idModelo";
             this.cmb_Modelo.Size = new System.Drawing.Size(141, 21);
             this.cmb_Modelo.TabIndex = 0;
             this.cmb_Modelo.SelectedIndexChanged += new System.EventHandler(this.cmb_Modelo_SelectedIndexChanged);
             // 
+            // lbl_numero
+            // 
+            this.lbl_numero.AutoSize = true;
+            this.lbl_numero.Location = new System.Drawing.Point(21, 115);
+            this.lbl_numero.Name = "lbl_numero";
+            this.lbl_numero.Size = new System.Drawing.Size(44, 13);
+            this.lbl_numero.TabIndex = 5;
+            this.lbl_numero.Text = "Numero";
+            // 
+            // lbl_modelo
+            // 
+            this.lbl_modelo.AutoSize = true;
+            this.lbl_modelo.Location = new System.Drawing.Point(23, 142);
+            this.lbl_modelo.Name = "lbl_modelo";
+            this.lbl_modelo.Size = new System.Drawing.Size(42, 13);
+            this.lbl_modelo.TabIndex = 6;
+            this.lbl_modelo.Text = "Modelo";
+            // 
             // Frm_ModificarAvion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(227)))), ((int)(((byte)(187)))));
             this.ClientSize = new System.Drawing.Size(362, 385);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_ModificarAvion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_ModificarAvion";
             this.Load += new System.EventHandler(this.Frm_ModificarAvion_Load);
             this.panel1.ResumeLayout(false);
@@ -131,5 +159,7 @@ namespace TrabajoPrácticoPAV.Formularios
         private System.Windows.Forms.Button btn_cancelar;
         private System.Windows.Forms.Label label;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lbl_modelo;
+        private System.Windows.Forms.Label lbl_numero;
     }
 }
