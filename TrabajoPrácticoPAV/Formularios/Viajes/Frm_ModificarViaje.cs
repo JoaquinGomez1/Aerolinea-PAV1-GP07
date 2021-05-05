@@ -38,12 +38,6 @@ namespace TrabajoPrácticoPAV.Formularios.Viajes
 
         }
 
-        private void Frm_ModificarViaje_Load(object sender, EventArgs e)
-        {
-            cmb_numero_viaje.CargarCombo();
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             NE_Viajes.ModificarPorId(ViajeSeleccionado);
@@ -86,6 +80,16 @@ namespace TrabajoPrácticoPAV.Formularios.Viajes
 
                 lbl_duracionEstimada.Text = tiempoEstimado;
             }
+        }
+
+        private void Btn_Cerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Btn_Minimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }
