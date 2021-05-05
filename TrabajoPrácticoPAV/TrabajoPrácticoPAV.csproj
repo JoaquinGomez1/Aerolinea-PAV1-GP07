@@ -174,6 +174,12 @@
     <Compile Include="Formularios\Vuelo\Frm_BajaVuelo.Designer.cs">
       <DependentUpon>Frm_BajaVuelo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Vuelo\Frm_ConsultarVuelo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Vuelo\Frm_ConsultarVuelo.Designer.cs">
+      <DependentUpon>Frm_ConsultarVuelo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Vuelo\Frm_ModificarVuelo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -240,6 +246,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Vuelo\Frm_BajaVuelo.resx">
       <DependentUpon>Frm_BajaVuelo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Vuelo\Frm_ConsultarVuelo.resx">
+      <DependentUpon>Frm_ConsultarVuelo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Vuelo\Frm_ModificarVuelo.resx">
       <DependentUpon>Frm_ModificarVuelo.cs</DependentUpon>

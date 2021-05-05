@@ -13,21 +13,19 @@ using TrabajoPrácticoPAV.Backend;
 
 namespace TrabajoPrácticoPAV.Formularios.Vuelo
 {
-    public partial class Frm_ModificarVuelo : Form
+    public partial class Frm_ConsultarVuelo : Form
     {
-        public string Id_vuelo { get; set; }
+        public string Id_vuelo1 { get; set; }
 
-        public Frm_ModificarVuelo()
+        public Frm_ConsultarVuelo()
         {
             InitializeComponent();
         }
 
-        private void Frm_ModificarVuelo_Load(object sender, EventArgs e)
+        private void Frm_ConsultarVuelo_Load(object sender, EventArgs e)
         {
-            //string condicion = @" JOIN Modelo ON Modelo.idModelo " +
-            //        @"= Avion.idModelo WHERE Avion.idModelo = " + cmb_nomModelo.SelectedValue;
-            cmb_nomModelo.CargarCombo();
             cmb_numAvion.CargarCombo();
+            cmb_nomModelo.CargarCombo();
             cmb_AeropDestino.CargarCombo();
             cmb_AeropSalida.CargarCombo();
 
@@ -35,14 +33,14 @@ namespace TrabajoPrácticoPAV.Formularios.Vuelo
                 Estilo.FormatearEstilo(this.Controls);
 
             NE_Vuelos vuelo = new NE_Vuelos();
-            MostrarDatos(vuelo.RecuperarXId(Id_vuelo));
+            MostrarDatos1(vuelo.RecuperarXId(Id_vuelo1));
         }
-        private void MostrarDatos(DataTable tabla)
+        private void MostrarDatos1(DataTable tabla)
         {
             txt_idVuelo.Text = tabla.Rows[0]["idVuelo"].ToString();
             txt_duracionestimada.Text = tabla.Rows[0]["duracionEstimada"].ToString();
             cmb_nomModelo.SelectedValue = int.Parse(tabla.Rows[0]["idModelo"].ToString());
-            cmb_numAvion.SelectedValue = int.Parse(tabla.Rows[0]["numeroPorModelo"].ToString());
+            cmb_numAvion.SelectedValue = tabla.Rows[0]["numeroPorModelo"].ToString();
             cmb_AeropDestino.SelectedValue = tabla.Rows[0]["codigoAeropuertoDestino"].ToString();
             cmb_AeropSalida.SelectedValue = tabla.Rows[0]["codigoAeropuertoSalida"].ToString();
         }
@@ -54,15 +52,7 @@ namespace TrabajoPrácticoPAV.Formularios.Vuelo
 
         private void btn_ModificacionVuelo_Click(object sender, EventArgs e)
         {
-            Tratamientos_Especiales Tratamiento = new Tratamientos_Especiales();
-            Conexion_DB _BD = new Conexion_DB();
-
-            if (cmb_AeropSalida.SelectedIndex != cmb_AeropDestino.SelectedIndex)
-            {
-                string sql = Tratamiento.CostructorUpdateDelete("Vuelo", this.Controls, true);
-                _BD.Modificar(sql);
-                this.Close();
-            }
+            this.Close();
         }
         private void cmb_nomModelo_SelectionChangeCommitted(object sender, EventArgs e)
         {
@@ -71,6 +61,5 @@ namespace TrabajoPrácticoPAV.Formularios.Vuelo
                     @"= Avion.idModelo WHERE Avion.idModelo = " + cmb_nomModelo.SelectedValue;
             cmb_numAvion.CargarComboJoin(Condicion);
         }
-        
     }
 }
