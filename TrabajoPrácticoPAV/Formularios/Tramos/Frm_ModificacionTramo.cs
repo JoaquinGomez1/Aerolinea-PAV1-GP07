@@ -49,7 +49,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tramos
                 $"AND codigoAeropuertoDestino = '{codigoADestino}'";
 
             DataTable tabla = _BD.EjecutarSelect(sql);
-            _NE.InsertarDatosEnControles(tabla, this.Controls);
+            _TE.InsertarDatosEnControles(tabla, this.Controls);
         }
 
         private void Btn_Cancelar_Click(object sender, EventArgs e)
@@ -57,7 +57,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tramos
             this.Close();
         }
 
-        private void BarraSuperior(object sender, MouseEventArgs e)
+        private void BarraSuperior_MouseMove(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);

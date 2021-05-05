@@ -34,13 +34,13 @@
             this.label5 = new System.Windows.Forms.Label();
             this.Btn_Registrar = new System.Windows.Forms.Button();
             this.Btn_Cancelar = new System.Windows.Forms.Button();
-            this.Barra = new System.Windows.Forms.Panel();
+            this.BarraSuperior = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox_Aerolinea2 = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
             this.textBox_Aerolinea1 = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
             this.cmb_ASalida = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
             this.cmb_ADestino = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
-            this.Barra.SuspendLayout();
+            this.BarraSuperior.SuspendLayout();
             this.SuspendLayout();
             // 
             // label4
@@ -115,17 +115,17 @@
             this.Btn_Cancelar.UseVisualStyleBackColor = false;
             this.Btn_Cancelar.Click += new System.EventHandler(this.Btn_Cancelar_Click);
             // 
-            // Barra
+            // BarraSuperior
             // 
-            this.Barra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.Barra.Controls.Add(this.label6);
-            this.Barra.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Barra.Location = new System.Drawing.Point(0, 0);
-            this.Barra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Barra.Name = "Barra";
-            this.Barra.Size = new System.Drawing.Size(855, 39);
-            this.Barra.TabIndex = 24;
-            this.Barra.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BarraSuperior);
+            this.BarraSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.BarraSuperior.Controls.Add(this.label6);
+            this.BarraSuperior.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BarraSuperior.Location = new System.Drawing.Point(0, 0);
+            this.BarraSuperior.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BarraSuperior.Name = "BarraSuperior";
+            this.BarraSuperior.Size = new System.Drawing.Size(855, 39);
+            this.BarraSuperior.TabIndex = 24;
+            this.BarraSuperior.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BarraSuperior_MouseMove);
             // 
             // label6
             // 
@@ -199,7 +199,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(855, 345);
-            this.Controls.Add(this.Barra);
+            this.Controls.Add(this.BarraSuperior);
             this.Controls.Add(this.Btn_Cancelar);
             this.Controls.Add(this.Btn_Registrar);
             this.Controls.Add(this.textBox_Aerolinea2);
@@ -214,8 +214,8 @@
             this.Name = "Frm_AltaTramo";
             this.Text = "Frm_AltaTramo";
             this.Load += new System.EventHandler(this.Frm_AltaTramo_Load);
-            this.Barra.ResumeLayout(false);
-            this.Barra.PerformLayout();
+            this.BarraSuperior.ResumeLayout(false);
+            this.BarraSuperior.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -232,7 +232,7 @@
         private Clase.TextBox_Aerolinea textBox_Aerolinea2;
         private System.Windows.Forms.Button Btn_Registrar;
         private System.Windows.Forms.Button Btn_Cancelar;
-        private System.Windows.Forms.Panel Barra;
+        private System.Windows.Forms.Panel BarraSuperior;
         private System.Windows.Forms.Label label6;
     }
 }
