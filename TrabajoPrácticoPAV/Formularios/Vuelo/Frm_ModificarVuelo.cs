@@ -28,6 +28,9 @@ namespace TrabajoPrácticoPAV.Formularios.Vuelo
             cmb_AeropDestino.CargarCombo();
             cmb_AeropSalida.CargarCombo();
 
+            this.BackColor = Estilo.ColorFondoForms;
+                Estilo.FormatearEstilo(this.Controls);
+
             NE_Vuelos vuelo = new NE_Vuelos();
             MostrarDatos(vuelo.RecuperarXId(Id_vuelo));
         }
