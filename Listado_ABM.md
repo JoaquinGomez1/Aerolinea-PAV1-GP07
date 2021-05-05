@@ -1,13 +1,13 @@
-- [x] ABM pasajero
-- [x] ABM Familiar
-- [-] ABM Viaje
-- [ ] ABM Vuelo
-- [ ] ABM tramo
-- [ ] ABM Avión
-- [ ] ABM Tripulación
-- [ ] ABM tipo documento
-- [ ] ABM aeropuerto
-- [ ] AMB modelo
-- [ ] ABM provincia
-- [ ] ABM país
-- [ ] ABM cargo tripulación
+[x] ABM pasajero
+[x] ABM Viaje
+[x] ABM Vuelo
+[x] ABM tramo
+[x] ABM Avión
+[ ] ABM Familiar
+[ ] ABM Tripulación
+[ ] ABM tipo documento
+[ ] ABM aeropuerto
+[ ] AMB modelo
+[ ] ABM provincia
+[ ] ABM país
+[ ] ABM cargo tripulación
