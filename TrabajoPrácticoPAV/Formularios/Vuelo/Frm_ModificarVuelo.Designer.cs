@@ -41,6 +41,8 @@
             this.cmb_AeropSalida = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
             this.btn_ModificacionVuelo = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.button_Aerolinea2 = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txt_idVuelo = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
             this.SuspendLayout();
             // 
             // label1
@@ -56,7 +58,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(61, 101);
+            this.label2.Location = new System.Drawing.Point(59, 234);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(96, 13);
             this.label2.TabIndex = 1;
@@ -100,12 +102,12 @@
             // 
             // txt_duracionestimada
             // 
-            this.txt_duracionestimada.Location = new System.Drawing.Point(164, 93);
+            this.txt_duracionestimada.Location = new System.Drawing.Point(164, 234);
             this.txt_duracionestimada.Name = "txt_duracionestimada";
             this.txt_duracionestimada.Pp_EsPk = false;
-            this.txt_duracionestimada.Pp_MensajeError = null;
+            this.txt_duracionestimada.Pp_MensajeError = "Ingrese una duracion estimada";
             this.txt_duracionestimada.Pp_NombreCampo = "duracionEstimada";
-            this.txt_duracionestimada.Pp_NombreTabla = null;
+            this.txt_duracionestimada.Pp_NombreTabla = "";
             this.txt_duracionestimada.Size = new System.Drawing.Size(165, 20);
             this.txt_duracionestimada.TabIndex = 6;
             // 
@@ -116,13 +118,14 @@
             this.cmb_nomModelo.Name = "cmb_nomModelo";
             this.cmb_nomModelo.Pp_CampoAceptaNull = false;
             this.cmb_nomModelo.Pp_EsPk = false;
-            this.cmb_nomModelo.Pp_MensajeError = null;
+            this.cmb_nomModelo.Pp_MensajeError = "Seleccionar un modelo";
             this.cmb_nomModelo.Pp_NombreCampo = "nombre";
             this.cmb_nomModelo.Pp_NombreCampoInsert = "idModelo";
             this.cmb_nomModelo.Pp_NombreTabla = "modelo";
             this.cmb_nomModelo.Pp_PkTabla = "idModelo";
             this.cmb_nomModelo.Size = new System.Drawing.Size(165, 21);
             this.cmb_nomModelo.TabIndex = 7;
+            this.cmb_nomModelo.SelectionChangeCommitted += new System.EventHandler(this.cmb_nomModelo_SelectionChangeCommitted);
             // 
             // cmb_numAvion
             // 
@@ -157,7 +160,7 @@
             // cmb_AeropSalida
             // 
             this.cmb_AeropSalida.FormattingEnabled = true;
-            this.cmb_AeropSalida.Location = new System.Drawing.Point(164, 207);
+            this.cmb_AeropSalida.Location = new System.Drawing.Point(163, 204);
             this.cmb_AeropSalida.Name = "cmb_AeropSalida";
             this.cmb_AeropSalida.Pp_CampoAceptaNull = false;
             this.cmb_AeropSalida.Pp_EsPk = false;
@@ -191,12 +194,35 @@
             this.button_Aerolinea2.UseVisualStyleBackColor = true;
             this.button_Aerolinea2.Click += new System.EventHandler(this.button_Aerolinea2_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(66, 72);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(86, 13);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Codigo del vuelo";
+            // 
+            // txt_idVuelo
+            // 
+            this.txt_idVuelo.Enabled = false;
+            this.txt_idVuelo.Location = new System.Drawing.Point(164, 65);
+            this.txt_idVuelo.Name = "txt_idVuelo";
+            this.txt_idVuelo.Pp_EsPk = true;
+            this.txt_idVuelo.Pp_MensajeError = null;
+            this.txt_idVuelo.Pp_NombreCampo = "idVuelo";
+            this.txt_idVuelo.Pp_NombreTabla = "Vuelo";
+            this.txt_idVuelo.Size = new System.Drawing.Size(165, 20);
+            this.txt_idVuelo.TabIndex = 14;
+            // 
             // Frm_ModificarVuelo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(227)))), ((int)(((byte)(187)))));
             this.ClientSize = new System.Drawing.Size(749, 414);
+            this.Controls.Add(this.txt_idVuelo);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.button_Aerolinea2);
             this.Controls.Add(this.btn_ModificacionVuelo);
             this.Controls.Add(this.cmb_AeropSalida);
@@ -233,5 +259,7 @@
         private Clase.ComboBox_Aerolinea cmb_AeropSalida;
         private Clase.Button_Aerolinea btn_ModificacionVuelo;
         private Clase.Button_Aerolinea button_Aerolinea2;
+        private System.Windows.Forms.Label label7;
+        private Clase.TextBox_Aerolinea txt_idVuelo;
     }
 }
