@@ -160,7 +160,7 @@
             this.chk_box.AutoSize = true;
             this.chk_box.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.chk_box.Location = new System.Drawing.Point(509, 108);
-            this.chk_box.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chk_box.Margin = new System.Windows.Forms.Padding(4);
             this.chk_box.Name = "chk_box";
             this.chk_box.Size = new System.Drawing.Size(77, 24);
             this.chk_box.TabIndex = 11;
@@ -497,7 +497,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Frm_ABMVuelo";
             this.Text = "Frm_ABMVuelo";
             this.Load += new System.EventHandler(this.Frm_ABMVuelo_Load);

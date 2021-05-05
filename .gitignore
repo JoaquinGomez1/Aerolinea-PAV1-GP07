@@ -362,6 +362,6 @@ MigrationBackup/
 FodyWeavers.xsd
 
 # Custom
-/TrabajoPracticoPAV/.vs
-/TrabajoPracticoPAV/bin/Debug
-/TrabajoPracticoPAV/obj/*
+./TrabajoPrácticoPAV/.vs
+./TrabajoPrácticoPAV/bin/Debug
+./TrabajoPrácticoPAV/obj/*

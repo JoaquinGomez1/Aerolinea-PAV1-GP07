@@ -23,7 +23,7 @@ namespace TrabajoPrácticoPAV.NE_Aviones
             //               + " FROM usuarios u join perfiles p "
             //               + " on u.id_perfil = p.id_perfil ";
 
-            string sql = @"SELECT Avion.numeroPorModelo,Modelo.nombre from Avion inner join  Modelo on Avion.idModelo = Modelo.idModelo order by Modelo.nombre, Avion.numeroPorModelo";
+            string sql = @"SELECT Avion.numeroPorModelo, Modelo.nombre, Avion.idModelo from Avion inner join  Modelo on Avion.idModelo = Modelo.idModelo order by Modelo.nombre, Avion.numeroPorModelo,Avion.idModelo";
 
             return _BD.EjecutarSelect(sql);
         }
@@ -39,10 +39,43 @@ namespace TrabajoPrácticoPAV.NE_Aviones
         {
             string sql = @"SELECT Avion.numeroPorModelo, Modelo.nombre from Avion "
             + " inner join Modelo on Avion.idModelo = Modelo.idModelo "
-            + "  where Avion.numeroPorModelo = " + numero
-            + " and Avion.idModelo = " + modelo;
+            + "  where Avion.numeroPorModelo = " + numero + " and Avion.idModelo = " + modelo;
             ;
             return _BD.EjecutarSelect(sql);
+        }
+
+        public DataTable Recuperar_x_modelo(int modelo)
+        {
+            string sql = @"SELECT Avion.numeroPorModelo, Modelo.nombre from Avion "
+            + " inner join Modelo on Avion.idModelo = Modelo.idModelo "
+            + " where Avion.idModelo = " + modelo;
+            return _BD.EjecutarSelect(sql);
+
+        }
+        
+        public DataTable Recuperar_x_numero(string numero)
+        {
+            string sql = @"SELECT Avion.numeroPorModelo, Modelo.nombre from Avion "
+            + " inner join Modelo on Avion.idModelo = Modelo.idModelo "
+            + " where Avion.numeroPorModelo = " + numero;
+            return _BD.EjecutarSelect(sql);
+        }
+
+        public DataTable Remover_avion(string numero , object idModelo)
+        {
+            string sql = @"delete from Avion where numeroPorModelo = " + numero + " and  idModelo= " + idModelo;
+            return _BD.EjecutarSelect(sql);
+
+
+            
+        }
+
+       public DataTable Editar_avion (string numero , object idModelo)
+        {
+            string sql = @"Update Avion set Avion.numeroPorModelo = " + numero + ", Avion.idModelo= " + idModelo
+            + " where Avion.numeroPorModelo = " + numero;
+            return _BD.EjecutarSelect(sql);
+            
         }
     }
 }
