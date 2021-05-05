@@ -62,7 +62,11 @@ namespace TrabajoPrácticoPAV.Formularios
             //}
 
             if (ambosCamposCompletados && esHorarioValido)
-                lbl_duracionEstimada.Text = _NE_Viajes.determinarEstimado(horarioLlegada, horarioSalida);
+            {
+                string durEstimada = _NE_Viajes.determinarEstimado(horarioLlegada, horarioSalida);
+                lbl_duracionEstimada.Text = durEstimada;
+                duracionEstimadaViaje = Tiempo.convertirAIntMilitar(durEstimada);
+            }
         }
 
 
@@ -178,6 +182,9 @@ namespace TrabajoPrácticoPAV.Formularios
         private void CargarTodos()
         {
             DataTable todosLosViajes = _NE_Viajes.GetTodosLosViajes();
+            this.datagrid_viajes.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.datagrid_viajes.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.datagrid_viajes.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             CargarDataGrid(todosLosViajes);
         }
 
@@ -221,6 +228,19 @@ namespace TrabajoPrácticoPAV.Formularios
         private void btn_refrescar_Click(object sender, EventArgs e)
         {
             CargarTodos();
+        }
+
+        private readonly NE_Viajes NE_Viajes = new NE_Viajes();
+
+        private void btn_borrar_Click(object sender, EventArgs e)
+        {
+            if (datagrid_viajes.CurrentRow == null)
+                return;
+
+            string idDeFilaSeleccionada = datagrid_viajes.CurrentRow.Cells[0].Value.ToString();
+            NE_Viajes.EliminarFila(idDeFilaSeleccionada);
+
+            datagrid_viajes.Rows.Remove(datagrid_viajes.CurrentRow);
         }
     }
 }

@@ -1,7 +1,7 @@
 # Como contribuir al proyecto:
 ### 1 Hacer fork a este repositorio (Aparece arriba a la derecha)
 ### 2 Una vez hecho el fork en el directorio donde queramos que esté el proyecto ejecutamos los siguientes comandos en la terminal 
-(Click derecho en la carpeta del tp > Git Bash Here):
+(Click derecho en la carpeta del tp, tratar de que si o si estar en una carpeta vacía) > Git Bash Here):
 ```bash
  git clone <url-de-su-repositorio> 
  cd Aerolinea-PAV1-GP07-1 !-- Importante verificar que aparezca "(main)" entre parentesis y en azul al lado del nombre del directorio 

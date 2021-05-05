@@ -31,6 +31,7 @@ namespace TrabajoPrácticoPAV.Formularios
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_refrescar = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.datagrid_viajes = new System.Windows.Forms.DataGridView();
@@ -55,7 +56,6 @@ namespace TrabajoPrácticoPAV.Formularios
             this.Mtxt_horarioSalida = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btn_refrescar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagrid_viajes)).BeginInit();
             this.panel3.SuspendLayout();
@@ -92,14 +92,26 @@ namespace TrabajoPrácticoPAV.Formularios
             this.panel1.Size = new System.Drawing.Size(730, 391);
             this.panel1.TabIndex = 2;
             // 
+            // btn_refrescar
+            // 
+            this.btn_refrescar.Location = new System.Drawing.Point(549, 359);
+            this.btn_refrescar.Name = "btn_refrescar";
+            this.btn_refrescar.Size = new System.Drawing.Size(75, 23);
+            this.btn_refrescar.TabIndex = 24;
+            this.btn_refrescar.Text = "Refrescar";
+            this.btn_refrescar.UseVisualStyleBackColor = true;
+            this.btn_refrescar.Click += new System.EventHandler(this.btn_refrescar_Click);
+            // 
             // button4
             // 
+            this.button4.AccessibleName = "btn_borrar_Click";
             this.button4.Location = new System.Drawing.Point(152, 359);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 23;
             this.button4.Text = "Borrar";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.btn_borrar_Click);
             // 
             // button3
             // 
@@ -324,16 +336,6 @@ namespace TrabajoPrácticoPAV.Formularios
             this.label2.Size = new System.Drawing.Size(142, 17);
             this.label2.TabIndex = 4;
             this.label2.Text = "Horario de Presencia";
-            // 
-            // btn_refrescar
-            // 
-            this.btn_refrescar.Location = new System.Drawing.Point(549, 359);
-            this.btn_refrescar.Name = "btn_refrescar";
-            this.btn_refrescar.Size = new System.Drawing.Size(75, 23);
-            this.btn_refrescar.TabIndex = 24;
-            this.btn_refrescar.Text = "Refrescar";
-            this.btn_refrescar.UseVisualStyleBackColor = true;
-            this.btn_refrescar.Click += new System.EventHandler(this.btn_refrescar_Click);
             // 
             // Frm_ABMViajes
             // 

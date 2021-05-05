@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Windows.Forms;
 using TrabajoPrácticoPAV.Backend;
 using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.Clase.Modelos;
@@ -43,7 +44,7 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             return viaje;
         }
 
-        public void EliminarPorId(string numeroDeViaje)
+        public void EliminarFila(string numeroDeViaje)
         {
             string sql = $"DELETE FROM Viaje WHERE numeroDeViaje = {numeroDeViaje}";
             _DB.Borrar(sql);
