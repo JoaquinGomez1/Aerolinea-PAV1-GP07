@@ -182,7 +182,7 @@
             this.Btn_Limpiar.Location = new System.Drawing.Point(53, 469);
             this.Btn_Limpiar.Margin = new System.Windows.Forms.Padding(3, 25, 3, 3);
             this.Btn_Limpiar.Name = "Btn_Limpiar";
-            this.Btn_Limpiar.Size = new System.Drawing.Size(102, 29);
+            this.Btn_Limpiar.Size = new System.Drawing.Size(102, 36);
             this.Btn_Limpiar.TabIndex = 26;
             this.Btn_Limpiar.Text = "Limpiar";
             this.Btn_Limpiar.UseVisualStyleBackColor = false;
@@ -199,7 +199,7 @@
             this.Btn_Cerrar.Location = new System.Drawing.Point(161, 469);
             this.Btn_Cerrar.Margin = new System.Windows.Forms.Padding(3, 25, 3, 3);
             this.Btn_Cerrar.Name = "Btn_Cerrar";
-            this.Btn_Cerrar.Size = new System.Drawing.Size(102, 29);
+            this.Btn_Cerrar.Size = new System.Drawing.Size(102, 36);
             this.Btn_Cerrar.TabIndex = 27;
             this.Btn_Cerrar.Text = "Cerrar";
             this.Btn_Cerrar.UseVisualStyleBackColor = false;

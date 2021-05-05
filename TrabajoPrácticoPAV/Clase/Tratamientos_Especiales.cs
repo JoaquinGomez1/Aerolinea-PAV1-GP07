@@ -210,23 +210,23 @@ namespace TrabajoPrácticoPAV.Clase
 
             Estructura = BuscarEstructuraTabla(NombreTabla);
 
-            if(esUpdate)
-            for (int i = 0; i < Estructura.Columns.Count; i++)
-            {
-                valorColumna = "";
-                columna = Estructura.Columns[i].Caption;
-                valorColumna = BuscarColumnaEnControlesSegunPk(columna, controles, false);
-                tipoDatoColumna = Estructura.Columns[i].DataType.ToString();
-
-                if (valorColumna != "")
+            if (esUpdate)
+                for (int i = 0; i < Estructura.Columns.Count; i++)
                 {
-                    valorColumna = FormatearDato(valorColumna, tipoDatoColumna);
-                    if (cambios == "")
-                        cambios += $" SET {columna} = {valorColumna}";
-                    else
-                        cambios += $", {columna} = {valorColumna}";
+                    valorColumna = "";
+                    columna = Estructura.Columns[i].Caption;
+                    valorColumna = BuscarColumnaEnControlesSegunPk(columna, controles, false);
+                    tipoDatoColumna = Estructura.Columns[i].DataType.ToString();
+
+                    if (valorColumna != "")
+                    {
+                        valorColumna = FormatearDato(valorColumna, tipoDatoColumna);
+                        if (cambios == "")
+                            cambios += $" SET {columna} = {valorColumna}";
+                        else
+                            cambios += $", {columna} = {valorColumna}";
+                    }
                 }
-            }
             for (int i = 0; i < Estructura.Columns.Count; i++)
             {
                 valorColumna = "";
@@ -285,8 +285,8 @@ namespace TrabajoPrácticoPAV.Clase
                     //El operador ^ es un OR exclusivo y al estar negado 
                     //la condición solo entra si ambos son V o ambos son F
                     if (txt.Pp_NombreCampo == campo)
-                        if(txt.Pp_EsPk == BuscaPk)
-                        return txt.Text;
+                        if (txt.Pp_EsPk == BuscaPk)
+                            return txt.Text;
                 }
                 if (item.GetType().Name == "ComboBox_Aerolinea")
                 {
@@ -294,7 +294,7 @@ namespace TrabajoPrácticoPAV.Clase
                     //MessageBox.Show($"{cmb.Pp_NombreCampo} ha dado {cmb.Pp_EsPk} en buscaPK {BuscaPk} para espk y {!(cmb.Pp_EsPk == false ^ BuscaPk)} para la condición");
                     if (cmb.Pp_NombreCampoInsert == campo)
                     {
-                        if(cmb.Pp_EsPk == BuscaPk)
+                        if (cmb.Pp_EsPk == BuscaPk)
                             return cmb.SelectedValue.ToString();
                     }
                 }

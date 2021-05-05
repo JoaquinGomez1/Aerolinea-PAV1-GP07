@@ -67,6 +67,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tramos
         {
             string sql = _TE.CostructorUpdateDelete("Tramo", this.Controls, true);
             _BD.Modificar(sql);
+            this.Close();
         }
     }
 }

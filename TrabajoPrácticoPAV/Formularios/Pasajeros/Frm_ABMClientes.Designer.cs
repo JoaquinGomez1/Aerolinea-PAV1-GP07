@@ -74,7 +74,6 @@
             // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(45, 119);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 15, 2, 0);
@@ -86,7 +85,6 @@
             // 
             // label3
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(80, 88);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 15, 2, 0);
@@ -98,7 +96,6 @@
             // 
             // label4
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(106, 57);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 15, 2, 0);
@@ -110,7 +107,6 @@
             // 
             // btn_agregar_fono
             // 
-            this.btn_agregar_fono.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_agregar_fono.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btn_agregar_fono.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btn_agregar_fono.FlatAppearance.BorderSize = 3;
@@ -126,7 +122,6 @@
             // 
             // label6
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(20, 150);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 15, 2, 0);
@@ -138,7 +133,6 @@
             // 
             // label7
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(8, 181);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 15, 2, 0);
@@ -150,7 +144,6 @@
             // 
             // Cal_fecha_nacimiento
             // 
-            this.Cal_fecha_nacimiento.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Cal_fecha_nacimiento.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cal_fecha_nacimiento.Location = new System.Drawing.Point(306, 57);
             this.Cal_fecha_nacimiento.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
@@ -173,7 +166,6 @@
             // 
             // label13
             // 
-            this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(66, 313);
             this.label13.Margin = new System.Windows.Forms.Padding(22, 0, 2, 0);
@@ -185,7 +177,6 @@
             // 
             // label5
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(217, 288);
             this.label5.Margin = new System.Windows.Forms.Padding(22, 0, 2, 0);
@@ -197,7 +188,6 @@
             // 
             // label10
             // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(81, 285);
             this.label10.Margin = new System.Windows.Forms.Padding(22, 0, 2, 0);
@@ -209,7 +199,6 @@
             // 
             // label9
             // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(225, 256);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -221,7 +210,6 @@
             // 
             // label8
             // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(14, 256);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -267,7 +255,6 @@
             // 
             // Cmb_Ciudad
             // 
-            this.Cmb_Ciudad.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Cmb_Ciudad.FormattingEnabled = true;
             this.Cmb_Ciudad.Location = new System.Drawing.Point(133, 313);
             this.Cmb_Ciudad.Margin = new System.Windows.Forms.Padding(8, 2, 8, 2);
@@ -297,7 +284,6 @@
             // 
             // Cmb_Provincia
             // 
-            this.Cmb_Provincia.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Cmb_Provincia.FormattingEnabled = true;
             this.Cmb_Provincia.Location = new System.Drawing.Point(301, 288);
             this.Cmb_Provincia.Margin = new System.Windows.Forms.Padding(8, 2, 8, 2);
@@ -315,7 +301,6 @@
             // 
             // Cmb_Pais
             // 
-            this.Cmb_Pais.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Cmb_Pais.FormattingEnabled = true;
             this.Cmb_Pais.Location = new System.Drawing.Point(133, 285);
             this.Cmb_Pais.Margin = new System.Windows.Forms.Padding(8, 2, 8, 2);
@@ -384,7 +369,6 @@
             // 
             // Cmb_TipoDoc
             // 
-            this.Cmb_TipoDoc.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Cmb_TipoDoc.FormattingEnabled = true;
             this.Cmb_TipoDoc.Location = new System.Drawing.Point(186, 150);
             this.Cmb_TipoDoc.Margin = new System.Windows.Forms.Padding(8, 2, 8, 2);
