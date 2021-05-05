@@ -37,6 +37,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.chk_box = new System.Windows.Forms.CheckBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.btn_limpiar1 = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.btn_consultar1 = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.btn_registrar1 = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
@@ -123,46 +125,78 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(50, 13);
+            this.label2.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(13, 9);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 13);
+            this.label2.Size = new System.Drawing.Size(167, 28);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Vuelo";
+            this.label2.Text = "Registrar Vuelos";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(86, 58);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.label3.Location = new System.Drawing.Point(125, 76);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 13);
+            this.label3.Size = new System.Drawing.Size(127, 20);
             this.label3.TabIndex = 1;
             this.label3.Text = "Nombre Modelo";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(89, 86);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.label5.Location = new System.Drawing.Point(125, 107);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 13);
+            this.label5.Size = new System.Drawing.Size(114, 20);
             this.label5.TabIndex = 2;
             this.label5.Text = "Numero Avion";
             // 
             // chk_box
             // 
             this.chk_box.AutoSize = true;
-            this.chk_box.Location = new System.Drawing.Point(347, 89);
+            this.chk_box.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.chk_box.Location = new System.Drawing.Point(509, 108);
+            this.chk_box.Margin = new System.Windows.Forms.Padding(4);
             this.chk_box.Name = "chk_box";
-            this.chk_box.Size = new System.Drawing.Size(56, 17);
+            this.chk_box.Size = new System.Drawing.Size(77, 24);
             this.chk_box.TabIndex = 11;
             this.chk_box.Text = "Todos";
             this.chk_box.UseVisualStyleBackColor = true;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label7.Location = new System.Drawing.Point(125, 48);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(55, 20);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Avión";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label8.Location = new System.Drawing.Point(125, 212);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(134, 20);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "Vuelos en lista";
+            // 
             // btn_limpiar1
             // 
-            this.btn_limpiar1.Location = new System.Drawing.Point(175, 113);
+            this.btn_limpiar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.btn_limpiar1.Location = new System.Drawing.Point(282, 149);
+            this.btn_limpiar1.Margin = new System.Windows.Forms.Padding(4);
             this.btn_limpiar1.Name = "btn_limpiar1";
             this.btn_limpiar1.Pp_Presionado = false;
-            this.btn_limpiar1.Size = new System.Drawing.Size(75, 23);
+            this.btn_limpiar1.Size = new System.Drawing.Size(100, 28);
             this.btn_limpiar1.TabIndex = 10;
             this.btn_limpiar1.Text = "Limpiar";
             this.btn_limpiar1.UseVisualStyleBackColor = true;
@@ -170,10 +204,12 @@
             // 
             // btn_consultar1
             // 
-            this.btn_consultar1.Location = new System.Drawing.Point(265, 113);
+            this.btn_consultar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.btn_consultar1.Location = new System.Drawing.Point(401, 149);
+            this.btn_consultar1.Margin = new System.Windows.Forms.Padding(4);
             this.btn_consultar1.Name = "btn_consultar1";
             this.btn_consultar1.Pp_Presionado = false;
-            this.btn_consultar1.Size = new System.Drawing.Size(75, 23);
+            this.btn_consultar1.Size = new System.Drawing.Size(100, 28);
             this.btn_consultar1.TabIndex = 9;
             this.btn_consultar1.Text = "Consultar";
             this.btn_consultar1.UseVisualStyleBackColor = true;
@@ -181,10 +217,12 @@
             // 
             // btn_registrar1
             // 
-            this.btn_registrar1.Location = new System.Drawing.Point(201, 347);
+            this.btn_registrar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.btn_registrar1.Location = new System.Drawing.Point(505, 438);
+            this.btn_registrar1.Margin = new System.Windows.Forms.Padding(4);
             this.btn_registrar1.Name = "btn_registrar1";
             this.btn_registrar1.Pp_Presionado = false;
-            this.btn_registrar1.Size = new System.Drawing.Size(75, 23);
+            this.btn_registrar1.Size = new System.Drawing.Size(100, 28);
             this.btn_registrar1.TabIndex = 8;
             this.btn_registrar1.Text = "Registrar";
             this.btn_registrar1.UseVisualStyleBackColor = true;
@@ -193,10 +231,12 @@
             // btn_borrar1
             // 
             this.btn_borrar1.Enabled = false;
-            this.btn_borrar1.Location = new System.Drawing.Point(119, 347);
+            this.btn_borrar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.btn_borrar1.Location = new System.Drawing.Point(387, 438);
+            this.btn_borrar1.Margin = new System.Windows.Forms.Padding(4);
             this.btn_borrar1.Name = "btn_borrar1";
             this.btn_borrar1.Pp_Presionado = false;
-            this.btn_borrar1.Size = new System.Drawing.Size(75, 23);
+            this.btn_borrar1.Size = new System.Drawing.Size(100, 28);
             this.btn_borrar1.TabIndex = 7;
             this.btn_borrar1.Text = "Borrar";
             this.btn_borrar1.UseVisualStyleBackColor = true;
@@ -205,10 +245,12 @@
             // btn_modificar1
             // 
             this.btn_modificar1.Enabled = false;
-            this.btn_modificar1.Location = new System.Drawing.Point(37, 347);
+            this.btn_modificar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.btn_modificar1.Location = new System.Drawing.Point(268, 438);
+            this.btn_modificar1.Margin = new System.Windows.Forms.Padding(4);
             this.btn_modificar1.Name = "btn_modificar1";
             this.btn_modificar1.Pp_Presionado = false;
-            this.btn_modificar1.Size = new System.Drawing.Size(75, 23);
+            this.btn_modificar1.Size = new System.Drawing.Size(100, 28);
             this.btn_modificar1.TabIndex = 6;
             this.btn_modificar1.Text = "Modificar";
             this.btn_modificar1.UseVisualStyleBackColor = true;
@@ -225,12 +267,13 @@
             this.Column7,
             this.Column8,
             this.Column9});
-            this.grilla_ABM_vuelo1.Location = new System.Drawing.Point(37, 163);
+            this.grilla_ABM_vuelo1.Location = new System.Drawing.Point(282, 212);
+            this.grilla_ABM_vuelo1.Margin = new System.Windows.Forms.Padding(4);
             this.grilla_ABM_vuelo1.Name = "grilla_ABM_vuelo1";
             this.grilla_ABM_vuelo1.Pp_FormatoGrid = null;
             this.grilla_ABM_vuelo1.Pp_NombreTabla = "Vuelo";
             this.grilla_ABM_vuelo1.ReadOnly = true;
-            this.grilla_ABM_vuelo1.Size = new System.Drawing.Size(595, 154);
+            this.grilla_ABM_vuelo1.Size = new System.Drawing.Size(594, 190);
             this.grilla_ABM_vuelo1.TabIndex = 5;
             this.grilla_ABM_vuelo1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grilla_ABM_vuelo1_CellClick);
             // 
@@ -271,7 +314,8 @@
             // cmb_NumAvion
             // 
             this.cmb_NumAvion.FormattingEnabled = true;
-            this.cmb_NumAvion.Location = new System.Drawing.Point(175, 86);
+            this.cmb_NumAvion.Location = new System.Drawing.Point(282, 108);
+            this.cmb_NumAvion.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_NumAvion.Name = "cmb_NumAvion";
             this.cmb_NumAvion.Pp_CampoAceptaNull = true;
             this.cmb_NumAvion.Pp_EsPk = false;
@@ -280,13 +324,14 @@
             this.cmb_NumAvion.Pp_NombreCampoInsert = null;
             this.cmb_NumAvion.Pp_NombreTabla = "avion";
             this.cmb_NumAvion.Pp_PkTabla = "numeroPorModelo";
-            this.cmb_NumAvion.Size = new System.Drawing.Size(165, 21);
+            this.cmb_NumAvion.Size = new System.Drawing.Size(219, 24);
             this.cmb_NumAvion.TabIndex = 4;
             // 
             // cmb_nomModelo
             // 
             this.cmb_nomModelo.FormattingEnabled = true;
-            this.cmb_nomModelo.Location = new System.Drawing.Point(175, 58);
+            this.cmb_nomModelo.Location = new System.Drawing.Point(282, 76);
+            this.cmb_nomModelo.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_nomModelo.Name = "cmb_nomModelo";
             this.cmb_nomModelo.Pp_CampoAceptaNull = true;
             this.cmb_nomModelo.Pp_EsPk = false;
@@ -296,7 +341,7 @@
             this.cmb_nomModelo.Pp_NombreTabla = "modelo";
             this.cmb_nomModelo.Pp_PkTabla = "idModelo";
             this.cmb_nomModelo.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmb_nomModelo.Size = new System.Drawing.Size(165, 21);
+            this.cmb_nomModelo.Size = new System.Drawing.Size(219, 24);
             this.cmb_nomModelo.TabIndex = 3;
             this.cmb_nomModelo.SelectionChangeCommitted += new System.EventHandler(this.cmb_nomModelo_SelectionChangeCommitted);
             // 
@@ -312,7 +357,7 @@
             this.Cmb_Nromodelo.Pp_NombreCampoInsert = null;
             this.Cmb_Nromodelo.Pp_NombreTabla = "modelo";
             this.Cmb_Nromodelo.Pp_PkTabla = "idModelo";
-            this.Cmb_Nromodelo.Size = new System.Drawing.Size(160, 21);
+            this.Cmb_Nromodelo.Size = new System.Drawing.Size(160, 25);
             this.Cmb_Nromodelo.TabIndex = 12;
             // 
             // cmb_Nroavion
@@ -327,7 +372,7 @@
             this.cmb_Nroavion.Pp_NombreCampoInsert = null;
             this.cmb_Nroavion.Pp_NombreTabla = "Avion";
             this.cmb_Nroavion.Pp_PkTabla = "numeroPorModelo";
-            this.cmb_Nroavion.Size = new System.Drawing.Size(160, 21);
+            this.cmb_Nroavion.Size = new System.Drawing.Size(160, 25);
             this.cmb_Nroavion.TabIndex = 13;
             // 
             // btn_limpiar
@@ -433,10 +478,12 @@
             // 
             // Frm_ABMVuelo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(227)))), ((int)(((byte)(187)))));
-            this.ClientSize = new System.Drawing.Size(749, 414);
+            this.ClientSize = new System.Drawing.Size(999, 510);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.chk_box);
             this.Controls.Add(this.btn_limpiar1);
             this.Controls.Add(this.btn_consultar1);
@@ -450,6 +497,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Frm_ABMVuelo";
             this.Text = "Frm_ABMVuelo";
             this.Load += new System.EventHandler(this.Frm_ABMVuelo_Load);
@@ -496,5 +544,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
     }
 }

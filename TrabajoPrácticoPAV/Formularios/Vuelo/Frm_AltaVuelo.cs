@@ -26,6 +26,9 @@ namespace TrabajoPrácticoPAV.Formularios.Vuelo
             cmb_nomModelo.CargarCombo();
             cmb_AeropDestino.CargarCombo();
             cmb_AeropSalida.CargarCombo();
+
+            this.BackColor = Estilo.ColorFondoForms;
+                Estilo.FormatearEstilo(this.Controls);
         }
 
         private void btn_Registrar_Click(object sender, EventArgs e)
@@ -64,6 +67,16 @@ namespace TrabajoPrácticoPAV.Formularios.Vuelo
             //string Condicion = @" JOIN Modelo ON Modelo.idModelo " +
             //        @"= Avion.idModelo WHERE Avion.idModelo = "+ cmb_nomModelo.SelectedValue;
             //cmb_numAvion.CargarComboJoin(Condicion);
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
 
         }
     }   
