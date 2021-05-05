@@ -35,7 +35,7 @@ namespace TrabajoPrácticoPAV.Clase
                         ((Button)item).ForeColor = Estilo.ColorLetraBoton;
                         break;
                     case "System.Windows.Forms.Panel":
-                        if(((Panel)item).Name == "BarraSuperior")
+                        if (((Panel)item).Name == "BarraSuperior")
                             ((Panel)item).BackColor = Estilo.ColorBarra;
                         break;
                     case "TrabajoPrácticoPAV.Clase.DataGridView_Aerolinea":
@@ -47,6 +47,8 @@ namespace TrabajoPrácticoPAV.Clase
                     case "TrabajoPrácticoPAV.Clase.TextBox_Aerolinea":
                     case "TrabajoPrácticoPAV.Clase.MaskedTextBox_Aerolinea":
                     case "System.Windows.Forms.MonthCalendar":
+                    case "System.Windows.Forms.DataGridView":
+                    case "System.Windows.Forms.PictureBox":
                         break;
                     default:
                         MessageBox.Show($"{nombreControl} es un control no admitido, agregar en ESTILOS");
@@ -55,6 +57,6 @@ namespace TrabajoPrácticoPAV.Clase
             }
         }
 
- 
+
     }
 }
