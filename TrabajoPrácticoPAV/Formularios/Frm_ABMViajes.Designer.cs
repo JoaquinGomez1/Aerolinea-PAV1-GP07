@@ -31,6 +31,12 @@ namespace TrabajoPrácticoPAV.Formularios
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+<<<<<<< HEAD:TrabajoPrácticoPAV/Formularios/Frm_ABMViajes.Designer.cs
+=======
+            this.btn_refrescar = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+>>>>>>> a26b86a37370bee6d4be2245e8c524893959a9e0:TrabajoPrácticoPAV/Formularios/Viajes/Frm_ABMViajes.Designer.cs
             this.datagrid_viajes = new System.Windows.Forms.DataGridView();
             this.numeroDeViaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.horarioPresencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -86,6 +92,40 @@ namespace TrabajoPrácticoPAV.Formularios
             this.panel1.Size = new System.Drawing.Size(730, 391);
             this.panel1.TabIndex = 2;
             // 
+<<<<<<< HEAD:TrabajoPrácticoPAV/Formularios/Frm_ABMViajes.Designer.cs
+=======
+            // btn_refrescar
+            // 
+            this.btn_refrescar.Location = new System.Drawing.Point(549, 359);
+            this.btn_refrescar.Name = "btn_refrescar";
+            this.btn_refrescar.Size = new System.Drawing.Size(75, 23);
+            this.btn_refrescar.TabIndex = 24;
+            this.btn_refrescar.Text = "Refrescar";
+            this.btn_refrescar.UseVisualStyleBackColor = true;
+            this.btn_refrescar.Click += new System.EventHandler(this.btn_refrescar_Click);
+            // 
+            // button4
+            // 
+            this.button4.AccessibleName = "btn_borrar_Click";
+            this.button4.Location = new System.Drawing.Point(152, 359);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 23;
+            this.button4.Text = "Borrar";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.btn_borrar_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(71, 359);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 22;
+            this.button3.Text = "Modificar";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+>>>>>>> a26b86a37370bee6d4be2245e8c524893959a9e0:TrabajoPrácticoPAV/Formularios/Viajes/Frm_ABMViajes.Designer.cs
             // datagrid_viajes
             // 
             this.datagrid_viajes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;

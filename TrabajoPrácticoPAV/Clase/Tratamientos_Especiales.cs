@@ -78,6 +78,64 @@ namespace TrabajoPrácticoPAV.Clase
             //MessageBox.Show(sql);
             return sql;
         }
+<<<<<<< HEAD
+=======
+
+        //Dependiendo de la variable esUpdate va a generar una consulta de actualización o de borrado
+        //MUY IMPORTANTE: En el diseño completar la propiedad Pp_EsPk de los controles
+        public string CostructorUpdateDelete(string NombreTabla, Control.ControlCollection controles, bool esUpdate)
+        {
+            string sql = "";
+            if (esUpdate)
+                sql = $"UPDATE {NombreTabla}";
+            else
+                sql = $"DELETE FROM {NombreTabla}";
+            string condiciones = "";
+            string cambios = "";
+            string tipoDatoColumna = "";
+            string columna = "";
+            string valorColumna = "";
+            DataTable Estructura = new DataTable();
+
+            Estructura = BuscarEstructuraTabla(NombreTabla);
+
+            if (esUpdate)
+                for (int i = 0; i < Estructura.Columns.Count; i++)
+                {
+                    valorColumna = "";
+                    columna = Estructura.Columns[i].Caption;
+                    valorColumna = BuscarColumnaEnControlesSegunPk(columna, controles, false);
+                    tipoDatoColumna = Estructura.Columns[i].DataType.ToString();
+
+                    if (valorColumna != "")
+                    {
+                        valorColumna = FormatearDato(valorColumna, tipoDatoColumna);
+                        if (cambios == "")
+                            cambios += $" SET {columna} = {valorColumna}";
+                        else
+                            cambios += $", {columna} = {valorColumna}";
+                    }
+                }
+            for (int i = 0; i < Estructura.Columns.Count; i++)
+            {
+                valorColumna = "";
+                columna = Estructura.Columns[i].Caption;
+                valorColumna = BuscarColumnaEnControlesSegunPk(columna, controles, true);
+                tipoDatoColumna = Estructura.Columns[i].DataType.ToString();
+
+                if (valorColumna != "")
+                {
+                    valorColumna = FormatearDato(valorColumna, tipoDatoColumna);
+                    if (condiciones == "")
+                        condiciones += $" WHERE {columna} = {valorColumna}";
+                    else
+                        condiciones += $" AND {columna} = {valorColumna}";
+                }
+            }
+            return $"{sql}{cambios}{condiciones}";
+        }
+
+>>>>>>> a26b86a37370bee6d4be2245e8c524893959a9e0
         public DataTable BuscarEstructuraTabla(string NombreTabla)
         {
             Conexion_DB _BD = new Conexion_DB();
@@ -140,6 +198,7 @@ namespace TrabajoPrácticoPAV.Clase
                     atributosTabla += ExtraerColumnasGrid(grid) + " FROM " + grid.Pp_NombreTabla + " " + grid.Pp_NombreTabla;
                 }
 
+<<<<<<< HEAD
                 //Evaluación TEXTBOX
                 if (control.GetType().ToString() == "TrabajoPrácticoPAV.Clase.TextBox_Aerolinea")
                 {
@@ -161,6 +220,13 @@ namespace TrabajoPrácticoPAV.Clase
                         else
                             condiciones += " AND " + condicion;
                     }
+=======
+                    //El operador ^ es un OR exclusivo y al estar negado 
+                    //la condición solo entra si ambos son V o ambos son F
+                    if (txt.Pp_NombreCampo == campo)
+                        if (txt.Pp_EsPk == BuscaPk)
+                            return txt.Text;
+>>>>>>> a26b86a37370bee6d4be2245e8c524893959a9e0
                 }
 
                 //Evaluación MASKEDTEXTBOX
@@ -169,6 +235,7 @@ namespace TrabajoPrácticoPAV.Clase
                     MaskedTextBox_Aerolinea txt = (MaskedTextBox_Aerolinea)control;
                     if (txt.Text != string.Empty)
                     {
+<<<<<<< HEAD
                         //Crea la condición que se va a asignar
                         string condicion = txt.Pp_NombreTabla + "." + txt.Pp_NombreCampo + " = " + FormatearDato(txt.Text);
 
@@ -244,6 +311,10 @@ namespace TrabajoPrácticoPAV.Clase
 
                             }
                         }
+=======
+                        if (cmb.Pp_EsPk == BuscaPk)
+                            return cmb.SelectedValue.ToString();
+>>>>>>> a26b86a37370bee6d4be2245e8c524893959a9e0
                     }
                 }
             }

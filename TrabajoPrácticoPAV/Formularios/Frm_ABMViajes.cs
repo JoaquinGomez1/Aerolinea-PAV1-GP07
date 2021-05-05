@@ -189,8 +189,15 @@ namespace TrabajoPrácticoPAV.Formularios
 
         private void CargarTodos()
         {
+<<<<<<< HEAD:TrabajoPrácticoPAV/Formularios/Frm_ABMViajes.cs
             NE_Viajes Negocio = new NE_Viajes();
             DataTable todosLosViajes = Negocio.GetTodosLosViajes();
+=======
+            DataTable todosLosViajes = _NE_Viajes.GetTodosLosViajes();
+            this.datagrid_viajes.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.datagrid_viajes.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.datagrid_viajes.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+>>>>>>> a26b86a37370bee6d4be2245e8c524893959a9e0:TrabajoPrácticoPAV/Formularios/Viajes/Frm_ABMViajes.cs
             CargarDataGrid(todosLosViajes);
         }
 
@@ -224,5 +231,33 @@ namespace TrabajoPrácticoPAV.Formularios
         {
             this.Close();
         }
+<<<<<<< HEAD:TrabajoPrácticoPAV/Formularios/Frm_ABMViajes.cs
+=======
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Frm_ModificarViaje modificarViaje = new Frm_ModificarViaje();
+            modificarViaje.ShowDialog();
+        }
+
+        private void btn_refrescar_Click(object sender, EventArgs e)
+        {
+            CargarTodos();
+        }
+
+        private readonly NE_Viajes NE_Viajes = new NE_Viajes();
+
+        private void btn_borrar_Click(object sender, EventArgs e)
+        {
+            if (datagrid_viajes.CurrentRow == null)
+                return;
+
+            datagrid_viajes.Rows.Remove(datagrid_viajes.CurrentRow);
+
+            Object valorCelda = datagrid_viajes.CurrentCell.Value;
+
+            NE_Viajes.EliminarFila(valorCelda);
+        }
+>>>>>>> a26b86a37370bee6d4be2245e8c524893959a9e0:TrabajoPrácticoPAV/Formularios/Viajes/Frm_ABMViajes.cs
     }
 }
