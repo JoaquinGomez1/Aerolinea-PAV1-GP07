@@ -121,7 +121,7 @@ namespace TrabajoPrácticoPAV.Formularios
             this.button3.TabIndex = 22;
             this.button3.Text = "Modificar";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.btn_modificar1_Click);
             // 
             // datagrid_viajes
             // 
