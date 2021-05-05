@@ -286,11 +286,8 @@
             this.label2.ForeColor = System.Drawing.SystemColors.InactiveBorder;
             this.label2.Location = new System.Drawing.Point(225, 193);
             this.label2.Name = "label2";
-<<<<<<< HEAD
-            this.label2.Size = new System.Drawing.Size(446, 97);
-=======
             this.label2.Size = new System.Drawing.Size(358, 78);
->>>>>>> 21fd91ca635c94bd5a292e984c65dc29d09ec4a0
+
             this.label2.TabIndex = 1;
             this.label2.Text = "AerOlimpo";
             // 
