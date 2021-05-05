@@ -87,11 +87,10 @@ namespace TrabajoPrácticoPAV.Formularios
             this.Modelo,
             this.Nombre,
             this.IdModelo,
-            this.Eliminar,
-            this.Editar});
-            this.grid_aviones.Location = new System.Drawing.Point(47, 171);
+            this.Eliminar});
+            this.grid_aviones.Location = new System.Drawing.Point(47, 178);
             this.grid_aviones.Name = "grid_aviones";
-            this.grid_aviones.Size = new System.Drawing.Size(490, 177);
+            this.grid_aviones.Size = new System.Drawing.Size(394, 177);
             this.grid_aviones.TabIndex = 3;
             this.grid_aviones.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -141,7 +140,7 @@ namespace TrabajoPrácticoPAV.Formularios
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(43, 143);
+            this.label5.Location = new System.Drawing.Point(43, 150);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(148, 21);
             this.label5.TabIndex = 11;

@@ -78,18 +78,6 @@
     <Compile Include="Formularios\Aviones\Frm_AltaAviones.Designer.cs">
       <DependentUpon>Frm_AltaAviones.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Aviones\Frm_ModificarAvion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Aviones\Frm_ModificarAvion.Designer.cs">
-      <DependentUpon>Frm_ModificarAvion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Pasajeros\Frm_ABMClientes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Pasajeros\Frm_ABMClientes.Designer.cs">
-      <DependentUpon>Frm_ABMClientes.cs</DependentUpon>
-    </Compile>
     <Compile Include="Formularios\Frm_ABMReservas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +89,30 @@
     </Compile>
     <Compile Include="Formularios\Pasajeros\Frm_ABMPasajeros.Designer.cs">
       <DependentUpon>Frm_ABMPasajeros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Pasajeros\Frm_AltaPasajero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Pasajeros\Frm_AltaPasajero.Designer.cs">
+      <DependentUpon>Frm_AltaPasajero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Pasajeros\Frm_BajaPasajero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Pasajeros\Frm_BajaPasajero.Designer.cs">
+      <DependentUpon>Frm_BajaPasajero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Pasajeros\Frm_ModificaionPasajero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Pasajeros\Frm_ModificaionPasajero.Designer.cs">
+      <DependentUpon>Frm_ModificaionPasajero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Pasajeros\Frm_MostrarPasajero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Pasajeros\Frm_MostrarPasajero.Designer.cs">
+      <DependentUpon>Frm_MostrarPasajero.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Tramos\Frm_ABMTramos.cs">
       <SubType>Form</SubType>
@@ -199,17 +211,23 @@
     <EmbeddedResource Include="Formularios\Aviones\Frm_AltaAviones.resx">
       <DependentUpon>Frm_AltaAviones.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Aviones\Frm_ModificarAvion.resx">
-      <DependentUpon>Frm_ModificarAvion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Pasajeros\Frm_ABMClientes.resx">
-      <DependentUpon>Frm_ABMClientes.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Frm_ABMReservas.resx">
       <DependentUpon>Frm_ABMReservas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Pasajeros\Frm_ABMPasajeros.resx">
       <DependentUpon>Frm_ABMPasajeros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Pasajeros\Frm_AltaPasajero.resx">
+      <DependentUpon>Frm_AltaPasajero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Pasajeros\Frm_BajaPasajero.resx">
+      <DependentUpon>Frm_BajaPasajero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Pasajeros\Frm_ModificaionPasajero.resx">
+      <DependentUpon>Frm_ModificaionPasajero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Pasajeros\Frm_MostrarPasajero.resx">
+      <DependentUpon>Frm_MostrarPasajero.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Tramos\Frm_ABMTramos.resx">
       <DependentUpon>Frm_ABMTramos.cs</DependentUpon>

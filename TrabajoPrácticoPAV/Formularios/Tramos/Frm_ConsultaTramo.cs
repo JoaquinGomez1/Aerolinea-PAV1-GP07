@@ -31,6 +31,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tramos
 
         NE_Tramos _NE = new NE_Tramos();
         Conexion_DB _BD = new Conexion_DB();
+        Tratamientos_Especiales _TE = new Tratamientos_Especiales();
 
         private void Btn_Aceptar_Click(object sender, EventArgs e)
         {
@@ -49,7 +50,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tramos
                 $"AND codigoAeropuertoDestino = '{codigoADestino}'";
 
             DataTable tabla = _BD.EjecutarSelect(sql);
-            _NE.InsertarDatosEnControles(tabla, this.Controls);
+            _TE.InsertarDatosEnControles(tabla, this.Controls);
         }
 
         private void BarraSuperior_MouseMove(object sender, MouseEventArgs e)

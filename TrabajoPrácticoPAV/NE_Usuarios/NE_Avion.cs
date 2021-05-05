@@ -15,13 +15,9 @@ namespace TrabajoPrácticoPAV.NE_Aviones
 
         Conexion_DB _BD = new Conexion_DB();
 
-        //DataTable tabla = new DataTable();
 
         public DataTable RecuperarTodos()
         {
-            // string sql = @"SELECT u.*, p.nombre as n_perfil "
-            //               + " FROM usuarios u join perfiles p "
-            //               + " on u.id_perfil = p.id_perfil ";
 
             string sql = @"SELECT Avion.numeroPorModelo, Modelo.nombre, Avion.idModelo from Avion inner join  Modelo on Avion.idModelo = Modelo.idModelo order by Modelo.nombre, Avion.numeroPorModelo,Avion.idModelo";
 
@@ -34,10 +30,10 @@ namespace TrabajoPrácticoPAV.NE_Aviones
             _BD.Insertar(sqlInsertar);
         }
 
-        // recuperar mixto
+ 
         public DataTable Recuperar_Mixto(string numero, int modelo)
         {
-            string sql = @"SELECT Avion.numeroPorModelo, Modelo.nombre from Avion "
+            string sql = @"SELECT Avion.numeroPorModelo, Modelo.nombre,  Avion.idModelo from Avion "
             + " inner join Modelo on Avion.idModelo = Modelo.idModelo "
             + "  where Avion.numeroPorModelo = " + numero + " and Avion.idModelo = " + modelo;
             ;
@@ -46,7 +42,7 @@ namespace TrabajoPrácticoPAV.NE_Aviones
 
         public DataTable Recuperar_x_modelo(int modelo)
         {
-            string sql = @"SELECT Avion.numeroPorModelo, Modelo.nombre from Avion "
+            string sql = @"SELECT Avion.numeroPorModelo, Modelo.nombre,  Avion.idModelo from Avion "
             + " inner join Modelo on Avion.idModelo = Modelo.idModelo "
             + " where Avion.idModelo = " + modelo;
             return _BD.EjecutarSelect(sql);
@@ -55,7 +51,7 @@ namespace TrabajoPrácticoPAV.NE_Aviones
         
         public DataTable Recuperar_x_numero(string numero)
         {
-            string sql = @"SELECT Avion.numeroPorModelo, Modelo.nombre from Avion "
+            string sql = @"SELECT Avion.numeroPorModelo, Modelo.nombre,  Avion.idModelo from Avion "
             + " inner join Modelo on Avion.idModelo = Modelo.idModelo "
             + " where Avion.numeroPorModelo = " + numero;
             return _BD.EjecutarSelect(sql);

@@ -43,6 +43,9 @@
             this.Txt_Apellido = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
             this.Btn_Buscar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.chk_Todos = new System.Windows.Forms.CheckBox();
+            this.Btn_Modificar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
+            this.Btn_Limpiar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
+            this.Btn_Eliminar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             ((System.ComponentModel.ISupportInitialize)(this.Grid_Pasajero)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,7 +75,7 @@
             // btn_cancelar
             // 
             this.btn_cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.btn_cancelar.Location = new System.Drawing.Point(828, 352);
+            this.btn_cancelar.Location = new System.Drawing.Point(46, 468);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Pp_Presionado = false;
             this.btn_cancelar.Size = new System.Drawing.Size(120, 34);
@@ -94,15 +97,21 @@
             // 
             // Grid_Pasajero
             // 
+            this.Grid_Pasajero.AllowUserToAddRows = false;
+            this.Grid_Pasajero.AllowUserToDeleteRows = false;
             this.Grid_Pasajero.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Grid_Pasajero.Location = new System.Drawing.Point(46, 179);
+            this.Grid_Pasajero.MultiSelect = false;
             this.Grid_Pasajero.Name = "Grid_Pasajero";
-            this.Grid_Pasajero.Pp_FormatoGrid = "nombre, Nombre, 175;apellido ,Apellido, 175; tipoDoc, Tipo Documento, 65; numeroD" +
-    "oc, Número de documento, 100";
+            this.Grid_Pasajero.Pp_FormatoGrid = "nombre, Nombre, 175;apellido ,Apellido, 175;tipoDoc, Tipo Documento, 65;numeroDoc" +
+    ", Número de documento, 100";
             this.Grid_Pasajero.Pp_NombreTabla = "Pasajero";
+            this.Grid_Pasajero.ReadOnly = true;
             this.Grid_Pasajero.RowTemplate.Height = 24;
-            this.Grid_Pasajero.Size = new System.Drawing.Size(755, 207);
+            this.Grid_Pasajero.Size = new System.Drawing.Size(776, 268);
             this.Grid_Pasajero.TabIndex = 56;
+            this.Grid_Pasajero.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_Pasajero_CellClick);
+            this.Grid_Pasajero.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_Pasajero_CellContentDoubleClick);
             // 
             // label7
             // 
@@ -144,13 +153,14 @@
             // btn_registrar
             // 
             this.btn_registrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.btn_registrar.Location = new System.Drawing.Point(828, 179);
+            this.btn_registrar.Location = new System.Drawing.Point(846, 179);
             this.btn_registrar.Name = "btn_registrar";
             this.btn_registrar.Pp_Presionado = false;
-            this.btn_registrar.Size = new System.Drawing.Size(120, 34);
+            this.btn_registrar.Size = new System.Drawing.Size(127, 50);
             this.btn_registrar.TabIndex = 54;
             this.btn_registrar.Text = "Registrar";
             this.btn_registrar.UseVisualStyleBackColor = true;
+            this.btn_registrar.Click += new System.EventHandler(this.btn_registrar_Click);
             // 
             // label3
             // 
@@ -199,10 +209,10 @@
             // Btn_Buscar
             // 
             this.Btn_Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.Btn_Buscar.Location = new System.Drawing.Point(828, 219);
+            this.Btn_Buscar.Location = new System.Drawing.Point(846, 251);
             this.Btn_Buscar.Name = "Btn_Buscar";
             this.Btn_Buscar.Pp_Presionado = false;
-            this.Btn_Buscar.Size = new System.Drawing.Size(120, 34);
+            this.Btn_Buscar.Size = new System.Drawing.Size(127, 50);
             this.Btn_Buscar.TabIndex = 51;
             this.Btn_Buscar.Text = "Buscar";
             this.Btn_Buscar.UseVisualStyleBackColor = true;
@@ -218,11 +228,52 @@
             this.chk_Todos.Text = "Todos";
             this.chk_Todos.UseVisualStyleBackColor = true;
             // 
+            // Btn_Modificar
+            // 
+            this.Btn_Modificar.Enabled = false;
+            this.Btn_Modificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.Btn_Modificar.Location = new System.Drawing.Point(846, 323);
+            this.Btn_Modificar.Name = "Btn_Modificar";
+            this.Btn_Modificar.Pp_Presionado = false;
+            this.Btn_Modificar.Size = new System.Drawing.Size(127, 50);
+            this.Btn_Modificar.TabIndex = 60;
+            this.Btn_Modificar.Text = "Modificar";
+            this.Btn_Modificar.UseVisualStyleBackColor = true;
+            this.Btn_Modificar.Click += new System.EventHandler(this.Btn_Modificar_Click);
+            // 
+            // Btn_Limpiar
+            // 
+            this.Btn_Limpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.Btn_Limpiar.Location = new System.Drawing.Point(172, 468);
+            this.Btn_Limpiar.Name = "Btn_Limpiar";
+            this.Btn_Limpiar.Pp_Presionado = false;
+            this.Btn_Limpiar.Size = new System.Drawing.Size(120, 34);
+            this.Btn_Limpiar.TabIndex = 61;
+            this.Btn_Limpiar.Text = "Limpiar";
+            this.Btn_Limpiar.UseVisualStyleBackColor = true;
+            this.Btn_Limpiar.Click += new System.EventHandler(this.Btn_Limpiar_Click);
+            // 
+            // Btn_Eliminar
+            // 
+            this.Btn_Eliminar.Enabled = false;
+            this.Btn_Eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.Btn_Eliminar.Location = new System.Drawing.Point(846, 395);
+            this.Btn_Eliminar.Name = "Btn_Eliminar";
+            this.Btn_Eliminar.Pp_Presionado = false;
+            this.Btn_Eliminar.Size = new System.Drawing.Size(127, 50);
+            this.Btn_Eliminar.TabIndex = 59;
+            this.Btn_Eliminar.Text = "Eliminar";
+            this.Btn_Eliminar.UseVisualStyleBackColor = true;
+            this.Btn_Eliminar.Click += new System.EventHandler(this.Btn_Eliminar_Click);
+            // 
             // Frm_ABMPasajeros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(981, 463);
+            this.ClientSize = new System.Drawing.Size(999, 514);
+            this.Controls.Add(this.Btn_Limpiar);
+            this.Controls.Add(this.Btn_Modificar);
+            this.Controls.Add(this.Btn_Eliminar);
             this.Controls.Add(this.chk_Todos);
             this.Controls.Add(this.Msktxt_NumeroDOC);
             this.Controls.Add(this.Txt_nombre);
@@ -265,5 +316,8 @@
         private Clase.TextBox_Aerolinea Txt_Apellido;
         private Clase.Button_Aerolinea Btn_Buscar;
         private System.Windows.Forms.CheckBox chk_Todos;
+        private Clase.Button_Aerolinea Btn_Modificar;
+        private Clase.Button_Aerolinea Btn_Limpiar;
+        private Clase.Button_Aerolinea Btn_Eliminar;
     }
 }

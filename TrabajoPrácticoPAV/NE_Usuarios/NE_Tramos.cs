@@ -53,28 +53,6 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             return "";
         }
 
-        public void InsertarDatosEnControles(DataTable tabla, Control.ControlCollection controles)
-        {
-            for (int i = 0; i < tabla.Columns.Count; i++)
-            {
-                string nombreColumna = tabla.Columns[i].Caption;
-
-                foreach (var item in controles)
-                {
-                    if(item.GetType().ToString() == "TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea")
-                    {
-                        ComboBox_Aerolinea cmb = (ComboBox_Aerolinea)item;
-                        cmb.SelectedValue = tabla.Rows[0][cmb.Pp_NombreCampoInsert].ToString();
-                    }
-                    if(item.GetType().ToString() == "TrabajoPrácticoPAV.Clase.TextBox_Aerolinea")
-                    {
-                        TextBox_Aerolinea txt = (TextBox_Aerolinea)item;
-                        txt.Text = tabla.Rows[0][txt.Pp_NombreCampo].ToString();
-                    }
-                }
-            }
-        }
-
         public string BuscarCodigoAeropuerto(string nombreAeropuerto)
         {
             return _BD.EjecutarSelect($"SELECT codigo FROM Aeropuerto WHERE nombre = " +

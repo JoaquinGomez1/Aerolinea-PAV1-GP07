@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,15 +15,13 @@ namespace TrabajoPrácticoPAV.Clase
     {
         public enum Resultado { correcto, error }
 
-
-
-
-
         public string ConstructorSelect(Control.ControlCollection controles, string join)
         {
             string sql = "SELECT ";
             string condiciones = "";
             string atributosTabla = "";
+            bool todos = false;
+            string nombreTabla = "";
 
             foreach (var control in controles)
             {
@@ -30,7 +29,14 @@ namespace TrabajoPrácticoPAV.Clase
                 if (control.GetType().ToString() == "TrabajoPrácticoPAV.Clase.DataGridView_Aerolinea")
                 {
                     DataGridView_Aerolinea grid = ((DataGridView_Aerolinea)control);
-                    atributosTabla += $"{ExtraerColumnasGrid(grid)} FROM {grid.Pp_NombreTabla} {grid.Pp_NombreTabla}";
+                    nombreTabla = grid.Pp_NombreTabla;
+                    atributosTabla += $"{ExtraerColumnasGrid(grid)} FROM {nombreTabla}";
+                }
+
+                if(control.GetType().ToString() == "System.Windows.Forms.CheckBox")
+                {
+                    if (((CheckBox)control).Checked)
+                        todos = true;
                 }
 
                 //Evaluación TEXTBOX
@@ -91,9 +97,10 @@ namespace TrabajoPrácticoPAV.Clase
                     }
                 }
             }
+            if (atributosTabla == "" || todos)
+                atributosTabla = $" * FROM {nombreTabla} ";
 
             sql += atributosTabla + join + condiciones;
-            Clipboard.SetText(sql);
             return sql;
         }
 
@@ -126,33 +133,79 @@ namespace TrabajoPrácticoPAV.Clase
             return nombresColumnas;
         }
 
-
         public Resultado Validar(Control.ControlCollection controles)
         {
             foreach (var item in controles)
             {
+
                 if (item.GetType().Name == "TextBox_Aerolinea")
                 {
-                    if (((TextBox_Aerolinea)item).Text == "")
+                    TextBox_Aerolinea txt = (TextBox_Aerolinea)item;
+                    if (txt.Text == "")
                     {
-                        MessageBox.Show(((TextBox_Aerolinea)item).Pp_MensajeError);
-                        ((TextBox_Aerolinea)item).Focus();
+                        MessageBox.Show(txt.Pp_MensajeError);
+                        txt.Focus();
                         return Resultado.error;
                     }
                 }
 
                 if (item.GetType().Name == "ComboBox_Aerolinea")
                 {
-                    if (((ComboBox_Aerolinea)item).SelectedIndex == -1)
+                    ComboBox_Aerolinea cmb = (ComboBox_Aerolinea)item;
+                    if (cmb.SelectedIndex == -1)
                     {
-                        MessageBox.Show(((ComboBox_Aerolinea)item).Pp_MensajeError);
-                        ((ComboBox_Aerolinea)item).Focus();
+                        MessageBox.Show(cmb.Pp_MensajeError);
+                        cmb.Focus();
                         return Resultado.error;
+                    }
+                }
+                if (item.GetType().Name == "DataGridView_Aerolinea")
+                {
+                    DataGridView_Aerolinea grid = (DataGridView_Aerolinea)item;
+                    if (grid.Rows.Count > 0 && grid.Name.ToString() == "Grid_Telefonos")
+                    {
+                        if(ValidarTelefonos(grid) == Resultado.error)
+                        {
+                            MessageBox.Show("Telefono mal");
+                            return Resultado.error;
+                        }
                     }
                 }
             }
             return Resultado.correcto;
         }
+
+        public Resultado ValidarFecha(string fecha)
+        {
+            CultureInfo provider = CultureInfo.InvariantCulture;
+            try
+            {
+                DateTime.ParseExact(fecha, "d", provider);
+                return Resultado.correcto;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("La fecha ingresada no es correcta. Por favor ingrese la fecha en el formato DD/MM/AAAA.");
+                return Resultado.error;
+            }
+        }
+
+        private Resultado ValidarTelefonos(DataGridView_Aerolinea grid)
+        {
+            for (int i = 0; i < grid.Rows.Count - 1; i++)
+            {
+                try
+                {
+                    int.Parse(grid.Rows[i].Cells[0].Value.ToString().Replace(" ", ""));
+                }
+                catch (Exception)
+                {
+                    return Resultado.error;
+                }
+            }
+            return Resultado.correcto;
+        }
+
         public string CostructorInsert(string NombreTabla, Control.ControlCollection controles)
         {
             string sql = "INSERT INTO " + NombreTabla + " (";
@@ -267,8 +320,14 @@ namespace TrabajoPrácticoPAV.Clase
                 {
                     ComboBox_Aerolinea cmb = (ComboBox_Aerolinea)item;
 
-                    if (cmb.Pp_NombreCampoInsert == campo)
+                    if (cmb.Pp_NombreCampoInsert == campo && cmb.SelectedIndex != -1)
                         return cmb.SelectedValue.ToString();
+                }
+                if (item.GetType().Name == "MaskedTextBox_Aerolinea")
+                {
+                    MaskedTextBox_Aerolinea txt = (MaskedTextBox_Aerolinea)item;
+                    if (txt.Pp_NombreCampo == campo)
+                        return txt.Text;
                 }
             }
             return "";
@@ -282,8 +341,7 @@ namespace TrabajoPrácticoPAV.Clase
                 {
                     TextBox_Aerolinea txt = (TextBox_Aerolinea)item;
 
-                    //El operador ^ es un OR exclusivo y al estar negado 
-                    //la condición solo entra si ambos son V o ambos son F
+
                     if (txt.Pp_NombreCampo == campo)
                         if (txt.Pp_EsPk == BuscaPk)
                             return txt.Text;
@@ -291,16 +349,50 @@ namespace TrabajoPrácticoPAV.Clase
                 if (item.GetType().Name == "ComboBox_Aerolinea")
                 {
                     ComboBox_Aerolinea cmb = (ComboBox_Aerolinea)item;
-                    //MessageBox.Show($"{cmb.Pp_NombreCampo} ha dado {cmb.Pp_EsPk} en buscaPK {BuscaPk} para espk y {!(cmb.Pp_EsPk == false ^ BuscaPk)} para la condición");
                     if (cmb.Pp_NombreCampoInsert == campo)
                     {
                         if (cmb.Pp_EsPk == BuscaPk)
                             return cmb.SelectedValue.ToString();
                     }
                 }
+                if (item.GetType().Name == "MaskedTextBox_Aerolinea")
+                {
+                    MaskedTextBox_Aerolinea txt = (MaskedTextBox_Aerolinea)item;
+
+                    if (txt.Pp_NombreCampo == campo)
+                        if (txt.Pp_EsPk == BuscaPk)
+                            return txt.Text;
+                }
             }
             return "";
 
+        }
+
+        public void InsertarDatosEnControles(DataTable tabla, Control.ControlCollection controles)
+        {
+            for (int i = 0; i < tabla.Columns.Count; i++)
+            {
+                string nombreColumna = tabla.Columns[i].Caption;
+
+                foreach (var item in controles)
+                {
+                    if (item.GetType().ToString() == "TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea")
+                    {
+                        ComboBox_Aerolinea cmb = (ComboBox_Aerolinea)item;
+                        cmb.SelectedValue = tabla.Rows[0][cmb.Pp_NombreCampoInsert].ToString();
+                    }
+                    if (item.GetType().ToString() == "TrabajoPrácticoPAV.Clase.TextBox_Aerolinea")
+                    {
+                        TextBox_Aerolinea txt = (TextBox_Aerolinea)item;
+                        txt.Text = tabla.Rows[0][txt.Pp_NombreCampo].ToString();
+                    }
+                    if (item.GetType().ToString() == "TrabajoPrácticoPAV.Clase.MaskedTextBox_Aerolinea")
+                    {
+                        MaskedTextBox_Aerolinea txt = (MaskedTextBox_Aerolinea)item;
+                        txt.Text = tabla.Rows[0][txt.Pp_NombreCampo].ToString();
+                    }
+                }
+            }
         }
 
         private string FormatearDato(string valorColumna, string tipoDatoColumna)
@@ -310,6 +402,9 @@ namespace TrabajoPrácticoPAV.Clase
                 case "String":
                 case "System.String":
                     return "'" + valorColumna + "'";
+                case "System.DateTime":
+                case "DateTime":
+                    return $" CONVERT(DATE, '{valorColumna}', 110)";
                 case "Int16":
                 case "Int32":
                 case "Int64":

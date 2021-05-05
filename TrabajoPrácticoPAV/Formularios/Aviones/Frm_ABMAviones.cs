@@ -15,6 +15,8 @@ namespace TrabajoPrácticoPAV.Formularios
 {
     public partial class Frm_ABMAviones : Form
     {
+
+
         public Frm_ABMAviones()
         {
             InitializeComponent();
@@ -56,17 +58,8 @@ namespace TrabajoPrácticoPAV.Formularios
                MessageBox.Show("Avion eliminado, Actualize la tabla");
                return;
             }
-            if (grid_aviones.CurrentCell.ColumnIndex == 4)
-            {      
 
-                Frm_ModificarAvion modificar = new Frm_ModificarAvion();
 
-                modificar.Pp_numeroSeleccionado = grid_aviones.CurrentRow.Cells[0].Value.ToString(); 
-                modificar.Pp_idModeloSeleccionado = grid_aviones.Rows[current].Cells[2].Value; 
-                modificar.ShowDialog();
-                MessageBox.Show("Avion modificado, Actualize la tabla");
-                return;
-            }
 
         }
 
