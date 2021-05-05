@@ -1,6 +1,6 @@
 ﻿namespace TrabajoPrácticoPAV.Formularios.Vuelo
 {
-    partial class Frm_ModificarVuelo
+    partial class Frm_ConsultarVuelo
     {
         /// <summary>
         /// Required designer variable.
@@ -53,15 +53,15 @@
             this.label1.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(10, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 21);
+            this.label1.Size = new System.Drawing.Size(119, 21);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Modificar Vuelo";
+            this.label1.Text = "Mostrar Vuelo";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.label2.Location = new System.Drawing.Point(49, 232);
+            this.label2.Location = new System.Drawing.Point(55, 232);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(127, 17);
             this.label2.TabIndex = 1;
@@ -81,7 +81,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.label4.Location = new System.Drawing.Point(83, 136);
+            this.label4.Location = new System.Drawing.Point(79, 137);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(97, 17);
             this.label4.TabIndex = 3;
@@ -90,6 +90,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Enabled = false;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.label5.Location = new System.Drawing.Point(333, 107);
             this.label5.Name = "label5";
@@ -100,6 +101,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Enabled = false;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.label6.Location = new System.Drawing.Point(333, 136);
             this.label6.Name = "label6";
@@ -109,21 +111,23 @@
             // 
             // txt_duracionestimada
             // 
-            this.txt_duracionestimada.Location = new System.Drawing.Point(182, 232);
+            this.txt_duracionestimada.Enabled = false;
+            this.txt_duracionestimada.Location = new System.Drawing.Point(188, 232);
             this.txt_duracionestimada.Name = "txt_duracionestimada";
             this.txt_duracionestimada.Pp_EsPk = false;
             this.txt_duracionestimada.Pp_MensajeError = "Ingrese una duracion estimada";
             this.txt_duracionestimada.Pp_NombreCampo = "duracionEstimada";
             this.txt_duracionestimada.Pp_NombreTabla = "";
-            this.txt_duracionestimada.Size = new System.Drawing.Size(120, 20);
+            this.txt_duracionestimada.Size = new System.Drawing.Size(114, 20);
             this.txt_duracionestimada.TabIndex = 6;
             // 
             // cmb_nomModelo
             // 
+            this.cmb_nomModelo.Enabled = false;
             this.cmb_nomModelo.FormattingEnabled = true;
             this.cmb_nomModelo.Location = new System.Drawing.Point(182, 107);
             this.cmb_nomModelo.Name = "cmb_nomModelo";
-            this.cmb_nomModelo.Pp_CampoAceptaNull = true;
+            this.cmb_nomModelo.Pp_CampoAceptaNull = false;
             this.cmb_nomModelo.Pp_EsPk = false;
             this.cmb_nomModelo.Pp_MensajeError = "Seleccionar un modelo";
             this.cmb_nomModelo.Pp_NombreCampo = "nombre";
@@ -136,10 +140,11 @@
             // 
             // cmb_numAvion
             // 
+            this.cmb_numAvion.Enabled = false;
             this.cmb_numAvion.FormattingEnabled = true;
             this.cmb_numAvion.Location = new System.Drawing.Point(182, 136);
             this.cmb_numAvion.Name = "cmb_numAvion";
-            this.cmb_numAvion.Pp_CampoAceptaNull = true;
+            this.cmb_numAvion.Pp_CampoAceptaNull = false;
             this.cmb_numAvion.Pp_EsPk = false;
             this.cmb_numAvion.Pp_MensajeError = "Seleccionar un avion";
             this.cmb_numAvion.Pp_NombreCampo = "numeroPorModelo";
@@ -151,10 +156,11 @@
             // 
             // cmb_AeropDestino
             // 
+            this.cmb_AeropDestino.Enabled = false;
             this.cmb_AeropDestino.FormattingEnabled = true;
             this.cmb_AeropDestino.Location = new System.Drawing.Point(465, 133);
             this.cmb_AeropDestino.Name = "cmb_AeropDestino";
-            this.cmb_AeropDestino.Pp_CampoAceptaNull = true;
+            this.cmb_AeropDestino.Pp_CampoAceptaNull = false;
             this.cmb_AeropDestino.Pp_EsPk = false;
             this.cmb_AeropDestino.Pp_MensajeError = "Seleccionar un Aeropuerto de destino";
             this.cmb_AeropDestino.Pp_NombreCampo = "nombre";
@@ -166,10 +172,11 @@
             // 
             // cmb_AeropSalida
             // 
+            this.cmb_AeropSalida.Enabled = false;
             this.cmb_AeropSalida.FormattingEnabled = true;
             this.cmb_AeropSalida.Location = new System.Drawing.Point(465, 107);
             this.cmb_AeropSalida.Name = "cmb_AeropSalida";
-            this.cmb_AeropSalida.Pp_CampoAceptaNull = true;
+            this.cmb_AeropSalida.Pp_CampoAceptaNull = false;
             this.cmb_AeropSalida.Pp_EsPk = false;
             this.cmb_AeropSalida.Pp_MensajeError = "Seleccionar un Aeropuerto de salida";
             this.cmb_AeropSalida.Pp_NombreCampo = "nombre";
@@ -207,7 +214,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.label7.Location = new System.Drawing.Point(63, 46);
+            this.label7.Location = new System.Drawing.Point(69, 46);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(113, 17);
             this.label7.TabIndex = 13;
@@ -228,6 +235,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.Enabled = false;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.label9.Location = new System.Drawing.Point(333, 79);
             this.label9.Name = "label9";
@@ -245,7 +253,7 @@
             this.label8.TabIndex = 17;
             this.label8.Text = "Avión";
             // 
-            // Frm_ModificarVuelo
+            // Frm_ConsultarVuelo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -269,9 +277,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Frm_ModificarVuelo";
-            this.Text = "Frm_ModificarVuelo";
-            this.Load += new System.EventHandler(this.Frm_ModificarVuelo_Load);
+            this.Name = "Frm_ConsultarVuelo";
+            this.Text = "Frm_ConsultarVuelo";
+            this.Load += new System.EventHandler(this.Frm_ConsultarVuelo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
