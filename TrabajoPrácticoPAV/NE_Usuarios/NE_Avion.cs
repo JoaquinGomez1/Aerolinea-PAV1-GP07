@@ -40,7 +40,6 @@ namespace TrabajoPrácticoPAV.NE_Aviones
             string sql = @"SELECT Avion.numeroPorModelo, Modelo.nombre from Avion "
             + " inner join Modelo on Avion.idModelo = Modelo.idModelo "
             + "  where Avion.numeroPorModelo = " + numero + " and Avion.idModelo = " + modelo;
-            ;
             return _BD.EjecutarSelect(sql);
         }
 
@@ -64,12 +63,14 @@ namespace TrabajoPrácticoPAV.NE_Aviones
         public DataTable Remover_avion(string numero , object idModelo)
         {
             string sql = @"delete from Avion where numeroPorModelo = " + numero + " and  idModelo= " + idModelo;
-            return _BD.EjecutarSelect(sql);
-
-
-            
+            return _BD.EjecutarSelect(sql); 
+        }
+        public void Modificar()
+        {
+            string sqlModificar = @"UPDATE avion SET "
+                         + " numero = " + Pp_numero_modelo
+                         + ", modelo = '" + Pp_id_modelo + "'";
+            _BD.Modificar(sqlModificar);
         }
     }
 }
-
-

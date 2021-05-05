@@ -145,12 +145,18 @@ namespace TrabajoPrácticoPAV.Formularios
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btn_modificar_Click(object sender, EventArgs e)
+        {
+            Frm_ModificarAvion modificar = new Frm_ModificarAvion();
+            modificar.ShowDialog();
+        }
+
+        private void btn_baja_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void txt_numero_TextChanged(object sender, EventArgs e)
         {
 
         }

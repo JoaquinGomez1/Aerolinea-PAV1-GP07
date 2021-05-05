@@ -112,13 +112,14 @@ namespace TrabajoPrácticoPAV.Formularios
             this.txt_numero.Pp_NombreTabla = null;
             this.txt_numero.Size = new System.Drawing.Size(158, 20);
             this.txt_numero.TabIndex = 0;
+            this.txt_numero.TextChanged += new System.EventHandler(this.txt_numero_TextChanged);
             // 
             // Frm_AltaAviones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(343, 340);
+            this.ClientSize = new System.Drawing.Size(346, 291);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btn_Cancelar);
             this.Controls.Add(this.button1);
@@ -126,6 +127,8 @@ namespace TrabajoPrácticoPAV.Formularios
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmb_Modelo);
             this.Controls.Add(this.txt_numero);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Frm_AltaAviones";
             this.Text = "Frm_AltaAviones";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Frm_AltaAviones_FormClosed);

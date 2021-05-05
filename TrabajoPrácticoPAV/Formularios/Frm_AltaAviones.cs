@@ -66,5 +66,10 @@ namespace TrabajoPrácticoPAV.Formularios
         {
 
         }
+
+        private void txt_numero_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
