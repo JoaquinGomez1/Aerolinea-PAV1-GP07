@@ -34,18 +34,34 @@ namespace TrabajoPrácticoPAV.Formularios
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.grid_aviones = new System.Windows.Forms.DataGridView();
+<<<<<<< HEAD
             this.btn_alta = new System.Windows.Forms.Button();
+=======
+            this.Modelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdModelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
+>>>>>>> 4ee3db255cd7b4e8d72afed448826e444b04716b
             this.label2 = new System.Windows.Forms.Label();
-            this.btn_buscar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+<<<<<<< HEAD
             this.btn_actualizar = new System.Windows.Forms.Button();
             this.Modelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdModelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
+=======
+>>>>>>> 4ee3db255cd7b4e8d72afed448826e444b04716b
             this.cmb_Modelo = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
             this.txt_numero = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
+            this.picBox_buscar = new System.Windows.Forms.PictureBox();
+            this.picBox_actualizar = new System.Windows.Forms.PictureBox();
+            this.picBox_agregar = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.grid_aviones)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_buscar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_actualizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_agregar)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -90,6 +106,7 @@ namespace TrabajoPrácticoPAV.Formularios
             this.grid_aviones.TabIndex = 3;
             this.grid_aviones.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+<<<<<<< HEAD
             // btn_alta
             // 
             this.btn_alta.Location = new System.Drawing.Point(47, 371);
@@ -99,6 +116,41 @@ namespace TrabajoPrácticoPAV.Formularios
             this.btn_alta.Text = "Nuevo avion";
             this.btn_alta.UseVisualStyleBackColor = true;
             this.btn_alta.Click += new System.EventHandler(this.btn_alta_Click);
+=======
+            // Modelo
+            // 
+            this.Modelo.HeaderText = "Numero";
+            this.Modelo.Name = "Modelo";
+            this.Modelo.Width = 150;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Modelo";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.Width = 150;
+            // 
+            // IdModelo
+            // 
+            this.IdModelo.HeaderText = "IdModelo";
+            this.IdModelo.Name = "IdModelo";
+            this.IdModelo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.IdModelo.Visible = false;
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Eliminar.Width = 50;
+            // 
+            // Editar
+            // 
+            this.Editar.FillWeight = 50F;
+            this.Editar.HeaderText = "Editar";
+            this.Editar.Name = "Editar";
+            this.Editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Editar.Width = 50;
+>>>>>>> 4ee3db255cd7b4e8d72afed448826e444b04716b
             // 
             // label2
             // 
@@ -108,6 +160,7 @@ namespace TrabajoPrácticoPAV.Formularios
             this.label2.Size = new System.Drawing.Size(0, 13);
             this.label2.TabIndex = 1;
             // 
+<<<<<<< HEAD
             // btn_buscar
             // 
             this.btn_buscar.Location = new System.Drawing.Point(250, 87);
@@ -118,6 +171,8 @@ namespace TrabajoPrácticoPAV.Formularios
             this.btn_buscar.UseVisualStyleBackColor = true;
             this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click_1);
             // 
+=======
+>>>>>>> 4ee3db255cd7b4e8d72afed448826e444b04716b
             // label5
             // 
             this.label5.AutoSize = true;
@@ -128,6 +183,7 @@ namespace TrabajoPrácticoPAV.Formularios
             this.label5.TabIndex = 11;
             this.label5.Text = "Consultar Aviones";
             // 
+<<<<<<< HEAD
             // btn_actualizar
             // 
             this.btn_actualizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_actualizar.BackgroundImage")));
@@ -166,6 +222,8 @@ namespace TrabajoPrácticoPAV.Formularios
             this.Eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Eliminar.Width = 50;
             // 
+=======
+>>>>>>> 4ee3db255cd7b4e8d72afed448826e444b04716b
             // cmb_Modelo
             // 
             this.cmb_Modelo.FormattingEnabled = true;
@@ -193,15 +251,52 @@ namespace TrabajoPrácticoPAV.Formularios
             this.txt_numero.Size = new System.Drawing.Size(106, 20);
             this.txt_numero.TabIndex = 4;
             // 
+            // picBox_buscar
+            // 
+            this.picBox_buscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBox_buscar.BackgroundImage")));
+            this.picBox_buscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picBox_buscar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picBox_buscar.Location = new System.Drawing.Point(253, 103);
+            this.picBox_buscar.Name = "picBox_buscar";
+            this.picBox_buscar.Size = new System.Drawing.Size(30, 22);
+            this.picBox_buscar.TabIndex = 12;
+            this.picBox_buscar.TabStop = false;
+            this.picBox_buscar.Click += new System.EventHandler(this.picBox_buscar_Click);
+            // 
+            // picBox_actualizar
+            // 
+            this.picBox_actualizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBox_actualizar.BackgroundImage")));
+            this.picBox_actualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picBox_actualizar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picBox_actualizar.Location = new System.Drawing.Point(505, 144);
+            this.picBox_actualizar.Name = "picBox_actualizar";
+            this.picBox_actualizar.Size = new System.Drawing.Size(28, 21);
+            this.picBox_actualizar.TabIndex = 13;
+            this.picBox_actualizar.TabStop = false;
+            this.picBox_actualizar.Click += new System.EventHandler(this.picBox_actualizar_Click);
+            // 
+            // picBox_agregar
+            // 
+            this.picBox_agregar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBox_agregar.BackgroundImage")));
+            this.picBox_agregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picBox_agregar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picBox_agregar.Location = new System.Drawing.Point(505, 354);
+            this.picBox_agregar.Name = "picBox_agregar";
+            this.picBox_agregar.Size = new System.Drawing.Size(32, 25);
+            this.picBox_agregar.TabIndex = 14;
+            this.picBox_agregar.TabStop = false;
+            this.picBox_agregar.Click += new System.EventHandler(this.picBox_agregar_Click);
+            // 
             // Frm_ABMAviones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(227)))), ((int)(((byte)(187)))));
             this.ClientSize = new System.Drawing.Size(650, 581);
+            this.Controls.Add(this.picBox_agregar);
+            this.Controls.Add(this.picBox_actualizar);
+            this.Controls.Add(this.picBox_buscar);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.btn_buscar);
-            this.Controls.Add(this.btn_actualizar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.cmb_Modelo);
@@ -209,11 +304,13 @@ namespace TrabajoPrácticoPAV.Formularios
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_numero);
-            this.Controls.Add(this.btn_alta);
             this.Name = "Frm_ABMAviones";
             this.Text = "Frm_ABMAviones";
             this.Load += new System.EventHandler(this.Frm_ABMAviones_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grid_aviones)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_buscar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_actualizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_agregar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -223,18 +320,22 @@ namespace TrabajoPrácticoPAV.Formularios
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btn_alta;
         private System.Windows.Forms.DataGridView grid_aviones;
         private Clase.TextBox_Aerolinea txt_numero;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private Clase.ComboBox_Aerolinea cmb_Modelo;
-        private System.Windows.Forms.Button btn_buscar;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btn_actualizar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Modelo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdModelo;
         private System.Windows.Forms.DataGridViewImageColumn Eliminar;
+<<<<<<< HEAD
+=======
+        private System.Windows.Forms.DataGridViewImageColumn Editar;
+        private System.Windows.Forms.PictureBox picBox_buscar;
+        private System.Windows.Forms.PictureBox picBox_actualizar;
+        private System.Windows.Forms.PictureBox picBox_agregar;
+>>>>>>> 4ee3db255cd7b4e8d72afed448826e444b04716b
     }
 }

@@ -46,6 +46,7 @@ namespace TrabajoPrácticoPAV.Clase
                     case "TrabajoPrácticoPAV.Clase.TextBox_Aerolinea":
                     case "TrabajoPrácticoPAV.Clase.MaskedTextBox_Aerolinea":
                     case "System.Windows.Forms.MonthCalendar":
+                    case "System.Windows.Forms.DataGridView":
                         break;
                     default:
                         MessageBox.Show($"{nombreControl} es un control no admitido, agregar en ESTILOS");

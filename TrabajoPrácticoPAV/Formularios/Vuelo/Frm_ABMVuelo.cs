@@ -31,6 +31,9 @@ namespace TrabajoPrácticoPAV.Formularios
         private void Frm_ABMVuelo_Load(object sender, EventArgs e)
         {
             cmb_nomModelo.CargarCombo();
+
+            this.BackColor = Estilo.ColorFondoForms;
+                Estilo.FormatearEstilo(this.Controls);
         }
         
 

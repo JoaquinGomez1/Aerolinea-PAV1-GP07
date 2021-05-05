@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.NE_Aviones;
 
 namespace TrabajoPrácticoPAV.Formularios
@@ -23,6 +24,8 @@ namespace TrabajoPrácticoPAV.Formularios
 
         private void Frm_AltaAviones_Load(object sender, EventArgs e)
         {
+            this.BackColor = Estilo.ColorFondoForms;
+            Estilo.FormatearEstilo(this.Controls);
             cmb_Modelo.CargarCombo();
            
         }

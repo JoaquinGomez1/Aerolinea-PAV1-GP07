@@ -94,8 +94,10 @@ namespace TrabajoPrácticoPAV.Formularios
             this.cmb_Modelo.Location = new System.Drawing.Point(112, 141);
             this.cmb_Modelo.Name = "cmb_Modelo";
             this.cmb_Modelo.Pp_CampoAceptaNull = true;
+            this.cmb_Modelo.Pp_EsPk = false;
             this.cmb_Modelo.Pp_MensajeError = null;
             this.cmb_Modelo.Pp_NombreCampo = "nombre";
+            this.cmb_Modelo.Pp_NombreCampoInsert = null;
             this.cmb_Modelo.Pp_NombreTabla = "Modelo";
             this.cmb_Modelo.Pp_PkTabla = "idModelo";
             this.cmb_Modelo.Size = new System.Drawing.Size(158, 21);
@@ -106,6 +108,7 @@ namespace TrabajoPrácticoPAV.Formularios
             // 
             this.txt_numero.Location = new System.Drawing.Point(112, 105);
             this.txt_numero.Name = "txt_numero";
+            this.txt_numero.Pp_EsPk = false;
             this.txt_numero.Pp_MensajeError = null;
             this.txt_numero.Pp_NombreCampo = null;
             this.txt_numero.Pp_NombreTabla = null;
@@ -117,6 +120,7 @@ namespace TrabajoPrácticoPAV.Formularios
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.CancelButton = this.btn_Cancelar;
             this.ClientSize = new System.Drawing.Size(343, 340);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btn_Cancelar);
@@ -125,7 +129,10 @@ namespace TrabajoPrácticoPAV.Formularios
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmb_Modelo);
             this.Controls.Add(this.txt_numero);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
             this.Name = "Frm_AltaAviones";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_AltaAviones";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Frm_AltaAviones_FormClosed);
             this.Load += new System.EventHandler(this.Frm_AltaAviones_Load);

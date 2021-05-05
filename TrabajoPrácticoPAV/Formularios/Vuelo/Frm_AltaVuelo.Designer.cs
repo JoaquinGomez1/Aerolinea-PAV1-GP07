@@ -41,69 +41,86 @@
             this.textBox_Aerolinea1 = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
             this.cmb_nomModelo = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
             this.cmb_numAvion = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(51, 235);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.label1.Location = new System.Drawing.Point(75, 204);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 13);
+            this.label1.Size = new System.Drawing.Size(152, 20);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Duracion Estimada";
+            this.label1.Text = "Duración Estimada";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(73, 144);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.label2.Location = new System.Drawing.Point(75, 128);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 13);
+            this.label2.Size = new System.Drawing.Size(114, 20);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Numero Avion";
+            this.label2.Text = "Número Avión";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(105, 117);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.label3.Location = new System.Drawing.Point(126, 96);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 13);
+            this.label3.Size = new System.Drawing.Size(63, 20);
             this.label3.TabIndex = 5;
             this.label3.Text = "Modelo";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(51, 209);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.label4.Location = new System.Drawing.Point(385, 133);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 13);
+            this.label4.Size = new System.Drawing.Size(154, 20);
             this.label4.TabIndex = 6;
             this.label4.Text = "Aeropuerto Destino";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(56, 180);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.label5.Location = new System.Drawing.Point(385, 96);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 13);
+            this.label5.Size = new System.Drawing.Size(142, 20);
             this.label5.TabIndex = 7;
             this.label5.Text = "Aeropuerto Salida";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(55, 20);
+            this.label6.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label6.Location = new System.Drawing.Point(13, 9);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(119, 20);
+            this.label6.Size = new System.Drawing.Size(158, 28);
             this.label6.TabIndex = 10;
             this.label6.Text = "Registrar Vuelo";
             // 
             // btn_Cancelar
             // 
-            this.btn_Cancelar.Location = new System.Drawing.Point(390, 326);
+            this.btn_Cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.btn_Cancelar.Location = new System.Drawing.Point(427, 296);
+            this.btn_Cancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Cancelar.Name = "btn_Cancelar";
             this.btn_Cancelar.Pp_Presionado = false;
-            this.btn_Cancelar.Size = new System.Drawing.Size(75, 23);
+            this.btn_Cancelar.Size = new System.Drawing.Size(100, 28);
             this.btn_Cancelar.TabIndex = 12;
             this.btn_Cancelar.Text = "Cancelar";
             this.btn_Cancelar.UseVisualStyleBackColor = true;
@@ -111,10 +128,12 @@
             // 
             // btn_Registrar
             // 
-            this.btn_Registrar.Location = new System.Drawing.Point(293, 326);
+            this.btn_Registrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.btn_Registrar.Location = new System.Drawing.Point(257, 296);
+            this.btn_Registrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Registrar.Name = "btn_Registrar";
             this.btn_Registrar.Pp_Presionado = false;
-            this.btn_Registrar.Size = new System.Drawing.Size(75, 23);
+            this.btn_Registrar.Size = new System.Drawing.Size(100, 28);
             this.btn_Registrar.TabIndex = 11;
             this.btn_Registrar.Text = "Registrar";
             this.btn_Registrar.UseVisualStyleBackColor = true;
@@ -123,7 +142,8 @@
             // cmb_AeropSalida
             // 
             this.cmb_AeropSalida.FormattingEnabled = true;
-            this.cmb_AeropSalida.Location = new System.Drawing.Point(160, 177);
+            this.cmb_AeropSalida.Location = new System.Drawing.Point(562, 96);
+            this.cmb_AeropSalida.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmb_AeropSalida.Name = "cmb_AeropSalida";
             this.cmb_AeropSalida.Pp_CampoAceptaNull = true;
             this.cmb_AeropSalida.Pp_EsPk = false;
@@ -132,13 +152,14 @@
             this.cmb_AeropSalida.Pp_NombreCampoInsert = "codigoAeropuertoSalida";
             this.cmb_AeropSalida.Pp_NombreTabla = "aeropuerto";
             this.cmb_AeropSalida.Pp_PkTabla = "codigo";
-            this.cmb_AeropSalida.Size = new System.Drawing.Size(194, 21);
+            this.cmb_AeropSalida.Size = new System.Drawing.Size(243, 24);
             this.cmb_AeropSalida.TabIndex = 9;
             // 
             // cmb_AeropDestino
             // 
             this.cmb_AeropDestino.FormattingEnabled = true;
-            this.cmb_AeropDestino.Location = new System.Drawing.Point(160, 204);
+            this.cmb_AeropDestino.Location = new System.Drawing.Point(562, 133);
+            this.cmb_AeropDestino.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmb_AeropDestino.Name = "cmb_AeropDestino";
             this.cmb_AeropDestino.Pp_CampoAceptaNull = true;
             this.cmb_AeropDestino.Pp_EsPk = false;
@@ -147,24 +168,26 @@
             this.cmb_AeropDestino.Pp_NombreCampoInsert = "codigoAeropuertoDestino";
             this.cmb_AeropDestino.Pp_NombreTabla = "aeropuerto";
             this.cmb_AeropDestino.Pp_PkTabla = "codigo";
-            this.cmb_AeropDestino.Size = new System.Drawing.Size(194, 21);
+            this.cmb_AeropDestino.Size = new System.Drawing.Size(243, 24);
             this.cmb_AeropDestino.TabIndex = 8;
             // 
             // textBox_Aerolinea1
             // 
-            this.textBox_Aerolinea1.Location = new System.Drawing.Point(164, 232);
+            this.textBox_Aerolinea1.Location = new System.Drawing.Point(244, 204);
+            this.textBox_Aerolinea1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox_Aerolinea1.Name = "textBox_Aerolinea1";
             this.textBox_Aerolinea1.Pp_EsPk = false;
             this.textBox_Aerolinea1.Pp_MensajeError = "Ingresar duracion estimada";
             this.textBox_Aerolinea1.Pp_NombreCampo = "duracionEstimada";
             this.textBox_Aerolinea1.Pp_NombreTabla = "Vuelo";
-            this.textBox_Aerolinea1.Size = new System.Drawing.Size(121, 20);
+            this.textBox_Aerolinea1.Size = new System.Drawing.Size(131, 22);
             this.textBox_Aerolinea1.TabIndex = 2;
             // 
             // cmb_nomModelo
             // 
             this.cmb_nomModelo.FormattingEnabled = true;
-            this.cmb_nomModelo.Location = new System.Drawing.Point(164, 114);
+            this.cmb_nomModelo.Location = new System.Drawing.Point(206, 96);
+            this.cmb_nomModelo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmb_nomModelo.Name = "cmb_nomModelo";
             this.cmb_nomModelo.Pp_CampoAceptaNull = true;
             this.cmb_nomModelo.Pp_EsPk = false;
@@ -173,14 +196,15 @@
             this.cmb_nomModelo.Pp_NombreCampoInsert = "idModelo";
             this.cmb_nomModelo.Pp_NombreTabla = "modelo";
             this.cmb_nomModelo.Pp_PkTabla = "idModelo";
-            this.cmb_nomModelo.Size = new System.Drawing.Size(121, 21);
+            this.cmb_nomModelo.Size = new System.Drawing.Size(160, 24);
             this.cmb_nomModelo.TabIndex = 1;
             this.cmb_nomModelo.SelectionChangeCommitted += new System.EventHandler(this.cmb_nomModelo_SelectionChangeCommitted);
             // 
             // cmb_numAvion
             // 
             this.cmb_numAvion.FormattingEnabled = true;
-            this.cmb_numAvion.Location = new System.Drawing.Point(164, 141);
+            this.cmb_numAvion.Location = new System.Drawing.Point(206, 128);
+            this.cmb_numAvion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmb_numAvion.Name = "cmb_numAvion";
             this.cmb_numAvion.Pp_CampoAceptaNull = true;
             this.cmb_numAvion.Pp_EsPk = false;
@@ -189,15 +213,39 @@
             this.cmb_numAvion.Pp_NombreCampoInsert = "numeroPorModelo";
             this.cmb_numAvion.Pp_NombreTabla = "avion";
             this.cmb_numAvion.Pp_PkTabla = "numeroPorModelo";
-            this.cmb_numAvion.Size = new System.Drawing.Size(121, 21);
+            this.cmb_numAvion.Size = new System.Drawing.Size(160, 24);
             this.cmb_numAvion.TabIndex = 0;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label7.Location = new System.Drawing.Point(75, 65);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(55, 20);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Avión";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label8.Location = new System.Drawing.Point(385, 65);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(111, 20);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "Aeropuertos";
             // 
             // Frm_AltaVuelo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(227)))), ((int)(((byte)(187)))));
-            this.ClientSize = new System.Drawing.Size(733, 375);
+            this.ClientSize = new System.Drawing.Size(878, 373);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.btn_Cancelar);
             this.Controls.Add(this.btn_Registrar);
             this.Controls.Add(this.label6);
@@ -211,6 +259,10 @@
             this.Controls.Add(this.textBox_Aerolinea1);
             this.Controls.Add(this.cmb_nomModelo);
             this.Controls.Add(this.cmb_numAvion);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Frm_AltaVuelo";
             this.Text = "Frm_AltaVuelo";
             this.Load += new System.EventHandler(this.Frm_AltaVuelo_Load);
@@ -234,5 +286,7 @@
         private System.Windows.Forms.Label label6;
         private Clase.Button_Aerolinea btn_Registrar;
         private Clase.Button_Aerolinea btn_Cancelar;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
     }
 }
