@@ -131,11 +131,18 @@ namespace TrabajoPrácticoPAV.Formularios
         
         private void cmb_nomModelo_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            MessageBox.Show("Descomentar esta parte");
-            //string Condicion = @" JOIN Modelo ON Modelo.idModelo " +
-            //        @"= Avion.idModelo WHERE Avion.idModelo = " + cmb_nomModelo.SelectedValue;
-            //cmb_NumAvion.CargarComboJoin(Condicion);
-            //chk_box.Checked = false;
+            //MessageBox.Show("Descomentar esta parte");
+            string Condicion = @" JOIN Modelo ON Modelo.idModelo " +
+                    @"= Avion.idModelo WHERE Avion.idModelo = " + cmb_nomModelo.SelectedValue;
+            cmb_NumAvion.CargarComboJoin(Condicion);
+            chk_box.Checked = false;
+        }
+
+        private void grilla_ABM_vuelo1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Frm_ConsultarVuelo consulta = new Frm_ConsultarVuelo();
+            consulta.Id_vuelo1 = grilla_ABM_vuelo1.CurrentRow.Cells[4].Value.ToString();
+            consulta.ShowDialog();
         }
     }
 }
