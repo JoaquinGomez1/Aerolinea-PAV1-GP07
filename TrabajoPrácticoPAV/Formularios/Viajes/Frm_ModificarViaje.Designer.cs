@@ -39,15 +39,15 @@ namespace TrabajoPrácticoPAV.Formularios.Viajes
             this.btn_modificar = new System.Windows.Forms.Button();
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cmb_numero_viaje = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
+            this.mtb_presencia = new TrabajoPrácticoPAV.Clase.MaskedTextBox_Aerolinea();
+            this.mtb_salida = new TrabajoPrácticoPAV.Clase.MaskedTextBox_Aerolinea();
+            this.mtb_llegada = new TrabajoPrácticoPAV.Clase.MaskedTextBox_Aerolinea();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.Btn_Minimizar = new System.Windows.Forms.PictureBox();
             this.Btn_Cerrar = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.cmb_numero_viaje = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
-            this.mtb_presencia = new TrabajoPrácticoPAV.Clase.MaskedTextBox_Aerolinea();
-            this.mtb_salida = new TrabajoPrácticoPAV.Clase.MaskedTextBox_Aerolinea();
-            this.mtb_llegada = new TrabajoPrácticoPAV.Clase.MaskedTextBox_Aerolinea();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Minimizar)).BeginInit();
@@ -157,68 +157,6 @@ namespace TrabajoPrácticoPAV.Formularios.Viajes
             this.panel1.Size = new System.Drawing.Size(305, 293);
             this.panel1.TabIndex = 13;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.Btn_Minimizar);
-            this.panel2.Controls.Add(this.Btn_Cerrar);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(334, 32);
-            this.panel2.TabIndex = 14;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(9, 6);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(155, 22);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "MODIFICAR VIAJE";
-            // 
-            // Btn_Minimizar
-            // 
-            this.Btn_Minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Btn_Minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_Minimizar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Minimizar.Image")));
-            this.Btn_Minimizar.Location = new System.Drawing.Point(282, 4);
-            this.Btn_Minimizar.Margin = new System.Windows.Forms.Padding(2);
-            this.Btn_Minimizar.Name = "Btn_Minimizar";
-            this.Btn_Minimizar.Size = new System.Drawing.Size(22, 24);
-            this.Btn_Minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Btn_Minimizar.TabIndex = 3;
-            this.Btn_Minimizar.TabStop = false;
-            this.Btn_Minimizar.Click += new System.EventHandler(this.Btn_Minimizar_Click);
-            // 
-            // Btn_Cerrar
-            // 
-            this.Btn_Cerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Btn_Cerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_Cerrar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Cerrar.Image")));
-            this.Btn_Cerrar.Location = new System.Drawing.Point(308, 4);
-            this.Btn_Cerrar.Margin = new System.Windows.Forms.Padding(2);
-            this.Btn_Cerrar.Name = "Btn_Cerrar";
-            this.Btn_Cerrar.Size = new System.Drawing.Size(22, 24);
-            this.Btn_Cerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Btn_Cerrar.TabIndex = 0;
-            this.Btn_Cerrar.TabStop = false;
-            this.Btn_Cerrar.Click += new System.EventHandler(this.Btn_Cerrar_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.panel1);
-            this.panel3.Location = new System.Drawing.Point(0, 31);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(333, 320);
-            this.panel3.TabIndex = 15;
-            // 
             // cmb_numero_viaje
             // 
             this.cmb_numero_viaje.FormattingEnabled = true;
@@ -272,6 +210,68 @@ namespace TrabajoPrácticoPAV.Formularios.Viajes
             this.mtb_llegada.TabIndex = 8;
             this.mtb_llegada.ValidatingType = typeof(System.DateTime);
             this.mtb_llegada.TextChanged += new System.EventHandler(this.mtb_llegada_TextChanged);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.Btn_Minimizar);
+            this.panel2.Controls.Add(this.Btn_Cerrar);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(334, 32);
+            this.panel2.TabIndex = 14;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(9, 6);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(155, 22);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "MODIFICAR VIAJE";
+            // 
+            // Btn_Minimizar
+            // 
+            this.Btn_Minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Btn_Minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_Minimizar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Minimizar.Image")));
+            this.Btn_Minimizar.Location = new System.Drawing.Point(282, 4);
+            this.Btn_Minimizar.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_Minimizar.Name = "Btn_Minimizar";
+            this.Btn_Minimizar.Size = new System.Drawing.Size(22, 24);
+            this.Btn_Minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Btn_Minimizar.TabIndex = 3;
+            this.Btn_Minimizar.TabStop = false;
+            this.Btn_Minimizar.Click += new System.EventHandler(this.Btn_Minimizar_Click);
+            // 
+            // Btn_Cerrar
+            // 
+            this.Btn_Cerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Btn_Cerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_Cerrar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Cerrar.Image")));
+            this.Btn_Cerrar.Location = new System.Drawing.Point(308, 4);
+            this.Btn_Cerrar.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_Cerrar.Name = "Btn_Cerrar";
+            this.Btn_Cerrar.Size = new System.Drawing.Size(22, 24);
+            this.Btn_Cerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Btn_Cerrar.TabIndex = 0;
+            this.Btn_Cerrar.TabStop = false;
+            this.Btn_Cerrar.Click += new System.EventHandler(this.Btn_Cerrar_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.panel1);
+            this.panel3.Location = new System.Drawing.Point(0, 31);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(333, 320);
+            this.panel3.TabIndex = 15;
             // 
             // Frm_ModificarViaje
             // 

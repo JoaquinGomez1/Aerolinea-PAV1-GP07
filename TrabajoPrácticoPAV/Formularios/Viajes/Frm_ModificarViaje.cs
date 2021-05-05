@@ -91,5 +91,10 @@ namespace TrabajoPrácticoPAV.Formularios.Viajes
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+            cmb_numero_viaje.CargarCombo();
+        }
     }
 }

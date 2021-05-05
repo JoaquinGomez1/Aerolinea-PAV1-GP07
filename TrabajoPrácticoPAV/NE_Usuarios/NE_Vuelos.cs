@@ -19,7 +19,7 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
         public string Pp_modelo { get; set; }
         public string Pp_id_vuelo { get; set; }
 
-        public enum ResultadoValidacion { exite, no_existe }
+        public enum ResultadoValidacion { existe, no_existe }
         Conexion_DB _BD = new Conexion_DB();
 
         public DataTable RecuperarXId(string id_vuelo)
@@ -42,8 +42,7 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
         public DataTable RecuperarXavion(string id_avion)
         {
             string sql = @"SELECT v.*, m.nombre as n_modelo  FROM vuelo v join Modelo m on v.idModelo = m.idModelo"
-                            + "  WHERE v.numeroPorModelo =" + id_avion;
-            ;
+                            + "  WHERE v.numeroPorModelo =" + id_avion + 1;
             return _BD.EjecutarSelect(sql);
         }
         public DataTable Recuperar_Mixto(string avion, string modelo)
@@ -52,8 +51,6 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
                         + " WHERE v.numeroPorModelo = " + avion + " AND m.idModelo = " + modelo;
             return _BD.EjecutarSelect(sql);
         }
-
-
         public void Insertar(Control.ControlCollection controles)
         {
             Tratamientos_Especiales tratamiento = new Tratamientos_Especiales();
@@ -65,11 +62,11 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             Tratamientos_Especiales tratamiento = new Tratamientos_Especiales();
             _BD.Modificar(tratamiento.CostructorUpdateDelete("Vuelo", controles, true));
         }
-        //public void Borrar(Control.ControlCollection controles)
-        //{
-        //    string sqlDelete = @"DELETE FROM vuelo WHERE idVuelo = " + Pp_id_Vuelo;
-        //    _BD.Borrar(sqlDelete);
-        //}
+        public void Borrar(Control.ControlCollection controles)
+        {
+            Tratamientos_Especiales tratamiento = new Tratamientos_Especiales();
+            _BD.Borrar(tratamiento.CostructorUpdateDelete("Vuelo", controles, false));
+        }
         public void Borrar(string id_vuelo)
         {
             string sqlDelete = @"DELETE FROM vuelo WHERE idVuelo = " + id_vuelo;

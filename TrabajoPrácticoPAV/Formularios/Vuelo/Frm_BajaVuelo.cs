@@ -29,11 +29,15 @@ namespace TrabajoPrácticoPAV.Formularios.Vuelo
             cmb_AeropDestino.CargarCombo();
             cmb_AeropSalida.CargarCombo();
 
+            this.BackColor = Estilo.ColorFondoForms;
+                Estilo.FormatearEstilo(this.Controls);
+
             NE_Vuelos vuelo = new NE_Vuelos();
             MostrarDatos(vuelo.RecuperarXId(Id_vuelo));
         }
         private void MostrarDatos( DataTable tabla)
         {
+            txt_idVuelo.Text = tabla.Rows[0]["idVuelo"].ToString();
             txt_duracionestimada.Text = tabla.Rows[0]["duracionEstimada"].ToString();
             cmb_numAvion.SelectedValue = int.Parse(tabla.Rows[0]["numeroPorModelo"].ToString());
             cmb_nomModelo.SelectedValue = int.Parse(tabla.Rows[0]["idModelo"].ToString());
@@ -53,7 +57,8 @@ namespace TrabajoPrácticoPAV.Formularios.Vuelo
             if (MessageBox.Show("¿Esta seguro de Borrar?", "Importante", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
                 vuelo.Borrar(Id_vuelo);
-                MessageBox.Show("Se borró correctamente el usuario");
+                MessageBox.Show("Se borró correctamente el vuelo");
+                this.Close();
             }
         }
     }
