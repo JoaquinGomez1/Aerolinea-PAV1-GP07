@@ -78,12 +78,6 @@
     <Compile Include="Formularios\Aviones\Frm_AltaAviones.Designer.cs">
       <DependentUpon>Frm_AltaAviones.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Aviones\Frm_ModificarAvion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Aviones\Frm_ModificarAvion.Designer.cs">
-      <DependentUpon>Frm_ModificarAvion.cs</DependentUpon>
-    </Compile>
     <Compile Include="Formularios\Pasajeros\Frm_ABMClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,9 +186,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Aviones\Frm_AltaAviones.resx">
       <DependentUpon>Frm_AltaAviones.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Aviones\Frm_ModificarAvion.resx">
-      <DependentUpon>Frm_ModificarAvion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Pasajeros\Frm_ABMClientes.resx">
       <DependentUpon>Frm_ABMClientes.cs</DependentUpon>

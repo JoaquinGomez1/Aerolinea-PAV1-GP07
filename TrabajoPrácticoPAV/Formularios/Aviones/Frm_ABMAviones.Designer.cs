@@ -34,13 +34,25 @@ namespace TrabajoPrácticoPAV.Formularios
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.grid_aviones = new System.Windows.Forms.DataGridView();
+<<<<<<< HEAD
+            this.btn_alta = new System.Windows.Forms.Button();
+=======
             this.Modelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdModelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
+>>>>>>> 4ee3db255cd7b4e8d72afed448826e444b04716b
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+<<<<<<< HEAD
+            this.btn_actualizar = new System.Windows.Forms.Button();
+            this.Modelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdModelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
+=======
+>>>>>>> 4ee3db255cd7b4e8d72afed448826e444b04716b
             this.cmb_Modelo = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
             this.txt_numero = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
             this.picBox_buscar = new System.Windows.Forms.PictureBox();
@@ -87,14 +99,24 @@ namespace TrabajoPrácticoPAV.Formularios
             this.Modelo,
             this.Nombre,
             this.IdModelo,
-            this.Eliminar,
-            this.Editar});
-            this.grid_aviones.Location = new System.Drawing.Point(47, 171);
+            this.Eliminar});
+            this.grid_aviones.Location = new System.Drawing.Point(47, 178);
             this.grid_aviones.Name = "grid_aviones";
-            this.grid_aviones.Size = new System.Drawing.Size(490, 177);
+            this.grid_aviones.Size = new System.Drawing.Size(394, 177);
             this.grid_aviones.TabIndex = 3;
             this.grid_aviones.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+<<<<<<< HEAD
+            // btn_alta
+            // 
+            this.btn_alta.Location = new System.Drawing.Point(47, 371);
+            this.btn_alta.Name = "btn_alta";
+            this.btn_alta.Size = new System.Drawing.Size(94, 32);
+            this.btn_alta.TabIndex = 3;
+            this.btn_alta.Text = "Nuevo avion";
+            this.btn_alta.UseVisualStyleBackColor = true;
+            this.btn_alta.Click += new System.EventHandler(this.btn_alta_Click);
+=======
             // Modelo
             // 
             this.Modelo.HeaderText = "Numero";
@@ -128,6 +150,7 @@ namespace TrabajoPrácticoPAV.Formularios
             this.Editar.Name = "Editar";
             this.Editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Editar.Width = 50;
+>>>>>>> 4ee3db255cd7b4e8d72afed448826e444b04716b
             // 
             // label2
             // 
@@ -137,16 +160,70 @@ namespace TrabajoPrácticoPAV.Formularios
             this.label2.Size = new System.Drawing.Size(0, 13);
             this.label2.TabIndex = 1;
             // 
+<<<<<<< HEAD
+            // btn_buscar
+            // 
+            this.btn_buscar.Location = new System.Drawing.Point(250, 87);
+            this.btn_buscar.Name = "btn_buscar";
+            this.btn_buscar.Size = new System.Drawing.Size(48, 23);
+            this.btn_buscar.TabIndex = 10;
+            this.btn_buscar.Text = "buscar";
+            this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click_1);
+            // 
+=======
+>>>>>>> 4ee3db255cd7b4e8d72afed448826e444b04716b
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(43, 143);
+            this.label5.Location = new System.Drawing.Point(43, 150);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(148, 21);
             this.label5.TabIndex = 11;
             this.label5.Text = "Consultar Aviones";
             // 
+<<<<<<< HEAD
+            // btn_actualizar
+            // 
+            this.btn_actualizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_actualizar.BackgroundImage")));
+            this.btn_actualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_actualizar.Location = new System.Drawing.Point(379, 152);
+            this.btn_actualizar.Name = "btn_actualizar";
+            this.btn_actualizar.Size = new System.Drawing.Size(62, 20);
+            this.btn_actualizar.TabIndex = 9;
+            this.btn_actualizar.Text = "Actualizar";
+            this.btn_actualizar.UseVisualStyleBackColor = true;
+            this.btn_actualizar.Click += new System.EventHandler(this.btn_actualizar_Click);
+            // 
+            // Modelo
+            // 
+            this.Modelo.HeaderText = "Numero";
+            this.Modelo.Name = "Modelo";
+            this.Modelo.Width = 150;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Modelo";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.Width = 150;
+            // 
+            // IdModelo
+            // 
+            this.IdModelo.HeaderText = "IdModelo";
+            this.IdModelo.Name = "IdModelo";
+            this.IdModelo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.IdModelo.Visible = false;
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Eliminar.Width = 50;
+            // 
+=======
+>>>>>>> 4ee3db255cd7b4e8d72afed448826e444b04716b
             // cmb_Modelo
             // 
             this.cmb_Modelo.FormattingEnabled = true;
@@ -253,9 +330,12 @@ namespace TrabajoPrácticoPAV.Formularios
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdModelo;
         private System.Windows.Forms.DataGridViewImageColumn Eliminar;
+<<<<<<< HEAD
+=======
         private System.Windows.Forms.DataGridViewImageColumn Editar;
         private System.Windows.Forms.PictureBox picBox_buscar;
         private System.Windows.Forms.PictureBox picBox_actualizar;
         private System.Windows.Forms.PictureBox picBox_agregar;
+>>>>>>> 4ee3db255cd7b4e8d72afed448826e444b04716b
     }
 }

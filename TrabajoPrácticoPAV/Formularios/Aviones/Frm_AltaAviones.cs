@@ -13,10 +13,13 @@ using TrabajoPrácticoPAV.NE_Aviones;
 namespace TrabajoPrácticoPAV.Formularios
 {
     public partial class Frm_AltaAviones : Form
-    {
+    { 
+         
         public Frm_AltaAviones()
         {
             InitializeComponent();
+            this.CenterToScreen();
+            
         }
 
         private void Frm_AltaAviones_Load(object sender, EventArgs e)
@@ -24,6 +27,7 @@ namespace TrabajoPrácticoPAV.Formularios
             this.BackColor = Estilo.ColorFondoForms;
             Estilo.FormatearEstilo(this.Controls);
             cmb_Modelo.CargarCombo();
+           
         }
 
         private void label1_Click(object sender, EventArgs e)
