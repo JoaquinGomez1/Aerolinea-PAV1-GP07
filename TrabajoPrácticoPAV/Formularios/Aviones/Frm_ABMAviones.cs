@@ -9,11 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.NE_Aviones;
 using TrabajoPrácticoPAV.Formularios;
-
-
-
-
-
+using TrabajoPrácticoPAV.Clase;
 
 namespace TrabajoPrácticoPAV.Formularios
 {
@@ -71,9 +67,6 @@ namespace TrabajoPrácticoPAV.Formularios
                 MessageBox.Show("Avion modificado, Actualize la tabla");
                 return;
             }
-            
-
-
 
         }
 
@@ -92,6 +85,8 @@ namespace TrabajoPrácticoPAV.Formularios
 
         private void Frm_ABMAviones_Load(object sender, EventArgs e)
         {
+            this.BackColor = Estilo.ColorFondoForms;
+            Estilo.FormatearEstilo(this.Controls);
             cmb_Modelo.CargarCombo();
         }
 
@@ -160,6 +155,53 @@ namespace TrabajoPrácticoPAV.Formularios
         private void button3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void picBox_buscar_Click(object sender, EventArgs e)
+        {
+            int modelo_up = int.Parse(cmb_Modelo.SelectedIndex.ToString()) + 1;
+            NE_Avion avion = new NE_Avion();
+
+            if (txt_numero.Text.Length > 4)
+            {
+                MessageBox.Show("El numero de avion debe tener 4 numeros");
+            }
+            if (txt_numero.Text == string.Empty && cmb_Modelo.SelectedIndex == -1)
+            {
+                MessageBox.Show("Seleccionar alguna opcion o ingresar numero de modelo");
+            }
+
+            if (cmb_Modelo.SelectedIndex != -1 && txt_numero.Text != "")
+            {
+                CargarGrilla(avion.Recuperar_Mixto(txt_numero.Text, modelo_up));
+                return;
+            }
+
+            if (cmb_Modelo.SelectedIndex != -1)
+            {
+                CargarGrilla(avion.Recuperar_x_modelo(modelo_up));
+                return;
+            }
+
+            if (txt_numero.Text != "")
+            {
+                CargarGrilla(avion.Recuperar_x_numero(txt_numero.Text));
+                return;
+            }
+        }
+
+        private void picBox_actualizar_Click(object sender, EventArgs e)
+        {
+            NE_Avion aviones = new NE_Avion();
+            DataTable tabla = new DataTable();
+            tabla = aviones.RecuperarTodos();
+            CargarGrilla(tabla);
+        }
+
+        private void picBox_agregar_Click(object sender, EventArgs e)
+        {
+            Frm_AltaAviones alta = new Frm_AltaAviones();
+            alta.ShowDialog();
         }
     }
 }
