@@ -62,7 +62,11 @@ namespace TrabajoPrácticoPAV.Formularios
             //}
 
             if (ambosCamposCompletados && esHorarioValido)
-                lbl_duracionEstimada.Text = _NE_Viajes.determinarEstimado(horarioLlegada, horarioSalida);
+            {
+                string durEstimada = _NE_Viajes.determinarEstimado(horarioLlegada, horarioSalida);
+                lbl_duracionEstimada.Text = durEstimada;
+                duracionEstimadaViaje = Tiempo.convertirAIntMilitar(durEstimada);
+            }
         }
 
 
@@ -233,11 +237,10 @@ namespace TrabajoPrácticoPAV.Formularios
             if (datagrid_viajes.CurrentRow == null)
                 return;
 
+            string idDeFilaSeleccionada = datagrid_viajes.CurrentRow.Cells[0].Value.ToString();
+            NE_Viajes.EliminarFila(idDeFilaSeleccionada);
+
             datagrid_viajes.Rows.Remove(datagrid_viajes.CurrentRow);
-
-            Object valorCelda = datagrid_viajes.CurrentCell.Value;
-
-            NE_Viajes.EliminarFila(valorCelda);
         }
     }
 }

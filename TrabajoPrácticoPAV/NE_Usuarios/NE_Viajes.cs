@@ -44,9 +44,9 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             return viaje;
         }
 
-        public void EliminarFila(Object valorCelda)
+        public void EliminarFila(string numeroDeViaje)
         {
-            string sql = $"DELETE FROM Viaje WHERE numeroDeViaje = {valorCelda}";
+            string sql = $"DELETE FROM Viaje WHERE numeroDeViaje = {numeroDeViaje}";
             _DB.Borrar(sql);
         }
 
