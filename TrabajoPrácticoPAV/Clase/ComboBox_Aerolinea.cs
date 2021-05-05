@@ -36,20 +36,20 @@ namespace TrabajoPrácticoPAV.Clase
             }
         }
 
-        public void CargarComboDependiente(string dependencia)
-        {
-            string sql = "SELECT " + Pp_PkTabla + ", " + Pp_NombreCampo + " FROM " + Pp_NombreTabla;
-            this.DisplayMember = Pp_NombreCampo;
-            this.ValueMember = Pp_PkTabla;
-            this.DataSource = _BD.EjecutarSelect(sql);
-            if (this.Pp_CampoAceptaNull == true)
-            {
-                this.SelectedIndex = -1;
-            }
-            else
-            {
-                this.SelectedIndex = 0;
-            }
-        }
+        //public void CargarComboJoin(string JoinYCondicion)
+        //{
+        //    string sql = $"SELECT {Pp_PkTabla}, {Pp_NombreCampo} FROM {Pp_NombreTabla} {JoinYCondicion}";
+        //    this.DisplayMember = Pp_NombreCampo;
+        //    this.ValueMember = Pp_PkTabla;
+        //    this.DataSource = _BD.EjecutarSelect(sql);
+        //    if (this.Pp_CampoAceptaNull == true)
+        //    {
+        //        this.SelectedIndex = -1;
+        //    }
+        //    else
+        //    {
+        //        this.SelectedIndex = 0;
+        //    }
+        //}
     }
 }

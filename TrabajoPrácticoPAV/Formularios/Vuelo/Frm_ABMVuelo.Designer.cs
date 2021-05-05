@@ -52,17 +52,17 @@
             this.cmb_nomModelo = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
             this.Cmb_Nromodelo = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
             this.cmb_Nroavion = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
+            this.btn_limpiar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
+            this.btn_registrar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
+            this.btn_modificar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
+            this.btn_borrar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
+            this.btn_consultar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.grilla_ABM_Vuelos = new TrabajoPrácticoPAV.Clase.DataGridView_Aerolinea();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btn_limpiar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
-            this.btn_registrar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
-            this.btn_modificar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
-            this.btn_borrar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
-            this.btn_consultar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             ((System.ComponentModel.ISupportInitialize)(this.grilla_ABM_vuelo1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grilla_ABM_Vuelos)).BeginInit();
             this.SuspendLayout();
@@ -166,6 +166,7 @@
             this.btn_limpiar1.TabIndex = 10;
             this.btn_limpiar1.Text = "Limpiar";
             this.btn_limpiar1.UseVisualStyleBackColor = true;
+            this.btn_limpiar1.Click += new System.EventHandler(this.btn_limpiar1_Click_1);
             // 
             // btn_consultar1
             // 
@@ -191,6 +192,7 @@
             // 
             // btn_borrar1
             // 
+            this.btn_borrar1.Enabled = false;
             this.btn_borrar1.Location = new System.Drawing.Point(119, 347);
             this.btn_borrar1.Name = "btn_borrar1";
             this.btn_borrar1.Pp_Presionado = false;
@@ -202,6 +204,7 @@
             // 
             // btn_modificar1
             // 
+            this.btn_modificar1.Enabled = false;
             this.btn_modificar1.Location = new System.Drawing.Point(37, 347);
             this.btn_modificar1.Name = "btn_modificar1";
             this.btn_modificar1.Pp_Presionado = false;
@@ -292,8 +295,10 @@
             this.cmb_nomModelo.Pp_NombreCampoInsert = null;
             this.cmb_nomModelo.Pp_NombreTabla = "modelo";
             this.cmb_nomModelo.Pp_PkTabla = "idModelo";
+            this.cmb_nomModelo.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cmb_nomModelo.Size = new System.Drawing.Size(165, 21);
             this.cmb_nomModelo.TabIndex = 3;
+            this.cmb_nomModelo.SelectionChangeCommitted += new System.EventHandler(this.cmb_nomModelo_SelectionChangeCommitted);
             // 
             // Cmb_Nromodelo
             // 
@@ -325,6 +330,56 @@
             this.cmb_Nroavion.Size = new System.Drawing.Size(160, 21);
             this.cmb_Nroavion.TabIndex = 13;
             // 
+            // btn_limpiar
+            // 
+            this.btn_limpiar.Location = new System.Drawing.Point(210, 139);
+            this.btn_limpiar.Name = "btn_limpiar";
+            this.btn_limpiar.Pp_Presionado = false;
+            this.btn_limpiar.Size = new System.Drawing.Size(75, 23);
+            this.btn_limpiar.TabIndex = 24;
+            this.btn_limpiar.Text = "Limpiar";
+            this.btn_limpiar.UseVisualStyleBackColor = true;
+            // 
+            // btn_registrar
+            // 
+            this.btn_registrar.Location = new System.Drawing.Point(49, 350);
+            this.btn_registrar.Name = "btn_registrar";
+            this.btn_registrar.Pp_Presionado = false;
+            this.btn_registrar.Size = new System.Drawing.Size(75, 23);
+            this.btn_registrar.TabIndex = 25;
+            this.btn_registrar.Text = "Agregar";
+            this.btn_registrar.UseVisualStyleBackColor = true;
+            // 
+            // btn_modificar
+            // 
+            this.btn_modificar.Location = new System.Drawing.Point(130, 350);
+            this.btn_modificar.Name = "btn_modificar";
+            this.btn_modificar.Pp_Presionado = false;
+            this.btn_modificar.Size = new System.Drawing.Size(75, 23);
+            this.btn_modificar.TabIndex = 26;
+            this.btn_modificar.Text = "Modificar";
+            this.btn_modificar.UseVisualStyleBackColor = true;
+            // 
+            // btn_borrar
+            // 
+            this.btn_borrar.Location = new System.Drawing.Point(211, 350);
+            this.btn_borrar.Name = "btn_borrar";
+            this.btn_borrar.Pp_Presionado = false;
+            this.btn_borrar.Size = new System.Drawing.Size(75, 23);
+            this.btn_borrar.TabIndex = 27;
+            this.btn_borrar.Text = "Borrar";
+            this.btn_borrar.UseVisualStyleBackColor = true;
+            // 
+            // btn_consultar
+            // 
+            this.btn_consultar.Location = new System.Drawing.Point(302, 138);
+            this.btn_consultar.Name = "btn_consultar";
+            this.btn_consultar.Pp_Presionado = false;
+            this.btn_consultar.Size = new System.Drawing.Size(75, 23);
+            this.btn_consultar.TabIndex = 28;
+            this.btn_consultar.Text = "Consultar";
+            this.btn_consultar.UseVisualStyleBackColor = true;
+            // 
             // grilla_ABM_Vuelos
             // 
             this.grilla_ABM_Vuelos.AllowUserToDeleteRows = false;
@@ -342,8 +397,6 @@
             this.grilla_ABM_Vuelos.ReadOnly = true;
             this.grilla_ABM_Vuelos.Size = new System.Drawing.Size(545, 150);
             this.grilla_ABM_Vuelos.TabIndex = 23;
-            this.grilla_ABM_Vuelos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.rid_vuelo_CellClick);
-            this.grilla_ABM_Vuelos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_vuelo_CellDoubleClick);
             // 
             // Column1
             // 
@@ -377,59 +430,6 @@
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             this.Column4.Width = 150;
-            // 
-            // btn_limpiar
-            // 
-            this.btn_limpiar.Location = new System.Drawing.Point(210, 139);
-            this.btn_limpiar.Name = "btn_limpiar";
-            this.btn_limpiar.Pp_Presionado = false;
-            this.btn_limpiar.Size = new System.Drawing.Size(75, 23);
-            this.btn_limpiar.TabIndex = 24;
-            this.btn_limpiar.Text = "Limpiar";
-            this.btn_limpiar.UseVisualStyleBackColor = true;
-            this.btn_limpiar.Click += new System.EventHandler(this.btn_limpiar_Click);
-            // 
-            // btn_registrar
-            // 
-            this.btn_registrar.Location = new System.Drawing.Point(49, 350);
-            this.btn_registrar.Name = "btn_registrar";
-            this.btn_registrar.Pp_Presionado = false;
-            this.btn_registrar.Size = new System.Drawing.Size(75, 23);
-            this.btn_registrar.TabIndex = 25;
-            this.btn_registrar.Text = "Agregar";
-            this.btn_registrar.UseVisualStyleBackColor = true;
-            this.btn_registrar.Click += new System.EventHandler(this.btn_registrar_Click_1);
-            // 
-            // btn_modificar
-            // 
-            this.btn_modificar.Location = new System.Drawing.Point(130, 350);
-            this.btn_modificar.Name = "btn_modificar";
-            this.btn_modificar.Pp_Presionado = false;
-            this.btn_modificar.Size = new System.Drawing.Size(75, 23);
-            this.btn_modificar.TabIndex = 26;
-            this.btn_modificar.Text = "Modificar";
-            this.btn_modificar.UseVisualStyleBackColor = true;
-            // 
-            // btn_borrar
-            // 
-            this.btn_borrar.Location = new System.Drawing.Point(211, 350);
-            this.btn_borrar.Name = "btn_borrar";
-            this.btn_borrar.Pp_Presionado = false;
-            this.btn_borrar.Size = new System.Drawing.Size(75, 23);
-            this.btn_borrar.TabIndex = 27;
-            this.btn_borrar.Text = "Borrar";
-            this.btn_borrar.UseVisualStyleBackColor = true;
-            // 
-            // btn_consultar
-            // 
-            this.btn_consultar.Location = new System.Drawing.Point(302, 138);
-            this.btn_consultar.Name = "btn_consultar";
-            this.btn_consultar.Pp_Presionado = false;
-            this.btn_consultar.Size = new System.Drawing.Size(75, 23);
-            this.btn_consultar.TabIndex = 28;
-            this.btn_consultar.Text = "Consultar";
-            this.btn_consultar.UseVisualStyleBackColor = true;
-            this.btn_consultar.Click += new System.EventHandler(this.btn_consultar_Click);
             // 
             // Frm_ABMVuelo
             // 

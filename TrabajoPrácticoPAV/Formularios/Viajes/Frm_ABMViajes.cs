@@ -219,7 +219,7 @@ namespace TrabajoPrácticoPAV.Formularios
             this.Close();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btn_modificar1_Click(object sender, EventArgs e)
         {
             Frm_ModificarViaje modificarViaje = new Frm_ModificarViaje();
             modificarViaje.ShowDialog();
