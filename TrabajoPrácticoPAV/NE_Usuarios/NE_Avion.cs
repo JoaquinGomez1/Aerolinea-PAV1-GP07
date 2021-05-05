@@ -69,6 +69,14 @@ namespace TrabajoPrácticoPAV.NE_Aviones
 
             
         }
+
+       public DataTable Editar_avion (string numero , object idModelo)
+        {
+            string sql = @"Update Avion set Avion.numeroPorModelo = " + numero + ", Avion.idModelo= " + idModelo
+            + " where Avion.numeroPorModelo = " + numero;
+            return _BD.EjecutarSelect(sql);
+            
+        }
     }
 }
 

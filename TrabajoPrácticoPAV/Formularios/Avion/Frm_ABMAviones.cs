@@ -8,6 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.NE_Aviones;
+using TrabajoPrácticoPAV.Formularios;
+
+
+
+
 
 
 namespace TrabajoPrácticoPAV.Formularios
@@ -53,18 +58,20 @@ namespace TrabajoPrácticoPAV.Formularios
                var idModelo = grid_aviones.Rows[current].Cells[2].Value;
                CargarGrilla(avion.Remover_avion(numeroModelo, idModelo));
                MessageBox.Show("Avion eliminado, Actualize la tabla");
+               return;
             }
             if (grid_aviones.CurrentCell.ColumnIndex == 4)
-            {
+            {      
 
-                //Cargar modificar form
-                //NE_Avion avion = new NE_Avion();
-               // string numeroModelo = grid_aviones.CurrentRow.Cells[0].Value.ToString();
-                //var idModelo = grid_aviones.Rows[current].Cells[2].Value;
-               // CargarGrilla(avion.EditarAvion(numeroModelo, idModelo));
+                Frm_ModificarAvion modificar = new Frm_ModificarAvion();
+
+                modificar.Pp_numeroSeleccionado = grid_aviones.CurrentRow.Cells[0].Value.ToString(); 
+                modificar.Pp_idModeloSeleccionado = grid_aviones.Rows[current].Cells[2].Value; 
+                modificar.ShowDialog();
                 MessageBox.Show("Avion modificado, Actualize la tabla");
+                return;
             }
-
+            
 
 
 

@@ -33,9 +33,12 @@ namespace TrabajoPrácticoPAV.Formularios
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.grid_aviones = new System.Windows.Forms.DataGridView();
+            this.Modelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdModelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
             this.btn_alta = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_buscar = new System.Windows.Forms.Button();
@@ -43,11 +46,6 @@ namespace TrabajoPrácticoPAV.Formularios
             this.btn_actualizar = new System.Windows.Forms.Button();
             this.cmb_Modelo = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
             this.txt_numero = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
-            this.Modelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IdModelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grid_aviones)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,26 +77,6 @@ namespace TrabajoPrácticoPAV.Formularios
             this.label3.TabIndex = 6;
             this.label3.Text = "Numero ";
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(315, 363);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(42, 19);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Borrar";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(264, 363);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(45, 19);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Modificar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // grid_aviones
             // 
             this.grid_aviones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -114,11 +92,45 @@ namespace TrabajoPrácticoPAV.Formularios
             this.grid_aviones.TabIndex = 3;
             this.grid_aviones.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // Modelo
+            // 
+            this.Modelo.HeaderText = "Numero";
+            this.Modelo.Name = "Modelo";
+            this.Modelo.Width = 150;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Modelo";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.Width = 150;
+            // 
+            // IdModelo
+            // 
+            this.IdModelo.HeaderText = "IdModelo";
+            this.IdModelo.Name = "IdModelo";
+            this.IdModelo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.IdModelo.Visible = false;
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Eliminar.Width = 50;
+            // 
+            // Editar
+            // 
+            this.Editar.FillWeight = 50F;
+            this.Editar.HeaderText = "Editar";
+            this.Editar.Name = "Editar";
+            this.Editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Editar.Width = 50;
+            // 
             // btn_alta
             // 
-            this.btn_alta.Location = new System.Drawing.Point(213, 363);
+            this.btn_alta.Location = new System.Drawing.Point(208, 394);
             this.btn_alta.Name = "btn_alta";
-            this.btn_alta.Size = new System.Drawing.Size(42, 19);
+            this.btn_alta.Size = new System.Drawing.Size(144, 24);
             this.btn_alta.TabIndex = 3;
             this.btn_alta.Text = "Nuevo avion";
             this.btn_alta.UseVisualStyleBackColor = true;
@@ -189,46 +201,12 @@ namespace TrabajoPrácticoPAV.Formularios
             this.txt_numero.Size = new System.Drawing.Size(106, 20);
             this.txt_numero.TabIndex = 4;
             // 
-            // Modelo
-            // 
-            this.Modelo.HeaderText = "Numero";
-            this.Modelo.Name = "Modelo";
-            this.Modelo.Width = 150;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Modelo";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.Width = 150;
-            // 
-            // IdModelo
-            // 
-            this.IdModelo.HeaderText = "IdModelo";
-            this.IdModelo.Name = "IdModelo";
-            this.IdModelo.Visible = false;
-            // 
-            // Eliminar
-            // 
-            this.Eliminar.HeaderText = "Eliminar";
-            this.Eliminar.Name = "Eliminar";
-            this.Eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Eliminar.Width = 50;
-            // 
-            // Editar
-            // 
-            this.Editar.FillWeight = 50F;
-            this.Editar.HeaderText = "Editar";
-            this.Editar.Name = "Editar";
-            this.Editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Editar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Editar.Width = 50;
-            // 
             // Frm_ABMAviones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(227)))), ((int)(((byte)(187)))));
-            this.ClientSize = new System.Drawing.Size(746, 403);
+            this.ClientSize = new System.Drawing.Size(650, 581);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btn_buscar);
             this.Controls.Add(this.btn_actualizar);
@@ -240,8 +218,6 @@ namespace TrabajoPrácticoPAV.Formularios
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_numero);
             this.Controls.Add(this.btn_alta);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
             this.Name = "Frm_ABMAviones";
             this.Text = "Frm_ABMAviones";
             this.Load += new System.EventHandler(this.Frm_ABMAviones_Load);
@@ -256,10 +232,8 @@ namespace TrabajoPrácticoPAV.Formularios
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_alta;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView grid_aviones;
         private Clase.TextBox_Aerolinea txt_numero;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private Clase.ComboBox_Aerolinea cmb_Modelo;

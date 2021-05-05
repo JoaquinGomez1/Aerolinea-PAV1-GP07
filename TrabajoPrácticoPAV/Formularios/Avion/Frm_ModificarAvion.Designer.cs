@@ -46,6 +46,7 @@ namespace TrabajoPrácticoPAV.Formularios
             this.btn_modificar.TabIndex = 2;
             this.btn_modificar.Text = "Modificar";
             this.btn_modificar.UseVisualStyleBackColor = true;
+            this.btn_modificar.Click += new System.EventHandler(this.btn_modificar_Click);
             // 
             // btn_cancelar
             // 
@@ -55,6 +56,7 @@ namespace TrabajoPrácticoPAV.Formularios
             this.btn_cancelar.TabIndex = 2;
             this.btn_cancelar.Text = "Cancelar";
             this.btn_cancelar.UseVisualStyleBackColor = true;
+            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
             // label
             // 
@@ -97,7 +99,7 @@ namespace TrabajoPrácticoPAV.Formularios
             this.cmb_Modelo.FormattingEnabled = true;
             this.cmb_Modelo.Location = new System.Drawing.Point(76, 134);
             this.cmb_Modelo.Name = "cmb_Modelo";
-            this.cmb_Modelo.Pp_CampoAceptaNull = false;
+            this.cmb_Modelo.Pp_CampoAceptaNull = true;
             this.cmb_Modelo.Pp_MensajeError = null;
             this.cmb_Modelo.Pp_NombreCampo = "nombre";
             this.cmb_Modelo.Pp_NombreMora = null;

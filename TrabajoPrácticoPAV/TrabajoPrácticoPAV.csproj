@@ -65,10 +65,10 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Clase\Tratamientos_Especiales.cs" />
-    <Compile Include="Formularios\Frm_ABMAviones.cs">
+    <Compile Include="Formularios\Avion\Frm_ABMAviones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Frm_ABMAviones.Designer.cs">
+    <Compile Include="Formularios\Avion\Frm_ABMAviones.Designer.cs">
       <DependentUpon>Frm_ABMAviones.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Frm_ABMClientes.cs">
@@ -101,10 +101,10 @@
     <Compile Include="Formularios\Frm_ABMVuelo.Designer.cs">
       <DependentUpon>Frm_ABMVuelo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Frm_AltaAviones.cs">
+    <Compile Include="Formularios\Avion\Frm_AltaAviones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Frm_AltaAviones.Designer.cs">
+    <Compile Include="Formularios\Avion\Frm_AltaAviones.Designer.cs">
       <DependentUpon>Frm_AltaAviones.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Frm_Configuracion.cs">
@@ -113,10 +113,10 @@
     <Compile Include="Formularios\Frm_Configuracion.Designer.cs">
       <DependentUpon>Frm_Configuracion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Frm_ModificarAvion.cs">
+    <Compile Include="Formularios\Avion\Frm_ModificarAvion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Frm_ModificarAvion.Designer.cs">
+    <Compile Include="Formularios\Avion\Frm_ModificarAvion.Designer.cs">
       <DependentUpon>Frm_ModificarAvion.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Frm_Principal.cs">
@@ -132,7 +132,7 @@
     <Compile Include="NE_Usuarios\NE_Viajes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Formularios\Frm_ABMAviones.resx">
+    <EmbeddedResource Include="Formularios\Avion\Frm_ABMAviones.resx">
       <DependentUpon>Frm_ABMAviones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Frm_ABMClientes.resx">
@@ -150,13 +150,13 @@
     <EmbeddedResource Include="Formularios\Frm_ABMVuelo.resx">
       <DependentUpon>Frm_ABMVuelo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Frm_AltaAviones.resx">
+    <EmbeddedResource Include="Formularios\Avion\Frm_AltaAviones.resx">
       <DependentUpon>Frm_AltaAviones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Frm_Configuracion.resx">
       <DependentUpon>Frm_Configuracion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Frm_ModificarAvion.resx">
+    <EmbeddedResource Include="Formularios\Avion\Frm_ModificarAvion.resx">
       <DependentUpon>Frm_ModificarAvion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Frm_Principal.resx">
