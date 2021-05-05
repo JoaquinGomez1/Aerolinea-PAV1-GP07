@@ -49,7 +49,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tramos
                 $"AND codigoAeropuertoDestino = '{codigoADestino}'";
 
             DataTable tabla = _BD.EjecutarSelect(sql);
-            _NE.InsertarDatosEnControles(tabla, this.Controls);
+            _TE.InsertarDatosEnControles(tabla, this.Controls);
         }
 
         private void Btn_Cancelar_Click(object sender, EventArgs e)

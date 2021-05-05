@@ -36,9 +36,9 @@ namespace TrabajoPrácticoPAV.Clase
             }
         }
 
-        public void CargarComboJoin(string joinYCond)
+        public void CargarComboJoin(string JoinYCondicion)
         {
-            string sql = $"SELECT {Pp_PkTabla}, {Pp_NombreCampo} FROM {Pp_NombreTabla} {joinYCond}";
+            string sql = $"SELECT {Pp_PkTabla}, {Pp_NombreCampo} FROM {Pp_NombreTabla} {JoinYCondicion}";
             this.DisplayMember = Pp_NombreCampo;
             this.ValueMember = Pp_PkTabla;
             this.DataSource = _BD.EjecutarSelect(sql);

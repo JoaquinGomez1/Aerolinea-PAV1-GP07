@@ -37,6 +37,8 @@ namespace TrabajoPrácticoPAV.Formularios.Pasajeros
             string join = $" JOIN Tipo_Documento ON Pasajero.tipoDoc = Tipo_Documento.tipoDoc ";
             string sql = _TE.ConstructorSelect(this.Controls, join);
             _NE.CargarGrilla(sql, Grid_Pasajero);
+            Btn_Modificar.Enabled = false;
+            Btn_Eliminar.Enabled = false;
         }
 
         private void btn_cancelar_Click(object sender, EventArgs e)
@@ -48,6 +50,50 @@ namespace TrabajoPrácticoPAV.Formularios.Pasajeros
         {
             Frm_AltaPasajero alta = new Frm_AltaPasajero();
             alta.ShowDialog();
+        }
+
+        private void Btn_Limpiar_Click(object sender, EventArgs e)
+        {
+            Txt_Apellido.Text = "";
+            Txt_nombre.Text = "";
+            Cmb_TipoDoc.SelectedIndex = -1;
+            Grid_Pasajero.Rows.Clear();
+            chk_Todos.Checked = false;
+            Msktxt_NumeroDOC.Text = "";
+        }
+
+        private void Grid_Pasajero_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Btn_Eliminar.Enabled = true;
+            Btn_Modificar.Enabled = true;
+        }
+
+        private void Btn_Modificar_Click(object sender, EventArgs e)
+        {
+            Frm_ModificaionPasajero modif = new Frm_ModificaionPasajero();
+            modif.tipoDoc = Grid_Pasajero.CurrentRow.Cells["tipoDoc"].Value.ToString();
+            modif.numeroDoc = Grid_Pasajero.CurrentRow.Cells["numeroDoc"].Value.ToString();
+
+            modif.ShowDialog();
+        }
+
+        private void Btn_Eliminar_Click(object sender, EventArgs e)
+        {
+            Frm_BajaPasajero baja = new Frm_BajaPasajero();
+            baja.tipoDoc = Grid_Pasajero.CurrentRow.Cells["tipoDoc"].Value.ToString();
+            baja.numeroDoc = Grid_Pasajero.CurrentRow.Cells["numeroDoc"].Value.ToString();
+
+
+            baja.ShowDialog();
+        }
+
+        private void Grid_Pasajero_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Frm_MostrarPasajero mostrar = new Frm_MostrarPasajero();
+            mostrar.tipoDoc = Grid_Pasajero.CurrentRow.Cells["tipoDoc"].Value.ToString();
+            mostrar.numeroDoc = Grid_Pasajero.CurrentRow.Cells["numeroDoc"].Value.ToString();
+
+            mostrar.ShowDialog();
         }
     }
 }
