@@ -32,7 +32,8 @@ namespace TrabajoPrácticoPAV.Clase
                     nombreTabla = grid.Pp_NombreTabla;
                     atributosTabla += $"{ExtraerColumnasGrid(grid)} FROM {nombreTabla}";
                 }
-
+                
+                //Evaluación Checkbox
                 if(control.GetType().ToString() == "System.Windows.Forms.CheckBox")
                 {
                     if (((CheckBox)control).Checked)
@@ -83,15 +84,20 @@ namespace TrabajoPrácticoPAV.Clase
                     ComboBox_Aerolinea cmb = (ComboBox_Aerolinea)control;
                     if (cmb.SelectedIndex != -1)
                     {
-                        //Crea la condición que se va a asignar
-                        string condicion = $"{cmb.Pp_NombreTabla}.{cmb.Pp_PkTabla}=" +
+                        //En caso de que la tabla donde se encuentra la información de este combobox
+                        //sea distinta de la tabla con la que estamos tratando en el ABM se hace la condición
+                        //teniendo en cuenta el nombreCampoInsert, el cual es una referencia al nombre del atributo 
+                        //buscado pero en la tabla principal del ABM
+                        string condicion = "";
+                        if(cmb.Pp_NombreTabla != nombreTabla)
+                            condicion = $"{nombreTabla}.{cmb.Pp_NombreCampoInsert} = " +
+                                $"{FormatearDato(cmb.SelectedValue.ToString())}";
+                        else
+                        condicion = $"{cmb.Pp_NombreTabla}.{cmb.Pp_PkTabla}=" +
                             $"{FormatearDato(cmb.SelectedValue.ToString())}";
 
-                        //Asigna la primer condición
                         if (condiciones == "")
                             condiciones += " WHERE " + condicion;
-
-                        //Asigna condiciones subsiguientes
                         else
                             condiciones += " AND " + condicion;
                     }
@@ -166,9 +172,20 @@ namespace TrabajoPrácticoPAV.Clase
                     {
                         if(ValidarTelefonos(grid) == Resultado.error)
                         {
-                            MessageBox.Show("Telefono mal");
+                            MessageBox.Show("Telefono mal carrgado");
                             return Resultado.error;
                         }
+                    }
+                
+                }
+                if (item.GetType().Name == "MaskedTextBox_Aerolinea")
+                {
+                    MaskedTextBox_Aerolinea msk = (MaskedTextBox_Aerolinea)item;
+                    if (msk.Text == "")
+                    {
+                        MessageBox.Show(msk.Pp_MensajeError);
+                        msk.Focus();
+                        return Resultado.error;
                     }
                 }
             }
@@ -200,6 +217,8 @@ namespace TrabajoPrácticoPAV.Clase
                 }
                 catch (Exception)
                 {
+                    MessageBox.Show("El teléfono ingresado no es correcto");
+                    grid.Rows[i].Selected = true;
                     return Resultado.error;
                 }
             }

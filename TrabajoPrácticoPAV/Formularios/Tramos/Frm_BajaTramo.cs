@@ -53,7 +53,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tramos
         private void Btn_Eliminar_Click(object sender, EventArgs e)
         {
             string sql = _TE.CostructorUpdateDelete("Tramo", this.Controls, false);
-            _BD.Borrar(sql);
+            _BD.Borrar(sql, false);
             this.Close();
         }
 

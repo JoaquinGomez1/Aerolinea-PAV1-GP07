@@ -15,6 +15,7 @@ namespace TrabajoPrácticoPAV.Formularios.Pasajeros
 {
     public partial class Frm_ABMPasajeros : Form
     {
+        Conexion_DB _DB = new Conexion_DB();
         NE_Clientes _NE = new NE_Clientes();
         Tratamientos_Especiales _TE = new Tratamientos_Especiales();
 
@@ -71,7 +72,7 @@ namespace TrabajoPrácticoPAV.Formularios.Pasajeros
         private void Btn_Modificar_Click(object sender, EventArgs e)
         {
             Frm_ModificaionPasajero modif = new Frm_ModificaionPasajero();
-            modif.tipoDoc = Grid_Pasajero.CurrentRow.Cells["tipoDoc"].Value.ToString();
+            modif.tipoDoc = _NE.BuscarIdTipoDoc(Grid_Pasajero.CurrentRow.Cells["tipoDoc"].Value.ToString());
             modif.numeroDoc = Grid_Pasajero.CurrentRow.Cells["numeroDoc"].Value.ToString();
 
             modif.ShowDialog();
@@ -80,8 +81,9 @@ namespace TrabajoPrácticoPAV.Formularios.Pasajeros
         private void Btn_Eliminar_Click(object sender, EventArgs e)
         {
             Frm_BajaPasajero baja = new Frm_BajaPasajero();
-            baja.tipoDoc = Grid_Pasajero.CurrentRow.Cells["tipoDoc"].Value.ToString();
+            baja.tipoDoc = _NE.BuscarIdTipoDoc(Grid_Pasajero.CurrentRow.Cells["tipoDoc"].Value.ToString());
             baja.numeroDoc = Grid_Pasajero.CurrentRow.Cells["numeroDoc"].Value.ToString();
+            
 
 
             baja.ShowDialog();
@@ -90,7 +92,7 @@ namespace TrabajoPrácticoPAV.Formularios.Pasajeros
         private void Grid_Pasajero_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             Frm_MostrarPasajero mostrar = new Frm_MostrarPasajero();
-            mostrar.tipoDoc = Grid_Pasajero.CurrentRow.Cells["tipoDoc"].Value.ToString();
+            mostrar.tipoDoc = _NE.BuscarIdTipoDoc(Grid_Pasajero.CurrentRow.Cells["tipoDoc"].Value.ToString());
             mostrar.numeroDoc = Grid_Pasajero.CurrentRow.Cells["numeroDoc"].Value.ToString();
 
             mostrar.ShowDialog();

@@ -17,8 +17,8 @@ namespace TrabajoPrácticoPAV.Formularios
 {
     public partial class Frm_ABMTramos : Form
     {
-        Conexion_DB _BD = new Conexion_DB();
         NE_Tramos _NE = new NE_Tramos();
+        Tratamientos_Especiales _TE = new Tratamientos_Especiales();
 
         public Frm_ABMTramos()
         {
@@ -42,24 +42,10 @@ namespace TrabajoPrácticoPAV.Formularios
 
         private void btn_buscar_Click(object sender, EventArgs e)
         {
-            string sql = _NE.Constructor_select(chb_todos_tramo, cmb_ADestino, cmb_ASalida, "Tramo");
-            CargarGrilla(_BD.EjecutarSelect(sql));
+            string sql = _TE.ConstructorSelect(this.Controls, "");
+            _NE.CargarGrilla(sql, grid_tramos);
             Btn_Modificar.Enabled = false;
             Btn_Eliminar.Enabled = false;
-        }
-        
-        private void CargarGrilla (DataTable tabla)
-        {
-            grid_tramos.Rows.Clear();
-            for (int i = 0; i < tabla.Rows.Count; i++)
-            {
-                grid_tramos.Rows.Add();
-                grid_tramos.Rows[i].Cells[0].Value = _NE.BuscarNombreAeropuerto(tabla.Rows[i]["codigoAeropuertoSalida"].ToString());
-                grid_tramos.Rows[i].Cells[1].Value = _NE.BuscarNombreAeropuerto(tabla.Rows[i]["codigoAeropuertodestino"].ToString());
-                grid_tramos.Rows[i].Cells[2].Value = tabla.Rows[i]["duracion"].ToString();
-                grid_tramos.Rows[i].Cells[3].Value = tabla.Rows[i]["distancia"].ToString();
-            }
-
         }
 
         private void Btn_Registrar_Click(object sender, EventArgs e)
@@ -92,10 +78,10 @@ namespace TrabajoPrácticoPAV.Formularios
         private void Btn_Modificar_Click(object sender, EventArgs e)
         {
             string codigoASalida = _NE.BuscarCodigoAeropuerto(
-                grid_tramos.CurrentRow.Cells["ASalida"].Value.ToString());
+                grid_tramos.CurrentRow.Cells["codigoAeropuertoSalida"].Value.ToString());
 
             string codigoADestino =_NE.BuscarCodigoAeropuerto(
-                grid_tramos.CurrentRow.Cells["ADestino"].Value.ToString());
+                grid_tramos.CurrentRow.Cells["codigoAeropuertoDestino"].Value.ToString());
 
             Frm_ModificacionTramo modif = new Frm_ModificacionTramo();
             modif.codigoASalida = codigoASalida;
@@ -107,10 +93,10 @@ namespace TrabajoPrácticoPAV.Formularios
         private void Btn_Eliminar_Click(object sender, EventArgs e)
         {
             string codigoASalida = _NE.BuscarCodigoAeropuerto(
-            grid_tramos.CurrentRow.Cells["ASalida"].Value.ToString());
+            grid_tramos.CurrentRow.Cells["codigoAeropuertoSalida"].Value.ToString());
 
             string codigoADestino = _NE.BuscarCodigoAeropuerto(
-                grid_tramos.CurrentRow.Cells["ADestino"].Value.ToString());
+                grid_tramos.CurrentRow.Cells["codigoAeropuertoDestino"].Value.ToString());
 
             Frm_BajaTramo elim = new Frm_BajaTramo();
             elim.codigoASalida = codigoASalida;
@@ -121,15 +107,15 @@ namespace TrabajoPrácticoPAV.Formularios
         private void grid_tramos_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             string codigoASalida = _NE.BuscarCodigoAeropuerto(
-                grid_tramos.CurrentRow.Cells["ASalida"].Value.ToString());
+                grid_tramos.CurrentRow.Cells["codigoAeropuertoSalida"].Value.ToString());
 
             string codigoADestino = _NE.BuscarCodigoAeropuerto(
-                grid_tramos.CurrentRow.Cells["ADestino"].Value.ToString());
+                grid_tramos.CurrentRow.Cells["codigoAeropuertoDestino"].Value.ToString());
 
             Frm_ConsultaTramo consulta = new Frm_ConsultaTramo();
             consulta.codigoADestino = codigoADestino;
             consulta.codigoASalida = codigoASalida;
             consulta.ShowDialog();
         }
-    }
+     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Formularios;
+using TrabajoPrácticoPAV.Formularios.Pais;
 
 namespace TrabajoPrácticoPAV
 {
@@ -18,6 +19,7 @@ namespace TrabajoPrácticoPAV
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Frm_Principal());
+            //Application.Run(new Frm_ABMPais());
 
         }
     }
