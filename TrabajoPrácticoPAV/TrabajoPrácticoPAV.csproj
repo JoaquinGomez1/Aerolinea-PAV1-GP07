@@ -66,6 +66,12 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Clase\Tratamientos_Especiales.cs" />
+    <Compile Include="Formularios\Asientos\Frm_ABMAsientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Asientos\Frm_ABMAsientos.Designer.cs">
+      <DependentUpon>Frm_ABMAsientos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Aviones\Frm_ABMAviones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +204,7 @@
     <Compile Include="Formularios\Vuelo\Frm_ModificarVuelo.Designer.cs">
       <DependentUpon>Frm_ModificarVuelo.cs</DependentUpon>
     </Compile>
+    <Compile Include="NE_Usuarios\NE_Asiento.cs" />
     <Compile Include="NE_Usuarios\NE_Avion.cs" />
     <Compile Include="NE_Usuarios\NE_Clientes.cs" />
     <Compile Include="NE_Usuarios\NE_Tramos.cs" />
@@ -205,6 +212,9 @@
     <Compile Include="NE_Usuarios\NE_Vuelos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\Asientos\Frm_ABMAsientos.resx">
+      <DependentUpon>Frm_ABMAsientos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Aviones\Frm_ABMAviones.resx">
       <DependentUpon>Frm_ABMAviones.cs</DependentUpon>
     </EmbeddedResource>
