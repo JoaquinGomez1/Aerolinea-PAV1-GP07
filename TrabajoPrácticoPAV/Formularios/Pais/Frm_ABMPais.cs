@@ -17,7 +17,7 @@ namespace TrabajoPrácticoPAV.Formularios.Pais
     {
         Conexion_DB _BD = new Conexion_DB();
         Tratamientos_Especiales _TE = new Tratamientos_Especiales();
-        NE_pais pais = new NE_pais();
+
 
         public Frm_ABMPais()
         {
@@ -40,7 +40,7 @@ namespace TrabajoPrácticoPAV.Formularios.Pais
 
         private void btn_buscar_Click(object sender, EventArgs e)
         {
-            if (pais.verificar_seleccion(txt_Nombre, txt_IdPais, chb_todos_tramo))
+            if (verificar_seleccion(txt_Nombre, txt_IdPais, chb_todos_tramo))
             {
                 DataTable tabla = new DataTable();
                 string join = "";
@@ -50,6 +50,19 @@ namespace TrabajoPrácticoPAV.Formularios.Pais
                 Btn_Eliminar.Enabled = false;
             }
 
+        }
+
+        private bool verificar_seleccion(TextBox_Aerolinea nombre, MaskedTextBox_Aerolinea id, CheckBox todos)
+        {
+            if (nombre.Text == "" & id.Text == "" & todos.Checked == false)
+            {
+                MessageBox.Show("Debe ingresar al menos un dato o seleccionar todos");
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
         private void CargarGrilla(DataTable tabla)
         {            

@@ -138,6 +138,12 @@
     <Compile Include="Formularios\Pasajeros\Frm_MostrarPasajero.Designer.cs">
       <DependentUpon>Frm_MostrarPasajero.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Provincia\Frm_ABMProvincia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Provincia\Frm_ABMProvincia.Designer.cs">
+      <DependentUpon>Frm_ABMProvincia.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Tramos\Frm_ABMTramos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -224,7 +230,6 @@
     </Compile>
     <Compile Include="NE_Usuarios\NE_Avion.cs" />
     <Compile Include="NE_Usuarios\NE_Clientes.cs" />
-    <Compile Include="NE_Usuarios\NE_pais.cs" />
     <Compile Include="NE_Usuarios\NE_Tramos.cs" />
     <Compile Include="NE_Usuarios\NE_Viajes.cs" />
     <Compile Include="NE_Usuarios\NE_Vuelos.cs" />
@@ -265,6 +270,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Pasajeros\Frm_MostrarPasajero.resx">
       <DependentUpon>Frm_MostrarPasajero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Provincia\Frm_ABMProvincia.resx">
+      <DependentUpon>Frm_ABMProvincia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Tramos\Frm_ABMTramos.resx">
       <DependentUpon>Frm_ABMTramos.cs</DependentUpon>
