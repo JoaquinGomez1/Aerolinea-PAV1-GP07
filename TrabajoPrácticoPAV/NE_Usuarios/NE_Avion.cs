@@ -27,7 +27,7 @@ namespace TrabajoPrácticoPAV.NE_Aviones
         public void Insertar()
         {
             string sqlInsertar = @"INSERT INTO Avion (numeroPorModelo, idModelo) " + " VALUES ( " + Pp_numero_modelo + ", " + Pp_id_modelo + ")";
-            _BD.Insertar(sqlInsertar);
+            _BD.Insertar(sqlInsertar, false);
         }
 
  

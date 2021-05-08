@@ -63,7 +63,7 @@ namespace TrabajoPrácticoPAV.Formularios.Pasajeros
             if(validar == Resultado.correcto && validacionFecha == Resultado.correcto)
             {
                 string sql = _TE.CostructorUpdateDelete("Pasajero", this.Controls, true);
-                _BD.Modificar(sql);
+                _BD.Modificar(sql, false);
                 this.Close();
             }
         }

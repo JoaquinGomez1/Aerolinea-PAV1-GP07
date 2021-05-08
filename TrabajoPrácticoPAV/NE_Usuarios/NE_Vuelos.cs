@@ -54,23 +54,23 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
         public void Insertar(Control.ControlCollection controles)
         {
             Tratamientos_Especiales tratamiento = new Tratamientos_Especiales();
-            _BD.Insertar(tratamiento.CostructorInsert("Vuelo", controles));
+            _BD.Insertar(tratamiento.CostructorInsert("Vuelo", controles), false);
         }
 
         public void Modificar(Control.ControlCollection controles)
         {
             Tratamientos_Especiales tratamiento = new Tratamientos_Especiales();
-            _BD.Modificar(tratamiento.CostructorUpdateDelete("Vuelo", controles, true));
+            _BD.Modificar(tratamiento.CostructorUpdateDelete("Vuelo", controles, true), false);
         }
         public void Borrar(Control.ControlCollection controles)
         {
             Tratamientos_Especiales tratamiento = new Tratamientos_Especiales();
-            _BD.Borrar(tratamiento.CostructorUpdateDelete("Vuelo", controles, false));
+            _BD.Borrar(tratamiento.CostructorUpdateDelete("Vuelo", controles, false), false);
         }
         public void Borrar(string id_vuelo)
         {
             string sqlDelete = @"DELETE FROM vuelo WHERE idVuelo = " + id_vuelo;
-            _BD.Borrar(sqlDelete);
+            _BD.Borrar(sqlDelete, false);
         }
 
     }

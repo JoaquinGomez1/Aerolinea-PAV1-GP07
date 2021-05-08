@@ -88,28 +88,34 @@ namespace TrabajoPrácticoPAV.Backend
             Desconectar();
             return tabla;
         }
-        public EstadoTransaccion Insertar(string SqlInsertar)
+        public EstadoTransaccion Insertar(string SqlInsertar, bool InsercionSilenciosa)
         {
-            return InsModBorr(SqlInsertar);
-
+            EstadoTransaccion res = InsModBorr(SqlInsertar);
+            if(res == EstadoTransaccion.correcto && !InsercionSilenciosa)
+                MessageBox.Show("Formulario cargado correctamente");
+            return res;
         }
-        public EstadoTransaccion Modificar(string SqlModificar)
+        public EstadoTransaccion Modificar(string SqlModificar, bool ModificacionSilenciosa)
         {
-            return InsModBorr(SqlModificar);
+            EstadoTransaccion res = InsModBorr(SqlModificar);
+            if (res == EstadoTransaccion.correcto && !ModificacionSilenciosa)
+                MessageBox.Show("Formulario modificado correctamente");
+            return res;
         }
-        public EstadoTransaccion Borrar(string SqlBorrar)
+        public EstadoTransaccion Borrar(string SqlBorrar, bool EliminacionSilenciosa)
         {
-            return InsModBorr(SqlBorrar);
+            EstadoTransaccion res = InsModBorr(SqlBorrar);
+            if (res == EstadoTransaccion.correcto && !EliminacionSilenciosa)
+                MessageBox.Show("Formulario eliminado correctamente");
+            return res;
         }
         private EstadoTransaccion InsModBorr(string sql)
         {
             Conectar();
             cmd.CommandText = sql;
-            bool comandoEjecutadoCorrectamente = false;
             try
             {
                 cmd.ExecuteNonQuery();
-                comandoEjecutadoCorrectamente = true;
             }
             catch (Exception e)
             {
@@ -120,11 +126,6 @@ namespace TrabajoPrácticoPAV.Backend
                                  + e.Message);
             }
             Desconectar();
-
-            if (comandoEjecutadoCorrectamente)
-            {
-                MessageBox.Show("Formulario cargado correctamente");
-            }
             return ControlTransaccion;
 
 

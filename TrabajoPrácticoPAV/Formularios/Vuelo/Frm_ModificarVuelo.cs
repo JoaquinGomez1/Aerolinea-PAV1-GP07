@@ -60,7 +60,7 @@ namespace TrabajoPrácticoPAV.Formularios.Vuelo
             if (cmb_AeropSalida.SelectedIndex != cmb_AeropDestino.SelectedIndex)
             {
                 string sql = Tratamiento.CostructorUpdateDelete("Vuelo", this.Controls, true);
-                _BD.Modificar(sql);
+                _BD.Modificar(sql, false);
                 this.Close();
             }
         }
