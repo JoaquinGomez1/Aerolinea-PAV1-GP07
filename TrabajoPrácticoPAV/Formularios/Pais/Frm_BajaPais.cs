@@ -55,7 +55,7 @@ namespace TrabajoPrácticoPAV.Formularios.Pais
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
             string sql = _TE.CostructorUpdateDelete("Pais", this.Controls, false);
-            _BD.Borrar(sql);
+            _BD.Borrar(sql, false);
             this.Close();
         }
     }

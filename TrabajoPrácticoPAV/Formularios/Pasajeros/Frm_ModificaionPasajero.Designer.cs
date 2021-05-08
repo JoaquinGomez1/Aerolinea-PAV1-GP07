@@ -30,7 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.BarraSuperior = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
+            this.Titulo = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -67,7 +67,7 @@
             // BarraSuperior
             // 
             this.BarraSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.BarraSuperior.Controls.Add(this.label15);
+            this.BarraSuperior.Controls.Add(this.Titulo);
             this.BarraSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.BarraSuperior.Location = new System.Drawing.Point(0, 0);
             this.BarraSuperior.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -76,16 +76,16 @@
             this.BarraSuperior.TabIndex = 102;
             this.BarraSuperior.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BarraSuperior_MouseMove);
             // 
-            // label15
+            // Titulo
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(12, 7);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(243, 27);
-            this.label15.TabIndex = 4;
-            this.label15.Text = "MODIFICAR PASAJERO";
+            this.Titulo.AutoSize = true;
+            this.Titulo.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Titulo.ForeColor = System.Drawing.Color.White;
+            this.Titulo.Location = new System.Drawing.Point(12, 7);
+            this.Titulo.Name = "Titulo";
+            this.Titulo.Size = new System.Drawing.Size(243, 27);
+            this.Titulo.TabIndex = 4;
+            this.Titulo.Text = "MODIFICAR PASAJERO";
             // 
             // label13
             // 
@@ -340,6 +340,7 @@
             this.Controls.Add(this.label12);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_ModificaionPasajero";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_ModificaionPasajero";
             this.Load += new System.EventHandler(this.Frm_ModificaionPasajero_Load);
             this.BarraSuperior.ResumeLayout(false);
@@ -355,7 +356,7 @@
         private Clase.MaskedTextBox_Aerolinea txt_Fecha;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel BarraSuperior;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label Titulo;
         private Clase.MaskedTextBox_Aerolinea Msktxt_NumeroDOC;
         private Clase.ComboBox_Aerolinea Cmb_Ciudad;
         private System.Windows.Forms.Label label13;

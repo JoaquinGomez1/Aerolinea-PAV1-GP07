@@ -55,10 +55,10 @@ namespace TrabajoPrácticoPAV.Formularios.Pais
             if (_TE.Validar(this.Controls) == Tratamientos_Especiales.Resultado.correcto)
             {
                 string sql = _TE.CostructorUpdateDelete("Pais", this.Controls, true);
-                _BD.Modificar(sql);
+                _BD.Modificar(sql, false);
                 this.Close();
             }
-            
+
         }
     }
 }

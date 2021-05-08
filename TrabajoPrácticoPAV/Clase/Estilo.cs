@@ -11,12 +11,15 @@ namespace TrabajoPrácticoPAV.Clase
 
     class Estilo
     {
+        static public int MenuLateral = 1;
+        static public string TemaActual = "Mostaza Classic";
         static public Color ColorFondo = Color.FromArgb(159, 133, 74);
         static public Color ColorBoton = Color.FromArgb(159, 133, 74);
         static public Color ColorBotonPress = Color.FromArgb(228, 195, 123);
         static public Color ColorBarra = Color.FromArgb(26, 32, 40);
         static public Color ColorFondoForms = Color.FromArgb(242, 227, 187);
         static public Color ColorLetraBoton = Color.FromArgb(0, 0, 0);
+        static public Color ColorLetrasLabel = Color.FromArgb(0, 0, 0);
         static public bool EstiloDebeActualizar = false;
 
         static public void FormatearEstilo(Control.ControlCollection controles)
@@ -37,12 +40,18 @@ namespace TrabajoPrácticoPAV.Clase
                     case "System.Windows.Forms.Panel":
                         if (((Panel)item).Name == "BarraSuperior")
                             ((Panel)item).BackColor = Estilo.ColorBarra;
+                        Estilo.FormatearEstilo(((Panel)item).Controls);
+                        break;
+                    case "System.Windows.Forms.Label":
+                        if (((Label)item).Name == "Titulo")
+                            ((Label)item).ForeColor = Color.FromArgb(255, 255, 255);
+                        else
+                        ((Label)item).ForeColor = Estilo.ColorLetrasLabel;
                         break;
                     case "TrabajoPrácticoPAV.Clase.DataGridView_Aerolinea":
                     case "System.Windows.Forms.CheckBox":
                     case "TrabajoPrácticoPAV.Clase.ComboBox":
                     case "TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea":
-                    case "System.Windows.Forms.Label":
                     case "System.Windows.Forms.TextBox":
                     case "TrabajoPrácticoPAV.Clase.TextBox_Aerolinea":
                     case "TrabajoPrácticoPAV.Clase.MaskedTextBox_Aerolinea":

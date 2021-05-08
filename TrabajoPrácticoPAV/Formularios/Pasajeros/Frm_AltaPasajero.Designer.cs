@@ -41,13 +41,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.BarraSuperior = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
+            this.Titulo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Cmb_Pais = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
             this.Cmb_Provincia = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
             this.maskedTextBox_Aerolinea1 = new TrabajoPrácticoPAV.Clase.MaskedTextBox_Aerolinea();
             this.grid_Telefonos = new TrabajoPrácticoPAV.Clase.DataGridView_Aerolinea();
+            this.numeroTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txt_Fecha = new TrabajoPrácticoPAV.Clase.MaskedTextBox_Aerolinea();
             this.Msktxt_NumeroDOC = new TrabajoPrácticoPAV.Clase.MaskedTextBox_Aerolinea();
             this.Cmb_Ciudad = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
@@ -58,7 +59,6 @@
             this.btn_registrar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.Txt_Apellido = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.numeroTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BarraSuperior.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_Telefonos)).BeginInit();
@@ -67,7 +67,7 @@
             // label13
             // 
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(749, 323);
+            this.label13.Location = new System.Drawing.Point(415, 355);
             this.label13.Margin = new System.Windows.Forms.Padding(29, 0, 3, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(81, 22);
@@ -79,7 +79,7 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(174, 35);
+            this.label5.Location = new System.Drawing.Point(304, 5);
             this.label5.Margin = new System.Windows.Forms.Padding(29, 0, 3, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(99, 22);
@@ -102,7 +102,7 @@
             // 
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(-14, 35);
+            this.label10.Location = new System.Drawing.Point(82, 5);
             this.label10.Margin = new System.Windows.Forms.Padding(29, 0, 3, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(61, 22);
@@ -186,7 +186,7 @@
             // BarraSuperior
             // 
             this.BarraSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.BarraSuperior.Controls.Add(this.label15);
+            this.BarraSuperior.Controls.Add(this.Titulo);
             this.BarraSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.BarraSuperior.Location = new System.Drawing.Point(0, 0);
             this.BarraSuperior.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -195,16 +195,16 @@
             this.BarraSuperior.TabIndex = 57;
             this.BarraSuperior.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BarraSuperior_MouseMove);
             // 
-            // label15
+            // Titulo
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(12, 7);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(238, 27);
-            this.label15.TabIndex = 4;
-            this.label15.Text = "REGISTRAR PASAJERO";
+            this.Titulo.AutoSize = true;
+            this.Titulo.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Titulo.ForeColor = System.Drawing.Color.White;
+            this.Titulo.Location = new System.Drawing.Point(12, 7);
+            this.Titulo.Name = "Titulo";
+            this.Titulo.Size = new System.Drawing.Size(238, 27);
+            this.Titulo.TabIndex = 4;
+            this.Titulo.Text = "REGISTRAR PASAJERO";
             // 
             // label1
             // 
@@ -223,16 +223,16 @@
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.Cmb_Provincia);
-            this.panel1.Location = new System.Drawing.Point(353, 286);
+            this.panel1.Location = new System.Drawing.Point(353, 318);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(399, 100);
+            this.panel1.Size = new System.Drawing.Size(590, 37);
             this.panel1.TabIndex = 62;
             // 
             // Cmb_Pais
             // 
             this.Cmb_Pais.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Cmb_Pais.FormattingEnabled = true;
-            this.Cmb_Pais.Location = new System.Drawing.Point(61, 35);
+            this.Cmb_Pais.Location = new System.Drawing.Point(157, 5);
             this.Cmb_Pais.Margin = new System.Windows.Forms.Padding(11, 2, 11, 2);
             this.Cmb_Pais.Name = "Cmb_Pais";
             this.Cmb_Pais.Pp_CampoAceptaNull = true;
@@ -242,7 +242,7 @@
             this.Cmb_Pais.Pp_NombreCampoInsert = null;
             this.Cmb_Pais.Pp_NombreTabla = "Pais";
             this.Cmb_Pais.Pp_PkTabla = "idPais";
-            this.Cmb_Pais.Size = new System.Drawing.Size(110, 24);
+            this.Cmb_Pais.Size = new System.Drawing.Size(139, 24);
             this.Cmb_Pais.TabIndex = 47;
             this.Cmb_Pais.SelectionChangeCommitted += new System.EventHandler(this.Cmb_Pais_SelectionChangeCommitted);
             // 
@@ -251,7 +251,7 @@
             this.Cmb_Provincia.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Cmb_Provincia.Enabled = false;
             this.Cmb_Provincia.FormattingEnabled = true;
-            this.Cmb_Provincia.Location = new System.Drawing.Point(285, 35);
+            this.Cmb_Provincia.Location = new System.Drawing.Point(415, 5);
             this.Cmb_Provincia.Margin = new System.Windows.Forms.Padding(11, 2, 11, 2);
             this.Cmb_Provincia.Name = "Cmb_Provincia";
             this.Cmb_Provincia.Pp_CampoAceptaNull = true;
@@ -261,7 +261,7 @@
             this.Cmb_Provincia.Pp_NombreCampoInsert = null;
             this.Cmb_Provincia.Pp_NombreTabla = "Provincia";
             this.Cmb_Provincia.Pp_PkTabla = "idProvincia";
-            this.Cmb_Provincia.Size = new System.Drawing.Size(114, 24);
+            this.Cmb_Provincia.Size = new System.Drawing.Size(139, 24);
             this.Cmb_Provincia.TabIndex = 50;
             this.Cmb_Provincia.SelectionChangeCommitted += new System.EventHandler(this.Cmb_Provincia_SelectionChangeCommitted);
             // 
@@ -282,15 +282,21 @@
             this.grid_Telefonos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_Telefonos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.numeroTelefono});
-            this.grid_Telefonos.Location = new System.Drawing.Point(638, 108);
+            this.grid_Telefonos.Location = new System.Drawing.Point(646, 108);
             this.grid_Telefonos.MultiSelect = false;
             this.grid_Telefonos.Name = "grid_Telefonos";
             this.grid_Telefonos.Pp_FormatoGrid = null;
             this.grid_Telefonos.Pp_NombreTabla = null;
             this.grid_Telefonos.RowHeadersVisible = false;
             this.grid_Telefonos.RowTemplate.Height = 24;
-            this.grid_Telefonos.Size = new System.Drawing.Size(305, 174);
+            this.grid_Telefonos.Size = new System.Drawing.Size(297, 174);
             this.grid_Telefonos.TabIndex = 60;
+            // 
+            // numeroTelefono
+            // 
+            this.numeroTelefono.HeaderText = "Números de Teléfono";
+            this.numeroTelefono.Name = "numeroTelefono";
+            this.numeroTelefono.Width = 225;
             // 
             // txt_Fecha
             // 
@@ -321,7 +327,7 @@
             // 
             this.Cmb_Ciudad.Enabled = false;
             this.Cmb_Ciudad.FormattingEnabled = true;
-            this.Cmb_Ciudad.Location = new System.Drawing.Point(843, 323);
+            this.Cmb_Ciudad.Location = new System.Drawing.Point(510, 355);
             this.Cmb_Ciudad.Margin = new System.Windows.Forms.Padding(11, 2, 11, 2);
             this.Cmb_Ciudad.Name = "Cmb_Ciudad";
             this.Cmb_Ciudad.Pp_CampoAceptaNull = true;
@@ -331,7 +337,7 @@
             this.Cmb_Ciudad.Pp_NombreCampoInsert = "idCiudad";
             this.Cmb_Ciudad.Pp_NombreTabla = "Ciudad";
             this.Cmb_Ciudad.Pp_PkTabla = "idCiudad";
-            this.Cmb_Ciudad.Size = new System.Drawing.Size(100, 24);
+            this.Cmb_Ciudad.Size = new System.Drawing.Size(139, 24);
             this.Cmb_Ciudad.TabIndex = 53;
             // 
             // Txt_nombre
@@ -417,12 +423,6 @@
             this.toolTip1.InitialDelay = 10;
             this.toolTip1.ReshowDelay = 2;
             // 
-            // numeroTelefono
-            // 
-            this.numeroTelefono.HeaderText = "Números de Teléfono";
-            this.numeroTelefono.Name = "numeroTelefono";
-            this.numeroTelefono.Width = 225;
-            // 
             // Frm_AltaPasajero
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -453,6 +453,7 @@
             this.Controls.Add(this.label12);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_AltaPasajero";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_AltaPasajero";
             this.Load += new System.EventHandler(this.Frm_AltaPasajero_Load);
             this.BarraSuperior.ResumeLayout(false);
@@ -488,7 +489,7 @@
         private Clase.TextBox_Aerolinea Txt_Apellido;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel BarraSuperior;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label Titulo;
         private Clase.MaskedTextBox_Aerolinea txt_Fecha;
         private System.Windows.Forms.Label label1;
         private Clase.DataGridView_Aerolinea grid_Telefonos;

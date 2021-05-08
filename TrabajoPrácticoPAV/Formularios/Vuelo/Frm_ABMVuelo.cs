@@ -144,5 +144,10 @@ namespace TrabajoPrácticoPAV.Formularios
             consulta.Id_vuelo1 = grilla_ABM_vuelo1.CurrentRow.Cells[4].Value.ToString();
             consulta.ShowDialog();
         }
+
+        private void Btn_Cerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

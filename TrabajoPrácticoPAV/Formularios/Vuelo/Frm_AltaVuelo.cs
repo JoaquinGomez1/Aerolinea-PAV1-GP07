@@ -42,7 +42,7 @@ namespace TrabajoPrácticoPAV.Formularios.Vuelo
                 if (cmb_AeropSalida.SelectedIndex != cmb_AeropDestino.SelectedIndex)
                 {
                     string sql = Tratamiento.CostructorInsert("Vuelo", this.Controls);
-                    _BD.Insertar(sql);
+                    _BD.Insertar(sql, false);
                     this.Close();
                 }
                 else

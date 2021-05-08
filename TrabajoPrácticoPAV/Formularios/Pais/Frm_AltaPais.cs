@@ -41,12 +41,12 @@ namespace TrabajoPrácticoPAV.Formularios.Pais
 
         private void btn_registrar_Click(object sender, EventArgs e)
         {
-            if (_TE.Validar(this.Controls)==Tratamientos_Especiales.Resultado.correcto)
+            if (_TE.Validar(this.Controls) == Tratamientos_Especiales.Resultado.correcto)
             {
                 string sql = _TE.CostructorInsert("Pais", this.Controls);
-                _BD.Insertar(sql);
+                _BD.Insertar(sql, false);
                 this.Close();
-                
+
             }
 
         }
