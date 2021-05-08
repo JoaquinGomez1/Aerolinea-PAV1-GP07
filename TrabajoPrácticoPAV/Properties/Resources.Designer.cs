@@ -183,6 +183,16 @@ namespace TrabajoPrácticoPAV.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap país_icon {
+            get {
+                object obj = ResourceManager.GetObject("país_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Ticket_Icono {
             get {
                 object obj = ResourceManager.GetObject("Ticket_Icono", resourceCulture);
