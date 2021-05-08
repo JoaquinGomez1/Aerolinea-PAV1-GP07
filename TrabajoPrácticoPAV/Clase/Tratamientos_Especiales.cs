@@ -166,9 +166,20 @@ namespace TrabajoPrácticoPAV.Clase
                     {
                         if(ValidarTelefonos(grid) == Resultado.error)
                         {
-                            MessageBox.Show("Telefono mal");
+                            MessageBox.Show("Telefono mal carrgado");
                             return Resultado.error;
                         }
+                    }
+                
+                }
+                if (item.GetType().Name == "MaskedTextBox_Aerolinea")
+                {
+                    MaskedTextBox_Aerolinea msk = (MaskedTextBox_Aerolinea)item;
+                    if (msk.Text == "")
+                    {
+                        MessageBox.Show(msk.Pp_MensajeError);
+                        msk.Focus();
+                        return Resultado.error;
                     }
                 }
             }
