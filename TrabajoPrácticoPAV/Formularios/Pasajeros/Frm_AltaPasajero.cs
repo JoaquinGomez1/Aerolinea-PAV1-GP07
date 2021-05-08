@@ -59,7 +59,8 @@ namespace TrabajoPrácticoPAV.Formularios.Pasajeros
             if (validacionFecha == Resultado.correcto && validacionControles == Resultado.correcto)
             {
                 string sql = _TE.CostructorInsert("Pasajero", this.Controls);
-                _BD.Insertar(sql);
+                _BD.Insertar(sql, false);
+                _NE.InsertarTelefonos(grid_Telefonos, Msktxt_NumeroDOC.Text, Cmb_TipoDoc.SelectedValue.ToString());
                 this.Close();
             }
         }

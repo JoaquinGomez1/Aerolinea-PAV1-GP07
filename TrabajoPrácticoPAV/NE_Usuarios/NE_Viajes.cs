@@ -24,7 +24,7 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             string sql = @"INSERT INTO Viaje(horarioPresencia, horarioSalida, horarioLlegada, duracionEstimada) 
                         VALUES(" + $"'{Viaje.HorarioPresencia}', '{Viaje.HorarioSalida}', '{Viaje.HorarioLlegada}', '{Viaje.DuracionEstimada}'" + ")";
 
-            _DB.Insertar(sql);
+            _DB.Insertar(sql, false);
         }
 
         public Viaje GetViajePorId(string id)
@@ -47,13 +47,13 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
         public void EliminarFila(string numeroDeViaje)
         {
             string sql = $"DELETE FROM Viaje WHERE numeroDeViaje = {numeroDeViaje}";
-            _DB.Borrar(sql);
+            _DB.Borrar(sql, false);
         }
 
         public void ModificarPorId(Viaje viaje)
         {
             string sql = $"UPDATE Viaje SET horarioSalida = '{viaje.HorarioSalida}', horarioLlegada = '{viaje.HorarioLlegada}', horarioPresencia = '{viaje.HorarioPresencia}', duracionEstimada = '{viaje.DuracionEstimada}' WHERE numeroDeViaje = {viaje.NumeroDeViaje}";
-            _DB.Modificar(sql);
+            _DB.Modificar(sql, false);
         }
 
         public string determinarEstimado(string horarioLlegada, string horarioSalida)

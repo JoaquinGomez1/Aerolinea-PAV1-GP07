@@ -36,13 +36,16 @@
             this.btn_buscar = new System.Windows.Forms.Button();
             this.Btn_Registrar = new System.Windows.Forms.Button();
             this.Btn_Modificar = new System.Windows.Forms.Button();
-            this.Btn_Eliminar = new System.Windows.Forms.Button();
             this.Btn_Limpiar = new System.Windows.Forms.Button();
             this.Btn_Cerrar = new System.Windows.Forms.Button();
             this.grid_tramos = new TrabajoPrácticoPAV.Clase.DataGridView_Aerolinea();
             this.cmb_ASalida = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
             this.cmb_ADestino = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.Btn_Eliminar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             ((System.ComponentModel.ISupportInitialize)(this.grid_tramos)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -67,7 +70,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(55, 21);
             this.label6.TabIndex = 13;
-            this.label6.Text = "Filtros";
+            this.label6.Text = "Filtros de búsqueda";
             // 
             // label4
             // 
@@ -108,7 +111,7 @@
             // 
             // btn_buscar
             // 
-            this.btn_buscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_buscar.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btn_buscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
             this.btn_buscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_buscar.FlatAppearance.BorderSize = 0;
@@ -125,7 +128,7 @@
             // 
             // Btn_Registrar
             // 
-            this.Btn_Registrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.Btn_Registrar.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.Btn_Registrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
             this.Btn_Registrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Btn_Registrar.FlatAppearance.BorderSize = 0;
@@ -142,7 +145,7 @@
             // 
             // Btn_Modificar
             // 
-            this.Btn_Modificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.Btn_Modificar.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.Btn_Modificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
             this.Btn_Modificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Btn_Modificar.Enabled = false;
@@ -179,7 +182,7 @@
             // Btn_Limpiar
             // 
             this.Btn_Limpiar.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.Btn_Limpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
+            this.Btn_Limpiar.BackColor = System.Drawing.SystemColors.Control;
             this.Btn_Limpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Btn_Limpiar.FlatAppearance.BorderSize = 0;
             this.Btn_Limpiar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -196,7 +199,7 @@
             // Btn_Cerrar
             // 
             this.Btn_Cerrar.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.Btn_Cerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
+            this.Btn_Cerrar.BackColor = System.Drawing.SystemColors.Control;
             this.Btn_Cerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Btn_Cerrar.FlatAppearance.BorderSize = 0;
             this.Btn_Cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -214,14 +217,14 @@
             // 
             this.grid_tramos.AllowUserToAddRows = false;
             this.grid_tramos.AllowUserToDeleteRows = false;
-            this.grid_tramos.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.grid_tramos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.grid_tramos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_tramos.Location = new System.Drawing.Point(40, 205);
             this.grid_tramos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grid_tramos.MultiSelect = false;
             this.grid_tramos.Name = "grid_tramos";
-            this.grid_tramos.Pp_FormatoGrid = "ASalida, Aeropuerto Salida, 175;ADestino, Aeropuerto destino, 175;duracion, Durac" +
-    "ión, 75; distancia, Distancia, 75";
+            this.grid_tramos.Pp_FormatoGrid = "codigoAeropuertoSalida, Aeropuerto Salida, 175;codigoAeropuertoDestino, Aeropuert" +
+    "o destino, 175;duracion, Duración, 75;distancia, Distancia, 75";
             this.grid_tramos.Pp_NombreTabla = "Tramo";
             this.grid_tramos.ReadOnly = true;
             this.grid_tramos.RowTemplate.Height = 24;
@@ -242,7 +245,7 @@
             this.cmb_ASalida.Pp_EsPk = false;
             this.cmb_ASalida.Pp_MensajeError = null;
             this.cmb_ASalida.Pp_NombreCampo = "nombre";
-            this.cmb_ASalida.Pp_NombreCampoInsert = null;
+            this.cmb_ASalida.Pp_NombreCampoInsert = "codigoAeropuertoSalida";
             this.cmb_ASalida.Pp_NombreTabla = "Aeropuerto";
             this.cmb_ASalida.Pp_PkTabla = "codigo";
             this.cmb_ASalida.Size = new System.Drawing.Size(458, 28);
@@ -260,11 +263,45 @@
             this.cmb_ADestino.Pp_EsPk = false;
             this.cmb_ADestino.Pp_MensajeError = null;
             this.cmb_ADestino.Pp_NombreCampo = "nombre";
-            this.cmb_ADestino.Pp_NombreCampoInsert = null;
+            this.cmb_ADestino.Pp_NombreCampoInsert = "codigoAeropuertoDestino";
             this.cmb_ADestino.Pp_NombreTabla = "Aeropuerto";
             this.cmb_ADestino.Pp_PkTabla = "codigo";
             this.cmb_ADestino.Size = new System.Drawing.Size(458, 28);
             this.cmb_ADestino.TabIndex = 6;
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Location = new System.Drawing.Point(13, 15);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(974, 485);
+            this.panel1.TabIndex = 28;
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Location = new System.Drawing.Point(32, 37);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(777, 111);
+            this.panel2.TabIndex = 0;
+            // 
+            // Btn_Eliminar
+            // 
+            this.Btn_Eliminar.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.Btn_Eliminar.Enabled = false;
+            this.Btn_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Btn_Eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Btn_Eliminar.Location = new System.Drawing.Point(846, 395);
+            this.Btn_Eliminar.Name = "Btn_Eliminar";
+            this.Btn_Eliminar.Pp_Presionado = false;
+            this.Btn_Eliminar.Size = new System.Drawing.Size(127, 50);
+            this.Btn_Eliminar.TabIndex = 60;
+            this.Btn_Eliminar.Text = "Eliminar";
+            this.Btn_Eliminar.UseVisualStyleBackColor = true;
+            this.Btn_Eliminar.Click += new System.EventHandler(this.Btn_Eliminar_Click);
             // 
             // Frm_ABMTramos
             // 
@@ -273,9 +310,9 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(227)))), ((int)(((byte)(187)))));
             this.ClientSize = new System.Drawing.Size(749, 414);
             this.ControlBox = false;
+            this.Controls.Add(this.Btn_Eliminar);
             this.Controls.Add(this.Btn_Cerrar);
             this.Controls.Add(this.Btn_Limpiar);
-            this.Controls.Add(this.Btn_Eliminar);
             this.Controls.Add(this.Btn_Modificar);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.Btn_Registrar);
@@ -287,6 +324,7 @@
             this.Controls.Add(this.cmb_ADestino);
             this.Controls.Add(this.chb_todos_tramo);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -294,6 +332,7 @@
             this.Text = "Frm_ABMTramos";
             this.Load += new System.EventHandler(this.Frm_ABMTramos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grid_tramos)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -312,8 +351,10 @@
         private System.Windows.Forms.CheckBox chb_todos_tramo;
         private System.Windows.Forms.Button Btn_Registrar;
         private System.Windows.Forms.Button Btn_Modificar;
-        private System.Windows.Forms.Button Btn_Eliminar;
         private System.Windows.Forms.Button Btn_Limpiar;
         private System.Windows.Forms.Button Btn_Cerrar;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private Clase.Button_Aerolinea Btn_Eliminar;
     }
 }

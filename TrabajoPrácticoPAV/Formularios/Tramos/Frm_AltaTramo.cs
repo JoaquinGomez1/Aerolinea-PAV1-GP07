@@ -51,7 +51,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tramos
                 {
                     _TE.Validar(this.Controls);
                     string sql = _TE.CostructorInsert("Tramo", this.Controls);
-                    _BD.Insertar(sql);
+                    _BD.Insertar(sql, false);
                     this.Close();
                 }
                 else

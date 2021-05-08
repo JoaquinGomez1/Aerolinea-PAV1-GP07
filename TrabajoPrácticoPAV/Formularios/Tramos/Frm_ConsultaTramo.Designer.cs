@@ -198,6 +198,7 @@
             this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_ConsultaTramo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_ConsultaTramo";
             this.Load += new System.EventHandler(this.Frm_ConsultaTramo_Load);
             this.BarraSuperior.ResumeLayout(false);
