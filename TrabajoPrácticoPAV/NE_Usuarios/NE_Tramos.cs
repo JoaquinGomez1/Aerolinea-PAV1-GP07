@@ -14,43 +14,19 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
     {
         Conexion_DB _BD = new Conexion_DB();
 
-        public string Constructor_select(CheckBox todos,ComboBox_Aerolinea destino, ComboBox_Aerolinea salida, string NombreTabla)
+        public void CargarGrilla(string sql, DataGridView_Aerolinea grid)
         {
-            string sql = "SELECT * FROM " + NombreTabla;
-
-            if (todos.Checked)
-                return sql;
-
-            //Verifica que ambos Aeropuertos estén seleccionados
-            if (destino.SelectedIndex != -1 && salida.SelectedIndex != -1)
+            DataTable tabla = _BD.EjecutarSelect(sql);
+            grid.Rows.Clear();
+            for (int i = 0; i < tabla.Rows.Count; i++)
             {
-                sql += $" t INNER JOIN Aeropuerto a ON t.codigoAeropuertoDestino=a.codigo " +
-                    $"WHERE t.codigoAeropuertoDestino = '{destino.SelectedValue.ToString()}' " +
-                    $"AND t.codigoAeropuertoSalida = '{salida.SelectedValue.ToString()}'";
-                return sql;
+                grid.Rows.Add();
+                grid.Rows[i].Cells[0].Value = BuscarNombreAeropuerto(tabla.Rows[i]["codigoAeropuertoSalida"].ToString());
+                grid.Rows[i].Cells[1].Value = BuscarNombreAeropuerto(tabla.Rows[i]["codigoAeropuertodestino"].ToString());
+                grid.Rows[i].Cells[2].Value = tabla.Rows[i]["duracion"].ToString();
+                grid.Rows[i].Cells[3].Value = tabla.Rows[i]["distancia"].ToString();
             }
-            else
-            {
-                //Verifica que destino esté seleccionado
-                if (destino.SelectedIndex != -1 && salida.SelectedIndex == -1)
-                {
-                    sql += $" t INNER JOIN Aeropuerto a ON t.codigoAeropuertoDestino=a.codigo " +
-                        $"WHERE t.codigoAeropuertoDestino = '{destino.SelectedValue.ToString()}'";
-                    return sql;
-                }
 
-                //Verifica que salida esté seleccionado
-                if (destino.SelectedIndex == -1 && salida.SelectedIndex != -1)
-                {
-                    sql += $" t INNER JOIN Aeropuerto a ON t.codigoAeropuertoSalida=a.codigo " +
-                        $"WHERE t.codigoAeropuertoDestino = '{salida.SelectedValue.ToString()}'";
-                    return sql;
-                }
-                else
-                    MessageBox.Show("Por favor seleccione al menos un Aeropuerto");
-                    salida.Focus();
-            }
-            return "";
         }
 
         public string BuscarCodigoAeropuerto(string nombreAeropuerto)
@@ -64,6 +40,5 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             return _BD.EjecutarSelect($"SELECT nombre FROM Aeropuerto WHERE codigo = " +
                 $"'{codigoAeropuerto}'").Rows[0]["nombre"].ToString();
         }
-
     }
 }

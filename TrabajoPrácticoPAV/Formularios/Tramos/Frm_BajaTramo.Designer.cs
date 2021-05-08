@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.BarraSuperior = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.Titulo = new System.Windows.Forms.Label();
             this.Btn_Cancelar = new System.Windows.Forms.Button();
             this.Btn_Eliminar = new System.Windows.Forms.Button();
             this.textBox_Aerolinea2 = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
@@ -47,7 +47,7 @@
             // BarraSuperior
             // 
             this.BarraSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.BarraSuperior.Controls.Add(this.label6);
+            this.BarraSuperior.Controls.Add(this.Titulo);
             this.BarraSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.BarraSuperior.Location = new System.Drawing.Point(0, 0);
             this.BarraSuperior.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -56,16 +56,16 @@
             this.BarraSuperior.TabIndex = 46;
             this.BarraSuperior.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BarraSuperior_MouseMove);
             // 
-            // label6
+            // Titulo
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(12, 7);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(200, 27);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "ELIMINAR TRAMO";
+            this.Titulo.AutoSize = true;
+            this.Titulo.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Titulo.ForeColor = System.Drawing.Color.White;
+            this.Titulo.Location = new System.Drawing.Point(12, 7);
+            this.Titulo.Name = "Titulo";
+            this.Titulo.Size = new System.Drawing.Size(200, 27);
+            this.Titulo.TabIndex = 4;
+            this.Titulo.Text = "ELIMINAR TRAMO";
             // 
             // Btn_Cancelar
             // 
@@ -228,6 +228,7 @@
             this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_BajaTramo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_BajaTramo";
             this.Load += new System.EventHandler(this.Frm_BajaTramo_Load);
             this.BarraSuperior.ResumeLayout(false);
@@ -240,7 +241,7 @@
         #endregion
 
         private System.Windows.Forms.Panel BarraSuperior;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label Titulo;
         private System.Windows.Forms.Button Btn_Cancelar;
         private System.Windows.Forms.Button Btn_Eliminar;
         private Clase.TextBox_Aerolinea textBox_Aerolinea2;

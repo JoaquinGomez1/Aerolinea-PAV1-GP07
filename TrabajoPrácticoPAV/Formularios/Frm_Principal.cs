@@ -21,6 +21,13 @@ namespace TrabajoPrácticoPAV
             InitializeComponent();
         }
 
+        private void Frm_Principal_Load(object sender, EventArgs e)
+        {
+            DarColor();
+            Timer_Expandir.Stop();
+            Timer_Contraer.Stop();
+        }
+
         #region Funcionalidades del formulario
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -31,8 +38,6 @@ namespace TrabajoPrácticoPAV
                 Application.Exit();
             }
         }
-
-
 
         private void panel1_MouseMove(object sender, MouseEventArgs e)
         {
@@ -79,6 +84,30 @@ namespace TrabajoPrácticoPAV
             }
             panel1.BackColor = Estilo.ColorBarra;
             Btn_Menu.BackColor = Estilo.ColorBoton;
+            if(Estilo.MenuLateral == 0)
+            {
+                PanelMenu.Width = 42;
+                Btn_Menu.Enabled = false; Btn_Menu.Visible = false;
+                Timer_Contraer.Enabled = true; Timer_Expandir.Enabled = true;
+            }
+            else if(Estilo.MenuLateral == 1)
+            {
+                PanelMenu.Width = 202;
+                Btn_Menu.Enabled = true; Btn_Menu.Visible = true;
+                Timer_Contraer.Enabled = false; Timer_Expandir.Enabled = false;
+            }
+            else if(Estilo.MenuLateral == 2)
+            {
+                PanelMenu.Width = 202;
+                Btn_Menu.Enabled = false; Btn_Menu.Visible = false;
+                Timer_Contraer.Enabled = false; Timer_Expandir.Enabled = false;
+            }
+            else if(Estilo.MenuLateral == 3)
+            {
+                PanelMenu.Width = 42;
+                Btn_Menu.Enabled = false; Btn_Menu.Visible = false;
+                Timer_Contraer.Enabled = false; Timer_Expandir.Enabled = false;
+            }
         }
 
         private void MouseClickButton(object sender, EventArgs e)
@@ -118,7 +147,7 @@ namespace TrabajoPrácticoPAV
 
         private void Btn_Menu_Click(object sender, EventArgs e)
         {
-            if (PanelMenu.Width == 150)
+            if (PanelMenu.Width >= 150)
             {
                 PanelMenu.Width = 42;
                 Btn_Menu.Text = "→";
@@ -184,11 +213,54 @@ namespace TrabajoPrácticoPAV
             }
         }
 
+
         #endregion
 
         #region Cosas rotas 
         #endregion
 
+        #region Movimiento automatico
+        int DebeContraer = 0;
 
+        private void Timer_Expandir_Tick(object sender, EventArgs e)
+        {
+            if (PanelMenu.Width > 192)
+                Timer_Expandir.Stop();
+            else
+                PanelMenu.Width += 10;
+        }
+
+        private void Timer_Contraer_Tick(object sender, EventArgs e)
+        {
+            if(DebeContraer >= 5)
+            {
+                if(PanelMenu.Width <= 42)
+                    Timer_Contraer.Stop();
+                else
+                {
+                    Timer_Expandir.Stop();
+                    PanelMenu.Width -= 10;
+                }
+            }
+            else
+                DebeContraer += 1;
+        }
+
+        private void PanelMenu_MouseEnter(object sender, EventArgs e)
+        {
+            if(Estilo.MenuLateral == 0)
+            {
+                DebeContraer = 0;
+                Timer_Contraer.Stop();
+                Timer_Expandir.Start();
+            }
+        }
+
+        private void MouseSalioDeMenu(object sender, EventArgs e)
+        {
+            if (Estilo.MenuLateral == 0)
+                Timer_Contraer.Start();
+        }
+        #endregion
     }
 }

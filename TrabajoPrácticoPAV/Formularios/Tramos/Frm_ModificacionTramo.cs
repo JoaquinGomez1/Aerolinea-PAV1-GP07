@@ -66,7 +66,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tramos
         private void Btn_Modificar_Click(object sender, EventArgs e)
         {
             string sql = _TE.CostructorUpdateDelete("Tramo", this.Controls, true);
-            _BD.Modificar(sql);
+            _BD.Modificar(sql, false);
             this.Close();
         }
     }
