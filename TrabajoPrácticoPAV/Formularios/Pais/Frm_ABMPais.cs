@@ -85,5 +85,22 @@ namespace TrabajoPrácticoPAV.Formularios.Pais
             Btn_Modificar.Enabled = true;
             Btn_Eliminar.Enabled = true;
         }
+
+        private void Btn_Eliminar_Click(object sender, EventArgs e)
+        {
+            Frm_BajaPais baja_pais = new Frm_BajaPais();
+            baja_pais.id_pais = grid_paises.CurrentRow.Cells["idPais"].Value.ToString();
+            baja_pais.nombre_pais = grid_paises.CurrentRow.Cells["nombrePais"].Value.ToString();
+            baja_pais.ShowDialog();
+        }
+
+        private void Btn_Modificar_Click(object sender, EventArgs e)
+        {
+            Frm_ModificarPais modificar_pais = new Frm_ModificarPais();
+            modificar_pais.id_pais = grid_paises.CurrentRow.Cells["idPais"].Value.ToString();
+            modificar_pais.nombre_pais = grid_paises.CurrentRow.Cells["nombrePais"].Value.ToString();
+            modificar_pais.ShowDialog();
+
+        }
     }
 }

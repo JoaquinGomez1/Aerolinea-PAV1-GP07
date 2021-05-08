@@ -102,6 +102,12 @@
     <Compile Include="Formularios\Pais\Frm_BajaPais.Designer.cs">
       <DependentUpon>Frm_BajaPais.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Pais\Frm_ModificarPais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Pais\Frm_ModificarPais.Designer.cs">
+      <DependentUpon>Frm_ModificarPais.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Pasajeros\Frm_ABMPasajeros.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -242,6 +248,9 @@
     <EmbeddedResource Include="Formularios\Pais\Frm_BajaPais.resx">
       <DependentUpon>Frm_BajaPais.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Pais\Frm_ModificarPais.resx">
+      <DependentUpon>Frm_ModificarPais.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Pasajeros\Frm_ABMPasajeros.resx">
       <DependentUpon>Frm_ABMPasajeros.cs</DependentUpon>
     </EmbeddedResource>
@@ -369,6 +378,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Vuelo_Icono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\país_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

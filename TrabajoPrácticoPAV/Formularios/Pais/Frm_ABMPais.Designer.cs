@@ -126,6 +126,7 @@
             this.Btn_Eliminar.TabIndex = 32;
             this.Btn_Eliminar.Text = "Eliminar";
             this.Btn_Eliminar.UseVisualStyleBackColor = false;
+            this.Btn_Eliminar.Click += new System.EventHandler(this.Btn_Eliminar_Click);
             // 
             // Btn_Modificar
             // 
@@ -143,6 +144,7 @@
             this.Btn_Modificar.TabIndex = 31;
             this.Btn_Modificar.Text = "Modificar";
             this.Btn_Modificar.UseVisualStyleBackColor = false;
+            this.Btn_Modificar.Click += new System.EventHandler(this.Btn_Modificar_Click);
             // 
             // Btn_Registrar
             // 
@@ -193,11 +195,14 @@
             // 
             // grid_paises
             // 
+            this.grid_paises.AllowUserToAddRows = false;
+            this.grid_paises.AllowUserToDeleteRows = false;
             this.grid_paises.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_paises.Location = new System.Drawing.Point(51, 95);
             this.grid_paises.Name = "grid_paises";
-            this.grid_paises.Pp_FormatoGrid = "idPais, Id País, 100; nombrePais, País, 200";
+            this.grid_paises.Pp_FormatoGrid = "idPais, Id País, 200;nombrePais, País, 300";
             this.grid_paises.Pp_NombreTabla = "Pais";
+            this.grid_paises.ReadOnly = true;
             this.grid_paises.Size = new System.Drawing.Size(549, 165);
             this.grid_paises.TabIndex = 3;
             this.grid_paises.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_paises_CellContentClick);
@@ -221,6 +226,7 @@
             this.txt_IdPais.Mask = "999";
             this.txt_IdPais.Name = "txt_IdPais";
             this.txt_IdPais.Pp_EsPk = true;
+            this.txt_IdPais.Pp_MensajeError = null;
             this.txt_IdPais.Pp_NombreCampo = "idPais";
             this.txt_IdPais.Pp_NombreTabla = "Pais";
             this.txt_IdPais.Size = new System.Drawing.Size(37, 26);

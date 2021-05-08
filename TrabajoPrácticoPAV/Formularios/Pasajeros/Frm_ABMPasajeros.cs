@@ -82,6 +82,7 @@ namespace TrabajoPrácticoPAV.Formularios.Pasajeros
             Frm_BajaPasajero baja = new Frm_BajaPasajero();
             baja.tipoDoc = Grid_Pasajero.CurrentRow.Cells["tipoDoc"].Value.ToString();
             baja.numeroDoc = Grid_Pasajero.CurrentRow.Cells["numeroDoc"].Value.ToString();
+            
 
 
             baja.ShowDialog();

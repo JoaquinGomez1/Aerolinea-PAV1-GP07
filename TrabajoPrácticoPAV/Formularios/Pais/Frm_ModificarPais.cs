@@ -13,8 +13,7 @@ using TrabajoPrácticoPAV.Clase;
 
 namespace TrabajoPrácticoPAV.Formularios.Pais
 {
-    public partial class Frm_BajaPais : Form
-
+    public partial class Frm_ModificarPais : Form
     {
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -27,24 +26,12 @@ namespace TrabajoPrácticoPAV.Formularios.Pais
         public string id_pais { get; set; }
         public string nombre_pais { get; set; }
 
-        public Frm_BajaPais()
+        public Frm_ModificarPais()
         {
             InitializeComponent();
         }
 
-        private void btn_cancelar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-
-        private void BarraSuperior_MouseMove(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
-        private void Frm_BajaPais_Load(object sender, EventArgs e)
+        private void Frm_ModificarPais_Load(object sender, EventArgs e)
         {
             this.BackColor = Estilo.ColorFondoForms;
             Estilo.FormatearEstilo(this.Controls);
@@ -52,11 +39,26 @@ namespace TrabajoPrácticoPAV.Formularios.Pais
             txt_nombre.Text = nombre_pais;
         }
 
-        private void btn_eliminar_Click(object sender, EventArgs e)
+        private void BarraSuperior_MouseMove(object sender, MouseEventArgs e)
         {
-            string sql = _TE.CostructorUpdateDelete("Pais", this.Controls, false);
-            _BD.Borrar(sql);
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btn_cancelar_Click(object sender, EventArgs e)
+        {
             this.Close();
+        }
+
+        private void btn_aceptar_Click(object sender, EventArgs e)
+        {
+            if (_TE.Validar(this.Controls) == Tratamientos_Especiales.Resultado.correcto)
+            {
+                string sql = _TE.CostructorUpdateDelete("Pais", this.Controls, true);
+                _BD.Modificar(sql);
+                this.Close();
+            }
+            
         }
     }
 }
