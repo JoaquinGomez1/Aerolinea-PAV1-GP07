@@ -150,6 +150,24 @@
     <Compile Include="Formularios\Provincia\Frm_ABMProvincia.Designer.cs">
       <DependentUpon>Frm_ABMProvincia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Provincia\Frm_AltaProvincia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Provincia\Frm_AltaProvincia.Designer.cs">
+      <DependentUpon>Frm_AltaProvincia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Provincia\Frm_BajaProvincia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Provincia\Frm_BajaProvincia.Designer.cs">
+      <DependentUpon>Frm_BajaProvincia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Provincia\Frm_ModificarProvincia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Provincia\Frm_ModificarProvincia.Designer.cs">
+      <DependentUpon>Frm_ModificarProvincia.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Tramos\Frm_ABMTramos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -283,6 +301,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Provincia\Frm_ABMProvincia.resx">
       <DependentUpon>Frm_ABMProvincia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Provincia\Frm_AltaProvincia.resx">
+      <DependentUpon>Frm_AltaProvincia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Provincia\Frm_BajaProvincia.resx">
+      <DependentUpon>Frm_BajaProvincia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Provincia\Frm_ModificarProvincia.resx">
+      <DependentUpon>Frm_ModificarProvincia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Tramos\Frm_ABMTramos.resx">
       <DependentUpon>Frm_ABMTramos.cs</DependentUpon>
