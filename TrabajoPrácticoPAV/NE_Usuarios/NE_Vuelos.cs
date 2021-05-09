@@ -12,13 +12,6 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
 {
     class NE_Vuelos
     {
-
-        public string Pp_id_Vuelo { get; set; }
-        public string Pp_duracionEst { get; set; }
-        public string Pp_numPorModelo { get; set; }
-        public string Pp_modelo { get; set; }
-        public string Pp_id_vuelo { get; set; }
-
         public enum ResultadoValidacion { existe, no_existe }
         Conexion_DB _BD = new Conexion_DB();
 
