@@ -66,6 +66,12 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Clase\Tratamientos_Especiales.cs" />
+    <Compile Include="Formularios\Asientos\Frm_ABMAsientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Asientos\Frm_ABMAsientos.Designer.cs">
+      <DependentUpon>Frm_ABMAsientos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Aviones\Frm_ABMAviones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,11 +144,29 @@
     <Compile Include="Formularios\Pasajeros\Frm_MostrarPasajero.Designer.cs">
       <DependentUpon>Frm_MostrarPasajero.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Tipo_Asientos\Frm_ABMTipoAsientos.cs">
+    <Compile Include="Formularios\Provincia\Frm_ABMProvincia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Tipo_Asientos\Frm_ABMTipoAsientos.Designer.cs">
-      <DependentUpon>Frm_ABMTipoAsientos.cs</DependentUpon>
+    <Compile Include="Formularios\Provincia\Frm_ABMProvincia.Designer.cs">
+      <DependentUpon>Frm_ABMProvincia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Provincia\Frm_AltaProvincia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Provincia\Frm_AltaProvincia.Designer.cs">
+      <DependentUpon>Frm_AltaProvincia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Provincia\Frm_BajaProvincia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Provincia\Frm_BajaProvincia.Designer.cs">
+      <DependentUpon>Frm_BajaProvincia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Provincia\Frm_ModificarProvincia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Provincia\Frm_ModificarProvincia.Designer.cs">
+      <DependentUpon>Frm_ModificarProvincia.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Tramos\Frm_ABMTramos.cs">
       <SubType>Form</SubType>
@@ -228,14 +252,17 @@
     <Compile Include="Formularios\Vuelo\Frm_ModificarVuelo.Designer.cs">
       <DependentUpon>Frm_ModificarVuelo.cs</DependentUpon>
     </Compile>
+    <Compile Include="NE_Usuarios\NE_Asiento.cs" />
     <Compile Include="NE_Usuarios\NE_Avion.cs" />
     <Compile Include="NE_Usuarios\NE_Clientes.cs" />
-    <Compile Include="NE_Usuarios\NE_pais.cs" />
     <Compile Include="NE_Usuarios\NE_Tramos.cs" />
     <Compile Include="NE_Usuarios\NE_Viajes.cs" />
     <Compile Include="NE_Usuarios\NE_Vuelos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\Asientos\Frm_ABMAsientos.resx">
+      <DependentUpon>Frm_ABMAsientos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Aviones\Frm_ABMAviones.resx">
       <DependentUpon>Frm_ABMAviones.cs</DependentUpon>
     </EmbeddedResource>
@@ -272,8 +299,17 @@
     <EmbeddedResource Include="Formularios\Pasajeros\Frm_MostrarPasajero.resx">
       <DependentUpon>Frm_MostrarPasajero.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Tipo_Asientos\Frm_ABMTipoAsientos.resx">
-      <DependentUpon>Frm_ABMTipoAsientos.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Provincia\Frm_ABMProvincia.resx">
+      <DependentUpon>Frm_ABMProvincia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Provincia\Frm_AltaProvincia.resx">
+      <DependentUpon>Frm_AltaProvincia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Provincia\Frm_BajaProvincia.resx">
+      <DependentUpon>Frm_BajaProvincia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Provincia\Frm_ModificarProvincia.resx">
+      <DependentUpon>Frm_ModificarProvincia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Tramos\Frm_ABMTramos.resx">
       <DependentUpon>Frm_ABMTramos.cs</DependentUpon>
