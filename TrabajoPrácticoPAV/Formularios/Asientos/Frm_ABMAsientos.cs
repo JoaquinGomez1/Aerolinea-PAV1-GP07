@@ -35,7 +35,7 @@ namespace TrabajoPrácticoPAV.Formularios.Asientos
             NE_Asiento asiento = new NE_Asiento();
             Tratamientos_Especiales tratamiento = new Tratamientos_Especiales();
 
-           string sql = tratamiento.ConstructorSelect(this.Controls, "");
+           string sql = tratamiento.ConstructorSelect(this.Controls, "", "Asientos");
             CargarGrilla_asientos(sql);
             //if (chk_asientos.Checked == false && cmb_NumeroAvion.SelectedIndex == -1 && cmb_Modelo.SelectedIndex == -1)
             //{

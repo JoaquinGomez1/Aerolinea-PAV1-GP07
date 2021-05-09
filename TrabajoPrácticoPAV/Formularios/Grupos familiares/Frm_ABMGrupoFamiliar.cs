@@ -38,7 +38,7 @@ namespace TrabajoPrácticoPAV.Formularios.Grupos_familiares
 
         private void Btn_Consultar_Click(object sender, EventArgs e)
         {
-            string sql = _TE.ConstructorSelect(this.Controls, "");
+            string sql = _TE.ConstructorSelect(this.Controls, "", "Familiar_X_Pasajero");
             _NE.CargarGrilla(sql, grid_Familiares);
 
         }
