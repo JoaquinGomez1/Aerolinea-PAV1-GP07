@@ -30,12 +30,10 @@
         {
             this.BarraSuperior = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.btn_cancelar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.btn_registrar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
-            this.txt_idPais = new TrabajoPrácticoPAV.Clase.MaskedTextBox_Aerolinea();
             this.txt_nombre = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
             this.BarraSuperior.SuspendLayout();
             this.SuspendLayout();
@@ -64,21 +62,11 @@
             this.label15.TabIndex = 4;
             this.label15.Text = "REGISTRAR PAÍS";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.label1.Location = new System.Drawing.Point(60, 91);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(19, 17);
-            this.label1.TabIndex = 61;
-            this.label1.Text = "Id";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.label2.Location = new System.Drawing.Point(133, 91);
+            this.label2.Location = new System.Drawing.Point(81, 101);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 17);
             this.label2.TabIndex = 61;
@@ -121,23 +109,10 @@
             this.btn_registrar.UseVisualStyleBackColor = true;
             this.btn_registrar.Click += new System.EventHandler(this.btn_registrar_Click);
             // 
-            // txt_idPais
-            // 
-            this.txt_idPais.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.txt_idPais.Location = new System.Drawing.Point(85, 88);
-            this.txt_idPais.Mask = "999";
-            this.txt_idPais.Name = "txt_idPais";
-            this.txt_idPais.Pp_EsPk = true;
-            this.txt_idPais.Pp_MensajeError = "Ingrese un ID";
-            this.txt_idPais.Pp_NombreCampo = "idPais";
-            this.txt_idPais.Pp_NombreTabla = "Pais";
-            this.txt_idPais.Size = new System.Drawing.Size(31, 23);
-            this.txt_idPais.TabIndex = 0;
-            // 
             // txt_nombre
             // 
             this.txt_nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.txt_nombre.Location = new System.Drawing.Point(208, 88);
+            this.txt_nombre.Location = new System.Drawing.Point(156, 98);
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.Pp_EsPk = false;
             this.txt_nombre.Pp_MensajeError = "Ingrese el nombre";
@@ -155,8 +130,6 @@
             this.Controls.Add(this.btn_registrar);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txt_idPais);
             this.Controls.Add(this.txt_nombre);
             this.Controls.Add(this.BarraSuperior);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -175,8 +148,6 @@
         private System.Windows.Forms.Panel BarraSuperior;
         private System.Windows.Forms.Label label15;
         private Clase.TextBox_Aerolinea txt_nombre;
-        private Clase.MaskedTextBox_Aerolinea txt_idPais;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label14;
         private Clase.Button_Aerolinea btn_cancelar;

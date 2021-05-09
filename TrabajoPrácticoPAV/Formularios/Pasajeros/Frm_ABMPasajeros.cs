@@ -36,7 +36,7 @@ namespace TrabajoPrácticoPAV.Formularios.Pasajeros
         private void Btn_Buscar_Click(object sender, EventArgs e)
         {
             string join = $" JOIN Tipo_Documento ON Pasajero.tipoDoc = Tipo_Documento.tipoDoc ";
-            string sql = _TE.ConstructorSelect(this.Controls, join);
+            string sql = _TE.ConstructorSelect(this.Controls, join, "Pasajero");
             _NE.CargarGrilla(sql, Grid_Pasajero);
             Btn_Modificar.Enabled = false;
             Btn_Eliminar.Enabled = false;

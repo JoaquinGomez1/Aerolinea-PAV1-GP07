@@ -68,7 +68,7 @@
             this.label6.Location = new System.Drawing.Point(80, 50);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 21);
+            this.label6.Size = new System.Drawing.Size(161, 21);
             this.label6.TabIndex = 13;
             this.label6.Text = "Filtros de búsqueda";
             // 
@@ -102,7 +102,7 @@
             this.chb_todos_tramo.AutoSize = true;
             this.chb_todos_tramo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.chb_todos_tramo.Location = new System.Drawing.Point(606, 158);
-            this.chb_todos_tramo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chb_todos_tramo.Margin = new System.Windows.Forms.Padding(2);
             this.chb_todos_tramo.Name = "chb_todos_tramo";
             this.chb_todos_tramo.Size = new System.Drawing.Size(72, 24);
             this.chb_todos_tramo.TabIndex = 4;
@@ -161,24 +161,6 @@
             this.Btn_Modificar.UseVisualStyleBackColor = false;
             this.Btn_Modificar.Click += new System.EventHandler(this.Btn_Modificar_Click);
             // 
-            // Btn_Eliminar
-            // 
-            this.Btn_Eliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.Btn_Eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
-            this.Btn_Eliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Btn_Eliminar.Enabled = false;
-            this.Btn_Eliminar.FlatAppearance.BorderSize = 0;
-            this.Btn_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Btn_Eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.Btn_Eliminar.Location = new System.Drawing.Point(610, 337);
-            this.Btn_Eliminar.Margin = new System.Windows.Forms.Padding(2, 20, 2, 2);
-            this.Btn_Eliminar.Name = "Btn_Eliminar";
-            this.Btn_Eliminar.Size = new System.Drawing.Size(82, 33);
-            this.Btn_Eliminar.TabIndex = 25;
-            this.Btn_Eliminar.Text = "Eliminar";
-            this.Btn_Eliminar.UseVisualStyleBackColor = false;
-            this.Btn_Eliminar.Click += new System.EventHandler(this.Btn_Eliminar_Click);
-            // 
             // Btn_Limpiar
             // 
             this.Btn_Limpiar.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -220,7 +202,7 @@
             this.grid_tramos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.grid_tramos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_tramos.Location = new System.Drawing.Point(40, 205);
-            this.grid_tramos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grid_tramos.Margin = new System.Windows.Forms.Padding(2);
             this.grid_tramos.MultiSelect = false;
             this.grid_tramos.Name = "grid_tramos";
             this.grid_tramos.Pp_FormatoGrid = "codigoAeropuertoSalida, Aeropuerto Salida, 175;codigoAeropuertoDestino, Aeropuert" +
@@ -239,7 +221,7 @@
             this.cmb_ASalida.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.cmb_ASalida.FormattingEnabled = true;
             this.cmb_ASalida.Location = new System.Drawing.Point(236, 85);
-            this.cmb_ASalida.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmb_ASalida.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_ASalida.Name = "cmb_ASalida";
             this.cmb_ASalida.Pp_CampoAceptaNull = true;
             this.cmb_ASalida.Pp_EsPk = false;
@@ -257,7 +239,7 @@
             this.cmb_ADestino.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.cmb_ADestino.FormattingEnabled = true;
             this.cmb_ADestino.Location = new System.Drawing.Point(236, 122);
-            this.cmb_ADestino.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmb_ADestino.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_ADestino.Name = "cmb_ADestino";
             this.cmb_ADestino.Pp_CampoAceptaNull = true;
             this.cmb_ADestino.Pp_EsPk = false;
@@ -291,10 +273,14 @@
             // Btn_Eliminar
             // 
             this.Btn_Eliminar.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.Btn_Eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
+            this.Btn_Eliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Btn_Eliminar.Enabled = false;
+            this.Btn_Eliminar.FlatAppearance.BorderSize = 0;
             this.Btn_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_Eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.Btn_Eliminar.Location = new System.Drawing.Point(846, 395);
+            this.Btn_Eliminar.Margin = new System.Windows.Forms.Padding(2, 20, 2, 2);
             this.Btn_Eliminar.Name = "Btn_Eliminar";
             this.Btn_Eliminar.Pp_Presionado = false;
             this.Btn_Eliminar.Size = new System.Drawing.Size(127, 50);
@@ -327,7 +313,7 @@
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Frm_ABMTramos";
             this.Text = "Frm_ABMTramos";
             this.Load += new System.EventHandler(this.Frm_ABMTramos_Load);
