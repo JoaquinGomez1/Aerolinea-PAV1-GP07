@@ -42,7 +42,7 @@ namespace TrabajoPrácticoPAV.Formularios
 
         private void btn_buscar_Click(object sender, EventArgs e)
         {
-            string sql = _TE.ConstructorSelect(this.Controls, "");
+            string sql = _TE.ConstructorSelect(this.Controls, "", "Tramo");
             _NE.CargarGrilla(sql, grid_tramos);
             Btn_Modificar.Enabled = false;
             Btn_Eliminar.Enabled = false;
@@ -117,5 +117,5 @@ namespace TrabajoPrácticoPAV.Formularios
             consulta.codigoASalida = codigoASalida;
             consulta.ShowDialog();
         }
-     }
+    }
 }
