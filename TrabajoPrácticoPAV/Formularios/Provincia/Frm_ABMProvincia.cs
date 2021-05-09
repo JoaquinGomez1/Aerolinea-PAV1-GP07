@@ -65,29 +65,30 @@ namespace TrabajoPrácticoPAV.Formularios.Provincia
 
         private void CargarGrilla(string sql, DataGridView_Aerolinea grid)
         {
-            
+
             DataTable tabla = _BD.EjecutarSelect(sql);
-            
+
             grid.Rows.Clear();
             for (int i = 0; i < tabla.Rows.Count; i++)
             {
                 grid.Rows.Add();
-                
+
                 grid.Rows[i].Cells[0].Value = buscar_nombre_pais(tabla.Rows[i]["idPais"].ToString());
                 grid.Rows[i].Cells[1].Value = tabla.Rows[i]["idProvincia"].ToString();
                 grid.Rows[i].Cells[2].Value = tabla.Rows[i]["nombreProvincia"].ToString();
             }
         }
 
-        private string buscar_nombre_pais (string id_pais)
+        private string buscar_nombre_pais(string id_pais)
         {
             string sql = $"SELECT nombrePais FROM Pais WHERE idPais={id_pais}";
             return _BD.EjecutarSelect(sql).Rows[0]["nombrePais"].ToString();
         }
-        private string buscar_id_pais(string nombre_pais)
+
+        public string buscar_id_pais(string nombre_pais)
         {
-            string sql = $"SELECT idPais FROM Pais WHERE idPais={nombre_pais}";
-            return _BD.EjecutarSelect(sql).Rows[0][1].ToString();
+            string sql = $"SELECT idPais FROM Pais WHERE nombrePais='{nombre_pais}'";
+            return _BD.EjecutarSelect(sql).Rows[0]["idPais"].ToString();
         }
 
         private bool verificar_seleccion(ComboBox_Aerolinea pais, TextBox_Aerolinea nombre, MaskedTextBox_Aerolinea id, CheckBox todos)
@@ -103,5 +104,42 @@ namespace TrabajoPrácticoPAV.Formularios.Provincia
             }
         }
 
+        private void Btn_Registrar_Click(object sender, EventArgs e)
+        {
+            Frm_AltaProvincia Alta_Provincia = new Frm_AltaProvincia();
+            Alta_Provincia.ShowDialog();
+        }
+
+        private void grid_provincias_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Btn_Modificar.Enabled = true;
+            Btn_Eliminar.Enabled = true;
+        }
+
+        private void Btn_Modificar_Click(object sender, EventArgs e)
+        {
+
+            Frm_ModificarProvincia Modificar_provincia = new Frm_ModificarProvincia();
+
+            string id_pais = buscar_id_pais(grid_provincias.CurrentRow.Cells["idPais"].Value.ToString());
+            Modificar_provincia.pais_provincia = id_pais;
+            Modificar_provincia.id_provincia = grid_provincias.CurrentRow.Cells["idProvincia"].Value.ToString();
+            Modificar_provincia.nombreProvincia = grid_provincias.CurrentRow.Cells["nombreProvincia"].Value.ToString();
+
+            Modificar_provincia.ShowDialog();
+        }
+
+        private void Btn_Eliminar_Click(object sender, EventArgs e)
+        {
+            Frm_BajaProvincia Baja_Provincia = new Frm_BajaProvincia();
+
+            string id_pais = buscar_id_pais(grid_provincias.CurrentRow.Cells["idPais"].Value.ToString());
+            Baja_Provincia.pais_provincia = id_pais;
+            Baja_Provincia.id_provincia = grid_provincias.CurrentRow.Cells["idProvincia"].Value.ToString();
+            Baja_Provincia.nombreProvincia = grid_provincias.CurrentRow.Cells["nombreProvincia"].Value.ToString();
+
+            Baja_Provincia.ShowDialog();
+
+        }
     }
 }

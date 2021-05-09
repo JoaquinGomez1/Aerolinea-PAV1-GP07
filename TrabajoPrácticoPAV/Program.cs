@@ -6,7 +6,6 @@ using System.Windows.Forms;
 using TrabajoPrácticoPAV.Formularios;
 using TrabajoPrácticoPAV.Formularios.Provincia;
 using TrabajoPrácticoPAV.Formularios.Pais;
-using TrabajoPrácticoPAV.Formularios.Grupos_familiares;
 
 namespace TrabajoPrácticoPAV
 {
@@ -20,10 +19,7 @@ namespace TrabajoPrácticoPAV
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Frm_Principal());
-            Application.Run(new Frm_ABMGrupoFamiliar());
-            //Application.Run(new Frm_ABMPais());
-
+            Application.Run(new Frm_Principal());
         }
     }
 }
