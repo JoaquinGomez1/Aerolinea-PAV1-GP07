@@ -14,14 +14,15 @@ namespace TrabajoPrácticoPAV.Clase
     class Tratamientos_Especiales
     {
         public enum Resultado { correcto, error }
-
-        public string ConstructorSelect(Control.ControlCollection controles, string join)
+   
+        public string ConstructorSelect(Control.ControlCollection controles, string join, string nombreTabla)
         {
             string sql = "SELECT ";
             string condiciones = "";
             string atributosTabla = "";
             bool todos = false;
-            string nombreTabla = "";
+
+
 
             foreach (var control in controles)
             {
@@ -29,7 +30,6 @@ namespace TrabajoPrácticoPAV.Clase
                 if (control.GetType().ToString() == "TrabajoPrácticoPAV.Clase.DataGridView_Aerolinea")
                 {
                     DataGridView_Aerolinea grid = ((DataGridView_Aerolinea)control);
-                    nombreTabla = grid.Pp_NombreTabla;
                     atributosTabla += $"{ExtraerColumnasGrid(grid)} FROM {nombreTabla}";
                 }
                 
@@ -46,7 +46,7 @@ namespace TrabajoPrácticoPAV.Clase
                     TextBox_Aerolinea txt = (TextBox_Aerolinea)control;
 
                     //Crea la condición que se va a asignar
-                    string condicion = $"{txt.Pp_NombreTabla}.{txt.Pp_NombreCampo}={FormatearDato(txt.Text)}";
+                    string condicion = $"{txt.Pp_NombreTabla}.{txt.Pp_NombreCampo} LIKE {FormatearDato(txt.Text)}";
 
                     if (txt.Text != "")
                     {
@@ -107,6 +107,7 @@ namespace TrabajoPrácticoPAV.Clase
                 atributosTabla = $" * FROM {nombreTabla} ";
 
             sql += atributosTabla + join + condiciones;
+        
             return sql;
         }
 
@@ -119,7 +120,7 @@ namespace TrabajoPrácticoPAV.Clase
             }
             catch (Exception)
             {
-                return $"'{dato}'";
+                return $"'%{dato}%'";
                 throw;
             }
         }

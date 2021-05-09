@@ -57,7 +57,7 @@
             this.Btn_Cerrar.Margin = new System.Windows.Forms.Padding(2, 20, 2, 2);
             this.Btn_Cerrar.Name = "Btn_Cerrar";
             this.Btn_Cerrar.Size = new System.Drawing.Size(76, 29);
-            this.Btn_Cerrar.TabIndex = 47;
+            this.Btn_Cerrar.TabIndex = 9;
             this.Btn_Cerrar.Text = "Cerrar";
             this.Btn_Cerrar.UseVisualStyleBackColor = false;
             this.Btn_Cerrar.Click += new System.EventHandler(this.Btn_Cerrar_Click);
@@ -73,7 +73,7 @@
             this.Btn_Limpiar.Margin = new System.Windows.Forms.Padding(2, 20, 2, 2);
             this.Btn_Limpiar.Name = "Btn_Limpiar";
             this.Btn_Limpiar.Size = new System.Drawing.Size(76, 29);
-            this.Btn_Limpiar.TabIndex = 46;
+            this.Btn_Limpiar.TabIndex = 8;
             this.Btn_Limpiar.Text = "Limpiar";
             this.Btn_Limpiar.UseVisualStyleBackColor = false;
             this.Btn_Limpiar.Click += new System.EventHandler(this.Btn_Limpiar_Click);
@@ -90,7 +90,7 @@
             this.Btn_Eliminar.Margin = new System.Windows.Forms.Padding(2, 20, 2, 2);
             this.Btn_Eliminar.Name = "Btn_Eliminar";
             this.Btn_Eliminar.Size = new System.Drawing.Size(104, 33);
-            this.Btn_Eliminar.TabIndex = 45;
+            this.Btn_Eliminar.TabIndex = 7;
             this.Btn_Eliminar.Text = "Eliminar";
             this.Btn_Eliminar.UseVisualStyleBackColor = false;
             // 
@@ -106,7 +106,7 @@
             this.Btn_Modificar.Margin = new System.Windows.Forms.Padding(2, 20, 2, 2);
             this.Btn_Modificar.Name = "Btn_Modificar";
             this.Btn_Modificar.Size = new System.Drawing.Size(104, 33);
-            this.Btn_Modificar.TabIndex = 44;
+            this.Btn_Modificar.TabIndex = 6;
             this.Btn_Modificar.Text = "Modificar";
             this.Btn_Modificar.UseVisualStyleBackColor = false;
             // 
@@ -121,7 +121,7 @@
             this.Btn_Registrar.Margin = new System.Windows.Forms.Padding(2, 20, 2, 2);
             this.Btn_Registrar.Name = "Btn_Registrar";
             this.Btn_Registrar.Size = new System.Drawing.Size(104, 33);
-            this.Btn_Registrar.TabIndex = 43;
+            this.Btn_Registrar.TabIndex = 5;
             this.Btn_Registrar.Text = "Registrar";
             this.Btn_Registrar.UseVisualStyleBackColor = false;
             // 
@@ -136,7 +136,7 @@
             this.btn_buscar.Margin = new System.Windows.Forms.Padding(2, 20, 2, 2);
             this.btn_buscar.Name = "btn_buscar";
             this.btn_buscar.Size = new System.Drawing.Size(104, 33);
-            this.btn_buscar.TabIndex = 41;
+            this.btn_buscar.TabIndex = 4;
             this.btn_buscar.Text = "Buscar";
             this.btn_buscar.UseVisualStyleBackColor = false;
             this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
@@ -200,15 +200,15 @@
             this.cmb_Pais.FormattingEnabled = true;
             this.cmb_Pais.Location = new System.Drawing.Point(90, 57);
             this.cmb_Pais.Name = "cmb_Pais";
-            this.cmb_Pais.Pp_CampoAceptaNull = true;
+            this.cmb_Pais.Pp_CampoAceptaNull = false;
             this.cmb_Pais.Pp_EsPk = false;
             this.cmb_Pais.Pp_MensajeError = "";
             this.cmb_Pais.Pp_NombreCampo = "nombrePais";
-            this.cmb_Pais.Pp_NombreCampoInsert = "";
+            this.cmb_Pais.Pp_NombreCampoInsert = "idPais";
             this.cmb_Pais.Pp_NombreTabla = "Pais";
             this.cmb_Pais.Pp_PkTabla = "idPais";
             this.cmb_Pais.Size = new System.Drawing.Size(157, 28);
-            this.cmb_Pais.TabIndex = 50;
+            this.cmb_Pais.TabIndex = 0;
             // 
             // txt_idProvincia
             // 
@@ -221,7 +221,7 @@
             this.txt_idProvincia.Pp_NombreCampo = "idProvincia";
             this.txt_idProvincia.Pp_NombreTabla = "Provincia";
             this.txt_idProvincia.Size = new System.Drawing.Size(37, 26);
-            this.txt_idProvincia.TabIndex = 48;
+            this.txt_idProvincia.TabIndex = 1;
             // 
             // grid_provincias
             // 
@@ -230,12 +230,12 @@
             this.grid_provincias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_provincias.Location = new System.Drawing.Point(46, 102);
             this.grid_provincias.Name = "grid_provincias";
-            this.grid_provincias.Pp_FormatoGrid = "nombrePais, País, 200;idProvincia,Id Provincia,100;nombreProvincia,Nombre Provinc" +
-    "ia,200";
+            this.grid_provincias.Pp_FormatoGrid = "idPais, País, 200;idProvincia,Id Provincia,100;nombreProvincia,Nombre Provincia,2" +
+    "00";
             this.grid_provincias.Pp_NombreTabla = "Provincia";
             this.grid_provincias.ReadOnly = true;
             this.grid_provincias.Size = new System.Drawing.Size(549, 165);
-            this.grid_provincias.TabIndex = 39;
+            this.grid_provincias.TabIndex = 3;
             // 
             // txt_Nombre
             // 
@@ -244,10 +244,10 @@
             this.txt_Nombre.Name = "txt_Nombre";
             this.txt_Nombre.Pp_EsPk = false;
             this.txt_Nombre.Pp_MensajeError = null;
-            this.txt_Nombre.Pp_NombreCampo = "nombrePais";
-            this.txt_Nombre.Pp_NombreTabla = "Pais";
+            this.txt_Nombre.Pp_NombreCampo = "nombreProvincia";
+            this.txt_Nombre.Pp_NombreTabla = "Provincia";
             this.txt_Nombre.Size = new System.Drawing.Size(121, 26);
-            this.txt_Nombre.TabIndex = 36;
+            this.txt_Nombre.TabIndex = 2;
             // 
             // Frm_ABMProvincia
             // 

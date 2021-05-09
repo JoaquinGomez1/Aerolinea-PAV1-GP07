@@ -43,7 +43,6 @@ namespace TrabajoPrácticoPAV.Formularios.Provincia
         {
             txt_idProvincia.Text = "";
             txt_Nombre.Text = "";
-            cmb_Pais.SelectedIndex = -1;
             grid_provincias.Rows.Clear();
             chb_todos.Checked = false;
             Btn_Modificar.Enabled = false;
@@ -56,7 +55,7 @@ namespace TrabajoPrácticoPAV.Formularios.Provincia
             {
                 DataTable tabla = new DataTable();
                 string join = " JOIN Pais ON Provincia.idPais = Pais.idPais ";
-                string sql = _TE.ConstructorSelect(this.Controls, join);
+                string sql = _TE.ConstructorSelect(this.Controls, join, "Provincia");
                 CargarGrilla(sql, grid_provincias);
                 Btn_Modificar.Enabled = false;
                 Btn_Eliminar.Enabled = false;
@@ -66,18 +65,32 @@ namespace TrabajoPrácticoPAV.Formularios.Provincia
 
         private void CargarGrilla(string sql, DataGridView_Aerolinea grid)
         {
+            
             DataTable tabla = _BD.EjecutarSelect(sql);
+            
             grid.Rows.Clear();
             for (int i = 0; i < tabla.Rows.Count; i++)
             {
                 grid.Rows.Add();
-                grid.Rows[i].Cells[0].Value = tabla.Rows[i]["nombrePais"].ToString();
+                
+                grid.Rows[i].Cells[0].Value = buscar_nombre_pais(tabla.Rows[i]["idPais"].ToString());
                 grid.Rows[i].Cells[1].Value = tabla.Rows[i]["idProvincia"].ToString();
                 grid.Rows[i].Cells[2].Value = tabla.Rows[i]["nombreProvincia"].ToString();
             }
         }
 
-            private bool verificar_seleccion(ComboBox_Aerolinea pais, TextBox_Aerolinea nombre, MaskedTextBox_Aerolinea id, CheckBox todos)
+        private string buscar_nombre_pais (string id_pais)
+        {
+            string sql = $"SELECT nombrePais FROM Pais WHERE idPais={id_pais}";
+            return _BD.EjecutarSelect(sql).Rows[0]["nombrePais"].ToString();
+        }
+        private string buscar_id_pais(string nombre_pais)
+        {
+            string sql = $"SELECT idPais FROM Pais WHERE idPais={nombre_pais}";
+            return _BD.EjecutarSelect(sql).Rows[0][1].ToString();
+        }
+
+        private bool verificar_seleccion(ComboBox_Aerolinea pais, TextBox_Aerolinea nombre, MaskedTextBox_Aerolinea id, CheckBox todos)
         {
             if (pais.SelectedIndex == -1 & nombre.Text == "" & id.Text == "" & todos.Checked == false)
             {

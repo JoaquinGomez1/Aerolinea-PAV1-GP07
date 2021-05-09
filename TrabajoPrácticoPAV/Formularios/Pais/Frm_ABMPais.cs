@@ -44,7 +44,7 @@ namespace TrabajoPrácticoPAV.Formularios.Pais
             {
                 DataTable tabla = new DataTable();
                 string join = "";
-                string sql = _TE.ConstructorSelect(this.Controls, join);
+                string sql = _TE.ConstructorSelect(this.Controls, join, "Pais");
                 CargarGrilla(_BD.EjecutarSelect(sql));
                 Btn_Modificar.Enabled = false;
                 Btn_Eliminar.Enabled = false;
