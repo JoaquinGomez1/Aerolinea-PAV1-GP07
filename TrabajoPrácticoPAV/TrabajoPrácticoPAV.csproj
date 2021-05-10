@@ -61,6 +61,7 @@
     <Compile Include="Clase\MaskedTextBox_Aerolinea.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Clase\Modelos\Tripulante.cs" />
     <Compile Include="Clase\Modelos\Viaje.cs" />
     <Compile Include="Clase\TextBox_Aerolinea.cs">
       <SubType>Component</SubType>
@@ -71,6 +72,30 @@
     </Compile>
     <Compile Include="Formularios\Asientos\Frm_ABMAsientos.Designer.cs">
       <DependentUpon>Frm_ABMAsientos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Asientos\Frm_AltaAsientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Asientos\Frm_AltaAsientos.Designer.cs">
+      <DependentUpon>Frm_AltaAsientos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Asientos\Frm_BajaAsiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Asientos\Frm_BajaAsiento.Designer.cs">
+      <DependentUpon>Frm_BajaAsiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Asientos\Frm_ConsultarAsiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Asientos\Frm_ConsultarAsiento.Designer.cs">
+      <DependentUpon>Frm_ConsultarAsiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Asientos\Frm_ModificarAsiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Asientos\Frm_ModificarAsiento.Designer.cs">
+      <DependentUpon>Frm_ModificarAsiento.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Aviones\Frm_ABMAviones.cs">
       <SubType>Form</SubType>
@@ -89,6 +114,60 @@
     </Compile>
     <Compile Include="Formularios\Frm_ABMReservas.Designer.cs">
       <DependentUpon>Frm_ABMReservas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Grupos familiares\Frm_ABMGrupoFamiliar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Grupos familiares\Frm_ABMGrupoFamiliar.Designer.cs">
+      <DependentUpon>Frm_ABMGrupoFamiliar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Grupos familiares\Frm_AltaGrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Grupos familiares\Frm_AltaGrupo.Designer.cs">
+      <DependentUpon>Frm_AltaGrupo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Grupos familiares\Frm_EliminarGrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Grupos familiares\Frm_EliminarGrupo.Designer.cs">
+      <DependentUpon>Frm_EliminarGrupo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Grupos familiares\Frm_ModificarGrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Grupos familiares\Frm_ModificarGrupo.Designer.cs">
+      <DependentUpon>Frm_ModificarGrupo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Modelo\Frm_ABMmodelo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Modelo\Frm_ABMmodelo.Designer.cs">
+      <DependentUpon>Frm_ABMmodelo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Modelo\Frm_AltaModelo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Modelo\Frm_AltaModelo.Designer.cs">
+      <DependentUpon>Frm_AltaModelo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Modelo\Frm_BajaModelo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Modelo\Frm_BajaModelo.Designer.cs">
+      <DependentUpon>Frm_BajaModelo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Modelo\Frm_ConsultaModelo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Modelo\Frm_ConsultaModelo.Designer.cs">
+      <DependentUpon>Frm_ConsultaModelo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Modelo\Frm_ModificarModelo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Modelo\Frm_ModificarModelo.Designer.cs">
+      <DependentUpon>Frm_ModificarModelo.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Pais\Frm_ABMPais.cs">
       <SubType>Form</SubType>
@@ -234,6 +313,12 @@
     <Compile Include="Formularios\Tramos\Frm_ModificacionTramo.Designer.cs">
       <DependentUpon>Frm_ModificacionTramo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Tripulacion\Frm_Tripulacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Tripulacion\Frm_Tripulacion.Designer.cs">
+      <DependentUpon>Frm_Tripulacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Viajes\Frm_ABMViajes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -279,14 +364,32 @@
     <Compile Include="NE_Usuarios\NE_Asiento.cs" />
     <Compile Include="NE_Usuarios\NE_Avion.cs" />
     <Compile Include="NE_Usuarios\NE_Clientes.cs" />
+
     <Compile Include="NE_Usuarios\NE_TipoAsiento.cs" />
+
+    <Compile Include="NE_Usuarios\NE_GrupoFamiliar.cs" />
+    <Compile Include="NE_Usuarios\NE_Modelo.cs" />
+
     <Compile Include="NE_Usuarios\NE_Tramos.cs" />
+    <Compile Include="NE_Usuarios\NE_Tripulacion.cs" />
     <Compile Include="NE_Usuarios\NE_Viajes.cs" />
     <Compile Include="NE_Usuarios\NE_Vuelos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formularios\Asientos\Frm_ABMAsientos.resx">
       <DependentUpon>Frm_ABMAsientos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Asientos\Frm_AltaAsientos.resx">
+      <DependentUpon>Frm_AltaAsientos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Asientos\Frm_BajaAsiento.resx">
+      <DependentUpon>Frm_BajaAsiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Asientos\Frm_ConsultarAsiento.resx">
+      <DependentUpon>Frm_ConsultarAsiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Asientos\Frm_ModificarAsiento.resx">
+      <DependentUpon>Frm_ModificarAsiento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Aviones\Frm_ABMAviones.resx">
       <DependentUpon>Frm_ABMAviones.cs</DependentUpon>
@@ -296,6 +399,33 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Frm_ABMReservas.resx">
       <DependentUpon>Frm_ABMReservas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Grupos familiares\Frm_ABMGrupoFamiliar.resx">
+      <DependentUpon>Frm_ABMGrupoFamiliar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Grupos familiares\Frm_AltaGrupo.resx">
+      <DependentUpon>Frm_AltaGrupo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Grupos familiares\Frm_EliminarGrupo.resx">
+      <DependentUpon>Frm_EliminarGrupo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Grupos familiares\Frm_ModificarGrupo.resx">
+      <DependentUpon>Frm_ModificarGrupo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Modelo\Frm_ABMmodelo.resx">
+      <DependentUpon>Frm_ABMmodelo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Modelo\Frm_AltaModelo.resx">
+      <DependentUpon>Frm_AltaModelo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Modelo\Frm_BajaModelo.resx">
+      <DependentUpon>Frm_BajaModelo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Modelo\Frm_ConsultaModelo.resx">
+      <DependentUpon>Frm_ConsultaModelo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Modelo\Frm_ModificarModelo.resx">
+      <DependentUpon>Frm_ModificarModelo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Pais\Frm_ABMPais.resx">
       <DependentUpon>Frm_ABMPais.cs</DependentUpon>
@@ -368,6 +498,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Tramos\Frm_ModificacionTramo.resx">
       <DependentUpon>Frm_ModificacionTramo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Tripulacion\Frm_Tripulacion.resx">
+      <DependentUpon>Frm_Tripulacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Viajes\Frm_ABMViajes.resx">
       <DependentUpon>Frm_ABMViajes.cs</DependentUpon>

@@ -45,18 +45,18 @@ namespace TrabajoPrácticoPAV.Formularios
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int current = grid_aviones.CurrentRow.Index;
-          
+
             if (grid_aviones.CurrentCell.ColumnIndex == 3)
             {
 
-               //MessageBox.Show( "Eliminar", grid_aviones.CurrentRow.Cells[0].Value.ToString());
+                //MessageBox.Show( "Eliminar", grid_aviones.CurrentRow.Cells[0].Value.ToString());
 
-               NE_Avion avion = new NE_Avion();
-               string numeroModelo = grid_aviones.CurrentRow.Cells[0].Value.ToString();
-               var idModelo = grid_aviones.Rows[current].Cells[2].Value;
-               CargarGrilla(avion.Remover_avion(numeroModelo, idModelo));
-               MessageBox.Show("Avion eliminado, Actualize la tabla");
-               return;
+                NE_Avion avion = new NE_Avion();
+                string numeroModelo = grid_aviones.CurrentRow.Cells[0].Value.ToString();
+                var idModelo = grid_aviones.Rows[current].Cells[2].Value;
+                CargarGrilla(avion.Remover_avion(numeroModelo, idModelo));
+                MessageBox.Show("Avion eliminado, Actualize la tabla");
+                return;
             }
 
 

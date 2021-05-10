@@ -16,6 +16,8 @@ namespace TrabajoPrácticoPAV.Formularios
         public Frm_ABMViajes()
         {
             InitializeComponent();
+            this.BackColor = Estilo.ColorFondoForms;
+            Estilo.FormatearEstilo(this.Controls);
         }
 
         private readonly NE_Viajes _NE_Viajes = new NE_Viajes();
@@ -55,11 +57,6 @@ namespace TrabajoPrácticoPAV.Formularios
             bool ambosCamposCompletados = llegadaCompletada && salidaCompletada;
 
             bool esHorarioValido = Tiempo.esHorarioValido(horarioSalida) && Tiempo.esHorarioValido(horarioLlegada);
-
-            //if (!esHorarioValido)
-            //{
-            //    MessageBox.Show($"Salida: {horarioSalida}\n Llegada: {horarioLlegada} \n Presencia: {Mtxt_presencia.Text}");
-            //}
 
             if (ambosCamposCompletados && esHorarioValido)
             {
