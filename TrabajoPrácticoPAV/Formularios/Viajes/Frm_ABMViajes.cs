@@ -16,6 +16,8 @@ namespace TrabajoPrácticoPAV.Formularios
         public Frm_ABMViajes()
         {
             InitializeComponent();
+            this.BackColor = Estilo.ColorFondoForms;
+            Estilo.FormatearEstilo(this.Controls);
         }
 
         private readonly NE_Viajes _NE_Viajes = new NE_Viajes();
@@ -29,8 +31,6 @@ namespace TrabajoPrácticoPAV.Formularios
 
         private void Frm_ABMViajes_Load(object sender, EventArgs e)
         {
-            this.BackColor = Estilo.ColorFondoForms;
-            Estilo.FormatearEstilo(this.Controls);
             CargarTodos();
         }
 
