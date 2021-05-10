@@ -3,26 +3,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TrabajoPrácticoPAV.Backend;
+using System.Data;
 using TrabajoPrácticoPAV.Clase;
 using System.Windows.Forms;
+using TrabajoPrácticoPAV.Backend;
 
 namespace TrabajoPrácticoPAV.NE_Usuarios
 {
     class NE_Asiento
     {
         Conexion_DB _BD = new Conexion_DB();
-
+        public enum ResultadoValidacion { existe, no_existe }
         //public string BuscarTodos()
         //{
         //    string sql = "SELECT * FROM asientos WHERE idVuelo";
         //    return _BD.EjecutarSelect(sql);
         //}
-        //public DataTable RecuperarXId(string id_vuelo)
-        //{
-        //    string sql = "SELECT * FROM vuelo WHERE idVuelo =" + id_vuelo;
-        //    return _BD.EjecutarSelect(sql);
-        //}
+        public DataTable RecuperarXId(string id_Asiento)
+        {
+            string sql = "SELECT * FROM Asientos WHERE numeroAsiento =" + id_Asiento;
+            return _BD.EjecutarSelect(sql);
+        }
 
         //public DataTable RecuprarXmodelo(string id_modelo)
         //{
@@ -63,5 +64,10 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
         //    string sqlDelete = @"DELETE FROM vuelo WHERE idVuelo = " + id_vuelo;
         //    _BD.Borrar(sqlDelete, false);
         //}
+        public void Borrar(string id_Asiento)
+        {
+            string sqlDelete = @"DELETE FROM Asientos WHERE numeroAsiento = " + id_Asiento;
+            _BD.Borrar(sqlDelete, false);
+        }
     }
 }
