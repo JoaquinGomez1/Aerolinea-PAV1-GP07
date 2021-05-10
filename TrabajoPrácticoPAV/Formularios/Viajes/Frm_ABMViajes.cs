@@ -29,6 +29,8 @@ namespace TrabajoPrácticoPAV.Formularios
 
         private void Frm_ABMViajes_Load(object sender, EventArgs e)
         {
+            this.BackColor = Estilo.ColorFondoForms;
+            Estilo.FormatearEstilo(this.Controls);
             CargarTodos();
         }
 

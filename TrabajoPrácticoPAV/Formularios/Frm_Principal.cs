@@ -84,25 +84,25 @@ namespace TrabajoPrácticoPAV
             }
             panel1.BackColor = Estilo.ColorBarra;
             Btn_Menu.BackColor = Estilo.ColorBoton;
-            if(Estilo.MenuLateral == 0)
+            if (Estilo.MenuLateral == 0)
             {
                 PanelMenu.Width = 42;
                 Btn_Menu.Enabled = false; Btn_Menu.Visible = false;
                 Timer_Contraer.Enabled = true; Timer_Expandir.Enabled = true;
             }
-            else if(Estilo.MenuLateral == 1)
+            else if (Estilo.MenuLateral == 1)
             {
                 PanelMenu.Width = 202;
                 Btn_Menu.Enabled = true; Btn_Menu.Visible = true;
                 Timer_Contraer.Enabled = false; Timer_Expandir.Enabled = false;
             }
-            else if(Estilo.MenuLateral == 2)
+            else if (Estilo.MenuLateral == 2)
             {
                 PanelMenu.Width = 202;
                 Btn_Menu.Enabled = false; Btn_Menu.Visible = false;
                 Timer_Contraer.Enabled = false; Timer_Expandir.Enabled = false;
             }
-            else if(Estilo.MenuLateral == 3)
+            else if (Estilo.MenuLateral == 3)
             {
                 PanelMenu.Width = 42;
                 Btn_Menu.Enabled = false; Btn_Menu.Visible = false;
@@ -114,6 +114,9 @@ namespace TrabajoPrácticoPAV
         {
             Button_Aerolinea boton = ((Button_Aerolinea)sender);
             CambiarColorBoton(boton);
+
+            // ↓ Permite que se puedan aplicar los cambios de estilo en la configuración incluso si ya fueron abiertos anteriormente
+            CerrarTodosLosForms();
             switch (boton.Name.ToString())
             {
                 case "Btn_ABMClientes":
@@ -137,10 +140,26 @@ namespace TrabajoPrácticoPAV
                 case "Btn_ABMAviones":
                     AbrirFormulario<Frm_ABMAviones>();
                     break;
-                
+
                 default:
                     MessageBox.Show("Esperando implementación");
                     break;
+            }
+
+        }
+
+        private void CerrarTodosLosForms()
+        {
+            List<Form> openForms = new List<Form>();
+
+            // Determinamos cuales formularios están abiertos y los agregamos a una lista con la que podamos trabajar temporalmente
+            foreach (Form form in Application.OpenForms)
+                openForms.Add(form);
+
+            foreach (Form form in openForms)
+            {
+                if (form.Name != "Frm_Principal")
+                    form.Close();
             }
 
         }
@@ -232,9 +251,9 @@ namespace TrabajoPrácticoPAV
 
         private void Timer_Contraer_Tick(object sender, EventArgs e)
         {
-            if(DebeContraer >= 5)
+            if (DebeContraer >= 5)
             {
-                if(PanelMenu.Width <= 42)
+                if (PanelMenu.Width <= 42)
                     Timer_Contraer.Stop();
                 else
                 {
@@ -248,7 +267,7 @@ namespace TrabajoPrácticoPAV
 
         private void PanelMenu_MouseEnter(object sender, EventArgs e)
         {
-            if(Estilo.MenuLateral == 0)
+            if (Estilo.MenuLateral == 0)
             {
                 DebeContraer = 0;
                 Timer_Contraer.Stop();

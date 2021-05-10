@@ -46,7 +46,7 @@ namespace TrabajoPrácticoPAV.Clase
                         if (((Label)item).Name == "Titulo")
                             ((Label)item).ForeColor = Color.FromArgb(255, 255, 255);
                         else
-                        ((Label)item).ForeColor = Estilo.ColorLetrasLabel;
+                            ((Label)item).ForeColor = Estilo.ColorLetrasLabel;
                         break;
                     case "TrabajoPrácticoPAV.Clase.DataGridView_Aerolinea":
                     case "System.Windows.Forms.CheckBox":
@@ -58,6 +58,7 @@ namespace TrabajoPrácticoPAV.Clase
                     case "System.Windows.Forms.MonthCalendar":
                     case "System.Windows.Forms.DataGridView":
                     case "System.Windows.Forms.PictureBox":
+                    case "System.Windows.Forms.MaskedTextBox":
                         break;
                     default:
                         MessageBox.Show($"{nombreControl} es un control no admitido, agregar en ESTILOS");
