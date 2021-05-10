@@ -96,6 +96,24 @@
     <Compile Include="Formularios\Grupos familiares\Frm_ABMGrupoFamiliar.Designer.cs">
       <DependentUpon>Frm_ABMGrupoFamiliar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Grupos familiares\Frm_AltaGrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Grupos familiares\Frm_AltaGrupo.Designer.cs">
+      <DependentUpon>Frm_AltaGrupo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Grupos familiares\Frm_EliminarGrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Grupos familiares\Frm_EliminarGrupo.Designer.cs">
+      <DependentUpon>Frm_EliminarGrupo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Grupos familiares\Frm_ModificarGrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Grupos familiares\Frm_ModificarGrupo.Designer.cs">
+      <DependentUpon>Frm_ModificarGrupo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Pais\Frm_ABMPais.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -281,6 +299,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Grupos familiares\Frm_ABMGrupoFamiliar.resx">
       <DependentUpon>Frm_ABMGrupoFamiliar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Grupos familiares\Frm_AltaGrupo.resx">
+      <DependentUpon>Frm_AltaGrupo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Grupos familiares\Frm_EliminarGrupo.resx">
+      <DependentUpon>Frm_EliminarGrupo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Grupos familiares\Frm_ModificarGrupo.resx">
+      <DependentUpon>Frm_ModificarGrupo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Pais\Frm_ABMPais.resx">
       <DependentUpon>Frm_ABMPais.cs</DependentUpon>

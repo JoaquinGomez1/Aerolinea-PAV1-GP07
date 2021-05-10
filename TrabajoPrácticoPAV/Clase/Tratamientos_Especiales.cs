@@ -103,15 +103,17 @@ namespace TrabajoPrácticoPAV.Clase
                     }
                 }
             }
-            if (atributosTabla == "" || todos)
+            if (atributosTabla == "")
                 atributosTabla = $" * FROM {nombreTabla} ";
+            if (todos)
+                condiciones = "";
 
             sql += atributosTabla + join + condiciones;
         
             return sql;
         }
 
-        private object FormatearDato(string dato)
+        public object FormatearDato(string dato)
         {
             try
             {

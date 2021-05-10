@@ -44,10 +44,14 @@
             this.Btn_Cerrar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.btn_limpiar1 = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.Btn_Consultar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
-            this.btn_registrar1 = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
-            this.btn_borrar1 = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
-            this.btn_modificar1 = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
+            this.Btn_Registrar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
+            this.Btn_Eliminar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
+            this.Btn_Modificar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.grid_Familiares = new TrabajoPrácticoPAV.Clase.DataGridView_Aerolinea();
+            this.tipodoc1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numero1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipodoc2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numero2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_Familiares)).BeginInit();
             this.SuspendLayout();
@@ -186,7 +190,7 @@
             this.Cmb_TipoDoc.Location = new System.Drawing.Point(574, 82);
             this.Cmb_TipoDoc.Margin = new System.Windows.Forms.Padding(11, 2, 11, 2);
             this.Cmb_TipoDoc.Name = "Cmb_TipoDoc";
-            this.Cmb_TipoDoc.Pp_CampoAceptaNull = false;
+            this.Cmb_TipoDoc.Pp_CampoAceptaNull = true;
             this.Cmb_TipoDoc.Pp_EsPk = false;
             this.Cmb_TipoDoc.Pp_MensajeError = "Seleccionar Tipo Doc";
             this.Cmb_TipoDoc.Pp_NombreCampo = "nombreTipoDoc";
@@ -237,6 +241,7 @@
             this.btn_limpiar1.TabIndex = 26;
             this.btn_limpiar1.Text = "Limpiar";
             this.btn_limpiar1.UseVisualStyleBackColor = true;
+            this.btn_limpiar1.Click += new System.EventHandler(this.btn_limpiar1_Click);
             // 
             // Btn_Consultar
             // 
@@ -253,60 +258,101 @@
             this.Btn_Consultar.UseVisualStyleBackColor = true;
             this.Btn_Consultar.Click += new System.EventHandler(this.Btn_Consultar_Click);
             // 
-            // btn_registrar1
+            // Btn_Registrar
             // 
-            this.btn_registrar1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btn_registrar1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_registrar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_registrar1.Location = new System.Drawing.Point(845, 254);
-            this.btn_registrar1.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_registrar1.Name = "btn_registrar1";
-            this.btn_registrar1.Pp_Presionado = false;
-            this.btn_registrar1.Size = new System.Drawing.Size(127, 50);
-            this.btn_registrar1.TabIndex = 24;
-            this.btn_registrar1.Text = "Registrar";
-            this.btn_registrar1.UseVisualStyleBackColor = true;
+            this.Btn_Registrar.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.Btn_Registrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Btn_Registrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Btn_Registrar.Location = new System.Drawing.Point(845, 254);
+            this.Btn_Registrar.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_Registrar.Name = "Btn_Registrar";
+            this.Btn_Registrar.Pp_Presionado = false;
+            this.Btn_Registrar.Size = new System.Drawing.Size(127, 50);
+            this.Btn_Registrar.TabIndex = 24;
+            this.Btn_Registrar.Text = "Registrar";
+            this.Btn_Registrar.UseVisualStyleBackColor = true;
+            this.Btn_Registrar.Click += new System.EventHandler(this.btn_registrar1_Click);
             // 
-            // btn_borrar1
+            // Btn_Eliminar
             // 
-            this.btn_borrar1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btn_borrar1.Enabled = false;
-            this.btn_borrar1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_borrar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_borrar1.Location = new System.Drawing.Point(845, 398);
-            this.btn_borrar1.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_borrar1.Name = "btn_borrar1";
-            this.btn_borrar1.Pp_Presionado = false;
-            this.btn_borrar1.Size = new System.Drawing.Size(127, 50);
-            this.btn_borrar1.TabIndex = 23;
-            this.btn_borrar1.Text = "Eliminar";
-            this.btn_borrar1.UseVisualStyleBackColor = true;
+            this.Btn_Eliminar.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.Btn_Eliminar.Enabled = false;
+            this.Btn_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Btn_Eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Btn_Eliminar.Location = new System.Drawing.Point(845, 398);
+            this.Btn_Eliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_Eliminar.Name = "Btn_Eliminar";
+            this.Btn_Eliminar.Pp_Presionado = false;
+            this.Btn_Eliminar.Size = new System.Drawing.Size(127, 50);
+            this.Btn_Eliminar.TabIndex = 23;
+            this.Btn_Eliminar.Text = "Eliminar";
+            this.Btn_Eliminar.UseVisualStyleBackColor = true;
+            this.Btn_Eliminar.Click += new System.EventHandler(this.btn_borrar1_Click);
             // 
-            // btn_modificar1
+            // Btn_Modificar
             // 
-            this.btn_modificar1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btn_modificar1.Enabled = false;
-            this.btn_modificar1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_modificar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_modificar1.Location = new System.Drawing.Point(845, 326);
-            this.btn_modificar1.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_modificar1.Name = "btn_modificar1";
-            this.btn_modificar1.Pp_Presionado = false;
-            this.btn_modificar1.Size = new System.Drawing.Size(127, 50);
-            this.btn_modificar1.TabIndex = 22;
-            this.btn_modificar1.Text = "Modificar";
-            this.btn_modificar1.UseVisualStyleBackColor = true;
+            this.Btn_Modificar.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.Btn_Modificar.Enabled = false;
+            this.Btn_Modificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Btn_Modificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Btn_Modificar.Location = new System.Drawing.Point(845, 326);
+            this.Btn_Modificar.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_Modificar.Name = "Btn_Modificar";
+            this.Btn_Modificar.Pp_Presionado = false;
+            this.Btn_Modificar.Size = new System.Drawing.Size(127, 50);
+            this.Btn_Modificar.TabIndex = 22;
+            this.Btn_Modificar.Text = "Modificar";
+            this.Btn_Modificar.UseVisualStyleBackColor = true;
+            this.Btn_Modificar.Click += new System.EventHandler(this.btn_modificar1_Click);
             // 
             // grid_Familiares
             // 
+            this.grid_Familiares.AllowUserToAddRows = false;
+            this.grid_Familiares.AllowUserToDeleteRows = false;
             this.grid_Familiares.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grid_Familiares.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tipodoc1,
+            this.numero1,
+            this.tipodoc2,
+            this.numero2});
             this.grid_Familiares.Location = new System.Drawing.Point(46, 179);
             this.grid_Familiares.Name = "grid_Familiares";
             this.grid_Familiares.Pp_FormatoGrid = null;
-            this.grid_Familiares.Pp_NombreTabla = null;
+            this.grid_Familiares.Pp_NombreTabla = "Familiar_X_Pasajero";
+            this.grid_Familiares.ReadOnly = true;
             this.grid_Familiares.RowTemplate.Height = 24;
             this.grid_Familiares.Size = new System.Drawing.Size(778, 268);
             this.grid_Familiares.TabIndex = 0;
+            this.grid_Familiares.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_Familiares_CellClick);
+            this.grid_Familiares.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_Familiares_CellContentDoubleClick);
+            // 
+            // tipodoc1
+            // 
+            this.tipodoc1.HeaderText = "Column1";
+            this.tipodoc1.Name = "tipodoc1";
+            this.tipodoc1.ReadOnly = true;
+            this.tipodoc1.Visible = false;
+            // 
+            // numero1
+            // 
+            this.numero1.HeaderText = "Column1";
+            this.numero1.Name = "numero1";
+            this.numero1.ReadOnly = true;
+            this.numero1.Visible = false;
+            // 
+            // tipodoc2
+            // 
+            this.tipodoc2.HeaderText = "Column1";
+            this.tipodoc2.Name = "tipodoc2";
+            this.tipodoc2.ReadOnly = true;
+            this.tipodoc2.Visible = false;
+            // 
+            // numero2
+            // 
+            this.numero2.HeaderText = "Column1";
+            this.numero2.Name = "numero2";
+            this.numero2.ReadOnly = true;
+            this.numero2.Visible = false;
             // 
             // Frm_ABMGrupoFamiliar
             // 
@@ -326,9 +372,9 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btn_limpiar1);
             this.Controls.Add(this.Btn_Consultar);
-            this.Controls.Add(this.btn_registrar1);
-            this.Controls.Add(this.btn_borrar1);
-            this.Controls.Add(this.btn_modificar1);
+            this.Controls.Add(this.Btn_Registrar);
+            this.Controls.Add(this.Btn_Eliminar);
+            this.Controls.Add(this.Btn_Modificar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.grid_Familiares);
             this.Controls.Add(this.panel1);
@@ -350,9 +396,9 @@
         private System.Windows.Forms.Label label7;
         private Clase.Button_Aerolinea btn_limpiar1;
         private Clase.Button_Aerolinea Btn_Consultar;
-        private Clase.Button_Aerolinea btn_registrar1;
-        private Clase.Button_Aerolinea btn_borrar1;
-        private Clase.Button_Aerolinea btn_modificar1;
+        private Clase.Button_Aerolinea Btn_Registrar;
+        private Clase.Button_Aerolinea Btn_Eliminar;
+        private Clase.Button_Aerolinea Btn_Modificar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
@@ -365,5 +411,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private Clase.TextBox_Aerolinea Txt_Apellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipodoc1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numero1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipodoc2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numero2;
     }
 }
