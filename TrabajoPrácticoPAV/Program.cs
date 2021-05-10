@@ -21,7 +21,7 @@ namespace TrabajoPrácticoPAV
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frm_Ciudad());
+            Application.Run(new Frm_Principal());
         }
     }
 }

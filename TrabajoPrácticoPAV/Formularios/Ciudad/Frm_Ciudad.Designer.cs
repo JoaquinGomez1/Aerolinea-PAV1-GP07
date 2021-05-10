@@ -30,17 +30,20 @@ namespace TrabajoPrácticoPAV.Formularios.Ciudad
         private void InitializeComponent()
         {
             this.panel_modify = new System.Windows.Forms.Panel();
+            this.comboBox_Aerolinea2 = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
+            this.btn_modify = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
+            this.txt_nombre_modify = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lbl_title_register = new System.Windows.Forms.Label();
             this.panel_registrar = new System.Windows.Forms.Panel();
+            this.comboBox_Aerolinea1 = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
+            this.btn_registrar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
+            this.txt_nombre_register = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
             this.lbl_provincia = new System.Windows.Forms.Label();
             this.lbl_nombre = new System.Windows.Forms.Label();
             this.lbl_title_modify = new System.Windows.Forms.Label();
             this.btn_refrescar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
-            this.comboBox_Aerolinea2 = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
-            this.btn_modify = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
-            this.txt_nombre_modify = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
             this.grid_ciudades = new TrabajoPrácticoPAV.Clase.DataGridView_Aerolinea();
             this.idCiudad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,9 +51,6 @@ namespace TrabajoPrácticoPAV.Formularios.Ciudad
             this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.idProvincia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comboBox_Aerolinea1 = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
-            this.btn_registrar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
-            this.txt_nombre_register = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
             this.idProvinciaOculto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel_modify.SuspendLayout();
             this.panel_registrar.SuspendLayout();
@@ -62,6 +62,7 @@ namespace TrabajoPrácticoPAV.Formularios.Ciudad
             this.panel_modify.AccessibleName = "group_modify";
             this.panel_modify.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_modify.Controls.Add(this.comboBox_Aerolinea2);
+            this.panel_modify.Controls.Add(this.lbl_title_modify);
             this.panel_modify.Controls.Add(this.btn_modify);
             this.panel_modify.Controls.Add(this.txt_nombre_modify);
             this.panel_modify.Controls.Add(this.label2);
@@ -71,6 +72,45 @@ namespace TrabajoPrácticoPAV.Formularios.Ciudad
             this.panel_modify.Size = new System.Drawing.Size(325, 179);
             this.panel_modify.TabIndex = 9;
             this.panel_modify.Visible = false;
+            // 
+            // comboBox_Aerolinea2
+            // 
+            this.comboBox_Aerolinea2.FormattingEnabled = true;
+            this.comboBox_Aerolinea2.Location = new System.Drawing.Point(111, 67);
+            this.comboBox_Aerolinea2.Name = "comboBox_Aerolinea2";
+            this.comboBox_Aerolinea2.Pp_CampoAceptaNull = false;
+            this.comboBox_Aerolinea2.Pp_EsPk = true;
+            this.comboBox_Aerolinea2.Pp_MensajeError = "Se ha detectado un error al momento de modificar la provincia";
+            this.comboBox_Aerolinea2.Pp_NombreCampo = "nombreProvincia";
+            this.comboBox_Aerolinea2.Pp_NombreCampoInsert = null;
+            this.comboBox_Aerolinea2.Pp_NombreTabla = "Provincia";
+            this.comboBox_Aerolinea2.Pp_PkTabla = "idProvincia";
+            this.comboBox_Aerolinea2.Size = new System.Drawing.Size(118, 21);
+            this.comboBox_Aerolinea2.TabIndex = 8;
+            // 
+            // btn_modify
+            // 
+            this.btn_modify.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_modify.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.btn_modify.Location = new System.Drawing.Point(139, 106);
+            this.btn_modify.Name = "btn_modify";
+            this.btn_modify.Pp_Presionado = false;
+            this.btn_modify.Size = new System.Drawing.Size(90, 28);
+            this.btn_modify.TabIndex = 4;
+            this.btn_modify.Text = "Modificar";
+            this.btn_modify.UseVisualStyleBackColor = true;
+            this.btn_modify.Click += new System.EventHandler(this.btn_modify_Click_1);
+            // 
+            // txt_nombre_modify
+            // 
+            this.txt_nombre_modify.Location = new System.Drawing.Point(111, 41);
+            this.txt_nombre_modify.Name = "txt_nombre_modify";
+            this.txt_nombre_modify.Pp_EsPk = false;
+            this.txt_nombre_modify.Pp_MensajeError = null;
+            this.txt_nombre_modify.Pp_NombreCampo = null;
+            this.txt_nombre_modify.Pp_NombreTabla = null;
+            this.txt_nombre_modify.Size = new System.Drawing.Size(118, 20);
+            this.txt_nombre_modify.TabIndex = 3;
             // 
             // label2
             // 
@@ -115,6 +155,45 @@ namespace TrabajoPrácticoPAV.Formularios.Ciudad
             this.panel_registrar.Size = new System.Drawing.Size(325, 179);
             this.panel_registrar.TabIndex = 6;
             // 
+            // comboBox_Aerolinea1
+            // 
+            this.comboBox_Aerolinea1.FormattingEnabled = true;
+            this.comboBox_Aerolinea1.Location = new System.Drawing.Point(117, 68);
+            this.comboBox_Aerolinea1.Name = "comboBox_Aerolinea1";
+            this.comboBox_Aerolinea1.Pp_CampoAceptaNull = false;
+            this.comboBox_Aerolinea1.Pp_EsPk = true;
+            this.comboBox_Aerolinea1.Pp_MensajeError = "Se ha detectado un error en cargar provincia";
+            this.comboBox_Aerolinea1.Pp_NombreCampo = "nombreProvincia";
+            this.comboBox_Aerolinea1.Pp_NombreCampoInsert = null;
+            this.comboBox_Aerolinea1.Pp_NombreTabla = "Provincia";
+            this.comboBox_Aerolinea1.Pp_PkTabla = "idProvincia";
+            this.comboBox_Aerolinea1.Size = new System.Drawing.Size(118, 21);
+            this.comboBox_Aerolinea1.TabIndex = 6;
+            // 
+            // btn_registrar
+            // 
+            this.btn_registrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_registrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.btn_registrar.Location = new System.Drawing.Point(145, 106);
+            this.btn_registrar.Name = "btn_registrar";
+            this.btn_registrar.Pp_Presionado = false;
+            this.btn_registrar.Size = new System.Drawing.Size(90, 28);
+            this.btn_registrar.TabIndex = 4;
+            this.btn_registrar.Text = "Registrar";
+            this.btn_registrar.UseVisualStyleBackColor = true;
+            this.btn_registrar.Click += new System.EventHandler(this.btn_registrar_Click);
+            // 
+            // txt_nombre_register
+            // 
+            this.txt_nombre_register.Location = new System.Drawing.Point(117, 41);
+            this.txt_nombre_register.Name = "txt_nombre_register";
+            this.txt_nombre_register.Pp_EsPk = false;
+            this.txt_nombre_register.Pp_MensajeError = "Completar nombre";
+            this.txt_nombre_register.Pp_NombreCampo = null;
+            this.txt_nombre_register.Pp_NombreTabla = null;
+            this.txt_nombre_register.Size = new System.Drawing.Size(118, 20);
+            this.txt_nombre_register.TabIndex = 3;
+            // 
             // lbl_provincia
             // 
             this.lbl_provincia.AutoSize = true;
@@ -139,7 +218,7 @@ namespace TrabajoPrácticoPAV.Formularios.Ciudad
             // 
             this.lbl_title_modify.AutoSize = true;
             this.lbl_title_modify.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.lbl_title_modify.Location = new System.Drawing.Point(444, 27);
+            this.lbl_title_modify.Location = new System.Drawing.Point(3, -3);
             this.lbl_title_modify.Name = "lbl_title_modify";
             this.lbl_title_modify.Size = new System.Drawing.Size(141, 21);
             this.lbl_title_modify.TabIndex = 10;
@@ -158,45 +237,6 @@ namespace TrabajoPrácticoPAV.Formularios.Ciudad
             this.btn_refrescar.Text = "Refrescar";
             this.btn_refrescar.UseVisualStyleBackColor = true;
             this.btn_refrescar.Click += new System.EventHandler(this.btn_refrescar_Click_1);
-            // 
-            // comboBox_Aerolinea2
-            // 
-            this.comboBox_Aerolinea2.FormattingEnabled = true;
-            this.comboBox_Aerolinea2.Location = new System.Drawing.Point(111, 67);
-            this.comboBox_Aerolinea2.Name = "comboBox_Aerolinea2";
-            this.comboBox_Aerolinea2.Pp_CampoAceptaNull = false;
-            this.comboBox_Aerolinea2.Pp_EsPk = true;
-            this.comboBox_Aerolinea2.Pp_MensajeError = "Se ha detectado un error al momento de modificar la provincia";
-            this.comboBox_Aerolinea2.Pp_NombreCampo = "nombreProvincia";
-            this.comboBox_Aerolinea2.Pp_NombreCampoInsert = null;
-            this.comboBox_Aerolinea2.Pp_NombreTabla = "Provincia";
-            this.comboBox_Aerolinea2.Pp_PkTabla = "idProvincia";
-            this.comboBox_Aerolinea2.Size = new System.Drawing.Size(118, 21);
-            this.comboBox_Aerolinea2.TabIndex = 8;
-            // 
-            // btn_modify
-            // 
-            this.btn_modify.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_modify.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.btn_modify.Location = new System.Drawing.Point(139, 106);
-            this.btn_modify.Name = "btn_modify";
-            this.btn_modify.Pp_Presionado = false;
-            this.btn_modify.Size = new System.Drawing.Size(90, 28);
-            this.btn_modify.TabIndex = 4;
-            this.btn_modify.Text = "Modificar";
-            this.btn_modify.UseVisualStyleBackColor = true;
-            this.btn_modify.Click += new System.EventHandler(this.btn_modify_Click_1);
-            // 
-            // txt_nombre_modify
-            // 
-            this.txt_nombre_modify.Location = new System.Drawing.Point(111, 41);
-            this.txt_nombre_modify.Name = "txt_nombre_modify";
-            this.txt_nombre_modify.Pp_EsPk = false;
-            this.txt_nombre_modify.Pp_MensajeError = null;
-            this.txt_nombre_modify.Pp_NombreCampo = null;
-            this.txt_nombre_modify.Pp_NombreTabla = null;
-            this.txt_nombre_modify.Size = new System.Drawing.Size(118, 20);
-            this.txt_nombre_modify.TabIndex = 3;
             // 
             // grid_ciudades
             // 
@@ -269,45 +309,6 @@ namespace TrabajoPrácticoPAV.Formularios.Ciudad
             this.idProvincia.Name = "idProvincia";
             this.idProvincia.Visible = false;
             // 
-            // comboBox_Aerolinea1
-            // 
-            this.comboBox_Aerolinea1.FormattingEnabled = true;
-            this.comboBox_Aerolinea1.Location = new System.Drawing.Point(117, 68);
-            this.comboBox_Aerolinea1.Name = "comboBox_Aerolinea1";
-            this.comboBox_Aerolinea1.Pp_CampoAceptaNull = false;
-            this.comboBox_Aerolinea1.Pp_EsPk = true;
-            this.comboBox_Aerolinea1.Pp_MensajeError = "Se ha detectado un error en cargar provincia";
-            this.comboBox_Aerolinea1.Pp_NombreCampo = "nombreProvincia";
-            this.comboBox_Aerolinea1.Pp_NombreCampoInsert = null;
-            this.comboBox_Aerolinea1.Pp_NombreTabla = "Provincia";
-            this.comboBox_Aerolinea1.Pp_PkTabla = "idProvincia";
-            this.comboBox_Aerolinea1.Size = new System.Drawing.Size(118, 21);
-            this.comboBox_Aerolinea1.TabIndex = 6;
-            // 
-            // btn_registrar
-            // 
-            this.btn_registrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_registrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.btn_registrar.Location = new System.Drawing.Point(145, 106);
-            this.btn_registrar.Name = "btn_registrar";
-            this.btn_registrar.Pp_Presionado = false;
-            this.btn_registrar.Size = new System.Drawing.Size(90, 28);
-            this.btn_registrar.TabIndex = 4;
-            this.btn_registrar.Text = "Registrar";
-            this.btn_registrar.UseVisualStyleBackColor = true;
-            this.btn_registrar.Click += new System.EventHandler(this.btn_registrar_Click);
-            // 
-            // txt_nombre_register
-            // 
-            this.txt_nombre_register.Location = new System.Drawing.Point(117, 41);
-            this.txt_nombre_register.Name = "txt_nombre_register";
-            this.txt_nombre_register.Pp_EsPk = false;
-            this.txt_nombre_register.Pp_MensajeError = "Completar nombre";
-            this.txt_nombre_register.Pp_NombreCampo = null;
-            this.txt_nombre_register.Pp_NombreTabla = null;
-            this.txt_nombre_register.Size = new System.Drawing.Size(118, 20);
-            this.txt_nombre_register.TabIndex = 3;
-            // 
             // idProvinciaOculto
             // 
             this.idProvinciaOculto.HeaderText = "idProvincia";
@@ -320,7 +321,6 @@ namespace TrabajoPrácticoPAV.Formularios.Ciudad
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btn_refrescar);
-            this.Controls.Add(this.lbl_title_modify);
             this.Controls.Add(this.panel_modify);
             this.Controls.Add(this.grid_ciudades);
             this.Controls.Add(this.lbl_title_register);
