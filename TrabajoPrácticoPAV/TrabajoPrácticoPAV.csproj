@@ -61,6 +61,7 @@
     <Compile Include="Clase\MaskedTextBox_Aerolinea.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Clase\Modelos\Tripulante.cs" />
     <Compile Include="Clase\Modelos\Viaje.cs" />
     <Compile Include="Clase\TextBox_Aerolinea.cs">
       <SubType>Component</SubType>
@@ -210,6 +211,12 @@
     <Compile Include="Formularios\Tramos\Frm_ModificacionTramo.Designer.cs">
       <DependentUpon>Frm_ModificacionTramo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Tripulacion\Frm_Tripulacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Tripulacion\Frm_Tripulacion.Designer.cs">
+      <DependentUpon>Frm_Tripulacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Viajes\Frm_ABMViajes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -256,6 +263,7 @@
     <Compile Include="NE_Usuarios\NE_Avion.cs" />
     <Compile Include="NE_Usuarios\NE_Clientes.cs" />
     <Compile Include="NE_Usuarios\NE_Tramos.cs" />
+    <Compile Include="NE_Usuarios\NE_Tripulacion.cs" />
     <Compile Include="NE_Usuarios\NE_Viajes.cs" />
     <Compile Include="NE_Usuarios\NE_Vuelos.cs" />
     <Compile Include="Program.cs" />
@@ -331,6 +339,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Tramos\Frm_ModificacionTramo.resx">
       <DependentUpon>Frm_ModificacionTramo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Tripulacion\Frm_Tripulacion.resx">
+      <DependentUpon>Frm_Tripulacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Viajes\Frm_ABMViajes.resx">
       <DependentUpon>Frm_ABMViajes.cs</DependentUpon>
