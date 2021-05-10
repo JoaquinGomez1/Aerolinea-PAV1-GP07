@@ -59,6 +59,7 @@
             this.Msktxt_NumeroDOC.Mask = "99999999";
             this.Msktxt_NumeroDOC.Name = "Msktxt_NumeroDOC";
             this.Msktxt_NumeroDOC.Pp_EsPk = false;
+            this.Msktxt_NumeroDOC.Pp_MensajeError = null;
             this.Msktxt_NumeroDOC.Pp_NombreCampo = "numeroDoc";
             this.Msktxt_NumeroDOC.Pp_NombreTabla = "Pasajero";
             this.Msktxt_NumeroDOC.Size = new System.Drawing.Size(100, 30);
