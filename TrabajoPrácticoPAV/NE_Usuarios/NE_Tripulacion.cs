@@ -34,7 +34,7 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             string sql = $"SELECT * FROM Tripulacion WHERE idTripulacion = {id}";
             DataTable valores = _DB.EjecutarSelect(sql);
 
-            Tripulante viaje = new Tripulante()
+            Tripulante tripulante = new Tripulante()
             {
                 Id = Int32.Parse(valores.Rows[0]["idTripulacion"].ToString()),
                 Nombre = valores.Rows[0]["nombre"].ToString(),
@@ -43,7 +43,7 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
                 IdCargo = Int32.Parse(valores.Rows[0]["idCargoTripulacion"].ToString()),
             };
 
-            return viaje;
+            return tripulante;
         }
 
         public void ModificarTripulante(Tripulante tripulante)
@@ -52,8 +52,7 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             _DB.Modificar(sql, true);
         }
 
-
-        // Overrides para elimiar por Tripulante o id (int o string)
+        // Overrides para eliminar por Tripulante o id (int o string)
         public void EliminarTripulante(Tripulante Tripulante)
         {
             EliminarTripulacion($"{Tripulante.Id}");

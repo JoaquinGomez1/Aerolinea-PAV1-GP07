@@ -97,7 +97,6 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
                 panel_modify.Visible = true;
                 lbl_title_modify.Visible = true;
 
-
                 DataGridViewRow fila = grid_tripulantes.CurrentRow;
 
                 Tripulante tripulante = new Tripulante()
@@ -108,19 +107,16 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
                     IdCargo = Int32.Parse(fila.Cells[indexCeldaIdCargo].Value.ToString()),
                 };
 
-                // Lo seteo ahora para despues poder tomarlo al hacer click en modificar
+                // Lo seteo ahora para despues poder tomar el valor al hacer click en modificar
                 idTripulanteAModificar = tripulante.Id;
 
                 txt_nombre_modify.Text = tripulante.Nombre;
                 txt_apellido_modify.Text = tripulante.Apellido;
                 cmb_cargo_modify.SelectedValue = tripulante.IdCargo;
-
-
             }
 
             if (grid_tripulantes.CurrentCell.ColumnIndex == indexCeldaEliminar)
             {
-
                 string idTripulacion = grid_tripulantes.CurrentRow.Cells[0].Value.ToString();
                 _NE.EliminarTripulante(idTripulacion);
 
