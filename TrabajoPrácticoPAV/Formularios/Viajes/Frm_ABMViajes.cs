@@ -58,11 +58,6 @@ namespace TrabajoPrácticoPAV.Formularios
 
             bool esHorarioValido = Tiempo.esHorarioValido(horarioSalida) && Tiempo.esHorarioValido(horarioLlegada);
 
-            //if (!esHorarioValido)
-            //{
-            //    MessageBox.Show($"Salida: {horarioSalida}\n Llegada: {horarioLlegada} \n Presencia: {Mtxt_presencia.Text}");
-            //}
-
             if (ambosCamposCompletados && esHorarioValido)
             {
                 string durEstimada = _NE_Viajes.determinarEstimado(horarioLlegada, horarioSalida);

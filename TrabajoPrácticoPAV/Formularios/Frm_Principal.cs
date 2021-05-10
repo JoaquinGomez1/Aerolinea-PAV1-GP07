@@ -62,7 +62,7 @@ namespace TrabajoPrácticoPAV
 
         private void CambiarColorBoton(Button_Aerolinea boton)
         {
-            boton.BackColor = Estilo.ColorBotonPress;
+            boton.BackColor = Estilo.FormActivo;
             boton.Pp_Presionado = true;
         }
 
@@ -113,10 +113,10 @@ namespace TrabajoPrácticoPAV
         private void MouseClickButton(object sender, EventArgs e)
         {
             Button_Aerolinea boton = ((Button_Aerolinea)sender);
-            CambiarColorBoton(boton);
 
             // ↓ Permite que se puedan aplicar los cambios de estilo en la configuración incluso si ya fueron abiertos anteriormente
             CerrarTodosLosForms();
+            CambiarColorBoton(boton);
             switch (boton.Name.ToString())
             {
                 case "Btn_ABMClientes":
@@ -190,6 +190,8 @@ namespace TrabajoPrácticoPAV
         {
             Form formulario;
             formulario = PanelFormularios.Controls.OfType<MiForm>().FirstOrDefault();
+
+
             if (formulario == null)
             {
                 formulario = new MiForm();

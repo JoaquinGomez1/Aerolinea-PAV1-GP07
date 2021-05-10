@@ -4,23 +4,27 @@ using System.Windows.Forms;
 using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.Clase.Modelos;
 using TrabajoPrácticoPAV.NE_Usuarios;
+using static TrabajoPrácticoPAV.Clase.Tratamientos_Especiales;
 
 namespace TrabajoPrácticoPAV.Formularios.Tripulacion
 {
     public partial class Frm_Tripulacion : Form
     {
         private readonly NE_Tripulacion _NE = new NE_Tripulacion();
-        int idTripulanteAModificar;
+        private readonly Tratamientos_Especiales tratamientos = new Tratamientos_Especiales();
+        private int idTripulanteAModificar { get; set; }
 
         public Frm_Tripulacion()
         {
+            this.BackColor = Estilo.ColorFondoForms;
+            Estilo.FormatearEstilo(this.Controls);
             InitializeComponent();
+
         }
 
         private void Frm_Tripulacion_Load(object sender, EventArgs e)
         {
-            this.BackColor = Estilo.ColorFondoForms;
-            Estilo.FormatearEstilo(this.Controls);
+
             cmb_cargo_register.CargarCombo();
 
             DataTable TableTripulantes = _NE.GetTodosLosTripulantes();
@@ -29,17 +33,19 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
 
         private void btn_registrar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(cmb_cargo_register.SelectedValue.ToString());
-
-            Tripulante tripulante = new Tripulante()
+            bool esValido = tratamientos.Validar(panel_registrar.Controls) == Resultado.correcto;
+            if (esValido)
             {
-                Nombre = txt_nombre_register.Text,
-                Apellido = txt_apellido_register.Text,
-                IdCargo = Int32.Parse(cmb_cargo_register.SelectedValue.ToString()),
-            };
+                Tripulante tripulante = new Tripulante()
+                {
+                    Nombre = txt_nombre_register.Text,
+                    Apellido = txt_apellido_register.Text,
+                    IdCargo = Int32.Parse(cmb_cargo_register.SelectedValue.ToString()),
+                };
 
-            _NE.InsertTripulante(tripulante);
-            CargarDataGrid();
+                _NE.InsertTripulante(tripulante);
+                CargarDataGrid();
+            }
         }
 
         private void CargarDataGrid(DataTable tabla)
@@ -126,15 +132,19 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
 
         private void btn_modify_Click(object sender, EventArgs e)
         {
-            Tripulante tripulante = new Tripulante()
+            bool esValido = tratamientos.Validar(panel_modify.Controls) == Resultado.correcto;
+            if (esValido)
             {
-                Id = idTripulanteAModificar,
-                Nombre = txt_nombre_modify.Text,
-                Apellido = txt_apellido_modify.Text,
-                IdCargo = Int32.Parse(cmb_cargo_modify.SelectedValue.ToString()),
-            };
-            _NE.ModificarTripulante(tripulante);
-            CargarDataGrid();
+                Tripulante tripulante = new Tripulante()
+                {
+                    Id = idTripulanteAModificar,
+                    Nombre = txt_nombre_modify.Text,
+                    Apellido = txt_apellido_modify.Text,
+                    IdCargo = Int32.Parse(cmb_cargo_modify.SelectedValue.ToString()),
+                };
+                _NE.ModificarTripulante(tripulante);
+                CargarDataGrid();
+            }
         }
     }
 }

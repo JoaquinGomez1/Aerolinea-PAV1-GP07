@@ -29,7 +29,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel_registrar = new System.Windows.Forms.Panel();
             this.lbl_cargo = new System.Windows.Forms.Label();
             this.lbl_apellido = new System.Windows.Forms.Label();
             this.lbl_nombre = new System.Windows.Forms.Label();
@@ -45,10 +45,6 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
             this.txt_apellido_modify = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
             this.txt_nombre_modify = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
             this.grid_tripulantes = new TrabajoPrácticoPAV.Clase.DataGridView_Aerolinea();
-            this.btn_registrar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
-            this.cmb_cargo_register = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
-            this.txt_apellido_register = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
-            this.txt_nombre_register = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
             this.idTripulacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,25 +52,29 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
             this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.idCargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1.SuspendLayout();
+            this.btn_registrar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
+            this.cmb_cargo_register = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
+            this.txt_apellido_register = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
+            this.txt_nombre_register = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
+            this.panel_registrar.SuspendLayout();
             this.panel_modify.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_tripulantes)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // panel_registrar
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.btn_registrar);
-            this.panel1.Controls.Add(this.cmb_cargo_register);
-            this.panel1.Controls.Add(this.txt_apellido_register);
-            this.panel1.Controls.Add(this.txt_nombre_register);
-            this.panel1.Controls.Add(this.lbl_cargo);
-            this.panel1.Controls.Add(this.lbl_apellido);
-            this.panel1.Controls.Add(this.lbl_nombre);
-            this.panel1.Location = new System.Drawing.Point(34, 34);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(294, 157);
-            this.panel1.TabIndex = 0;
+            this.panel_registrar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_registrar.Controls.Add(this.btn_registrar);
+            this.panel_registrar.Controls.Add(this.cmb_cargo_register);
+            this.panel_registrar.Controls.Add(this.txt_apellido_register);
+            this.panel_registrar.Controls.Add(this.txt_nombre_register);
+            this.panel_registrar.Controls.Add(this.lbl_cargo);
+            this.panel_registrar.Controls.Add(this.lbl_apellido);
+            this.panel_registrar.Controls.Add(this.lbl_nombre);
+            this.panel_registrar.Location = new System.Drawing.Point(34, 34);
+            this.panel_registrar.Name = "panel_registrar";
+            this.panel_registrar.Size = new System.Drawing.Size(294, 157);
+            this.panel_registrar.TabIndex = 0;
             // 
             // lbl_cargo
             // 
@@ -251,55 +251,6 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
             this.grid_tripulantes.TabIndex = 4;
             this.grid_tripulantes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_tripulantes_CellContentClick);
             // 
-            // btn_registrar
-            // 
-            this.btn_registrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_registrar.Location = new System.Drawing.Point(150, 117);
-            this.btn_registrar.Name = "btn_registrar";
-            this.btn_registrar.Pp_Presionado = false;
-            this.btn_registrar.Size = new System.Drawing.Size(75, 23);
-            this.btn_registrar.TabIndex = 4;
-            this.btn_registrar.Text = "Registrar";
-            this.btn_registrar.UseVisualStyleBackColor = true;
-            this.btn_registrar.Click += new System.EventHandler(this.btn_registrar_Click);
-            // 
-            // cmb_cargo_register
-            // 
-            this.cmb_cargo_register.FormattingEnabled = true;
-            this.cmb_cargo_register.Location = new System.Drawing.Point(107, 81);
-            this.cmb_cargo_register.Name = "cmb_cargo_register";
-            this.cmb_cargo_register.Pp_CampoAceptaNull = false;
-            this.cmb_cargo_register.Pp_EsPk = true;
-            this.cmb_cargo_register.Pp_MensajeError = "Elegir un cargo";
-            this.cmb_cargo_register.Pp_NombreCampo = "nombre";
-            this.cmb_cargo_register.Pp_NombreCampoInsert = null;
-            this.cmb_cargo_register.Pp_NombreTabla = "Cargo_Tripulacion";
-            this.cmb_cargo_register.Pp_PkTabla = "idCargoTripulacion";
-            this.cmb_cargo_register.Size = new System.Drawing.Size(118, 21);
-            this.cmb_cargo_register.TabIndex = 5;
-            // 
-            // txt_apellido_register
-            // 
-            this.txt_apellido_register.Location = new System.Drawing.Point(107, 47);
-            this.txt_apellido_register.Name = "txt_apellido_register";
-            this.txt_apellido_register.Pp_EsPk = false;
-            this.txt_apellido_register.Pp_MensajeError = null;
-            this.txt_apellido_register.Pp_NombreCampo = null;
-            this.txt_apellido_register.Pp_NombreTabla = null;
-            this.txt_apellido_register.Size = new System.Drawing.Size(118, 20);
-            this.txt_apellido_register.TabIndex = 4;
-            // 
-            // txt_nombre_register
-            // 
-            this.txt_nombre_register.Location = new System.Drawing.Point(107, 21);
-            this.txt_nombre_register.Name = "txt_nombre_register";
-            this.txt_nombre_register.Pp_EsPk = false;
-            this.txt_nombre_register.Pp_MensajeError = null;
-            this.txt_nombre_register.Pp_NombreCampo = null;
-            this.txt_nombre_register.Pp_NombreTabla = null;
-            this.txt_nombre_register.Size = new System.Drawing.Size(118, 20);
-            this.txt_nombre_register.TabIndex = 3;
-            // 
             // idTripulacion
             // 
             this.idTripulacion.Frozen = true;
@@ -359,6 +310,55 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
             this.idCargo.Name = "idCargo";
             this.idCargo.Visible = false;
             // 
+            // btn_registrar
+            // 
+            this.btn_registrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_registrar.Location = new System.Drawing.Point(150, 117);
+            this.btn_registrar.Name = "btn_registrar";
+            this.btn_registrar.Pp_Presionado = false;
+            this.btn_registrar.Size = new System.Drawing.Size(75, 23);
+            this.btn_registrar.TabIndex = 4;
+            this.btn_registrar.Text = "Registrar";
+            this.btn_registrar.UseVisualStyleBackColor = true;
+            this.btn_registrar.Click += new System.EventHandler(this.btn_registrar_Click);
+            // 
+            // cmb_cargo_register
+            // 
+            this.cmb_cargo_register.FormattingEnabled = true;
+            this.cmb_cargo_register.Location = new System.Drawing.Point(107, 81);
+            this.cmb_cargo_register.Name = "cmb_cargo_register";
+            this.cmb_cargo_register.Pp_CampoAceptaNull = false;
+            this.cmb_cargo_register.Pp_EsPk = true;
+            this.cmb_cargo_register.Pp_MensajeError = "Elegir un cargo";
+            this.cmb_cargo_register.Pp_NombreCampo = "nombre";
+            this.cmb_cargo_register.Pp_NombreCampoInsert = null;
+            this.cmb_cargo_register.Pp_NombreTabla = "Cargo_Tripulacion";
+            this.cmb_cargo_register.Pp_PkTabla = "idCargoTripulacion";
+            this.cmb_cargo_register.Size = new System.Drawing.Size(118, 21);
+            this.cmb_cargo_register.TabIndex = 5;
+            // 
+            // txt_apellido_register
+            // 
+            this.txt_apellido_register.Location = new System.Drawing.Point(107, 47);
+            this.txt_apellido_register.Name = "txt_apellido_register";
+            this.txt_apellido_register.Pp_EsPk = false;
+            this.txt_apellido_register.Pp_MensajeError = "Completar Apellido";
+            this.txt_apellido_register.Pp_NombreCampo = null;
+            this.txt_apellido_register.Pp_NombreTabla = null;
+            this.txt_apellido_register.Size = new System.Drawing.Size(118, 20);
+            this.txt_apellido_register.TabIndex = 4;
+            // 
+            // txt_nombre_register
+            // 
+            this.txt_nombre_register.Location = new System.Drawing.Point(107, 21);
+            this.txt_nombre_register.Name = "txt_nombre_register";
+            this.txt_nombre_register.Pp_EsPk = false;
+            this.txt_nombre_register.Pp_MensajeError = "Completar nombre";
+            this.txt_nombre_register.Pp_NombreCampo = null;
+            this.txt_nombre_register.Pp_NombreTabla = null;
+            this.txt_nombre_register.Size = new System.Drawing.Size(118, 20);
+            this.txt_nombre_register.TabIndex = 3;
+            // 
             // Frm_Tripulacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -368,12 +368,12 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
             this.Controls.Add(this.panel_modify);
             this.Controls.Add(this.grid_tripulantes);
             this.Controls.Add(this.lbl_title_register);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel_registrar);
             this.Name = "Frm_Tripulacion";
             this.Text = "Frm_Tripulacion";
             this.Load += new System.EventHandler(this.Frm_Tripulacion_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panel_registrar.ResumeLayout(false);
+            this.panel_registrar.PerformLayout();
             this.panel_modify.ResumeLayout(false);
             this.panel_modify.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_tripulantes)).EndInit();
@@ -384,7 +384,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel_registrar;
         private Clase.TextBox_Aerolinea txt_nombre_register;
         private System.Windows.Forms.Label lbl_cargo;
         private System.Windows.Forms.Label lbl_apellido;
