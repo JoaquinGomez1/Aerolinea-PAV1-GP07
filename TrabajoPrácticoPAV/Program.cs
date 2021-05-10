@@ -7,6 +7,7 @@ using TrabajoPrácticoPAV.Formularios;
 using TrabajoPrácticoPAV.Formularios.Provincia;
 using TrabajoPrácticoPAV.Formularios.Pais;
 using TrabajoPrácticoPAV.Formularios.Tripulacion;
+using TrabajoPrácticoPAV.Formularios.Ciudad;
 
 namespace TrabajoPrácticoPAV
 {
@@ -20,7 +21,7 @@ namespace TrabajoPrácticoPAV
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frm_Principal());
+            Application.Run(new Frm_Ciudad());
         }
     }
 }
