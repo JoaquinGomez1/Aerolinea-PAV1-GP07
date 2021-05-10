@@ -45,11 +45,11 @@
             this.cmb_Modelo = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
             this.cmb_NumeroAvion = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
             this.grilla_ABMAsiento = new TrabajoPrácticoPAV.Clase.DataGridView_Aerolinea();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numeroAsiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idModelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numeroPorModelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoAsiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grilla_ABMAsiento)).BeginInit();
             this.SuspendLayout();
             // 
@@ -125,7 +125,7 @@
             this.cmb_Clase.Pp_EsPk = false;
             this.cmb_Clase.Pp_MensajeError = "Selccione una clase";
             this.cmb_Clase.Pp_NombreCampo = "nombre";
-            this.cmb_Clase.Pp_NombreCampoInsert = "idTipo";
+            this.cmb_Clase.Pp_NombreCampoInsert = "tipoAsiento";
             this.cmb_Clase.Pp_NombreTabla = "Tipo_Asiento";
             this.cmb_Clase.Pp_PkTabla = "idTipo";
             this.cmb_Clase.Size = new System.Drawing.Size(195, 21);
@@ -163,6 +163,7 @@
             this.btn_eliminar.TabIndex = 11;
             this.btn_eliminar.Text = "Eliminar";
             this.btn_eliminar.UseVisualStyleBackColor = true;
+            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 
             // btn_modificar
             // 
@@ -174,6 +175,7 @@
             this.btn_modificar.TabIndex = 10;
             this.btn_modificar.Text = "Modificar";
             this.btn_modificar.UseVisualStyleBackColor = true;
+            this.btn_modificar.Click += new System.EventHandler(this.btn_modificar_Click);
             // 
             // btn_registrar
             // 
@@ -184,6 +186,7 @@
             this.btn_registrar.TabIndex = 9;
             this.btn_registrar.Text = "Registrar";
             this.btn_registrar.UseVisualStyleBackColor = true;
+            this.btn_registrar.Click += new System.EventHandler(this.btn_registrar_Click);
             // 
             // btn_buscar
             // 
@@ -234,11 +237,11 @@
             this.grilla_ABMAsiento.AllowUserToDeleteRows = false;
             this.grilla_ABMAsiento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grilla_ABMAsiento.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5});
+            this.numeroAsiento,
+            this.idModelo,
+            this.numeroPorModelo,
+            this.tipoAsiento,
+            this.estado});
             this.grilla_ABMAsiento.Location = new System.Drawing.Point(32, 178);
             this.grilla_ABMAsiento.Name = "grilla_ABMAsiento";
             this.grilla_ABMAsiento.Pp_FormatoGrid = "";
@@ -246,37 +249,39 @@
             this.grilla_ABMAsiento.ReadOnly = true;
             this.grilla_ABMAsiento.Size = new System.Drawing.Size(590, 150);
             this.grilla_ABMAsiento.TabIndex = 2;
+            this.grilla_ABMAsiento.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grilla_ABMAsiento_CellClick);
+            this.grilla_ABMAsiento.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grilla_ABMAsiento_CellDoubleClick);
             // 
-            // Column1
+            // numeroAsiento
             // 
-            this.Column1.HeaderText = "Numero de asiento";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
+            this.numeroAsiento.HeaderText = "Numero de asiento";
+            this.numeroAsiento.Name = "numeroAsiento";
+            this.numeroAsiento.ReadOnly = true;
             // 
-            // Column2
+            // idModelo
             // 
-            this.Column2.HeaderText = "Modelo del Avión";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
+            this.idModelo.HeaderText = "Modelo del Avión";
+            this.idModelo.Name = "idModelo";
+            this.idModelo.ReadOnly = true;
             // 
-            // Column3
+            // numeroPorModelo
             // 
-            this.Column3.HeaderText = "Número del avión";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
+            this.numeroPorModelo.HeaderText = "Número del avión";
+            this.numeroPorModelo.Name = "numeroPorModelo";
+            this.numeroPorModelo.ReadOnly = true;
             // 
-            // Column4
+            // tipoAsiento
             // 
-            this.Column4.HeaderText = "Clase";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 110;
+            this.tipoAsiento.HeaderText = "Clase";
+            this.tipoAsiento.Name = "tipoAsiento";
+            this.tipoAsiento.ReadOnly = true;
+            this.tipoAsiento.Width = 110;
             // 
-            // Column5
+            // estado
             // 
-            this.Column5.HeaderText = "Estado";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
+            this.estado.HeaderText = "Estado";
+            this.estado.Name = "estado";
+            this.estado.ReadOnly = true;
             // 
             // Frm_ABMAsientos
             // 
@@ -330,10 +335,10 @@
         private System.Windows.Forms.CheckBox chk_asientos;
         private System.Windows.Forms.Label label6;
         private Clase.ComboBox_Aerolinea cmb_Clase;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numeroAsiento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idModelo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numeroPorModelo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipoAsiento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn estado;
     }
 }
