@@ -254,6 +254,30 @@
     <Compile Include="Formularios\Provincia\Frm_ModificarProvincia.Designer.cs">
       <DependentUpon>Frm_ModificarProvincia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Tipo_Asientos\Frm_ABMTipoAsientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Tipo_Asientos\Frm_ABMTipoAsientos.Designer.cs">
+      <DependentUpon>Frm_ABMTipoAsientos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Tipo_Asientos\Frm_AltaTipoAsiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Tipo_Asientos\Frm_AltaTipoAsiento.Designer.cs">
+      <DependentUpon>Frm_AltaTipoAsiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Tipo_Asientos\Frm_BajaTipoAsientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Tipo_Asientos\Frm_BajaTipoAsientos.Designer.cs">
+      <DependentUpon>Frm_BajaTipoAsientos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Tipo_Asientos\Frm_ModificarTipoAsiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Tipo_Asientos\Frm_ModificarTipoAsiento.Designer.cs">
+      <DependentUpon>Frm_ModificarTipoAsiento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Tramos\Frm_ABMTramos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -348,8 +372,12 @@
     <Compile Include="NE_Usuarios\NE_Avion.cs" />
     <Compile Include="NE_Usuarios\NE_Ciudad.cs" />
     <Compile Include="NE_Usuarios\NE_Clientes.cs" />
+
+    <Compile Include="NE_Usuarios\NE_TipoAsiento.cs" />
+
     <Compile Include="NE_Usuarios\NE_GrupoFamiliar.cs" />
     <Compile Include="NE_Usuarios\NE_Modelo.cs" />
+
     <Compile Include="NE_Usuarios\NE_Tramos.cs" />
     <Compile Include="NE_Usuarios\NE_Tripulacion.cs" />
     <Compile Include="NE_Usuarios\NE_Viajes.cs" />
@@ -448,6 +476,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Provincia\Frm_ModificarProvincia.resx">
       <DependentUpon>Frm_ModificarProvincia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Tipo_Asientos\Frm_ABMTipoAsientos.resx">
+      <DependentUpon>Frm_ABMTipoAsientos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Tipo_Asientos\Frm_AltaTipoAsiento.resx">
+      <DependentUpon>Frm_AltaTipoAsiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Tipo_Asientos\Frm_BajaTipoAsientos.resx">
+      <DependentUpon>Frm_BajaTipoAsientos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Tipo_Asientos\Frm_ModificarTipoAsiento.resx">
+      <DependentUpon>Frm_ModificarTipoAsiento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Tramos\Frm_ABMTramos.resx">
       <DependentUpon>Frm_ABMTramos.cs</DependentUpon>
