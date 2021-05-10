@@ -7,6 +7,7 @@ using TrabajoPrácticoPAV.Formularios;
 using TrabajoPrácticoPAV.Formularios.Provincia;
 using TrabajoPrácticoPAV.Formularios.Pais;
 using TrabajoPrácticoPAV.Formularios.Tripulacion;
+using TrabajoPrácticoPAV.Formularios.Ciudad;
 
 namespace TrabajoPrácticoPAV
 {

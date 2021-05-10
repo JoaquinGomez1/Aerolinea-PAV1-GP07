@@ -93,7 +93,6 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
             int indexCeldaEliminar = 5;
             int indexCeldaIdCargo = 6;
 
-            // Previene que se admitan los botones de filas vacías como acciones válidas
             bool rowVacia = grid_tripulantes.CurrentRow.Cells[0].Value == null;
             if (rowVacia) return;
 
