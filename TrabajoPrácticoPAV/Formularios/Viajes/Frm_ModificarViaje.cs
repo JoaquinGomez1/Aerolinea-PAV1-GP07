@@ -22,6 +22,9 @@ namespace TrabajoPrácticoPAV.Formularios.Viajes
         public Frm_ModificarViaje()
         {
             InitializeComponent();
+            this.BackColor = Estilo.ColorFondoForms;
+            panel1.BackColor = Estilo.ColorFondoForms;
+            Estilo.FormatearEstilo(this.Controls);
         }
 
         private void numero_viaje_SelectedIndexChanged(object sender, EventArgs e)

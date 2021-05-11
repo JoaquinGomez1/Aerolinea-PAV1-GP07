@@ -131,7 +131,6 @@ namespace TrabajoPrácticoPAV.Formularios
         
         private void cmb_nomModelo_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            //MessageBox.Show("Descomentar esta parte");
             string Condicion = @" JOIN Modelo ON Modelo.idModelo " +
                     @"= Avion.idModelo WHERE Avion.idModelo = " + cmb_nomModelo.SelectedValue;
             cmb_NumAvion.CargarComboJoin(Condicion);

@@ -14,7 +14,7 @@ namespace TrabajoPrácticoPAV.Clase
     class Tratamientos_Especiales
     {
         public enum Resultado { correcto, error }
-   
+
         public string ConstructorSelect(Control.ControlCollection controles, string join, string nombreTabla)
         {
             string sql = "SELECT ";
@@ -32,9 +32,9 @@ namespace TrabajoPrácticoPAV.Clase
                     DataGridView_Aerolinea grid = ((DataGridView_Aerolinea)control);
                     atributosTabla += $"{ExtraerColumnasGrid(grid)} FROM {nombreTabla}";
                 }
-                
+
                 //Evaluación Checkbox
-                if(control.GetType().ToString() == "System.Windows.Forms.CheckBox")
+                if (control.GetType().ToString() == "System.Windows.Forms.CheckBox")
                 {
                     if (((CheckBox)control).Checked)
                         todos = true;
@@ -89,12 +89,12 @@ namespace TrabajoPrácticoPAV.Clase
                         //teniendo en cuenta el nombreCampoInsert, el cual es una referencia al nombre del atributo 
                         //buscado pero en la tabla principal del ABM
                         string condicion = "";
-                        if(cmb.Pp_NombreTabla != nombreTabla)
+                        if (cmb.Pp_NombreTabla != nombreTabla)
                             condicion = $"{nombreTabla}.{cmb.Pp_NombreCampoInsert} = " +
                                 $"{FormatearDato(cmb.SelectedValue.ToString())}";
                         else
-                        condicion = $"{cmb.Pp_NombreTabla}.{cmb.Pp_PkTabla}=" +
-                            $"{FormatearDato(cmb.SelectedValue.ToString())}";
+                            condicion = $"{cmb.Pp_NombreTabla}.{cmb.Pp_PkTabla}=" +
+                                $"{FormatearDato(cmb.SelectedValue.ToString())}";
 
                         if (condiciones == "")
                             condiciones += " WHERE " + condicion;
@@ -103,15 +103,17 @@ namespace TrabajoPrácticoPAV.Clase
                     }
                 }
             }
-            if (atributosTabla == "" || todos)
+            if (atributosTabla == "")
                 atributosTabla = $" * FROM {nombreTabla} ";
+            if (todos)
+                condiciones = "";
 
             sql += atributosTabla + join + condiciones;
-        
+
             return sql;
         }
 
-        private object FormatearDato(string dato)
+        public object FormatearDato(string dato)
         {
             try
             {
@@ -171,13 +173,13 @@ namespace TrabajoPrácticoPAV.Clase
                     DataGridView_Aerolinea grid = (DataGridView_Aerolinea)item;
                     if (grid.Rows.Count > 0 && grid.Name.ToString() == "Grid_Telefonos")
                     {
-                        if(ValidarTelefonos(grid) == Resultado.error)
+                        if (ValidarTelefonos(grid) == Resultado.error)
                         {
                             MessageBox.Show("Telefono mal carrgado");
                             return Resultado.error;
                         }
                     }
-                
+
                 }
                 if (item.GetType().Name == "MaskedTextBox_Aerolinea")
                 {
@@ -188,6 +190,12 @@ namespace TrabajoPrácticoPAV.Clase
                         msk.Focus();
                         return Resultado.error;
                     }
+                }
+
+                // Si se le pasa un panel, ejecutar de forma recursiva hasta encontrar un control válido
+                if (item.GetType().Name == "Panel")
+                {
+                    this.Validar(((Panel)item).Controls);
                 }
             }
             return Resultado.correcto;

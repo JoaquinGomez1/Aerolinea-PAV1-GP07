@@ -94,6 +94,7 @@ namespace TrabajoPrácticoPAV.Formularios
             // 
             // btn_refrescar
             // 
+            this.btn_refrescar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_refrescar.Location = new System.Drawing.Point(549, 359);
             this.btn_refrescar.Name = "btn_refrescar";
             this.btn_refrescar.Size = new System.Drawing.Size(75, 23);
@@ -105,6 +106,7 @@ namespace TrabajoPrácticoPAV.Formularios
             // button4
             // 
             this.button4.AccessibleName = "btn_borrar_Click";
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Location = new System.Drawing.Point(152, 359);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
@@ -115,6 +117,7 @@ namespace TrabajoPrácticoPAV.Formularios
             // 
             // button3
             // 
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Location = new System.Drawing.Point(71, 359);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
@@ -210,6 +213,7 @@ namespace TrabajoPrácticoPAV.Formularios
             // 
             // button2
             // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.button2.Location = new System.Drawing.Point(424, 137);
             this.button2.Name = "button2";
@@ -232,6 +236,7 @@ namespace TrabajoPrácticoPAV.Formularios
             // button1
             // 
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.button1.Location = new System.Drawing.Point(534, 137);
             this.button1.Name = "button1";

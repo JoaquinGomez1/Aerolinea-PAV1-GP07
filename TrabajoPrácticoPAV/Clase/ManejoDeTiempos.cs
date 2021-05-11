@@ -26,6 +26,7 @@ namespace TrabajoPrácticoPAV.Clase
 
         public Array separarMindeHoras(int horario)
         {
+            /// <summary>Separa un int militar en un array compuesto de horas y minutos </summary>
             string horariodeString = FormatearIntMilitarAString(horario);
             string horasDelHorario = $"{horariodeString[0]}{horariodeString[1]}";
             string minutosDelHorario = $"{horariodeString[3]}{horariodeString[4]}";
@@ -56,6 +57,7 @@ namespace TrabajoPrácticoPAV.Clase
 
         public bool esHorarioValido(string horario)
         {
+            /// Retorna si un horario en string es válido para ser convertido a DateTime
             // El formato debe ser "hh:mm"
             if (horario.Length != 5) return false;
 
@@ -116,6 +118,12 @@ namespace TrabajoPrácticoPAV.Clase
             return diferenciaDelDia;
         }
 
+        public TimeSpan calcularDiferenciaDelDiaDateTimes(DateTime horarioInicial, DateTime horarioFinal)
+        {
+            // Calcula la diferencia del dia cuando el horario final es menor que el horario inicial
+            // Ej: Inicial = 15:00 | Final = 14:00 => nos devuelve 23:00 hs de diferencia
+            return horarioFinal.Subtract(horarioInicial.AddHours(24));
+        }
 
         public string RestarDateTimes(string horaFinal, string horaInicial)
         {
@@ -124,6 +132,7 @@ namespace TrabajoPrácticoPAV.Clase
             DateTime inicial = ParseTime(horaInicial);
 
             string Tiempo = $"{final.Subtract(inicial)}";
+            // Lo de arriba devuelve en formato "hh:mm:ss" con el substring lo dividimos para que solo nos de "hh:mm"
             string HorasYMinutos = Tiempo.Substring(0, 5);
 
             return HorasYMinutos;
@@ -131,7 +140,7 @@ namespace TrabajoPrácticoPAV.Clase
 
         public string RestarDateTimes(DateTime horaFinal, DateTime horaInicial)
         {
-            /// <summary> Toma dos strings de horarios en formato "HH:MM" y retorna un Objeto TimeSpan con la resta de los tiempos </summary>
+            /// <summary> Toma dos datetimes, los resta y devuelve un string con el resultado </summary>
 
             string Tiempo = $"{horaFinal.Subtract(horaInicial)}";
             string HorasYMinutos = Tiempo.Substring(0, 5);
@@ -139,10 +148,10 @@ namespace TrabajoPrácticoPAV.Clase
             return HorasYMinutos;
         }
 
-
         // Funcion lambda que convierte un formato de horas y minutos a un objeto DateTime 
         // El parametro tiene que seguir la siguiente estructura:  "14:00" 
         // Documentación oficial del método: https://docs.microsoft.com/en-us/dotnet/api/system.datetime.parseexact?view=net-5.0
         public DateTime ParseTime(string horasYMin) => DateTime.ParseExact(horasYMin, "HH:mm", null, System.Globalization.DateTimeStyles.None);
+
     }
 }
