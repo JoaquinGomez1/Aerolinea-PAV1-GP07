@@ -16,10 +16,9 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
 
         public Frm_Tripulacion()
         {
+            InitializeComponent();
             this.BackColor = Estilo.ColorFondoForms;
             Estilo.FormatearEstilo(this.Controls);
-            InitializeComponent();
-
         }
 
         private void Frm_Tripulacion_Load(object sender, EventArgs e)

@@ -320,6 +320,12 @@
     <Compile Include="Formularios\Tramos\Frm_ModificacionTramo.Designer.cs">
       <DependentUpon>Frm_ModificacionTramo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Tripulacion\Cargo Tripulacion\Frm_CargoTripulacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Tripulacion\Cargo Tripulacion\Frm_CargoTripulacion.Designer.cs">
+      <DependentUpon>Frm_CargoTripulacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Tripulacion\Frm_Tripulacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -370,14 +376,12 @@
     </Compile>
     <Compile Include="NE_Usuarios\NE_Asiento.cs" />
     <Compile Include="NE_Usuarios\NE_Avion.cs" />
+    <Compile Include="NE_Usuarios\NE_CargoTripulacion.cs" />
     <Compile Include="NE_Usuarios\NE_Ciudad.cs" />
     <Compile Include="NE_Usuarios\NE_Clientes.cs" />
-
     <Compile Include="NE_Usuarios\NE_TipoAsiento.cs" />
-
     <Compile Include="NE_Usuarios\NE_GrupoFamiliar.cs" />
     <Compile Include="NE_Usuarios\NE_Modelo.cs" />
-
     <Compile Include="NE_Usuarios\NE_Tramos.cs" />
     <Compile Include="NE_Usuarios\NE_Tripulacion.cs" />
     <Compile Include="NE_Usuarios\NE_Viajes.cs" />
@@ -509,6 +513,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Tramos\Frm_ModificacionTramo.resx">
       <DependentUpon>Frm_ModificacionTramo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Tripulacion\Cargo Tripulacion\Frm_CargoTripulacion.resx">
+      <DependentUpon>Frm_CargoTripulacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Tripulacion\Frm_Tripulacion.resx">
       <DependentUpon>Frm_Tripulacion.cs</DependentUpon>
