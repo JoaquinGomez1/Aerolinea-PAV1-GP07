@@ -19,6 +19,8 @@ namespace TrabajoPrácticoPAV.Formularios.Tipo_Asientos
         public Frm_ABMTipoAsientos()
         {
             InitializeComponent();
+            this.BackColor = Estilo.ColorFondoForms;
+            Estilo.FormatearEstilo(this.Controls);
         }
         Tratamientos_Especiales _TE = new Tratamientos_Especiales();
 
