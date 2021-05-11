@@ -32,14 +32,14 @@
             this.chk_modelo = new System.Windows.Forms.CheckBox();
             this.txt_nombre = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
             this.grilla_modelos = new TrabajoPrácticoPAV.Clase.DataGridView_Aerolinea();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idModelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_eliminar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.btn_modificar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.btn_buscar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.btn_registrar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.btn_cerrar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.btn_limpiar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idModelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grilla_modelos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,12 +84,25 @@
             this.grilla_modelos.Location = new System.Drawing.Point(39, 165);
             this.grilla_modelos.Name = "grilla_modelos";
             this.grilla_modelos.Pp_FormatoGrid = null;
-            this.grilla_modelos.Pp_NombreTabla = null;
+            this.grilla_modelos.Pp_NombreTabla = "Modelo";
             this.grilla_modelos.ReadOnly = true;
             this.grilla_modelos.Size = new System.Drawing.Size(327, 150);
             this.grilla_modelos.TabIndex = 6;
             this.grilla_modelos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grilla_modelos_CellClick);
             this.grilla_modelos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grilla_modelos_CellDoubleClick);
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            // 
+            // idModelo
+            // 
+            this.idModelo.HeaderText = "idModelo";
+            this.idModelo.Name = "idModelo";
+            this.idModelo.ReadOnly = true;
+            this.idModelo.Visible = false;
             // 
             // btn_eliminar
             // 
@@ -158,19 +171,6 @@
             this.btn_limpiar.Text = "Limpiar";
             this.btn_limpiar.UseVisualStyleBackColor = true;
             this.btn_limpiar.Click += new System.EventHandler(this.btn_limpiar_Click);
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            // 
-            // idModelo
-            // 
-            this.idModelo.HeaderText = "idModelo";
-            this.idModelo.Name = "idModelo";
-            this.idModelo.ReadOnly = true;
-            this.idModelo.Visible = false;
             // 
             // Frm_ABMmodelo
             // 
