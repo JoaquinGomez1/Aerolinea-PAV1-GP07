@@ -18,6 +18,8 @@ namespace TrabajoPrácticoPAV.Formularios.Asientos
     public partial class Frm_ABMAsientos : Form
     {
         public string Id_Asiento { get; set; }
+        NE_Asiento NEasiento = new NE_Asiento();
+
         public Frm_ABMAsientos()
         {
             InitializeComponent();
@@ -35,11 +37,11 @@ namespace TrabajoPrácticoPAV.Formularios.Asientos
 
         private void btn_buscar_Click(object sender, EventArgs e)
         {
-            NE_Asiento asiento = new NE_Asiento();
             Tratamientos_Especiales tratamiento = new Tratamientos_Especiales();
 
-           string sql = tratamiento.ConstructorSelect(this.Controls, "", "Asientos");
-           CargarGrilla_asientos(sql);
+            string join = $" JOIN Modelo ON  modelo.idModelo = Asientos.idModelo ";
+            string sql = tratamiento.ConstructorSelect(this.Controls, join, "Asientos");
+            CargarGrilla_asientos(sql);
         }
         private void CargarGrilla_asientos(string sql)
         {
@@ -52,9 +54,9 @@ namespace TrabajoPrácticoPAV.Formularios.Asientos
             {
                 grilla_ABMAsiento.Rows.Add();
                 grilla_ABMAsiento.Rows[i].Cells[0].Value = tabla.Rows[i]["numeroAsiento"].ToString();
-                grilla_ABMAsiento.Rows[i].Cells[1].Value = tabla.Rows[i]["idModelo"].ToString();
+                grilla_ABMAsiento.Rows[i].Cells[1].Value = NEasiento.BuscarModelo(tabla.Rows[i]["idModelo"].ToString());
                 grilla_ABMAsiento.Rows[i].Cells[2].Value = tabla.Rows[i]["numeroPorModelo"].ToString();
-                grilla_ABMAsiento.Rows[i].Cells[3].Value = tabla.Rows[i]["tipoAsiento"].ToString();
+                grilla_ABMAsiento.Rows[i].Cells[3].Value = NEasiento.BuscarClase(tabla.Rows[i]["tipoAsiento"].ToString());
                 grilla_ABMAsiento.Rows[i].Cells[4].Value = tabla.Rows[i]["estado"].ToString();
             }
             if (tabla.Rows.Count == 0)
@@ -72,7 +74,7 @@ namespace TrabajoPrácticoPAV.Formularios.Asientos
             string CondicionAvion = @" JOIN Modelo ON Modelo.idModelo " +
                        @"= Avion.idModelo WHERE Modelo.idModelo = " + cmb_Modelo.SelectedValue;
             cmb_NumeroAvion.CargarComboJoin(CondicionAvion);
-            
+
         }
 
         private void cmb_NumeroAvion_SelectionChangeCommitted(object sender, EventArgs e)
@@ -100,8 +102,7 @@ namespace TrabajoPrácticoPAV.Formularios.Asientos
         }
 
         private void grilla_ABMAsiento_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            NE_Vuelos NegoVuelo = new NE_Vuelos();
+        { 
             btn_eliminar.Enabled = true;
             btn_modificar.Enabled = true;
             Id_Asiento = grilla_ABMAsiento.CurrentRow.Cells[0].Value.ToString();

@@ -8,6 +8,9 @@ using TrabajoPrácticoPAV.Formularios.Provincia;
 using TrabajoPrácticoPAV.Formularios.Pais;
 using TrabajoPrácticoPAV.Formularios.Tipo_Asientos;
 using TrabajoPrácticoPAV.Formularios.Tripulacion;
+using TrabajoPrácticoPAV.Formularios.Ciudad;
+using TrabajoPrácticoPAV.Formularios.Asientos;
+using TrabajoPrácticoPAV.Formularios.Modelo;
 
 
 namespace TrabajoPrácticoPAV
@@ -23,7 +26,6 @@ namespace TrabajoPrácticoPAV
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Frm_Principal());
-       
         }
     }
 }

@@ -51,12 +51,9 @@ namespace TrabajoPrácticoPAV.Formularios.Asientos
         {
             Tratamientos_Especiales Tratamiento = new Tratamientos_Especiales();
          
-            //if (cmb_AeropSalida.SelectedIndex != cmb_AeropDestino.SelectedIndex)
-            //{
                 string sql = Tratamiento.CostructorUpdateDelete("Asientos", this.Controls, true);
                 _BD.Modificar(sql, false);
                 this.Close();
-            //}
         }
 
         private void cmb_nombreModelo_SelectionChangeCommitted_1(object sender, EventArgs e)

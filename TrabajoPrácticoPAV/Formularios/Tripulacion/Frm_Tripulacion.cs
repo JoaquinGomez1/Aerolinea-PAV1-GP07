@@ -16,10 +16,9 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
 
         public Frm_Tripulacion()
         {
+            InitializeComponent();
             this.BackColor = Estilo.ColorFondoForms;
             Estilo.FormatearEstilo(this.Controls);
-            InitializeComponent();
-
         }
 
         private void Frm_Tripulacion_Load(object sender, EventArgs e)
@@ -93,7 +92,6 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
             int indexCeldaEliminar = 5;
             int indexCeldaIdCargo = 6;
 
-            // Previene que se admitan los botones de filas vacías como acciones válidas
             bool rowVacia = grid_tripulantes.CurrentRow.Cells[0].Value == null;
             if (rowVacia) return;
 
