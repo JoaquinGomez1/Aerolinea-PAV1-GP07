@@ -15,13 +15,15 @@ namespace TrabajoPrácticoPAV.Formularios.Tipo_Asientos
 {
     public partial class Frm_ABMTipoAsientos : Form
 
-    {   public string Id_Tipo { get; set; }
+    {
+        public string Id_Tipo { get; set; }
+        Conexion_DB _BD = new Conexion_DB();
+        Tratamientos_Especiales _TE = new Tratamientos_Especiales();
+
         public Frm_ABMTipoAsientos()
         {
             InitializeComponent();
         }
-        Tratamientos_Especiales _TE = new Tratamientos_Especiales();
-
         private void Frm_ABMTipoAsientos_Load(object sender, EventArgs e)
         {
             grid_TipoAsiento.Pp_FormatoGrid = "idTipo, ID, 50;nombre, Clase, 100;costo, Costo, 100";
@@ -46,7 +48,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tipo_Asientos
             string sql = _TE.ConstructorSelect(this.Controls, "", "Tipo_Asiento");
             CargarGrilla(sql, grid_TipoAsiento);
         }
-        Conexion_DB _BD = new Conexion_DB();
+        
 
         private void CargarGrilla(string sql, DataGridView_Aerolinea grid)
         {
@@ -62,14 +64,13 @@ namespace TrabajoPrácticoPAV.Formularios.Tipo_Asientos
             }
             if (tabla.Rows.Count == 0)
             {
-                MessageBox.Show("No se encontraron vuelos.");
+                MessageBox.Show("No se encontraron clases para los asientos.");
             }
 
         }
 
         private void grid_TipoAsiento_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            NE_TipoAsiento NegoVuelo = new NE_TipoAsiento();
             btn_eliminar.Enabled = true;
             btn_modificar.Enabled = true;
             Id_Tipo = grid_TipoAsiento.CurrentRow.Cells[0].Value.ToString();
@@ -96,12 +97,19 @@ namespace TrabajoPrácticoPAV.Formularios.Tipo_Asientos
         {
             Frm_BajaTipoAsientos bajaTA = new Frm_BajaTipoAsientos();
             bajaTA.Pp_nombreBaja = grid_TipoAsiento.CurrentRow.Cells[1].Value.ToString();
-            //bajaTA.Id_Tipo = Id_Tipo;
-            //MessageBox.Show(bajaTA.Pp_nombreBaja);
+            bajaTA.Id_Tipo = Id_Tipo;
+            bajaTA.Pp_costo = grid_TipoAsiento.CurrentRow.Cells[2].Value;
             bajaTA.ShowDialog();
         }
 
-        
+        private void grid_TipoAsiento_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Frm_ConsultarTipoAsiento consultaTA = new Frm_ConsultarTipoAsiento();
+            consultaTA.Pp_nombre = grid_TipoAsiento.CurrentRow.Cells[1].Value.ToString();
+            consultaTA.Id_Tipo = Id_Tipo;
+            consultaTA.Pp_costo = grid_TipoAsiento.CurrentRow.Cells[2].Value;
+            consultaTA.ShowDialog();
+        }
     }
 
    

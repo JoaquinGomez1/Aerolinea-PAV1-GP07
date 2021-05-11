@@ -272,6 +272,12 @@
     <Compile Include="Formularios\Tipo_Asientos\Frm_BajaTipoAsientos.Designer.cs">
       <DependentUpon>Frm_BajaTipoAsientos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Tipo_Asientos\Frm_ConsultarTipoAsiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Tipo_Asientos\Frm_ConsultarTipoAsiento.Designer.cs">
+      <DependentUpon>Frm_ConsultarTipoAsiento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Tipo_Asientos\Frm_ModificarTipoAsiento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -489,6 +495,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Tipo_Asientos\Frm_BajaTipoAsientos.resx">
       <DependentUpon>Frm_BajaTipoAsientos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Tipo_Asientos\Frm_ConsultarTipoAsiento.resx">
+      <DependentUpon>Frm_ConsultarTipoAsiento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Tipo_Asientos\Frm_ModificarTipoAsiento.resx">
       <DependentUpon>Frm_ModificarTipoAsiento.cs</DependentUpon>

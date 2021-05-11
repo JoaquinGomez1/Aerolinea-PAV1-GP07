@@ -12,11 +12,6 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
     {
         Conexion_DB _BD = new Conexion_DB();
         public enum ResultadoValidacion { existe, no_existe }
-        //public string BuscarTodos()
-        //{
-        //    string sql = "SELECT * FROM asientos WHERE idVuelo";
-        //    return _BD.EjecutarSelect(sql);
-        //}
         public DataTable RecuperarXId(string idTipo)
         {
             string sql = "SELECT * FROM Tipo_Asiento WHERE idTipo =" + idTipo;

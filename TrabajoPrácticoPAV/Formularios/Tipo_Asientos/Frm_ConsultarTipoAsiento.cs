@@ -7,25 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TrabajoPrácticoPAV.NE_Usuarios;
 using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.Backend;
-using TrabajoPrácticoPAV.NE_Usuarios;
 
 namespace TrabajoPrácticoPAV.Formularios.Tipo_Asientos
 {
-    public partial class Frm_ModificarTipoAsiento : Form
+    public partial class Frm_ConsultarTipoAsiento : Form
     {
         public string Pp_nombre { get; set; }
         public object Pp_costo { get; set; }
         public string Id_Tipo { get; set; }
         Conexion_DB _BD = new Conexion_DB();
 
-        public Frm_ModificarTipoAsiento()
+        public Frm_ConsultarTipoAsiento()
         {
             InitializeComponent();
         }
 
-        private void Frm_ModificarTipoAsiento_Load(object sender, EventArgs e)
+        private void Frm_ConsultarTipoAsiento_Load(object sender, EventArgs e)
         {
             this.BackColor = Estilo.ColorFondoForms;
             Estilo.FormatearEstilo(this.Controls);
@@ -36,18 +36,11 @@ namespace TrabajoPrácticoPAV.Formularios.Tipo_Asientos
             msktxt_Costo.Text = Pp_costo.ToString();
         }
 
-        private void btn_Cancelar_Click(object sender, EventArgs e)
+        private void btn_aceptar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
-        private void btn_Actualizar_Click_1(object sender, EventArgs e)
-        {
-            Tratamientos_Especiales _TE = new Tratamientos_Especiales();
-            string sql = _TE.CostructorUpdateDelete("Tipo_Asiento", this.Controls, true);
-            _BD.Modificar(sql, false);
-            this.Close();
-        }
-        
+       
+       
     }
 }
