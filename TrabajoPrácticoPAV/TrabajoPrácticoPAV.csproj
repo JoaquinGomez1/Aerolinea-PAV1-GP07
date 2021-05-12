@@ -168,6 +168,24 @@
     <Compile Include="Formularios\Provincia\Frm_ModificarProvincia.Designer.cs">
       <DependentUpon>Frm_ModificarProvincia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\TipoDoc\Frm_ABMTipoDoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\TipoDoc\Frm_ABMTipoDoc.Designer.cs">
+      <DependentUpon>Frm_ABMTipoDoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\TipoDoc\Frm_AltaTipoDoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\TipoDoc\Frm_AltaTipoDoc.Designer.cs">
+      <DependentUpon>Frm_AltaTipoDoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\TipoDoc\Frm_ModificarTipoDoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\TipoDoc\Frm_ModificarTipoDoc.Designer.cs">
+      <DependentUpon>Frm_ModificarTipoDoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Tramos\Frm_ABMTramos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -255,6 +273,7 @@
     <Compile Include="NE_Usuarios\NE_Asiento.cs" />
     <Compile Include="NE_Usuarios\NE_Avion.cs" />
     <Compile Include="NE_Usuarios\NE_Clientes.cs" />
+    <Compile Include="NE_Usuarios\NE_TipoDoc.cs" />
     <Compile Include="NE_Usuarios\NE_Tramos.cs" />
     <Compile Include="NE_Usuarios\NE_Viajes.cs" />
     <Compile Include="NE_Usuarios\NE_Vuelos.cs" />
@@ -310,6 +329,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Provincia\Frm_ModificarProvincia.resx">
       <DependentUpon>Frm_ModificarProvincia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\TipoDoc\Frm_ABMTipoDoc.resx">
+      <DependentUpon>Frm_ABMTipoDoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\TipoDoc\Frm_AltaTipoDoc.resx">
+      <DependentUpon>Frm_AltaTipoDoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\TipoDoc\Frm_ModificarTipoDoc.resx">
+      <DependentUpon>Frm_ModificarTipoDoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Tramos\Frm_ABMTramos.resx">
       <DependentUpon>Frm_ABMTramos.cs</DependentUpon>
