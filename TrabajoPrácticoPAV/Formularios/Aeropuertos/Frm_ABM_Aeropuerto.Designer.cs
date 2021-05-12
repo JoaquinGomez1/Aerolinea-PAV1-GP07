@@ -43,10 +43,11 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.chk_todos = new System.Windows.Forms.CheckBox();
-            this.pic_deseleccionar = new System.Windows.Forms.PictureBox();
+            
             this.txt_nombre = new System.Windows.Forms.TextBox();
             this.cmb_codigos = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
-            this.btn_limpiar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
+            this.pic_deseleccionar = new System.Windows.Forms.PictureBox();
+
             ((System.ComponentModel.ISupportInitialize)(this.grid_aeropuertos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_deseleccionar)).BeginInit();
             this.SuspendLayout();
@@ -68,12 +69,30 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
             this.codigo,
             this.nombre,
             this.IdCiudad});
-            this.grid_aeropuertos.Location = new System.Drawing.Point(107, 119);
+            this.grid_aeropuertos.Location = new System.Drawing.Point(25, 155);
             this.grid_aeropuertos.Name = "grid_aeropuertos";
-            this.grid_aeropuertos.Size = new System.Drawing.Size(351, 230);
+
+            this.grid_aeropuertos.Size = new System.Drawing.Size(453, 214);
             this.grid_aeropuertos.TabIndex = 1;
             this.grid_aeropuertos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_aeropuertos_CellClick);
-            this.grid_aeropuertos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.grid_aeropuertos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_aeropuertos_CellDoubleClick);
+            // 
+            // codigo
+            // 
+            this.codigo.HeaderText = "Codigo";
+            this.codigo.Name = "codigo";
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            this.nombre.Width = 200;
+            // 
+            // IdCiudad
+            // 
+            this.IdCiudad.HeaderText = "IdCiudad";
+            this.IdCiudad.Name = "IdCiudad";
+            this.IdCiudad.Width = 90;
             // 
             // codigo
             // 
@@ -142,13 +161,14 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
             this.btn_eliminar.TabIndex = 2;
             this.btn_eliminar.Text = "Eliminar";
             this.btn_eliminar.UseVisualStyleBackColor = false;
+            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 
             // btn_volver
             // 
             this.btn_volver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
-            this.btn_volver.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_volver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_volver.Location = new System.Drawing.Point(107, 361);
+            
+            this.btn_volver.Location = new System.Drawing.Point(25, 375);
+
             this.btn_volver.Name = "btn_volver";
             this.btn_volver.Size = new System.Drawing.Size(90, 29);
             this.btn_volver.TabIndex = 2;
@@ -179,25 +199,16 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
             // chk_todos
             // 
             this.chk_todos.AutoSize = true;
-            this.chk_todos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.chk_todos.Location = new System.Drawing.Point(386, 89);
+            this.chk_todos.Location = new System.Drawing.Point(250, 134);
+
             this.chk_todos.Name = "chk_todos";
             this.chk_todos.Size = new System.Drawing.Size(72, 24);
             this.chk_todos.TabIndex = 5;
             this.chk_todos.Text = "Todos";
             this.chk_todos.UseVisualStyleBackColor = true;
             // 
-            // pic_deseleccionar
-            // 
-            this.pic_deseleccionar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_deseleccionar.BackgroundImage")));
-            this.pic_deseleccionar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic_deseleccionar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_deseleccionar.Location = new System.Drawing.Point(365, 46);
-            this.pic_deseleccionar.Name = "pic_deseleccionar";
-            this.pic_deseleccionar.Size = new System.Drawing.Size(18, 10);
-            this.pic_deseleccionar.TabIndex = 8;
-            this.pic_deseleccionar.TabStop = false;
-            this.pic_deseleccionar.Click += new System.EventHandler(this.pic_deseleccionar_Click);
+            
+
             // 
             // txt_nombre
             // 
@@ -221,19 +232,19 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
             this.cmb_codigos.Size = new System.Drawing.Size(158, 21);
             this.cmb_codigos.TabIndex = 11;
             // 
-            // btn_limpiar
+
+            // pic_deseleccionar
             // 
-            this.btn_limpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
-            this.btn_limpiar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_limpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_limpiar.Location = new System.Drawing.Point(203, 361);
-            this.btn_limpiar.Name = "btn_limpiar";
-            this.btn_limpiar.Pp_Presionado = false;
-            this.btn_limpiar.Size = new System.Drawing.Size(90, 29);
-            this.btn_limpiar.TabIndex = 12;
-            this.btn_limpiar.Text = "Limpiar";
-            this.btn_limpiar.UseVisualStyleBackColor = false;
-            this.btn_limpiar.Click += new System.EventHandler(this.btn_limpiar_Click);
+            this.pic_deseleccionar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_deseleccionar.BackgroundImage")));
+            this.pic_deseleccionar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pic_deseleccionar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pic_deseleccionar.Location = new System.Drawing.Point(368, 51);
+            this.pic_deseleccionar.Name = "pic_deseleccionar";
+            this.pic_deseleccionar.Size = new System.Drawing.Size(18, 10);
+            this.pic_deseleccionar.TabIndex = 8;
+            this.pic_deseleccionar.TabStop = false;
+            this.pic_deseleccionar.Click += new System.EventHandler(this.pic_deseleccionar_Click);
+
             // 
             // Frm_ABM_Aeropuerto
             // 
@@ -241,7 +252,6 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(227)))), ((int)(((byte)(187)))));
             this.ClientSize = new System.Drawing.Size(573, 402);
-            this.Controls.Add(this.btn_limpiar);
             this.Controls.Add(this.cmb_codigos);
             this.Controls.Add(this.txt_nombre);
             this.Controls.Add(this.pic_deseleccionar);
