@@ -186,8 +186,10 @@ namespace TrabajoPrácticoPAV.Formularios
             this.picBox_buscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBox_buscar.BackgroundImage")));
             this.picBox_buscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picBox_buscar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+
             this.picBox_buscar.Location = new System.Drawing.Point(337, 127);
             this.picBox_buscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+
             this.picBox_buscar.Name = "picBox_buscar";
             this.picBox_buscar.Size = new System.Drawing.Size(39, 26);
             this.picBox_buscar.TabIndex = 12;

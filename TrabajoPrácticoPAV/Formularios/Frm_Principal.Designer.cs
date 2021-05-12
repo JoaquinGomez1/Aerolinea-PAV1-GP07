@@ -35,47 +35,47 @@
             this.Btn_Minimizar = new System.Windows.Forms.PictureBox();
             this.Btn_Cerrar = new System.Windows.Forms.PictureBox();
             this.PanelMenu = new System.Windows.Forms.Panel();
-            this.PanelFormularios = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Btn_Menu = new System.Windows.Forms.Button();
-            this.Timer_Expandir = new System.Windows.Forms.Timer(this.components);
-            this.Timer_Contraer = new System.Windows.Forms.Timer(this.components);
             this.Btn_ABM = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.Btn_ABM_Viaje = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.Btn_Configuracion = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.Btn_ABM_Vuelo = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.Btn_ABM_Tramo = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.PanelFormularios = new System.Windows.Forms.Panel();
+            this.Btn_Menu = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.aeropuertosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.avionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pasajerosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ubicacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viajesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aviónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modeloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tipoDeAsientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.asientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modeloToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pasajerosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pasajeroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grupoFamiliarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tipoDeDocumentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ubicacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.paísToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.provinciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ciudadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viajesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vueloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tramosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viajesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tripulaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tipoDeDocumentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cargosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tipoDeAsientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.asientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tripulaciónToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Timer_Expandir = new System.Windows.Forms.Timer(this.components);
+            this.Timer_Contraer = new System.Windows.Forms.Timer(this.components);
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Cerrar)).BeginInit();
             this.PanelMenu.SuspendLayout();
             this.PanelFormularios.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -152,65 +152,6 @@
             this.PanelMenu.TabIndex = 1;
             this.PanelMenu.MouseEnter += new System.EventHandler(this.PanelMenu_MouseEnter);
             this.PanelMenu.MouseLeave += new System.EventHandler(this.MouseSalioDeMenu);
-            // 
-            // PanelFormularios
-            // 
-            this.PanelFormularios.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.PanelFormularios.BackgroundImage = global::TrabajoPrácticoPAV.Properties.Resources.ElbpHR6W0AAInBS;
-            this.PanelFormularios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PanelFormularios.Controls.Add(this.Btn_Menu);
-            this.PanelFormularios.Controls.Add(this.menuStrip1);
-            this.PanelFormularios.Controls.Add(this.pictureBox1);
-            this.PanelFormularios.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelFormularios.Location = new System.Drawing.Point(200, 39);
-            this.PanelFormularios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.PanelFormularios.Name = "PanelFormularios";
-            this.PanelFormularios.Size = new System.Drawing.Size(1000, 514);
-            this.PanelFormularios.TabIndex = 2;
-            this.PanelFormularios.Visible = false;
-            this.PanelFormularios.MouseEnter += new System.EventHandler(this.MouseSalioDeMenu);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Enabled = false;
-            this.pictureBox1.Image = global::TrabajoPrácticoPAV.Properties.Resources.Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(-147, 82);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1307, 325);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.MouseEnter += new System.EventHandler(this.MouseSalioDeMenu);
-            // 
-            // Btn_Menu
-            // 
-            this.Btn_Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
-            this.Btn_Menu.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.Btn_Menu.FlatAppearance.BorderSize = 2;
-            this.Btn_Menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Menu.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.Btn_Menu.Location = new System.Drawing.Point(0, 474);
-            this.Btn_Menu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Btn_Menu.Name = "Btn_Menu";
-            this.Btn_Menu.Size = new System.Drawing.Size(47, 37);
-            this.Btn_Menu.TabIndex = 0;
-            this.Btn_Menu.Text = "←";
-            this.Btn_Menu.UseVisualStyleBackColor = false;
-            this.Btn_Menu.Click += new System.EventHandler(this.Btn_Menu_Click);
-            // 
-            // Timer_Expandir
-            // 
-            this.Timer_Expandir.Interval = 15;
-            this.Timer_Expandir.Tick += new System.EventHandler(this.Timer_Expandir_Tick);
-            // 
-            // Timer_Contraer
-            // 
-            this.Timer_Contraer.Interval = 15;
-            this.Timer_Contraer.Tick += new System.EventHandler(this.Timer_Contraer_Tick);
             // 
             // Btn_ABM
             // 
@@ -322,11 +263,38 @@
             this.Btn_ABM_Tramo.MouseEnter += new System.EventHandler(this.PanelMenu_MouseEnter);
             this.Btn_ABM_Tramo.MouseLeave += new System.EventHandler(this.MouseSalioDeMenu);
             // 
-            // contextMenuStrip1
+            // PanelFormularios
             // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            this.PanelFormularios.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.PanelFormularios.BackgroundImage = global::TrabajoPrácticoPAV.Properties.Resources.ElbpHR6W0AAInBS;
+            this.PanelFormularios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PanelFormularios.Controls.Add(this.pictureBox1);
+            this.PanelFormularios.Controls.Add(this.Btn_Menu);
+            this.PanelFormularios.Controls.Add(this.menuStrip1);
+            this.PanelFormularios.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelFormularios.Location = new System.Drawing.Point(200, 39);
+            this.PanelFormularios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PanelFormularios.Name = "PanelFormularios";
+            this.PanelFormularios.Size = new System.Drawing.Size(1000, 514);
+            this.PanelFormularios.TabIndex = 2;
+            this.PanelFormularios.Visible = false;
+            this.PanelFormularios.MouseEnter += new System.EventHandler(this.MouseSalioDeMenu);
+            // 
+            // Btn_Menu
+            // 
+            this.Btn_Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
+            this.Btn_Menu.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.Btn_Menu.FlatAppearance.BorderSize = 2;
+            this.Btn_Menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Menu.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.Btn_Menu.Location = new System.Drawing.Point(0, 474);
+            this.Btn_Menu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Btn_Menu.Name = "Btn_Menu";
+            this.Btn_Menu.Size = new System.Drawing.Size(47, 37);
+            this.Btn_Menu.TabIndex = 0;
+            this.Btn_Menu.Text = "←";
+            this.Btn_Menu.UseVisualStyleBackColor = false;
+            this.Btn_Menu.Click += new System.EventHandler(this.Btn_Menu_Click);
             // 
             // menuStrip1
             // 
@@ -360,6 +328,39 @@
             this.avionesToolStripMenuItem.Size = new System.Drawing.Size(96, 24);
             this.avionesToolStripMenuItem.Text = "Aviones";
             // 
+            // aviónToolStripMenuItem
+            // 
+            this.aviónToolStripMenuItem.Name = "aviónToolStripMenuItem";
+            this.aviónToolStripMenuItem.Size = new System.Drawing.Size(140, 26);
+            this.aviónToolStripMenuItem.Text = "Avión";
+            // 
+            // modeloToolStripMenuItem
+            // 
+            this.modeloToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tipoDeAsientosToolStripMenuItem,
+            this.asientosToolStripMenuItem});
+            this.modeloToolStripMenuItem.Name = "modeloToolStripMenuItem";
+            this.modeloToolStripMenuItem.Size = new System.Drawing.Size(140, 26);
+            this.modeloToolStripMenuItem.Text = "Asientos";
+            // 
+            // tipoDeAsientosToolStripMenuItem
+            // 
+            this.tipoDeAsientosToolStripMenuItem.Name = "tipoDeAsientosToolStripMenuItem";
+            this.tipoDeAsientosToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
+            this.tipoDeAsientosToolStripMenuItem.Text = "Tipo de Asientos";
+            // 
+            // asientosToolStripMenuItem
+            // 
+            this.asientosToolStripMenuItem.Name = "asientosToolStripMenuItem";
+            this.asientosToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
+            this.asientosToolStripMenuItem.Text = "Asientos";
+            // 
+            // modeloToolStripMenuItem1
+            // 
+            this.modeloToolStripMenuItem1.Name = "modeloToolStripMenuItem1";
+            this.modeloToolStripMenuItem1.Size = new System.Drawing.Size(140, 26);
+            this.modeloToolStripMenuItem1.Text = "Modelo";
+            // 
             // pasajerosToolStripMenuItem
             // 
             this.pasajerosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -369,48 +370,6 @@
             this.pasajerosToolStripMenuItem.Name = "pasajerosToolStripMenuItem";
             this.pasajerosToolStripMenuItem.Size = new System.Drawing.Size(96, 24);
             this.pasajerosToolStripMenuItem.Text = "Pasajeros";
-            // 
-            // ubicacionesToolStripMenuItem
-            // 
-            this.ubicacionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.paísToolStripMenuItem,
-            this.provinciaToolStripMenuItem,
-            this.ciudadToolStripMenuItem});
-            this.ubicacionesToolStripMenuItem.Name = "ubicacionesToolStripMenuItem";
-            this.ubicacionesToolStripMenuItem.Size = new System.Drawing.Size(96, 24);
-            this.ubicacionesToolStripMenuItem.Text = "Ubicaciones";
-            // 
-            // viajesToolStripMenuItem
-            // 
-            this.viajesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.vueloToolStripMenuItem,
-            this.tramosToolStripMenuItem,
-            this.viajesToolStripMenuItem1,
-            this.tripulaciónToolStripMenuItem});
-            this.viajesToolStripMenuItem.Name = "viajesToolStripMenuItem";
-            this.viajesToolStripMenuItem.Size = new System.Drawing.Size(96, 24);
-            this.viajesToolStripMenuItem.Text = "Viajes";
-            // 
-            // aviónToolStripMenuItem
-            // 
-            this.aviónToolStripMenuItem.Name = "aviónToolStripMenuItem";
-            this.aviónToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.aviónToolStripMenuItem.Text = "Avión";
-            // 
-            // modeloToolStripMenuItem
-            // 
-            this.modeloToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tipoDeAsientosToolStripMenuItem,
-            this.asientosToolStripMenuItem});
-            this.modeloToolStripMenuItem.Name = "modeloToolStripMenuItem";
-            this.modeloToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.modeloToolStripMenuItem.Text = "Asientos";
-            // 
-            // modeloToolStripMenuItem1
-            // 
-            this.modeloToolStripMenuItem1.Name = "modeloToolStripMenuItem1";
-            this.modeloToolStripMenuItem1.Size = new System.Drawing.Size(216, 26);
-            this.modeloToolStripMenuItem1.Text = "Modelo";
             // 
             // pasajeroToolStripMenuItem
             // 
@@ -424,40 +383,67 @@
             this.grupoFamiliarToolStripMenuItem.Size = new System.Drawing.Size(223, 26);
             this.grupoFamiliarToolStripMenuItem.Text = "Grupo Familiar";
             // 
+            // tipoDeDocumentosToolStripMenuItem
+            // 
+            this.tipoDeDocumentosToolStripMenuItem.Name = "tipoDeDocumentosToolStripMenuItem";
+            this.tipoDeDocumentosToolStripMenuItem.Size = new System.Drawing.Size(223, 26);
+            this.tipoDeDocumentosToolStripMenuItem.Text = "Tipo de Documentos";
+            // 
+            // ubicacionesToolStripMenuItem
+            // 
+            this.ubicacionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.paísToolStripMenuItem,
+            this.provinciaToolStripMenuItem,
+            this.ciudadToolStripMenuItem});
+            this.ubicacionesToolStripMenuItem.Name = "ubicacionesToolStripMenuItem";
+            this.ubicacionesToolStripMenuItem.Size = new System.Drawing.Size(96, 24);
+            this.ubicacionesToolStripMenuItem.Text = "Ubicaciones";
+            // 
             // paísToolStripMenuItem
             // 
             this.paísToolStripMenuItem.Name = "paísToolStripMenuItem";
-            this.paísToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.paísToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
             this.paísToolStripMenuItem.Text = "País";
             // 
             // provinciaToolStripMenuItem
             // 
             this.provinciaToolStripMenuItem.Name = "provinciaToolStripMenuItem";
-            this.provinciaToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.provinciaToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
             this.provinciaToolStripMenuItem.Text = "Provincia";
             // 
             // ciudadToolStripMenuItem
             // 
             this.ciudadToolStripMenuItem.Name = "ciudadToolStripMenuItem";
-            this.ciudadToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.ciudadToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
             this.ciudadToolStripMenuItem.Text = "Ciudad";
+            // 
+            // viajesToolStripMenuItem
+            // 
+            this.viajesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.vueloToolStripMenuItem,
+            this.tramosToolStripMenuItem,
+            this.viajesToolStripMenuItem1,
+            this.tripulaciónToolStripMenuItem});
+            this.viajesToolStripMenuItem.Name = "viajesToolStripMenuItem";
+            this.viajesToolStripMenuItem.Size = new System.Drawing.Size(96, 24);
+            this.viajesToolStripMenuItem.Text = "Viajes";
             // 
             // vueloToolStripMenuItem
             // 
             this.vueloToolStripMenuItem.Name = "vueloToolStripMenuItem";
-            this.vueloToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.vueloToolStripMenuItem.Size = new System.Drawing.Size(157, 26);
             this.vueloToolStripMenuItem.Text = "Vuelo";
             // 
             // tramosToolStripMenuItem
             // 
             this.tramosToolStripMenuItem.Name = "tramosToolStripMenuItem";
-            this.tramosToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.tramosToolStripMenuItem.Size = new System.Drawing.Size(157, 26);
             this.tramosToolStripMenuItem.Text = "Tramos";
             // 
             // viajesToolStripMenuItem1
             // 
             this.viajesToolStripMenuItem1.Name = "viajesToolStripMenuItem1";
-            this.viajesToolStripMenuItem1.Size = new System.Drawing.Size(216, 26);
+            this.viajesToolStripMenuItem1.Size = new System.Drawing.Size(157, 26);
             this.viajesToolStripMenuItem1.Text = "Viajes";
             // 
             // tripulaciónToolStripMenuItem
@@ -466,38 +452,52 @@
             this.cargosToolStripMenuItem,
             this.tripulaciónToolStripMenuItem1});
             this.tripulaciónToolStripMenuItem.Name = "tripulaciónToolStripMenuItem";
-            this.tripulaciónToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.tripulaciónToolStripMenuItem.Size = new System.Drawing.Size(157, 26);
             this.tripulaciónToolStripMenuItem.Text = "Tripulación";
-            // 
-            // tipoDeDocumentosToolStripMenuItem
-            // 
-            this.tipoDeDocumentosToolStripMenuItem.Name = "tipoDeDocumentosToolStripMenuItem";
-            this.tipoDeDocumentosToolStripMenuItem.Size = new System.Drawing.Size(223, 26);
-            this.tipoDeDocumentosToolStripMenuItem.Text = "Tipo de Documentos";
             // 
             // cargosToolStripMenuItem
             // 
             this.cargosToolStripMenuItem.Name = "cargosToolStripMenuItem";
-            this.cargosToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.cargosToolStripMenuItem.Size = new System.Drawing.Size(157, 26);
             this.cargosToolStripMenuItem.Text = "Cargos";
-            // 
-            // tipoDeAsientosToolStripMenuItem
-            // 
-            this.tipoDeAsientosToolStripMenuItem.Name = "tipoDeAsientosToolStripMenuItem";
-            this.tipoDeAsientosToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.tipoDeAsientosToolStripMenuItem.Text = "Tipo de Asientos";
-            // 
-            // asientosToolStripMenuItem
-            // 
-            this.asientosToolStripMenuItem.Name = "asientosToolStripMenuItem";
-            this.asientosToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.asientosToolStripMenuItem.Text = "Asientos";
             // 
             // tripulaciónToolStripMenuItem1
             // 
             this.tripulaciónToolStripMenuItem1.Name = "tripulaciónToolStripMenuItem1";
-            this.tripulaciónToolStripMenuItem1.Size = new System.Drawing.Size(216, 26);
+            this.tripulaciónToolStripMenuItem1.Size = new System.Drawing.Size(157, 26);
             this.tripulaciónToolStripMenuItem1.Text = "Tripulación";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox1.Enabled = false;
+            this.pictureBox1.Image = global::TrabajoPrácticoPAV.Properties.Resources.Logo;
+            this.pictureBox1.Location = new System.Drawing.Point(-147, 82);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1307, 325);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseEnter += new System.EventHandler(this.MouseSalioDeMenu);
+            // 
+            // Timer_Expandir
+            // 
+            this.Timer_Expandir.Interval = 15;
+            this.Timer_Expandir.Tick += new System.EventHandler(this.Timer_Expandir_Tick);
+            // 
+            // Timer_Contraer
+            // 
+            this.Timer_Contraer.Interval = 15;
+            this.Timer_Contraer.Tick += new System.EventHandler(this.Timer_Contraer_Tick);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // Frm_Principal
             // 
@@ -522,9 +522,9 @@
             this.PanelMenu.ResumeLayout(false);
             this.PanelFormularios.ResumeLayout(false);
             this.PanelFormularios.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -546,6 +546,7 @@
         private Clase.Button_Aerolinea Btn_ABM;
         private System.Windows.Forms.Timer Timer_Expandir;
         private System.Windows.Forms.Timer Timer_Contraer;
+
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem aeropuertosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem avionesToolStripMenuItem;
@@ -570,6 +571,7 @@
         private System.Windows.Forms.ToolStripMenuItem cargosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tripulaciónToolStripMenuItem1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+
     }
 }
 

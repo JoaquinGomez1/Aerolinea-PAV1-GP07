@@ -68,6 +68,24 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Clase\Tratamientos_Especiales.cs" />
+    <Compile Include="Formularios\Aeropuertos\Frm_ABM_Aeropuerto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Aeropuertos\Frm_ABM_Aeropuerto.Designer.cs">
+      <DependentUpon>Frm_ABM_Aeropuerto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Aeropuertos\Frm_Alta_Aeropuerto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Aeropuertos\Frm_Alta_Aeropuerto.Designer.cs">
+      <DependentUpon>Frm_Alta_Aeropuerto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Aeropuertos\Frm_Modificacion_Aeropuerto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Aeropuertos\Frm_Modificacion_Aeropuerto.Designer.cs">
+      <DependentUpon>Frm_Modificacion_Aeropuerto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Asientos\Frm_ABMAsientos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -284,6 +302,24 @@
     <Compile Include="Formularios\Tipo_Asientos\Frm_ModificarTipoAsiento.Designer.cs">
       <DependentUpon>Frm_ModificarTipoAsiento.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\TipoDoc\Frm_ABMTipoDoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\TipoDoc\Frm_ABMTipoDoc.Designer.cs">
+      <DependentUpon>Frm_ABMTipoDoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\TipoDoc\Frm_AltaTipoDoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\TipoDoc\Frm_AltaTipoDoc.Designer.cs">
+      <DependentUpon>Frm_AltaTipoDoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\TipoDoc\Frm_ModificarTipoDoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\TipoDoc\Frm_ModificarTipoDoc.Designer.cs">
+      <DependentUpon>Frm_ModificarTipoDoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Tramos\Frm_ABMTramos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -380,6 +416,7 @@
     <Compile Include="Formularios\Vuelo\Frm_ModificarVuelo.Designer.cs">
       <DependentUpon>Frm_ModificarVuelo.cs</DependentUpon>
     </Compile>
+    <Compile Include="NE_Usuarios\NE_Aeropuertos.cs" />
     <Compile Include="NE_Usuarios\NE_Asiento.cs" />
     <Compile Include="NE_Usuarios\NE_Avion.cs" />
     <Compile Include="NE_Usuarios\NE_CargoTripulacion.cs" />
@@ -388,12 +425,22 @@
     <Compile Include="NE_Usuarios\NE_TipoAsiento.cs" />
     <Compile Include="NE_Usuarios\NE_GrupoFamiliar.cs" />
     <Compile Include="NE_Usuarios\NE_Modelo.cs" />
+    <Compile Include="NE_Usuarios\NE_TipoDoc.cs" />
     <Compile Include="NE_Usuarios\NE_Tramos.cs" />
     <Compile Include="NE_Usuarios\NE_Tripulacion.cs" />
     <Compile Include="NE_Usuarios\NE_Viajes.cs" />
     <Compile Include="NE_Usuarios\NE_Vuelos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\Aeropuertos\Frm_ABM_Aeropuerto.resx">
+      <DependentUpon>Frm_ABM_Aeropuerto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Aeropuertos\Frm_Alta_Aeropuerto.resx">
+      <DependentUpon>Frm_Alta_Aeropuerto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Aeropuertos\Frm_Modificacion_Aeropuerto.resx">
+      <DependentUpon>Frm_Modificacion_Aeropuerto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Asientos\Frm_ABMAsientos.resx">
       <DependentUpon>Frm_ABMAsientos.cs</DependentUpon>
     </EmbeddedResource>
@@ -502,6 +549,15 @@
     <EmbeddedResource Include="Formularios\Tipo_Asientos\Frm_ModificarTipoAsiento.resx">
       <DependentUpon>Frm_ModificarTipoAsiento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\TipoDoc\Frm_ABMTipoDoc.resx">
+      <DependentUpon>Frm_ABMTipoDoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\TipoDoc\Frm_AltaTipoDoc.resx">
+      <DependentUpon>Frm_AltaTipoDoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\TipoDoc\Frm_ModificarTipoDoc.resx">
+      <DependentUpon>Frm_ModificarTipoDoc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Tramos\Frm_ABMTramos.resx">
       <DependentUpon>Frm_ABMTramos.cs</DependentUpon>
     </EmbeddedResource>
@@ -510,6 +566,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Frm_Principal.resx">
       <DependentUpon>Frm_Principal.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Tramos\Frm_AltaTramo.resx">
       <DependentUpon>Frm_AltaTramo.cs</DependentUpon>

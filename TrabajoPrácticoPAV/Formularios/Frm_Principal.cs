@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.Formularios;
 using TrabajoPrácticoPAV.Formularios.Pasajeros;
+using TrabajoPrácticoPAV.Formularios.Aeropuertos;
 
 namespace TrabajoPrácticoPAV
 {
@@ -140,6 +141,9 @@ namespace TrabajoPrácticoPAV
                 case "Btn_ABMAviones":
                     AbrirFormulario<Frm_ABMAviones>();
                     break;
+                case "btn_ABM_Aeropuerto":
+                    AbrirFormulario<Frm_ABM_Aeropuerto>();
+                    break;
 
                 default:
                     MessageBox.Show("Esperando implementación");
@@ -225,8 +229,7 @@ namespace TrabajoPrácticoPAV
                 RestaurarColorBoton(Btn_ABM_Vuelo);
             if (Application.OpenForms["Frm_ABMTramos"] == null)
                 RestaurarColorBoton(Btn_ABM_Tramo);
-            if (Application.OpenForms["Frm_ABMAviones"] == null)
-                RestaurarColorBoton(Btn_ABMAviones);
+        
             if (Application.OpenForms["Frm_Configuracion"] == null)
             {
                 DarColor();
