@@ -42,16 +42,16 @@ namespace TrabajoPrácticoPAV.Formularios.Ciudad
             this.btn_modify = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.txt_nombre_modify = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
             this.grid_ciudades = new TrabajoPrácticoPAV.Clase.DataGridView_Aerolinea();
-            this.idCiudad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreProvincia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.idProvincia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comboBox_Aerolinea1 = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
             this.btn_registrar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.txt_nombre_register = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
             this.idProvinciaOculto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idProvincia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.nombreProvincia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idCiudad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel_modify.SuspendLayout();
             this.panel_registrar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_ciudades)).BeginInit();
@@ -217,58 +217,6 @@ namespace TrabajoPrácticoPAV.Formularios.Ciudad
             this.grid_ciudades.TabIndex = 8;
             this.grid_ciudades.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_ciudades_CellContentClick_1);
             // 
-            // idCiudad
-            // 
-            this.idCiudad.Frozen = true;
-            this.idCiudad.HeaderText = "ID";
-            this.idCiudad.Name = "idCiudad";
-            this.idCiudad.Width = 65;
-            // 
-            // nombre
-            // 
-            this.nombre.Frozen = true;
-            this.nombre.HeaderText = "Nombre";
-            this.nombre.Name = "nombre";
-            this.nombre.Width = 150;
-            // 
-            // nombreProvincia
-            // 
-            this.nombreProvincia.Frozen = true;
-            this.nombreProvincia.HeaderText = "Provincia";
-            this.nombreProvincia.Name = "nombreProvincia";
-            this.nombreProvincia.Width = 143;
-            // 
-            // Editar
-            // 
-            this.Editar.Frozen = true;
-            this.Editar.HeaderText = "Editar";
-            this.Editar.Name = "Editar";
-            this.Editar.ReadOnly = true;
-            this.Editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Editar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Editar.Text = "Editar";
-            this.Editar.UseColumnTextForButtonValue = true;
-            this.Editar.Width = 65;
-            // 
-            // Eliminar
-            // 
-            this.Eliminar.Frozen = true;
-            this.Eliminar.HeaderText = "Eliminar";
-            this.Eliminar.Name = "Eliminar";
-            this.Eliminar.ReadOnly = true;
-            this.Eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Eliminar.Text = "Eliminar";
-            this.Eliminar.UseColumnTextForButtonValue = true;
-            this.Eliminar.Width = 65;
-            // 
-            // idProvincia
-            // 
-            this.idProvincia.Frozen = true;
-            this.idProvincia.HeaderText = "IdProvincia";
-            this.idProvincia.Name = "idProvincia";
-            this.idProvincia.Visible = false;
-            // 
             // comboBox_Aerolinea1
             // 
             this.comboBox_Aerolinea1.FormattingEnabled = true;
@@ -314,6 +262,58 @@ namespace TrabajoPrácticoPAV.Formularios.Ciudad
             this.idProvinciaOculto.Name = "idProvinciaOculto";
             this.idProvinciaOculto.Visible = false;
             // 
+            // idProvincia
+            // 
+            this.idProvincia.Frozen = true;
+            this.idProvincia.HeaderText = "IdProvincia";
+            this.idProvincia.Name = "idProvincia";
+            this.idProvincia.Visible = false;
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.Frozen = true;
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.ReadOnly = true;
+            this.Eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Eliminar.Text = "Eliminar";
+            this.Eliminar.UseColumnTextForButtonValue = true;
+            this.Eliminar.Width = 65;
+            // 
+            // Editar
+            // 
+            this.Editar.Frozen = true;
+            this.Editar.HeaderText = "Editar";
+            this.Editar.Name = "Editar";
+            this.Editar.ReadOnly = true;
+            this.Editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Editar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Editar.Text = "Editar";
+            this.Editar.UseColumnTextForButtonValue = true;
+            this.Editar.Width = 65;
+            // 
+            // nombreProvincia
+            // 
+            this.nombreProvincia.Frozen = true;
+            this.nombreProvincia.HeaderText = "Provincia";
+            this.nombreProvincia.Name = "nombreProvincia";
+            this.nombreProvincia.Width = 143;
+            // 
+            // nombre
+            // 
+            this.nombre.Frozen = true;
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            this.nombre.Width = 150;
+            // 
+            // idCiudad
+            // 
+            this.idCiudad.Frozen = true;
+            this.idCiudad.HeaderText = "ID";
+            this.idCiudad.Name = "idCiudad";
+            this.idCiudad.Width = 65;
+            // 
             // Frm_Ciudad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -352,16 +352,16 @@ namespace TrabajoPrácticoPAV.Formularios.Ciudad
         private Clase.TextBox_Aerolinea txt_nombre_register;
         private System.Windows.Forms.Label lbl_provincia;
         private System.Windows.Forms.Label lbl_nombre;
+        private System.Windows.Forms.Label lbl_title_modify;
+        private Clase.Button_Aerolinea btn_refrescar;
+        private Clase.ComboBox_Aerolinea comboBox_Aerolinea1;
+        private Clase.ComboBox_Aerolinea comboBox_Aerolinea2;
         private System.Windows.Forms.DataGridViewTextBoxColumn idCiudad;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreProvincia;
         private System.Windows.Forms.DataGridViewButtonColumn Editar;
         private System.Windows.Forms.DataGridViewButtonColumn Eliminar;
         private System.Windows.Forms.DataGridViewTextBoxColumn idProvincia;
-        private System.Windows.Forms.Label lbl_title_modify;
-        private Clase.Button_Aerolinea btn_refrescar;
-        private Clase.ComboBox_Aerolinea comboBox_Aerolinea1;
-        private Clase.ComboBox_Aerolinea comboBox_Aerolinea2;
         private System.Windows.Forms.DataGridViewTextBoxColumn idProvinciaOculto;
     }
 }

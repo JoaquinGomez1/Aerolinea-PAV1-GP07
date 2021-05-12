@@ -179,9 +179,9 @@ namespace TrabajoPrácticoPAV.Formularios
         private void CargarTodos()
         {
             DataTable todosLosViajes = _NE_Viajes.GetTodosLosViajes();
-            this.datagrid_viajes.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.datagrid_viajes.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.datagrid_viajes.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            this.datagrid_viajes.Columns[0].Width = 50;
+            this.datagrid_viajes.Columns[1].Width = 200;
+            this.datagrid_viajes.Columns[2].Width = 200;
             CargarDataGrid(todosLosViajes);
         }
 
