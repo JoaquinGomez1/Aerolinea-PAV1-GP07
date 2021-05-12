@@ -23,6 +23,8 @@ namespace TrabajoPrácticoPAV.Formularios.Asientos
         public Frm_ABMAsientos()
         {
             InitializeComponent();
+            this.BackColor = Estilo.ColorFondoForms;
+            Estilo.FormatearEstilo(this.Controls);
         }
 
         private void btn_cerrar_Click(object sender, EventArgs e)
@@ -102,7 +104,7 @@ namespace TrabajoPrácticoPAV.Formularios.Asientos
         }
 
         private void grilla_ABMAsiento_CellClick(object sender, DataGridViewCellEventArgs e)
-        { 
+        {
             btn_eliminar.Enabled = true;
             btn_modificar.Enabled = true;
             Id_Asiento = grilla_ABMAsiento.CurrentRow.Cells[0].Value.ToString();

@@ -13,14 +13,14 @@ using static TrabajoPrácticoPAV.Clase.Tratamientos_Especiales;
 
 namespace TrabajoPrácticoPAV.Formularios.Tripulacion.Cargo_Tripulacion
 {
-    public partial class Frm_CargoTripulacion : Form
+    public partial class Frm_ABMCargoTripulacion : Form
     {
 
         private readonly NE_CargoTripulacion _NE = new NE_CargoTripulacion();
         private readonly Tratamientos_Especiales tratamientos = new Tratamientos_Especiales();
         private int IdCargoSeleccionado { get; set; }
 
-        public Frm_CargoTripulacion()
+        public Frm_ABMCargoTripulacion()
         {
             InitializeComponent();
             this.BackColor = Estilo.ColorFondoForms;

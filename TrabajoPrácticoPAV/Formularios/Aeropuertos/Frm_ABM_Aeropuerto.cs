@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.NE_Usuarios;
 using TrabajoPrácticoPAV.Formularios;
+using TrabajoPrácticoPAV.Clase;
 
 namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
 {
@@ -18,6 +19,8 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
         public Frm_ABM_Aeropuerto()
         {
             InitializeComponent();
+            this.BackColor = Estilo.ColorFondoForms;
+            Estilo.FormatearEstilo(this.Controls);
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -40,7 +43,7 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
         {
             NE_Aeropuertos aeropuerto = new NE_Aeropuertos();
 
-            if (chk_todos.Checked == false &&  cmb_codigos.SelectedIndex == -1 && txt_nombre.Text == "")
+            if (chk_todos.Checked == false && cmb_codigos.SelectedIndex == -1 && txt_nombre.Text == "")
             {
                 MessageBox.Show("Debe indicar alguna opción para la búsqueda de aeropuertos");
             }
@@ -76,8 +79,8 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
 
         private void btn_agregar_Click(object sender, EventArgs e)
         {
-      ///      Frm_Mostrar_Aeropuerto alta = new Frm_Mostrar_Aeropuerto();
-          ///  alta.ShowDialog();
+            ///      Frm_Mostrar_Aeropuerto alta = new Frm_Mostrar_Aeropuerto();
+            ///  alta.ShowDialog();
         }
 
         private void pic_deseleccionar_Click(object sender, EventArgs e)
@@ -97,9 +100,9 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
 
         private void btn_modificar_Click(object sender, EventArgs e)
         {
-      ///      Frm_Modificacion_Aeropuerto modificar = new Frm_Modificacion_Aeropuerto();
-       ///     modificar.Codigo_aeropuerto = Codigo_aeropuerto;
-          ///  modificar.ShowDialog();
+            ///      Frm_Modificacion_Aeropuerto modificar = new Frm_Modificacion_Aeropuerto();
+            ///     modificar.Codigo_aeropuerto = Codigo_aeropuerto;
+            ///  modificar.ShowDialog();
         }
     }
 }
