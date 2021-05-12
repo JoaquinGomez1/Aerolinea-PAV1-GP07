@@ -1,0 +1,52 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using TrabajoPrácticoPAV.NE_Usuarios;
+using TrabajoPrácticoPAV.Clase;
+
+namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
+{
+    public partial class Frm_Alta_Aeropuerto : Form
+    {
+        public Frm_Alta_Aeropuerto()
+        {
+            InitializeComponent();
+        }
+
+
+        private void btn_volver_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_aceptar_Click(object sender, EventArgs e)
+        {
+            Tratamientos_Especiales Tratamiento = new Tratamientos_Especiales();
+            if(Tratamiento.Validar(this.Controls) == Tratamientos_Especiales.Resultado.correcto)
+            {
+                NE_Aeropuertos aeropuerto = new NE_Aeropuertos();
+                aeropuerto.Pp_codigo = txt_codigo.Text;
+                aeropuerto.Pp_nombre = txt_nombre.Text;
+                aeropuerto.Pp_idCiudad = cmb_ciudades.SelectedValue.ToString();
+                aeropuerto.Insertar();
+                this.Close();
+            }
+        }
+
+        private void Frm_Alta_Aeropuerto_Load(object sender, EventArgs e)
+        {
+            cmb_ciudades.CargarCombo();
+        }
+
+        private void cmb_ciudades_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
+}

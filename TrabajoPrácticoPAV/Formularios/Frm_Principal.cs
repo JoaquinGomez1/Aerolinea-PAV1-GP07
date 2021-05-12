@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.Formularios;
 using TrabajoPrácticoPAV.Formularios.Pasajeros;
+using TrabajoPrácticoPAV.Formularios.Aeropuertos;
 
 namespace TrabajoPrácticoPAV
 {
@@ -139,6 +140,9 @@ namespace TrabajoPrácticoPAV
                     break;
                 case "Btn_ABMAviones":
                     AbrirFormulario<Frm_ABMAviones>();
+                    break;
+                case "btn_ABM_Aeropuerto":
+                    AbrirFormulario<Frm_ABM_Aeropuerto>();
                     break;
 
                 default:
