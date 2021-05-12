@@ -104,5 +104,13 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
             ///     modificar.Codigo_aeropuerto = Codigo_aeropuerto;
             ///  modificar.ShowDialog();
         }
+
+        private void btn_limpiar_Click(object sender, EventArgs e)
+        {
+            cmb_codigos.SelectedIndex = -1;
+            txt_nombre.Text = "";
+            chk_todos.Checked = false;
+            grid_aeropuertos.Rows.Clear();
+        }
     }
 }
