@@ -130,6 +130,7 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
             // 
             // txt_codigo
             // 
+            this.txt_codigo.Enabled = false;
             this.txt_codigo.Location = new System.Drawing.Point(135, 84);
             this.txt_codigo.Name = "txt_codigo";
             this.txt_codigo.Pp_EsPk = true;

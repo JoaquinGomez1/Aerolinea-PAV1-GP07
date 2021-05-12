@@ -80,11 +80,23 @@
     <Compile Include="Formularios\Aeropuertos\Frm_Alta_Aeropuerto.Designer.cs">
       <DependentUpon>Frm_Alta_Aeropuerto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Aeropuertos\Frm_Borrar_Aeropuerto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Aeropuertos\Frm_Borrar_Aeropuerto.Designer.cs">
+      <DependentUpon>Frm_Borrar_Aeropuerto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Aeropuertos\Frm_Modificacion_Aeropuerto.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Aeropuertos\Frm_Modificacion_Aeropuerto.Designer.cs">
       <DependentUpon>Frm_Modificacion_Aeropuerto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Aeropuertos\Frm_Mostrar_Aeropuerto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Aeropuertos\Frm_Mostrar_Aeropuerto.Designer.cs">
+      <DependentUpon>Frm_Mostrar_Aeropuerto.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Asientos\Frm_ABMAsientos.cs">
       <SubType>Form</SubType>
@@ -438,8 +450,14 @@
     <EmbeddedResource Include="Formularios\Aeropuertos\Frm_Alta_Aeropuerto.resx">
       <DependentUpon>Frm_Alta_Aeropuerto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Aeropuertos\Frm_Borrar_Aeropuerto.resx">
+      <DependentUpon>Frm_Borrar_Aeropuerto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Aeropuertos\Frm_Modificacion_Aeropuerto.resx">
       <DependentUpon>Frm_Modificacion_Aeropuerto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Aeropuertos\Frm_Mostrar_Aeropuerto.resx">
+      <DependentUpon>Frm_Mostrar_Aeropuerto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Asientos\Frm_ABMAsientos.resx">
       <DependentUpon>Frm_ABMAsientos.cs</DependentUpon>
