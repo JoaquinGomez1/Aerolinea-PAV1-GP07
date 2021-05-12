@@ -44,26 +44,26 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label1.Location = new System.Drawing.Point(84, 129);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label1.Location = new System.Drawing.Point(113, 113);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 20);
+            this.label1.Size = new System.Drawing.Size(79, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label2.Location = new System.Drawing.Point(99, 161);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label2.Location = new System.Drawing.Point(131, 153);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 20);
+            this.label2.Size = new System.Drawing.Size(58, 24);
             this.label2.TabIndex = 1;
             this.label2.Text = "Costo";
             // 
             // msktxt_Costo
             // 
-            this.msktxt_Costo.Location = new System.Drawing.Point(170, 161);
+            this.msktxt_Costo.Location = new System.Drawing.Point(236, 155);
             this.msktxt_Costo.Mask = "00000";
             this.msktxt_Costo.Name = "msktxt_Costo";
             this.msktxt_Costo.Pp_EsPk = false;
@@ -75,43 +75,45 @@
             // 
             // btn_Actualizar
             // 
+            this.btn_Actualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
             this.btn_Actualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btn_Actualizar.Location = new System.Drawing.Point(240, 289);
+            this.btn_Actualizar.Location = new System.Drawing.Point(159, 232);
             this.btn_Actualizar.Name = "btn_Actualizar";
             this.btn_Actualizar.Pp_Presionado = false;
             this.btn_Actualizar.Size = new System.Drawing.Size(99, 34);
             this.btn_Actualizar.TabIndex = 4;
             this.btn_Actualizar.Text = "Actualizar";
-            this.btn_Actualizar.UseVisualStyleBackColor = true;
+            this.btn_Actualizar.UseVisualStyleBackColor = false;
             this.btn_Actualizar.Click += new System.EventHandler(this.btn_Actualizar_Click_1);
             // 
             // btn_Cancelar
             // 
+            this.btn_Cancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
             this.btn_Cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btn_Cancelar.Location = new System.Drawing.Point(488, 289);
+            this.btn_Cancelar.Location = new System.Drawing.Point(313, 232);
             this.btn_Cancelar.Name = "btn_Cancelar";
             this.btn_Cancelar.Pp_Presionado = false;
             this.btn_Cancelar.Size = new System.Drawing.Size(99, 34);
             this.btn_Cancelar.TabIndex = 5;
             this.btn_Cancelar.Text = "Cancelar";
-            this.btn_Cancelar.UseVisualStyleBackColor = true;
+            this.btn_Cancelar.UseVisualStyleBackColor = false;
             this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);
             // 
             // txt_Nombre
             // 
-            this.txt_Nombre.Location = new System.Drawing.Point(170, 129);
+            this.txt_Nombre.Location = new System.Drawing.Point(236, 115);
             this.txt_Nombre.Name = "txt_Nombre";
             this.txt_Nombre.Pp_EsPk = false;
             this.txt_Nombre.Pp_MensajeError = "Por favor, modifique el nombre";
             this.txt_Nombre.Pp_NombreCampo = "nombre";
             this.txt_Nombre.Pp_NombreTabla = "Tipo_Asiento";
-            this.txt_Nombre.Size = new System.Drawing.Size(100, 22);
+            this.txt_Nombre.Size = new System.Drawing.Size(262, 22);
             this.txt_Nombre.TabIndex = 6;
             // 
             // txt_idTipo
             // 
             this.txt_idTipo.Enabled = false;
-            this.txt_idTipo.Location = new System.Drawing.Point(170, 94);
+            this.txt_idTipo.Location = new System.Drawing.Point(236, 75);
             this.txt_idTipo.Name = "txt_idTipo";
             this.txt_idTipo.Pp_EsPk = true;
             this.txt_idTipo.Pp_MensajeError = null;
@@ -123,10 +125,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label3.Location = new System.Drawing.Point(126, 94);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label3.Location = new System.Drawing.Point(165, 73);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(26, 20);
+            this.label3.Size = new System.Drawing.Size(27, 24);
             this.label3.TabIndex = 8;
             this.label3.Text = "ID";
             // 
@@ -138,7 +140,7 @@
             this.BarraSuperior.Location = new System.Drawing.Point(0, 0);
             this.BarraSuperior.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BarraSuperior.Name = "BarraSuperior";
-            this.BarraSuperior.Size = new System.Drawing.Size(855, 39);
+            this.BarraSuperior.Size = new System.Drawing.Size(591, 39);
             this.BarraSuperior.TabIndex = 47;
             // 
             // Titulo
@@ -157,7 +159,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(227)))), ((int)(((byte)(187)))));
-            this.ClientSize = new System.Drawing.Size(855, 366);
+            this.ClientSize = new System.Drawing.Size(591, 298);
             this.Controls.Add(this.BarraSuperior);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txt_idTipo);

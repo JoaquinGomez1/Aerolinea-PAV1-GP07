@@ -41,7 +41,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tipo_Asientos
         private void btn_Eliminar_Click_1(object sender, EventArgs e)
         {
             Tratamientos_Especiales _TE = new Tratamientos_Especiales();
-            string sql = _TE.CostructorUpdateDelete("Tipo_Asiento", this.Controls, false);
+            string sql = _TE.CostructorUpdateDelete("Tipo_Asiento", panel1.Controls, false);
             _BD.Borrar(sql, true);
             this.Close();
         }
