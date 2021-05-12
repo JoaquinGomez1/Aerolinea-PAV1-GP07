@@ -124,5 +124,13 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
             borrar.Id_codigo = Id_codigo;
             borrar.ShowDialog();
         }
+
+        private void btn_limpiar_Click(object sender, EventArgs e)
+        {
+            cmb_codigos.SelectedIndex = -1;
+            txt_nombre.Text = "";
+            chk_todos.Checked = false;
+            grid_aeropuertos.Rows.Clear();
+        }
     }
 }
