@@ -242,11 +242,11 @@ namespace TrabajoPrácticoPAV
             if (Application.OpenForms["Frm_ABMClientes"] == null)
                 RestaurarColorBoton(Btn_ABM);
             if (Application.OpenForms["Frm_ABMViajes"] == null)
-                RestaurarColorBoton(Btn_ABM_Viaje);
+                RestaurarColorBoton(Btn_Procesos);
             if (Application.OpenForms["Frm_ABMVuelo"] == null)
-                RestaurarColorBoton(Btn_ABM_Vuelo);
+                RestaurarColorBoton(Btn_Listado);
             if (Application.OpenForms["Frm_ABMTramos"] == null)
-                RestaurarColorBoton(Btn_ABM_Tramo);
+                RestaurarColorBoton(Btn_Estadistica);
 
             if (Application.OpenForms["Frm_Configuracion"] == null)
             {

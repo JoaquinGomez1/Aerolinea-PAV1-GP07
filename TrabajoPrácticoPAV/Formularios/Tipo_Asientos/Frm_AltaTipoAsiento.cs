@@ -34,7 +34,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tipo_Asientos
 
         private void btn_Registrar_Click(object sender, EventArgs e)
         {
-            string sql = _TE.CostructorInsert("Tipo_Asiento", this.Controls);
+            string sql = _TE.CostructorInsert("Tipo_Asiento", panel1.Controls);
             _BD.Insertar(sql, false);
             this.Close();
             //MessageBox.Show("Asiento insertado correctamente.");
