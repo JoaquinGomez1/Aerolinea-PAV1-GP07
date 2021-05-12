@@ -23,6 +23,8 @@ namespace TrabajoPrácticoPAV.Formularios.Tipo_Asientos
         public Frm_ABMTipoAsientos()
         {
             InitializeComponent();
+            this.BackColor = Estilo.ColorFondoForms;
+            Estilo.FormatearEstilo(this.Controls);
         }
         private void Frm_ABMTipoAsientos_Load(object sender, EventArgs e)
         {
