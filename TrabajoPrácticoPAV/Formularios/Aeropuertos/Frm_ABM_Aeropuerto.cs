@@ -132,5 +132,13 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
             chk_todos.Checked = false;
             grid_aeropuertos.Rows.Clear();
         }
+
+        private void btn_limpiarr_Click(object sender, EventArgs e)
+        {
+            grid_aeropuertos.Rows.Clear();
+            cmb_codigos.SelectedIndex = -1;
+            txt_nombre.Text = "";
+            chk_todos.Checked = false;
+        }
     }
 }
