@@ -68,6 +68,24 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Clase\Tratamientos_Especiales.cs" />
+    <Compile Include="Formularios\Aeropuertos\Frm_ABM_Aeropuerto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Aeropuertos\Frm_ABM_Aeropuerto.Designer.cs">
+      <DependentUpon>Frm_ABM_Aeropuerto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Aeropuertos\Frm_Alta_Aeropuerto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Aeropuertos\Frm_Alta_Aeropuerto.Designer.cs">
+      <DependentUpon>Frm_Alta_Aeropuerto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Aeropuertos\Frm_Modificacion_Aeropuerto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Aeropuertos\Frm_Modificacion_Aeropuerto.Designer.cs">
+      <DependentUpon>Frm_Modificacion_Aeropuerto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Asientos\Frm_ABMAsientos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -398,6 +416,7 @@
     <Compile Include="Formularios\Vuelo\Frm_ModificarVuelo.Designer.cs">
       <DependentUpon>Frm_ModificarVuelo.cs</DependentUpon>
     </Compile>
+    <Compile Include="NE_Usuarios\NE_Aeropuertos.cs" />
     <Compile Include="NE_Usuarios\NE_Asiento.cs" />
     <Compile Include="NE_Usuarios\NE_Avion.cs" />
     <Compile Include="NE_Usuarios\NE_CargoTripulacion.cs" />
@@ -413,6 +432,15 @@
     <Compile Include="NE_Usuarios\NE_Vuelos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\Aeropuertos\Frm_ABM_Aeropuerto.resx">
+      <DependentUpon>Frm_ABM_Aeropuerto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Aeropuertos\Frm_Alta_Aeropuerto.resx">
+      <DependentUpon>Frm_Alta_Aeropuerto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Aeropuertos\Frm_Modificacion_Aeropuerto.resx">
+      <DependentUpon>Frm_Modificacion_Aeropuerto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Asientos\Frm_ABMAsientos.resx">
       <DependentUpon>Frm_ABMAsientos.cs</DependentUpon>
     </EmbeddedResource>

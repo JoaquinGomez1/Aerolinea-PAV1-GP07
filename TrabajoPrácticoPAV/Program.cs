@@ -13,8 +13,6 @@ using TrabajoPrácticoPAV.Formularios.Ciudad;
 using TrabajoPrácticoPAV.Formularios.Asientos;
 using TrabajoPrácticoPAV.Formularios.Modelo;
 
-
-
 namespace TrabajoPrácticoPAV
 {
     static class Program

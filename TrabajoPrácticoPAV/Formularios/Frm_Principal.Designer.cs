@@ -47,6 +47,7 @@
             this.Btn_Menu = new System.Windows.Forms.Button();
             this.Timer_Expandir = new System.Windows.Forms.Timer(this.components);
             this.Timer_Contraer = new System.Windows.Forms.Timer(this.components);
+            this.btn_ABM_Aeropuerto = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Cerrar)).BeginInit();
@@ -118,6 +119,7 @@
             this.PanelMenu.Controls.Add(this.Btn_Configuracion);
             this.PanelMenu.Controls.Add(this.Btn_ABM_Vuelo);
             this.PanelMenu.Controls.Add(this.Btn_ABM_Tramo);
+            this.PanelMenu.Controls.Add(this.btn_ABM_Aeropuerto);
             this.PanelMenu.Controls.Add(this.Btn_ABM_Tripulacion);
             this.PanelMenu.Controls.Add(this.Btn_ABMAviones);
             this.PanelMenu.Dock = System.Windows.Forms.DockStyle.Left;
@@ -341,6 +343,28 @@
             this.Timer_Contraer.Interval = 15;
             this.Timer_Contraer.Tick += new System.EventHandler(this.Timer_Contraer_Tick);
             // 
+            // btn_ABM_Aeropuerto
+            // 
+            this.btn_ABM_Aeropuerto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
+            this.btn_ABM_Aeropuerto.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_ABM_Aeropuerto.FlatAppearance.BorderSize = 2;
+            this.btn_ABM_Aeropuerto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ABM_Aeropuerto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.btn_ABM_Aeropuerto.ForeColor = System.Drawing.Color.White;
+            this.btn_ABM_Aeropuerto.Image = ((System.Drawing.Image)(resources.GetObject("btn_ABM_Aeropuerto.Image")));
+            this.btn_ABM_Aeropuerto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_ABM_Aeropuerto.Location = new System.Drawing.Point(0, 286);
+            this.btn_ABM_Aeropuerto.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_ABM_Aeropuerto.Name = "btn_ABM_Aeropuerto";
+            this.btn_ABM_Aeropuerto.Pp_Presionado = false;
+            this.btn_ABM_Aeropuerto.Size = new System.Drawing.Size(146, 41);
+            this.btn_ABM_Aeropuerto.TabIndex = 4;
+            this.btn_ABM_Aeropuerto.Text = "   Aeropuertos";
+            this.btn_ABM_Aeropuerto.UseVisualStyleBackColor = false;
+            this.btn_ABM_Aeropuerto.Click += new System.EventHandler(this.MouseClickButton);
+            this.btn_ABM_Aeropuerto.MouseEnter += new System.EventHandler(this.PanelMenu_MouseEnter);
+            this.btn_ABM_Aeropuerto.MouseLeave += new System.EventHandler(this.MouseSalioDeMenu);
+            // 
             // Frm_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -387,6 +411,7 @@
         private Clase.Button_Aerolinea Btn_ABMClientes;
         private System.Windows.Forms.Timer Timer_Expandir;
         private System.Windows.Forms.Timer Timer_Contraer;
+        private Clase.Button_Aerolinea btn_ABM_Aeropuerto;
     }
 }
 
