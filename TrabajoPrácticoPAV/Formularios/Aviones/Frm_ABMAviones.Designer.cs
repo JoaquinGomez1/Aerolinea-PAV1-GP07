@@ -29,7 +29,6 @@ namespace TrabajoPrácticoPAV.Formularios
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_ABMAviones));
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,13 +42,10 @@ namespace TrabajoPrácticoPAV.Formularios
             this.label5 = new System.Windows.Forms.Label();
             this.cmb_Modelo = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
             this.txt_numero = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
-            this.picBox_buscar = new System.Windows.Forms.PictureBox();
-            this.picBox_actualizar = new System.Windows.Forms.PictureBox();
-            this.picBox_agregar = new System.Windows.Forms.PictureBox();
+            this.btn_buscar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
+            this.btn_actualizar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
+            this.btn_agregar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             ((System.ComponentModel.ISupportInitialize)(this.grid_aviones)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBox_buscar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBox_actualizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBox_agregar)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -162,7 +158,6 @@ namespace TrabajoPrácticoPAV.Formularios
             this.cmb_Modelo.Pp_PkTabla = "idModelo";
             this.cmb_Modelo.Size = new System.Drawing.Size(177, 21);
             this.cmb_Modelo.TabIndex = 7;
-            this.cmb_Modelo.SelectedIndexChanged += new System.EventHandler(this.cmb_Modelo_SelectedIndexChanged);
             // 
             // txt_numero
             // 
@@ -175,41 +170,44 @@ namespace TrabajoPrácticoPAV.Formularios
             this.txt_numero.Size = new System.Drawing.Size(177, 20);
             this.txt_numero.TabIndex = 4;
             // 
-            // picBox_buscar
+            // btn_buscar
             // 
-            this.picBox_buscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBox_buscar.BackgroundImage")));
-            this.picBox_buscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picBox_buscar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picBox_buscar.Location = new System.Drawing.Point(312, 102);
-            this.picBox_buscar.Name = "picBox_buscar";
-            this.picBox_buscar.Size = new System.Drawing.Size(30, 22);
-            this.picBox_buscar.TabIndex = 12;
-            this.picBox_buscar.TabStop = false;
-            this.picBox_buscar.Click += new System.EventHandler(this.picBox_buscar_Click);
+            this.btn_buscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
+            this.btn_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_buscar.Location = new System.Drawing.Point(324, 103);
+            this.btn_buscar.Name = "btn_buscar";
+            this.btn_buscar.Pp_Presionado = false;
+            this.btn_buscar.Size = new System.Drawing.Size(90, 29);
+            this.btn_buscar.TabIndex = 15;
+            this.btn_buscar.Text = "Buscar";
+            this.btn_buscar.UseVisualStyleBackColor = false;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
-            // picBox_actualizar
+            // btn_actualizar
             // 
-            this.picBox_actualizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBox_actualizar.BackgroundImage")));
-            this.picBox_actualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picBox_actualizar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picBox_actualizar.Location = new System.Drawing.Point(455, 178);
-            this.picBox_actualizar.Name = "picBox_actualizar";
-            this.picBox_actualizar.Size = new System.Drawing.Size(28, 21);
-            this.picBox_actualizar.TabIndex = 13;
-            this.picBox_actualizar.TabStop = false;
-            this.picBox_actualizar.Click += new System.EventHandler(this.picBox_actualizar_Click);
+            this.btn_actualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
+            this.btn_actualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_actualizar.Location = new System.Drawing.Point(447, 178);
+            this.btn_actualizar.Name = "btn_actualizar";
+            this.btn_actualizar.Pp_Presionado = false;
+            this.btn_actualizar.Size = new System.Drawing.Size(90, 29);
+            this.btn_actualizar.TabIndex = 16;
+            this.btn_actualizar.Text = "Actualizar";
+            this.btn_actualizar.UseVisualStyleBackColor = false;
+            this.btn_actualizar.Click += new System.EventHandler(this.btn_actualizar_Click_1);
             // 
-            // picBox_agregar
+            // btn_agregar
             // 
-            this.picBox_agregar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBox_agregar.BackgroundImage")));
-            this.picBox_agregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picBox_agregar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picBox_agregar.Location = new System.Drawing.Point(455, 205);
-            this.picBox_agregar.Name = "picBox_agregar";
-            this.picBox_agregar.Size = new System.Drawing.Size(32, 25);
-            this.picBox_agregar.TabIndex = 14;
-            this.picBox_agregar.TabStop = false;
-            this.picBox_agregar.Click += new System.EventHandler(this.picBox_agregar_Click);
+            this.btn_agregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
+            this.btn_agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_agregar.Location = new System.Drawing.Point(447, 207);
+            this.btn_agregar.Name = "btn_agregar";
+            this.btn_agregar.Pp_Presionado = false;
+            this.btn_agregar.Size = new System.Drawing.Size(90, 29);
+            this.btn_agregar.TabIndex = 16;
+            this.btn_agregar.Text = "Agregar";
+            this.btn_agregar.UseVisualStyleBackColor = false;
+            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
             // Frm_ABMAviones
             // 
@@ -217,9 +215,9 @@ namespace TrabajoPrácticoPAV.Formularios
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(227)))), ((int)(((byte)(187)))));
             this.ClientSize = new System.Drawing.Size(650, 381);
-            this.Controls.Add(this.picBox_agregar);
-            this.Controls.Add(this.picBox_actualizar);
-            this.Controls.Add(this.picBox_buscar);
+            this.Controls.Add(this.btn_agregar);
+            this.Controls.Add(this.btn_actualizar);
+            this.Controls.Add(this.btn_buscar);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label4);
@@ -233,9 +231,6 @@ namespace TrabajoPrácticoPAV.Formularios
             this.Text = "Frm_ABMAviones";
             this.Load += new System.EventHandler(this.Frm_ABMAviones_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grid_aviones)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBox_buscar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBox_actualizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBox_agregar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,8 +251,8 @@ namespace TrabajoPrácticoPAV.Formularios
         private System.Windows.Forms.DataGridViewTextBoxColumn IdModelo;
         private System.Windows.Forms.DataGridViewImageColumn Eliminar;
         private System.Windows.Forms.DataGridViewImageColumn Editar;
-        private System.Windows.Forms.PictureBox picBox_buscar;
-        private System.Windows.Forms.PictureBox picBox_actualizar;
-        private System.Windows.Forms.PictureBox picBox_agregar;
+        private Clase.Button_Aerolinea btn_buscar;
+        private Clase.Button_Aerolinea btn_actualizar;
+        private Clase.Button_Aerolinea btn_agregar;
     }
 }
