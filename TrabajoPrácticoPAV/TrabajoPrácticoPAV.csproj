@@ -80,11 +80,23 @@
     <Compile Include="Formularios\Aeropuertos\Frm_Alta_Aeropuerto.Designer.cs">
       <DependentUpon>Frm_Alta_Aeropuerto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Aeropuertos\Frm_Borrar_Aeropuerto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Aeropuertos\Frm_Borrar_Aeropuerto.Designer.cs">
+      <DependentUpon>Frm_Borrar_Aeropuerto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Aeropuertos\Frm_Modificacion_Aeropuerto.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Aeropuertos\Frm_Modificacion_Aeropuerto.Designer.cs">
       <DependentUpon>Frm_Modificacion_Aeropuerto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Aeropuertos\Frm_Mostrar_Aeropuerto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Aeropuertos\Frm_Mostrar_Aeropuerto.Designer.cs">
+      <DependentUpon>Frm_Mostrar_Aeropuerto.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Asientos\Frm_ABMAsientos.cs">
       <SubType>Form</SubType>
@@ -362,17 +374,17 @@
     <Compile Include="Formularios\Tramos\Frm_ModificacionTramo.Designer.cs">
       <DependentUpon>Frm_ModificacionTramo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Tripulacion\Cargo Tripulacion\Frm_CargoTripulacion.cs">
+    <Compile Include="Formularios\Tripulacion\Cargo Tripulacion\Frm_ABMCargoTripulacion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Tripulacion\Cargo Tripulacion\Frm_CargoTripulacion.Designer.cs">
-      <DependentUpon>Frm_CargoTripulacion.cs</DependentUpon>
+    <Compile Include="Formularios\Tripulacion\Cargo Tripulacion\Frm_ABMCargoTripulacion.Designer.cs">
+      <DependentUpon>Frm_ABMCargoTripulacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Tripulacion\Frm_Tripulacion.cs">
+    <Compile Include="Formularios\Tripulacion\Frm_ABMTripulacion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Tripulacion\Frm_Tripulacion.Designer.cs">
-      <DependentUpon>Frm_Tripulacion.cs</DependentUpon>
+    <Compile Include="Formularios\Tripulacion\Frm_ABMTripulacion.Designer.cs">
+      <DependentUpon>Frm_ABMTripulacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Viajes\Frm_ABMViajes.cs">
       <SubType>Form</SubType>
@@ -438,8 +450,14 @@
     <EmbeddedResource Include="Formularios\Aeropuertos\Frm_Alta_Aeropuerto.resx">
       <DependentUpon>Frm_Alta_Aeropuerto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Aeropuertos\Frm_Borrar_Aeropuerto.resx">
+      <DependentUpon>Frm_Borrar_Aeropuerto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Aeropuertos\Frm_Modificacion_Aeropuerto.resx">
       <DependentUpon>Frm_Modificacion_Aeropuerto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Aeropuertos\Frm_Mostrar_Aeropuerto.resx">
+      <DependentUpon>Frm_Mostrar_Aeropuerto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Asientos\Frm_ABMAsientos.resx">
       <DependentUpon>Frm_ABMAsientos.cs</DependentUpon>
@@ -566,6 +584,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Frm_Principal.resx">
       <DependentUpon>Frm_Principal.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Tramos\Frm_AltaTramo.resx">
       <DependentUpon>Frm_AltaTramo.cs</DependentUpon>
@@ -579,11 +598,11 @@
     <EmbeddedResource Include="Formularios\Tramos\Frm_ModificacionTramo.resx">
       <DependentUpon>Frm_ModificacionTramo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Tripulacion\Cargo Tripulacion\Frm_CargoTripulacion.resx">
-      <DependentUpon>Frm_CargoTripulacion.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Tripulacion\Cargo Tripulacion\Frm_ABMCargoTripulacion.resx">
+      <DependentUpon>Frm_ABMCargoTripulacion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Tripulacion\Frm_Tripulacion.resx">
-      <DependentUpon>Frm_Tripulacion.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Tripulacion\Frm_ABMTripulacion.resx">
+      <DependentUpon>Frm_ABMTripulacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Viajes\Frm_ABMViajes.resx">
       <DependentUpon>Frm_ABMViajes.cs</DependentUpon>

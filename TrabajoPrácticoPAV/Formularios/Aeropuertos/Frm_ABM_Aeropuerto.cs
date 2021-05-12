@@ -9,21 +9,20 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.NE_Usuarios;
 using TrabajoPrácticoPAV.Formularios;
+using TrabajoPrácticoPAV.Clase;
 
 namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
 {
     public partial class Frm_ABM_Aeropuerto : Form
     {
-        public string Codigo_aeropuerto { get; set; }
+        public string Id_codigo { get; set; }
         public Frm_ABM_Aeropuerto()
         {
             InitializeComponent();
+            this.BackColor = Estilo.ColorFondoForms;
+            Estilo.FormatearEstilo(this.Controls);
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
         private void CargarGrilla(DataTable tabla)
         {
             grid_aeropuertos.Rows.Clear();
@@ -40,7 +39,7 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
         {
             NE_Aeropuertos aeropuerto = new NE_Aeropuertos();
 
-            if (chk_todos.Checked == false &&  cmb_codigos.SelectedIndex == -1 && txt_nombre.Text == "")
+            if (chk_todos.Checked == false && cmb_codigos.SelectedIndex == -1 && txt_nombre.Text == "")
             {
                 MessageBox.Show("Debe indicar alguna opción para la búsqueda de aeropuertos");
             }
@@ -76,8 +75,8 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
 
         private void btn_agregar_Click(object sender, EventArgs e)
         {
-      ///      Frm_Mostrar_Aeropuerto alta = new Frm_Mostrar_Aeropuerto();
-          ///  alta.ShowDialog();
+              Frm_Alta_Aeropuerto alta = new Frm_Alta_Aeropuerto();
+              alta.ShowDialog();
         }
 
         private void pic_deseleccionar_Click(object sender, EventArgs e)
@@ -92,14 +91,54 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
 
         private void grid_aeropuertos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            Codigo_aeropuerto = grid_aeropuertos.CurrentRow.Cells["codigo"].Value.ToString();
+            Id_codigo = grid_aeropuertos.CurrentRow.Cells["codigo"].Value.ToString();
+            Frm_Modificación_Aeropuerto modificar = new Frm_Modificación_Aeropuerto();
+            modificar.Id_codigo = Id_codigo;
+            //modificar.ShowDialog();
         }
 
         private void btn_modificar_Click(object sender, EventArgs e)
         {
-      ///      Frm_Modificacion_Aeropuerto modificar = new Frm_Modificacion_Aeropuerto();
-       ///     modificar.Codigo_aeropuerto = Codigo_aeropuerto;
-          ///  modificar.ShowDialog();
+                if (Id_codigo != "")
+                {
+                    Frm_Modificación_Aeropuerto modificar = new Frm_Modificación_Aeropuerto();
+                    modificar.Id_codigo = Id_codigo;
+                    modificar.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("No se encontró un aeropuerto con los filtros especificados");
+                }
+         }
+
+        private void grid_aeropuertos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Frm_Mostrar_Aeropuerto mostrar = new Frm_Mostrar_Aeropuerto();
+            mostrar.Id_codigo = grid_aeropuertos.CurrentRow.Cells["codigo"].Value.ToString();
+            mostrar.ShowDialog();
+        }
+
+        private void btn_eliminar_Click(object sender, EventArgs e)
+        {
+            Frm_Borrar_Aeropuerto borrar = new Frm_Borrar_Aeropuerto();
+            borrar.Id_codigo = Id_codigo;
+            borrar.ShowDialog();
+        }
+
+        private void btn_limpiar_Click(object sender, EventArgs e)
+        {
+            cmb_codigos.SelectedIndex = -1;
+            txt_nombre.Text = "";
+            chk_todos.Checked = false;
+            grid_aeropuertos.Rows.Clear();
+        }
+
+        private void btn_limpiarr_Click(object sender, EventArgs e)
+        {
+            grid_aeropuertos.Rows.Clear();
+            cmb_codigos.SelectedIndex = -1;
+            txt_nombre.Text = "";
+            chk_todos.Checked = false;
         }
     }
 }

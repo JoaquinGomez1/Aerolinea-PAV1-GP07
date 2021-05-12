@@ -56,7 +56,7 @@ namespace TrabajoPrácticoPAV.Formularios
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(43, 30);
+            this.label1.Location = new System.Drawing.Point(35, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 21);
             this.label1.TabIndex = 0;
@@ -65,18 +65,20 @@ namespace TrabajoPrácticoPAV.Formularios
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(44, 106);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label4.Location = new System.Drawing.Point(51, 103);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 13);
+            this.label4.Size = new System.Drawing.Size(61, 20);
             this.label4.TabIndex = 8;
             this.label4.Text = "Modelo";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(44, 75);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label3.Location = new System.Drawing.Point(43, 72);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 13);
+            this.label3.Size = new System.Drawing.Size(69, 20);
             this.label3.TabIndex = 6;
             this.label3.Text = "Numero ";
             // 
@@ -131,7 +133,7 @@ namespace TrabajoPrácticoPAV.Formularios
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(89, 112);
+            this.label2.Location = new System.Drawing.Point(105, 112);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 13);
             this.label2.TabIndex = 1;
@@ -158,7 +160,7 @@ namespace TrabajoPrácticoPAV.Formularios
             this.cmb_Modelo.Pp_NombreCampoInsert = null;
             this.cmb_Modelo.Pp_NombreTabla = "Modelo";
             this.cmb_Modelo.Pp_PkTabla = "idModelo";
-            this.cmb_Modelo.Size = new System.Drawing.Size(106, 21);
+            this.cmb_Modelo.Size = new System.Drawing.Size(177, 21);
             this.cmb_Modelo.TabIndex = 7;
             this.cmb_Modelo.SelectedIndexChanged += new System.EventHandler(this.cmb_Modelo_SelectedIndexChanged);
             // 
@@ -170,7 +172,7 @@ namespace TrabajoPrácticoPAV.Formularios
             this.txt_numero.Pp_MensajeError = null;
             this.txt_numero.Pp_NombreCampo = null;
             this.txt_numero.Pp_NombreTabla = null;
-            this.txt_numero.Size = new System.Drawing.Size(106, 20);
+            this.txt_numero.Size = new System.Drawing.Size(177, 20);
             this.txt_numero.TabIndex = 4;
             // 
             // picBox_buscar
@@ -178,7 +180,7 @@ namespace TrabajoPrácticoPAV.Formularios
             this.picBox_buscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBox_buscar.BackgroundImage")));
             this.picBox_buscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picBox_buscar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picBox_buscar.Location = new System.Drawing.Point(289, 103);
+            this.picBox_buscar.Location = new System.Drawing.Point(312, 102);
             this.picBox_buscar.Name = "picBox_buscar";
             this.picBox_buscar.Size = new System.Drawing.Size(30, 22);
             this.picBox_buscar.TabIndex = 12;
@@ -190,7 +192,7 @@ namespace TrabajoPrácticoPAV.Formularios
             this.picBox_actualizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBox_actualizar.BackgroundImage")));
             this.picBox_actualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picBox_actualizar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picBox_actualizar.Location = new System.Drawing.Point(505, 144);
+            this.picBox_actualizar.Location = new System.Drawing.Point(455, 178);
             this.picBox_actualizar.Name = "picBox_actualizar";
             this.picBox_actualizar.Size = new System.Drawing.Size(28, 21);
             this.picBox_actualizar.TabIndex = 13;
@@ -202,7 +204,7 @@ namespace TrabajoPrácticoPAV.Formularios
             this.picBox_agregar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBox_agregar.BackgroundImage")));
             this.picBox_agregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picBox_agregar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picBox_agregar.Location = new System.Drawing.Point(505, 354);
+            this.picBox_agregar.Location = new System.Drawing.Point(455, 205);
             this.picBox_agregar.Name = "picBox_agregar";
             this.picBox_agregar.Size = new System.Drawing.Size(32, 25);
             this.picBox_agregar.TabIndex = 14;
@@ -214,7 +216,7 @@ namespace TrabajoPrácticoPAV.Formularios
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(227)))), ((int)(((byte)(187)))));
-            this.ClientSize = new System.Drawing.Size(650, 581);
+            this.ClientSize = new System.Drawing.Size(650, 381);
             this.Controls.Add(this.picBox_agregar);
             this.Controls.Add(this.picBox_actualizar);
             this.Controls.Add(this.picBox_buscar);
@@ -226,6 +228,7 @@ namespace TrabajoPrácticoPAV.Formularios
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_numero);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_ABMAviones";
             this.Text = "Frm_ABMAviones";
             this.Load += new System.EventHandler(this.Frm_ABMAviones_Load);

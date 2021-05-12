@@ -66,9 +66,10 @@ namespace TrabajoPrácticoPAV.Formularios
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(3, -4);
+            this.label1.Location = new System.Drawing.Point(4, -5);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 21);
+            this.label1.Size = new System.Drawing.Size(151, 28);
             this.label1.TabIndex = 0;
             this.label1.Text = "Registrar Viaje";
             // 
@@ -87,17 +88,19 @@ namespace TrabajoPrácticoPAV.Formularios
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(16, 15);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(730, 391);
+            this.panel1.Size = new System.Drawing.Size(973, 481);
             this.panel1.TabIndex = 2;
             // 
             // btn_refrescar
             // 
             this.btn_refrescar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_refrescar.Location = new System.Drawing.Point(549, 359);
+            this.btn_refrescar.Location = new System.Drawing.Point(732, 442);
+            this.btn_refrescar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_refrescar.Name = "btn_refrescar";
-            this.btn_refrescar.Size = new System.Drawing.Size(75, 23);
+            this.btn_refrescar.Size = new System.Drawing.Size(100, 28);
             this.btn_refrescar.TabIndex = 24;
             this.btn_refrescar.Text = "Refrescar";
             this.btn_refrescar.UseVisualStyleBackColor = true;
@@ -107,9 +110,10 @@ namespace TrabajoPrácticoPAV.Formularios
             // 
             this.button4.AccessibleName = "btn_borrar_Click";
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(152, 359);
+            this.button4.Location = new System.Drawing.Point(203, 442);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.Size = new System.Drawing.Size(100, 28);
             this.button4.TabIndex = 23;
             this.button4.Text = "Borrar";
             this.button4.UseVisualStyleBackColor = true;
@@ -118,9 +122,10 @@ namespace TrabajoPrácticoPAV.Formularios
             // button3
             // 
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(71, 359);
+            this.button3.Location = new System.Drawing.Point(95, 442);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(100, 28);
             this.button3.TabIndex = 22;
             this.button3.Text = "Modificar";
             this.button3.UseVisualStyleBackColor = true;
@@ -135,9 +140,10 @@ namespace TrabajoPrácticoPAV.Formularios
             this.horarioSalida,
             this.horarioLlegada,
             this.duracionEstimada});
-            this.datagrid_viajes.Location = new System.Drawing.Point(67, 203);
+            this.datagrid_viajes.Location = new System.Drawing.Point(89, 250);
+            this.datagrid_viajes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.datagrid_viajes.Name = "datagrid_viajes";
-            this.datagrid_viajes.Size = new System.Drawing.Size(557, 150);
+            this.datagrid_viajes.Size = new System.Drawing.Size(743, 185);
             this.datagrid_viajes.TabIndex = 21;
             // 
             // numeroDeViaje
@@ -175,9 +181,10 @@ namespace TrabajoPrácticoPAV.Formularios
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(7, 175);
+            this.label9.Location = new System.Drawing.Point(9, 215);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(132, 21);
+            this.label9.Size = new System.Drawing.Size(164, 28);
             this.label9.TabIndex = 20;
             this.label9.Text = "Consultar Viajes";
             // 
@@ -185,9 +192,10 @@ namespace TrabajoPrácticoPAV.Formularios
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(433, 20);
+            this.label6.Location = new System.Drawing.Point(577, 25);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(149, 17);
+            this.label6.Size = new System.Drawing.Size(175, 20);
             this.label6.TabIndex = 8;
             this.label6.Text = "Duración Estimada:";
             // 
@@ -195,9 +203,10 @@ namespace TrabajoPrácticoPAV.Formularios
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.lbl_duracionEstimada);
-            this.panel3.Location = new System.Drawing.Point(424, 29);
+            this.panel3.Location = new System.Drawing.Point(565, 36);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 59);
+            this.panel3.Size = new System.Drawing.Size(266, 72);
             this.panel3.TabIndex = 19;
             // 
             // lbl_duracionEstimada
@@ -205,9 +214,10 @@ namespace TrabajoPrácticoPAV.Formularios
             this.lbl_duracionEstimada.AutoSize = true;
             this.lbl_duracionEstimada.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lbl_duracionEstimada.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.lbl_duracionEstimada.Location = new System.Drawing.Point(86, 25);
+            this.lbl_duracionEstimada.Location = new System.Drawing.Point(115, 31);
+            this.lbl_duracionEstimada.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_duracionEstimada.Name = "lbl_duracionEstimada";
-            this.lbl_duracionEstimada.Size = new System.Drawing.Size(34, 19);
+            this.lbl_duracionEstimada.Size = new System.Drawing.Size(38, 22);
             this.lbl_duracionEstimada.TabIndex = 9;
             this.lbl_duracionEstimada.Text = "???";
             // 
@@ -215,9 +225,10 @@ namespace TrabajoPrácticoPAV.Formularios
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.button2.Location = new System.Drawing.Point(424, 137);
+            this.button2.Location = new System.Drawing.Point(565, 169);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(90, 28);
+            this.button2.Size = new System.Drawing.Size(120, 34);
             this.button2.TabIndex = 18;
             this.button2.Text = "Registrar";
             this.button2.UseVisualStyleBackColor = true;
@@ -227,9 +238,10 @@ namespace TrabajoPrácticoPAV.Formularios
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(76, 19);
+            this.label8.Location = new System.Drawing.Point(101, 23);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(70, 17);
+            this.label8.Size = new System.Drawing.Size(82, 20);
             this.label8.TabIndex = 14;
             this.label8.Text = "Horarios";
             // 
@@ -238,9 +250,10 @@ namespace TrabajoPrácticoPAV.Formularios
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.button1.Location = new System.Drawing.Point(534, 137);
+            this.button1.Location = new System.Drawing.Point(712, 169);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 28);
+            this.button1.Size = new System.Drawing.Size(120, 34);
             this.button1.TabIndex = 13;
             this.button1.Text = "Cancelar";
             this.button1.UseVisualStyleBackColor = true;
@@ -257,18 +270,20 @@ namespace TrabajoPrácticoPAV.Formularios
             this.panel2.Controls.Add(this.Mtxt_horarioSalida);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(67, 27);
+            this.panel2.Location = new System.Drawing.Point(89, 33);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(282, 138);
+            this.panel2.Size = new System.Drawing.Size(375, 169);
             this.panel2.TabIndex = 12;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(121, 77);
+            this.label7.Location = new System.Drawing.Point(161, 95);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(20, 26);
+            this.label7.Size = new System.Drawing.Size(24, 31);
             this.label7.TabIndex = 18;
             this.label7.Text = "-";
             // 
@@ -276,27 +291,30 @@ namespace TrabajoPrácticoPAV.Formularios
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.label5.Location = new System.Drawing.Point(58, 103);
+            this.label5.Location = new System.Drawing.Point(77, 127);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(130, 17);
+            this.label5.Size = new System.Drawing.Size(152, 20);
             this.label5.TabIndex = 7;
             this.label5.Text = "Horario de Llegada";
             // 
             // Mtxt_presencia
             // 
-            this.Mtxt_presencia.Location = new System.Drawing.Point(194, 17);
+            this.Mtxt_presencia.Location = new System.Drawing.Point(259, 21);
+            this.Mtxt_presencia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Mtxt_presencia.Mask = "00:00";
             this.Mtxt_presencia.Name = "Mtxt_presencia";
-            this.Mtxt_presencia.Size = new System.Drawing.Size(37, 20);
+            this.Mtxt_presencia.Size = new System.Drawing.Size(48, 22);
             this.Mtxt_presencia.TabIndex = 0;
             this.Mtxt_presencia.ValidatingType = typeof(System.DateTime);
             // 
             // Mtxt_horarioLlegada
             // 
-            this.Mtxt_horarioLlegada.Location = new System.Drawing.Point(194, 100);
+            this.Mtxt_horarioLlegada.Location = new System.Drawing.Point(259, 123);
+            this.Mtxt_horarioLlegada.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Mtxt_horarioLlegada.Mask = "00:00";
             this.Mtxt_horarioLlegada.Name = "Mtxt_horarioLlegada";
-            this.Mtxt_horarioLlegada.Size = new System.Drawing.Size(37, 20);
+            this.Mtxt_horarioLlegada.Size = new System.Drawing.Size(48, 22);
             this.Mtxt_horarioLlegada.TabIndex = 2;
             this.Mtxt_horarioLlegada.ValidatingType = typeof(System.DateTime);
             this.Mtxt_horarioLlegada.TextChanged += new System.EventHandler(this.maskedTextBox2_TextChanged);
@@ -305,19 +323,21 @@ namespace TrabajoPrácticoPAV.Formularios
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(121, 34);
+            this.label3.Location = new System.Drawing.Point(161, 42);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(20, 26);
+            this.label3.Size = new System.Drawing.Size(24, 31);
             this.label3.TabIndex = 5;
             this.label3.Text = "-";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // Mtxt_horarioSalida
             // 
-            this.Mtxt_horarioSalida.Location = new System.Drawing.Point(194, 60);
+            this.Mtxt_horarioSalida.Location = new System.Drawing.Point(259, 74);
+            this.Mtxt_horarioSalida.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Mtxt_horarioSalida.Mask = "00:00";
             this.Mtxt_horarioSalida.Name = "Mtxt_horarioSalida";
-            this.Mtxt_horarioSalida.Size = new System.Drawing.Size(37, 20);
+            this.Mtxt_horarioSalida.Size = new System.Drawing.Size(48, 22);
             this.Mtxt_horarioSalida.TabIndex = 1;
             this.Mtxt_horarioSalida.ValidatingType = typeof(System.DateTime);
             this.Mtxt_horarioSalida.TextChanged += new System.EventHandler(this.maskedTextBox1_TextChanged);
@@ -326,9 +346,10 @@ namespace TrabajoPrácticoPAV.Formularios
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.label4.Location = new System.Drawing.Point(70, 60);
+            this.label4.Location = new System.Drawing.Point(93, 74);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(118, 17);
+            this.label4.Size = new System.Drawing.Size(139, 20);
             this.label4.TabIndex = 6;
             this.label4.Text = "Horario de Salida";
             // 
@@ -336,21 +357,23 @@ namespace TrabajoPrácticoPAV.Formularios
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.label2.Location = new System.Drawing.Point(46, 17);
+            this.label2.Location = new System.Drawing.Point(61, 21);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(142, 17);
+            this.label2.Size = new System.Drawing.Size(168, 20);
             this.label2.TabIndex = 4;
             this.label2.Text = "Horario de Presencia";
             // 
             // Frm_ABMViajes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(227)))), ((int)(((byte)(187)))));
-            this.ClientSize = new System.Drawing.Size(754, 411);
+            this.ClientSize = new System.Drawing.Size(1005, 506);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.HelpButton = true;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Frm_ABMViajes";
             this.Text = "Cargar Viaje";
             this.Load += new System.EventHandler(this.Frm_ABMViajes_Load);

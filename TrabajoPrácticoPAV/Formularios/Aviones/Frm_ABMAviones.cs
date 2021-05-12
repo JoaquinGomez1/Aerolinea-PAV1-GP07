@@ -24,6 +24,8 @@ namespace TrabajoPrácticoPAV.Formularios
             DataTable tabla = new DataTable();
             tabla = aviones.RecuperarTodos();
             CargarGrilla(tabla);
+            this.BackColor = Estilo.ColorFondoForms;
+            Estilo.FormatearEstilo(this.Controls);
         }
 
 
@@ -78,8 +80,6 @@ namespace TrabajoPrácticoPAV.Formularios
 
         private void Frm_ABMAviones_Load(object sender, EventArgs e)
         {
-            this.BackColor = Estilo.ColorFondoForms;
-            Estilo.FormatearEstilo(this.Controls);
             cmb_Modelo.CargarCombo();
         }
 

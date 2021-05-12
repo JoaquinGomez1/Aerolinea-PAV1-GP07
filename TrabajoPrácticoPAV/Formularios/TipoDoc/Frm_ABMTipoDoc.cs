@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TrabajoPrácticoPAV.Clase;
 
 namespace TrabajoPrácticoPAV.Formularios.TipoDoc
 {
@@ -16,6 +17,8 @@ namespace TrabajoPrácticoPAV.Formularios.TipoDoc
         {
             InitializeComponent();
             this.CenterToScreen();
+            this.BackColor = Estilo.ColorFondoForms;
+            Estilo.FormatearEstilo(this.Controls);
         }
 
         private void Frm_ABMTipoDoc_Load(object sender, EventArgs e)
@@ -25,12 +28,12 @@ namespace TrabajoPrácticoPAV.Formularios.TipoDoc
 
         private void btn_cancelar_Click(object sender, EventArgs e)
         {
-            this.Close();        
+            this.Close();
         }
 
         private void btn_alta_Click(object sender, EventArgs e)
         {
-            
+
             Frm_AltaTipoDoc alta = new Frm_AltaTipoDoc();
             alta.ShowDialog();
         }

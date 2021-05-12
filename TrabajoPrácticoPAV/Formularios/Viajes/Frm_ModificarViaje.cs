@@ -35,8 +35,8 @@ namespace TrabajoPrácticoPAV.Formularios.Viajes
             ManejoDeTiempos Tiempo = new ManejoDeTiempos();
 
             mtb_llegada.Text = miViaje.HorarioLlegada;
-            mtb_salida.Text = miViaje.HorarioSalida;
-            mtb_presencia.Text = miViaje.HorarioPresencia;
+            mtb_horario_salida.Text = miViaje.HorarioSalida;
+            mtb_horario_presencia.Text = miViaje.HorarioPresencia;
             lbl_duracionEstimada.Text = Tiempo.FormatearIntMilitarAString(miViaje.DuracionEstimada);
 
         }
@@ -66,21 +66,19 @@ namespace TrabajoPrácticoPAV.Formularios.Viajes
         {
             // Esta función va a ser ejecutada cada vez que se ingresen cambios en alguno de los MaskedTextBox de horarios de salida o llegada.
             ManejoDeTiempos Tiempo = new ManejoDeTiempos();
+            if (ViajeSeleccionado == null)
+            {
+                return;
+            }
             string horarioLlegada = mtb_llegada.Text;
-            string horarioSalida = mtb_salida.Text;
+            string horarioSalida = mtb_horario_salida.Text;
 
             bool ambosCompletados = horarioLlegada.Length == 5 && horarioSalida.Length == 5;
-            bool esHorarioValido = Tiempo.esHorarioValido(horarioSalida) && Tiempo.esHorarioValido(horarioLlegada) && Tiempo.esHorarioValido(mtb_presencia.Text);
+            bool esHorarioValido = Tiempo.esHorarioValido(horarioSalida) && Tiempo.esHorarioValido(horarioLlegada) && Tiempo.esHorarioValido(mtb_horario_presencia.Text);
 
             if (ambosCompletados && esHorarioValido)
             {
                 string tiempoEstimado = NE_Viajes.determinarEstimado(horarioLlegada, horarioSalida);
-
-                ViajeSeleccionado.DuracionEstimada = Tiempo.convertirAIntMilitar(tiempoEstimado);
-                ViajeSeleccionado.HorarioLlegada = horarioLlegada;
-                ViajeSeleccionado.HorarioPresencia = mtb_presencia.Text;
-                ViajeSeleccionado.HorarioSalida = horarioSalida;
-
                 lbl_duracionEstimada.Text = tiempoEstimado;
             }
         }

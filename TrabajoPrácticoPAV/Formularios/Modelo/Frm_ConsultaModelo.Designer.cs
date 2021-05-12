@@ -33,26 +33,31 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txt_nombre = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
             this.txt_codigoModelo = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_cerrar
             // 
-            this.btn_cerrar.Location = new System.Drawing.Point(269, 233);
+            this.btn_cerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
+            this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_cerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_cerrar.Location = new System.Drawing.Point(154, 145);
             this.btn_cerrar.Name = "btn_cerrar";
             this.btn_cerrar.Pp_Presionado = false;
-            this.btn_cerrar.Size = new System.Drawing.Size(75, 23);
+            this.btn_cerrar.Size = new System.Drawing.Size(75, 32);
             this.btn_cerrar.TabIndex = 11;
             this.btn_cerrar.Text = "Cerrar";
-            this.btn_cerrar.UseVisualStyleBackColor = true;
+            this.btn_cerrar.UseVisualStyleBackColor = false;
             this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Enabled = false;
-            this.label2.Location = new System.Drawing.Point(194, 86);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label2.Location = new System.Drawing.Point(43, 91);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 13);
+            this.label2.Size = new System.Drawing.Size(146, 20);
             this.label2.TabIndex = 9;
             this.label2.Text = "Nombre del modelo";
             // 
@@ -60,28 +65,29 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Enabled = false;
-            this.label1.Location = new System.Drawing.Point(191, 46);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label1.Location = new System.Drawing.Point(40, 51);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 13);
+            this.label1.Size = new System.Drawing.Size(140, 20);
             this.label1.TabIndex = 8;
             this.label1.Text = "Codigo del modelo";
             // 
             // txt_nombre
             // 
             this.txt_nombre.Enabled = false;
-            this.txt_nombre.Location = new System.Drawing.Point(305, 83);
+            this.txt_nombre.Location = new System.Drawing.Point(203, 91);
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.Pp_EsPk = false;
             this.txt_nombre.Pp_MensajeError = null;
             this.txt_nombre.Pp_NombreCampo = "nombre";
             this.txt_nombre.Pp_NombreTabla = "Modelo";
-            this.txt_nombre.Size = new System.Drawing.Size(100, 20);
+            this.txt_nombre.Size = new System.Drawing.Size(160, 20);
             this.txt_nombre.TabIndex = 7;
             // 
             // txt_codigoModelo
             // 
             this.txt_codigoModelo.Enabled = false;
-            this.txt_codigoModelo.Location = new System.Drawing.Point(305, 43);
+            this.txt_codigoModelo.Location = new System.Drawing.Point(203, 51);
             this.txt_codigoModelo.Name = "txt_codigoModelo";
             this.txt_codigoModelo.Pp_EsPk = false;
             this.txt_codigoModelo.Pp_MensajeError = null;
@@ -90,12 +96,23 @@
             this.txt_codigoModelo.Size = new System.Drawing.Size(100, 20);
             this.txt_codigoModelo.TabIndex = 6;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(12, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(146, 21);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Consultar modelo";
+            // 
             // Frm_ConsultaModelo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(227)))), ((int)(((byte)(187)))));
-            this.ClientSize = new System.Drawing.Size(658, 303);
+            this.ClientSize = new System.Drawing.Size(450, 200);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btn_cerrar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -117,5 +134,6 @@
         private System.Windows.Forms.Label label1;
         private Clase.TextBox_Aerolinea txt_nombre;
         private Clase.TextBox_Aerolinea txt_codigoModelo;
+        private System.Windows.Forms.Label label3;
     }
 }
