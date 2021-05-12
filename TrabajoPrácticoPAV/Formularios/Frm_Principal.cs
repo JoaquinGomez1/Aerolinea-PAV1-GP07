@@ -218,7 +218,7 @@ namespace TrabajoPrácticoPAV
         private void FormCerrado(object sender, FormClosedEventArgs e)
         {
             if (Application.OpenForms["Frm_ABMClientes"] == null)
-                RestaurarColorBoton(Btn_ABMClientes);
+                RestaurarColorBoton(Btn_ABM);
             if (Application.OpenForms["Frm_ABMViajes"] == null)
                 RestaurarColorBoton(Btn_ABM_Viaje);
             if (Application.OpenForms["Frm_ABMVuelo"] == null)

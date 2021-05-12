@@ -81,7 +81,7 @@
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(13, 15);
             this.panel1.Name = "panel1";
@@ -91,10 +91,10 @@
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Location = new System.Drawing.Point(32, 37);
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Location = new System.Drawing.Point(32, 38);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(777, 111);
+            this.panel2.Size = new System.Drawing.Size(779, 111);
             this.panel2.TabIndex = 0;
             // 
             // chk_Todos
