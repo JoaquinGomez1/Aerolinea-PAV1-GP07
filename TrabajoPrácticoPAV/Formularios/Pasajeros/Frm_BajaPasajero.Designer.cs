@@ -50,16 +50,17 @@
             this.Cmb_TipoDoc = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
             this.Btn_Eliminar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.Txt_Apellido = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.BarraSuperior.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(-17, 265);
+            this.label1.Location = new System.Drawing.Point(21, 265);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 18, 3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(223, 22);
+            this.label1.Size = new System.Drawing.Size(185, 22);
             this.label1.TabIndex = 81;
             this.label1.Text = "Fecha Nacimiento";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -101,10 +102,10 @@
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(0, 187);
+            this.label6.Location = new System.Drawing.Point(17, 187);
             this.label6.Margin = new System.Windows.Forms.Padding(3, 18, 3, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(207, 20);
+            this.label6.Size = new System.Drawing.Size(190, 24);
             this.label6.TabIndex = 65;
             this.label6.Text = "Tipo de Documento";
             this.label6.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -122,10 +123,10 @@
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(-16, 225);
+            this.label7.Location = new System.Drawing.Point(17, 225);
             this.label7.Margin = new System.Windows.Forms.Padding(3, 18, 3, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(223, 22);
+            this.label7.Size = new System.Drawing.Size(190, 22);
             this.label7.TabIndex = 64;
             this.label7.Text = "Número de documento";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -189,6 +190,7 @@
             this.maskedTextBox_Aerolinea1.Mask = "99999";
             this.maskedTextBox_Aerolinea1.Name = "maskedTextBox_Aerolinea1";
             this.maskedTextBox_Aerolinea1.Pp_EsPk = false;
+            this.maskedTextBox_Aerolinea1.Pp_MensajeError = null;
             this.maskedTextBox_Aerolinea1.Pp_NombreCampo = "numeroCalle";
             this.maskedTextBox_Aerolinea1.Pp_NombreTabla = "Pasajero";
             this.maskedTextBox_Aerolinea1.PromptChar = ' ';
@@ -202,6 +204,7 @@
             this.txt_Fecha.Mask = "00/00/0000";
             this.txt_Fecha.Name = "txt_Fecha";
             this.txt_Fecha.Pp_EsPk = false;
+            this.txt_Fecha.Pp_MensajeError = null;
             this.txt_Fecha.Pp_NombreCampo = "fechaNacimiento";
             this.txt_Fecha.Pp_NombreTabla = "Pasajero";
             this.txt_Fecha.Size = new System.Drawing.Size(90, 22);
@@ -215,6 +218,7 @@
             this.Msktxt_NumeroDOC.Mask = "99999999";
             this.Msktxt_NumeroDOC.Name = "Msktxt_NumeroDOC";
             this.Msktxt_NumeroDOC.Pp_EsPk = true;
+            this.Msktxt_NumeroDOC.Pp_MensajeError = null;
             this.Msktxt_NumeroDOC.Pp_NombreCampo = "numeroDoc";
             this.Msktxt_NumeroDOC.Pp_NombreTabla = "Pasajero";
             this.Msktxt_NumeroDOC.PromptChar = ' ';
@@ -318,6 +322,16 @@
             this.Txt_Apellido.Size = new System.Drawing.Size(177, 22);
             this.Txt_Apellido.TabIndex = 72;
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Location = new System.Drawing.Point(13, 45);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(751, 302);
+            this.panel1.TabIndex = 85;
+            // 
             // Frm_BajaPasajero
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -344,6 +358,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.Txt_Apellido);
             this.Controls.Add(this.label12);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_BajaPasajero";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -379,5 +394,6 @@
         private System.Windows.Forms.Label label4;
         private Clase.TextBox_Aerolinea Txt_Apellido;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Panel panel1;
     }
 }

@@ -15,13 +15,15 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
         public string Pp_codigo { get; set; }
         public string Pp_nombre { get; set; }
         public string Pp_idCiudad { get; set; }
+        public string Pp_Id_aeropuerto { get; set; }
 
         Conexion_DB _BD = new Conexion_DB();
-        public DataTable Recuperar_Por_Id(string idCiudad)
-        {
-            string sql = "SELECT * FROM Aeropuerto WHERE idCiudad =" + idCiudad;
-            return _BD.EjecutarSelect(sql);
-        }
+
+        //public DataTable Recuperar_Por_Id(string codigo)
+        //{
+        //    string sql = "SELECT * FROM Aeropuerto WHERE codigo =" + codigo;
+        //    return _BD.EjecutarSelect(sql);
+        //}
         public void Insertar()
         {
             string sqlInsertar = @"INSERT INTO Aeropuerto (codigo, nombre, idCiudad)"
@@ -63,13 +65,25 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             return _BD.EjecutarSelect(sql);
         }
 
+        public DataTable Recuperar_por_ciudad(string ciudad)
+        {
+            string sql = @"SELECT a.* FROM Aeropuerto a "
+                     + " WHERE a.idCiudad = " + ciudad;
+            return _BD.EjecutarSelect(sql);
+        }
+
         public void Modificar()
         {
             string sqlModificar = @"UPDATE Aeropuerto SET"
-                                  + " codigo = '" + Pp_codigo + "'"
-                                  + ", nombre = '" + Pp_nombre + "'"
-                                  + ", idCiudad = " + Pp_idCiudad;
+                                  + " nombre = '" + Pp_nombre + "'"
+                                  + " , idCiudad = " + Pp_idCiudad
+                                  + " WHERE codigo = '" + Pp_Id_aeropuerto + "'";
             _BD.Modificar(sqlModificar, false);
+        }
+        public void Borrar()
+        {
+            string sqlDelete = "DELETE FROM Aeropuerto WHERE codigo = '" + Pp_Id_aeropuerto + "'";
+            _BD.Borrar(sqlDelete, false);
         }
     }
 }

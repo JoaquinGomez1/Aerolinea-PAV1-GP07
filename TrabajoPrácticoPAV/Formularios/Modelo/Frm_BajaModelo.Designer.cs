@@ -34,12 +34,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btn_cerrar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.btn_eliminar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txt_codigoModelo
             // 
             this.txt_codigoModelo.Enabled = false;
-            this.txt_codigoModelo.Location = new System.Drawing.Point(158, 60);
+            this.txt_codigoModelo.Location = new System.Drawing.Point(169, 58);
             this.txt_codigoModelo.Name = "txt_codigoModelo";
             this.txt_codigoModelo.Pp_EsPk = false;
             this.txt_codigoModelo.Pp_MensajeError = null;
@@ -51,22 +52,23 @@
             // txt_nombre
             // 
             this.txt_nombre.Enabled = false;
-            this.txt_nombre.Location = new System.Drawing.Point(158, 100);
+            this.txt_nombre.Location = new System.Drawing.Point(169, 98);
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.Pp_EsPk = false;
             this.txt_nombre.Pp_MensajeError = null;
             this.txt_nombre.Pp_NombreCampo = null;
             this.txt_nombre.Pp_NombreTabla = null;
-            this.txt_nombre.Size = new System.Drawing.Size(100, 20);
+            this.txt_nombre.Size = new System.Drawing.Size(182, 20);
             this.txt_nombre.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Enabled = false;
-            this.label1.Location = new System.Drawing.Point(44, 63);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label1.Location = new System.Drawing.Point(12, 58);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 13);
+            this.label1.Size = new System.Drawing.Size(140, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "Codigo del modelo";
             // 
@@ -74,40 +76,58 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Enabled = false;
-            this.label2.Location = new System.Drawing.Point(47, 103);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label2.Location = new System.Drawing.Point(15, 98);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 13);
+            this.label2.Size = new System.Drawing.Size(146, 20);
             this.label2.TabIndex = 3;
             this.label2.Text = "Nombre del modelo";
             // 
             // btn_cerrar
             // 
-            this.btn_cerrar.Location = new System.Drawing.Point(245, 253);
+            this.btn_cerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
+            this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_cerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_cerrar.Location = new System.Drawing.Point(183, 146);
             this.btn_cerrar.Name = "btn_cerrar";
             this.btn_cerrar.Pp_Presionado = false;
-            this.btn_cerrar.Size = new System.Drawing.Size(75, 23);
+            this.btn_cerrar.Size = new System.Drawing.Size(75, 33);
             this.btn_cerrar.TabIndex = 5;
             this.btn_cerrar.Text = "Cerrar";
-            this.btn_cerrar.UseVisualStyleBackColor = true;
+            this.btn_cerrar.UseVisualStyleBackColor = false;
             this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
             // 
             // btn_eliminar
             // 
-            this.btn_eliminar.Location = new System.Drawing.Point(93, 253);
+            this.btn_eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
+            this.btn_eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_eliminar.Location = new System.Drawing.Point(88, 146);
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.Pp_Presionado = false;
-            this.btn_eliminar.Size = new System.Drawing.Size(75, 23);
+            this.btn_eliminar.Size = new System.Drawing.Size(75, 33);
             this.btn_eliminar.TabIndex = 4;
             this.btn_eliminar.Text = "Eliminar";
-            this.btn_eliminar.UseVisualStyleBackColor = true;
+            this.btn_eliminar.UseVisualStyleBackColor = false;
             this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(12, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(135, 21);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Eliminar modelo";
             // 
             // Frm_BajaModelo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(227)))), ((int)(((byte)(187)))));
-            this.ClientSize = new System.Drawing.Size(658, 303);
+            this.ClientSize = new System.Drawing.Size(384, 200);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btn_cerrar);
             this.Controls.Add(this.btn_eliminar);
             this.Controls.Add(this.label2);
@@ -131,5 +151,6 @@
         private System.Windows.Forms.Label label2;
         private Clase.Button_Aerolinea btn_cerrar;
         private Clase.Button_Aerolinea btn_eliminar;
+        private System.Windows.Forms.Label label3;
     }
 }

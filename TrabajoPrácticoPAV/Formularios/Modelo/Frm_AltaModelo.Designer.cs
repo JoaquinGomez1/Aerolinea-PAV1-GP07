@@ -29,62 +29,81 @@
         private void InitializeComponent()
         {
             this.textBox_Aerolinea1 = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
-            this.label1 = new System.Windows.Forms.Label();
             this.btn_registrar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.btn_cerrar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBox_Aerolinea1
             // 
-            this.textBox_Aerolinea1.Location = new System.Drawing.Point(225, 107);
+            this.textBox_Aerolinea1.Location = new System.Drawing.Point(130, 76);
             this.textBox_Aerolinea1.Name = "textBox_Aerolinea1";
             this.textBox_Aerolinea1.Pp_EsPk = false;
             this.textBox_Aerolinea1.Pp_MensajeError = null;
             this.textBox_Aerolinea1.Pp_NombreCampo = "nombre";
             this.textBox_Aerolinea1.Pp_NombreTabla = "Modelo";
-            this.textBox_Aerolinea1.Size = new System.Drawing.Size(100, 20);
+            this.textBox_Aerolinea1.Size = new System.Drawing.Size(203, 20);
             this.textBox_Aerolinea1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(131, 113);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Nombre";
             // 
             // btn_registrar
             // 
-            this.btn_registrar.Location = new System.Drawing.Point(99, 242);
+            this.btn_registrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
+            this.btn_registrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_registrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_registrar.Location = new System.Drawing.Point(120, 138);
             this.btn_registrar.Name = "btn_registrar";
             this.btn_registrar.Pp_Presionado = false;
-            this.btn_registrar.Size = new System.Drawing.Size(75, 23);
+            this.btn_registrar.Size = new System.Drawing.Size(82, 33);
             this.btn_registrar.TabIndex = 2;
             this.btn_registrar.Text = "Registrar";
-            this.btn_registrar.UseVisualStyleBackColor = true;
+            this.btn_registrar.UseVisualStyleBackColor = false;
             this.btn_registrar.Click += new System.EventHandler(this.btn_registrar_Click);
             // 
             // btn_cerrar
             // 
-            this.btn_cerrar.Location = new System.Drawing.Point(251, 242);
+            this.btn_cerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
+            this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_cerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_cerrar.Location = new System.Drawing.Point(212, 138);
             this.btn_cerrar.Name = "btn_cerrar";
             this.btn_cerrar.Pp_Presionado = false;
-            this.btn_cerrar.Size = new System.Drawing.Size(75, 23);
+            this.btn_cerrar.Size = new System.Drawing.Size(82, 33);
             this.btn_cerrar.TabIndex = 3;
             this.btn_cerrar.Text = "Cerrar";
-            this.btn_cerrar.UseVisualStyleBackColor = true;
+            this.btn_cerrar.UseVisualStyleBackColor = false;
             this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(12, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(141, 21);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Registrar modelo";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label3.Location = new System.Drawing.Point(50, 74);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(65, 20);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Nombre";
             // 
             // Frm_AltaModelo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(227)))), ((int)(((byte)(187)))));
-            this.ClientSize = new System.Drawing.Size(658, 303);
+            this.ClientSize = new System.Drawing.Size(450, 200);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_cerrar);
             this.Controls.Add(this.btn_registrar);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox_Aerolinea1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_AltaModelo";
@@ -98,8 +117,9 @@
         #endregion
 
         private Clase.TextBox_Aerolinea textBox_Aerolinea1;
-        private System.Windows.Forms.Label label1;
         private Clase.Button_Aerolinea btn_registrar;
         private Clase.Button_Aerolinea btn_cerrar;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

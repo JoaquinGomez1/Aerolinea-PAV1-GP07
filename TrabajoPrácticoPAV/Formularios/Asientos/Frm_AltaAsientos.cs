@@ -43,7 +43,7 @@ namespace TrabajoPrácticoPAV.Formularios.Asientos
                 Tratamiento.Validar(this.Controls);
                // if (cmb_AeropSalida.SelectedIndex != cmb_AeropDestino.SelectedIndex)
                 //{
-                    string sql = Tratamiento.CostructorInsert("Asientos", this.Controls);
+                    string sql = Tratamiento.CostructorInsert("Asientos", panel1.Controls);
                     _BD.Insertar(sql, false);
                     this.Close();
                 //}
