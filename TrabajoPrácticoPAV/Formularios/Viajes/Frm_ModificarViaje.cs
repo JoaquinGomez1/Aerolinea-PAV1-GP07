@@ -18,6 +18,7 @@ namespace TrabajoPrácticoPAV.Formularios.Viajes
     {
         private readonly NE_Viajes NE_Viajes = new NE_Viajes();
         private Viaje ViajeSeleccionado { get; set; }
+        private readonly ManejoDeTiempos _Tiempo = new ManejoDeTiempos();
 
         public Frm_ModificarViaje()
         {
@@ -32,18 +33,18 @@ namespace TrabajoPrácticoPAV.Formularios.Viajes
             string valorSeleccionado = cmb_numero_viaje.SelectedValue.ToString();
             Viaje miViaje = NE_Viajes.GetViajePorId(valorSeleccionado);
             ViajeSeleccionado = miViaje;
-            ManejoDeTiempos Tiempo = new ManejoDeTiempos();
 
+            // Actualizar la vista del formulario
             mtb_llegada.Text = miViaje.HorarioLlegada;
             mtb_horario_salida.Text = miViaje.HorarioSalida;
             mtb_horario_presencia.Text = miViaje.HorarioPresencia;
-            lbl_duracionEstimada.Text = Tiempo.FormatearIntMilitarAString(miViaje.DuracionEstimada);
+            lbl_duracionEstimada.Text = _Tiempo.FormatearIntMilitarAString(miViaje.DuracionEstimada);
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            NE_Viajes.ModificarPorId(ViajeSeleccionado);
+            NE_Viajes.ModificarViaje(ViajeSeleccionado);
         }
 
         private void btn_cancelar_Click(object sender, EventArgs e)
@@ -79,6 +80,14 @@ namespace TrabajoPrácticoPAV.Formularios.Viajes
             if (ambosCompletados && esHorarioValido)
             {
                 string tiempoEstimado = NE_Viajes.determinarEstimado(horarioLlegada, horarioSalida);
+                ViajeSeleccionado = new Viaje()
+                {
+                    HorarioSalida = horarioSalida,
+                    HorarioLlegada = horarioLlegada,
+                    HorarioPresencia = mtb_horario_presencia.Text,
+                    DuracionEstimada = _Tiempo.convertirAIntMilitar(tiempoEstimado),
+                    NumeroDeViaje = ViajeSeleccionado.NumeroDeViaje,
+                };
                 lbl_duracionEstimada.Text = tiempoEstimado;
             }
         }
