@@ -52,7 +52,6 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
 
         public void ModificarViaje(Viaje viaje)
         {
-            MessageBox.Show($"{viaje.HorarioLlegada } , {viaje.HorarioPresencia} , {viaje.HorarioPresencia} , {viaje.DuracionEstimada} , {viaje.NumeroDeViaje}");
             string sql = $"UPDATE Viaje SET horarioSalida = '{viaje.HorarioSalida}', horarioLlegada = '{viaje.HorarioLlegada}', horarioPresencia = '{viaje.HorarioPresencia}', duracionEstimada = '{viaje.DuracionEstimada}' WHERE numeroDeViaje = {viaje.NumeroDeViaje}";
             _DB.Modificar(sql, false);
         }
