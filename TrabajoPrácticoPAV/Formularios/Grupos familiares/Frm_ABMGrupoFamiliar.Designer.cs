@@ -83,6 +83,8 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.Btn_Cerrar);
+            this.panel1.Controls.Add(this.btn_limpiar1);
             this.panel1.Location = new System.Drawing.Point(13, 15);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(974, 485);
@@ -218,7 +220,7 @@
             this.Btn_Cerrar.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Btn_Cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_Cerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.Btn_Cerrar.Location = new System.Drawing.Point(55, 476);
+            this.Btn_Cerrar.Location = new System.Drawing.Point(32, 438);
             this.Btn_Cerrar.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_Cerrar.Name = "Btn_Cerrar";
             this.Btn_Cerrar.Pp_Presionado = false;
@@ -233,7 +235,7 @@
             this.btn_limpiar1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btn_limpiar1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_limpiar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_limpiar1.Location = new System.Drawing.Point(161, 476);
+            this.btn_limpiar1.Location = new System.Drawing.Point(142, 438);
             this.btn_limpiar1.Margin = new System.Windows.Forms.Padding(4);
             this.btn_limpiar1.Name = "btn_limpiar1";
             this.btn_limpiar1.Pp_Presionado = false;
@@ -368,9 +370,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.Txt_Apellido);
-            this.Controls.Add(this.Btn_Cerrar);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.btn_limpiar1);
             this.Controls.Add(this.Btn_Consultar);
             this.Controls.Add(this.Btn_Registrar);
             this.Controls.Add(this.Btn_Eliminar);

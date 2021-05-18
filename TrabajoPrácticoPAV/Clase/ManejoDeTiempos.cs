@@ -104,7 +104,16 @@ namespace TrabajoPrácticoPAV.Clase
             string minutosDelHorario = $"{horario[3]}{horario[4]}"; // 40
 
             string temp = $"{horasDelHorario}{minutosDelHorario}"; // 0140
-            return Int32.Parse(temp); // -> convierto a int
+            try
+            {
+
+                return Int32.Parse(temp); // -> convierto a int
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al hacer Parse de string a int");
+                return 0;
+            }
         }
 
         public int calcularDiferenciaDelDia(string horarioInicial, string horarioFinal)

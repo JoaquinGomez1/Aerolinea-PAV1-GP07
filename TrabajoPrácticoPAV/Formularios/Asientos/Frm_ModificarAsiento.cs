@@ -51,7 +51,7 @@ namespace TrabajoPrácticoPAV.Formularios.Asientos
         {
             Tratamientos_Especiales Tratamiento = new Tratamientos_Especiales();
          
-                string sql = Tratamiento.CostructorUpdateDelete("Asientos", this.Controls, true);
+                string sql = Tratamiento.CostructorUpdateDelete("Asientos", panel1.Controls, true);
                 _BD.Modificar(sql, false);
                 this.Close();
         }

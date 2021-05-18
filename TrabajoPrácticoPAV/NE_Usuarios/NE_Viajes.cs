@@ -50,7 +50,7 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             _DB.Borrar(sql, false);
         }
 
-        public void ModificarPorId(Viaje viaje)
+        public void ModificarViaje(Viaje viaje)
         {
             string sql = $"UPDATE Viaje SET horarioSalida = '{viaje.HorarioSalida}', horarioLlegada = '{viaje.HorarioLlegada}', horarioPresencia = '{viaje.HorarioPresencia}', duracionEstimada = '{viaje.DuracionEstimada}' WHERE numeroDeViaje = {viaje.NumeroDeViaje}";
             _DB.Modificar(sql, false);
