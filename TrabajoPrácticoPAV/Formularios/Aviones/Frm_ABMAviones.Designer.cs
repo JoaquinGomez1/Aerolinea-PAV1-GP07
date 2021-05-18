@@ -174,7 +174,7 @@ namespace TrabajoPrácticoPAV.Formularios
             // 
             this.btn_buscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
             this.btn_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_buscar.Location = new System.Drawing.Point(324, 103);
+            this.btn_buscar.Location = new System.Drawing.Point(447, 178);
             this.btn_buscar.Name = "btn_buscar";
             this.btn_buscar.Pp_Presionado = false;
             this.btn_buscar.Size = new System.Drawing.Size(90, 29);
@@ -187,7 +187,7 @@ namespace TrabajoPrácticoPAV.Formularios
             // 
             this.btn_actualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
             this.btn_actualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_actualizar.Location = new System.Drawing.Point(447, 178);
+            this.btn_actualizar.Location = new System.Drawing.Point(447, 221);
             this.btn_actualizar.Name = "btn_actualizar";
             this.btn_actualizar.Pp_Presionado = false;
             this.btn_actualizar.Size = new System.Drawing.Size(90, 29);
@@ -200,7 +200,7 @@ namespace TrabajoPrácticoPAV.Formularios
             // 
             this.btn_agregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
             this.btn_agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_agregar.Location = new System.Drawing.Point(447, 207);
+            this.btn_agregar.Location = new System.Drawing.Point(562, 352);
             this.btn_agregar.Name = "btn_agregar";
             this.btn_agregar.Pp_Presionado = false;
             this.btn_agregar.Size = new System.Drawing.Size(90, 29);

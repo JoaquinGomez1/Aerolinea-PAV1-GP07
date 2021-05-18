@@ -19,11 +19,6 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
 
         Conexion_DB _BD = new Conexion_DB();
 
-        //public DataTable Recuperar_Por_Id(string codigo)
-        //{
-        //    string sql = "SELECT * FROM Aeropuerto WHERE codigo =" + codigo;
-        //    return _BD.EjecutarSelect(sql);
-        //}
         public void Insertar()
         {
             string sqlInsertar = @"INSERT INTO Aeropuerto (codigo, nombre, idCiudad)"
@@ -34,11 +29,6 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             _BD.Insertar(sqlInsertar, false);
         }
 
-        public void Insertar(Control.ControlCollection controles)
-        {
-            Tratamientos_Especiales Tratamiento = new Tratamientos_Especiales();
-            _BD.Insertar(Tratamiento.ConstructorSelect(controles, "", "Aeropuerto"), false);
-        }
         public DataTable RecuperarTodos()
         {
             string sql = @"SELECT a.* FROM Aeropuerto a ";

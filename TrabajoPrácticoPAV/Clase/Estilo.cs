@@ -11,7 +11,6 @@ namespace TrabajoPrácticoPAV.Clase
 
     class Estilo
     {
-        static public int MenuLateral = 1;
         static public string TemaActual = "Mostaza Classic"; // <- Tema por defecto
         static public Color ColorFondo = Color.FromArgb(159, 133, 74);
         static public Color ColorBoton = Color.FromArgb(159, 133, 74);
@@ -43,13 +42,22 @@ namespace TrabajoPrácticoPAV.Clase
                     case "System.Windows.Forms.Panel":
                         if (((Panel)item).Name == "BarraSuperior")
                             ((Panel)item).BackColor = Estilo.ColorBarra;
-                        Estilo.FormatearEstilo(((Panel)item).Controls);
+                        else
+                        {
+                            Estilo.FormatearEstilo(((Panel)item).Controls);
+                            ((Panel)item).BackColor = ColorFondoForms;
+                        }
+
                         break;
                     case "System.Windows.Forms.Label":
                         if (((Label)item).Name == "Titulo")
                             ((Label)item).ForeColor = Color.FromArgb(255, 255, 255);
                         else
                             ((Label)item).ForeColor = Estilo.ColorLetrasLabel;
+                        break;
+                    case "System.Windows.Forms.MenuStrip":
+                        ((MenuStrip)item).BackColor = ColorFondoForms;
+                        ((MenuStrip)item).ForeColor = ColorLetraBoton;
                         break;
                     case "TrabajoPrácticoPAV.Clase.DataGridView_Aerolinea":
                     case "System.Windows.Forms.CheckBox":
@@ -64,7 +72,6 @@ namespace TrabajoPrácticoPAV.Clase
                     case "System.Windows.Forms.MaskedTextBox":
                         break;
                     default:
-                        MessageBox.Show($"{nombreControl} es un control no admitido, agregar en ESTILOS");
                         break;
                 }
             }
