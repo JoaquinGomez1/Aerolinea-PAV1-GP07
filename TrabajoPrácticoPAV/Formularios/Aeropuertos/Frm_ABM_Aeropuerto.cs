@@ -10,11 +10,15 @@ using System.Windows.Forms;
 using TrabajoPrácticoPAV.NE_Usuarios;
 using TrabajoPrácticoPAV.Formularios;
 using TrabajoPrácticoPAV.Clase;
+using TrabajoPrácticoPAV.Backend;
 
 namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
 {
     public partial class Frm_ABM_Aeropuerto : Form
     {
+
+        Conexion_DB _BD = new Conexion_DB();
+
         public string Id_codigo { get; set; }
         public Frm_ABM_Aeropuerto()
         {
@@ -23,48 +27,31 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
             Estilo.FormatearEstilo(this.Controls);
         }
 
-        private void CargarGrilla(DataTable tabla)
+        private void btn_consultar_Click(object sender, EventArgs e)
         {
+            btn_modificar.Enabled = false;
+            btn_eliminar.Enabled = false;
+
+            NE_Aeropuertos aeropuerto = new NE_Aeropuertos();
+            Tratamientos_Especiales _TE = new Tratamientos_Especiales();
+
+            CargarGrilla(_TE.ConstructorSelect(this.Controls, "JOIN Ciudad ON Ciudad.idCiudad = Aeropuerto.idCiudad", "Aeropuerto"));
+        }
+
+
+        private void CargarGrilla(string sql)
+        {
+
+            DataTable tabla = new DataTable();
+            tabla = _BD.EjecutarSelect(sql);
+
             grid_aeropuertos.Rows.Clear();
             for (int i = 0; i < tabla.Rows.Count; i++)
             {
                 grid_aeropuertos.Rows.Add();
                 grid_aeropuertos.Rows[i].Cells[0].Value = tabla.Rows[i]["codigo"].ToString();
                 grid_aeropuertos.Rows[i].Cells[1].Value = tabla.Rows[i]["nombre"].ToString();
-                grid_aeropuertos.Rows[i].Cells[2].Value = tabla.Rows[i]["idCiudad"].ToString();
-            }
-        }
-
-        private void btn_consultar_Click(object sender, EventArgs e)
-        {
-            NE_Aeropuertos aeropuerto = new NE_Aeropuertos();
-
-            if (chk_todos.Checked == false && cmb_codigos.SelectedIndex == -1 && txt_nombre.Text == "")
-            {
-                MessageBox.Show("Debe indicar alguna opción para la búsqueda de aeropuertos");
-            }
-            if (chk_todos.Checked == true)
-            {
-                DataTable tabla = new DataTable();
-                tabla = aeropuerto.RecuperarTodos();
-                CargarGrilla(tabla);
-                return;
-            }
-            if (chk_todos.Checked == false
-                && cmb_codigos.SelectedIndex != -1
-                && txt_nombre.Text != "")
-            {
-                CargarGrilla(aeropuerto.Recuperar_por_CodigoYNombre(txt_nombre.Text, cmb_codigos.SelectedValue.ToString()));
-                return;
-            }
-            if (cmb_codigos.SelectedIndex != -1)
-            {
-                CargarGrilla(aeropuerto.Recuperar_por_Codigo(cmb_codigos.SelectedValue.ToString()));
-                return;
-            }
-            if (txt_nombre.Text != "")
-            {
-                CargarGrilla(aeropuerto.Recuperar_por_PatronNombre(txt_nombre.Text));
+                grid_aeropuertos.Rows[i].Cells[2].Value = tabla.Rows[i]["nombreCiudad"].ToString();
             }
         }
 
@@ -79,42 +66,33 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
               alta.ShowDialog();
         }
 
-        private void pic_deseleccionar_Click(object sender, EventArgs e)
-        {
-            cmb_codigos.SelectedIndex = -1;
-        }
-
         private void Frm_ABM_Aeropuerto_Load(object sender, EventArgs e)
         {
-            cmb_codigos.CargarCombo();
+            grid_aeropuertos.Pp_FormatoGrid = "codigo,Código, 50;nombre,Nombre, 250;nombreCiudad,Ciudad,150";
+            grid_aeropuertos.Formatear();
+            btn_modificar.Enabled = false;
+            btn_eliminar.Enabled = false;
         }
 
         private void grid_aeropuertos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             Id_codigo = grid_aeropuertos.CurrentRow.Cells["codigo"].Value.ToString();
-            Frm_Modificación_Aeropuerto modificar = new Frm_Modificación_Aeropuerto();
-            modificar.Id_codigo = Id_codigo;
-            //modificar.ShowDialog();
+            btn_modificar.Enabled = true;
+            btn_eliminar.Enabled = true;
         }
 
         private void btn_modificar_Click(object sender, EventArgs e)
         {
-                if (Id_codigo != "")
-                {
                     Frm_Modificación_Aeropuerto modificar = new Frm_Modificación_Aeropuerto();
                     modificar.Id_codigo = Id_codigo;
                     modificar.ShowDialog();
-                }
-                else
-                {
-                    MessageBox.Show("No se encontró un aeropuerto con los filtros especificados");
-                }
          }
 
         private void grid_aeropuertos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             Frm_Mostrar_Aeropuerto mostrar = new Frm_Mostrar_Aeropuerto();
             mostrar.Id_codigo = grid_aeropuertos.CurrentRow.Cells["codigo"].Value.ToString();
+            MessageBox.Show(grid_aeropuertos.CurrentRow.Cells["codigo"].Value.ToString());
             mostrar.ShowDialog();
         }
 
@@ -125,20 +103,14 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
             borrar.ShowDialog();
         }
 
-        private void btn_limpiar_Click(object sender, EventArgs e)
-        {
-            cmb_codigos.SelectedIndex = -1;
-            txt_nombre.Text = "";
-            chk_todos.Checked = false;
-            grid_aeropuertos.Rows.Clear();
-        }
-
         private void btn_limpiarr_Click(object sender, EventArgs e)
         {
             grid_aeropuertos.Rows.Clear();
-            cmb_codigos.SelectedIndex = -1;
-            txt_nombre.Text = "";
+            txt_Codigo.Text = "";
+            txt_Nombre.Text = "";
             chk_todos.Checked = false;
+            btn_modificar.Enabled = false;
+            btn_eliminar.Enabled = false;
         }
     }
 }

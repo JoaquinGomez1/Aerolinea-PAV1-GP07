@@ -34,9 +34,7 @@ namespace TrabajoPrácticoPAV
 
         private void Frm_Principal_Load(object sender, EventArgs e)
         {
-            DarColor();
-            Timer_Expandir.Stop();
-            Timer_Contraer.Stop();
+            Estilo.FormatearEstilo(this.Controls);
         }
 
         #region Funcionalidades del formulario
@@ -71,88 +69,17 @@ namespace TrabajoPrácticoPAV
 
         #region Abrir Formularios con Botones del Menu
 
-        private void CambiarColorBoton(Button_Aerolinea boton)
-        {
-            boton.BackColor = Estilo.FormActivo;
-            boton.Pp_Presionado = true;
-        }
-
-        private void RestaurarColorBoton(Button_Aerolinea boton)
-        {
-            boton.BackColor = Estilo.ColorBoton;
-            boton.Pp_Presionado = false;
-        }
-
-        private void DarColor()
-        {
-            PanelMenu.BackColor = Estilo.ColorFondo;
-            foreach (Button_Aerolinea boton in PanelMenu.Controls)
-            {
-                if (boton.Pp_Presionado)
-                    CambiarColorBoton(boton);
-                else
-                    RestaurarColorBoton(boton);
-            }
-            panel1.BackColor = Estilo.ColorBarra;
-            Btn_Menu.BackColor = Estilo.ColorBoton;
-            if (Estilo.MenuLateral == 0)
-            {
-                PanelMenu.Width = 42;
-                Btn_Menu.Enabled = false; Btn_Menu.Visible = false;
-                Timer_Contraer.Enabled = true; Timer_Expandir.Enabled = true;
-            }
-            else if (Estilo.MenuLateral == 1)
-            {
-                PanelMenu.Width = 202;
-                Btn_Menu.Enabled = true; Btn_Menu.Visible = true;
-                Timer_Contraer.Enabled = false; Timer_Expandir.Enabled = false;
-            }
-            else if (Estilo.MenuLateral == 2)
-            {
-                PanelMenu.Width = 202;
-                Btn_Menu.Enabled = false; Btn_Menu.Visible = false;
-                Timer_Contraer.Enabled = false; Timer_Expandir.Enabled = false;
-            }
-            else if (Estilo.MenuLateral == 3)
-            {
-                PanelMenu.Width = 42;
-                Btn_Menu.Enabled = false; Btn_Menu.Visible = false;
-                Timer_Contraer.Enabled = false; Timer_Expandir.Enabled = false;
-            }
-        }
-
         private void MouseClickButton(object sender, EventArgs e)
         {
             Button_Aerolinea boton = ((Button_Aerolinea)sender);
 
             // ↓ Permite que se puedan aplicar los cambios de estilo en la configuración incluso si ya fueron abiertos anteriormente
             CerrarTodosLosForms();
-            CambiarColorBoton(boton);
+            boton.BackColor = Estilo.FormActivo;
             switch (boton.Name.ToString())
             {
-                case "Btn_ABMClientes":
-                    AbrirFormulario<Frm_ABMPasajeros>();
-                    break;
-                case "Btn_ABMReservas":
-                    AbrirFormulario<Frm_ABMReservas>();
-                    break;
-                case "Btn_ABM_Vuelo":
-                    AbrirFormulario<Frm_ABMVuelo>();
-                    break;
-                case "Btn_ABM_Viaje":
-                    AbrirFormulario<Frm_ABMViajes>();
-                    break;
-                case "Btn_ABM_Tramo":
-                    AbrirFormulario<Frm_ABMTramos>();
-                    break;
                 case "Btn_Configuracion":
                     AbrirFormulario<Frm_Configuracion>();
-                    break;
-                case "Btn_ABMAviones":
-                    AbrirFormulario<Frm_ABMAviones>();
-                    break;
-                case "btn_ABM_Aeropuerto":
-                    AbrirFormulario<Frm_ABM_Aeropuerto>();
                     break;
                 case "Btn_ABM":
                     if (!menuStrip1.Visible)
@@ -177,7 +104,6 @@ namespace TrabajoPrácticoPAV
             // Determinamos cuales formularios están abiertos y los agregamos a una lista con la que podamos trabajar temporalmente
             foreach (Form form in Application.OpenForms)
                 openForms.Add(form);
-
             foreach (Form form in openForms)
             {
                 if (form.Name != "Frm_Principal")
@@ -185,21 +111,6 @@ namespace TrabajoPrácticoPAV
             }
 
         }
-
-        private void Btn_Menu_Click(object sender, EventArgs e)
-        {
-            if (PanelMenu.Width >= 150)
-            {
-                PanelMenu.Width = 42;
-                Btn_Menu.Text = "→";
-            }
-            else
-            {
-                PanelMenu.Width = 150;
-                Btn_Menu.Text = "←";
-            }
-        }
-
 
         #endregion
 
@@ -211,6 +122,7 @@ namespace TrabajoPrácticoPAV
         private void AbrirFormulario<MiForm>() where MiForm : Form, new()
         {
             menuStrip1.Visible = false; //<- Previene que el menu strip quede abierto al abrir un formulario 
+            //RestaurarColorBoton(Btn_ABM);
             Form formulario;
             formulario = PanelFormularios.Controls.OfType<MiForm>().FirstOrDefault();
 
@@ -221,17 +133,14 @@ namespace TrabajoPrácticoPAV
                 formulario.FormBorderStyle = FormBorderStyle.None;
                 formulario.Dock = DockStyle.Fill;
                 PanelFormularios.Controls.Add(formulario);
-                PanelFormularios.Tag = formulario;
                 formulario.Show();
                 formulario.BringToFront();
                 formulario.FormClosed += new FormClosedEventHandler(FormCerrado);
-                Btn_Menu.BringToFront();
 
             }
             else
             {
                 formulario.BringToFront();
-                Btn_Menu.BringToFront();
             }
 
         }
@@ -239,76 +148,33 @@ namespace TrabajoPrácticoPAV
         //Regresa a su color original el botón de un Form cerrado
         private void FormCerrado(object sender, FormClosedEventArgs e)
         {
-            if (Application.OpenForms["Frm_ABMClientes"] == null)
-                RestaurarColorBoton(Btn_ABM);
-            if (Application.OpenForms["Frm_ABMViajes"] == null)
-                RestaurarColorBoton(Btn_Procesos);
-            if (Application.OpenForms["Frm_ABMVuelo"] == null)
-                RestaurarColorBoton(Btn_Listado);
-            if (Application.OpenForms["Frm_ABMTramos"] == null)
-                RestaurarColorBoton(Btn_Estadistica);
+            RestaurarBotones();
 
             if (Application.OpenForms["Frm_Configuracion"] == null)
             {
-                DarColor();
-                RestaurarColorBoton(Btn_Configuracion);
-            }
-        }
-
-
-        #endregion
-
-        #region Cosas rotas 
-        #endregion
-
-        #region Movimiento automatico
-        int DebeContraer = 0;
-
-        private void Timer_Expandir_Tick(object sender, EventArgs e)
-        {
-            if (PanelMenu.Width > 192)
-                Timer_Expandir.Stop();
-            else
-                PanelMenu.Width += 10;
-        }
-
-        private void Timer_Contraer_Tick(object sender, EventArgs e)
-        {
-            if (DebeContraer >= 5)
-            {
-                if (PanelMenu.Width <= 42)
-                    Timer_Contraer.Stop();
-                else
+                if (Estilo.EstiloDebeActualizar)
                 {
-                    Timer_Expandir.Stop();
-                    PanelMenu.Width -= 10;
+                    Estilo.FormatearEstilo(this.Controls);
+                    Estilo.EstiloDebeActualizar = false;
                 }
             }
-            else
-                DebeContraer += 1;
         }
 
-        private void PanelMenu_MouseEnter(object sender, EventArgs e)
+        private void RestaurarBotones()
         {
-            if (Estilo.MenuLateral == 0)
+            foreach (Button_Aerolinea boton in PanelMenu.Controls)
             {
-                DebeContraer = 0;
-                Timer_Contraer.Stop();
-                Timer_Expandir.Start();
+                boton.BackColor = Estilo.ColorBoton;
             }
         }
-
-        private void MouseSalioDeMenu(object sender, EventArgs e)
-        {
-            if (Estilo.MenuLateral == 0)
-                Timer_Contraer.Start();
-        }
         #endregion
-
 
 
         // Eventos de los items del menuStrip
         // El que tenga tiempo vea si lo puede dejar un poco mejor
+        
+            
+        #region MenuStrip
         private void aeropuertosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AbrirFormulario<Frm_ABM_Aeropuerto>();
@@ -388,5 +254,6 @@ namespace TrabajoPrácticoPAV
         {
             AbrirFormulario<Frm_ABMTripulacion>();
         }
+        #endregion
     }
 }

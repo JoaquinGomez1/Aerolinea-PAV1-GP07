@@ -29,7 +29,6 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -38,17 +37,10 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
             this.cmb_ciudad = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
             this.txt_codigo = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
             this.txt_nombre = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
+            this.BarraSuperior = new System.Windows.Forms.Panel();
+            this.Titulo = new System.Windows.Forms.Label();
+            this.BarraSuperior.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(12, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(162, 21);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Eliminar aeropuerto";
             // 
             // label2
             // 
@@ -117,7 +109,7 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
             this.cmb_ciudad.Pp_CampoAceptaNull = false;
             this.cmb_ciudad.Pp_EsPk = false;
             this.cmb_ciudad.Pp_MensajeError = "No ha ingresado la ciudad del aeropuerto.";
-            this.cmb_ciudad.Pp_NombreCampo = "idCiudad";
+            this.cmb_ciudad.Pp_NombreCampo = "nombreCiudad";
             this.cmb_ciudad.Pp_NombreCampoInsert = "idCiudad";
             this.cmb_ciudad.Pp_NombreTabla = "Ciudad";
             this.cmb_ciudad.Pp_PkTabla = "idCiudad";
@@ -148,12 +140,37 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
             this.txt_nombre.Size = new System.Drawing.Size(133, 20);
             this.txt_nombre.TabIndex = 4;
             // 
+            // BarraSuperior
+            // 
+            this.BarraSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.BarraSuperior.Controls.Add(this.Titulo);
+            this.BarraSuperior.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BarraSuperior.Location = new System.Drawing.Point(0, 0);
+            this.BarraSuperior.Margin = new System.Windows.Forms.Padding(2);
+            this.BarraSuperior.Name = "BarraSuperior";
+            this.BarraSuperior.Size = new System.Drawing.Size(314, 32);
+            this.BarraSuperior.TabIndex = 59;
+            this.BarraSuperior.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BarraSuperior_MouseMove);
+            // 
+            // Titulo
+            // 
+            this.Titulo.AutoSize = true;
+            this.Titulo.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Titulo.ForeColor = System.Drawing.Color.White;
+            this.Titulo.Location = new System.Drawing.Point(9, 6);
+            this.Titulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Titulo.Name = "Titulo";
+            this.Titulo.Size = new System.Drawing.Size(207, 22);
+            this.Titulo.TabIndex = 4;
+            this.Titulo.Text = "ELIMINAR AEROPUERTO";
+            // 
             // Frm_Borrar_Aeropuerto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(227)))), ((int)(((byte)(187)))));
             this.ClientSize = new System.Drawing.Size(314, 232);
+            this.Controls.Add(this.BarraSuperior);
             this.Controls.Add(this.txt_nombre);
             this.Controls.Add(this.txt_codigo);
             this.Controls.Add(this.cmb_ciudad);
@@ -162,20 +179,19 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_Borrar_Aeropuerto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_Borrar_Aeropuerto";
             this.Load += new System.EventHandler(this.Frm_Borrar_Aeropuerto_Load);
+            this.BarraSuperior.ResumeLayout(false);
+            this.BarraSuperior.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -184,5 +200,7 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
         private Clase.ComboBox_Aerolinea cmb_ciudad;
         private Clase.TextBox_Aerolinea txt_codigo;
         private Clase.TextBox_Aerolinea txt_nombre;
+        private System.Windows.Forms.Panel BarraSuperior;
+        private System.Windows.Forms.Label Titulo;
     }
 }
