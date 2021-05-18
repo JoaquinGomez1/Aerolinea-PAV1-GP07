@@ -23,15 +23,15 @@ namespace TrabajoPrácticoPAV.Formularios.Pasajeros
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWind, int wMsg, int wParam, int lParam);
 
-        Tratamientos_Especiales _TE = new Tratamientos_Especiales();
-        Conexion_DB _BD = new Conexion_DB();
-        NE_Clientes _NE = new NE_Clientes();
-
         private void BarraSuperior_MouseMove(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+        Tratamientos_Especiales _TE = new Tratamientos_Especiales();
+        Conexion_DB _BD = new Conexion_DB();
+        NE_Clientes _NE = new NE_Clientes();
 
         public Frm_AltaPasajero()
         {

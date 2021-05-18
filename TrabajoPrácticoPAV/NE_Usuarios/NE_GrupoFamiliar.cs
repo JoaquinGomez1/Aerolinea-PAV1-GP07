@@ -81,20 +81,20 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
                 {
                     TextBox_Aerolinea txt = (TextBox_Aerolinea)item;
                     if(txt.Text != "")
-                        condicion = $" p.{txt.Pp_NombreCampo} LIKE {_TE.FormatearDato(txt.Text)}";
+                        condicion = $" p.{txt.Pp_NombreCampo} LIKE {_TE.FormatearDato(txt.Text, true)}";
 
                 }
                 if (item.GetType().ToString() == "TrabajoPrácticoPAV.Clase.MaskedTextBox_Aerolinea")
                 {
                     MaskedTextBox_Aerolinea txt = (MaskedTextBox_Aerolinea)item;
                     if (txt.Text != "")
-                        condicion = $" p.{txt.Pp_NombreCampo} LIKE {_TE.FormatearDato(txt.Text)}";
+                        condicion = $" p.{txt.Pp_NombreCampo} LIKE {_TE.FormatearDato(txt.Text, true)}";
                 }
                 if (item.GetType().ToString() == "TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea")
                 {
                     ComboBox_Aerolinea cmb = (ComboBox_Aerolinea)item;
                     if (cmb.SelectedIndex != -1)
-                        condicion = $" p.{cmb.Pp_NombreCampoInsert} = {_TE.FormatearDato(cmb.SelectedValue.ToString())}";
+                        condicion = $" p.{cmb.Pp_NombreCampoInsert} = {_TE.FormatearDato(cmb.SelectedValue.ToString(),false)}";
                 }
                 if (item.GetType().ToString() == "System.Windows.Forms.CheckBox")
                 {
