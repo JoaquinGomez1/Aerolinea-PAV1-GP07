@@ -50,10 +50,6 @@ namespace TrabajoPrácticoPAV.Formularios
         private void Frm_ABMAviones_Load(object sender, EventArgs e)
         {
             cmb_Modelo.CargarCombo();
-
-            //El formato se pasa de la siguiente forma ("NombreDelCampoEnLaBD, NombreAMostrarEnLaGrid, Ancho; ...")
-            //grid_aviones.Pp_FormatoGrid = "numeroPorModelo, Numero, 80; nombre, Nombre, 250;idModelo,Modelo, 80;";
-            //grid_aviones.Formatear();
             btn_eliminar.Enabled = false;
         }
 
@@ -97,22 +93,6 @@ namespace TrabajoPrácticoPAV.Formularios
             }
 
         }
-        //private void CargarGrilla(string sql)
-        //{
-
-        //    DataTable tabla = new DataTable();
-        //    tabla = _BD.EjecutarSelect(sql);
-
-        //    grid_aviones.Rows.Clear();
-        //    for (int i = 0; i < tabla.Rows.Count; i++)
-        //    {
-        //        grid_aviones.Rows.Add();
-        //        grid_aviones.Rows[i].Cells[0].Value = tabla.Rows[i]["nombre"].ToString();
-        //        grid_aviones.Rows[i].Cells[1].Value = tabla.Rows[i]["numeroPorModelo"].ToString();
-        //        grid_aviones.Rows[i].Cells[2].Value = tabla.Rows[i]["idCiudad"].ToString();
-        //    }
-        //}
-
         private void btn_agregar_Click(object sender, EventArgs e)
         {
             Frm_AltaAviones alta = new Frm_AltaAviones();

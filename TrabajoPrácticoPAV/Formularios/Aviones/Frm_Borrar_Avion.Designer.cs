@@ -54,9 +54,10 @@ namespace TrabajoPrácticoPAV.Formularios.Aviones
             // 
             this.label2.AutoSize = true;
             this.label2.Enabled = false;
-            this.label2.Location = new System.Drawing.Point(58, 90);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label2.Location = new System.Drawing.Point(37, 85);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.Size = new System.Drawing.Size(65, 20);
             this.label2.TabIndex = 0;
             this.label2.Text = "Numero";
             // 
@@ -64,9 +65,10 @@ namespace TrabajoPrácticoPAV.Formularios.Aviones
             // 
             this.label3.AutoSize = true;
             this.label3.Enabled = false;
-            this.label3.Location = new System.Drawing.Point(60, 139);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label3.Location = new System.Drawing.Point(39, 134);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 13);
+            this.label3.Size = new System.Drawing.Size(61, 20);
             this.label3.TabIndex = 0;
             this.label3.Text = "Modelo";
             // 
@@ -88,24 +90,28 @@ namespace TrabajoPrácticoPAV.Formularios.Aviones
             // 
             // button_Aerolinea2
             // 
+            this.button_Aerolinea2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
+            this.button_Aerolinea2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button_Aerolinea2.Location = new System.Drawing.Point(185, 221);
             this.button_Aerolinea2.Name = "button_Aerolinea2";
             this.button_Aerolinea2.Pp_Presionado = false;
-            this.button_Aerolinea2.Size = new System.Drawing.Size(75, 23);
+            this.button_Aerolinea2.Size = new System.Drawing.Size(82, 33);
             this.button_Aerolinea2.TabIndex = 2;
             this.button_Aerolinea2.Text = "Cancelar";
-            this.button_Aerolinea2.UseVisualStyleBackColor = true;
+            this.button_Aerolinea2.UseVisualStyleBackColor = false;
             this.button_Aerolinea2.Click += new System.EventHandler(this.button_Aerolinea2_Click);
             // 
             // btn_eliminar
             // 
+            this.btn_eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
+            this.btn_eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn_eliminar.Location = new System.Drawing.Point(83, 221);
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.Pp_Presionado = false;
-            this.btn_eliminar.Size = new System.Drawing.Size(75, 23);
+            this.btn_eliminar.Size = new System.Drawing.Size(82, 33);
             this.btn_eliminar.TabIndex = 2;
             this.btn_eliminar.Text = "Eliminar";
-            this.btn_eliminar.UseVisualStyleBackColor = true;
+            this.btn_eliminar.UseVisualStyleBackColor = false;
             this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 
             // txt_numero
@@ -136,9 +142,10 @@ namespace TrabajoPrácticoPAV.Formularios.Aviones
             // 
             this.label4.AutoSize = true;
             this.label4.Enabled = false;
-            this.label4.Location = new System.Drawing.Point(60, 180);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label4.Location = new System.Drawing.Point(39, 175);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 13);
+            this.label4.Size = new System.Drawing.Size(82, 20);
             this.label4.TabIndex = 0;
             this.label4.Text = "ID Modelo";
             // 
@@ -157,7 +164,9 @@ namespace TrabajoPrácticoPAV.Formularios.Aviones
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_Borrar_Avion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_Borrar_Avion";
             this.Load += new System.EventHandler(this.Frm_Borrar_Avion_Load_1);
             this.ResumeLayout(false);

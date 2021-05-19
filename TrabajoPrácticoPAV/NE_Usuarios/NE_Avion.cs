@@ -52,11 +52,14 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             return _BD.EjecutarSelect(sql);
         }
 
-        public DataTable Remover_avion(string numero , object idModelo)
+        public void Remover_avion(string numero , object idModelo)
         {
             string sql = @"delete from Avion where numeroPorModelo = '" + numero + "' and  idModelo= " + idModelo;
-            return _BD.EjecutarSelect(sql);
+            _BD.EjecutarSelect(sql);
+             
+            //_BD.Borrar(sql, false);
         }
+
 
        //public DataTable Editar_avion (string numero , object idModelo)
        // {
