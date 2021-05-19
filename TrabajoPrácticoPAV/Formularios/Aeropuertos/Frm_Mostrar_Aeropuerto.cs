@@ -30,6 +30,8 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
         public Frm_Mostrar_Aeropuerto()
         {
             InitializeComponent();
+            this.BackColor = Estilo.ColorFondoForms;
+            Estilo.FormatearEstilo(this.Controls);
         }
         private void btn_aceptar_Click(object sender, EventArgs e)
         {

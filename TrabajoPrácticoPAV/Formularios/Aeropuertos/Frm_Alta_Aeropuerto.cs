@@ -29,6 +29,8 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
         public Frm_Alta_Aeropuerto()
         {
             InitializeComponent();
+            this.BackColor = Estilo.ColorFondoForms;
+            Estilo.FormatearEstilo(this.Controls);
         }
 
 

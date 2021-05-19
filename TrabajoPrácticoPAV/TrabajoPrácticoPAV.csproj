@@ -140,6 +140,12 @@
     <Compile Include="Formularios\Aviones\Frm_AltaAviones.Designer.cs">
       <DependentUpon>Frm_AltaAviones.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Aviones\Frm_Borrar_Avion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Aviones\Frm_Borrar_Avion.Designer.cs">
+      <DependentUpon>Frm_Borrar_Avion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Ciudad\Frm_Ciudad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -480,6 +486,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Aviones\Frm_AltaAviones.resx">
       <DependentUpon>Frm_AltaAviones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Aviones\Frm_Borrar_Avion.resx">
+      <DependentUpon>Frm_Borrar_Avion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Ciudad\Frm_Ciudad.resx">
       <DependentUpon>Frm_Ciudad.cs</DependentUpon>

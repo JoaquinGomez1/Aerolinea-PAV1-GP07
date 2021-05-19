@@ -32,6 +32,8 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
         public Frm_Modificación_Aeropuerto()
         {
             InitializeComponent();
+            this.BackColor = Estilo.ColorFondoForms;
+            Estilo.FormatearEstilo(this.Controls);
         }
 
 

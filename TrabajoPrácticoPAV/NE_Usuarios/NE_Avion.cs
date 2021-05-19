@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using TrabajoPrácticoPAV.Backend;
 
-namespace TrabajoPrácticoPAV.NE_Aviones
+namespace TrabajoPrácticoPAV.NE_Usuarios
 {
     class NE_Avion
     {
