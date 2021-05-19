@@ -39,7 +39,7 @@ namespace TrabajoPrácticoPAV.Formularios.Asientos
 
         private void btn_buscar_Click(object sender, EventArgs e)
         {
-            //string join = $" JOIN Modelo ON  modelo.idModelo = Asientos.idModelo ";
+            string join = $" JOIN Modelo ON  modelo.idModelo = Asientos.idModelo ";
 
             if (chk_asientos.Checked == false && cmb_Modelo.SelectedIndex == -1 && cmb_NumeroAvion.SelectedIndex == -1)
             {
@@ -47,7 +47,9 @@ namespace TrabajoPrácticoPAV.Formularios.Asientos
             }
             else
             {
-                NEasiento.CargarGrilla_asientos(grilla_ABMAsiento, "", this.Controls);
+                
+                NEasiento.CargarGrilla_asientos(grilla_ABMAsiento, join, this.Controls);
+
             }
         }
         

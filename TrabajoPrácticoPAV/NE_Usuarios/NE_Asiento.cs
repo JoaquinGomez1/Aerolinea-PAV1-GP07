@@ -54,7 +54,6 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
         {
 
             string sql = tratamiento.ConstructorSelect(controls, join, "Asientos");
-            MessageBox.Show(sql);
             DataTable tabla = _BD.EjecutarSelect(sql);
 
             grilla_ABMAsiento.Rows.Clear();
