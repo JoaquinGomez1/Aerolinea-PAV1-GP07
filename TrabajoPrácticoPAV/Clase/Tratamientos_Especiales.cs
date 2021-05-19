@@ -46,7 +46,7 @@ namespace TrabajoPrácticoPAV.Clase
                     TextBox_Aerolinea txt = (TextBox_Aerolinea)control;
 
                     //Crea la condición que se va a asignar
-                    string condicion = $"{txt.Pp_NombreTabla}.{txt.Pp_NombreCampo} LIKE {FormatearDato(txt.Text)}";
+                    string condicion = $"{txt.Pp_NombreTabla}.{txt.Pp_NombreCampo} LIKE {FormatearDato(txt.Text, true)}";
 
                     if (txt.Text != "")
                     {
@@ -65,7 +65,7 @@ namespace TrabajoPrácticoPAV.Clase
                     if (txt.Text != "")
                     {
                         //Crea la condición que se va a asignar
-                        string condicion = $"{txt.Pp_NombreTabla}.{txt.Pp_NombreCampo}={FormatearDato(txt.Text)}";
+                        string condicion = $"{txt.Pp_NombreTabla}.{txt.Pp_NombreCampo}={FormatearDato(txt.Text, true)}";
 
 
                         //Asigna la primer condición
@@ -91,10 +91,10 @@ namespace TrabajoPrácticoPAV.Clase
                         string condicion = "";
                         if (cmb.Pp_NombreTabla != nombreTabla)
                             condicion = $"{nombreTabla}.{cmb.Pp_NombreCampoInsert} = " +
-                                $"{FormatearDato(cmb.SelectedValue.ToString())}";
+                                $"{FormatearDato(cmb.SelectedValue.ToString(), false)}";
                         else
                             condicion = $"{cmb.Pp_NombreTabla}.{cmb.Pp_PkTabla}=" +
-                                $"{FormatearDato(cmb.SelectedValue.ToString())}";
+                                $"{FormatearDato(cmb.SelectedValue.ToString(), false)}";
 
                         if (condiciones == "")
                             condiciones += " WHERE " + condicion;
@@ -113,7 +113,7 @@ namespace TrabajoPrácticoPAV.Clase
             return sql;
         }
 
-        public object FormatearDato(string dato)
+        public object FormatearDato(string dato, bool llevaLike)
         {
             try
             {
@@ -122,8 +122,10 @@ namespace TrabajoPrácticoPAV.Clase
             }
             catch (Exception)
             {
-                return $"'%{dato}%'";
-                throw;
+                if (llevaLike)
+                    return $"'%{dato}%'";
+                else
+                    return $"'{dato}'";
             }
         }
 
