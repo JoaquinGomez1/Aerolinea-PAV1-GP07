@@ -85,18 +85,19 @@ namespace TrabajoPrácticoPAV.Formularios.TipoDoc
             this.txt_nombre.Pp_NombreTabla = null;
             this.txt_nombre.Size = new System.Drawing.Size(143, 20);
             this.txt_nombre.TabIndex = 0;
+            this.txt_nombre.TextChanged += new System.EventHandler(this.txt_nombre_TextChanged);
             // 
             // Frm_AltaTipoDoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(302, 236);
             this.Controls.Add(this.btn_cancelar);
             this.Controls.Add(this.btn_agregar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_nombre);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_AltaTipoDoc";
             this.Text = "Frm_AltaTipoDoc";
             this.Load += new System.EventHandler(this.Frm_AltaTipoDoc_Load);
