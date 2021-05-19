@@ -18,7 +18,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tipo_Asientos
     {
         public string Id_Tipo { get; set; }
         Conexion_DB _BD = new Conexion_DB();
-        Tratamientos_Especiales _TE = new Tratamientos_Especiales();
+        NE_TipoAsiento TA = new NE_TipoAsiento();
 
         public Frm_ABMTipoAsientos()
         {
@@ -47,41 +47,16 @@ namespace TrabajoPrácticoPAV.Formularios.Tipo_Asientos
 
         private void btn_buscar_Click(object sender, EventArgs e)
         {
-            string sql = _TE.ConstructorSelect(this.Controls, "", "Tipo_Asiento");
-            CargarGrilla(sql, grid_TipoAsiento);
-        }
-        
-
-        private void CargarGrilla(string sql, DataGridView_Aerolinea grid)
-        {
-            DataTable tabla = _BD.EjecutarSelect(sql);
-            grid.Rows.Clear();
-            for (int i = 0; i < tabla.Rows.Count; i++)
-            {
-                grid.Rows.Add();
-                grid.Rows[i].Cells[0].Value = (tabla.Rows[i]["idTipo"].ToString());
-                grid.Rows[i].Cells[1].Value = (tabla.Rows[i]["nombre"].ToString());
-                grid.Rows[i].Cells[2].Value = tabla.Rows[i]["costo"].ToString();
-
-            }
-            if (tabla.Rows.Count == 0)
-            {
-                MessageBox.Show("No se encontraron clases para los asientos.");
-            }
-
-        }
-
-        private void grid_TipoAsiento_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            btn_eliminar.Enabled = true;
-            btn_modificar.Enabled = true;
-            Id_Tipo = grid_TipoAsiento.CurrentRow.Cells[0].Value.ToString();
+            TA.CargarGrilla(grid_TipoAsiento, "", this.Controls);
         }
 
         private void btn_registrar_Click(object sender, EventArgs e)
         {
             Frm_AltaTipoAsiento altaTA = new Frm_AltaTipoAsiento();
             altaTA.ShowDialog();
+            TA.CargarGrilla(grid_TipoAsiento, "", this.Controls);
+            btn_eliminar.Enabled = false;
+            btn_modificar.Enabled = false;
         }
 
         private void btn_modificar_Click(object sender, EventArgs e)
@@ -91,8 +66,9 @@ namespace TrabajoPrácticoPAV.Formularios.Tipo_Asientos
             modificarTA.Pp_costo = grid_TipoAsiento.CurrentRow.Cells[2].Value;
             modificarTA.Id_Tipo = Id_Tipo;
             modificarTA.ShowDialog();
-            //MessageBox.Show(modificarTA.Pp_nombre + modificarTA.Pp_costo);
-            
+            TA.CargarGrilla(grid_TipoAsiento, "", this.Controls);
+            btn_eliminar.Enabled = false;
+            btn_modificar.Enabled = false;
         }
 
         private void btn_eliminar_Click(object sender, EventArgs e)
@@ -102,6 +78,9 @@ namespace TrabajoPrácticoPAV.Formularios.Tipo_Asientos
             bajaTA.Id_Tipo = Id_Tipo;
             bajaTA.Pp_costo = grid_TipoAsiento.CurrentRow.Cells[2].Value;
             bajaTA.ShowDialog();
+            TA.CargarGrilla(grid_TipoAsiento, "", this.Controls);
+            btn_eliminar.Enabled = false;
+            btn_modificar.Enabled = false;
         }
 
         private void grid_TipoAsiento_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -111,6 +90,13 @@ namespace TrabajoPrácticoPAV.Formularios.Tipo_Asientos
             consultaTA.Id_Tipo = Id_Tipo;
             consultaTA.Pp_costo = grid_TipoAsiento.CurrentRow.Cells[2].Value;
             consultaTA.ShowDialog();
+        }
+
+        private void grid_TipoAsiento_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            btn_eliminar.Enabled = true;
+            btn_modificar.Enabled = true;
+            Id_Tipo = grid_TipoAsiento.CurrentRow.Cells[0].Value.ToString();
         }
     }
 

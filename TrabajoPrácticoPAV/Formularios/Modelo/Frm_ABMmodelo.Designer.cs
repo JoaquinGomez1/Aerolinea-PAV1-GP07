@@ -192,7 +192,7 @@
             // 
             // Nombre
             // 
-            this.Nombre.HeaderText = "nombre";
+            this.Nombre.HeaderText = "Nombre";
             this.Nombre.Name = "Nombre";
             this.Nombre.ReadOnly = true;
             this.Nombre.Width = 200;

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.Backend;
+using TrabajoPrácticoPAV.NE_Usuarios;
 
 namespace TrabajoPrácticoPAV.Formularios.Tipo_Asientos
 {
@@ -18,6 +19,8 @@ namespace TrabajoPrácticoPAV.Formularios.Tipo_Asientos
         public object Pp_costo { get; set; }
         public string Id_Tipo { get; set; }
         Conexion_DB _BD = new Conexion_DB();
+        NE_TipoAsiento TA = new NE_TipoAsiento();
+
         public Frm_BajaTipoAsientos()
         {
             InitializeComponent();
@@ -40,10 +43,11 @@ namespace TrabajoPrácticoPAV.Formularios.Tipo_Asientos
 
         private void btn_Eliminar_Click_1(object sender, EventArgs e)
         {
-            Tratamientos_Especiales _TE = new Tratamientos_Especiales();
-            string sql = _TE.CostructorUpdateDelete("Tipo_Asiento", panel1.Controls, false);
-            _BD.Borrar(sql, true);
-            this.Close();
+            if (MessageBox.Show("¿Esta seguro de Borrar?", "Importante", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                TA.Borrar(panel1.Controls);
+                this.Close();
+            }
         }
     }
 }

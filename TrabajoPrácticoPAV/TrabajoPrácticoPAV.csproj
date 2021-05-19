@@ -182,7 +182,6 @@
     <Compile Include="Formularios\Grupos familiares\Frm_ModificarGrupo.Designer.cs">
       <DependentUpon>Frm_ModificarGrupo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Modelo\DllImportAttribute.cs" />
     <Compile Include="Formularios\Modelo\Frm_ABMmodelo.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -40,7 +39,6 @@
             this.cmb_AeropDestino = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
             this.cmb_numAvion = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
             this.cmb_nomModelo = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
-            this.txt_duracionestimada = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
             this.label7 = new System.Windows.Forms.Label();
             this.txt_idVuelo = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
             this.label8 = new System.Windows.Forms.Label();
@@ -56,16 +54,6 @@
             this.label1.Size = new System.Drawing.Size(107, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "Borrar Vuelo";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.label2.Location = new System.Drawing.Point(36, 206);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 17);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Duracion Estimada";
             // 
             // label3
             // 
@@ -195,18 +183,6 @@
             this.cmb_nomModelo.Size = new System.Drawing.Size(121, 21);
             this.cmb_nomModelo.TabIndex = 7;
             // 
-            // txt_duracionestimada
-            // 
-            this.txt_duracionestimada.Enabled = false;
-            this.txt_duracionestimada.Location = new System.Drawing.Point(164, 206);
-            this.txt_duracionestimada.Name = "txt_duracionestimada";
-            this.txt_duracionestimada.Pp_EsPk = false;
-            this.txt_duracionestimada.Pp_MensajeError = "Ingrese una duracion estimada";
-            this.txt_duracionestimada.Pp_NombreCampo = "duracionEstimada";
-            this.txt_duracionestimada.Pp_NombreTabla = "Vuelo";
-            this.txt_duracionestimada.Size = new System.Drawing.Size(121, 20);
-            this.txt_duracionestimada.TabIndex = 6;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -265,12 +241,10 @@
             this.Controls.Add(this.cmb_AeropDestino);
             this.Controls.Add(this.cmb_numAvion);
             this.Controls.Add(this.cmb_nomModelo);
-            this.Controls.Add(this.txt_duracionestimada);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_BorrarVuelo";
@@ -285,12 +259,10 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private Clase.TextBox_Aerolinea txt_duracionestimada;
         private Clase.ComboBox_Aerolinea cmb_nomModelo;
         private Clase.ComboBox_Aerolinea cmb_numAvion;
         private Clase.ComboBox_Aerolinea cmb_AeropDestino;
