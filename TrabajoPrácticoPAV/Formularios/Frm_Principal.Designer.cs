@@ -31,8 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Principal));
             this.BarraSuperior = new System.Windows.Forms.Panel();
             this.Titulo = new System.Windows.Forms.Label();
-            this.Btn_Minimizar = new System.Windows.Forms.PictureBox();
-            this.Btn_Cerrar = new System.Windows.Forms.PictureBox();
             this.PanelMenu = new System.Windows.Forms.Panel();
             this.PanelFormularios = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -64,13 +62,15 @@
             this.Btn_Configuracion = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.Btn_Listado = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.Btn_Estadistica = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
+            this.Btn_Minimizar = new System.Windows.Forms.PictureBox();
+            this.Btn_Cerrar = new System.Windows.Forms.PictureBox();
             this.BarraSuperior.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Btn_Minimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Btn_Cerrar)).BeginInit();
             this.PanelMenu.SuspendLayout();
             this.PanelFormularios.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_Minimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_Cerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // BarraSuperior
@@ -97,34 +97,6 @@
             this.Titulo.Size = new System.Drawing.Size(208, 22);
             this.Titulo.TabIndex = 4;
             this.Titulo.Text = "AEROLÍNEA AEROLIMPO";
-            // 
-            // Btn_Minimizar
-            // 
-            this.Btn_Minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Btn_Minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_Minimizar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Minimizar.Image")));
-            this.Btn_Minimizar.Location = new System.Drawing.Point(848, 4);
-            this.Btn_Minimizar.Margin = new System.Windows.Forms.Padding(2);
-            this.Btn_Minimizar.Name = "Btn_Minimizar";
-            this.Btn_Minimizar.Size = new System.Drawing.Size(22, 24);
-            this.Btn_Minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Btn_Minimizar.TabIndex = 3;
-            this.Btn_Minimizar.TabStop = false;
-            this.Btn_Minimizar.Click += new System.EventHandler(this.Btn_Minimizar_Click);
-            // 
-            // Btn_Cerrar
-            // 
-            this.Btn_Cerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Btn_Cerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_Cerrar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Cerrar.Image")));
-            this.Btn_Cerrar.Location = new System.Drawing.Point(874, 4);
-            this.Btn_Cerrar.Margin = new System.Windows.Forms.Padding(2);
-            this.Btn_Cerrar.Name = "Btn_Cerrar";
-            this.Btn_Cerrar.Size = new System.Drawing.Size(22, 24);
-            this.Btn_Cerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Btn_Cerrar.TabIndex = 0;
-            this.Btn_Cerrar.TabStop = false;
-            this.Btn_Cerrar.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // PanelMenu
             // 
@@ -370,7 +342,7 @@
             this.Btn_ABM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_ABM.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.Btn_ABM.ForeColor = System.Drawing.Color.White;
-            this.Btn_ABM.Image = global::TrabajoPrácticoPAV.Properties.Resources.Cliente_Icono;
+            this.Btn_ABM.Image = global::TrabajoPrácticoPAV.Properties.Resources._22041;
             this.Btn_ABM.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Btn_ABM.Location = new System.Drawing.Point(2, 2);
             this.Btn_ABM.Margin = new System.Windows.Forms.Padding(2);
@@ -390,7 +362,7 @@
             this.Btn_Procesos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Procesos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.Btn_Procesos.ForeColor = System.Drawing.Color.White;
-            this.Btn_Procesos.Image = global::TrabajoPrácticoPAV.Properties.Resources.Mundo_Icono;
+            this.Btn_Procesos.Image = global::TrabajoPrácticoPAV.Properties.Resources.process;
             this.Btn_Procesos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Btn_Procesos.Location = new System.Drawing.Point(2, 49);
             this.Btn_Procesos.Margin = new System.Windows.Forms.Padding(2);
@@ -410,7 +382,7 @@
             this.Btn_Configuracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Configuracion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.Btn_Configuracion.ForeColor = System.Drawing.Color.White;
-            this.Btn_Configuracion.Image = global::TrabajoPrácticoPAV.Properties.Resources.gear_wheel_304395_960_720__1___1_;
+            this.Btn_Configuracion.Image = global::TrabajoPrácticoPAV.Properties.Resources.settings___v1;
             this.Btn_Configuracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Btn_Configuracion.Location = new System.Drawing.Point(2, 385);
             this.Btn_Configuracion.Margin = new System.Windows.Forms.Padding(2);
@@ -430,7 +402,7 @@
             this.Btn_Listado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Listado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.Btn_Listado.ForeColor = System.Drawing.Color.White;
-            this.Btn_Listado.Image = global::TrabajoPrácticoPAV.Properties.Resources.Vuelo_Icono;
+            this.Btn_Listado.Image = global::TrabajoPrácticoPAV.Properties.Resources._8b1a89d3f271913146d4cd63f3920464_icono_de_trazo_de_lista_de_verificaci_oacute_n_m_eacute_dica_by_vexels__1_;
             this.Btn_Listado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Btn_Listado.Location = new System.Drawing.Point(2, 97);
             this.Btn_Listado.Margin = new System.Windows.Forms.Padding(2);
@@ -450,7 +422,7 @@
             this.Btn_Estadistica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Estadistica.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.Btn_Estadistica.ForeColor = System.Drawing.Color.White;
-            this.Btn_Estadistica.Image = global::TrabajoPrácticoPAV.Properties.Resources.Ubicacion_Icono;
+            this.Btn_Estadistica.Image = global::TrabajoPrácticoPAV.Properties.Resources._399151;
             this.Btn_Estadistica.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Btn_Estadistica.Location = new System.Drawing.Point(2, 145);
             this.Btn_Estadistica.Margin = new System.Windows.Forms.Padding(2);
@@ -458,9 +430,37 @@
             this.Btn_Estadistica.Pp_Presionado = false;
             this.Btn_Estadistica.Size = new System.Drawing.Size(146, 41);
             this.Btn_Estadistica.TabIndex = 6;
-            this.Btn_Estadistica.Text = "Estadísticas";
+            this.Btn_Estadistica.Text = "    Estadísticas";
             this.Btn_Estadistica.UseVisualStyleBackColor = false;
             this.Btn_Estadistica.Click += new System.EventHandler(this.MouseClickButton);
+            // 
+            // Btn_Minimizar
+            // 
+            this.Btn_Minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Btn_Minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_Minimizar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Minimizar.Image")));
+            this.Btn_Minimizar.Location = new System.Drawing.Point(848, 4);
+            this.Btn_Minimizar.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_Minimizar.Name = "Btn_Minimizar";
+            this.Btn_Minimizar.Size = new System.Drawing.Size(22, 24);
+            this.Btn_Minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Btn_Minimizar.TabIndex = 3;
+            this.Btn_Minimizar.TabStop = false;
+            this.Btn_Minimizar.Click += new System.EventHandler(this.Btn_Minimizar_Click);
+            // 
+            // Btn_Cerrar
+            // 
+            this.Btn_Cerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Btn_Cerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_Cerrar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Cerrar.Image")));
+            this.Btn_Cerrar.Location = new System.Drawing.Point(874, 4);
+            this.Btn_Cerrar.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_Cerrar.Name = "Btn_Cerrar";
+            this.Btn_Cerrar.Size = new System.Drawing.Size(22, 24);
+            this.Btn_Cerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Btn_Cerrar.TabIndex = 0;
+            this.Btn_Cerrar.TabStop = false;
+            this.Btn_Cerrar.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Frm_Principal
             // 
@@ -480,14 +480,14 @@
             this.Load += new System.EventHandler(this.Frm_Principal_Load);
             this.BarraSuperior.ResumeLayout(false);
             this.BarraSuperior.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Btn_Minimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Btn_Cerrar)).EndInit();
             this.PanelMenu.ResumeLayout(false);
             this.PanelFormularios.ResumeLayout(false);
             this.PanelFormularios.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_Minimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_Cerrar)).EndInit();
             this.ResumeLayout(false);
 
         }
