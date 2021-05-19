@@ -10,12 +10,20 @@ using System.Windows.Forms;
 using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.Clase.Modelos;
 using TrabajoPrácticoPAV.NE_Usuarios;
+using static TrabajoPrácticoPAV.Clase.Tratamientos_Especiales;
+using System.Runtime.InteropServices;
+using TrabajoPrácticoPAV.Formularios.Viajes;
+using static TrabajoPrácticoPAV.Clase.Modelos.Viaje;
 
 
 namespace TrabajoPrácticoPAV.Formularios.Viajes
 {
+
     public partial class Frm_ModificarViaje : Form
     {
+        [DllImport("user32.DLL", EntryPoint = "CargarTodos")]
+        private extern static void CargarTodos();
+        private static readonly DataGridView datagrid_viajes = new DataGridView();
         private readonly NE_Viajes NE_Viajes = new NE_Viajes();
         private Viaje ViajeSeleccionado { get; set; }
         private readonly ManejoDeTiempos _Tiempo = new ManejoDeTiempos();
@@ -39,6 +47,7 @@ namespace TrabajoPrácticoPAV.Formularios.Viajes
             mtb_horario_salida.Text = miViaje.HorarioSalida;
             mtb_horario_presencia.Text = miViaje.HorarioPresencia;
             lbl_duracionEstimada.Text = _Tiempo.FormatearIntMilitarAString(miViaje.DuracionEstimada);
+
 
         }
 

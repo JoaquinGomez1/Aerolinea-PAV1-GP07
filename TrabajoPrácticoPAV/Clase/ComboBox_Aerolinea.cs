@@ -22,7 +22,7 @@ namespace TrabajoPrácticoPAV.Clase
 
         public void CargarCombo()
         {
-            string sql = "SELECT " + Pp_PkTabla + ", " + Pp_NombreCampo + " FROM " + Pp_NombreTabla;
+            string sql = "SELECT " + Pp_PkTabla + ", " + Pp_NombreCampo + " FROM " + Pp_NombreTabla + " ORDER BY " + Pp_NombreTabla + "." + Pp_NombreCampo + " ASC ";
             this.DisplayMember = Pp_NombreCampo;
             this.ValueMember = Pp_PkTabla;
             this.DataSource = _BD.EjecutarSelect(sql);

@@ -12,7 +12,8 @@ namespace TrabajoPrácticoPAV.Formularios.Ciudad
     {
         private readonly NE_Ciudad _NE = new NE_Ciudad();
         private readonly Tratamientos_Especiales tratamientos = new Tratamientos_Especiales();
-        private int idCiudadAModificar { get; set; } 
+        private int idCiudadAModificar { get; set; }
+        private CiudadObj CiudadSeleccionada { get; set; }
 
         public Frm_Ciudad()
         {
@@ -48,13 +49,17 @@ namespace TrabajoPrácticoPAV.Formularios.Ciudad
 
                 grid_ciudades.Rows[i].Cells[0].Value = tabla.Rows[i]["idCiudad"].ToString();
                 grid_ciudades.Rows[i].Cells[1].Value = tabla.Rows[i]["nombreCiudad"].ToString();
-                grid_ciudades.Rows[i].Cells[2].Value = tabla.Rows[i]["nombreProvincia"].ToString();
-                grid_ciudades.Rows[i].Cells[5].Value = tabla.Rows[i]["idProvincia"].ToString();
+                grid_ciudades.Rows[i].Cells[2].Value = tabla.Rows[i]["nombrePais"].ToString();
+                grid_ciudades.Rows[i].Cells[3].Value = tabla.Rows[i]["nombreProvincia"].ToString();
+
+                grid_ciudades.Rows[i].Cells[4].Value = tabla.Rows[i]["idProvincia"].ToString();
+                grid_ciudades.Rows[i].Cells[5].Value = tabla.Rows[i]["idPais"].ToString();
             }
         }
 
         private void Frm_Ciudad_Load_1(object sender, EventArgs e)
         {
+            comboBox_pais_register.CargarCombo();
             comboBox_Aerolinea1.CargarCombo();
             DataTable TableCiudades = _NE.GetTodosLasCiudades();
             CargarDataGrid(TableCiudades);
@@ -68,12 +73,49 @@ namespace TrabajoPrácticoPAV.Formularios.Ciudad
                 CiudadObj ciudad = new CiudadObj()
                 {
                     Nombre = txt_nombre_register.Text,
+                    IdPais = Int32.Parse(comboBox_pais_register.SelectedValue.ToString()),
                     IdProvincia = Int32.Parse(comboBox_Aerolinea1.SelectedValue.ToString()),
                 };
 
                 _NE.InsertCiudad(ciudad);
                 CargarDataGrid();
             }
+        }
+
+        
+        private void btn_refrescar_Click_1(object sender, EventArgs e)
+        {
+            CargarDataGrid();
+        }
+
+        private void btn_editar_Click(object sender, EventArgs e)
+        {
+           
+            comboBox_pais_modify.CargarCombo();
+            comboBox_Aerolinea2.CargarCombo();
+            panel_modify.Visible = true;
+            lbl_title_modify.Visible = true;
+
+            //string valorSeleccionado = grid_ciudades.CurrentRow.Cells[0].Value.ToString();
+            //CiudadObj ciudad = _NE.GetCiudadPorId(valorSeleccionado);
+            // CiudadSeleccionada = ciudad;
+
+            DataGridViewRow fila = grid_ciudades.CurrentRow;
+
+            CiudadObj ciudad = new CiudadObj()
+            {
+                Id = Int32.Parse(fila.Cells[0].Value.ToString()),
+                Nombre = fila.Cells[1].Value.ToString(),
+                IdProvincia = Int32.Parse(fila.Cells[4].Value.ToString()),
+                IdPais = Int32.Parse(fila.Cells[5].Value.ToString()),
+            };
+
+            idCiudadAModificar = ciudad.Id;
+            txt_nombre_modify.Text = ciudad.Nombre;
+            comboBox_pais_modify.SelectedValue = ciudad.IdPais;
+            comboBox_Aerolinea2.SelectedValue = ciudad.IdProvincia;
+
+
         }
 
         private void btn_modify_Click_1(object sender, EventArgs e)
@@ -86,54 +128,25 @@ namespace TrabajoPrácticoPAV.Formularios.Ciudad
                     Id = idCiudadAModificar,
                     Nombre = txt_nombre_modify.Text,
                     IdProvincia = Int32.Parse(comboBox_Aerolinea2.SelectedValue.ToString()),
+                    IdPais = Int32.Parse(comboBox_pais_modify.SelectedValue.ToString()),
+
                 };
                 _NE.ModificarCiudad(ciudad);
                 CargarDataGrid();
-            }
+        };
+
         }
 
-        private void btn_refrescar_Click_1(object sender, EventArgs e)
+
+        private void btn_eliminar_Click(object sender, EventArgs e)
         {
-            CargarDataGrid();
-        }
+            if (grid_ciudades.CurrentRow == null)
+                return;
 
-        private void grid_ciudades_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-            int indexCeldaModificar = 3;
-            int indexCeldaEliminar = 4;
-            int indexCeldaIdProvincia = 5;
+            string idCiudad = grid_ciudades.CurrentRow.Cells[0].Value.ToString();
+            _NE.EliminarCiudad(idCiudad);
 
-            bool rowVacia = grid_ciudades.CurrentRow.Cells[0].Value == null;
-            if (rowVacia) return;
-
-            if (grid_ciudades.CurrentCell.ColumnIndex == indexCeldaModificar)
-            {
-                comboBox_Aerolinea2.CargarCombo();
-                panel_modify.Visible = true;
-                lbl_title_modify.Visible = true;
-
-                DataGridViewRow fila = grid_ciudades.CurrentRow;
-
-                CiudadObj ciudad = new CiudadObj()
-                {
-                    Id = Int32.Parse(fila.Cells[0].Value.ToString()),
-                    Nombre = fila.Cells[1].Value.ToString(),
-                    IdProvincia = Int32.Parse(fila.Cells[indexCeldaIdProvincia].Value.ToString()),
-                };
-
-                idCiudadAModificar = ciudad.Id;
-
-                txt_nombre_modify.Text = ciudad.Nombre;
-                comboBox_Aerolinea2.SelectedValue = ciudad.IdProvincia;
-            }
-
-            if (grid_ciudades.CurrentCell.ColumnIndex == indexCeldaEliminar)
-            {
-                string idCiudad = grid_ciudades.CurrentRow.Cells[0].Value.ToString();
-                _NE.EliminarCiudad(idCiudad);
-
-                grid_ciudades.Rows.Remove(grid_ciudades.CurrentRow);
-            }
+            grid_ciudades.Rows.Remove(grid_ciudades.CurrentRow);
         }
     }
 }
