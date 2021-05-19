@@ -162,5 +162,10 @@ namespace TrabajoPrácticoPAV.Formularios
             Nombre = grid_aviones.CurrentRow.Cells["nombre"].Value.ToString();
             btn_eliminar.Enabled = true;
         }
+
+        private void btn_volver_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

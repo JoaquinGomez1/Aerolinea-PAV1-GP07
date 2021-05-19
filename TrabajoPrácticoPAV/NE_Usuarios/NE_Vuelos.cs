@@ -33,8 +33,8 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
                 grilla_ABM_vuelo1.Rows.Add();
                 grilla_ABM_vuelo1.Rows[i].Cells[0].Value = BuscarModelo(tabla.Rows[i]["idModelo"].ToString());
                 grilla_ABM_vuelo1.Rows[i].Cells[1].Value = tabla.Rows[i]["numeroPorModelo"].ToString();
-                grilla_ABM_vuelo1.Rows[i].Cells[2].Value = BuscarAeropuerto(tabla.Rows[i]["codigoAeropuertoDestino"].ToString());
-                grilla_ABM_vuelo1.Rows[i].Cells[3].Value = BuscarAeropuerto(tabla.Rows[i]["codigoAeropuertoSalida"].ToString());
+                grilla_ABM_vuelo1.Rows[i].Cells[2].Value = BuscarAeropuerto(tabla.Rows[i]["codigoAeropuertoSalida"].ToString());
+                grilla_ABM_vuelo1.Rows[i].Cells[3].Value = BuscarAeropuerto(tabla.Rows[i]["codigoAeropuertoDestino"].ToString());
                 grilla_ABM_vuelo1.Rows[i].Cells[4].Value = tabla.Rows[i]["idVuelo"].ToString();
             }
             if (tabla.Rows.Count == 0)

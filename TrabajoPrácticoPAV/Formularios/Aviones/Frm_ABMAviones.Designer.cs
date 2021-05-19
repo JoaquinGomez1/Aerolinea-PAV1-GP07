@@ -34,16 +34,16 @@ namespace TrabajoPrácticoPAV.Formularios
             this.label3 = new System.Windows.Forms.Label();
             this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
             this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.chk_todos = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_deseleccionar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
-            this.txt_numero = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
-            this.cmb_Modelo = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
             this.grid_aviones = new System.Windows.Forms.DataGridView();
             this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idModelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_volver = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.txt_numero = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
+            this.cmb_Modelo = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
             this.btn_eliminar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.btn_limpiar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.btn_agregar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
@@ -98,16 +98,6 @@ namespace TrabajoPrácticoPAV.Formularios
             this.label2.Size = new System.Drawing.Size(0, 13);
             this.label2.TabIndex = 1;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(43, 150);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(148, 21);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Consultar Aviones";
-            // 
             // chk_todos
             // 
             this.chk_todos.AutoSize = true;
@@ -121,7 +111,7 @@ namespace TrabajoPrácticoPAV.Formularios
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btn_deseleccionar);
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.chk_todos);
             this.panel1.Controls.Add(this.label4);
@@ -133,16 +123,63 @@ namespace TrabajoPrácticoPAV.Formularios
             this.panel1.Size = new System.Drawing.Size(498, 100);
             this.panel1.TabIndex = 18;
             // 
-            // btn_deseleccionar
+            // grid_aviones
             // 
-            this.btn_deseleccionar.Location = new System.Drawing.Point(282, 58);
-            this.btn_deseleccionar.Name = "btn_deseleccionar";
-            this.btn_deseleccionar.Pp_Presionado = false;
-            this.btn_deseleccionar.Size = new System.Drawing.Size(21, 12);
-            this.btn_deseleccionar.TabIndex = 18;
-            this.btn_deseleccionar.Text = "-";
-            this.btn_deseleccionar.UseVisualStyleBackColor = true;
-            this.btn_deseleccionar.Click += new System.EventHandler(this.btn_deseleccionar_Click);
+            this.grid_aviones.AllowUserToAddRows = false;
+            this.grid_aviones.AllowUserToDeleteRows = false;
+            this.grid_aviones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grid_aviones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.numero,
+            this.nombre,
+            this.idModelo});
+            this.grid_aviones.Location = new System.Drawing.Point(39, 153);
+            this.grid_aviones.Name = "grid_aviones";
+            this.grid_aviones.ReadOnly = true;
+            this.grid_aviones.Size = new System.Drawing.Size(583, 218);
+            this.grid_aviones.TabIndex = 19;
+            this.grid_aviones.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_aviones_CellClick);
+            this.grid_aviones.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_aviones_CellContentClick);
+            // 
+            // numero
+            // 
+            this.numero.HeaderText = "Numero";
+            this.numero.Name = "numero";
+            this.numero.ReadOnly = true;
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "Modelo";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            this.nombre.Width = 180;
+            // 
+            // idModelo
+            // 
+            this.idModelo.HeaderText = "IdModelo";
+            this.idModelo.Name = "idModelo";
+            this.idModelo.ReadOnly = true;
+            this.idModelo.Visible = false;
+            // 
+            // btn_volver
+            // 
+            this.btn_volver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
+            this.btn_volver.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_volver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_volver.Location = new System.Drawing.Point(41, 381);
+            this.btn_volver.Name = "btn_volver";
+            this.btn_volver.Size = new System.Drawing.Size(76, 28);
+            this.btn_volver.TabIndex = 20;
+            this.btn_volver.Text = "Cerrar";
+            this.btn_volver.UseVisualStyleBackColor = false;
+            this.btn_volver.Click += new System.EventHandler(this.btn_volver_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Location = new System.Drawing.Point(13, 13);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(724, 393);
+            this.panel2.TabIndex = 21;
             // 
             // txt_numero
             // 
@@ -170,51 +207,15 @@ namespace TrabajoPrácticoPAV.Formularios
             this.cmb_Modelo.Size = new System.Drawing.Size(177, 28);
             this.cmb_Modelo.TabIndex = 7;
             // 
-            // grid_aviones
-            // 
-            this.grid_aviones.AllowUserToAddRows = false;
-            this.grid_aviones.AllowUserToDeleteRows = false;
-            this.grid_aviones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grid_aviones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.numero,
-            this.nombre,
-            this.idModelo});
-            this.grid_aviones.Location = new System.Drawing.Point(39, 178);
-            this.grid_aviones.Name = "grid_aviones";
-            this.grid_aviones.ReadOnly = true;
-            this.grid_aviones.Size = new System.Drawing.Size(391, 150);
-            this.grid_aviones.TabIndex = 19;
-            this.grid_aviones.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_aviones_CellClick);
-            this.grid_aviones.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_aviones_CellContentClick);
-            // 
-            // numero
-            // 
-            this.numero.HeaderText = "Numero";
-            this.numero.Name = "numero";
-            this.numero.ReadOnly = true;
-            // 
-            // nombre
-            // 
-            this.nombre.HeaderText = "Modelo";
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
-            this.nombre.Width = 180;
-            // 
-            // idModelo
-            // 
-            this.idModelo.HeaderText = "IdModelo";
-            this.idModelo.Name = "idModelo";
-            this.idModelo.ReadOnly = true;
-            this.idModelo.Visible = false;
-            // 
             // btn_eliminar
             // 
             this.btn_eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
+            this.btn_eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_eliminar.Location = new System.Drawing.Point(447, 248);
+            this.btn_eliminar.Location = new System.Drawing.Point(628, 329);
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.Pp_Presionado = false;
-            this.btn_eliminar.Size = new System.Drawing.Size(90, 29);
+            this.btn_eliminar.Size = new System.Drawing.Size(95, 41);
             this.btn_eliminar.TabIndex = 16;
             this.btn_eliminar.Text = "Eliminar";
             this.btn_eliminar.UseVisualStyleBackColor = false;
@@ -223,11 +224,12 @@ namespace TrabajoPrácticoPAV.Formularios
             // btn_limpiar
             // 
             this.btn_limpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
+            this.btn_limpiar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_limpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_limpiar.Location = new System.Drawing.Point(447, 283);
+            this.btn_limpiar.Location = new System.Drawing.Point(121, 381);
             this.btn_limpiar.Name = "btn_limpiar";
             this.btn_limpiar.Pp_Presionado = false;
-            this.btn_limpiar.Size = new System.Drawing.Size(90, 29);
+            this.btn_limpiar.Size = new System.Drawing.Size(76, 28);
             this.btn_limpiar.TabIndex = 16;
             this.btn_limpiar.Text = "Limpiar";
             this.btn_limpiar.UseVisualStyleBackColor = false;
@@ -236,11 +238,12 @@ namespace TrabajoPrácticoPAV.Formularios
             // btn_agregar
             // 
             this.btn_agregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
+            this.btn_agregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_agregar.Location = new System.Drawing.Point(447, 213);
+            this.btn_agregar.Location = new System.Drawing.Point(628, 241);
             this.btn_agregar.Name = "btn_agregar";
             this.btn_agregar.Pp_Presionado = false;
-            this.btn_agregar.Size = new System.Drawing.Size(90, 29);
+            this.btn_agregar.Size = new System.Drawing.Size(95, 41);
             this.btn_agregar.TabIndex = 16;
             this.btn_agregar.Text = "Agregar";
             this.btn_agregar.UseVisualStyleBackColor = false;
@@ -249,11 +252,12 @@ namespace TrabajoPrácticoPAV.Formularios
             // btn_buscar
             // 
             this.btn_buscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
+            this.btn_buscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_buscar.Location = new System.Drawing.Point(447, 178);
+            this.btn_buscar.Location = new System.Drawing.Point(628, 153);
             this.btn_buscar.Name = "btn_buscar";
             this.btn_buscar.Pp_Presionado = false;
-            this.btn_buscar.Size = new System.Drawing.Size(90, 29);
+            this.btn_buscar.Size = new System.Drawing.Size(95, 41);
             this.btn_buscar.TabIndex = 15;
             this.btn_buscar.Text = "Buscar";
             this.btn_buscar.UseVisualStyleBackColor = false;
@@ -264,16 +268,17 @@ namespace TrabajoPrácticoPAV.Formularios
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(227)))), ((int)(((byte)(187)))));
-            this.ClientSize = new System.Drawing.Size(650, 381);
+            this.ClientSize = new System.Drawing.Size(749, 418);
+            this.Controls.Add(this.btn_volver);
             this.Controls.Add(this.grid_aviones);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_eliminar);
             this.Controls.Add(this.btn_limpiar);
             this.Controls.Add(this.btn_agregar);
             this.Controls.Add(this.btn_buscar);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_ABMAviones";
             this.Text = "Frm_ABMAviones";
@@ -294,7 +299,6 @@ namespace TrabajoPrácticoPAV.Formularios
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private Clase.ComboBox_Aerolinea cmb_Modelo;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridViewImageColumn Editar;
         private Clase.Button_Aerolinea btn_buscar;
         private Clase.Button_Aerolinea btn_agregar;
@@ -302,10 +306,11 @@ namespace TrabajoPrácticoPAV.Formularios
         private System.Windows.Forms.Panel panel1;
         private Clase.Button_Aerolinea btn_limpiar;
         private Clase.Button_Aerolinea btn_eliminar;
-        private Clase.Button_Aerolinea btn_deseleccionar;
         private System.Windows.Forms.DataGridView grid_aviones;
         private System.Windows.Forms.DataGridViewTextBoxColumn numero;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn idModelo;
+        private System.Windows.Forms.Button btn_volver;
+        private System.Windows.Forms.Panel panel2;
     }
 }

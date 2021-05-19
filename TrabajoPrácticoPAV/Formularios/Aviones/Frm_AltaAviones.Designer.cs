@@ -36,6 +36,9 @@ namespace TrabajoPrácticoPAV.Formularios
             this.txt_numero = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
             this.btn_registrar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.btn_cancelar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
+            this.BarraSuperior = new System.Windows.Forms.Panel();
+            this.Titulo = new System.Windows.Forms.Label();
+            this.BarraSuperior.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -98,7 +101,7 @@ namespace TrabajoPrácticoPAV.Formularios
             // 
             this.btn_registrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
             this.btn_registrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_registrar.Location = new System.Drawing.Point(96, 205);
+            this.btn_registrar.Location = new System.Drawing.Point(73, 184);
             this.btn_registrar.Name = "btn_registrar";
             this.btn_registrar.Pp_Presionado = false;
             this.btn_registrar.Size = new System.Drawing.Size(82, 33);
@@ -111,7 +114,7 @@ namespace TrabajoPrácticoPAV.Formularios
             // 
             this.btn_cancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
             this.btn_cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_cancelar.Location = new System.Drawing.Point(195, 205);
+            this.btn_cancelar.Location = new System.Drawing.Point(172, 184);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Pp_Presionado = false;
             this.btn_cancelar.Size = new System.Drawing.Size(82, 33);
@@ -120,12 +123,37 @@ namespace TrabajoPrácticoPAV.Formularios
             this.btn_cancelar.UseVisualStyleBackColor = false;
             this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
+            // BarraSuperior
+            // 
+            this.BarraSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.BarraSuperior.Controls.Add(this.Titulo);
+            this.BarraSuperior.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BarraSuperior.Location = new System.Drawing.Point(0, 0);
+            this.BarraSuperior.Margin = new System.Windows.Forms.Padding(2);
+            this.BarraSuperior.Name = "BarraSuperior";
+            this.BarraSuperior.Size = new System.Drawing.Size(309, 32);
+            this.BarraSuperior.TabIndex = 60;
+            this.BarraSuperior.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BarraSuperior_MouseMove);
+            // 
+            // Titulo
+            // 
+            this.Titulo.AutoSize = true;
+            this.Titulo.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Titulo.ForeColor = System.Drawing.Color.White;
+            this.Titulo.Location = new System.Drawing.Point(9, 6);
+            this.Titulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Titulo.Name = "Titulo";
+            this.Titulo.Size = new System.Drawing.Size(149, 22);
+            this.Titulo.TabIndex = 4;
+            this.Titulo.Text = "AGREGAR AVION";
+            // 
             // Frm_AltaAviones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(334, 291);
+            this.ClientSize = new System.Drawing.Size(309, 230);
+            this.Controls.Add(this.BarraSuperior);
             this.Controls.Add(this.btn_cancelar);
             this.Controls.Add(this.btn_registrar);
             this.Controls.Add(this.label4);
@@ -139,6 +167,8 @@ namespace TrabajoPrácticoPAV.Formularios
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registrar nuevo avión";
             this.Load += new System.EventHandler(this.Frm_AltaAviones_Load);
+            this.BarraSuperior.ResumeLayout(false);
+            this.BarraSuperior.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -153,5 +183,7 @@ namespace TrabajoPrácticoPAV.Formularios
         private System.Windows.Forms.Label label4;
         private Clase.Button_Aerolinea btn_registrar;
         private Clase.Button_Aerolinea btn_cancelar;
+        private System.Windows.Forms.Panel BarraSuperior;
+        private System.Windows.Forms.Label Titulo;
     }
 }
