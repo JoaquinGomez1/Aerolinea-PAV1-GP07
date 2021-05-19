@@ -40,6 +40,11 @@ namespace TrabajoPrácticoPAV.Formularios.Aviones
         
         private void Frm_Borrar_Avion_Load_1(object sender, EventArgs e)
         {
+            Estilo.FormatearEstilo(this.Controls);
+            this.BackColor = Estilo.ColorFondoForms;
+
+            cmb_modelos.CargarCombo();
+
             NE_Avion avion = new NE_Avion();
             MostrarDatos(avion.Recuperar_x_numero(Id_numero));
 
@@ -49,7 +54,7 @@ namespace TrabajoPrácticoPAV.Formularios.Aviones
             if (tabla.Rows.Count > 0)
             {
                 txt_numero.Text = tabla.Rows[0]["numeroPorModelo"].ToString();
-                cmb_modelos.SelectedValue = tabla.Rows[0]["nombre"].ToString();
+                cmb_modelos.SelectedItem = tabla.Rows[0]["numeroPorModelo"].ToString();
                 txt_idModelo.Text = tabla.Rows[0]["idModelo"].ToString();
 
             }
