@@ -66,6 +66,43 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             _DB.Borrar(sql, true);
         }
 
-        
+        public DataTable GetTripulante(string nombre, string apellido, string cargo)
+        {
+            
+            if (nombre != "" && apellido != "")
+            {
+                string sql = $"SELECT idTripulacion, Tripulacion.nombre AS nombre, apellido, Tripulacion.idCargoTripulacion AS idCargoTripulacion, Cargo_Tripulacion.nombre AS nombreCargo FROM Tripulacion JOIN Cargo_Tripulacion on Tripulacion.idCargoTripulacion = Cargo_Tripulacion.idCargoTripulacion WHERE (Tripulacion.nombre='{nombre}') AND (apellido='{apellido}') AND (Tripulacion.idCargoTripulacion={cargo})";
+                DataTable resultadoSelect = _DB.EjecutarSelect(sql);
+                return resultadoSelect;
+            }
+
+            if (nombre != "" && apellido == "")
+            {
+                string sql = $"SELECT idTripulacion, Tripulacion.nombre AS nombre, apellido, Tripulacion.idCargoTripulacion AS idCargoTripulacion, Cargo_Tripulacion.nombre AS nombreCargo FROM Tripulacion JOIN Cargo_Tripulacion on Tripulacion.idCargoTripulacion = Cargo_Tripulacion.idCargoTripulacion WHERE (Tripulacion.nombre='{nombre}') AND (Tripulacion.idCargoTripulacion={cargo})";
+                DataTable resultadoSelect = _DB.EjecutarSelect(sql);
+                return resultadoSelect;
+            }
+
+            if (nombre == "" && apellido != "")
+            {
+                string sql = $"SELECT idTripulacion, Tripulacion.nombre AS nombre, apellido, Tripulacion.idCargoTripulacion AS idCargoTripulacion, Cargo_Tripulacion.nombre AS nombreCargo FROM Tripulacion JOIN Cargo_Tripulacion on Tripulacion.idCargoTripulacion = Cargo_Tripulacion.idCargoTripulacion WHERE (apellido='{apellido}') AND (Tripulacion.idCargoTripulacion={cargo})";
+                DataTable resultadoSelect = _DB.EjecutarSelect(sql);
+                return resultadoSelect;
+            }
+
+            if (nombre == "" && apellido == "")
+            {
+                string sql = $"SELECT idTripulacion, Tripulacion.nombre AS nombre, apellido, Tripulacion.idCargoTripulacion AS idCargoTripulacion, Cargo_Tripulacion.nombre AS nombreCargo FROM Tripulacion JOIN Cargo_Tripulacion on Tripulacion.idCargoTripulacion = Cargo_Tripulacion.idCargoTripulacion WHERE Tripulacion.idCargoTripulacion={cargo}";
+                DataTable resultadoSelect = _DB.EjecutarSelect(sql);
+                return resultadoSelect;
+            }
+
+
+            else
+            {
+                DataTable resultadoSelect = null;
+                return resultadoSelect;
+            }
+        }
     }
 }

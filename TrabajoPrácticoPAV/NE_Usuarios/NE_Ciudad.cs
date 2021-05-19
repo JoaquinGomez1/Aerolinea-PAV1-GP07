@@ -24,12 +24,33 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
 
         public DataTable GetCiudad(string nombre, string pais, string provincia)
         {
-            if (nombre != "")
+            if (pais == "")
             {
-                string sql = $"SELECT * FROM Ciudad JOIN Provincia on Ciudad.idProvincia = Provincia.idProvincia JOIN Pais on Provincia.idPais = Pais.idPais WHERE nombreCiudad='{nombre}'";
+                DataTable resultadoSelect = null;
+                return resultadoSelect;
+            }
+
+            if (nombre != "" && provincia == "")
+            {
+                string sql = $"SELECT * FROM Ciudad JOIN Provincia on Ciudad.idProvincia = Provincia.idProvincia JOIN Pais on Provincia.idPais = Pais.idPais WHERE (nombreCiudad='{nombre}') AND (Provincia.idPais={pais})";
                 DataTable resultadoSelect = _DB.EjecutarSelect(sql);
                 return resultadoSelect;
             }
+
+            if (nombre != "" && provincia != "")
+            {
+                string sql = $"SELECT * FROM Ciudad JOIN Provincia on Ciudad.idProvincia = Provincia.idProvincia JOIN Pais on Provincia.idPais = Pais.idPais WHERE (nombreCiudad='{nombre}') AND (Provincia.idPais={pais}) AND (Ciudad.idProvincia={provincia}";
+                DataTable resultadoSelect = _DB.EjecutarSelect(sql);
+                return resultadoSelect;
+            }
+
+            if (nombre == "" && provincia != "")
+            {
+                string sql = $"SELECT * FROM Ciudad JOIN Provincia on Ciudad.idProvincia = Provincia.idProvincia JOIN Pais on Provincia.idPais = Pais.idPais WHERE (Provincia.idPais={pais}) AND (Ciudad.idProvincia={provincia})";
+                DataTable resultadoSelect = _DB.EjecutarSelect(sql);
+                return resultadoSelect;
+            }
+
             else
             {
                 DataTable resultadoSelect = null;
