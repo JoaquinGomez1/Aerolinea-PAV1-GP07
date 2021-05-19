@@ -22,6 +22,18 @@ namespace TrabajoPrácticoPAV.Formularios.Modelo
         {
             InitializeComponent();
         }
+        ////#region Movimiento de la barra
+        //[DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        //private extern static void ReleaseCapture();
+        //[DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        //private extern static void SendMessage(System.IntPtr hWind, int wMsg, int wParam, int lParam);
+
+        //private void BarraSuperior_MouseMove(object sender, MouseEventArgs e)
+        //{
+        //    ReleaseCapture();
+        //    SendMessage(this.Handle, 0x112, 0xf012, 0);
+        //}
+        //#endregion
 
         private void btn_cerrar_Click(object sender, EventArgs e)
         {
@@ -46,7 +58,7 @@ namespace TrabajoPrácticoPAV.Formularios.Modelo
             if (MessageBox.Show("¿Esta seguro de Borrar?", "Importante", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
                 modelo.Borrar(Id_modelo);
-                MessageBox.Show("Se borró correctamente el modelo");
+                //MessageBox.Show("Se borró correctamente el modelo");
                 this.Close();
 
             }
