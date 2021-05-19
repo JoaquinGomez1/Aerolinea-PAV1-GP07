@@ -47,7 +47,7 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
             this.btn_volver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
             this.btn_volver.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_volver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_volver.Location = new System.Drawing.Point(173, 205);
+            this.btn_volver.Location = new System.Drawing.Point(176, 171);
             this.btn_volver.Name = "btn_volver";
             this.btn_volver.Size = new System.Drawing.Size(82, 33);
             this.btn_volver.TabIndex = 2;
@@ -59,7 +59,7 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(70, 82);
+            this.label2.Location = new System.Drawing.Point(73, 48);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 20);
             this.label2.TabIndex = 4;
@@ -69,7 +69,7 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label3.Location = new System.Drawing.Point(64, 111);
+            this.label3.Location = new System.Drawing.Point(67, 77);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 20);
             this.label3.TabIndex = 4;
@@ -80,7 +80,7 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
             this.btn_aceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
             this.btn_aceptar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_aceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_aceptar.Location = new System.Drawing.Point(85, 205);
+            this.btn_aceptar.Location = new System.Drawing.Point(88, 171);
             this.btn_aceptar.Name = "btn_aceptar";
             this.btn_aceptar.Size = new System.Drawing.Size(82, 33);
             this.btn_aceptar.TabIndex = 2;
@@ -92,7 +92,7 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label4.Location = new System.Drawing.Point(70, 140);
+            this.label4.Location = new System.Drawing.Point(73, 106);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(59, 20);
             this.label4.TabIndex = 4;
@@ -101,7 +101,7 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
             // cmb_ciudades
             // 
             this.cmb_ciudades.FormattingEnabled = true;
-            this.cmb_ciudades.Location = new System.Drawing.Point(135, 140);
+            this.cmb_ciudades.Location = new System.Drawing.Point(138, 106);
             this.cmb_ciudades.Name = "cmb_ciudades";
             this.cmb_ciudades.Pp_CampoAceptaNull = false;
             this.cmb_ciudades.Pp_EsPk = false;
@@ -115,7 +115,7 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
             // 
             // txt_nombre
             // 
-            this.txt_nombre.Location = new System.Drawing.Point(135, 111);
+            this.txt_nombre.Location = new System.Drawing.Point(138, 77);
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.Pp_EsPk = false;
             this.txt_nombre.Pp_MensajeError = "Falta cargar nombre del aeropuerto.";
@@ -126,7 +126,7 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
             // 
             // txt_codigo
             // 
-            this.txt_codigo.Location = new System.Drawing.Point(135, 84);
+            this.txt_codigo.Location = new System.Drawing.Point(138, 50);
             this.txt_codigo.Name = "txt_codigo";
             this.txt_codigo.Pp_EsPk = true;
             this.txt_codigo.Pp_MensajeError = "Falta cargar codigo del aeropuerto.";
@@ -143,7 +143,7 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
             this.BarraSuperior.Location = new System.Drawing.Point(0, 0);
             this.BarraSuperior.Margin = new System.Windows.Forms.Padding(2);
             this.BarraSuperior.Name = "BarraSuperior";
-            this.BarraSuperior.Size = new System.Drawing.Size(354, 32);
+            this.BarraSuperior.Size = new System.Drawing.Size(338, 32);
             this.BarraSuperior.TabIndex = 59;
             this.BarraSuperior.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BarraSuperior_MouseMove);
             // 
@@ -164,7 +164,7 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(227)))), ((int)(((byte)(187)))));
-            this.ClientSize = new System.Drawing.Size(354, 272);
+            this.ClientSize = new System.Drawing.Size(338, 220);
             this.Controls.Add(this.BarraSuperior);
             this.Controls.Add(this.cmb_ciudades);
             this.Controls.Add(this.txt_nombre);
