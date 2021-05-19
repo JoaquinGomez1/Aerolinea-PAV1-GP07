@@ -174,5 +174,10 @@ namespace TrabajoPrácticoPAV.Formularios.Ciudad
                        @"= Provincia.idPais WHERE Pais.idPais = " + comboBox_pais_modify.SelectedValue;
             comboBox_Aerolinea2.CargarComboJoin(CondicionAvion);
         }
+
+        private void btn_cerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
