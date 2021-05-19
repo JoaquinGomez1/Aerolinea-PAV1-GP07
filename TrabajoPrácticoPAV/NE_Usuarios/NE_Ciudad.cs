@@ -22,6 +22,21 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             return resultadoSelect;
         }
 
+        public DataTable GetCiudad(string nombre, string pais, string provincia)
+        {
+            if (nombre != "")
+            {
+                string sql = $"SELECT * FROM Ciudad JOIN Provincia on Ciudad.idProvincia = Provincia.idProvincia JOIN Pais on Provincia.idPais = Pais.idPais WHERE nombreCiudad='{nombre}'";
+                DataTable resultadoSelect = _DB.EjecutarSelect(sql);
+                return resultadoSelect;
+            }
+            else
+            {
+                DataTable resultadoSelect = null;
+                return resultadoSelect;
+            }
+        }
+
         public void InsertCiudad(CiudadObj Ciudad)
         {
             string sql = @"INSERT INTO Ciudad(nombreCiudad, idProvincia) 

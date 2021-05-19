@@ -53,16 +53,7 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
         }
 
         // Overrides para eliminar por Tripulante o id (int o string)
-        public void EliminarTripulante(Tripulante Tripulante)
-        {
-            EliminarTripulacion($"{Tripulante.Id}");
-        }
-
-        public void EliminarTripulante(int idTripulante)
-        {
-            EliminarTripulacion($"{idTripulante}");
-        }
-
+       
         public void EliminarTripulante(string idTripulante)
         {
             EliminarTripulacion(idTripulante);
@@ -74,5 +65,7 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             string sql = $"DELETE FROM Tripulacion WHERE idTripulacion = {idTripulante}";
             _DB.Borrar(sql, true);
         }
+
+        
     }
 }

@@ -39,34 +39,20 @@ namespace TrabajoPrácticoPAV.Formularios.Asientos
 
         private void btn_buscar_Click(object sender, EventArgs e)
         {
-            Tratamientos_Especiales tratamiento = new Tratamientos_Especiales();
-
             string join = $" JOIN Modelo ON  modelo.idModelo = Asientos.idModelo ";
-            string sql = tratamiento.ConstructorSelect(this.Controls, join, "Asientos");
-            CargarGrilla_asientos(sql);
-        }
-        private void CargarGrilla_asientos(string sql)
-        {
-            Conexion_DB _BD = new Conexion_DB();
-            DataTable tabla = _BD.EjecutarSelect(sql);
 
-            grilla_ABMAsiento.Rows.Clear();
-
-            for (int i = 0; i < tabla.Rows.Count; i++)
+            if (chk_asientos.Checked == false && cmb_Modelo.SelectedIndex == -1 && cmb_NumeroAvion.SelectedIndex == -1)
             {
-                grilla_ABMAsiento.Rows.Add();
-                grilla_ABMAsiento.Rows[i].Cells[0].Value = tabla.Rows[i]["numeroAsiento"].ToString();
-                grilla_ABMAsiento.Rows[i].Cells[1].Value = NEasiento.BuscarModelo(tabla.Rows[i]["idModelo"].ToString());
-                grilla_ABMAsiento.Rows[i].Cells[2].Value = tabla.Rows[i]["numeroPorModelo"].ToString();
-                grilla_ABMAsiento.Rows[i].Cells[3].Value = NEasiento.BuscarClase(tabla.Rows[i]["tipoAsiento"].ToString());
-                grilla_ABMAsiento.Rows[i].Cells[4].Value = tabla.Rows[i]["estado"].ToString();
+                MessageBox.Show("Debe seleccionar alguna opción");
             }
-            if (tabla.Rows.Count == 0)
+            else
             {
-                MessageBox.Show("No se encontraron Asientos para ese filtro.");
-            }
+                
+                NEasiento.CargarGrilla_asientos(grilla_ABMAsiento, join, this.Controls);
 
+            }
         }
+        
 
         private void cmb_Modelo_SelectionChangeCommitted(object sender, EventArgs e)
         {
@@ -101,6 +87,9 @@ namespace TrabajoPrácticoPAV.Formularios.Asientos
         {
             Frm_AltaAsientos alta = new Frm_AltaAsientos();
             alta.ShowDialog();
+            NEasiento.CargarGrilla_asientos(grilla_ABMAsiento, "", this.Controls);
+            btn_eliminar.Enabled = false;
+            btn_modificar.Enabled = false;
         }
 
         private void grilla_ABMAsiento_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -115,6 +104,9 @@ namespace TrabajoPrácticoPAV.Formularios.Asientos
             Frm_ModificarAsiento modificarAsiento = new Frm_ModificarAsiento();
             modificarAsiento.Id_Asiento = Id_Asiento;
             modificarAsiento.ShowDialog();
+            NEasiento.CargarGrilla_asientos(grilla_ABMAsiento, "", this.Controls);
+            btn_eliminar.Enabled = false;
+            btn_modificar.Enabled = false;
         }
 
         private void btn_eliminar_Click(object sender, EventArgs e)
@@ -122,6 +114,9 @@ namespace TrabajoPrácticoPAV.Formularios.Asientos
             Frm_BajaAsiento borrarasiento = new Frm_BajaAsiento();
             borrarasiento.Id_asiento = Id_Asiento;
             borrarasiento.ShowDialog();
+            NEasiento.CargarGrilla_asientos(grilla_ABMAsiento, "", this.Controls);
+            btn_eliminar.Enabled = false;
+            btn_modificar.Enabled = false;
         }
 
         private void grilla_ABMAsiento_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.NE_Usuarios;
+using TrabajoPrácticoPAV.Clase.Modelos;
 using static TrabajoPrácticoPAV.Clase.Tratamientos_Especiales;
 
 namespace TrabajoPrácticoPAV.Formularios.Tripulacion.Cargo_Tripulacion
@@ -18,6 +19,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion.Cargo_Tripulacion
 
         private readonly NE_CargoTripulacion _NE = new NE_CargoTripulacion();
         private readonly Tratamientos_Especiales tratamientos = new Tratamientos_Especiales();
+        private int idTripulanteAModificar { get; set; }
         private int IdCargoSeleccionado { get; set; }
 
         public Frm_ABMCargoTripulacion()
@@ -77,37 +79,60 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion.Cargo_Tripulacion
             bool esValido = tratamientos.Validar(panel_modify.Controls) == Resultado.correcto;
             if (esValido)
             {
-                _NE.ModificarCargo(txt_nombre_modify.Text, IdCargoSeleccionado);
+                CargoTripulacion cargoTripulacion = new CargoTripulacion()
+                {
+                    Id = idTripulanteAModificar,
+                    Nombre = txt_nombre_modify.Text,
+                };
+                _NE.ModificarCargo(cargoTripulacion);
+
                 CargarDataGrid();
             }
         }
 
-        private void grid_tripulantes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+
+        private void btn_editar_Click(object sender, EventArgs e)
         {
-            int indexCeldaModificar = 2;
-            int indexCeldaEliminar = 3;
 
-            bool rowVacia = grid_tripulantes.CurrentRow.Cells[0].Value == null;
-            if (rowVacia) return;
+            panel_modify.Visible = true;
+            lbl_title_modify.Visible = true;
 
-            if (grid_tripulantes.CurrentCell.ColumnIndex == indexCeldaModificar)
+            //string valorSeleccionado = grid_ciudades.CurrentRow.Cells[0].Value.ToString();
+            //CiudadObj ciudad = _NE.GetCiudadPorId(valorSeleccionado);
+            // CiudadSeleccionada = ciudad;
+
+            DataGridViewRow fila = grid_tripulantes.CurrentRow;
+
+           CargoTripulacion cargoTripulacion = new CargoTripulacion()
             {
-                panel_modify.Visible = true;
-                lbl_title_modify.Visible = true;
+                Id = Int32.Parse(fila.Cells[0].Value.ToString()),
+                Nombre = fila.Cells[1].Value.ToString(),
+            };
 
-                // Lo seteo ahora para despues poder tomar el valor al hacer click en modificar
-                IdCargoSeleccionado = Int32.Parse(grid_tripulantes.CurrentRow.Cells[0].Value.ToString());
+            idTripulanteAModificar = cargoTripulacion.Id;
+            txt_nombre_modify.Text = cargoTripulacion.Nombre;
+            
+        }
 
-                txt_nombre_modify.Text = grid_tripulantes.CurrentRow.Cells[1].Value.ToString();
-            }
+        private void btn_eliminar_Click(object sender, EventArgs e)
+        {
 
-            if (grid_tripulantes.CurrentCell.ColumnIndex == indexCeldaEliminar)
-            {
-                int idTripulacion = Int32.Parse(grid_tripulantes.CurrentRow.Cells[0].Value.ToString());
-                _NE.EliminarCargo(idTripulacion);
+            if (grid_tripulantes.CurrentRow == null)
+                return;
 
-                grid_tripulantes.Rows.Remove(grid_tripulantes.CurrentRow);
-            }
+            string idCargo = grid_tripulantes.CurrentRow.Cells[0].Value.ToString();
+            _NE.EliminarCargo(idCargo);
+
+            grid_tripulantes.Rows.Remove(grid_tripulantes.CurrentRow);
+        }
+
+        private void btn_buscar_Click(object sender, EventArgs e)
+        {
+            string nombre = txt_nombre_register.Text;
+            DataTable tabla = _NE.GetCargo(nombre);
+            if (tabla != null)
+            { CargarGridTripulantes(tabla); }
+            else { MessageBox.Show("Complete el nombre del cargo para realizar la busqueda"); }
         }
     }
 }

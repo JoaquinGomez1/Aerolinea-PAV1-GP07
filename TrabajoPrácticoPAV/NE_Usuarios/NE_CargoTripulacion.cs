@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TrabajoPrácticoPAV.Backend;
+using TrabajoPrácticoPAV.Clase.Modelos;
 
 namespace TrabajoPrácticoPAV.NE_Usuarios
 {
@@ -35,15 +36,36 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             return valores;
         }
 
-        public void ModificarCargo(string nombre, int id)
+        public DataTable GetCargo(string nombre)
         {
-            string sql = $"UPDATE Cargo_Tripulacion SET nombre = '{nombre}' WHERE idCargoTripulacion = ${id}";
+            if (nombre != "")
+            {
+                string sql = $"SELECT * FROM Cargo_Tripulacion idCargoTripulacion WHERE nombre='{nombre}'";
+                DataTable resultadoSelect = _DB.EjecutarSelect(sql);
+                return resultadoSelect;
+            }
+            else
+            {
+                DataTable resultadoSelect = null;
+                return resultadoSelect;
+            }
+        }
+
+        public void ModificarCargo(CargoTripulacion cargoTripulacion)
+        {
+            string sql = $"UPDATE Cargo_Tripulacion SET nombre = '{cargoTripulacion.Nombre}' WHERE idcargoTripulacion = {cargoTripulacion.Id}";
             _DB.Modificar(sql, true);
         }
 
-        public void EliminarCargo(int id)
+        public void EliminarCargo(string idCargo)
         {
-            string sql = $"DELETE FROM Cargo_Tripulacion WHERE idCargoTripulacion = {id}";
+            EliminarCargos(idCargo);
+        }
+
+        private void EliminarCargos(string idCargo)
+        {
+
+            string sql = $"DELETE FROM Cargo_Tripulacion WHERE idCargoTripulacion = {idCargo}";
             _DB.Borrar(sql, true);
         }
     }

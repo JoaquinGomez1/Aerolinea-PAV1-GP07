@@ -61,6 +61,7 @@
     <Compile Include="Clase\MaskedTextBox_Aerolinea.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Clase\Modelos\CargoTripulacion.cs" />
     <Compile Include="Clase\Modelos\Ciudad.cs" />
     <Compile Include="Clase\Modelos\Tripulante.cs" />
     <Compile Include="Clase\Modelos\Viaje.cs" />
@@ -182,7 +183,6 @@
     <Compile Include="Formularios\Grupos familiares\Frm_ModificarGrupo.Designer.cs">
       <DependentUpon>Frm_ModificarGrupo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Modelo\DllImportAttribute.cs" />
     <Compile Include="Formularios\Modelo\Frm_ABMmodelo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -709,6 +709,27 @@
   <ItemGroup>
     <None Include="Resources\país_icon.png" />
     <None Include="Resources\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\39915.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\399151.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8b1a89d3f271913146d4cd63f3920464-icono-de-trazo-de-lista-de-verificaci-oacute-n-m-eacute-dica-by-vexels.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8b1a89d3f271913146d4cd63f3920464-icono-de-trazo-de-lista-de-verificaci-oacute-n-m-eacute-dica-by-vexels %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\process.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\22041.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings - v1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -15,7 +15,7 @@ namespace TrabajoPrácticoPAV.Formularios.Modelo
 {
     public partial class Frm_ModificarModelo : Form
     {
-        Conexion_DB _BD = new Conexion_DB();
+        NE_Modelo Modelo = new NE_Modelo();
         public string Id_Modelo { get ; set; }
         
 
@@ -34,8 +34,7 @@ namespace TrabajoPrácticoPAV.Formularios.Modelo
 
             this.BackColor = Estilo.ColorFondoForms;
             Estilo.FormatearEstilo(this.Controls);
-
-            NE_Modelo Modelo = new NE_Modelo();
+            
             MostrarDatos(Modelo.RecuperarXId(Id_Modelo));
         }
         private void MostrarDatos(DataTable tabla)
@@ -48,8 +47,7 @@ namespace TrabajoPrácticoPAV.Formularios.Modelo
             Tratamientos_Especiales Tratamiento = new Tratamientos_Especiales();
             if (Tratamiento.Validar(this.Controls) == Tratamientos_Especiales.Resultado.correcto)
             {
-                string sql = Tratamiento.CostructorUpdateDelete("Modelo", this.Controls, true);
-                _BD.Modificar(sql, false);
+                Modelo.Modificar(this.Controls);
                 this.Close();
             }
             
