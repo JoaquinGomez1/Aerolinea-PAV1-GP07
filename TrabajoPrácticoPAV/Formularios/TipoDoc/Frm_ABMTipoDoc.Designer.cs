@@ -29,29 +29,15 @@ namespace TrabajoPrácticoPAV.Formularios.TipoDoc
         /// </summary>
         private void InitializeComponent()
         {
-            this.cmb_tipoDoc = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_alta = new System.Windows.Forms.Button();
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.btn_actualizar = new System.Windows.Forms.Button();
             this.btn_modificar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.cmb_tipoDoc = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
+            this.btn_eliminar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.SuspendLayout();
-            // 
-            // cmb_tipoDoc
-            // 
-            this.cmb_tipoDoc.FormattingEnabled = true;
-            this.cmb_tipoDoc.Location = new System.Drawing.Point(115, 81);
-            this.cmb_tipoDoc.Name = "cmb_tipoDoc";
-            this.cmb_tipoDoc.Pp_CampoAceptaNull = true;
-            this.cmb_tipoDoc.Pp_EsPk = false;
-            this.cmb_tipoDoc.Pp_MensajeError = null;
-            this.cmb_tipoDoc.Pp_NombreCampo = "nombreTipoDoc";
-            this.cmb_tipoDoc.Pp_NombreCampoInsert = null;
-            this.cmb_tipoDoc.Pp_NombreTabla = "Tipo_Documento";
-            this.cmb_tipoDoc.Pp_PkTabla = "tipoDoc";
-            this.cmb_tipoDoc.Size = new System.Drawing.Size(239, 21);
-            this.cmb_tipoDoc.TabIndex = 0;
             // 
             // label1
             // 
@@ -65,10 +51,9 @@ namespace TrabajoPrácticoPAV.Formularios.TipoDoc
             // 
             // btn_alta
             // 
-            this.btn_alta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
             this.btn_alta.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_alta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_alta.Location = new System.Drawing.Point(111, 163);
+            this.btn_alta.Location = new System.Drawing.Point(60, 163);
             this.btn_alta.Name = "btn_alta";
             this.btn_alta.Size = new System.Drawing.Size(82, 29);
             this.btn_alta.TabIndex = 2;
@@ -78,10 +63,9 @@ namespace TrabajoPrácticoPAV.Formularios.TipoDoc
             // 
             // btn_cancelar
             // 
-            this.btn_cancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
             this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_cancelar.Location = new System.Drawing.Point(310, 163);
+            this.btn_cancelar.Location = new System.Drawing.Point(376, 163);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(82, 29);
             this.btn_cancelar.TabIndex = 3;
@@ -91,7 +75,6 @@ namespace TrabajoPrácticoPAV.Formularios.TipoDoc
             // 
             // btn_actualizar
             // 
-            this.btn_actualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
             this.btn_actualizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_actualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn_actualizar.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -105,10 +88,9 @@ namespace TrabajoPrácticoPAV.Formularios.TipoDoc
             // 
             // btn_modificar
             // 
-            this.btn_modificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
             this.btn_modificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_modificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_modificar.Location = new System.Drawing.Point(216, 163);
+            this.btn_modificar.Location = new System.Drawing.Point(168, 163);
             this.btn_modificar.Name = "btn_modificar";
             this.btn_modificar.Size = new System.Drawing.Size(82, 29);
             this.btn_modificar.TabIndex = 5;
@@ -126,12 +108,40 @@ namespace TrabajoPrácticoPAV.Formularios.TipoDoc
             this.label2.TabIndex = 10;
             this.label2.Text = "Nombre";
             // 
+            // cmb_tipoDoc
+            // 
+            this.cmb_tipoDoc.FormattingEnabled = true;
+            this.cmb_tipoDoc.Location = new System.Drawing.Point(115, 81);
+            this.cmb_tipoDoc.Name = "cmb_tipoDoc";
+            this.cmb_tipoDoc.Pp_CampoAceptaNull = true;
+            this.cmb_tipoDoc.Pp_EsPk = false;
+            this.cmb_tipoDoc.Pp_MensajeError = null;
+            this.cmb_tipoDoc.Pp_NombreCampo = "nombreTipoDoc";
+            this.cmb_tipoDoc.Pp_NombreCampoInsert = null;
+            this.cmb_tipoDoc.Pp_NombreTabla = "Tipo_Documento";
+            this.cmb_tipoDoc.Pp_PkTabla = "tipoDoc";
+            this.cmb_tipoDoc.Size = new System.Drawing.Size(239, 21);
+            this.cmb_tipoDoc.TabIndex = 0;
+            // 
+            // btn_eliminar
+            // 
+            this.btn_eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.btn_eliminar.Location = new System.Drawing.Point(275, 163);
+            this.btn_eliminar.Name = "btn_eliminar";
+            this.btn_eliminar.Pp_Presionado = false;
+            this.btn_eliminar.Size = new System.Drawing.Size(79, 29);
+            this.btn_eliminar.TabIndex = 11;
+            this.btn_eliminar.Text = "Eliminar";
+            this.btn_eliminar.UseVisualStyleBackColor = true;
+            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
+            // 
             // Frm_ABMTipoDoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(227)))), ((int)(((byte)(187)))));
-            this.ClientSize = new System.Drawing.Size(494, 222);
+            this.ClientSize = new System.Drawing.Size(669, 314);
+            this.Controls.Add(this.btn_eliminar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_modificar);
             this.Controls.Add(this.btn_actualizar);
@@ -139,7 +149,6 @@ namespace TrabajoPrácticoPAV.Formularios.TipoDoc
             this.Controls.Add(this.btn_alta);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmb_tipoDoc);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_ABMTipoDoc";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Frm_ABMTipoDoc_Load);
@@ -157,5 +166,6 @@ namespace TrabajoPrácticoPAV.Formularios.TipoDoc
         private System.Windows.Forms.Button btn_actualizar;
         private System.Windows.Forms.Button btn_modificar;
         private System.Windows.Forms.Label label2;
+        private Clase.Button_Aerolinea btn_eliminar;
     }
 }

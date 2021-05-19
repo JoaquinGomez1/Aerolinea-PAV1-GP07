@@ -20,6 +20,8 @@ namespace TrabajoPrácticoPAV.Formularios.TipoDoc
         public Frm_AltaTipoDoc()
         {
             InitializeComponent();
+            this.BackColor = Estilo.ColorFondoForms;
+            Estilo.FormatearEstilo(this.Controls);
             this.CenterToScreen();
         }
 
@@ -30,15 +32,23 @@ namespace TrabajoPrácticoPAV.Formularios.TipoDoc
 
         private void btn_agregar_Click(object sender, EventArgs e)
         {
-
+            if ( txt_nombre.Text == "")
+            {
+                MessageBox.Show("Por favor ingrese un nombre");
+                return;
+            }
             NE_TipoDoc tipo = new NE_TipoDoc();
             tipo.Pp_nombre_Tipo_Doc = txt_nombre.Text;
             tipo.Insertar();
-            MessageBox.Show( "El tipo: " + tipo.Pp_nombre_Tipo_Doc + ", ha sido correctamente agregado");
             this.Close();
         }
 
         private void Frm_AltaTipoDoc_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_nombre_TextChanged(object sender, EventArgs e)
         {
 
         }
