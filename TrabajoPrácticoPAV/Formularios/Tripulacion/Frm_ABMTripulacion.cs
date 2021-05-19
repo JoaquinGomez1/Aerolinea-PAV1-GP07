@@ -143,7 +143,18 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
 
         private void btn_buscar_Click(object sender, EventArgs e)
         {
-            
+            string nombre = txt_nombre_register.Text;
+            string apellido = txt_apellido_register.Text;
+            string cargo = "";
+            if (cmb_cargo_register.SelectedIndex != -1)
+            {
+                cargo = cmb_cargo_register.SelectedValue.ToString();
+            }
+
+            DataTable tabla = _NE.GetTripulante(nombre,apellido,cargo);
+            if (tabla != null)
+            { CargarGridTripulantes(tabla); }
+            else { MessageBox.Show("Complete los campos para realizar la busqueda"); }
         }
 
         private void btn_cerrar_Click(object sender, EventArgs e)
