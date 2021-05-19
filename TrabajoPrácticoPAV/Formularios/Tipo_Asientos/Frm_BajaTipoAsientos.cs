@@ -59,7 +59,6 @@ namespace TrabajoPrácticoPAV.Formularios.Tipo_Asientos
         {
             if (MessageBox.Show("¿Esta seguro de Borrar?", "Importante", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
-                MessageBox.Show("c" + this.Controls);
                 TA.Borrar(this.Controls);
                 this.Close();
             }

@@ -56,7 +56,7 @@
             // 
             this.Msktxt_NumeroDOC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.Msktxt_NumeroDOC.Location = new System.Drawing.Point(430, 98);
-            this.Msktxt_NumeroDOC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Msktxt_NumeroDOC.Margin = new System.Windows.Forms.Padding(2);
             this.Msktxt_NumeroDOC.Mask = "99999999";
             this.Msktxt_NumeroDOC.Name = "Msktxt_NumeroDOC";
             this.Msktxt_NumeroDOC.Pp_EsPk = false;
@@ -85,7 +85,7 @@
             this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn_cancelar.Location = new System.Drawing.Point(41, 387);
-            this.btn_cancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_cancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Pp_Presionado = false;
             this.btn_cancelar.Size = new System.Drawing.Size(76, 28);
@@ -115,7 +115,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Grid_Pasajero.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Grid_Pasajero.Location = new System.Drawing.Point(34, 145);
-            this.Grid_Pasajero.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Grid_Pasajero.Margin = new System.Windows.Forms.Padding(2);
             this.Grid_Pasajero.MultiSelect = false;
             this.Grid_Pasajero.Name = "Grid_Pasajero";
             this.Grid_Pasajero.Pp_FormatoGrid = "nombre, Nombre, 175;apellido,Apellido, 175;tipoDoc, Tipo Documento, 65;numeroDoc," +
@@ -174,7 +174,7 @@
             this.btn_registrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_registrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn_registrar.Location = new System.Drawing.Point(634, 204);
-            this.btn_registrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_registrar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_registrar.Name = "btn_registrar";
             this.btn_registrar.Pp_Presionado = false;
             this.btn_registrar.Size = new System.Drawing.Size(95, 41);
@@ -237,7 +237,7 @@
             this.Btn_Buscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.Btn_Buscar.Location = new System.Drawing.Point(634, 145);
-            this.Btn_Buscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_Buscar.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Buscar.Name = "Btn_Buscar";
             this.Btn_Buscar.Pp_Presionado = false;
             this.Btn_Buscar.Size = new System.Drawing.Size(95, 41);
@@ -252,7 +252,7 @@
             this.chk_Todos.AutoSize = true;
             this.chk_Todos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.chk_Todos.Location = new System.Drawing.Point(543, 99);
-            this.chk_Todos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chk_Todos.Margin = new System.Windows.Forms.Padding(2);
             this.chk_Todos.Name = "chk_Todos";
             this.chk_Todos.Size = new System.Drawing.Size(72, 24);
             this.chk_Todos.TabIndex = 58;
@@ -266,7 +266,7 @@
             this.Btn_Modificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_Modificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.Btn_Modificar.Location = new System.Drawing.Point(634, 262);
-            this.Btn_Modificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_Modificar.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Modificar.Name = "Btn_Modificar";
             this.Btn_Modificar.Pp_Presionado = false;
             this.Btn_Modificar.Size = new System.Drawing.Size(95, 41);
@@ -281,7 +281,7 @@
             this.Btn_Limpiar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_Limpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.Btn_Limpiar.Location = new System.Drawing.Point(121, 387);
-            this.Btn_Limpiar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_Limpiar.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Limpiar.Name = "Btn_Limpiar";
             this.Btn_Limpiar.Pp_Presionado = false;
             this.Btn_Limpiar.Size = new System.Drawing.Size(76, 28);
@@ -297,7 +297,7 @@
             this.Btn_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_Eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.Btn_Eliminar.Location = new System.Drawing.Point(634, 321);
-            this.Btn_Eliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_Eliminar.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Eliminar.Name = "Btn_Eliminar";
             this.Btn_Eliminar.Pp_Presionado = false;
             this.Btn_Eliminar.Size = new System.Drawing.Size(95, 41);
@@ -314,7 +314,7 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Location = new System.Drawing.Point(10, 12);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(728, 394);
             this.panel1.TabIndex = 63;
@@ -325,7 +325,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Location = new System.Drawing.Point(24, 30);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(583, 91);
             this.panel3.TabIndex = 0;
@@ -356,7 +356,7 @@
             this.Controls.Add(this.Btn_Buscar);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Frm_ABMPasajeros";
             this.Load += new System.EventHandler(this.Frm_ABMPasajeros_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Grid_Pasajero)).EndInit();

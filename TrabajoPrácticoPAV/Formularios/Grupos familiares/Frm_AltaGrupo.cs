@@ -36,6 +36,7 @@ namespace TrabajoPrácticoPAV.Formularios.Grupos_familiares
             Panel_Busqueda.BackColor = Estilo.ColorFondoForms;
             Estilo.FormatearEstilo(Panel_Busqueda.Controls);
             Grid_Pasajero.Formatear();
+            Cmb_TipoDoc.CargarCombo();
         }
         #endregion
 
