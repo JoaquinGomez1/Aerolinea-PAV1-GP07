@@ -80,6 +80,7 @@ namespace TrabajoPrácticoPAV.Formularios.Vuelo
         }
         private void cmb_nomModelo_SelectionChangeCommitted(object sender, EventArgs e)
         {
+            cmb_numAvion.SelectedIndex = -1;
             string Condicion = @" JOIN Modelo ON Modelo.idModelo " +
                     @"= Avion.idModelo WHERE Avion.idModelo = " + cmb_nomModelo.SelectedValue;
             cmb_numAvion.CargarComboJoin(Condicion);
@@ -87,6 +88,7 @@ namespace TrabajoPrácticoPAV.Formularios.Vuelo
 
         private void cmb_AeropSalida_SelectionChangeCommitted(object sender, EventArgs e)
         {
+            cmb_AeropDestino.SelectedIndex = -1;
             string join = @" JOIN Tramo ON Tramo.codigoAeropuertoSalida " +
                     @"= aeropuerto.codigo WHERE Tramo.codigoAeropuertoDestino = '" + cmb_AeropSalida.SelectedValue + "'";
             cmb_AeropDestino.CargarComboJoin(join);
