@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using TrabajoPrácticoPAV.Backend;
 using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.NE_Usuarios;
+using static TrabajoPrácticoPAV.Clase.Tratamientos_Especiales;
 
 namespace TrabajoPrácticoPAV.Formularios.Tramos
 {
@@ -65,9 +66,12 @@ namespace TrabajoPrácticoPAV.Formularios.Tramos
 
         private void Btn_Modificar_Click(object sender, EventArgs e)
         {
-            string sql = _TE.CostructorUpdateDelete("Tramo", this.Controls, true);
-            _BD.Modificar(sql, false);
-            this.Close();
+            if(Resultado.correcto == _TE.Validar(this.Controls))
+            {
+                string sql = _TE.CostructorUpdateDelete("Tramo", this.Controls, true);
+                _BD.Modificar(sql, false);
+                this.Close();
+            }
         }
     }
 }

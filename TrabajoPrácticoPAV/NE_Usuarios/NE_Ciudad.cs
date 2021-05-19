@@ -22,6 +22,42 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             return resultadoSelect;
         }
 
+        public DataTable GetCiudad(string nombre, string pais, string provincia)
+        {
+            if (pais == "")
+            {
+                DataTable resultadoSelect = null;
+                return resultadoSelect;
+            }
+
+            if (nombre != "" && provincia == "")
+            {
+                string sql = $"SELECT * FROM Ciudad JOIN Provincia on Ciudad.idProvincia = Provincia.idProvincia JOIN Pais on Provincia.idPais = Pais.idPais WHERE (nombreCiudad='{nombre}') AND (Provincia.idPais={pais})";
+                DataTable resultadoSelect = _DB.EjecutarSelect(sql);
+                return resultadoSelect;
+            }
+
+            if (nombre != "" && provincia != "")
+            {
+                string sql = $"SELECT * FROM Ciudad JOIN Provincia on Ciudad.idProvincia = Provincia.idProvincia JOIN Pais on Provincia.idPais = Pais.idPais WHERE (nombreCiudad='{nombre}') AND (Provincia.idPais={pais}) AND (Ciudad.idProvincia={provincia}";
+                DataTable resultadoSelect = _DB.EjecutarSelect(sql);
+                return resultadoSelect;
+            }
+
+            if (nombre == "" && provincia != "")
+            {
+                string sql = $"SELECT * FROM Ciudad JOIN Provincia on Ciudad.idProvincia = Provincia.idProvincia JOIN Pais on Provincia.idPais = Pais.idPais WHERE (Provincia.idPais={pais}) AND (Ciudad.idProvincia={provincia})";
+                DataTable resultadoSelect = _DB.EjecutarSelect(sql);
+                return resultadoSelect;
+            }
+
+            else
+            {
+                DataTable resultadoSelect = null;
+                return resultadoSelect;
+            }
+        }
+
         public void InsertCiudad(CiudadObj Ciudad)
         {
             string sql = @"INSERT INTO Ciudad(nombreCiudad, idProvincia) 

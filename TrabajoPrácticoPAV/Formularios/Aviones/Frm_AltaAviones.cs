@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Clase;
-using TrabajoPrácticoPAV.NE_Aviones;
+using TrabajoPrácticoPAV.NE_Usuarios;
 
 namespace TrabajoPrácticoPAV.Formularios
 {
@@ -30,19 +30,7 @@ namespace TrabajoPrácticoPAV.Formularios
            
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-
-
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_registrar_Click(object sender, EventArgs e)
         {
             NE_Avion avion = new NE_Avion();
             if (txt_numero.Text.Length > 4 | cmb_Modelo.SelectedIndex == -1 | txt_numero.Text == string.Empty)
@@ -56,22 +44,11 @@ namespace TrabajoPrácticoPAV.Formularios
             avion.Insertar();
 
             this.Close();
-
         }
 
-        private void Frm_AltaAviones_FormClosed(object sender, FormClosedEventArgs e)
+        private void btn_cancelar_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void cmb_Modelo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
+            this.Close();
         }
     }
 }

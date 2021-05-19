@@ -30,6 +30,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
         private void InitializeComponent()
         {
             this.panel_registrar = new System.Windows.Forms.Panel();
+            this.btn_buscar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.btn_registrar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.cmb_cargo_register = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
             this.txt_apellido_register = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
@@ -47,15 +48,16 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.btn_eliminar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
+            this.btn_editar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.btn_refrescar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.grid_tripulantes = new TrabajoPrácticoPAV.Clase.DataGridView_Aerolinea();
             this.idTripulacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreCargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.idCargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_cerrar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.panel_registrar.SuspendLayout();
             this.panel_modify.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_tripulantes)).BeginInit();
@@ -64,6 +66,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
             // panel_registrar
             // 
             this.panel_registrar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_registrar.Controls.Add(this.btn_buscar);
             this.panel_registrar.Controls.Add(this.btn_registrar);
             this.panel_registrar.Controls.Add(this.cmb_cargo_register);
             this.panel_registrar.Controls.Add(this.txt_apellido_register);
@@ -71,20 +74,32 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
             this.panel_registrar.Controls.Add(this.lbl_cargo);
             this.panel_registrar.Controls.Add(this.lbl_apellido);
             this.panel_registrar.Controls.Add(this.lbl_nombre);
-            this.panel_registrar.Location = new System.Drawing.Point(45, 42);
-            this.panel_registrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel_registrar.Location = new System.Drawing.Point(24, 20);
             this.panel_registrar.Name = "panel_registrar";
-            this.panel_registrar.Size = new System.Drawing.Size(391, 193);
+            this.panel_registrar.Size = new System.Drawing.Size(325, 179);
             this.panel_registrar.TabIndex = 0;
+            // 
+            // btn_buscar
+            // 
+            this.btn_buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.btn_buscar.Location = new System.Drawing.Point(54, 117);
+            this.btn_buscar.Name = "btn_buscar";
+            this.btn_buscar.Pp_Presionado = false;
+            this.btn_buscar.Size = new System.Drawing.Size(90, 28);
+            this.btn_buscar.TabIndex = 10;
+            this.btn_buscar.Text = "Buscar";
+            this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
             // btn_registrar
             // 
             this.btn_registrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_registrar.Location = new System.Drawing.Point(200, 144);
-            this.btn_registrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_registrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.btn_registrar.Location = new System.Drawing.Point(171, 117);
             this.btn_registrar.Name = "btn_registrar";
             this.btn_registrar.Pp_Presionado = false;
-            this.btn_registrar.Size = new System.Drawing.Size(100, 28);
+            this.btn_registrar.Size = new System.Drawing.Size(90, 28);
             this.btn_registrar.TabIndex = 4;
             this.btn_registrar.Text = "Registrar";
             this.btn_registrar.UseVisualStyleBackColor = true;
@@ -93,8 +108,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
             // cmb_cargo_register
             // 
             this.cmb_cargo_register.FormattingEnabled = true;
-            this.cmb_cargo_register.Location = new System.Drawing.Point(143, 100);
-            this.cmb_cargo_register.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_cargo_register.Location = new System.Drawing.Point(113, 81);
             this.cmb_cargo_register.Name = "cmb_cargo_register";
             this.cmb_cargo_register.Pp_CampoAceptaNull = false;
             this.cmb_cargo_register.Pp_EsPk = true;
@@ -103,38 +117,36 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
             this.cmb_cargo_register.Pp_NombreCampoInsert = null;
             this.cmb_cargo_register.Pp_NombreTabla = "Cargo_Tripulacion";
             this.cmb_cargo_register.Pp_PkTabla = "idCargoTripulacion";
-            this.cmb_cargo_register.Size = new System.Drawing.Size(156, 24);
+            this.cmb_cargo_register.Size = new System.Drawing.Size(118, 21);
             this.cmb_cargo_register.TabIndex = 5;
             // 
             // txt_apellido_register
             // 
-            this.txt_apellido_register.Location = new System.Drawing.Point(143, 58);
-            this.txt_apellido_register.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_apellido_register.Location = new System.Drawing.Point(113, 55);
             this.txt_apellido_register.Name = "txt_apellido_register";
             this.txt_apellido_register.Pp_EsPk = false;
             this.txt_apellido_register.Pp_MensajeError = "Completar Apellido";
             this.txt_apellido_register.Pp_NombreCampo = null;
             this.txt_apellido_register.Pp_NombreTabla = null;
-            this.txt_apellido_register.Size = new System.Drawing.Size(156, 22);
+            this.txt_apellido_register.Size = new System.Drawing.Size(118, 20);
             this.txt_apellido_register.TabIndex = 4;
             // 
             // txt_nombre_register
             // 
-            this.txt_nombre_register.Location = new System.Drawing.Point(143, 26);
-            this.txt_nombre_register.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_nombre_register.Location = new System.Drawing.Point(113, 29);
             this.txt_nombre_register.Name = "txt_nombre_register";
             this.txt_nombre_register.Pp_EsPk = false;
             this.txt_nombre_register.Pp_MensajeError = "Completar nombre";
             this.txt_nombre_register.Pp_NombreCampo = null;
             this.txt_nombre_register.Pp_NombreTabla = null;
-            this.txt_nombre_register.Size = new System.Drawing.Size(156, 22);
+            this.txt_nombre_register.Size = new System.Drawing.Size(118, 20);
             this.txt_nombre_register.TabIndex = 3;
             // 
             // lbl_cargo
             // 
             this.lbl_cargo.AutoSize = true;
-            this.lbl_cargo.Location = new System.Drawing.Point(56, 100);
-            this.lbl_cargo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_cargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.lbl_cargo.Location = new System.Drawing.Point(57, 81);
             this.lbl_cargo.Name = "lbl_cargo";
             this.lbl_cargo.Size = new System.Drawing.Size(50, 17);
             this.lbl_cargo.TabIndex = 2;
@@ -143,8 +155,8 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
             // lbl_apellido
             // 
             this.lbl_apellido.AutoSize = true;
-            this.lbl_apellido.Location = new System.Drawing.Point(53, 57);
-            this.lbl_apellido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_apellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.lbl_apellido.Location = new System.Drawing.Point(46, 54);
             this.lbl_apellido.Name = "lbl_apellido";
             this.lbl_apellido.Size = new System.Drawing.Size(62, 17);
             this.lbl_apellido.TabIndex = 1;
@@ -153,8 +165,8 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
             // lbl_nombre
             // 
             this.lbl_nombre.AutoSize = true;
-            this.lbl_nombre.Location = new System.Drawing.Point(53, 26);
-            this.lbl_nombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.lbl_nombre.Location = new System.Drawing.Point(46, 29);
             this.lbl_nombre.Name = "lbl_nombre";
             this.lbl_nombre.Size = new System.Drawing.Size(62, 17);
             this.lbl_nombre.TabIndex = 0;
@@ -163,23 +175,21 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
             // lbl_title_register
             // 
             this.lbl_title_register.AutoSize = true;
-            this.lbl_title_register.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_title_register.Location = new System.Drawing.Point(59, 28);
-            this.lbl_title_register.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_title_register.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.lbl_title_register.Location = new System.Drawing.Point(20, -1);
             this.lbl_title_register.Name = "lbl_title_register";
-            this.lbl_title_register.Size = new System.Drawing.Size(181, 25);
+            this.lbl_title_register.Size = new System.Drawing.Size(229, 21);
             this.lbl_title_register.TabIndex = 3;
-            this.lbl_title_register.Text = "Registrar Tripulante";
+            this.lbl_title_register.Text = "Registrar / Buscar Tripulante";
             // 
             // lbl_title_modify
             // 
             this.lbl_title_modify.AccessibleName = "group_modify";
             this.lbl_title_modify.AutoSize = true;
-            this.lbl_title_modify.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_title_modify.Location = new System.Drawing.Point(620, 27);
-            this.lbl_title_modify.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_title_modify.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.lbl_title_modify.Location = new System.Drawing.Point(387, -1);
             this.lbl_title_modify.Name = "lbl_title_modify";
-            this.lbl_title_modify.Size = new System.Drawing.Size(183, 25);
+            this.lbl_title_modify.Size = new System.Drawing.Size(165, 21);
             this.lbl_title_modify.TabIndex = 6;
             this.lbl_title_modify.Text = "Modificar Tripulante";
             this.lbl_title_modify.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -196,21 +206,20 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
             this.panel_modify.Controls.Add(this.label2);
             this.panel_modify.Controls.Add(this.label3);
             this.panel_modify.Controls.Add(this.label4);
-            this.panel_modify.Location = new System.Drawing.Point(608, 42);
-            this.panel_modify.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel_modify.Location = new System.Drawing.Point(391, 20);
             this.panel_modify.Name = "panel_modify";
-            this.panel_modify.Size = new System.Drawing.Size(391, 193);
+            this.panel_modify.Size = new System.Drawing.Size(325, 179);
             this.panel_modify.TabIndex = 5;
             this.panel_modify.Visible = false;
             // 
             // btn_modify
             // 
             this.btn_modify.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_modify.Location = new System.Drawing.Point(200, 144);
-            this.btn_modify.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_modify.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.btn_modify.Location = new System.Drawing.Point(135, 117);
             this.btn_modify.Name = "btn_modify";
             this.btn_modify.Pp_Presionado = false;
-            this.btn_modify.Size = new System.Drawing.Size(100, 28);
+            this.btn_modify.Size = new System.Drawing.Size(90, 28);
             this.btn_modify.TabIndex = 4;
             this.btn_modify.Text = "Modificar";
             this.btn_modify.UseVisualStyleBackColor = true;
@@ -219,8 +228,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
             // cmb_cargo_modify
             // 
             this.cmb_cargo_modify.FormattingEnabled = true;
-            this.cmb_cargo_modify.Location = new System.Drawing.Point(143, 100);
-            this.cmb_cargo_modify.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_cargo_modify.Location = new System.Drawing.Point(107, 84);
             this.cmb_cargo_modify.Name = "cmb_cargo_modify";
             this.cmb_cargo_modify.Pp_CampoAceptaNull = false;
             this.cmb_cargo_modify.Pp_EsPk = true;
@@ -229,38 +237,36 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
             this.cmb_cargo_modify.Pp_NombreCampoInsert = null;
             this.cmb_cargo_modify.Pp_NombreTabla = "Cargo_Tripulacion";
             this.cmb_cargo_modify.Pp_PkTabla = "idCargoTripulacion";
-            this.cmb_cargo_modify.Size = new System.Drawing.Size(156, 24);
+            this.cmb_cargo_modify.Size = new System.Drawing.Size(118, 21);
             this.cmb_cargo_modify.TabIndex = 5;
             // 
             // txt_apellido_modify
             // 
-            this.txt_apellido_modify.Location = new System.Drawing.Point(143, 58);
-            this.txt_apellido_modify.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_apellido_modify.Location = new System.Drawing.Point(107, 58);
             this.txt_apellido_modify.Name = "txt_apellido_modify";
             this.txt_apellido_modify.Pp_EsPk = false;
             this.txt_apellido_modify.Pp_MensajeError = null;
             this.txt_apellido_modify.Pp_NombreCampo = null;
             this.txt_apellido_modify.Pp_NombreTabla = null;
-            this.txt_apellido_modify.Size = new System.Drawing.Size(156, 22);
+            this.txt_apellido_modify.Size = new System.Drawing.Size(118, 20);
             this.txt_apellido_modify.TabIndex = 4;
             // 
             // txt_nombre_modify
             // 
-            this.txt_nombre_modify.Location = new System.Drawing.Point(143, 26);
-            this.txt_nombre_modify.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_nombre_modify.Location = new System.Drawing.Point(107, 32);
             this.txt_nombre_modify.Name = "txt_nombre_modify";
             this.txt_nombre_modify.Pp_EsPk = false;
             this.txt_nombre_modify.Pp_MensajeError = null;
             this.txt_nombre_modify.Pp_NombreCampo = null;
             this.txt_nombre_modify.Pp_NombreTabla = null;
-            this.txt_nombre_modify.Size = new System.Drawing.Size(156, 22);
+            this.txt_nombre_modify.Size = new System.Drawing.Size(118, 20);
             this.txt_nombre_modify.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(56, 100);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.label2.Location = new System.Drawing.Point(51, 84);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 17);
             this.label2.TabIndex = 2;
@@ -269,8 +275,8 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(53, 57);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.label3.Location = new System.Drawing.Point(40, 57);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 17);
             this.label3.TabIndex = 1;
@@ -279,21 +285,47 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(53, 26);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.label4.Location = new System.Drawing.Point(40, 32);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 17);
             this.label4.TabIndex = 0;
             this.label4.Text = "Nombre:";
             // 
+            // btn_eliminar
+            // 
+            this.btn_eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.btn_eliminar.Location = new System.Drawing.Point(637, 310);
+            this.btn_eliminar.Name = "btn_eliminar";
+            this.btn_eliminar.Pp_Presionado = false;
+            this.btn_eliminar.Size = new System.Drawing.Size(90, 28);
+            this.btn_eliminar.TabIndex = 14;
+            this.btn_eliminar.Text = "Eliminar";
+            this.btn_eliminar.UseVisualStyleBackColor = true;
+            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
+            // 
+            // btn_editar
+            // 
+            this.btn_editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_editar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.btn_editar.Location = new System.Drawing.Point(637, 276);
+            this.btn_editar.Name = "btn_editar";
+            this.btn_editar.Pp_Presionado = false;
+            this.btn_editar.Size = new System.Drawing.Size(90, 28);
+            this.btn_editar.TabIndex = 13;
+            this.btn_editar.Text = "Editar";
+            this.btn_editar.UseVisualStyleBackColor = true;
+            this.btn_editar.Click += new System.EventHandler(this.btn_editar_Click);
+            // 
             // btn_refrescar
             // 
             this.btn_refrescar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_refrescar.Location = new System.Drawing.Point(900, 492);
-            this.btn_refrescar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_refrescar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.btn_refrescar.Location = new System.Drawing.Point(637, 242);
             this.btn_refrescar.Name = "btn_refrescar";
             this.btn_refrescar.Pp_Presionado = false;
-            this.btn_refrescar.Size = new System.Drawing.Size(100, 28);
+            this.btn_refrescar.Size = new System.Drawing.Size(90, 28);
             this.btn_refrescar.TabIndex = 7;
             this.btn_refrescar.Text = "Refrescar";
             this.btn_refrescar.UseVisualStyleBackColor = true;
@@ -307,17 +339,13 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
             this.nombre,
             this.apellido,
             this.nombreCargo,
-            this.Editar,
-            this.Eliminar,
             this.idCargo});
-            this.grid_tripulantes.Location = new System.Drawing.Point(45, 270);
-            this.grid_tripulantes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grid_tripulantes.Location = new System.Drawing.Point(24, 218);
             this.grid_tripulantes.Name = "grid_tripulantes";
             this.grid_tripulantes.Pp_FormatoGrid = null;
             this.grid_tripulantes.Pp_NombreTabla = null;
-            this.grid_tripulantes.Size = new System.Drawing.Size(955, 215);
+            this.grid_tripulantes.Size = new System.Drawing.Size(593, 175);
             this.grid_tripulantes.TabIndex = 4;
-            this.grid_tripulantes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_tripulantes_CellContentClick);
             // 
             // idTripulacion
             // 
@@ -347,30 +375,6 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
             this.nombreCargo.Name = "nombreCargo";
             this.nombreCargo.Width = 143;
             // 
-            // Editar
-            // 
-            this.Editar.Frozen = true;
-            this.Editar.HeaderText = "Editar";
-            this.Editar.Name = "Editar";
-            this.Editar.ReadOnly = true;
-            this.Editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Editar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Editar.Text = "Editar";
-            this.Editar.UseColumnTextForButtonValue = true;
-            this.Editar.Width = 65;
-            // 
-            // Eliminar
-            // 
-            this.Eliminar.Frozen = true;
-            this.Eliminar.HeaderText = "Eliminar";
-            this.Eliminar.Name = "Eliminar";
-            this.Eliminar.ReadOnly = true;
-            this.Eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Eliminar.Text = "Eliminar";
-            this.Eliminar.UseColumnTextForButtonValue = true;
-            this.Eliminar.Width = 65;
-            // 
             // idCargo
             // 
             this.idCargo.Frozen = true;
@@ -378,11 +382,27 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
             this.idCargo.Name = "idCargo";
             this.idCargo.Visible = false;
             // 
-            // Frm_Tripulacion
+            // btn_cerrar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.btn_cerrar.Location = new System.Drawing.Point(637, 344);
+            this.btn_cerrar.Name = "btn_cerrar";
+            this.btn_cerrar.Pp_Presionado = false;
+            this.btn_cerrar.Size = new System.Drawing.Size(90, 28);
+            this.btn_cerrar.TabIndex = 15;
+            this.btn_cerrar.Text = "Cerrar";
+            this.btn_cerrar.UseVisualStyleBackColor = true;
+            this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
+            // 
+            // Frm_ABMTripulacion
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_cerrar);
+            this.Controls.Add(this.btn_eliminar);
+            this.Controls.Add(this.btn_editar);
             this.Controls.Add(this.btn_refrescar);
             this.Controls.Add(this.lbl_title_modify);
             this.Controls.Add(this.panel_modify);
@@ -390,8 +410,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
             this.Controls.Add(this.lbl_title_register);
             this.Controls.Add(this.panel_registrar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "Frm_Tripulacion";
+            this.Name = "Frm_ABMTripulacion";
             this.Text = "Frm_Tripulacion";
             this.Load += new System.EventHandler(this.Frm_Tripulacion_Load);
             this.panel_registrar.ResumeLayout(false);
@@ -430,8 +449,10 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellido;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreCargo;
-        private System.Windows.Forms.DataGridViewButtonColumn Editar;
-        private System.Windows.Forms.DataGridViewButtonColumn Eliminar;
         private System.Windows.Forms.DataGridViewTextBoxColumn idCargo;
+        private Clase.Button_Aerolinea btn_editar;
+        private Clase.Button_Aerolinea btn_eliminar;
+        private Clase.Button_Aerolinea btn_buscar;
+        private Clase.Button_Aerolinea btn_cerrar;
     }
 }

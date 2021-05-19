@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using TrabajoPrácticoPAV.NE_Usuarios;
 using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.Backend;
+using System.Runtime.InteropServices;
 
 namespace TrabajoPrácticoPAV.Formularios.Modelo
 {
@@ -17,11 +18,23 @@ namespace TrabajoPrácticoPAV.Formularios.Modelo
     {
         NE_Modelo Modelo = new NE_Modelo();
         public string Id_Modelo { get ; set; }
-        
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWind, int wMsg, int wParam, int lParam);
+
+        private void BarraSuperior_MouseMove(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
 
         public Frm_ModificarModelo()
         {
             InitializeComponent();
+            this.BackColor = Estilo.ColorFondoForms;
+            Estilo.FormatearEstilo(this.Controls);
         }
 
         private void btn_cerrar_Click(object sender, EventArgs e)
@@ -54,5 +67,6 @@ namespace TrabajoPrácticoPAV.Formularios.Modelo
             
         }
 
+        
     }
 }
