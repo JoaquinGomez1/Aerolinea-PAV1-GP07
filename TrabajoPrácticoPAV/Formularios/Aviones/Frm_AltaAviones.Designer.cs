@@ -69,6 +69,7 @@ namespace TrabajoPrácticoPAV.Formularios
             // 
             // btn_Cancelar
             // 
+            this.btn_Cancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btn_Cancelar.Location = new System.Drawing.Point(195, 221);
             this.btn_Cancelar.Name = "btn_Cancelar";
             this.btn_Cancelar.Size = new System.Drawing.Size(75, 21);
@@ -129,7 +130,7 @@ namespace TrabajoPrácticoPAV.Formularios
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmb_Modelo);
             this.Controls.Add(this.txt_numero);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Frm_AltaAviones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -8,18 +8,17 @@ using static TrabajoPrácticoPAV.Clase.Tratamientos_Especiales;
 
 namespace TrabajoPrácticoPAV.Formularios.Tripulacion
 {
-    public partial class Frm_Tripulacion : Form
+    public partial class Frm_ABMTripulacion : Form
     {
         private readonly NE_Tripulacion _NE = new NE_Tripulacion();
         private readonly Tratamientos_Especiales tratamientos = new Tratamientos_Especiales();
         private int idTripulanteAModificar { get; set; }
 
-        public Frm_Tripulacion()
+        public Frm_ABMTripulacion()
         {
+            InitializeComponent();
             this.BackColor = Estilo.ColorFondoForms;
             Estilo.FormatearEstilo(this.Controls);
-            InitializeComponent();
-
         }
 
         private void Frm_Tripulacion_Load(object sender, EventArgs e)

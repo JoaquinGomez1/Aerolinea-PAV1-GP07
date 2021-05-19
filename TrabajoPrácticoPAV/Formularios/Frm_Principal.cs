@@ -11,6 +11,17 @@ using System.Windows.Forms;
 using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.Formularios;
 using TrabajoPrácticoPAV.Formularios.Pasajeros;
+using TrabajoPrácticoPAV.Formularios.Aeropuertos;
+using TrabajoPrácticoPAV.Formularios.Tipo_Asientos;
+using TrabajoPrácticoPAV.Formularios.Asientos;
+using TrabajoPrácticoPAV.Formularios.Modelo;
+using TrabajoPrácticoPAV.Formularios.Grupos_familiares;
+using TrabajoPrácticoPAV.Formularios.TipoDoc;
+using TrabajoPrácticoPAV.Formularios.Pais;
+using TrabajoPrácticoPAV.Formularios.Provincia;
+using TrabajoPrácticoPAV.Formularios.Ciudad;
+using TrabajoPrácticoPAV.Formularios.Tripulacion.Cargo_Tripulacion;
+using TrabajoPrácticoPAV.Formularios.Tripulacion;
 
 namespace TrabajoPrácticoPAV
 {
@@ -140,7 +151,18 @@ namespace TrabajoPrácticoPAV
                 case "Btn_ABMAviones":
                     AbrirFormulario<Frm_ABMAviones>();
                     break;
-
+                case "btn_ABM_Aeropuerto":
+                    AbrirFormulario<Frm_ABM_Aeropuerto>();
+                    break;
+                case "Btn_ABM":
+                    if (!menuStrip1.Visible)
+                    {
+                        menuStrip1.Visible = true;
+                        menuStrip1.BringToFront();
+                        // Nota: El menustrip se hace invisible al abrir un formulario
+                        // ver la función Abrir Formulario
+                    }
+                    break;
                 default:
                     MessageBox.Show("Esperando implementación");
                     break;
@@ -188,9 +210,9 @@ namespace TrabajoPrácticoPAV
         //Método abrir Form dentro de panel
         private void AbrirFormulario<MiForm>() where MiForm : Form, new()
         {
+            menuStrip1.Visible = false; //<- Previene que el menu strip quede abierto al abrir un formulario 
             Form formulario;
             formulario = PanelFormularios.Controls.OfType<MiForm>().FirstOrDefault();
-
 
             if (formulario == null)
             {
@@ -218,15 +240,14 @@ namespace TrabajoPrácticoPAV
         private void FormCerrado(object sender, FormClosedEventArgs e)
         {
             if (Application.OpenForms["Frm_ABMClientes"] == null)
-                RestaurarColorBoton(Btn_ABMClientes);
+                RestaurarColorBoton(Btn_ABM);
             if (Application.OpenForms["Frm_ABMViajes"] == null)
                 RestaurarColorBoton(Btn_ABM_Viaje);
             if (Application.OpenForms["Frm_ABMVuelo"] == null)
                 RestaurarColorBoton(Btn_ABM_Vuelo);
             if (Application.OpenForms["Frm_ABMTramos"] == null)
                 RestaurarColorBoton(Btn_ABM_Tramo);
-            if (Application.OpenForms["Frm_ABMAviones"] == null)
-                RestaurarColorBoton(Btn_ABMAviones);
+
             if (Application.OpenForms["Frm_Configuracion"] == null)
             {
                 DarColor();
@@ -283,5 +304,89 @@ namespace TrabajoPrácticoPAV
                 Timer_Contraer.Start();
         }
         #endregion
+
+
+
+        // Eventos de los items del menuStrip
+        // El que tenga tiempo vea si lo puede dejar un poco mejor
+        private void aeropuertosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Frm_ABM_Aeropuerto>();
+        }
+
+        private void aviónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Frm_ABMAviones>();
+        }
+
+        private void tipoDeAsientosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Frm_ABMTipoAsientos>();
+        }
+
+        private void asientosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Frm_ABMAsientos>();
+        }
+
+        private void modeloToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Frm_ABMmodelo>();
+        }
+
+        private void pasajeroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Frm_ABMPasajeros>();
+        }
+
+        private void grupoFamiliarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Frm_ABMGrupoFamiliar>();
+        }
+
+        private void tipoDeDocumentosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Frm_ABMTipoDoc>();
+        }
+
+        private void paísToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Frm_ABMPais>();
+        }
+
+        private void provinciaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Frm_ABMProvincia>();
+        }
+
+        private void ciudadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Frm_Ciudad>();
+        }
+
+        private void vueloToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Frm_ABMVuelo>();
+        }
+
+        private void tramosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Frm_ABMTramos>();
+        }
+
+        private void viajesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Frm_ABMViajes>();
+        }
+
+        private void cargosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Frm_ABMCargoTripulacion>();
+        }
+
+        private void tripulaciónToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Frm_ABMTripulacion>();
+        }
     }
 }

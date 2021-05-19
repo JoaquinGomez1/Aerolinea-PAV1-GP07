@@ -176,7 +176,7 @@ namespace TrabajoPrácticoPAV.Formularios
             return Resultado.correcto;
         }
 
-        private void CargarTodos()
+        public void CargarTodos()
         {
             DataTable todosLosViajes = _NE_Viajes.GetTodosLosViajes();
             this.datagrid_viajes.Columns[0].Width = 50;
