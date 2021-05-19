@@ -34,7 +34,6 @@
             this.Btn_Modificar = new System.Windows.Forms.Button();
             this.Btn_Registrar = new System.Windows.Forms.Button();
             this.btn_buscar = new System.Windows.Forms.Button();
-            this.chb_todos = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -143,18 +142,6 @@
             this.btn_buscar.Text = "Buscar";
             this.btn_buscar.UseVisualStyleBackColor = false;
             this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
-            // 
-            // chb_todos
-            // 
-            this.chb_todos.AutoSize = true;
-            this.chb_todos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.chb_todos.Location = new System.Drawing.Point(840, 73);
-            this.chb_todos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.chb_todos.Name = "chb_todos";
-            this.chb_todos.Size = new System.Drawing.Size(90, 29);
-            this.chb_todos.TabIndex = 42;
-            this.chb_todos.Text = "Todos";
-            this.chb_todos.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -273,7 +260,6 @@
             this.Controls.Add(this.Btn_Modificar);
             this.Controls.Add(this.Btn_Registrar);
             this.Controls.Add(this.btn_buscar);
-            this.Controls.Add(this.chb_todos);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.grid_provincias);
             this.Controls.Add(this.label2);
@@ -298,7 +284,6 @@
         private System.Windows.Forms.Button Btn_Modificar;
         private System.Windows.Forms.Button Btn_Registrar;
         private System.Windows.Forms.Button btn_buscar;
-        private System.Windows.Forms.CheckBox chb_todos;
         private System.Windows.Forms.Label label3;
         private Clase.DataGridView_Aerolinea grid_provincias;
         private System.Windows.Forms.Label label2;
