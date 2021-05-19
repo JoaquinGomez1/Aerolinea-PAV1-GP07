@@ -37,13 +37,17 @@ namespace TrabajoPrácticoPAV.Formularios
             this.label5 = new System.Windows.Forms.Label();
             this.chk_todos = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.grid_aviones = new TrabajoPrácticoPAV.Clase.DataGridView_Aerolinea();
+            this.btn_deseleccionar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.txt_numero = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
             this.cmb_Modelo = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
             this.btn_eliminar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.btn_limpiar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.btn_agregar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.btn_buscar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
+            this.grid_aviones = new System.Windows.Forms.DataGridView();
+            this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idModelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_aviones)).BeginInit();
             this.SuspendLayout();
@@ -116,6 +120,7 @@ namespace TrabajoPrácticoPAV.Formularios
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btn_deseleccionar);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.chk_todos);
             this.panel1.Controls.Add(this.label4);
@@ -127,27 +132,25 @@ namespace TrabajoPrácticoPAV.Formularios
             this.panel1.Size = new System.Drawing.Size(498, 100);
             this.panel1.TabIndex = 18;
             // 
-            // grid_aviones
+            // btn_deseleccionar
             // 
-            this.grid_aviones.AllowUserToAddRows = false;
-            this.grid_aviones.AllowUserToDeleteRows = false;
-            this.grid_aviones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grid_aviones.Location = new System.Drawing.Point(39, 178);
-            this.grid_aviones.Name = "grid_aviones";
-            this.grid_aviones.Pp_FormatoGrid = null;
-            this.grid_aviones.Pp_NombreTabla = null;
-            this.grid_aviones.Size = new System.Drawing.Size(402, 150);
-            this.grid_aviones.TabIndex = 19;
-            this.grid_aviones.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_aviones_CellClick);
+            this.btn_deseleccionar.Location = new System.Drawing.Point(282, 58);
+            this.btn_deseleccionar.Name = "btn_deseleccionar";
+            this.btn_deseleccionar.Pp_Presionado = false;
+            this.btn_deseleccionar.Size = new System.Drawing.Size(21, 12);
+            this.btn_deseleccionar.TabIndex = 18;
+            this.btn_deseleccionar.Text = "-";
+            this.btn_deseleccionar.UseVisualStyleBackColor = true;
+            this.btn_deseleccionar.Click += new System.EventHandler(this.btn_deseleccionar_Click);
             // 
             // txt_numero
             // 
             this.txt_numero.Location = new System.Drawing.Point(90, 19);
             this.txt_numero.Name = "txt_numero";
-            this.txt_numero.Pp_EsPk = false;
+            this.txt_numero.Pp_EsPk = true;
             this.txt_numero.Pp_MensajeError = null;
-            this.txt_numero.Pp_NombreCampo = null;
-            this.txt_numero.Pp_NombreTabla = null;
+            this.txt_numero.Pp_NombreCampo = "numeroPorModelo";
+            this.txt_numero.Pp_NombreTabla = "Avion";
             this.txt_numero.Size = new System.Drawing.Size(177, 26);
             this.txt_numero.TabIndex = 4;
             // 
@@ -156,10 +159,10 @@ namespace TrabajoPrácticoPAV.Formularios
             this.cmb_Modelo.FormattingEnabled = true;
             this.cmb_Modelo.Location = new System.Drawing.Point(90, 50);
             this.cmb_Modelo.Name = "cmb_Modelo";
-            this.cmb_Modelo.Pp_CampoAceptaNull = true;
+            this.cmb_Modelo.Pp_CampoAceptaNull = false;
             this.cmb_Modelo.Pp_EsPk = false;
             this.cmb_Modelo.Pp_MensajeError = "No se ha cargado un valor de modelo";
-            this.cmb_Modelo.Pp_NombreCampo = "idModelo";
+            this.cmb_Modelo.Pp_NombreCampo = "nombre";
             this.cmb_Modelo.Pp_NombreCampoInsert = "idModelo";
             this.cmb_Modelo.Pp_NombreTabla = "Modelo";
             this.cmb_Modelo.Pp_PkTabla = "idModelo";
@@ -218,6 +221,41 @@ namespace TrabajoPrácticoPAV.Formularios
             this.btn_buscar.UseVisualStyleBackColor = false;
             this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
+            // grid_aviones
+            // 
+            this.grid_aviones.AllowUserToAddRows = false;
+            this.grid_aviones.AllowUserToDeleteRows = false;
+            this.grid_aviones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grid_aviones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.numero,
+            this.nombre,
+            this.idModelo});
+            this.grid_aviones.Location = new System.Drawing.Point(39, 178);
+            this.grid_aviones.Name = "grid_aviones";
+            this.grid_aviones.ReadOnly = true;
+            this.grid_aviones.Size = new System.Drawing.Size(391, 150);
+            this.grid_aviones.TabIndex = 19;
+            // 
+            // numero
+            // 
+            this.numero.HeaderText = "Numero";
+            this.numero.Name = "numero";
+            this.numero.ReadOnly = true;
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "Modelo";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            this.nombre.Width = 180;
+            // 
+            // idModelo
+            // 
+            this.idModelo.HeaderText = "IdModelo";
+            this.idModelo.Name = "idModelo";
+            this.idModelo.ReadOnly = true;
+            this.idModelo.Visible = false;
+            // 
             // Frm_ABMAviones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -261,6 +299,10 @@ namespace TrabajoPrácticoPAV.Formularios
         private System.Windows.Forms.Panel panel1;
         private Clase.Button_Aerolinea btn_limpiar;
         private Clase.Button_Aerolinea btn_eliminar;
-        private Clase.DataGridView_Aerolinea grid_aviones;
+        private Clase.Button_Aerolinea btn_deseleccionar;
+        private System.Windows.Forms.DataGridView grid_aviones;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idModelo;
     }
 }

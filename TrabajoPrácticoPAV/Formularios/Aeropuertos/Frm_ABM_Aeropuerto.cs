@@ -41,7 +41,6 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
 
         private void CargarGrilla(string sql)
         {
-
             DataTable tabla = new DataTable();
             tabla = _BD.EjecutarSelect(sql);
 
@@ -76,16 +75,16 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
 
         private void grid_aeropuertos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            Id_codigo = grid_aeropuertos.CurrentRow.Cells["codigo"].Value.ToString();
-            btn_modificar.Enabled = true;
-            btn_eliminar.Enabled = true;
+                Id_codigo = grid_aeropuertos.CurrentRow.Cells[0].Value.ToString();
+                btn_modificar.Enabled = true;
+                btn_eliminar.Enabled = true;   
         }
 
         private void btn_modificar_Click(object sender, EventArgs e)
         {
-                    Frm_Modificación_Aeropuerto modificar = new Frm_Modificación_Aeropuerto();
-                    modificar.Id_codigo = Id_codigo;
-                    modificar.ShowDialog();
+                Frm_Modificación_Aeropuerto modificar = new Frm_Modificación_Aeropuerto();
+                modificar.Id_codigo = Id_codigo;
+                modificar.ShowDialog();
          }
 
         private void grid_aeropuertos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

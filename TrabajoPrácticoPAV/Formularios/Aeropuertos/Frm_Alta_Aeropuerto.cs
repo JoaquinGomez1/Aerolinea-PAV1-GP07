@@ -33,7 +33,6 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
             Estilo.FormatearEstilo(this.Controls);
         }
 
-
         private void btn_volver_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -44,11 +43,18 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
             Tratamientos_Especiales Tratamiento = new Tratamientos_Especiales();
             if(Tratamiento.Validar(this.Controls) == Tratamientos_Especiales.Resultado.correcto)
             {
-                NE_Aeropuertos aeropuerto = new NE_Aeropuertos();
-                aeropuerto.Pp_codigo = txt_codigo.Text;
-                aeropuerto.Pp_nombre = txt_nombre.Text;
-                aeropuerto.Pp_idCiudad = cmb_ciudades.SelectedValue.ToString();
-                aeropuerto.Insertar();
+                if(txt_codigo.TextLength < 4 && txt_nombre.TextLength < 51)
+                {
+                    NE_Aeropuertos aeropuerto = new NE_Aeropuertos();
+                    aeropuerto.Pp_codigo = txt_codigo.Text;
+                    aeropuerto.Pp_nombre = txt_nombre.Text;
+                    aeropuerto.Pp_idCiudad = cmb_ciudades.SelectedValue.ToString();
+                    aeropuerto.Insertar();
+                }
+                else
+                {
+                    MessageBox.Show("Error. Se ha ingresado más dígitos de los permitidos (codigo(3), nombre(50))");
+                }
                 this.Close();
             }
         }
@@ -56,11 +62,6 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
         private void Frm_Alta_Aeropuerto_Load(object sender, EventArgs e)
         {
             cmb_ciudades.CargarCombo();
-        }
-
-        private void cmb_ciudades_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
