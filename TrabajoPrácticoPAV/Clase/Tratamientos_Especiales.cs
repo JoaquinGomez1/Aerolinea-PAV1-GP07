@@ -326,13 +326,13 @@ namespace TrabajoPrácticoPAV.Clase
                         condiciones += $" AND {columna} = {valorColumna}";
                 }
             }
-            if(cambios != "" && condiciones != "")
+            //if(cambios != "" && condiciones != "")
             return $"{sql}{cambios}{condiciones}";
-            else
-            {
-                MessageBox.Show("Las condiciones y los cambios no fueron especificados");
-                return "";
-            }
+            //else
+            //{
+            //    MessageBox.Show("Las condiciones y los cambios no fueron especificados");
+            //    return "";
+            //}
         }
 
         public DataTable BuscarEstructuraTabla(string NombreTabla)
