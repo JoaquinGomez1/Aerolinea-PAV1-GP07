@@ -170,7 +170,7 @@
             this.panel2.Location = new System.Drawing.Point(54, 48);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(713, 136);
+            this.panel2.Size = new System.Drawing.Size(701, 148);
             this.panel2.TabIndex = 0;
             // 
             // label1
@@ -178,7 +178,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(120, 50);
+            this.label1.Location = new System.Drawing.Point(120, 56);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 25);

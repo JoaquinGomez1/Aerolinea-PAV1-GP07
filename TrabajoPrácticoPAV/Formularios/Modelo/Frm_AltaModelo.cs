@@ -20,6 +20,21 @@ namespace TrabajoPrácticoPAV.Formularios.Modelo
         {
             InitializeComponent();
         }
+        //private void BarraSuperior_MouseMove(object sender, MouseEventArgs e)
+        //{
+        //    ReleaseCapture();
+        //    SendMessage(this.Handle, 0x112, 0xf012, 0);
+        //}
+
+        private void SendMessage(IntPtr handle, int v1, int v2, int v3)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void ReleaseCapture()
+        {
+            throw new NotImplementedException();
+        }
 
         private void Frm_AltaModelo_Load(object sender, EventArgs e)
         {
@@ -52,6 +67,12 @@ namespace TrabajoPrácticoPAV.Formularios.Modelo
                 return;
             }
             
+        }
+
+        private void BarraSuperior_MouseMove(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

@@ -63,20 +63,10 @@ namespace TrabajoPrácticoPAV.Formularios.Vuelo
 
         private void cmb_nomModelo_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            //MessageBox.Show("descomentar esta parte");
+            
             string Condicion = @" JOIN Modelo ON Modelo.idModelo " +
                     @"= Avion.idModelo WHERE Avion.idModelo = " + cmb_nomModelo.SelectedValue;
             cmb_numAvion.CargarComboJoin(Condicion);
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
 
         }
     }   
