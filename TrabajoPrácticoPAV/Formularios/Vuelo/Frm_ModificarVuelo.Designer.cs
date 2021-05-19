@@ -33,16 +33,16 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.cmb_nomModelo = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
-            this.cmb_numAvion = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
-            this.cmb_AeropDestino = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
-            this.cmb_AeropSalida = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
-            this.btn_ModificacionVuelo = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
-            this.button_Aerolinea2 = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txt_idVuelo = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
+            this.button_Aerolinea2 = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
+            this.btn_ModificacionVuelo = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
+            this.cmb_AeropSalida = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
+            this.cmb_AeropDestino = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
+            this.cmb_numAvion = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
+            this.cmb_nomModelo = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
             this.SuspendLayout();
             // 
             // label1
@@ -95,92 +95,6 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "Aeropuerto Destino";
             // 
-            // cmb_nomModelo
-            // 
-            this.cmb_nomModelo.FormattingEnabled = true;
-            this.cmb_nomModelo.Location = new System.Drawing.Point(182, 107);
-            this.cmb_nomModelo.Name = "cmb_nomModelo";
-            this.cmb_nomModelo.Pp_CampoAceptaNull = true;
-            this.cmb_nomModelo.Pp_EsPk = false;
-            this.cmb_nomModelo.Pp_MensajeError = "Seleccionar un modelo";
-            this.cmb_nomModelo.Pp_NombreCampo = "nombre";
-            this.cmb_nomModelo.Pp_NombreCampoInsert = "idModelo";
-            this.cmb_nomModelo.Pp_NombreTabla = "modelo";
-            this.cmb_nomModelo.Pp_PkTabla = "idModelo";
-            this.cmb_nomModelo.Size = new System.Drawing.Size(121, 21);
-            this.cmb_nomModelo.TabIndex = 7;
-            this.cmb_nomModelo.SelectionChangeCommitted += new System.EventHandler(this.cmb_nomModelo_SelectionChangeCommitted);
-            // 
-            // cmb_numAvion
-            // 
-            this.cmb_numAvion.FormattingEnabled = true;
-            this.cmb_numAvion.Location = new System.Drawing.Point(182, 136);
-            this.cmb_numAvion.Name = "cmb_numAvion";
-            this.cmb_numAvion.Pp_CampoAceptaNull = true;
-            this.cmb_numAvion.Pp_EsPk = false;
-            this.cmb_numAvion.Pp_MensajeError = "Seleccionar un avion";
-            this.cmb_numAvion.Pp_NombreCampo = "numeroPorModelo";
-            this.cmb_numAvion.Pp_NombreCampoInsert = "numeroPorModelo";
-            this.cmb_numAvion.Pp_NombreTabla = "avion";
-            this.cmb_numAvion.Pp_PkTabla = "numeroPorModelo";
-            this.cmb_numAvion.Size = new System.Drawing.Size(121, 21);
-            this.cmb_numAvion.TabIndex = 8;
-            // 
-            // cmb_AeropDestino
-            // 
-            this.cmb_AeropDestino.FormattingEnabled = true;
-            this.cmb_AeropDestino.Location = new System.Drawing.Point(465, 133);
-            this.cmb_AeropDestino.Name = "cmb_AeropDestino";
-            this.cmb_AeropDestino.Pp_CampoAceptaNull = true;
-            this.cmb_AeropDestino.Pp_EsPk = false;
-            this.cmb_AeropDestino.Pp_MensajeError = "Seleccionar un Aeropuerto de destino";
-            this.cmb_AeropDestino.Pp_NombreCampo = "nombre";
-            this.cmb_AeropDestino.Pp_NombreCampoInsert = "codigoAeropuertoDestino";
-            this.cmb_AeropDestino.Pp_NombreTabla = "aeropuerto";
-            this.cmb_AeropDestino.Pp_PkTabla = "codigo";
-            this.cmb_AeropDestino.Size = new System.Drawing.Size(183, 21);
-            this.cmb_AeropDestino.TabIndex = 9;
-            // 
-            // cmb_AeropSalida
-            // 
-            this.cmb_AeropSalida.FormattingEnabled = true;
-            this.cmb_AeropSalida.Location = new System.Drawing.Point(465, 107);
-            this.cmb_AeropSalida.Name = "cmb_AeropSalida";
-            this.cmb_AeropSalida.Pp_CampoAceptaNull = true;
-            this.cmb_AeropSalida.Pp_EsPk = false;
-            this.cmb_AeropSalida.Pp_MensajeError = "Seleccionar un Aeropuerto de salida";
-            this.cmb_AeropSalida.Pp_NombreCampo = "nombre";
-            this.cmb_AeropSalida.Pp_NombreCampoInsert = "codigoAeropuertoSalida";
-            this.cmb_AeropSalida.Pp_NombreTabla = "Aeropuerto";
-            this.cmb_AeropSalida.Pp_PkTabla = "codigo";
-            this.cmb_AeropSalida.Size = new System.Drawing.Size(183, 21);
-            this.cmb_AeropSalida.TabIndex = 10;
-            this.cmb_AeropSalida.SelectionChangeCommitted += new System.EventHandler(this.cmb_AeropSalida_SelectionChangeCommitted);
-            // 
-            // btn_ModificacionVuelo
-            // 
-            this.btn_ModificacionVuelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.btn_ModificacionVuelo.Location = new System.Drawing.Point(239, 284);
-            this.btn_ModificacionVuelo.Name = "btn_ModificacionVuelo";
-            this.btn_ModificacionVuelo.Pp_Presionado = false;
-            this.btn_ModificacionVuelo.Size = new System.Drawing.Size(93, 29);
-            this.btn_ModificacionVuelo.TabIndex = 11;
-            this.btn_ModificacionVuelo.Text = "Aceptar";
-            this.btn_ModificacionVuelo.UseVisualStyleBackColor = true;
-            this.btn_ModificacionVuelo.Click += new System.EventHandler(this.btn_ModificacionVuelo_Click);
-            // 
-            // button_Aerolinea2
-            // 
-            this.button_Aerolinea2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.button_Aerolinea2.Location = new System.Drawing.Point(349, 284);
-            this.button_Aerolinea2.Name = "button_Aerolinea2";
-            this.button_Aerolinea2.Pp_Presionado = false;
-            this.button_Aerolinea2.Size = new System.Drawing.Size(93, 29);
-            this.button_Aerolinea2.TabIndex = 12;
-            this.button_Aerolinea2.Text = "Cancelar";
-            this.button_Aerolinea2.UseVisualStyleBackColor = true;
-            this.button_Aerolinea2.Click += new System.EventHandler(this.button_Aerolinea2_Click);
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -222,6 +136,93 @@
             this.txt_idVuelo.Pp_NombreTabla = "Vuelo";
             this.txt_idVuelo.Size = new System.Drawing.Size(114, 20);
             this.txt_idVuelo.TabIndex = 14;
+            // 
+            // button_Aerolinea2
+            // 
+            this.button_Aerolinea2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.button_Aerolinea2.Location = new System.Drawing.Point(349, 284);
+            this.button_Aerolinea2.Name = "button_Aerolinea2";
+            this.button_Aerolinea2.Pp_Presionado = false;
+            this.button_Aerolinea2.Size = new System.Drawing.Size(93, 29);
+            this.button_Aerolinea2.TabIndex = 12;
+            this.button_Aerolinea2.Text = "Cancelar";
+            this.button_Aerolinea2.UseVisualStyleBackColor = true;
+            this.button_Aerolinea2.Click += new System.EventHandler(this.button_Aerolinea2_Click);
+            // 
+            // btn_ModificacionVuelo
+            // 
+            this.btn_ModificacionVuelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.btn_ModificacionVuelo.Location = new System.Drawing.Point(239, 284);
+            this.btn_ModificacionVuelo.Name = "btn_ModificacionVuelo";
+            this.btn_ModificacionVuelo.Pp_Presionado = false;
+            this.btn_ModificacionVuelo.Size = new System.Drawing.Size(93, 29);
+            this.btn_ModificacionVuelo.TabIndex = 11;
+            this.btn_ModificacionVuelo.Text = "Aceptar";
+            this.btn_ModificacionVuelo.UseVisualStyleBackColor = true;
+            this.btn_ModificacionVuelo.Click += new System.EventHandler(this.btn_ModificacionVuelo_Click);
+            // 
+            // cmb_AeropSalida
+            // 
+            this.cmb_AeropSalida.FormattingEnabled = true;
+            this.cmb_AeropSalida.Location = new System.Drawing.Point(465, 107);
+            this.cmb_AeropSalida.Name = "cmb_AeropSalida";
+            this.cmb_AeropSalida.Pp_CampoAceptaNull = true;
+            this.cmb_AeropSalida.Pp_EsPk = false;
+            this.cmb_AeropSalida.Pp_MensajeError = "Seleccionar un Aeropuerto de salida";
+            this.cmb_AeropSalida.Pp_NombreCampo = "nombre";
+            this.cmb_AeropSalida.Pp_NombreCampoInsert = "codigoAeropuertoSalida";
+            this.cmb_AeropSalida.Pp_NombreTabla = "Aeropuerto";
+            this.cmb_AeropSalida.Pp_PkTabla = "codigo";
+            this.cmb_AeropSalida.Size = new System.Drawing.Size(183, 21);
+            this.cmb_AeropSalida.TabIndex = 10;
+            this.cmb_AeropSalida.SelectedIndexChanged += new System.EventHandler(this.cmb_AeropSalida_SelectedIndexChanged);
+            this.cmb_AeropSalida.SelectionChangeCommitted += new System.EventHandler(this.cmb_AeropSalida_SelectionChangeCommitted);
+            // 
+            // cmb_AeropDestino
+            // 
+            this.cmb_AeropDestino.FormattingEnabled = true;
+            this.cmb_AeropDestino.Location = new System.Drawing.Point(465, 133);
+            this.cmb_AeropDestino.Name = "cmb_AeropDestino";
+            this.cmb_AeropDestino.Pp_CampoAceptaNull = true;
+            this.cmb_AeropDestino.Pp_EsPk = false;
+            this.cmb_AeropDestino.Pp_MensajeError = "Seleccionar un Aeropuerto de destino";
+            this.cmb_AeropDestino.Pp_NombreCampo = "nombre";
+            this.cmb_AeropDestino.Pp_NombreCampoInsert = "codigoAeropuertoDestino";
+            this.cmb_AeropDestino.Pp_NombreTabla = "aeropuerto";
+            this.cmb_AeropDestino.Pp_PkTabla = "codigo";
+            this.cmb_AeropDestino.Size = new System.Drawing.Size(183, 21);
+            this.cmb_AeropDestino.TabIndex = 9;
+            // 
+            // cmb_numAvion
+            // 
+            this.cmb_numAvion.FormattingEnabled = true;
+            this.cmb_numAvion.Location = new System.Drawing.Point(182, 136);
+            this.cmb_numAvion.Name = "cmb_numAvion";
+            this.cmb_numAvion.Pp_CampoAceptaNull = true;
+            this.cmb_numAvion.Pp_EsPk = false;
+            this.cmb_numAvion.Pp_MensajeError = "Seleccionar un avion";
+            this.cmb_numAvion.Pp_NombreCampo = "numeroPorModelo";
+            this.cmb_numAvion.Pp_NombreCampoInsert = "numeroPorModelo";
+            this.cmb_numAvion.Pp_NombreTabla = "avion";
+            this.cmb_numAvion.Pp_PkTabla = "numeroPorModelo";
+            this.cmb_numAvion.Size = new System.Drawing.Size(121, 21);
+            this.cmb_numAvion.TabIndex = 8;
+            // 
+            // cmb_nomModelo
+            // 
+            this.cmb_nomModelo.FormattingEnabled = true;
+            this.cmb_nomModelo.Location = new System.Drawing.Point(182, 107);
+            this.cmb_nomModelo.Name = "cmb_nomModelo";
+            this.cmb_nomModelo.Pp_CampoAceptaNull = true;
+            this.cmb_nomModelo.Pp_EsPk = false;
+            this.cmb_nomModelo.Pp_MensajeError = "Seleccionar un modelo";
+            this.cmb_nomModelo.Pp_NombreCampo = "nombre";
+            this.cmb_nomModelo.Pp_NombreCampoInsert = "idModelo";
+            this.cmb_nomModelo.Pp_NombreTabla = "modelo";
+            this.cmb_nomModelo.Pp_PkTabla = "idModelo";
+            this.cmb_nomModelo.Size = new System.Drawing.Size(121, 21);
+            this.cmb_nomModelo.TabIndex = 7;
+            this.cmb_nomModelo.SelectionChangeCommitted += new System.EventHandler(this.cmb_nomModelo_SelectionChangeCommitted);
             // 
             // Frm_ModificarVuelo
             // 
