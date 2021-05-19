@@ -12,10 +12,12 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
 
         public DataTable GetTodosLasCiudades()
         {
-            string sql = @"SELECT idCiudad, nombreCiudad, Ciudad.idProvincia AS idProvincia, nombreProvincia
+            string sql = @"SELECT idCiudad, nombreCiudad, Ciudad.idProvincia AS idProvincia, nombreProvincia,
+                         Provincia.idPais AS idPais, nombrePais
                          FROM Ciudad
                          JOIN Provincia ON
-                         Ciudad.idProvincia = Provincia.idProvincia";
+                         Ciudad.idProvincia = Provincia.idProvincia
+                         JOIN Pais ON Provincia.idPais = Pais.idPais";
             DataTable resultadoSelect = _DB.EjecutarSelect(sql);
             return resultadoSelect;
         }
@@ -30,15 +32,17 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
 
         public CiudadObj GetCiudadPorId(string id)
         {
-            string sql = $"SELECT * FROM Ciudad WHERE idCiudad = {id}";
+            string sql = $"SELECT * FROM Ciudad JOIN Provincia on Ciudad.idProvincia = Provincia.idProvincia JOIN Pais on Provincia.idPais = Pais.idPais WHERE idCiudad = {id}";
             DataTable valores = _DB.EjecutarSelect(sql);
 
             CiudadObj ciudad = new CiudadObj()
             {
                 Id = Int32.Parse(valores.Rows[0]["idCiudad"].ToString()),
-                Nombre = valores.Rows[0]["nombre"].ToString(),
+                Nombre = valores.Rows[0]["nombreCiudad"].ToString(),
+                Pais = valores.Rows[0]["nombrePais"].ToString(),
                 Provincia = valores.Rows[0]["nombreProvincia"].ToString(),
                 IdProvincia = Int32.Parse(valores.Rows[0]["idProvincia"].ToString()),
+                IdPais = Int32.Parse(valores.Rows[0]["idPais"].ToString()),
             };
 
             return ciudad;
@@ -47,17 +51,7 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
         public void ModificarCiudad(CiudadObj ciudad)
         {
             string sql = $"UPDATE Ciudad SET nombreCiudad = '{ciudad.Nombre}', idProvincia = {ciudad.IdProvincia} WHERE idCiudad = {ciudad.Id}";
-            _DB.Modificar(sql, true);
-        }
-
-        public void EliminarCiudad(CiudadObj Ciudad)
-        {
-            EliminarCiudades($"{Ciudad.Id}");
-        }
-
-        public void EliminarCiudad(int idCiudad)
-        {
-            EliminarCiudades($"{idCiudad}");
+            _DB.Modificar(sql, false);
         }
 
         public void EliminarCiudad(string idCiudad)

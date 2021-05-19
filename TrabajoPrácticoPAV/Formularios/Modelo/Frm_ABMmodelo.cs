@@ -46,7 +46,7 @@ namespace TrabajoPrácticoPAV.Formularios.Modelo
             Tratamientos_Especiales tratamiento = new Tratamientos_Especiales();
 
             string sql = tratamiento.ConstructorSelect(this.Controls, "", "Modelo");
-            MessageBox.Show("sql" + sql);
+            //MessageBox.Show("sql" + sql);
             Cargar_grilla_modelos(sql);
         }
         private void Cargar_grilla_modelos(string sql)

@@ -101,7 +101,7 @@
             // msktxt_Costo
             // 
             this.msktxt_Costo.Location = new System.Drawing.Point(214, 91);
-            this.msktxt_Costo.Mask = "00000";
+            this.msktxt_Costo.Mask = "000000";
             this.msktxt_Costo.Name = "msktxt_Costo";
             this.msktxt_Costo.Pp_EsPk = false;
             this.msktxt_Costo.Pp_MensajeError = "Por favor, introduzca costo";

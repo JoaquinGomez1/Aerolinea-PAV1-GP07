@@ -43,13 +43,17 @@ namespace TrabajoPrácticoPAV.Formularios.Modelo
             txt_codigoModelo.Text = tabla.Rows[0]["idModelo"].ToString();
             txt_nombre.Text = tabla.Rows[0]["nombre"].ToString();
         }
-        private void btn_eliminar_Click(object sender, EventArgs e)
+        private void btn_modificar_Click(object sender, EventArgs e)
         {
             Tratamientos_Especiales Tratamiento = new Tratamientos_Especiales();
+            if (Tratamiento.Validar(this.Controls) == Tratamientos_Especiales.Resultado.correcto)
+            {
+                string sql = Tratamiento.CostructorUpdateDelete("Modelo", this.Controls, true);
+                _BD.Modificar(sql, false);
+                this.Close();
+            }
             
-            string sql = Tratamiento.CostructorUpdateDelete("Modelo", this.Controls, true);
-            _BD.Modificar(sql, false);
-            this.Close();
+            
         }
 
     }
