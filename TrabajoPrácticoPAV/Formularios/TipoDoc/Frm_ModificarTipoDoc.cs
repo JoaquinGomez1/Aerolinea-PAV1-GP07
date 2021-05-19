@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TrabajoPrácticoPAV.Backend;
+using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.NE_Usuarios;
 
 namespace TrabajoPrácticoPAV.Formularios.TipoDoc
@@ -17,7 +19,10 @@ namespace TrabajoPrácticoPAV.Formularios.TipoDoc
         public object Pp_id_documento { get; set; }
         public Frm_ModificarTipoDoc()
         {
+            this.BackColor = Estilo.ColorFondoForms;
+            Estilo.FormatearEstilo(this.Controls);
             InitializeComponent();
+            this.CenterToScreen();
         }
 
         private void Frm_ModificarTipoDoc_Load(object sender, EventArgs e)
@@ -27,13 +32,7 @@ namespace TrabajoPrácticoPAV.Formularios.TipoDoc
 
         }
 
-        private void btn_borrar_Click(object sender, EventArgs e)
-        {
-            NE_TipoDoc tipo = new NE_TipoDoc();
-            tipo.Pp_nombre_Tipo_Doc = txt_documento.Text;
-            tipo.Pp_id_TipoDoc = Pp_id_documento;
-            tipo.Borrar();
-        }
+
 
         private void textBox_Aerolinea1_TextChanged(object sender, EventArgs e)
         {
@@ -41,10 +40,16 @@ namespace TrabajoPrácticoPAV.Formularios.TipoDoc
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (txt_documento.Text == "")
+            {
+                MessageBox.Show("Por favor ingrese un tipo de documento valido");
+                return;
+            }
             NE_TipoDoc tipo = new NE_TipoDoc();
             tipo.Pp_nombre_Tipo_Doc = txt_documento.Text;
             tipo.Pp_id_TipoDoc = Pp_id_documento;
             tipo.Editar();
+            this.Close();
         }
     }
 }

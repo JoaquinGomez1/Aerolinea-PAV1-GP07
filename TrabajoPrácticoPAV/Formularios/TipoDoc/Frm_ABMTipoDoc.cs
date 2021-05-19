@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Clase;
+using TrabajoPrácticoPAV.NE_Usuarios;
+
 
 namespace TrabajoPrácticoPAV.Formularios.TipoDoc
 {
@@ -56,6 +58,14 @@ namespace TrabajoPrácticoPAV.Formularios.TipoDoc
             modificar.Pp_id_documento = cmb_tipoDoc.SelectedValue;
             modificar.ShowDialog();
 
+        }
+
+        private void btn_eliminar_Click(object sender, EventArgs e)
+        {
+            NE_TipoDoc tipo = new NE_TipoDoc();
+            tipo.Pp_nombre_Tipo_Doc = cmb_tipoDoc.Text;
+            tipo.Pp_id_TipoDoc = cmb_tipoDoc.SelectedValue;
+            tipo.Borrar();
         }
     }
 }
