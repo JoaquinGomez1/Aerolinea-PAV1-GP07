@@ -46,7 +46,7 @@ namespace TrabajoPrácticoPAV.Formularios.Modelo
             if (MessageBox.Show("¿Esta seguro de Borrar?", "Importante", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
                 modelo.Borrar(Id_modelo);
-                MessageBox.Show("Se borró correctamente el modelo");
+                //MessageBox.Show("Se borró correctamente el modelo");
                 this.Close();
 
             }
