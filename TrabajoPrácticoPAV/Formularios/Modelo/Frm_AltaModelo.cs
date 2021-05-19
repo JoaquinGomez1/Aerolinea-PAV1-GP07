@@ -16,26 +16,12 @@ namespace TrabajoPrácticoPAV.Formularios.Modelo
 {
     public partial class Frm_AltaModelo : Form
     {
+        NE_Modelo modelo = new NE_Modelo();
         public Frm_AltaModelo()
         {
             InitializeComponent();
         }
-        //private void BarraSuperior_MouseMove(object sender, MouseEventArgs e)
-        //{
-        //    ReleaseCapture();
-        //    SendMessage(this.Handle, 0x112, 0xf012, 0);
-        //}
-
-        private void SendMessage(IntPtr handle, int v1, int v2, int v3)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void ReleaseCapture()
-        {
-            throw new NotImplementedException();
-        }
-
+    
         private void Frm_AltaModelo_Load(object sender, EventArgs e)
         {
             this.BackColor = Estilo.ColorFondoForms;
@@ -54,11 +40,9 @@ namespace TrabajoPrácticoPAV.Formularios.Modelo
 
             if (Tratamiento.Validar(this.Controls) == Tratamientos_Especiales.Resultado.correcto)
             {
-                Conexion_DB _BD = new Conexion_DB();
                 Tratamiento.Validar(this.Controls);
-               
-                string sql = Tratamiento.CostructorInsert("Modelo", this.Controls);
-                _BD.Insertar(sql, false);
+                
+                modelo.Insertar(this.Controls);
                 this.Close();
              
             }
@@ -69,10 +53,5 @@ namespace TrabajoPrácticoPAV.Formularios.Modelo
             
         }
 
-        private void BarraSuperior_MouseMove(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
     }
 }

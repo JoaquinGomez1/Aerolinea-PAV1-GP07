@@ -39,7 +39,6 @@ namespace TrabajoPrácticoPAV.Formularios.Asientos
             txt_idasiento.Text = tabla.Rows[0]["numeroAsiento"].ToString();
             cmb_nombreModelo.SelectedValue = int.Parse(tabla.Rows[0]["idModelo"].ToString());
             cmb_numeroAvion.SelectedValue = int.Parse(tabla.Rows[0]["numeroPorModelo"].ToString());
-            //cmb_clase.SelectedValue = int.Parse(tabla.Rows[0]["tipoAsiento"].ToString());
             txt_estado.Text = tabla.Rows[0]["estado"].ToString();
         }
 
@@ -52,8 +51,7 @@ namespace TrabajoPrácticoPAV.Formularios.Asientos
         {
             if (MessageBox.Show("¿Esta seguro de Borrar?", "Importante", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
-                asiento.Borrar(Id_asiento);
-                MessageBox.Show("Se borró correctamente el vuelo");
+                asiento.Borrar(this.Controls);
                 this.Close();
 
             }

@@ -38,7 +38,7 @@ namespace TrabajoPrácticoPAV.Formularios.Vuelo
         private void MostrarDatos1(DataTable tabla)
         {
             txt_idVuelo.Text = tabla.Rows[0]["idVuelo"].ToString();
-            txt_duracionestimada.Text = tabla.Rows[0]["duracionEstimada"].ToString();
+            // txt_duracionestimada.Text = tabla.Rows[0]["duracionEstimada"].ToString();
             cmb_nomModelo.SelectedValue = int.Parse(tabla.Rows[0]["idModelo"].ToString());
             cmb_numAvion.SelectedValue = tabla.Rows[0]["numeroPorModelo"].ToString();
             cmb_AeropDestino.SelectedValue = tabla.Rows[0]["codigoAeropuertoDestino"].ToString();
@@ -56,7 +56,6 @@ namespace TrabajoPrácticoPAV.Formularios.Vuelo
         }
         private void cmb_nomModelo_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            //MessageBox.Show("descomentar esta parte");
             string Condicion = @" JOIN Modelo ON Modelo.idModelo " +
                     @"= Avion.idModelo WHERE Avion.idModelo = " + cmb_nomModelo.SelectedValue;
             cmb_numAvion.CargarComboJoin(Condicion);

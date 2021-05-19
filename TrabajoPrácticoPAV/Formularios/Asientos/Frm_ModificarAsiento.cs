@@ -15,8 +15,9 @@ namespace TrabajoPrácticoPAV.Formularios.Asientos
 {
     public partial class Frm_ModificarAsiento : Form
     {
-        Conexion_DB _BD = new Conexion_DB();
+        NE_Asiento asiento = new NE_Asiento();
         public string Id_Asiento { get; set; }
+
         public Frm_ModificarAsiento()
         {
             InitializeComponent();
@@ -30,7 +31,6 @@ namespace TrabajoPrácticoPAV.Formularios.Asientos
             this.BackColor = Estilo.ColorFondoForms;
             Estilo.FormatearEstilo(this.Controls);
 
-            NE_Asiento asiento = new NE_Asiento();
             MostrarDatos(asiento.RecuperarXId(Id_Asiento));
         }
         private void MostrarDatos(DataTable tabla)
@@ -50,9 +50,8 @@ namespace TrabajoPrácticoPAV.Formularios.Asientos
         private void btn_registrarAsiento_Click(object sender, EventArgs e)
         {
             Tratamientos_Especiales Tratamiento = new Tratamientos_Especiales();
-         
-                string sql = Tratamiento.CostructorUpdateDelete("Asientos", panel1.Controls, true);
-                _BD.Modificar(sql, false);
+
+            asiento.Modificar(this.Controls);
                 this.Close();
         }
 

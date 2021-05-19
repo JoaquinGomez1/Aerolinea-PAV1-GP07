@@ -19,6 +19,8 @@ namespace TrabajoPrácticoPAV.Formularios.Tipo_Asientos
         public object Pp_costo { get; set; }
         public string Id_Tipo { get; set; }
         Conexion_DB _BD = new Conexion_DB();
+        NE_TipoAsiento TA = new NE_TipoAsiento();
+
 
         public Frm_ModificarTipoAsiento()
         {
@@ -29,8 +31,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tipo_Asientos
         {
             this.BackColor = Estilo.ColorFondoForms;
             Estilo.FormatearEstilo(this.Controls);
-
-            NE_TipoAsiento TipoAsiento = new NE_TipoAsiento();
+            
             txt_idTipo.Text = Id_Tipo;
             txt_Nombre.Text = Pp_nombre;
             msktxt_Costo.Text = Pp_costo.ToString();
@@ -43,9 +44,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tipo_Asientos
 
         private void btn_Actualizar_Click_1(object sender, EventArgs e)
         {
-            Tratamientos_Especiales _TE = new Tratamientos_Especiales();
-            string sql = _TE.CostructorUpdateDelete("Tipo_Asiento", this.Controls, true);
-            _BD.Modificar(sql, false);
+            TA.Modificar(this.Controls);
             this.Close();
         }
         

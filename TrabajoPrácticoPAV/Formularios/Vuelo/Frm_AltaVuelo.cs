@@ -24,8 +24,8 @@ namespace TrabajoPrácticoPAV.Formularios.Vuelo
         private void Frm_AltaVuelo_Load(object sender, EventArgs e)
         {
             cmb_nomModelo.CargarCombo();
-            cmb_AeropDestino.CargarCombo();
             cmb_AeropSalida.CargarCombo();
+           
 
             this.BackColor = Estilo.ColorFondoForms;
                 Estilo.FormatearEstilo(this.Controls);
@@ -41,8 +41,7 @@ namespace TrabajoPrácticoPAV.Formularios.Vuelo
                 Tratamiento.Validar(this.Controls);
                 if (cmb_AeropSalida.SelectedIndex != cmb_AeropDestino.SelectedIndex)
                 {
-                    string sql = Tratamiento.CostructorInsert("Vuelo", this.Controls);
-                    _BD.Insertar(sql, false);
+                    vuelo.Insertar(this.Controls);
                     this.Close();
                 }
                 else
@@ -68,6 +67,13 @@ namespace TrabajoPrácticoPAV.Formularios.Vuelo
                     @"= Avion.idModelo WHERE Avion.idModelo = " + cmb_nomModelo.SelectedValue;
             cmb_numAvion.CargarComboJoin(Condicion);
 
+        }
+        
+        private void cmb_AeropSalida_SelectionChangeCommitted_1(object sender, EventArgs e)
+        {
+            string join = @" JOIN Tramo ON Tramo.codigoAeropuertoSalida " +
+                    @"= aeropuerto.codigo WHERE Tramo.codigoAeropuertoDestino = '" + cmb_AeropSalida.SelectedValue + "'";
+            cmb_AeropDestino.CargarComboJoin(join);
         }
     }   
 }

@@ -18,14 +18,11 @@ namespace TrabajoPrácticoPAV.Formularios
     public partial class Frm_ABMVuelo : Form
     {
         public string Id_Vuelo { get; set; }
+        NE_Vuelos vuelo = new NE_Vuelos();
+
         public Frm_ABMVuelo()
         {
             InitializeComponent();
-        }
-
-        private void btn_cancelar_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void Frm_ABMVuelo_Load(object sender, EventArgs e)
@@ -39,64 +36,29 @@ namespace TrabajoPrácticoPAV.Formularios
 
         private void btn_consultar1_Click(object sender, EventArgs e)
         {
-            NE_Vuelos vuelo = new NE_Vuelos();
-
             if (chk_box.Checked == false && cmb_NumAvion.SelectedIndex == -1 && cmb_nomModelo.SelectedIndex == -1)
             {
                 MessageBox.Show("Debe seleccionar alguna opción");
             }
-            if (chk_box.Checked == true)
+            else
             {
-                DataTable tabla = new DataTable();
-                tabla = vuelo.RecuperarTodos();
-                CargarGrilla_vuelo1(tabla);
-                return;
-            }
-            if (chk_box.Checked == false
-                && cmb_NumAvion.SelectedIndex != -1
-                && cmb_nomModelo.SelectedIndex != -1)
-            {
-                CargarGrilla_vuelo1(vuelo.Recuperar_Mixto((cmb_NumAvion.SelectedValue.ToString()), cmb_nomModelo.SelectedValue.ToString()));
-                return;
-            }
-            if (cmb_nomModelo.SelectedIndex != -1)
-            {
-                CargarGrilla_vuelo1(vuelo.RecuprarXmodelo(cmb_nomModelo.SelectedValue.ToString()));
-                return;
-            }
-            if (cmb_NumAvion.SelectedIndex != -1)
-            {
-                CargarGrilla_vuelo1(vuelo.RecuperarXavion(cmb_NumAvion.SelectedValue.ToString()));
+                
+                vuelo.CargarGrilla_vuelo1( grilla_ABM_vuelo1, "", this.Controls);
             }
         }
-        private void CargarGrilla_vuelo1(DataTable tabla)
-        {
-            grilla_ABM_vuelo1.Rows.Clear();
-
-            for (int i = 0; i < tabla.Rows.Count; i++)
-            {
-                grilla_ABM_vuelo1.Rows.Add();
-                grilla_ABM_vuelo1.Rows[i].Cells[0].Value = tabla.Rows[i]["duracionEstimada"].ToString();
-                grilla_ABM_vuelo1.Rows[i].Cells[1].Value = tabla.Rows[i]["n_modelo"].ToString();
-                grilla_ABM_vuelo1.Rows[i].Cells[2].Value = tabla.Rows[i]["codigoAeropuertoDestino"].ToString();
-                grilla_ABM_vuelo1.Rows[i].Cells[3].Value = tabla.Rows[i]["codigoAeropuertoSalida"].ToString();
-                grilla_ABM_vuelo1.Rows[i].Cells[4].Value = tabla.Rows[i]["idVuelo"].ToString();
-            }
-            if (tabla.Rows.Count == 0)
-            {
-                MessageBox.Show("No se encontraron vuelos.");
-            }
-        }
+       
 
         private void btn_registrar1_Click(object sender, EventArgs e)
         {
             Frm_AltaVuelo altavuelo = new Frm_AltaVuelo();
             altavuelo.ShowDialog();
+            vuelo.CargarGrilla_vuelo1(grilla_ABM_vuelo1, "", this.Controls);
+            btn_borrar1.Enabled = false;
+            btn_modificar1.Enabled = false;
         }
 
         private void grilla_ABM_vuelo1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            NE_Vuelos NegoVuelo = new NE_Vuelos();
             btn_borrar1.Enabled = true;
             btn_modificar1.Enabled = true;
             Id_Vuelo = grilla_ABM_vuelo1.CurrentRow.Cells[4].Value.ToString();
@@ -107,6 +69,9 @@ namespace TrabajoPrácticoPAV.Formularios
             Frm_ModificarVuelo modificarVuelo = new Frm_ModificarVuelo();
             modificarVuelo.Id_vuelo = Id_Vuelo;
             modificarVuelo.ShowDialog();
+            vuelo.CargarGrilla_vuelo1(grilla_ABM_vuelo1, "", this.Controls);
+            btn_borrar1.Enabled = false;
+            btn_modificar1.Enabled = false;
         }
 
         private void btn_borrar1_Click(object sender, EventArgs e)
@@ -114,6 +79,9 @@ namespace TrabajoPrácticoPAV.Formularios
             Frm_BorrarVuelo borrarvuelo = new Frm_BorrarVuelo();
             borrarvuelo.Id_vuelo = Id_Vuelo;
             borrarvuelo.ShowDialog();
+            vuelo.CargarGrilla_vuelo1(grilla_ABM_vuelo1, "", this.Controls);
+            btn_borrar1.Enabled = false;
+            btn_modificar1.Enabled = false;
         }
 
         private void btn_limpiar1_Click_1(object sender, EventArgs e)
