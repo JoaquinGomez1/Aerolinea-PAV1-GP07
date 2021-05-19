@@ -50,7 +50,7 @@
             // 
             this.txt_idasiento.Enabled = false;
             this.txt_idasiento.Location = new System.Drawing.Point(306, 70);
-            this.txt_idasiento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_idasiento.Margin = new System.Windows.Forms.Padding(4);
             this.txt_idasiento.Name = "txt_idasiento";
             this.txt_idasiento.Pp_EsPk = true;
             this.txt_idasiento.Pp_MensajeError = null;
@@ -75,7 +75,7 @@
             // 
             this.btn_cerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
             this.btn_cerrar.Location = new System.Drawing.Point(358, 290);
-            this.btn_cerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_cerrar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_cerrar.Name = "btn_cerrar";
             this.btn_cerrar.Pp_Presionado = false;
             this.btn_cerrar.Size = new System.Drawing.Size(99, 34);
@@ -88,7 +88,7 @@
             // 
             this.btn_registrarAsiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
             this.btn_registrarAsiento.Location = new System.Drawing.Point(180, 290);
-            this.btn_registrarAsiento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_registrarAsiento.Margin = new System.Windows.Forms.Padding(4);
             this.btn_registrarAsiento.Name = "btn_registrarAsiento";
             this.btn_registrarAsiento.Pp_Presionado = false;
             this.btn_registrarAsiento.Size = new System.Drawing.Size(99, 34);
@@ -149,7 +149,7 @@
             // 
             this.txt_estado.Enabled = false;
             this.txt_estado.Location = new System.Drawing.Point(306, 226);
-            this.txt_estado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_estado.Margin = new System.Windows.Forms.Padding(4);
             this.txt_estado.Name = "txt_estado";
             this.txt_estado.Pp_EsPk = false;
             this.txt_estado.Pp_MensajeError = "Ingrese el estado del asiento";
@@ -163,7 +163,7 @@
             this.cmb_clase.Enabled = false;
             this.cmb_clase.FormattingEnabled = true;
             this.cmb_clase.Location = new System.Drawing.Point(306, 187);
-            this.cmb_clase.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_clase.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_clase.Name = "cmb_clase";
             this.cmb_clase.Pp_CampoAceptaNull = false;
             this.cmb_clase.Pp_EsPk = false;
@@ -180,7 +180,7 @@
             this.cmb_numeroAvion.Enabled = false;
             this.cmb_numeroAvion.FormattingEnabled = true;
             this.cmb_numeroAvion.Location = new System.Drawing.Point(306, 148);
-            this.cmb_numeroAvion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_numeroAvion.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_numeroAvion.Name = "cmb_numeroAvion";
             this.cmb_numeroAvion.Pp_CampoAceptaNull = true;
             this.cmb_numeroAvion.Pp_EsPk = false;
@@ -197,7 +197,7 @@
             this.cmb_nombreModelo.Enabled = false;
             this.cmb_nombreModelo.FormattingEnabled = true;
             this.cmb_nombreModelo.Location = new System.Drawing.Point(306, 109);
-            this.cmb_nombreModelo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_nombreModelo.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_nombreModelo.Name = "cmb_nombreModelo";
             this.cmb_nombreModelo.Pp_CampoAceptaNull = true;
             this.cmb_nombreModelo.Pp_EsPk = false;
@@ -219,6 +219,7 @@
             this.BarraSuperior.Name = "BarraSuperior";
             this.BarraSuperior.Size = new System.Drawing.Size(635, 39);
             this.BarraSuperior.TabIndex = 49;
+            this.BarraSuperior.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BarraSuperior_MouseMove);
             // 
             // Titulo
             // 
@@ -262,7 +263,7 @@
             this.Controls.Add(this.cmb_nombreModelo);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Frm_BajaAsiento";
             this.Text = "Frm_BajaAsiento";
             this.Load += new System.EventHandler(this.Frm_BajaAsiento_Load);
