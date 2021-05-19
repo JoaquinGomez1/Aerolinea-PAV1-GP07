@@ -29,6 +29,7 @@ namespace TrabajoPrácticoPAV.Formularios.Aviones
 
         public string Id_modelo { get; set; }
         public string Id_numero { get; set; }
+        public string Nombre { get; set; }
         public Frm_Borrar_Avion()
         {
             InitializeComponent();
@@ -36,43 +37,41 @@ namespace TrabajoPrácticoPAV.Formularios.Aviones
             Estilo.FormatearEstilo(this.Controls);
 
         }
-        private void btn_aceptar_Click(object sender, EventArgs e)
-        {
-            NE_Avion avion = new NE_Avion(); 
-            if (MessageBox.Show("¿Está seguro de Borrar el avion?", "Importante", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
-            {
-                avion.Remover_avion(Id_numero, Id_modelo);
-                this.Close();
-            }
-        }
-
         
+        private void Frm_Borrar_Avion_Load_1(object sender, EventArgs e)
+        {
+            NE_Avion avion = new NE_Avion();
+            MostrarDatos(avion.Recuperar_x_numero(Id_numero));
+
+        }
         private void MostrarDatos(DataTable tabla)
         {
             if (tabla.Rows.Count > 0)
             {
-                Id_numero = tabla.Rows[0]["numeroPorModelo"].ToString();
-                //grid_aviones.Rows[i].Cells[1].Value = tabla.Rows[i]["nombre"].ToString();
-                Id_modelo = tabla.Rows[0]["IdModelo"].ToString();
+                txt_numero.Text = tabla.Rows[0]["numeroPorModelo"].ToString();
+                cmb_modelos.SelectedValue = tabla.Rows[0]["nombre"].ToString();
+                txt_idModelo.Text = tabla.Rows[0]["idModelo"].ToString();
 
             }
             else
             {
-                MessageBox.Show("No se encontró un aeropuerto con los filtros especificados");
+                MessageBox.Show("No se encontró un avion con los filtros especificados");
             }
-        }
-
-        private void Frm_Borrar_Avion_Load_1(object sender, EventArgs e)
-        {
-            cmb_modelos.CargarCombo();
-            NE_Avion avion = new NE_Avion();
-            MostrarDatos(avion.Recuperar_x_numero(Id_numero));
-
         }
 
         private void button_Aerolinea2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btn_eliminar_Click(object sender, EventArgs e)
+        {
+            NE_Avion avion = new NE_Avion();
+            if (MessageBox.Show("¿Está seguro de Borrar el avion?", "Importante", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                avion.Remover_avion(Id_numero, Id_modelo);
+                this.Close();
+            }
         }
     }
 }

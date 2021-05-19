@@ -41,18 +41,20 @@ namespace TrabajoPrácticoPAV.Formularios
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(47, 108);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label1.Location = new System.Drawing.Point(41, 103);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 13);
+            this.label1.Size = new System.Drawing.Size(65, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "Numero";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(47, 144);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label2.Location = new System.Drawing.Point(41, 139);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 13);
+            this.label2.Size = new System.Drawing.Size(61, 20);
             this.label2.TabIndex = 3;
             this.label2.Text = "Modelo";
             // 
@@ -94,24 +96,28 @@ namespace TrabajoPrácticoPAV.Formularios
             // 
             // btn_registrar
             // 
+            this.btn_registrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
+            this.btn_registrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn_registrar.Location = new System.Drawing.Point(96, 205);
             this.btn_registrar.Name = "btn_registrar";
             this.btn_registrar.Pp_Presionado = false;
-            this.btn_registrar.Size = new System.Drawing.Size(75, 23);
+            this.btn_registrar.Size = new System.Drawing.Size(82, 33);
             this.btn_registrar.TabIndex = 7;
             this.btn_registrar.Text = "Registrar";
-            this.btn_registrar.UseVisualStyleBackColor = true;
+            this.btn_registrar.UseVisualStyleBackColor = false;
             this.btn_registrar.Click += new System.EventHandler(this.btn_registrar_Click);
             // 
             // btn_cancelar
             // 
+            this.btn_cancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
+            this.btn_cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn_cancelar.Location = new System.Drawing.Point(195, 205);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Pp_Presionado = false;
-            this.btn_cancelar.Size = new System.Drawing.Size(75, 23);
+            this.btn_cancelar.Size = new System.Drawing.Size(82, 33);
             this.btn_cancelar.TabIndex = 7;
             this.btn_cancelar.Text = "Cancelar";
-            this.btn_cancelar.UseVisualStyleBackColor = true;
+            this.btn_cancelar.UseVisualStyleBackColor = false;
             this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
             // Frm_AltaAviones
@@ -127,11 +133,11 @@ namespace TrabajoPrácticoPAV.Formularios
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmb_Modelo);
             this.Controls.Add(this.txt_numero);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.Name = "Frm_AltaAviones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Frm_AltaAviones";
+            this.Text = "Registrar nuevo avión";
             this.Load += new System.EventHandler(this.Frm_AltaAviones_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
