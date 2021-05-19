@@ -63,6 +63,7 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
         {
               Frm_Alta_Aeropuerto alta = new Frm_Alta_Aeropuerto();
               alta.ShowDialog();
+            grid_aeropuertos.Rows.Clear();
         }
 
         private void Frm_ABM_Aeropuerto_Load(object sender, EventArgs e)
@@ -85,7 +86,8 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
                 Frm_Modificación_Aeropuerto modificar = new Frm_Modificación_Aeropuerto();
                 modificar.Id_codigo = Id_codigo;
                 modificar.ShowDialog();
-         }
+            grid_aeropuertos.Rows.Clear();
+        }
 
         private void grid_aeropuertos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -100,6 +102,7 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
             Frm_Borrar_Aeropuerto borrar = new Frm_Borrar_Aeropuerto();
             borrar.Id_codigo = Id_codigo;
             borrar.ShowDialog();
+            grid_aeropuertos.Rows.Clear();
         }
 
         private void btn_limpiarr_Click(object sender, EventArgs e)
