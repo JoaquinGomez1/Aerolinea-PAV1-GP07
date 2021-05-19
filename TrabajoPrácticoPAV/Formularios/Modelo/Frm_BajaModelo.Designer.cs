@@ -43,50 +43,50 @@
             // txt_codigoModelo
             // 
             this.txt_codigoModelo.Enabled = false;
-            this.txt_codigoModelo.Location = new System.Drawing.Point(225, 71);
+            this.txt_codigoModelo.Location = new System.Drawing.Point(261, 71);
             this.txt_codigoModelo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_codigoModelo.Name = "txt_codigoModelo";
-            this.txt_codigoModelo.Pp_EsPk = false;
+            this.txt_codigoModelo.Pp_EsPk = true;
             this.txt_codigoModelo.Pp_MensajeError = null;
             this.txt_codigoModelo.Pp_NombreCampo = "idModelo";
             this.txt_codigoModelo.Pp_NombreTabla = "Modelo";
-            this.txt_codigoModelo.Size = new System.Drawing.Size(132, 22);
+            this.txt_codigoModelo.Size = new System.Drawing.Size(161, 22);
             this.txt_codigoModelo.TabIndex = 0;
             // 
             // txt_nombre
             // 
             this.txt_nombre.Enabled = false;
-            this.txt_nombre.Location = new System.Drawing.Point(225, 121);
+            this.txt_nombre.Location = new System.Drawing.Point(261, 114);
             this.txt_nombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.Pp_EsPk = false;
             this.txt_nombre.Pp_MensajeError = null;
             this.txt_nombre.Pp_NombreCampo = null;
             this.txt_nombre.Pp_NombreTabla = null;
-            this.txt_nombre.Size = new System.Drawing.Size(241, 22);
+            this.txt_nombre.Size = new System.Drawing.Size(202, 22);
             this.txt_nombre.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Enabled = false;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(16, 71);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label1.Location = new System.Drawing.Point(77, 71);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(175, 25);
+            this.label1.Size = new System.Drawing.Size(147, 20);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Codigo del modelo";
+            this.label1.Text = "Código del modelo";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Enabled = false;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(20, 121);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label2.Location = new System.Drawing.Point(70, 114);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(181, 25);
+            this.label2.Size = new System.Drawing.Size(154, 20);
             this.label2.TabIndex = 3;
             this.label2.Text = "Nombre del modelo";
             // 
@@ -95,7 +95,7 @@
             this.btn_cerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
             this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_cerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_cerrar.Location = new System.Drawing.Point(244, 180);
+            this.btn_cerrar.Location = new System.Drawing.Point(322, 168);
             this.btn_cerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_cerrar.Name = "btn_cerrar";
             this.btn_cerrar.Pp_Presionado = false;
@@ -110,7 +110,7 @@
             this.btn_eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
             this.btn_eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_eliminar.Location = new System.Drawing.Point(117, 180);
+            this.btn_eliminar.Location = new System.Drawing.Point(157, 168);
             this.btn_eliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.Pp_Presionado = false;
@@ -139,8 +139,9 @@
             this.BarraSuperior.Location = new System.Drawing.Point(0, 0);
             this.BarraSuperior.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BarraSuperior.Name = "BarraSuperior";
-            this.BarraSuperior.Size = new System.Drawing.Size(512, 39);
+            this.BarraSuperior.Size = new System.Drawing.Size(582, 39);
             this.BarraSuperior.TabIndex = 50;
+            this.BarraSuperior.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BarraSuperior_MouseMove);
             // 
             // Titulo
             // 
@@ -158,7 +159,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(227)))), ((int)(((byte)(187)))));
-            this.ClientSize = new System.Drawing.Size(512, 246);
+            this.ClientSize = new System.Drawing.Size(582, 250);
             this.Controls.Add(this.BarraSuperior);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btn_cerrar);

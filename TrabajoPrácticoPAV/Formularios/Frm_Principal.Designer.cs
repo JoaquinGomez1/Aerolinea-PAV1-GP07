@@ -297,7 +297,7 @@
             // aviónToolStripMenuItem
             // 
             this.aviónToolStripMenuItem.Name = "aviónToolStripMenuItem";
-            this.aviónToolStripMenuItem.Size = new System.Drawing.Size(148, 24);
+            this.aviónToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.aviónToolStripMenuItem.Text = "Avión";
             this.aviónToolStripMenuItem.Click += new System.EventHandler(this.aviónToolStripMenuItem_Click);
             // 
@@ -307,7 +307,7 @@
             this.tipoDeAsientosToolStripMenuItem,
             this.asientosToolStripMenuItem});
             this.modeloToolStripMenuItem.Name = "modeloToolStripMenuItem";
-            this.modeloToolStripMenuItem.Size = new System.Drawing.Size(148, 24);
+            this.modeloToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.modeloToolStripMenuItem.Text = "Asientos";
             // 
             // tipoDeAsientosToolStripMenuItem
@@ -327,7 +327,7 @@
             // modeloToolStripMenuItem1
             // 
             this.modeloToolStripMenuItem1.Name = "modeloToolStripMenuItem1";
-            this.modeloToolStripMenuItem1.Size = new System.Drawing.Size(148, 24);
+            this.modeloToolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
             this.modeloToolStripMenuItem1.Text = "Modelo";
             this.modeloToolStripMenuItem1.Click += new System.EventHandler(this.modeloToolStripMenuItem1_Click);
             // 
@@ -375,21 +375,21 @@
             // paísToolStripMenuItem
             // 
             this.paísToolStripMenuItem.Name = "paísToolStripMenuItem";
-            this.paísToolStripMenuItem.Size = new System.Drawing.Size(150, 24);
+            this.paísToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.paísToolStripMenuItem.Text = "País";
             this.paísToolStripMenuItem.Click += new System.EventHandler(this.paísToolStripMenuItem_Click);
             // 
             // provinciaToolStripMenuItem
             // 
             this.provinciaToolStripMenuItem.Name = "provinciaToolStripMenuItem";
-            this.provinciaToolStripMenuItem.Size = new System.Drawing.Size(150, 24);
+            this.provinciaToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.provinciaToolStripMenuItem.Text = "Provincia";
             this.provinciaToolStripMenuItem.Click += new System.EventHandler(this.provinciaToolStripMenuItem_Click);
             // 
             // ciudadToolStripMenuItem
             // 
             this.ciudadToolStripMenuItem.Name = "ciudadToolStripMenuItem";
-            this.ciudadToolStripMenuItem.Size = new System.Drawing.Size(150, 24);
+            this.ciudadToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.ciudadToolStripMenuItem.Text = "Ciudad";
             this.ciudadToolStripMenuItem.Click += new System.EventHandler(this.ciudadToolStripMenuItem_Click);
             // 
@@ -407,21 +407,21 @@
             // vueloToolStripMenuItem
             // 
             this.vueloToolStripMenuItem.Name = "vueloToolStripMenuItem";
-            this.vueloToolStripMenuItem.Size = new System.Drawing.Size(165, 24);
+            this.vueloToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.vueloToolStripMenuItem.Text = "Vuelo";
             this.vueloToolStripMenuItem.Click += new System.EventHandler(this.vueloToolStripMenuItem_Click);
             // 
             // tramosToolStripMenuItem
             // 
             this.tramosToolStripMenuItem.Name = "tramosToolStripMenuItem";
-            this.tramosToolStripMenuItem.Size = new System.Drawing.Size(165, 24);
+            this.tramosToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.tramosToolStripMenuItem.Text = "Tramos";
             this.tramosToolStripMenuItem.Click += new System.EventHandler(this.tramosToolStripMenuItem_Click);
             // 
             // viajesToolStripMenuItem1
             // 
             this.viajesToolStripMenuItem1.Name = "viajesToolStripMenuItem1";
-            this.viajesToolStripMenuItem1.Size = new System.Drawing.Size(165, 24);
+            this.viajesToolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
             this.viajesToolStripMenuItem1.Text = "Viajes";
             this.viajesToolStripMenuItem1.Click += new System.EventHandler(this.viajesToolStripMenuItem1_Click);
             // 
@@ -431,7 +431,7 @@
             this.cargosToolStripMenuItem,
             this.tripulaciónToolStripMenuItem1});
             this.tripulaciónToolStripMenuItem.Name = "tripulaciónToolStripMenuItem";
-            this.tripulaciónToolStripMenuItem.Size = new System.Drawing.Size(165, 24);
+            this.tripulaciónToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.tripulaciónToolStripMenuItem.Text = "Tripulación";
             // 
             // cargosToolStripMenuItem

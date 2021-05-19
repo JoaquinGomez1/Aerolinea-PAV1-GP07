@@ -44,11 +44,11 @@
             this.btn_borrar1 = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.btn_modificar1 = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.grilla_ABM_vuelo1 = new TrabajoPrácticoPAV.Clase.DataGridView_Aerolinea();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idModelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numeroPorModelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codigoAeropuertoSalida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codigoAeropuertoDestino = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idVuelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmb_NumAvion = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
             this.cmb_nomModelo = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
             this.Cmb_Nromodelo = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
@@ -101,7 +101,6 @@
             this.btn_cancelar.TabIndex = 13;
             this.btn_cancelar.Text = "Cancelar";
             this.btn_cancelar.UseVisualStyleBackColor = true;
-            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
             // label1
             // 
@@ -129,7 +128,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(30, -2);
+            this.label2.Location = new System.Drawing.Point(29, -2);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(144, 28);
@@ -166,7 +165,7 @@
             this.chk_box.AutoSize = true;
             this.chk_box.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.chk_box.Location = new System.Drawing.Point(734, 130);
-            this.chk_box.Margin = new System.Windows.Forms.Padding(4);
+            this.chk_box.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chk_box.Name = "chk_box";
             this.chk_box.Size = new System.Drawing.Size(90, 29);
             this.chk_box.TabIndex = 11;
@@ -177,7 +176,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(50, 44);
+            this.label7.Location = new System.Drawing.Point(51, 44);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(175, 20);
@@ -190,10 +189,10 @@
             this.btn_limpiar1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_limpiar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn_limpiar1.Location = new System.Drawing.Point(161, 476);
-            this.btn_limpiar1.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_limpiar1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_limpiar1.Name = "btn_limpiar1";
             this.btn_limpiar1.Pp_Presionado = false;
-            this.btn_limpiar1.Size = new System.Drawing.Size(102, 34);
+            this.btn_limpiar1.Size = new System.Drawing.Size(101, 34);
             this.btn_limpiar1.TabIndex = 10;
             this.btn_limpiar1.Text = "Limpiar";
             this.btn_limpiar1.UseVisualStyleBackColor = true;
@@ -204,8 +203,8 @@
             this.btn_consultar1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btn_consultar1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_consultar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_consultar1.Location = new System.Drawing.Point(846, 179);
-            this.btn_consultar1.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_consultar1.Location = new System.Drawing.Point(845, 178);
+            this.btn_consultar1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_consultar1.Name = "btn_consultar1";
             this.btn_consultar1.Pp_Presionado = false;
             this.btn_consultar1.Size = new System.Drawing.Size(127, 50);
@@ -219,8 +218,8 @@
             this.btn_registrar1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btn_registrar1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_registrar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_registrar1.Location = new System.Drawing.Point(846, 251);
-            this.btn_registrar1.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_registrar1.Location = new System.Drawing.Point(845, 251);
+            this.btn_registrar1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_registrar1.Name = "btn_registrar1";
             this.btn_registrar1.Pp_Presionado = false;
             this.btn_registrar1.Size = new System.Drawing.Size(127, 50);
@@ -235,8 +234,8 @@
             this.btn_borrar1.Enabled = false;
             this.btn_borrar1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_borrar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_borrar1.Location = new System.Drawing.Point(846, 395);
-            this.btn_borrar1.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_borrar1.Location = new System.Drawing.Point(845, 395);
+            this.btn_borrar1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_borrar1.Name = "btn_borrar1";
             this.btn_borrar1.Pp_Presionado = false;
             this.btn_borrar1.Size = new System.Drawing.Size(127, 50);
@@ -251,8 +250,8 @@
             this.btn_modificar1.Enabled = false;
             this.btn_modificar1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_modificar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_modificar1.Location = new System.Drawing.Point(846, 323);
-            this.btn_modificar1.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_modificar1.Location = new System.Drawing.Point(845, 322);
+            this.btn_modificar1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_modificar1.Name = "btn_modificar1";
             this.btn_modificar1.Pp_Presionado = false;
             this.btn_modificar1.Size = new System.Drawing.Size(127, 50);
@@ -268,53 +267,54 @@
             this.grilla_ABM_vuelo1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.grilla_ABM_vuelo1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grilla_ABM_vuelo1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column6,
-            this.Column10,
-            this.Column7,
-            this.Column8,
-            this.Column9});
-            this.grilla_ABM_vuelo1.Location = new System.Drawing.Point(46, 179);
+            this.idModelo,
+            this.numeroPorModelo,
+            this.codigoAeropuertoSalida,
+            this.codigoAeropuertoDestino,
+            this.idVuelo});
+            this.grilla_ABM_vuelo1.Location = new System.Drawing.Point(45, 178);
+            this.grilla_ABM_vuelo1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grilla_ABM_vuelo1.Name = "grilla_ABM_vuelo1";
             this.grilla_ABM_vuelo1.Pp_FormatoGrid = null;
             this.grilla_ABM_vuelo1.Pp_NombreTabla = "Vuelo";
             this.grilla_ABM_vuelo1.ReadOnly = true;
-            this.grilla_ABM_vuelo1.Size = new System.Drawing.Size(778, 268);
+            this.grilla_ABM_vuelo1.Size = new System.Drawing.Size(779, 268);
             this.grilla_ABM_vuelo1.TabIndex = 5;
             this.grilla_ABM_vuelo1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grilla_ABM_vuelo1_CellClick);
             this.grilla_ABM_vuelo1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grilla_ABM_vuelo1_CellDoubleClick);
             // 
-            // Column6
+            // idModelo
             // 
-            this.Column6.HeaderText = "Duracion Estimada";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
+            this.idModelo.HeaderText = "Modelo";
+            this.idModelo.Name = "idModelo";
+            this.idModelo.ReadOnly = true;
             // 
-            // Column10
+            // numeroPorModelo
             // 
-            this.Column10.HeaderText = "Modelo";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
+            this.numeroPorModelo.HeaderText = "Número de avión";
+            this.numeroPorModelo.Name = "numeroPorModelo";
+            this.numeroPorModelo.ReadOnly = true;
             // 
-            // Column7
+            // codigoAeropuertoSalida
             // 
-            this.Column7.HeaderText = "Aeropuerto Salida";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Width = 150;
+            this.codigoAeropuertoSalida.HeaderText = "Aeropuerto Salida";
+            this.codigoAeropuertoSalida.Name = "codigoAeropuertoSalida";
+            this.codigoAeropuertoSalida.ReadOnly = true;
+            this.codigoAeropuertoSalida.Width = 150;
             // 
-            // Column8
+            // codigoAeropuertoDestino
             // 
-            this.Column8.HeaderText = "Aeropuerto Destino";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            this.Column8.Width = 150;
+            this.codigoAeropuertoDestino.HeaderText = "Aeropuerto Destino";
+            this.codigoAeropuertoDestino.Name = "codigoAeropuertoDestino";
+            this.codigoAeropuertoDestino.ReadOnly = true;
+            this.codigoAeropuertoDestino.Width = 150;
             // 
-            // Column9
+            // idVuelo
             // 
-            this.Column9.HeaderText = "id_Vuelo";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            this.Column9.Visible = false;
+            this.idVuelo.HeaderText = "id_Vuelo";
+            this.idVuelo.Name = "idVuelo";
+            this.idVuelo.ReadOnly = true;
+            this.idVuelo.Visible = false;
             // 
             // cmb_NumAvion
             // 
@@ -322,13 +322,13 @@
             this.cmb_NumAvion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.cmb_NumAvion.FormattingEnabled = true;
             this.cmb_NumAvion.Location = new System.Drawing.Point(315, 126);
-            this.cmb_NumAvion.Margin = new System.Windows.Forms.Padding(4);
+            this.cmb_NumAvion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmb_NumAvion.Name = "cmb_NumAvion";
             this.cmb_NumAvion.Pp_CampoAceptaNull = true;
             this.cmb_NumAvion.Pp_EsPk = false;
-            this.cmb_NumAvion.Pp_MensajeError = null;
+            this.cmb_NumAvion.Pp_MensajeError = "Seleccione un número de avión";
             this.cmb_NumAvion.Pp_NombreCampo = "numeroPorModelo";
-            this.cmb_NumAvion.Pp_NombreCampoInsert = null;
+            this.cmb_NumAvion.Pp_NombreCampoInsert = "numeroPorModelo";
             this.cmb_NumAvion.Pp_NombreTabla = "avion";
             this.cmb_NumAvion.Pp_PkTabla = "numeroPorModelo";
             this.cmb_NumAvion.Size = new System.Drawing.Size(261, 33);
@@ -340,14 +340,14 @@
             this.cmb_nomModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.cmb_nomModelo.FormattingEnabled = true;
             this.cmb_nomModelo.Location = new System.Drawing.Point(315, 81);
-            this.cmb_nomModelo.Margin = new System.Windows.Forms.Padding(4);
+            this.cmb_nomModelo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmb_nomModelo.Name = "cmb_nomModelo";
             this.cmb_nomModelo.Pp_CampoAceptaNull = true;
             this.cmb_nomModelo.Pp_EsPk = false;
-            this.cmb_nomModelo.Pp_MensajeError = null;
+            this.cmb_nomModelo.Pp_MensajeError = "Seleccione un modelo";
             this.cmb_nomModelo.Pp_NombreCampo = "nombre";
-            this.cmb_nomModelo.Pp_NombreCampoInsert = null;
-            this.cmb_nomModelo.Pp_NombreTabla = "modelo";
+            this.cmb_nomModelo.Pp_NombreCampoInsert = "idModelo";
+            this.cmb_nomModelo.Pp_NombreTabla = "Modelo";
             this.cmb_nomModelo.Pp_PkTabla = "idModelo";
             this.cmb_nomModelo.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cmb_nomModelo.Size = new System.Drawing.Size(261, 33);
@@ -491,10 +491,10 @@
             this.Btn_Cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_Cerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.Btn_Cerrar.Location = new System.Drawing.Point(55, 476);
-            this.Btn_Cerrar.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_Cerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Btn_Cerrar.Name = "Btn_Cerrar";
             this.Btn_Cerrar.Pp_Presionado = false;
-            this.Btn_Cerrar.Size = new System.Drawing.Size(102, 34);
+            this.Btn_Cerrar.Size = new System.Drawing.Size(101, 34);
             this.Btn_Cerrar.TabIndex = 14;
             this.Btn_Cerrar.Text = "Cerrar";
             this.Btn_Cerrar.UseVisualStyleBackColor = true;
@@ -503,20 +503,22 @@
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(13, 13);
+            this.panel1.Location = new System.Drawing.Point(13, 14);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(974, 485);
+            this.panel1.Size = new System.Drawing.Size(975, 485);
             this.panel1.TabIndex = 15;
             // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Location = new System.Drawing.Point(32, 37);
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Location = new System.Drawing.Point(32, 38);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(779, 111);
+            this.panel2.Size = new System.Drawing.Size(781, 111);
             this.panel2.TabIndex = 0;
             // 
             // Frm_ABMVuelo
@@ -541,7 +543,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Frm_ABMVuelo";
             this.Text = "Frm_ABMVuelo";
             this.Load += new System.EventHandler(this.Frm_ABMVuelo_Load);
@@ -585,13 +587,13 @@
         private Clase.Button_Aerolinea btn_limpiar1;
         private System.Windows.Forms.CheckBox chk_box;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private Clase.Button_Aerolinea Btn_Cerrar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idModelo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numeroPorModelo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigoAeropuertoSalida;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigoAeropuertoDestino;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idVuelo;
     }
 }

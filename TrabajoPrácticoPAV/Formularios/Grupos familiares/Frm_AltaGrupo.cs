@@ -99,11 +99,18 @@ namespace TrabajoPrácticoPAV.Formularios.Grupos_familiares
                 MessageBox.Show("Primero debe agregar el primer pasajero de la relación");
             else
             {
-                Grid_Grupo.Rows[CantFilas].Cells[5].Value = tipoDoc;
-                Grid_Grupo.Rows[CantFilas].Cells[6].Value = numeroDoc;
-                Grid_Grupo.Rows[CantFilas].Cells[7].Value = _NE.RecuperarNombrePasajero(tipoDoc, numeroDoc);
-                Grid_Grupo.Rows[CantFilas].Cells[8].Value = _NE.RecuperarApellidoPasajero(tipoDoc, numeroDoc);
-                agrego2 = true;
+                if (Grid_Grupo.Rows[CantFilas].Cells[1].Value.ToString() == numeroDoc && Grid_Grupo.Rows[CantFilas].Cells[0].Value.ToString() == tipoDoc)
+                {
+                    MessageBox.Show("El primer pasajero y el segundo no pueden ser la misma persona");
+                }
+                else
+                {
+                    Grid_Grupo.Rows[CantFilas].Cells[5].Value = tipoDoc;
+                    Grid_Grupo.Rows[CantFilas].Cells[6].Value = numeroDoc;
+                    Grid_Grupo.Rows[CantFilas].Cells[7].Value = _NE.RecuperarNombrePasajero(tipoDoc, numeroDoc);
+                    Grid_Grupo.Rows[CantFilas].Cells[8].Value = _NE.RecuperarApellidoPasajero(tipoDoc, numeroDoc);
+                    agrego2 = true;
+                }
             }
         }
 

@@ -40,8 +40,8 @@
             // 
             // textBox_Aerolinea1
             // 
-            this.textBox_Aerolinea1.Location = new System.Drawing.Point(173, 94);
-            this.textBox_Aerolinea1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox_Aerolinea1.Location = new System.Drawing.Point(173, 99);
+            this.textBox_Aerolinea1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox_Aerolinea1.Name = "textBox_Aerolinea1";
             this.textBox_Aerolinea1.Pp_EsPk = false;
             this.textBox_Aerolinea1.Pp_MensajeError = "Por favor, ingrese el nombre del modelo.";
@@ -55,8 +55,8 @@
             this.btn_registrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
             this.btn_registrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_registrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_registrar.Location = new System.Drawing.Point(160, 170);
-            this.btn_registrar.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_registrar.Location = new System.Drawing.Point(173, 170);
+            this.btn_registrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_registrar.Name = "btn_registrar";
             this.btn_registrar.Pp_Presionado = false;
             this.btn_registrar.Size = new System.Drawing.Size(109, 41);
@@ -70,8 +70,8 @@
             this.btn_cerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
             this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_cerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_cerrar.Location = new System.Drawing.Point(283, 170);
-            this.btn_cerrar.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_cerrar.Location = new System.Drawing.Point(333, 170);
+            this.btn_cerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_cerrar.Name = "btn_cerrar";
             this.btn_cerrar.Pp_Presionado = false;
             this.btn_cerrar.Size = new System.Drawing.Size(109, 41);
@@ -94,11 +94,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label3.Location = new System.Drawing.Point(67, 91);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(81, 99);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 25);
+            this.label3.Size = new System.Drawing.Size(68, 20);
             this.label3.TabIndex = 12;
             this.label3.Text = "Nombre";
             // 
@@ -110,7 +110,7 @@
             this.BarraSuperior.Location = new System.Drawing.Point(0, 0);
             this.BarraSuperior.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BarraSuperior.Name = "BarraSuperior";
-            this.BarraSuperior.Size = new System.Drawing.Size(600, 39);
+            this.BarraSuperior.Size = new System.Drawing.Size(582, 39);
             this.BarraSuperior.TabIndex = 49;
             this.BarraSuperior.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BarraSuperior_MouseMove);
             // 
@@ -130,7 +130,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(227)))), ((int)(((byte)(187)))));
-            this.ClientSize = new System.Drawing.Size(600, 246);
+            this.ClientSize = new System.Drawing.Size(582, 250);
             this.Controls.Add(this.BarraSuperior);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -138,7 +138,7 @@
             this.Controls.Add(this.btn_registrar);
             this.Controls.Add(this.textBox_Aerolinea1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Frm_AltaModelo";
             this.Text = "Frm_AltaModelo";
             this.Load += new System.EventHandler(this.Frm_AltaModelo_Load);

@@ -10,16 +10,31 @@ using System.Windows.Forms;
 using TrabajoPrácticoPAV.NE_Usuarios;
 using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.Backend;
+using System.Runtime.InteropServices;
 
 namespace TrabajoPrácticoPAV.Formularios.Asientos
 {
     public partial class Frm_ModificarAsiento : Form
     {
-        Conexion_DB _BD = new Conexion_DB();
+        NE_Asiento asiento = new NE_Asiento();
         public string Id_Asiento { get; set; }
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWind, int wMsg, int wParam, int lParam);
+
+        private void BarraSuperior_MouseMove(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
         public Frm_ModificarAsiento()
         {
             InitializeComponent();
+            this.BackColor = Estilo.ColorFondoForms;
+            Estilo.FormatearEstilo(this.Controls);
         }
         private void Frm_ModificarAsiento_Load(object sender, EventArgs e)
         {
@@ -30,7 +45,6 @@ namespace TrabajoPrácticoPAV.Formularios.Asientos
             this.BackColor = Estilo.ColorFondoForms;
             Estilo.FormatearEstilo(this.Controls);
 
-            NE_Asiento asiento = new NE_Asiento();
             MostrarDatos(asiento.RecuperarXId(Id_Asiento));
         }
         private void MostrarDatos(DataTable tabla)
@@ -50,9 +64,8 @@ namespace TrabajoPrácticoPAV.Formularios.Asientos
         private void btn_registrarAsiento_Click(object sender, EventArgs e)
         {
             Tratamientos_Especiales Tratamiento = new Tratamientos_Especiales();
-         
-                string sql = Tratamiento.CostructorUpdateDelete("Asientos", panel1.Controls, true);
-                _BD.Modificar(sql, false);
+
+            asiento.Modificar(this.Controls);
                 this.Close();
         }
 
@@ -65,5 +78,6 @@ namespace TrabajoPrácticoPAV.Formularios.Asientos
             cmb_numeroAvion.CargarComboJoin(CondicionAvion);
         }
 
+        
     }
 }

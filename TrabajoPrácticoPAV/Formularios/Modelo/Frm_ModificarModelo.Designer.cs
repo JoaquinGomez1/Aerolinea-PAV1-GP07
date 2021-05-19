@@ -44,8 +44,8 @@
             this.btn_cerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
             this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_cerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_cerrar.Location = new System.Drawing.Point(293, 183);
-            this.btn_cerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_cerrar.Location = new System.Drawing.Point(315, 183);
+            this.btn_cerrar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_cerrar.Name = "btn_cerrar";
             this.btn_cerrar.Pp_Presionado = false;
             this.btn_cerrar.Size = new System.Drawing.Size(109, 36);
@@ -59,8 +59,8 @@
             this.btn_modificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
             this.btn_modificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_modificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_modificar.Location = new System.Drawing.Point(148, 183);
-            this.btn_modificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_modificar.Location = new System.Drawing.Point(132, 183);
+            this.btn_modificar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_modificar.Name = "btn_modificar";
             this.btn_modificar.Pp_Presionado = false;
             this.btn_modificar.Size = new System.Drawing.Size(124, 36);
@@ -72,11 +72,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(77, 123);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label2.Location = new System.Drawing.Point(89, 116);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(181, 25);
+            this.label2.Size = new System.Drawing.Size(154, 20);
             this.label2.TabIndex = 9;
             this.label2.Text = "Nombre del modelo";
             // 
@@ -84,18 +84,18 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Enabled = false;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(73, 74);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label1.Location = new System.Drawing.Point(96, 67);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(175, 25);
+            this.label1.Size = new System.Drawing.Size(147, 20);
             this.label1.TabIndex = 8;
             this.label1.Text = "Codigo del modelo";
             // 
             // txt_nombre
             // 
-            this.txt_nombre.Location = new System.Drawing.Point(289, 126);
-            this.txt_nombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_nombre.Location = new System.Drawing.Point(278, 116);
+            this.txt_nombre.Margin = new System.Windows.Forms.Padding(4);
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.Pp_EsPk = false;
             this.txt_nombre.Pp_MensajeError = "Ingrese el nombre del modelo";
@@ -107,14 +107,14 @@
             // txt_codigoModelo
             // 
             this.txt_codigoModelo.Enabled = false;
-            this.txt_codigoModelo.Location = new System.Drawing.Point(289, 76);
-            this.txt_codigoModelo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_codigoModelo.Location = new System.Drawing.Point(278, 67);
+            this.txt_codigoModelo.Margin = new System.Windows.Forms.Padding(4);
             this.txt_codigoModelo.Name = "txt_codigoModelo";
             this.txt_codigoModelo.Pp_EsPk = true;
             this.txt_codigoModelo.Pp_MensajeError = null;
             this.txt_codigoModelo.Pp_NombreCampo = "idModelo";
             this.txt_codigoModelo.Pp_NombreTabla = "Modelo";
-            this.txt_codigoModelo.Size = new System.Drawing.Size(132, 22);
+            this.txt_codigoModelo.Size = new System.Drawing.Size(161, 22);
             this.txt_codigoModelo.TabIndex = 6;
             // 
             // BarraSuperior
@@ -125,8 +125,9 @@
             this.BarraSuperior.Location = new System.Drawing.Point(0, 0);
             this.BarraSuperior.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BarraSuperior.Name = "BarraSuperior";
-            this.BarraSuperior.Size = new System.Drawing.Size(600, 39);
+            this.BarraSuperior.Size = new System.Drawing.Size(582, 39);
             this.BarraSuperior.TabIndex = 59;
+            this.BarraSuperior.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BarraSuperior_MouseMove);
             // 
             // label15
             // 
@@ -135,16 +136,16 @@
             this.label15.ForeColor = System.Drawing.Color.White;
             this.label15.Location = new System.Drawing.Point(12, 7);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(192, 27);
+            this.label15.Size = new System.Drawing.Size(229, 27);
             this.label15.TabIndex = 4;
-            this.label15.Text = "Modificar modelo";
+            this.label15.Text = "MODIFICAR MODELO";
             // 
             // Frm_ModificarModelo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(227)))), ((int)(((byte)(187)))));
-            this.ClientSize = new System.Drawing.Size(600, 246);
+            this.ClientSize = new System.Drawing.Size(582, 250);
             this.Controls.Add(this.BarraSuperior);
             this.Controls.Add(this.btn_cerrar);
             this.Controls.Add(this.btn_modificar);
@@ -153,7 +154,7 @@
             this.Controls.Add(this.txt_nombre);
             this.Controls.Add(this.txt_codigoModelo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Frm_ModificarModelo";
             this.Text = "Frm_ModificarModelo";
             this.Load += new System.EventHandler(this.Frm_ModificarModelo_Load);

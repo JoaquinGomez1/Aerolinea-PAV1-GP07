@@ -10,18 +10,31 @@ using System.Windows.Forms;
 using TrabajoPrácticoPAV.NE_Usuarios;
 using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.Backend;
+using System.Runtime.InteropServices;
 
 namespace TrabajoPrácticoPAV.Formularios.Modelo
 {
     public partial class Frm_ModificarModelo : Form
     {
-        Conexion_DB _BD = new Conexion_DB();
+        NE_Modelo Modelo = new NE_Modelo();
         public string Id_Modelo { get ; set; }
-        
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWind, int wMsg, int wParam, int lParam);
+
+        private void BarraSuperior_MouseMove(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
 
         public Frm_ModificarModelo()
         {
             InitializeComponent();
+            this.BackColor = Estilo.ColorFondoForms;
+            Estilo.FormatearEstilo(this.Controls);
         }
 
         private void btn_cerrar_Click(object sender, EventArgs e)
@@ -34,8 +47,7 @@ namespace TrabajoPrácticoPAV.Formularios.Modelo
 
             this.BackColor = Estilo.ColorFondoForms;
             Estilo.FormatearEstilo(this.Controls);
-
-            NE_Modelo Modelo = new NE_Modelo();
+            
             MostrarDatos(Modelo.RecuperarXId(Id_Modelo));
         }
         private void MostrarDatos(DataTable tabla)
@@ -48,13 +60,13 @@ namespace TrabajoPrácticoPAV.Formularios.Modelo
             Tratamientos_Especiales Tratamiento = new Tratamientos_Especiales();
             if (Tratamiento.Validar(this.Controls) == Tratamientos_Especiales.Resultado.correcto)
             {
-                string sql = Tratamiento.CostructorUpdateDelete("Modelo", this.Controls, true);
-                _BD.Modificar(sql, false);
+                Modelo.Modificar(this.Controls);
                 this.Close();
             }
             
             
         }
 
+        
     }
 }

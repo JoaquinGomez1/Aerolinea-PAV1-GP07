@@ -112,7 +112,6 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
             this.cmb_ciudades.Pp_PkTabla = "idCiudad";
             this.cmb_ciudades.Size = new System.Drawing.Size(135, 21);
             this.cmb_ciudades.TabIndex = 6;
-            this.cmb_ciudades.SelectedIndexChanged += new System.EventHandler(this.cmb_ciudades_SelectedIndexChanged);
             // 
             // txt_nombre
             // 

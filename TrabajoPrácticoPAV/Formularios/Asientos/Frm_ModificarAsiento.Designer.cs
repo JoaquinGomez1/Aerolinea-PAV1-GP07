@@ -64,7 +64,7 @@
             // 
             this.btn_registrarAsiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
             this.btn_registrarAsiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btn_registrarAsiento.Location = new System.Drawing.Point(142, 231);
+            this.btn_registrarAsiento.Location = new System.Drawing.Point(141, 231);
             this.btn_registrarAsiento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_registrarAsiento.Name = "btn_registrarAsiento";
             this.btn_registrarAsiento.Pp_Presionado = false;
@@ -89,7 +89,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label3.Location = new System.Drawing.Point(118, 153);
+            this.label3.Location = new System.Drawing.Point(117, 153);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(123, 20);
@@ -100,7 +100,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label2.Location = new System.Drawing.Point(102, 120);
+            this.label2.Location = new System.Drawing.Point(101, 121);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(139, 20);
@@ -136,8 +136,9 @@
             // 
             // cmb_numeroAvion
             // 
+            this.cmb_numeroAvion.Enabled = false;
             this.cmb_numeroAvion.FormattingEnabled = true;
-            this.cmb_numeroAvion.Location = new System.Drawing.Point(285, 120);
+            this.cmb_numeroAvion.Location = new System.Drawing.Point(285, 121);
             this.cmb_numeroAvion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmb_numeroAvion.Name = "cmb_numeroAvion";
             this.cmb_numeroAvion.Pp_CampoAceptaNull = true;
@@ -152,6 +153,7 @@
             // 
             // cmb_nombreModelo
             // 
+            this.cmb_nombreModelo.Enabled = false;
             this.cmb_nombreModelo.FormattingEnabled = true;
             this.cmb_nombreModelo.Location = new System.Drawing.Point(285, 87);
             this.cmb_nombreModelo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -214,6 +216,7 @@
             this.BarraSuperior.Name = "BarraSuperior";
             this.BarraSuperior.Size = new System.Drawing.Size(591, 39);
             this.BarraSuperior.TabIndex = 51;
+            this.BarraSuperior.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BarraSuperior_MouseMove);
             // 
             // Titulo
             // 
@@ -230,8 +233,8 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Location = new System.Drawing.Point(13, 45);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(13, 46);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(565, 240);
             this.panel1.TabIndex = 52;

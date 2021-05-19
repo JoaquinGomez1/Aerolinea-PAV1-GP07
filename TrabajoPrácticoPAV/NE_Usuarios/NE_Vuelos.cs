@@ -12,7 +12,7 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
 {
     class NE_Vuelos
     {
-        public enum ResultadoValidacion { existe, no_existe }
+        Tratamientos_Especiales tratamiento = new Tratamientos_Especiales();
         Conexion_DB _BD = new Conexion_DB();
 
         public DataTable RecuperarXId(string id_vuelo)
@@ -20,50 +20,56 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             string sql = "SELECT * FROM vuelo WHERE idVuelo =" + id_vuelo;
             return _BD.EjecutarSelect(sql);
         }
-        public DataTable RecuperarTodos()
-        {
-            string sql = @"SELECT v.*, m.nombre as n_modelo FROM vuelo v join Modelo m  on v.idModelo = m.idModelo;";
-            return _BD.EjecutarSelect(sql);
-        }
 
-        public DataTable RecuprarXmodelo(string id_modelo)
+        public void CargarGrilla_vuelo1( DataGridView_Aerolinea grilla_ABM_vuelo1, string join, Control.ControlCollection controls)
         {
-            string sql = @"SELECT v.*, m.nombre as n_modelo  FROM vuelo v join Modelo m on v.idModelo = m.idModelo"
-                            + " WHERE m.idModelo = " + id_modelo;
-            return _BD.EjecutarSelect(sql);
-        }
-        public DataTable RecuperarXavion(string id_avion)
-        {
-            string sql = @"SELECT v.*, m.nombre as n_modelo  FROM vuelo v join Modelo m on v.idModelo = m.idModelo"
-                            + "  WHERE v.numeroPorModelo =" + id_avion + 1;
-            return _BD.EjecutarSelect(sql);
-        }
-        public DataTable Recuperar_Mixto(string avion, string modelo)
-        {
-            string sql = @"SELECT v.*, m.nombre as n_modelo FROM vuelo v join Modelo m on v.idModelo = m.idModelo"
-                        + " WHERE v.numeroPorModelo = " + avion + " AND m.idModelo = " + modelo;
-            return _BD.EjecutarSelect(sql);
+            string sql = tratamiento.ConstructorSelect(controls, join, "Vuelo");
+            DataTable tabla = _BD.EjecutarSelect(sql);
+
+            grilla_ABM_vuelo1.Rows.Clear();
+
+            for (int i = 0; i < tabla.Rows.Count; i++)
+            {
+                grilla_ABM_vuelo1.Rows.Add();
+                grilla_ABM_vuelo1.Rows[i].Cells[0].Value = BuscarModelo(tabla.Rows[i]["idModelo"].ToString());
+                grilla_ABM_vuelo1.Rows[i].Cells[1].Value = tabla.Rows[i]["numeroPorModelo"].ToString();
+                grilla_ABM_vuelo1.Rows[i].Cells[2].Value = BuscarAeropuerto(tabla.Rows[i]["codigoAeropuertoDestino"].ToString());
+                grilla_ABM_vuelo1.Rows[i].Cells[3].Value = BuscarAeropuerto(tabla.Rows[i]["codigoAeropuertoSalida"].ToString());
+                grilla_ABM_vuelo1.Rows[i].Cells[4].Value = tabla.Rows[i]["idVuelo"].ToString();
+            }
+            if (tabla.Rows.Count == 0)
+            {
+                MessageBox.Show("No se encontraron vuelos.");
+            }
         }
         public void Insertar(Control.ControlCollection controles)
         {
-            Tratamientos_Especiales tratamiento = new Tratamientos_Especiales();
             _BD.Insertar(tratamiento.CostructorInsert("Vuelo", controles), false);
         }
 
         public void Modificar(Control.ControlCollection controles)
         {
-            Tratamientos_Especiales tratamiento = new Tratamientos_Especiales();
             _BD.Modificar(tratamiento.CostructorUpdateDelete("Vuelo", controles, true), false);
         }
         public void Borrar(Control.ControlCollection controles)
         {
-            Tratamientos_Especiales tratamiento = new Tratamientos_Especiales();
             _BD.Borrar(tratamiento.CostructorUpdateDelete("Vuelo", controles, false), false);
         }
         public void Borrar(string id_vuelo)
         {
             string sqlDelete = @"DELETE FROM vuelo WHERE idVuelo = " + id_vuelo;
             _BD.Borrar(sqlDelete, false);
+        }
+
+        public string BuscarModelo(string idModelo)
+        {
+            return _BD.EjecutarSelect($"SELECT nombre FROM modelo WHERE idModelo = " +
+                        $"{idModelo}").Rows[0]["nombre"].ToString();
+        }
+        public string BuscarAeropuerto(string codigoAeropuerto)
+        {
+            return _BD.EjecutarSelect($"SELECT nombre FROM Aeropuerto WHERE codigo = " +
+                $"'{codigoAeropuerto}'").Rows[0]["nombre"].ToString();
         }
 
     }

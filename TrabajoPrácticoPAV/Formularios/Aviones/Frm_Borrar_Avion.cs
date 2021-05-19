@@ -4,19 +4,18 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 using TrabajoPrácticoPAV.Formularios;
 using TrabajoPrácticoPAV.NE_Usuarios;
 using TrabajoPrácticoPAV.Clase;
 
-namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
+namespace TrabajoPrácticoPAV.Formularios.Aviones
 {
-    public partial class Frm_Borrar_Aeropuerto : Form
+    public partial class Frm_Borrar_Avion : Form
     {
-
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -28,37 +27,34 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        public string Id_codigo { get; set; }
-        public Frm_Borrar_Aeropuerto()
+        public string Id_modelo { get; set; }
+        public string Id_numero { get; set; }
+        public Frm_Borrar_Avion()
         {
             InitializeComponent();
             this.BackColor = Estilo.ColorFondoForms;
             Estilo.FormatearEstilo(this.Controls);
-        }
 
+        }
         private void btn_aceptar_Click(object sender, EventArgs e)
         {
-            NE_Aeropuertos aeropuerto = new NE_Aeropuertos() { Pp_Id_aeropuerto = Id_codigo };
-            if (MessageBox.Show("¿Está seguro de Borrar el aeropuerto?", "Importante", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            NE_Avion avion = new NE_Avion(); 
+            if (MessageBox.Show("¿Está seguro de Borrar el avion?", "Importante", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
-                aeropuerto.Borrar();
+                avion.Remover_avion(Id_numero, Id_modelo);
                 this.Close();
             }
         }
 
-        private void Frm_Borrar_Aeropuerto_Load(object sender, EventArgs e)
-        {
-            cmb_ciudad.CargarCombo();
-            NE_Aeropuertos aeropuerto = new NE_Aeropuertos();
-            MostrarDatos(aeropuerto.Recuperar_por_Codigo(Id_codigo));
-        }
+        
         private void MostrarDatos(DataTable tabla)
         {
             if (tabla.Rows.Count > 0)
             {
-                txt_codigo.Text = tabla.Rows[0]["codigo"].ToString();
-                txt_nombre.Text = tabla.Rows[0]["nombre"].ToString();
-                cmb_ciudad.SelectedValue = int.Parse(tabla.Rows[0]["idCiudad"].ToString());
+                Id_numero = tabla.Rows[0]["numeroPorModelo"].ToString();
+                //grid_aviones.Rows[i].Cells[1].Value = tabla.Rows[i]["nombre"].ToString();
+                Id_modelo = tabla.Rows[0]["IdModelo"].ToString();
+
             }
             else
             {
@@ -66,7 +62,15 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
             }
         }
 
-        private void btn_cancelar_Click(object sender, EventArgs e)
+        private void Frm_Borrar_Avion_Load_1(object sender, EventArgs e)
+        {
+            cmb_modelos.CargarCombo();
+            NE_Avion avion = new NE_Avion();
+            MostrarDatos(avion.Recuperar_x_numero(Id_numero));
+
+        }
+
+        private void button_Aerolinea2_Click(object sender, EventArgs e)
         {
             this.Close();
         }

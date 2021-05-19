@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using TrabajoPrácticoPAV.NE_Usuarios;
 using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.Backend;
+using System.Runtime.InteropServices;
 
 namespace TrabajoPrácticoPAV.Formularios.Vuelo
 {
@@ -17,9 +18,24 @@ namespace TrabajoPrácticoPAV.Formularios.Vuelo
     {
         public string Id_vuelo { get; set; }
 
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWind, int wMsg, int wParam, int lParam);
+
+        private void BarraSuperior_MouseMove(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        NE_Vuelos vuelo = new NE_Vuelos();
+
         public Frm_BorrarVuelo()
         {
             InitializeComponent();
+            this.BackColor = Estilo.ColorFondoForms;
+            Estilo.FormatearEstilo(this.Controls);
         }
 
         private void Frm_BorrarVuelo_Load(object sender, EventArgs e)
@@ -32,13 +48,12 @@ namespace TrabajoPrácticoPAV.Formularios.Vuelo
             this.BackColor = Estilo.ColorFondoForms;
                 Estilo.FormatearEstilo(this.Controls);
 
-            NE_Vuelos vuelo = new NE_Vuelos();
             MostrarDatos(vuelo.RecuperarXId(Id_vuelo));
         }
         private void MostrarDatos( DataTable tabla)
         {
             txt_idVuelo.Text = tabla.Rows[0]["idVuelo"].ToString();
-            txt_duracionestimada.Text = tabla.Rows[0]["duracionEstimada"].ToString();
+           // txt_duracionestimada.Text = tabla.Rows[0]["duracionEstimada"].ToString();
             cmb_numAvion.SelectedValue = int.Parse(tabla.Rows[0]["numeroPorModelo"].ToString());
             cmb_nomModelo.SelectedValue = int.Parse(tabla.Rows[0]["idModelo"].ToString());
             cmb_AeropDestino.SelectedValue = tabla.Rows[0]["codigoAeropuertoDestino"].ToString();
@@ -53,13 +68,14 @@ namespace TrabajoPrácticoPAV.Formularios.Vuelo
 
         private void btn_ModificacionVuelo_Click(object sender, EventArgs e)
         {
-            NE_Vuelos vuelo = new NE_Vuelos();
+            
             if (MessageBox.Show("¿Esta seguro de Borrar?", "Importante", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
-                vuelo.Borrar(Id_vuelo);
-                MessageBox.Show("Se borró correctamente el vuelo");
+                vuelo.Borrar(this.Controls);
                 this.Close();
             }
         }
+
+     
     }
 }
