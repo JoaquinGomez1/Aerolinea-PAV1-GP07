@@ -77,7 +77,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
                 grid_tripulantes.Rows[i].Cells[2].Value = tabla.Rows[i]["apellido"].ToString();
                 grid_tripulantes.Rows[i].Cells[3].Value = tabla.Rows[i]["nombreCargo"].ToString();
                 // Celda invisible que contiene el dato de idCargoTripulación
-                grid_tripulantes.Rows[i].Cells[6].Value = tabla.Rows[i]["idCargoTripulacion"].ToString();
+                grid_tripulantes.Rows[i].Cells[4].Value = tabla.Rows[i]["idCargoTripulacion"].ToString();
             }
         }
 
@@ -86,48 +86,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
             CargarDataGrid();
         }
 
-        private void grid_tripulantes_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int indexCeldaModificar = 4;
-            int indexCeldaEliminar = 5;
-            int indexCeldaIdCargo = 6;
-
-            bool rowVacia = grid_tripulantes.CurrentRow.Cells[0].Value == null;
-            if (rowVacia) return;
-
-            if (grid_tripulantes.CurrentCell.ColumnIndex == indexCeldaModificar)
-            {
-                cmb_cargo_modify.CargarCombo();
-                panel_modify.Visible = true;
-                lbl_title_modify.Visible = true;
-
-                DataGridViewRow fila = grid_tripulantes.CurrentRow;
-
-                Tripulante tripulante = new Tripulante()
-                {
-                    Id = Int32.Parse(fila.Cells[0].Value.ToString()),
-                    Nombre = fila.Cells[1].Value.ToString(),
-                    Apellido = fila.Cells[2].Value.ToString(),
-                    IdCargo = Int32.Parse(fila.Cells[indexCeldaIdCargo].Value.ToString()),
-                };
-
-                // Lo seteo ahora para despues poder tomar el valor al hacer click en modificar
-                idTripulanteAModificar = tripulante.Id;
-
-                txt_nombre_modify.Text = tripulante.Nombre;
-                txt_apellido_modify.Text = tripulante.Apellido;
-                cmb_cargo_modify.SelectedValue = tripulante.IdCargo;
-            }
-
-            if (grid_tripulantes.CurrentCell.ColumnIndex == indexCeldaEliminar)
-            {
-                string idTripulacion = grid_tripulantes.CurrentRow.Cells[0].Value.ToString();
-                _NE.EliminarTripulante(idTripulacion);
-
-                grid_tripulantes.Rows.Remove(grid_tripulantes.CurrentRow);
-            }
-        }
-
+        
         private void btn_modify_Click(object sender, EventArgs e)
         {
             bool esValido = tratamientos.Validar(panel_modify.Controls) == Resultado.correcto;
@@ -143,6 +102,64 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
                 _NE.ModificarTripulante(tripulante);
                 CargarDataGrid();
             }
+        }
+
+        private void btn_editar_Click(object sender, EventArgs e)
+        {
+            cmb_cargo_modify.CargarCombo();
+            panel_modify.Visible = true;
+            lbl_title_modify.Visible = true;
+
+            //string valorSeleccionado = grid_ciudades.CurrentRow.Cells[0].Value.ToString();
+            //CiudadObj ciudad = _NE.GetCiudadPorId(valorSeleccionado);
+            // CiudadSeleccionada = ciudad;
+
+            DataGridViewRow fila = grid_tripulantes.CurrentRow;
+
+           Tripulante tripulante = new Tripulante()
+            {
+                Id = Int32.Parse(fila.Cells[0].Value.ToString()),
+                Nombre = fila.Cells[1].Value.ToString(),
+                Apellido = fila.Cells[2].Value.ToString(),
+                IdCargo = Int32.Parse(fila.Cells[4].Value.ToString()),
+            };
+
+            idTripulanteAModificar = tripulante.Id;
+            txt_nombre_modify.Text = tripulante.Nombre;
+            txt_apellido_modify.Text = tripulante.Apellido;
+            cmb_cargo_modify.SelectedValue = tripulante.IdCargo;
+        }
+
+        private void btn_eliminar_Click(object sender, EventArgs e)
+        {
+            if (grid_tripulantes.CurrentRow == null)
+                return;
+
+            string idTripulacion = grid_tripulantes.CurrentRow.Cells[0].Value.ToString();
+            _NE.EliminarTripulante(idTripulacion);
+
+            grid_tripulantes.Rows.Remove(grid_tripulantes.CurrentRow);
+        }
+
+        private void btn_buscar_Click(object sender, EventArgs e)
+        {
+            string nombre = txt_nombre_register.Text;
+            string apellido = txt_apellido_register.Text;
+            string cargo = "";
+            if (cmb_cargo_register.SelectedIndex != -1)
+            {
+                cargo = cmb_cargo_register.SelectedValue.ToString();
+            }
+
+            DataTable tabla = _NE.GetTripulante(nombre,apellido,cargo);
+            if (tabla != null)
+            { CargarGridTripulantes(tabla); }
+            else { MessageBox.Show("Complete los campos para realizar la busqueda"); }
+        }
+
+        private void btn_cerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

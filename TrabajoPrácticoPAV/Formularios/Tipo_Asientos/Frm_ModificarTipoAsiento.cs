@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.Backend;
 using TrabajoPrácticoPAV.NE_Usuarios;
+using System.Runtime.InteropServices;
 
 namespace TrabajoPrácticoPAV.Formularios.Tipo_Asientos
 {
@@ -19,18 +20,31 @@ namespace TrabajoPrácticoPAV.Formularios.Tipo_Asientos
         public object Pp_costo { get; set; }
         public string Id_Tipo { get; set; }
         Conexion_DB _BD = new Conexion_DB();
+        NE_TipoAsiento TA = new NE_TipoAsiento();
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWind, int wMsg, int wParam, int lParam);
+
+        private void BarraSuperior_MouseMove(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
 
         public Frm_ModificarTipoAsiento()
         {
             InitializeComponent();
+            this.BackColor = Estilo.ColorFondoForms;
+            Estilo.FormatearEstilo(this.Controls);
         }
 
         private void Frm_ModificarTipoAsiento_Load(object sender, EventArgs e)
         {
             this.BackColor = Estilo.ColorFondoForms;
             Estilo.FormatearEstilo(this.Controls);
-
-            NE_TipoAsiento TipoAsiento = new NE_TipoAsiento();
+            
             txt_idTipo.Text = Id_Tipo;
             txt_Nombre.Text = Pp_nombre;
             msktxt_Costo.Text = Pp_costo.ToString();
@@ -43,11 +57,10 @@ namespace TrabajoPrácticoPAV.Formularios.Tipo_Asientos
 
         private void btn_Actualizar_Click_1(object sender, EventArgs e)
         {
-            Tratamientos_Especiales _TE = new Tratamientos_Especiales();
-            string sql = _TE.CostructorUpdateDelete("Tipo_Asiento", this.Controls, true);
-            _BD.Modificar(sql, false);
+            TA.Modificar(this.Controls);
             this.Close();
         }
-        
+
+       
     }
 }

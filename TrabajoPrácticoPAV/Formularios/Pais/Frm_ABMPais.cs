@@ -42,13 +42,19 @@ namespace TrabajoPrácticoPAV.Formularios.Pais
         {
             if (verificar_seleccion(txt_Nombre, txt_IdPais, chb_todos_tramo))
             {
-                DataTable tabla = new DataTable();
-                string join = "";
-                string sql = _TE.ConstructorSelect(this.Controls, join, "Pais");
-                CargarGrilla(_BD.EjecutarSelect(sql));
-                Btn_Modificar.Enabled = false;
-                Btn_Eliminar.Enabled = false;
+                CargarGrillaBusqueda();
             }
+
+        }
+
+        private void CargarGrillaBusqueda()
+        {
+            DataTable tabla = new DataTable();
+            string join = "";
+            string sql = _TE.ConstructorSelect(this.Controls, join, "Pais");
+            CargarGrilla(_BD.EjecutarSelect(sql));
+            Btn_Modificar.Enabled = false;
+             Btn_Eliminar.Enabled = false;
 
         }
 
@@ -91,6 +97,8 @@ namespace TrabajoPrácticoPAV.Formularios.Pais
         {
             Frm_AltaPais pais = new Frm_AltaPais();
             pais.ShowDialog();
+            CargarGrillaBusqueda();
+
         }
 
         private void grid_paises_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -105,6 +113,7 @@ namespace TrabajoPrácticoPAV.Formularios.Pais
             baja_pais.id_pais = grid_paises.CurrentRow.Cells["idPais"].Value.ToString();
             baja_pais.nombre_pais = grid_paises.CurrentRow.Cells["nombrePais"].Value.ToString();
             baja_pais.ShowDialog();
+            CargarGrillaBusqueda();
         }
 
         private void Btn_Modificar_Click(object sender, EventArgs e)
@@ -113,6 +122,8 @@ namespace TrabajoPrácticoPAV.Formularios.Pais
             modificar_pais.id_pais = grid_paises.CurrentRow.Cells["idPais"].Value.ToString();
             modificar_pais.nombre_pais = grid_paises.CurrentRow.Cells["nombrePais"].Value.ToString();
             modificar_pais.ShowDialog();
+
+            CargarGrillaBusqueda();
 
         }
     }

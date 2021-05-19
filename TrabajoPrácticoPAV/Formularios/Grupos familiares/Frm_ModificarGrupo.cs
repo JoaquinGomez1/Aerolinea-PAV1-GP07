@@ -64,12 +64,17 @@ namespace TrabajoPrácticoPAV.Formularios.Grupos_familiares
 
         private void Btn_Modificar_Click(object sender, EventArgs e)
         {
-            string sql = $"UPDATE Familiar_X_Pasajero SET tipoParentesco = '{txt_Relacion.Text}' " +
-                $"WHERE numerodocPrimerPasajero = {numeroDoc1} AND" +
-                $" tipoDocPrimerPasajero = {tipoDoc1} AND numerodocSegundoPasajero = {numeroDoc2} AND " +
-                $"tipoDocSegundoPasajero = {tipoDoc2}";
-            _BD.Modificar(sql, false);
-            this.Close();
+            if (txt_Relacion.Text != "")
+            {
+                string sql = $"UPDATE Familiar_X_Pasajero SET tipoParentesco = '{txt_Relacion.Text}' " +
+                    $"WHERE numerodocPrimerPasajero = {numeroDoc1} AND" +
+                    $" tipoDocPrimerPasajero = {tipoDoc1} AND numerodocSegundoPasajero = {numeroDoc2} AND " +
+                    $"tipoDocSegundoPasajero = {tipoDoc2}";
+                _BD.Modificar(sql, false);
+                this.Close();
+            }
+            else
+                MessageBox.Show("La relación no puede dejarse en blanco");
         }
 
         private void btn_cancelar_Click(object sender, EventArgs e)

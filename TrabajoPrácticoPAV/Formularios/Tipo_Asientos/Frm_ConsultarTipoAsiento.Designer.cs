@@ -52,6 +52,7 @@
             this.BarraSuperior.Name = "BarraSuperior";
             this.BarraSuperior.Size = new System.Drawing.Size(591, 39);
             this.BarraSuperior.TabIndex = 56;
+            this.BarraSuperior.Paint += new System.Windows.Forms.PaintEventHandler(this.BarraSuperior_Paint);
             // 
             // Titulo
             // 

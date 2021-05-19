@@ -10,14 +10,30 @@ using System.Windows.Forms;
 using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.NE_Usuarios;
 using TrabajoPrácticoPAV.Backend;
+using System.Runtime.InteropServices;
 
 namespace TrabajoPrácticoPAV.Formularios.Asientos
 {
     public partial class Frm_AltaAsientos : Form
     {
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWind, int wMsg, int wParam, int lParam);
+
+        private void BarraSuperior_MouseMove(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        NE_Asiento asiento = new NE_Asiento();
+
         public Frm_AltaAsientos()
         {
             InitializeComponent();
+            this.BackColor = Estilo.ColorFondoForms;
+            Estilo.FormatearEstilo(this.Controls);
         }
 
         private void btn_cerrar_Click(object sender, EventArgs e)
@@ -41,16 +57,11 @@ namespace TrabajoPrácticoPAV.Formularios.Asientos
             {
                 Conexion_DB _BD = new Conexion_DB();
                 Tratamiento.Validar(this.Controls);
-               // if (cmb_AeropSalida.SelectedIndex != cmb_AeropDestino.SelectedIndex)
-                //{
-                    string sql = Tratamiento.CostructorInsert("Asientos", panel1.Controls);
-                    _BD.Insertar(sql, false);
+
+                //string sql = Tratamiento.CostructorInsert("Asientos", panel1.Controls);
+                //_BD.Insertar(sql, false);
+                asiento.Insertar(this.Controls);
                     this.Close();
-                //}
-                //else
-                //{
-                //    MessageBox.Show("El aeropuerto de salida no puede ser igual al aeropuerto de destino. Seleccione otro");
-                //}
             }
             else
             {
@@ -67,14 +78,7 @@ namespace TrabajoPrácticoPAV.Formularios.Asientos
             cmb_numeroAvion.CargarComboJoin(CondicionAvion);
         }
 
-        private void cmb_numeroAvion_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-            cmb_clase.SelectedIndex = -1;
-            //string condicionClase = @"JOIN Asientos ON Tipo_Asiento.idTipo" +
-            //                  @"= Asientos.tipoAsiento WHERE Asientos.numeroPorModelo = " + cmb_numeroAvion.SelectedValue;
-            //string condicionClase = @"JOIN Asientos ON Tipo_Asiento.idTipo" +
-            //                        @"= Asientos.tipoAsiento WHERE Asientos.numeroPorModelo = " + cmb_numeroAvion.SelectedValue;
-            //cmb_clase.CargarComboJoin(condicionClase);
-        }
+        
+        
     }
 }

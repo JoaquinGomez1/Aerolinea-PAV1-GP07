@@ -63,6 +63,58 @@ namespace TrabajoPrácticoPAV.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _22041 {
+            get {
+                object obj = ResourceManager.GetObject("22041", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _39915 {
+            get {
+                object obj = ResourceManager.GetObject("39915", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _399151 {
+            get {
+                object obj = ResourceManager.GetObject("399151", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _8b1a89d3f271913146d4cd63f3920464_icono_de_trazo_de_lista_de_verificaci_oacute_n_m_eacute_dica_by_vexels {
+            get {
+                object obj = ResourceManager.GetObject("8b1a89d3f271913146d4cd63f3920464-icono-de-trazo-de-lista-de-verificaci-oacute-n-m" +
+                        "-eacute-dica-by-vexels", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _8b1a89d3f271913146d4cd63f3920464_icono_de_trazo_de_lista_de_verificaci_oacute_n_m_eacute_dica_by_vexels__1_ {
+            get {
+                object obj = ResourceManager.GetObject("8b1a89d3f271913146d4cd63f3920464-icono-de-trazo-de-lista-de-verificaci-oacute-n-m" +
+                        "-eacute-dica-by-vexels (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Avion_Icono {
             get {
                 object obj = ResourceManager.GetObject("Avion_Icono", resourceCulture);
@@ -196,6 +248,26 @@ namespace TrabajoPrácticoPAV.Properties {
         internal static System.Drawing.Bitmap país_icon {
             get {
                 object obj = ResourceManager.GetObject("país_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap process {
+            get {
+                object obj = ResourceManager.GetObject("process", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap settings___v1 {
+            get {
+                object obj = ResourceManager.GetObject("settings - v1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -60,11 +60,11 @@ namespace TrabajoPrácticoPAV.Formularios.Ciudad
         private void Frm_Ciudad_Load_1(object sender, EventArgs e)
         {
             comboBox_pais_register.CargarCombo();
-            comboBox_Aerolinea1.CargarCombo();
+
             DataTable TableCiudades = _NE.GetTodosLasCiudades();
             CargarDataGrid(TableCiudades);
         }
-
+ 
         private void btn_registrar_Click(object sender, EventArgs e)
         {
             bool esValido = tratamientos.Validar(panel_registrar.Controls) == Resultado.correcto;
@@ -92,7 +92,6 @@ namespace TrabajoPrácticoPAV.Formularios.Ciudad
         {
            
             comboBox_pais_modify.CargarCombo();
-            comboBox_Aerolinea2.CargarCombo();
             panel_modify.Visible = true;
             lbl_title_modify.Visible = true;
 
@@ -147,6 +146,44 @@ namespace TrabajoPrácticoPAV.Formularios.Ciudad
             _NE.EliminarCiudad(idCiudad);
 
             grid_ciudades.Rows.Remove(grid_ciudades.CurrentRow);
+        }
+
+        private void btn_buscar_Click(object sender, EventArgs e)
+        {
+            string nombre = txt_nombre_register.Text;
+            string pais = comboBox_pais_register.SelectedValue.ToString();
+            string provincia = "";
+            if (comboBox_Aerolinea1.SelectedIndex != -1)
+            {
+                provincia = comboBox_Aerolinea1.SelectedValue.ToString();
+            }
+            
+
+            DataTable tabla = _NE.GetCiudad(nombre,pais,provincia);
+            if (tabla != null)
+            { CargarGridCiudades(tabla); }
+            else { MessageBox.Show("Complete los campos para realizar la busqueda"); }
+        }
+
+        private void comboBox_pais_register_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            comboBox_Aerolinea1.SelectedIndex = -1;
+            string CondicionAvion = @" JOIN Pais ON Pais.idPais " +
+                       @"= Provincia.idPais WHERE Pais.idPais = " + comboBox_pais_register.SelectedValue;
+            comboBox_Aerolinea1.CargarComboJoin(CondicionAvion);
+        }
+
+        private void comboBox_pais_modify_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            comboBox_Aerolinea2.SelectedIndex = -1;
+            string CondicionAvion = @" JOIN Pais ON Pais.idPais " +
+                       @"= Provincia.idPais WHERE Pais.idPais = " + comboBox_pais_modify.SelectedValue;
+            comboBox_Aerolinea2.CargarComboJoin(CondicionAvion);
+        }
+
+        private void btn_cerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

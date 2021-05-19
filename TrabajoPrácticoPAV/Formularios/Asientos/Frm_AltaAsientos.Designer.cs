@@ -60,7 +60,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label2.Location = new System.Drawing.Point(106, 103);
+            this.label2.Location = new System.Drawing.Point(107, 103);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(139, 20);
@@ -71,7 +71,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label3.Location = new System.Drawing.Point(122, 140);
+            this.label3.Location = new System.Drawing.Point(123, 140);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(123, 20);
@@ -92,9 +92,10 @@
             // btn_cerrar
             // 
             this.btn_cerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
+            this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btn_cerrar.Location = new System.Drawing.Point(300, 177);
-            this.btn_cerrar.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_cerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_cerrar.Name = "btn_cerrar";
             this.btn_cerrar.Pp_Presionado = false;
             this.btn_cerrar.Size = new System.Drawing.Size(99, 34);
@@ -106,9 +107,10 @@
             // btn_registrarAsiento
             // 
             this.btn_registrarAsiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
+            this.btn_registrarAsiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_registrarAsiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btn_registrarAsiento.Location = new System.Drawing.Point(132, 177);
-            this.btn_registrarAsiento.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_registrarAsiento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_registrarAsiento.Name = "btn_registrarAsiento";
             this.btn_registrarAsiento.Pp_Presionado = false;
             this.btn_registrarAsiento.Size = new System.Drawing.Size(99, 34);
@@ -120,7 +122,7 @@
             // txt_estado
             // 
             this.txt_estado.Location = new System.Drawing.Point(279, 177);
-            this.txt_estado.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_estado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_estado.Name = "txt_estado";
             this.txt_estado.Pp_EsPk = false;
             this.txt_estado.Pp_MensajeError = "Ingrese el estado del asiento";
@@ -133,7 +135,7 @@
             // 
             this.cmb_clase.FormattingEnabled = true;
             this.cmb_clase.Location = new System.Drawing.Point(279, 140);
-            this.cmb_clase.Margin = new System.Windows.Forms.Padding(4);
+            this.cmb_clase.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmb_clase.Name = "cmb_clase";
             this.cmb_clase.Pp_CampoAceptaNull = true;
             this.cmb_clase.Pp_EsPk = false;
@@ -149,7 +151,7 @@
             // 
             this.cmb_numeroAvion.FormattingEnabled = true;
             this.cmb_numeroAvion.Location = new System.Drawing.Point(279, 103);
-            this.cmb_numeroAvion.Margin = new System.Windows.Forms.Padding(4);
+            this.cmb_numeroAvion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmb_numeroAvion.Name = "cmb_numeroAvion";
             this.cmb_numeroAvion.Pp_CampoAceptaNull = true;
             this.cmb_numeroAvion.Pp_EsPk = false;
@@ -160,13 +162,12 @@
             this.cmb_numeroAvion.Pp_PkTabla = "numeroPorModelo";
             this.cmb_numeroAvion.Size = new System.Drawing.Size(217, 24);
             this.cmb_numeroAvion.TabIndex = 1;
-            this.cmb_numeroAvion.SelectionChangeCommitted += new System.EventHandler(this.cmb_numeroAvion_SelectionChangeCommitted);
             // 
             // cmb_nombreModelo
             // 
             this.cmb_nombreModelo.FormattingEnabled = true;
             this.cmb_nombreModelo.Location = new System.Drawing.Point(279, 66);
-            this.cmb_nombreModelo.Margin = new System.Windows.Forms.Padding(4);
+            this.cmb_nombreModelo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmb_nombreModelo.Name = "cmb_nombreModelo";
             this.cmb_nombreModelo.Pp_CampoAceptaNull = true;
             this.cmb_nombreModelo.Pp_EsPk = false;
@@ -189,6 +190,7 @@
             this.BarraSuperior.Name = "BarraSuperior";
             this.BarraSuperior.Size = new System.Drawing.Size(591, 39);
             this.BarraSuperior.TabIndex = 49;
+            this.BarraSuperior.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BarraSuperior_MouseMove);
             // 
             // Titulo
             // 
@@ -207,8 +209,8 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.btn_registrarAsiento);
             this.panel1.Controls.Add(this.btn_cerrar);
-            this.panel1.Location = new System.Drawing.Point(13, 45);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(13, 46);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(565, 240);
             this.panel1.TabIndex = 50;
@@ -230,7 +232,7 @@
             this.Controls.Add(this.cmb_nombreModelo);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Frm_AltaAsientos";
             this.Text = "Frm_AltaAsientos";
             this.Load += new System.EventHandler(this.Frm_AltaAsientos_Load);

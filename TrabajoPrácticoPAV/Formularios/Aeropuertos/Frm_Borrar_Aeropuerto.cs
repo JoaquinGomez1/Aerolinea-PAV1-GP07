@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Formularios;
 using TrabajoPrácticoPAV.NE_Usuarios;
+using TrabajoPrácticoPAV.Clase;
 
 namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
 {
@@ -31,6 +32,8 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
         public Frm_Borrar_Aeropuerto()
         {
             InitializeComponent();
+            this.BackColor = Estilo.ColorFondoForms;
+            Estilo.FormatearEstilo(this.Controls);
         }
 
         private void btn_aceptar_Click(object sender, EventArgs e)

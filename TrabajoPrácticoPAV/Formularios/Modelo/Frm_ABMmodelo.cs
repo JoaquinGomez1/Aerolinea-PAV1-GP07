@@ -44,30 +44,9 @@ namespace TrabajoPrácticoPAV.Formularios.Modelo
         {
            
             Tratamientos_Especiales tratamiento = new Tratamientos_Especiales();
-
-            string sql = tratamiento.ConstructorSelect(this.Controls, "", "Modelo");
-            MessageBox.Show("sql" + sql);
-            Cargar_grilla_modelos(sql);
+            modelo.Cargar_grilla_modelos(grilla_modelos, "", this.Controls);
         }
-        private void Cargar_grilla_modelos(string sql)
-        {
-            Conexion_DB _BD = new Conexion_DB();
-            DataTable tabla = _BD.EjecutarSelect(sql);
-
-            grilla_modelos.Rows.Clear();
-
-            for (int i = 0; i < tabla.Rows.Count; i++)
-            {
-                grilla_modelos.Rows.Add();
-                grilla_modelos.Rows[i].Cells[0].Value = tabla.Rows[i]["nombre"].ToString();
-                grilla_modelos.Rows[i].Cells[1].Value = tabla.Rows[i]["idModelo"].ToString();
-            }
-            if (tabla.Rows.Count == 0)
-            {
-                MessageBox.Show("No se encontraron Asientos para ese filtro.");
-            }
-
-        }
+        
 
         private void grilla_modelos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -81,13 +60,16 @@ namespace TrabajoPrácticoPAV.Formularios.Modelo
             Frm_ConsultaModelo consultaModelo = new Frm_ConsultaModelo();
             consultaModelo.Id_modelo = Id_modelo;
             consultaModelo.ShowDialog();
-            
+
         }
 
         private void btn_registrar_Click(object sender, EventArgs e)
         {
             Frm_AltaModelo altaModelo = new Frm_AltaModelo();
             altaModelo.ShowDialog();
+            modelo.Cargar_grilla_modelos(grilla_modelos, "", this.Controls);
+            btn_eliminar.Enabled = false;
+            btn_modificar.Enabled = false;
         }
 
         private void btn_modificar_Click(object sender, EventArgs e)
@@ -95,6 +77,9 @@ namespace TrabajoPrácticoPAV.Formularios.Modelo
             Frm_ModificarModelo ModificarModelo = new Frm_ModificarModelo();
             ModificarModelo.Id_Modelo = Id_modelo;
             ModificarModelo.ShowDialog();
+            modelo.Cargar_grilla_modelos(grilla_modelos, "", this.Controls);
+            btn_eliminar.Enabled = false;
+            btn_modificar.Enabled = false;
         }
 
         private void btn_eliminar_Click(object sender, EventArgs e)
@@ -102,6 +87,9 @@ namespace TrabajoPrácticoPAV.Formularios.Modelo
             Frm_BajaModelo eliminarModelo = new Frm_BajaModelo();
             eliminarModelo.Id_modelo = Id_modelo;
             eliminarModelo.ShowDialog();
+            modelo.Cargar_grilla_modelos(grilla_modelos, "", this.Controls);
+            btn_eliminar.Enabled = false;
+            btn_modificar.Enabled = false;
         }
     }
 }

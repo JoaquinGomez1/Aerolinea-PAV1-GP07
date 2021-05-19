@@ -102,6 +102,9 @@ namespace TrabajoPrácticoPAV.Formularios.Grupos_familiares
             elim.relacion = grid_Familiares.CurrentRow.Cells["tipoParentesco"].Value.ToString();
 
             elim.ShowDialog();
+
+            Btn_Modificar.Enabled = false;
+            Btn_Eliminar.Enabled = false;
         }
 
         private void btn_modificar1_Click(object sender, EventArgs e)
@@ -115,6 +118,9 @@ namespace TrabajoPrácticoPAV.Formularios.Grupos_familiares
             modif.relacion = grid_Familiares.CurrentRow.Cells["tipoParentesco"].Value.ToString();
 
             modif.ShowDialog();
+
+            Btn_Modificar.Enabled = false;
+            Btn_Eliminar.Enabled = false;
         }
 
         private void grid_Familiares_CellClick(object sender, DataGridViewCellEventArgs e)
