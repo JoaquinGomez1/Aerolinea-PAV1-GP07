@@ -731,5 +731,35 @@
   <ItemGroup>
     <None Include="Resources\settings - v1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\working_shift_icon_149841.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\production_process_icon_149888.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\process_events_icon_149896.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_66-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\klipartz.com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reboot_arrow_3726.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8b1a89d3f271913146d4cd63f3920464-icono-de-trazo-de-lista-de-verificaci-oacute-n-m-eacute-dica-by-vexels1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngegg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\klipartz.com %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reboot_arrow_3726 %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -115,6 +115,17 @@ namespace TrabajoPrácticoPAV.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _8b1a89d3f271913146d4cd63f3920464_icono_de_trazo_de_lista_de_verificaci_oacute_n_m_eacute_dica_by_vexels1 {
+            get {
+                object obj = ResourceManager.GetObject("8b1a89d3f271913146d4cd63f3920464-icono-de-trazo-de-lista-de-verificaci-oacute-n-m" +
+                        "-eacute-dica-by-vexels1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Avion_Icono {
             get {
                 object obj = ResourceManager.GetObject("Avion_Icono", resourceCulture);
@@ -225,6 +236,36 @@ namespace TrabajoPrácticoPAV.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_66_512 {
+            get {
+                object obj = ResourceManager.GetObject("Icon_66-512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap klipartz_com {
+            get {
+                object obj = ResourceManager.GetObject("klipartz.com", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap klipartz_com__1_ {
+            get {
+                object obj = ResourceManager.GetObject("klipartz.com (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Logo {
             get {
                 object obj = ResourceManager.GetObject("Logo", resourceCulture);
@@ -255,9 +296,59 @@ namespace TrabajoPrácticoPAV.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pngegg {
+            get {
+                object obj = ResourceManager.GetObject("pngegg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap process {
             get {
                 object obj = ResourceManager.GetObject("process", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap process_events_icon_149896 {
+            get {
+                object obj = ResourceManager.GetObject("process_events_icon_149896", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap production_process_icon_149888 {
+            get {
+                object obj = ResourceManager.GetObject("production_process_icon_149888", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap reboot_arrow_3726 {
+            get {
+                object obj = ResourceManager.GetObject("reboot_arrow_3726", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap reboot_arrow_3726__1_ {
+            get {
+                object obj = ResourceManager.GetObject("reboot_arrow_3726 (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -308,6 +399,16 @@ namespace TrabajoPrácticoPAV.Properties {
         internal static System.Drawing.Bitmap Vuelo_Icono {
             get {
                 object obj = ResourceManager.GetObject("Vuelo_Icono", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap working_shift_icon_149841 {
+            get {
+                object obj = ResourceManager.GetObject("working_shift_icon_149841", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

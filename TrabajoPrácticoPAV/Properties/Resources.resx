@@ -118,79 +118,109 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Ubicacion_Icono" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Ubicacion_Icono.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="gear-wheel-304395_960_720 (1) (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gear-wheel-304395_960_720 (1) (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="22041" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\22041.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Mundo_Icono" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Mundo_Icono.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="gear-wheel-304395_960_7201" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gear-wheel-304395_960_7201.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Configuracion_Icono" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Configuracion_Icono.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="working_shift_icon_149841" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\working_shift_icon_149841.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="399151" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\399151.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Cliente_Icono" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cliente_Icono.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Vuelo_Icono" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Vuelo_Icono.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Ticket_Icono" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Ticket_Icono.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="país_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\país_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ElbpHR6W0AAInBS1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ElbpHR6W0AAInBS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Avion_Icono" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Avion_Icono.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Tripulacion_Icono" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Tripulacion_Icono.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="process" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\process.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="gear-wheel-304395_960_720 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gear-wheel-304395_960_720 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="8b1a89d3f271913146d4cd63f3920464-icono-de-trazo-de-lista-de-verificaci-oacute-n-m-eacute-dica-by-vexels" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\8b1a89d3f271913146d4cd63f3920464-icono-de-trazo-de-lista-de-verificaci-oacute-n-m-eacute-dica-by-vexels.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="gear-wheel-304395_960_720 (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gear-wheel-304395_960_720 (1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="gear-wheel-304395_960_720" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gear-wheel-304395_960_720.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ElbpHR6W0AAInBS" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ElbpHR6W0AAInBS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pngegg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pngegg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="gear-wheel-304395_960_720 (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gear-wheel-304395_960_720 (1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Ticket_Icono" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ticket_Icono.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cliente_Icono" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cliente_Icono.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tripulacion_Icono" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tripulacion_Icono.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Calendario_Icono" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Calendario_Icono.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="39915" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\39915.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="process_events_icon_149896" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\process_events_icon_149896.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="settings - v1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\settings - v1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="8b1a89d3f271913146d4cd63f3920464-icono-de-trazo-de-lista-de-verificaci-oacute-n-m-eacute-dica-by-vexels (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\8b1a89d3f271913146d4cd63f3920464-icono-de-trazo-de-lista-de-verificaci-oacute-n-m-eacute-dica-by-vexels (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="settings - v1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\settings - v1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Avion_Icono" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Avion_Icono.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gear-wheel-304395_960_720 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gear-wheel-304395_960_720 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="39915" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\39915.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="klipartz.com" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\klipartz.com.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Configuracion_Icono" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Configuracion_Icono.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="país_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\país_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mundo_Icono" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mundo_Icono.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="reboot_arrow_3726" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\reboot_arrow_3726.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="production_process_icon_149888" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\production_process_icon_149888.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ubicacion_Icono" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ubicacion_Icono.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ElbpHR6W0AAInBS1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ElbpHR6W0AAInBS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="22041" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\22041.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="8b1a89d3f271913146d4cd63f3920464-icono-de-trazo-de-lista-de-verificaci-oacute-n-m-eacute-dica-by-vexels1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\8b1a89d3f271913146d4cd63f3920464-icono-de-trazo-de-lista-de-verificaci-oacute-n-m-eacute-dica-by-vexels1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ElbpHR6W0AAInBS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ElbpHR6W0AAInBS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Vuelo_Icono" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Vuelo_Icono.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="process" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\process.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="klipartz.com (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\klipartz.com (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="8b1a89d3f271913146d4cd63f3920464-icono-de-trazo-de-lista-de-verificaci-oacute-n-m-eacute-dica-by-vexels" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\8b1a89d3f271913146d4cd63f3920464-icono-de-trazo-de-lista-de-verificaci-oacute-n-m-eacute-dica-by-vexels.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_66-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_66-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gear-wheel-304395_960_720 (1) (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gear-wheel-304395_960_720 (1) (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="reboot_arrow_3726 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\reboot_arrow_3726 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
