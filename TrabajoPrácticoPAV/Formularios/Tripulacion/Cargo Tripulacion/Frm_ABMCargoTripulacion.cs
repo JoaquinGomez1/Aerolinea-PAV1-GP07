@@ -134,5 +134,10 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion.Cargo_Tripulacion
             { CargarGridTripulantes(tabla); }
             else { MessageBox.Show("Complete el nombre del cargo para realizar la busqueda"); }
         }
+
+        private void button_Aerolinea1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -44,6 +44,7 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
                 DataTable resultadoSelect = _DB.EjecutarSelect(sql);
                 return resultadoSelect;
             }
+
             else
             {
                 DataTable resultadoSelect = null;

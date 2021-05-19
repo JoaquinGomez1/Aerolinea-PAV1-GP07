@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using TrabajoPrácticoPAV.NE_Usuarios;
 using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.Backend;
+using System.Runtime.InteropServices;
 
 namespace TrabajoPrácticoPAV.Formularios.Asientos
 {
@@ -17,10 +18,23 @@ namespace TrabajoPrácticoPAV.Formularios.Asientos
     {
         public string Id_asiento { get; set; }
 
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWind, int wMsg, int wParam, int lParam);
+
+        private void BarraSuperior_MouseMove(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
         NE_Asiento asiento = new NE_Asiento();
         public Frm_BajaAsiento()
         {
             InitializeComponent();
+            this.BackColor = Estilo.ColorFondoForms;
+            Estilo.FormatearEstilo(this.Controls);
         }
         
         private void Frm_BajaAsiento_Load(object sender, EventArgs e)
@@ -56,5 +70,7 @@ namespace TrabajoPrácticoPAV.Formularios.Asientos
 
             }
         }
+
+        
     }
 }

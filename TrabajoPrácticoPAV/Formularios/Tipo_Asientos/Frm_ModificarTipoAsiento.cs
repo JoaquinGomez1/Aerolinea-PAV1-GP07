@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.Backend;
 using TrabajoPrácticoPAV.NE_Usuarios;
+using System.Runtime.InteropServices;
 
 namespace TrabajoPrácticoPAV.Formularios.Tipo_Asientos
 {
@@ -21,10 +22,22 @@ namespace TrabajoPrácticoPAV.Formularios.Tipo_Asientos
         Conexion_DB _BD = new Conexion_DB();
         NE_TipoAsiento TA = new NE_TipoAsiento();
 
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWind, int wMsg, int wParam, int lParam);
+
+        private void BarraSuperior_MouseMove(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
 
         public Frm_ModificarTipoAsiento()
         {
             InitializeComponent();
+            this.BackColor = Estilo.ColorFondoForms;
+            Estilo.FormatearEstilo(this.Controls);
         }
 
         private void Frm_ModificarTipoAsiento_Load(object sender, EventArgs e)
@@ -47,6 +60,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tipo_Asientos
             TA.Modificar(this.Controls);
             this.Close();
         }
-        
+
+       
     }
 }

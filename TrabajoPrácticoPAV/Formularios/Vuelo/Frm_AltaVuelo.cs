@@ -10,15 +10,29 @@ using System.Windows.Forms;
 using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.NE_Usuarios;
 using TrabajoPrácticoPAV.Backend;
+using System.Runtime.InteropServices;
 
 namespace TrabajoPrácticoPAV.Formularios.Vuelo
 {
     public partial class Frm_AltaVuelo : Form
     {
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWind, int wMsg, int wParam, int lParam);
+
+        private void BarraSuperior_MouseMove(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        } 
+
         NE_Vuelos vuelo = new NE_Vuelos();
         public Frm_AltaVuelo()
         {
             InitializeComponent();
+            this.BackColor = Estilo.ColorFondoForms;
+            Estilo.FormatearEstilo(this.Controls);
         }
 
         private void Frm_AltaVuelo_Load(object sender, EventArgs e)
@@ -28,7 +42,7 @@ namespace TrabajoPrácticoPAV.Formularios.Vuelo
            
 
             this.BackColor = Estilo.ColorFondoForms;
-                Estilo.FormatearEstilo(this.Controls);
+            Estilo.FormatearEstilo(this.Controls);
         }
 
         private void btn_Registrar_Click(object sender, EventArgs e)
@@ -55,10 +69,10 @@ namespace TrabajoPrácticoPAV.Formularios.Vuelo
             }
         }
 
-        private void btn_Cancelar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        //private void btn_Cancelar_Click(object sender, EventArgs e)
+        //{
+        //    this.Close();
+        //}
 
         private void cmb_nomModelo_SelectionChangeCommitted(object sender, EventArgs e)
         {
@@ -74,6 +88,11 @@ namespace TrabajoPrácticoPAV.Formularios.Vuelo
             string join = @" JOIN Tramo ON Tramo.codigoAeropuertoSalida " +
                     @"= aeropuerto.codigo WHERE Tramo.codigoAeropuertoDestino = '" + cmb_AeropSalida.SelectedValue + "'";
             cmb_AeropDestino.CargarComboJoin(join);
+        }
+
+        private void btn_Cancelar_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }   
 }

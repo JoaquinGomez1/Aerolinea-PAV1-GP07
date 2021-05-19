@@ -152,7 +152,13 @@ namespace TrabajoPrácticoPAV.Formularios.Ciudad
         {
             string nombre = txt_nombre_register.Text;
             string pais = comboBox_pais_register.SelectedValue.ToString();
-            string provincia = comboBox_Aerolinea1.SelectedValue.ToString();
+            string provincia = "";
+            if (comboBox_Aerolinea1.SelectedIndex != -1)
+            {
+                provincia = comboBox_Aerolinea1.SelectedValue.ToString();
+            }
+            
+
             DataTable tabla = _NE.GetCiudad(nombre,pais,provincia);
             if (tabla != null)
             { CargarGridCiudades(tabla); }
@@ -173,6 +179,11 @@ namespace TrabajoPrácticoPAV.Formularios.Ciudad
             string CondicionAvion = @" JOIN Pais ON Pais.idPais " +
                        @"= Provincia.idPais WHERE Pais.idPais = " + comboBox_pais_modify.SelectedValue;
             comboBox_Aerolinea2.CargarComboJoin(CondicionAvion);
+        }
+
+        private void btn_cerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
