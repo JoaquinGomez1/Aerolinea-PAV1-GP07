@@ -30,18 +30,18 @@ namespace TrabajoPrácticoPAV.Formularios
             Estilo.FormatearEstilo(this.Controls);
         }
 
-        //private void CargarGrilla(DataTable tabla)
-        //{
-        //    grid_aviones.Rows.Clear();
-        //    for (int i = 0; i < tabla.Rows.Count; i++)
-        //    {
-        //        grid_aviones.Rows.Add();
-        //        grid_aviones.Rows[i].Cells[0].Value = tabla.Rows[i]["numeroPorModelo"].ToString();
-        //        //grid_aviones.Rows[i].Cells[1].Value = tabla.Rows[i]["nombre"].ToString();
-        //        grid_aviones.Rows[i].Cells[1].Value = tabla.Rows[i]["idModelo"].ToString();
+        private void CargarGrilla(DataTable tabla)
+        {
+            grid_aviones.Rows.Clear();
+            for (int i = 0; i < tabla.Rows.Count; i++)
+            {
+                grid_aviones.Rows.Add();
+                grid_aviones.Rows[i].Cells[0].Value = tabla.Rows[i]["numeroPorModelo"].ToString();
+                grid_aviones.Rows[i].Cells[1].Value = tabla.Rows[i]["nombre"].ToString();
+                grid_aviones.Rows[i].Cells[2].Value = tabla.Rows[i]["idModelo"].ToString();
 
-        //    }
-        //}
+            }
+        }
         //private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         //{
         //    int current = grid_aviones.CurrentRow.Index;
@@ -62,66 +62,70 @@ namespace TrabajoPrácticoPAV.Formularios
         private void Frm_ABMAviones_Load(object sender, EventArgs e)
         {
             cmb_Modelo.CargarCombo();
-            grid_aviones.Pp_FormatoGrid = "numeroPorModelo,Número, 80;idModelo,Modelo, 250";
-            grid_aviones.Formatear();
+
+            //El formato se pasa de la siguiente forma ("NombreDelCampoEnLaBD, NombreAMostrarEnLaGrid, Ancho; ...")
+            //grid_aviones.Pp_FormatoGrid = "numeroPorModelo, Numero, 80; nombre, Nombre, 250;idModelo,Modelo, 80;";
+            //grid_aviones.Formatear();
             btn_eliminar.Enabled = false;
         }
 
         private void btn_buscar_Click(object sender, EventArgs e)
         {
-            btn_eliminar.Enabled = false;
             int modelo_up = int.Parse(cmb_Modelo.SelectedIndex.ToString()) + 1;
             NE_Avion avion = new NE_Avion();
-            Tratamientos_Especiales _TE = new Tratamientos_Especiales();
-            
-            CargarGrilla(_TE.ConstructorSelect(this.Controls, "JOIN Modelo ON Modelo.idModelo = Avion.idModelo", "Avion"));
-            //if (txt_numero.Text.Length > 4)
-            //{
-            //    MessageBox.Show("El numero de avion debe tener 4 numeros");
-            //}
-            //if (txt_numero.Text == string.Empty && cmb_Modelo.SelectedIndex == -1)
-            //{
-            //    MessageBox.Show("Seleccionar alguna opcion o ingresar numero de modelo");
-            //}
-
-            //if (cmb_Modelo.SelectedIndex != -1 && txt_numero.Text != "")
-            //{
-            //    CargarGrilla(avion.Recuperar_Mixto(txt_numero.Text, modelo_up));
-            //    return;
-            //}
-
-            //if (cmb_Modelo.SelectedIndex != -1)
-            //{
-            //    CargarGrilla(avion.Recuperar_x_modelo(modelo_up));
-            //    return;
-            //}
-
-            //if (txt_numero.Text != "")
-            //{
-            //    CargarGrilla(avion.Recuperar_x_numero(txt_numero.Text));
-            //    return;
-            //}
-            //if (chk_todos.Checked)
-            //{
-            //    CargarGrilla(avion.RecuperarTodos);
-            //    return
-            //}
-
-        }
-        private void CargarGrilla(string sql)
-        {
-
             DataTable tabla = new DataTable();
-            tabla = _BD.EjecutarSelect(sql);
+            //CargarGrilla(_TE.ConstructorSelect(this.Controls, " join Modelo on Modelo.idModelo = Avion.idModelo order by Modelo.nombre, Avion.numeroPorModelo, Avion.idModelo ", "Avion "));
 
-            grid_aviones.Rows.Clear();
-            for (int i = 0; i < tabla.Rows.Count; i++)
+
+            // CargarGrilla(_TE.ConstructorSelect(this.Controls, "JOIN Modelo ON Modelo.idModelo = Avion.idModelo", "Avion"));
+            if (txt_numero.Text.Length > 4)
             {
-                grid_aviones.Rows.Add();
-                grid_aviones.Rows[i].Cells[0].Value = tabla.Rows[i]["numeroPorModelo"].ToString();
-                grid_aviones.Rows[i].Cells[1].Value = tabla.Rows[i]["idCiudad"].ToString();
+                MessageBox.Show("El numero de avion debe tener 4 numeros máximo");
             }
+            if (txt_numero.Text == string.Empty && cmb_Modelo.SelectedIndex == -1 &&  !chk_todos.Checked)
+            {
+                MessageBox.Show("Seleccionar alguna opcion de búsqueda");
+            }
+
+            if (cmb_Modelo.SelectedIndex != -1 && txt_numero.Text != "")
+            {
+                CargarGrilla(avion.Recuperar_Mixto(txt_numero.Text, modelo_up));
+                return;
+            }
+
+            if (cmb_Modelo.SelectedIndex != -1)
+            {
+                CargarGrilla(avion.Recuperar_x_modelo(modelo_up));
+                return;
+            }
+
+            if (txt_numero.Text != "")
+            {
+                CargarGrilla(avion.Recuperar_x_numero(txt_numero.Text));
+                return;
+            }
+            if (chk_todos.Checked)
+            {
+                CargarGrilla(avion.RecuperarTodos());
+                return;
+            }
+
         }
+        //private void CargarGrilla(string sql)
+        //{
+
+        //    DataTable tabla = new DataTable();
+        //    tabla = _BD.EjecutarSelect(sql);
+
+        //    grid_aviones.Rows.Clear();
+        //    for (int i = 0; i < tabla.Rows.Count; i++)
+        //    {
+        //        grid_aviones.Rows.Add();
+        //        grid_aviones.Rows[i].Cells[0].Value = tabla.Rows[i]["nombre"].ToString();
+        //        grid_aviones.Rows[i].Cells[1].Value = tabla.Rows[i]["numeroPorModelo"].ToString();
+        //        grid_aviones.Rows[i].Cells[2].Value = tabla.Rows[i]["idCiudad"].ToString();
+        //    }
+        //}
 
         private void btn_agregar_Click(object sender, EventArgs e)
         {
@@ -149,9 +153,14 @@ namespace TrabajoPrácticoPAV.Formularios
         private void grid_aviones_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             Id_numero = grid_aviones.CurrentRow.Cells["numeroPorModelo"].Value.ToString();
-            Id_modelo = grid_aviones.CurrentRow.Cells["idModelo"].Value.ToString();
+            Id_modelo = grid_aviones.CurrentRow.Cells["nombre"].Value.ToString();
             btn_eliminar.Enabled = true;
             
+        }
+
+        private void btn_deseleccionar_Click(object sender, EventArgs e)
+        {
+            cmb_Modelo.SelectedIndex = -1;
         }
     }
 }
