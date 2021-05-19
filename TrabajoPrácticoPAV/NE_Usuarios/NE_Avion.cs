@@ -18,9 +18,7 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
 
         public DataTable RecuperarTodos()
         {
-
             string sql = @"SELECT Avion.numeroPorModelo, Modelo.nombre, Avion.idModelo from Avion inner join  Modelo on Avion.idModelo = Modelo.idModelo order by Modelo.nombre, Avion.numeroPorModelo,Avion.idModelo";
-
             return _BD.EjecutarSelect(sql);
         }
 
@@ -29,50 +27,44 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             string sqlInsertar = @"INSERT INTO Avion (numeroPorModelo, idModelo) " + " VALUES ( " + Pp_numero_modelo + ", " + Pp_id_modelo + ")";
             _BD.Insertar(sqlInsertar, false);
         }
-
  
-        public DataTable Recuperar_Mixto(string numero, int modelo)
+        public DataTable Recuperar_Mixto(string numero, string modelo)
         {
             string sql = @"SELECT Avion.numeroPorModelo, Modelo.nombre,  Avion.idModelo from Avion "
             + " inner join Modelo on Avion.idModelo = Modelo.idModelo "
-            + "  where Avion.numeroPorModelo = " + numero + " and Avion.idModelo = " + modelo;
-            ;
+            + "  where Avion.numeroPorModelo LIKE " + "'" + numero + "%' and Modelo.nombre = '" + modelo + "'";
             return _BD.EjecutarSelect(sql);
         }
 
-        public DataTable Recuperar_x_modelo(int modelo)
+        public DataTable Recuperar_x_modelo(string modelo)
         {
             string sql = @"SELECT Avion.numeroPorModelo, Modelo.nombre,  Avion.idModelo from Avion "
             + " inner join Modelo on Avion.idModelo = Modelo.idModelo "
-            + " where Avion.idModelo = " + modelo;
+            + " where Modelo.nombre = '" + modelo + "'";
             return _BD.EjecutarSelect(sql);
-
         }
         
-        public DataTable Recuperar_x_numero(string numero)
+        public DataTable Recuperar_x_numero(string patronNumero)
         {
             string sql = @"SELECT Avion.numeroPorModelo, Modelo.nombre,  Avion.idModelo from Avion "
             + " inner join Modelo on Avion.idModelo = Modelo.idModelo "
-            + " where Avion.numeroPorModelo = " + numero;
+            + " where Avion.numeroPorModelo LIKE " + "'"+ patronNumero+ "%'" ;
             return _BD.EjecutarSelect(sql);
         }
 
         public DataTable Remover_avion(string numero , object idModelo)
         {
-            string sql = @"delete from Avion where numeroPorModelo = " + numero + " and  idModelo= " + idModelo;
+            string sql = @"delete from Avion where numeroPorModelo = '" + numero + "' and  idModelo= " + idModelo;
             return _BD.EjecutarSelect(sql);
-
-
-            
         }
 
-       public DataTable Editar_avion (string numero , object idModelo)
-        {
-            string sql = @"Update Avion set Avion.numeroPorModelo = " + numero + ", Avion.idModelo= " + idModelo
-            + " where Avion.numeroPorModelo = " + numero;
-            return _BD.EjecutarSelect(sql);
+       //public DataTable Editar_avion (string numero , object idModelo)
+       // {
+       //     string sql = @"Update Avion set Avion.numeroPorModelo = " + numero + ", Avion.idModelo= " + idModelo
+       //     + " where Avion.numeroPorModelo = " + numero;
+       //     return _BD.EjecutarSelect(sql);
             
-        }
+       // }
     }
 }
 

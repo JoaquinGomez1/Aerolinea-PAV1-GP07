@@ -19,6 +19,7 @@ namespace TrabajoPrácticoPAV.Formularios
         Conexion_DB _BD = new Conexion_DB();
         public string Id_numero { get; set; }
         public string Id_modelo { get; set; }
+        public string Nombre { get; set; }
         public Frm_ABMAviones()
         {
             InitializeComponent();
@@ -42,23 +43,10 @@ namespace TrabajoPrácticoPAV.Formularios
 
             }
         }
-        //private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        //{
-        //    int current = grid_aviones.CurrentRow.Index;
-
-        //    if (grid_aviones.CurrentCell.ColumnIndex == 3)
-        //    {
-
-        //        //MessageBox.Show( "Eliminar", grid_aviones.CurrentRow.Cells[0].Value.ToString());
-
-        //        NE_Avion avion = new NE_Avion();
-        //        string numeroModelo = grid_aviones.CurrentRow.Cells[0].Value.ToString();
-        //        var idModelo = grid_aviones.Rows[current].Cells[2].Value;
-        //        CargarGrilla(avion.Remover_avion(numeroModelo, idModelo));
-        //        MessageBox.Show("Avion eliminado, Actualize la tabla");
-        //        return;
-        //    }
-        //}
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
         private void Frm_ABMAviones_Load(object sender, EventArgs e)
         {
             cmb_Modelo.CargarCombo();
@@ -71,13 +59,10 @@ namespace TrabajoPrácticoPAV.Formularios
 
         private void btn_buscar_Click(object sender, EventArgs e)
         {
-            int modelo_up = int.Parse(cmb_Modelo.SelectedIndex.ToString()) + 1;
+//            int modelo_up = int.Parse(cmb_Modelo.SelectedIndex.ToString()) + 1;
             NE_Avion avion = new NE_Avion();
             DataTable tabla = new DataTable();
-            //CargarGrilla(_TE.ConstructorSelect(this.Controls, " join Modelo on Modelo.idModelo = Avion.idModelo order by Modelo.nombre, Avion.numeroPorModelo, Avion.idModelo ", "Avion "));
 
-
-            // CargarGrilla(_TE.ConstructorSelect(this.Controls, "JOIN Modelo ON Modelo.idModelo = Avion.idModelo", "Avion"));
             if (txt_numero.Text.Length > 4)
             {
                 MessageBox.Show("El numero de avion debe tener 4 numeros máximo");
@@ -89,13 +74,14 @@ namespace TrabajoPrácticoPAV.Formularios
 
             if (cmb_Modelo.SelectedIndex != -1 && txt_numero.Text != "")
             {
-                CargarGrilla(avion.Recuperar_Mixto(txt_numero.Text, modelo_up));
+                //              CargarGrilla(avion.Recuperar_Mixto(txt_numero.Text, modelo_up));
+                CargarGrilla(avion.Recuperar_Mixto(txt_numero.Text, cmb_Modelo.Text));
                 return;
             }
 
             if (cmb_Modelo.SelectedIndex != -1)
             {
-                CargarGrilla(avion.Recuperar_x_modelo(modelo_up));
+                CargarGrilla(avion.Recuperar_x_modelo(cmb_Modelo.Text));
                 return;
             }
 
@@ -147,20 +133,54 @@ namespace TrabajoPrácticoPAV.Formularios
             Frm_Borrar_Avion borrar = new Frm_Borrar_Avion();
             borrar.Id_numero = Id_numero;
             borrar.Id_modelo = Id_modelo;
+            borrar.Nombre = Nombre;
             borrar.ShowDialog();
-        }
-
-        private void grid_aviones_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            Id_numero = grid_aviones.CurrentRow.Cells["numeroPorModelo"].Value.ToString();
-            Id_modelo = grid_aviones.CurrentRow.Cells["nombre"].Value.ToString();
-            btn_eliminar.Enabled = true;
-            
         }
 
         private void btn_deseleccionar_Click(object sender, EventArgs e)
         {
             cmb_Modelo.SelectedIndex = -1;
+        }
+
+        private void chk_todos_CheckedChanged(object sender, EventArgs e)
+        {
+            if(chk_todos.Checked)
+            {
+                txt_numero.Text = "";
+                cmb_Modelo.SelectedIndex = -1;
+            }
+            else
+            {
+                cmb_Modelo.CargarCombo();
+            }
+        }
+
+        private void grid_aviones_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int current = grid_aviones.CurrentRow.Index;
+
+            if (grid_aviones.CurrentCell.ColumnIndex != 0)
+            {
+                btn_eliminar.Enabled = true;
+                //MessageBox.Show( "Eliminar", grid_aviones.CurrentRow.Cells[0].Value.ToString());
+
+                NE_Avion avion = new NE_Avion();
+                Id_numero = grid_aviones.CurrentRow.Cells[0].Value.ToString();
+                Nombre = grid_aviones.CurrentRow.Cells[1].Value.ToString();
+                Id_modelo = grid_aviones.CurrentRow.Cells[2].Value.ToString();
+
+///                CargarGrilla(avion.Remover_avion(Id_numero, Id_modelo));
+                ///MessageBox.Show("Avion eliminado, Actualice la tabla");
+                return;
+            }
+        }
+
+        private void grid_aviones_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Id_numero = grid_aviones.CurrentRow.Cells["numero"].Value.ToString();
+            Id_modelo = grid_aviones.CurrentRow.Cells["idModelo"].Value.ToString();
+            Nombre = grid_aviones.CurrentRow.Cells["nombre"].Value.ToString();
+            btn_eliminar.Enabled = true;
         }
     }
 }

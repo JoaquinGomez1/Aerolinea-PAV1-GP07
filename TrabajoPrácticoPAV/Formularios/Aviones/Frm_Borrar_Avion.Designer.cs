@@ -32,10 +32,12 @@ namespace TrabajoPrácticoPAV.Formularios.Aviones
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txt_numero = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
-            this.button_Aerolinea1 = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
-            this.button_Aerolinea2 = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.cmb_modelos = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
+            this.button_Aerolinea2 = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
+            this.btn_eliminar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
+            this.txt_numero = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
+            this.txt_idModelo = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -68,41 +70,9 @@ namespace TrabajoPrácticoPAV.Formularios.Aviones
             this.label3.TabIndex = 0;
             this.label3.Text = "Modelo";
             // 
-            // txt_numero
-            // 
-            this.txt_numero.Enabled = false;
-            this.txt_numero.Location = new System.Drawing.Point(125, 87);
-            this.txt_numero.Name = "txt_numero";
-            this.txt_numero.Pp_EsPk = false;
-            this.txt_numero.Pp_MensajeError = null;
-            this.txt_numero.Pp_NombreCampo = null;
-            this.txt_numero.Pp_NombreTabla = null;
-            this.txt_numero.Size = new System.Drawing.Size(100, 20);
-            this.txt_numero.TabIndex = 1;
-            // 
-            // button_Aerolinea1
-            // 
-            this.button_Aerolinea1.Location = new System.Drawing.Point(90, 183);
-            this.button_Aerolinea1.Name = "button_Aerolinea1";
-            this.button_Aerolinea1.Pp_Presionado = false;
-            this.button_Aerolinea1.Size = new System.Drawing.Size(75, 23);
-            this.button_Aerolinea1.TabIndex = 2;
-            this.button_Aerolinea1.Text = "Eliminar";
-            this.button_Aerolinea1.UseVisualStyleBackColor = true;
-            // 
-            // button_Aerolinea2
-            // 
-            this.button_Aerolinea2.Location = new System.Drawing.Point(190, 183);
-            this.button_Aerolinea2.Name = "button_Aerolinea2";
-            this.button_Aerolinea2.Pp_Presionado = false;
-            this.button_Aerolinea2.Size = new System.Drawing.Size(75, 23);
-            this.button_Aerolinea2.TabIndex = 2;
-            this.button_Aerolinea2.Text = "Cancelar";
-            this.button_Aerolinea2.UseVisualStyleBackColor = true;
-            this.button_Aerolinea2.Click += new System.EventHandler(this.button_Aerolinea2_Click);
-            // 
             // cmb_modelos
             // 
+            this.cmb_modelos.Enabled = false;
             this.cmb_modelos.FormattingEnabled = true;
             this.cmb_modelos.Location = new System.Drawing.Point(125, 130);
             this.cmb_modelos.Name = "cmb_modelos";
@@ -116,6 +86,62 @@ namespace TrabajoPrácticoPAV.Formularios.Aviones
             this.cmb_modelos.Size = new System.Drawing.Size(121, 21);
             this.cmb_modelos.TabIndex = 3;
             // 
+            // button_Aerolinea2
+            // 
+            this.button_Aerolinea2.Location = new System.Drawing.Point(185, 221);
+            this.button_Aerolinea2.Name = "button_Aerolinea2";
+            this.button_Aerolinea2.Pp_Presionado = false;
+            this.button_Aerolinea2.Size = new System.Drawing.Size(75, 23);
+            this.button_Aerolinea2.TabIndex = 2;
+            this.button_Aerolinea2.Text = "Cancelar";
+            this.button_Aerolinea2.UseVisualStyleBackColor = true;
+            this.button_Aerolinea2.Click += new System.EventHandler(this.button_Aerolinea2_Click);
+            // 
+            // btn_eliminar
+            // 
+            this.btn_eliminar.Location = new System.Drawing.Point(83, 221);
+            this.btn_eliminar.Name = "btn_eliminar";
+            this.btn_eliminar.Pp_Presionado = false;
+            this.btn_eliminar.Size = new System.Drawing.Size(75, 23);
+            this.btn_eliminar.TabIndex = 2;
+            this.btn_eliminar.Text = "Eliminar";
+            this.btn_eliminar.UseVisualStyleBackColor = true;
+            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
+            // 
+            // txt_numero
+            // 
+            this.txt_numero.Enabled = false;
+            this.txt_numero.Location = new System.Drawing.Point(125, 87);
+            this.txt_numero.Name = "txt_numero";
+            this.txt_numero.Pp_EsPk = false;
+            this.txt_numero.Pp_MensajeError = null;
+            this.txt_numero.Pp_NombreCampo = null;
+            this.txt_numero.Pp_NombreTabla = null;
+            this.txt_numero.Size = new System.Drawing.Size(100, 20);
+            this.txt_numero.TabIndex = 1;
+            // 
+            // txt_idModelo
+            // 
+            this.txt_idModelo.Enabled = false;
+            this.txt_idModelo.Location = new System.Drawing.Point(125, 173);
+            this.txt_idModelo.Name = "txt_idModelo";
+            this.txt_idModelo.Pp_EsPk = false;
+            this.txt_idModelo.Pp_MensajeError = null;
+            this.txt_idModelo.Pp_NombreCampo = null;
+            this.txt_idModelo.Pp_NombreTabla = null;
+            this.txt_idModelo.Size = new System.Drawing.Size(100, 20);
+            this.txt_idModelo.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Enabled = false;
+            this.label4.Location = new System.Drawing.Point(60, 180);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(56, 13);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "ID Modelo";
+            // 
             // Frm_Borrar_Avion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -124,8 +150,10 @@ namespace TrabajoPrácticoPAV.Formularios.Aviones
             this.ClientSize = new System.Drawing.Size(334, 291);
             this.Controls.Add(this.cmb_modelos);
             this.Controls.Add(this.button_Aerolinea2);
-            this.Controls.Add(this.button_Aerolinea1);
+            this.Controls.Add(this.btn_eliminar);
+            this.Controls.Add(this.txt_idModelo);
             this.Controls.Add(this.txt_numero);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -143,8 +171,10 @@ namespace TrabajoPrácticoPAV.Formularios.Aviones
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private Clase.TextBox_Aerolinea txt_numero;
-        private Clase.Button_Aerolinea button_Aerolinea1;
+        private Clase.Button_Aerolinea btn_eliminar;
         private Clase.Button_Aerolinea button_Aerolinea2;
         private Clase.ComboBox_Aerolinea cmb_modelos;
+        private Clase.TextBox_Aerolinea txt_idModelo;
+        private System.Windows.Forms.Label label4;
     }
 }
