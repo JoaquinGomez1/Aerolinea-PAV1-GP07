@@ -47,8 +47,33 @@ namespace TrabajoPrácticoPAV.Formularios.Vuelo
 
         private void btn_Registrar_Click(object sender, EventArgs e)
         {
-            Tratamientos_Especiales Tratamiento = new Tratamientos_Especiales();
             
+        }
+        
+
+        private void btn_Cancelar_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void cmb_nomModelo_SelectionChangeCommitted_1(object sender, EventArgs e)
+        {
+            string Condicion = @" JOIN Modelo ON Modelo.idModelo " +
+                   @"= Avion.idModelo WHERE Avion.idModelo = " + cmb_nomModelo.SelectedValue;
+            cmb_numAvion.CargarComboJoin(Condicion);
+        }
+
+        private void cmb_AeropSalida_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            string join = @" JOIN Tramo ON Tramo.codigoAeropuertoSalida " +
+                    @"= aeropuerto.codigo WHERE Tramo.codigoAeropuertoDestino = '" + cmb_AeropSalida.SelectedValue + "'";
+            cmb_AeropDestino.CargarComboJoin(join);
+        }
+
+        private void btn_Registrar_Click_1(object sender, EventArgs e)
+        {
+            Tratamientos_Especiales Tratamiento = new Tratamientos_Especiales();
+
             if (Tratamiento.Validar(this.Controls) == Tratamientos_Especiales.Resultado.correcto)
             {
                 Conexion_DB _BD = new Conexion_DB();
@@ -67,32 +92,6 @@ namespace TrabajoPrácticoPAV.Formularios.Vuelo
             {
                 return;
             }
-        }
-
-        //private void btn_Cancelar_Click(object sender, EventArgs e)
-        //{
-        //    this.Close();
-        //}
-
-        private void cmb_nomModelo_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-            
-            string Condicion = @" JOIN Modelo ON Modelo.idModelo " +
-                    @"= Avion.idModelo WHERE Avion.idModelo = " + cmb_nomModelo.SelectedValue;
-            cmb_numAvion.CargarComboJoin(Condicion);
-
-        }
-        
-        private void cmb_AeropSalida_SelectionChangeCommitted_1(object sender, EventArgs e)
-        {
-            string join = @" JOIN Tramo ON Tramo.codigoAeropuertoSalida " +
-                    @"= aeropuerto.codigo WHERE Tramo.codigoAeropuertoDestino = '" + cmb_AeropSalida.SelectedValue + "'";
-            cmb_AeropDestino.CargarComboJoin(join);
-        }
-
-        private void btn_Cancelar_Click_1(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }   
 }

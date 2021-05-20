@@ -97,6 +97,7 @@ namespace TrabajoPrácticoPAV.Formularios
         {
             Frm_AltaAviones alta = new Frm_AltaAviones();
             alta.ShowDialog();
+            grid_aviones.Rows.Clear();
         }
 
         private void btn_limpiar_Click(object sender, EventArgs e)
@@ -115,6 +116,7 @@ namespace TrabajoPrácticoPAV.Formularios
             borrar.Id_modelo = Id_modelo;
             borrar.Nombre = Nombre;
             borrar.ShowDialog();
+            grid_aviones.Rows.Clear();
         }
 
         private void btn_deseleccionar_Click(object sender, EventArgs e)
