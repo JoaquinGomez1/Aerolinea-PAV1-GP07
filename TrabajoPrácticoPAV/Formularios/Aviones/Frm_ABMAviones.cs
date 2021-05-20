@@ -40,13 +40,13 @@ namespace TrabajoPrácticoPAV.Formularios
                 grid_aviones.Rows[i].Cells[0].Value = tabla.Rows[i]["numeroPorModelo"].ToString();
                 grid_aviones.Rows[i].Cells[1].Value = tabla.Rows[i]["nombre"].ToString();
                 grid_aviones.Rows[i].Cells[2].Value = tabla.Rows[i]["idModelo"].ToString();
-
+            }
+            if (grid_aviones.Rows.Count == 0)
+            {
+                MessageBox.Show("No se han recuperado valores");
             }
         }
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
+
         private void Frm_ABMAviones_Load(object sender, EventArgs e)
         {
             cmb_Modelo.CargarCombo();
