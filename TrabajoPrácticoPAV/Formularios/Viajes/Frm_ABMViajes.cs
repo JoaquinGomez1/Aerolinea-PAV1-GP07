@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Backend;
 using TrabajoPrácticoPAV.Clase;
@@ -12,12 +14,17 @@ namespace TrabajoPrácticoPAV.Formularios
 {
     public partial class Frm_ABMViajes : Form
     {
+        public static List<Tramo> TramosDelViaje = new List<Tramo>();
+        // Al abrir este formulario creo también un nuevo formulario de viaje
+        private Frm_CargarTramosPorViaje frm = new Frm_CargarTramosPorViaje();
 
         public Frm_ABMViajes()
         {
             InitializeComponent();
             this.BackColor = Estilo.ColorFondoForms;
             Estilo.FormatearEstilo(this.Controls);
+
+            frm.FormClosed += new FormClosedEventHandler(Form_Closed);
         }
 
         private readonly NE_Viajes _NE_Viajes = new NE_Viajes();
@@ -37,30 +44,28 @@ namespace TrabajoPrácticoPAV.Formularios
         private void maskedTextBox1_TextChanged(object sender, EventArgs e)
         {
             // En este caso solo me interesa delegar la tarea de comparación a la hora de determinar el estimado
-            string horarioLlegada = Mtxt_horarioLlegada.Text;
-            string horarioSalida = Mtxt_horarioSalida.Text;
-            mostrarDuracionEstimada(horarioLlegada, horarioSalida);
-        }
 
-        private void maskedTextBox2_TextChanged(object sender, EventArgs e)
-        {
-            string horarioLlegada = Mtxt_horarioLlegada.Text;
             string horarioSalida = Mtxt_horarioSalida.Text;
-            mostrarDuracionEstimada(horarioLlegada, horarioSalida);
+
+            if (Mtxt_horarioSalida.Text.Length == 5)
+            {
+                string horarioLlegada = calcularLlegada().ToString().Substring(0, 5);
+                actualizarHorarioLlegada();
+                mostrarDuracionEstimada(horarioLlegada, horarioSalida);
+            }
         }
 
         public void mostrarDuracionEstimada(string horarioLlegada, string horarioSalida)
         {
-            bool llegadaCompletada = horarioLlegada.Length == 5;
             bool salidaCompletada = horarioSalida.Length == 5;
 
-            bool ambosCamposCompletados = llegadaCompletada && salidaCompletada;
+            bool esHorarioValido = Tiempo.esHorarioValido(horarioSalida);
+            bool hayTramosCargados = TramosDelViaje.Count >= 1;
 
-            bool esHorarioValido = Tiempo.esHorarioValido(horarioSalida) && Tiempo.esHorarioValido(horarioLlegada);
-
-            if (ambosCamposCompletados && esHorarioValido)
+            if (salidaCompletada && esHorarioValido && hayTramosCargados)
             {
                 string durEstimada = _NE_Viajes.determinarEstimado(horarioLlegada, horarioSalida);
+                MessageBox.Show($"Show, salida: {horarioSalida}. Estimado {durEstimada}");
                 lbl_duracionEstimada.Text = durEstimada;
                 duracionEstimadaViaje = Tiempo.convertirAIntMilitar(durEstimada);
             }
@@ -78,13 +83,21 @@ namespace TrabajoPrácticoPAV.Formularios
             bool noEstaHorarioDesfasado = VerificarHorarioDesfasado() == Resultado.correcto;
             if (!noEstaHorarioDesfasado) return;
 
-            bool estaTodoCorrecto = estanCamposCompletos && esHorarioPresenciaCorrecto && noEstaHorarioDesfasado;
+            bool existeAlMenosUnTramo = TramosDelViaje.Count >= 1;
+            if (!existeAlMenosUnTramo)
+            {
+                MessageBox.Show("Tiene que cargar al menos un tramo");
+                return;
+            }
+
+            bool estaTodoCorrecto = estanCamposCompletos && esHorarioPresenciaCorrecto && noEstaHorarioDesfasado && existeAlMenosUnTramo;
+
 
             if (estaTodoCorrecto)
             {
                 Viaje myViaje = new Viaje()
                 {
-                    HorarioLlegada = Mtxt_horarioLlegada.Text,
+                    HorarioLlegada = lbl_horarioLlegada.Text,
                     HorarioSalida = Mtxt_horarioSalida.Text,
                     HorarioPresencia = Mtxt_presencia.Text,
                     DuracionEstimada = duracionEstimadaViaje
@@ -110,9 +123,6 @@ namespace TrabajoPrácticoPAV.Formularios
             if (Mtxt_horarioSalida.MaskCompleted == false)
             { ErrorTextMask = true; }
 
-            if (Mtxt_horarioLlegada.MaskCompleted == false)
-            { ErrorTextMask = true; }
-
             if (ErrorTextMask == true)
             {
                 MessageBox.Show("Complete todos los campos");
@@ -131,9 +141,6 @@ namespace TrabajoPrácticoPAV.Formularios
 
             int horariodeSalida = Tiempo.convertirAIntMilitar(Mtxt_horarioSalida.Text);
             horarioDefasado = Tiempo.ValidarHorario(horariodeSalida, horarioDefasado);
-
-            int horariodeLlegada = Tiempo.convertirAIntMilitar(Mtxt_horarioLlegada.Text);
-            horarioDefasado = Tiempo.ValidarHorario(horariodeLlegada, horarioDefasado);
 
             if (horarioDefasado)
             {
@@ -239,5 +246,66 @@ namespace TrabajoPrácticoPAV.Formularios
 
             datagrid_viajes.Rows.Remove(datagrid_viajes.CurrentRow);
         }
+
+
+        // Esta funcion es llamada cuando el frm creado en el constructor es cerrado
+        void Form_Closed(object sender, FormClosedEventArgs e)
+        {
+            MessageBox.Show("Tramos cargados correctamente");
+            lbl_tramosCargados.Text = $"{TramosDelViaje.Count}";
+            actualizarHorarioLlegada();
+
+            string horarioSalida = Mtxt_horarioSalida.Text;
+            string horarioLlegada = calcularLlegada().ToString().Substring(0, 5);
+            mostrarDuracionEstimada(horarioLlegada, horarioSalida);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            frm.ShowDialog();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private string obtenerSumaDeTiempoDeTramos()
+        {
+            int sumDeDuraciones = TramosDelViaje.Sum((x) => x.duracion);
+            string horarioLlegada = TimeSpan.FromMinutes(sumDeDuraciones).ToString();
+            return horarioLlegada.Substring(0, 5);
+        }
+
+        private TimeSpan calcularLlegada()
+        {
+            int sumDeDuraciones = TramosDelViaje.Sum((x) => x.duracion);
+            TimeSpan horarioLlegada = TimeSpan.FromMinutes(sumDeDuraciones);
+            string horarioSalida = Mtxt_horarioSalida.Text;
+
+            if (horarioSalida.Length == 5)
+            {
+                TimeSpan tiempoSalida = TimeSpan.Parse(horarioSalida);
+                return horarioLlegada.Add(tiempoSalida);
+            }
+            return horarioLlegada;
+
+        }
+
+        private string actualizarHorarioLlegada()
+        {
+            string horarioSalida = Mtxt_horarioSalida.Text;
+            bool salidaCompletada = horarioSalida.Length == 5;
+            string horarioLlegada = obtenerSumaDeTiempoDeTramos();
+
+            bool hayViajesCargados = TramosDelViaje.Count >= 1;
+
+            if (salidaCompletada && hayViajesCargados) // Solo actualizar el lbl cuando la salida esté completada
+                lbl_horarioLlegada.Text = calcularLlegada().ToString().Substring(0, 5);
+
+            return horarioLlegada;
+        }
+
+
     }
 }

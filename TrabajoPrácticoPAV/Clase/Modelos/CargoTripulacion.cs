@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TrabajoPrácticoPAV.Clase.Modelos
 {
-    class CargoTripulacion
+    public class CargoTripulacion
     {
         public int Id { get; set; }
         public string Nombre { get; set; }

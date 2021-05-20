@@ -31,6 +31,7 @@ namespace TrabajoPrácticoPAV.Formularios
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
             this.btn_refrescar = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -43,7 +44,9 @@ namespace TrabajoPrácticoPAV.Formularios
             this.label9 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lbl_tramosCargados = new System.Windows.Forms.Label();
             this.lbl_duracionEstimada = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -51,11 +54,11 @@ namespace TrabajoPrácticoPAV.Formularios
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.Mtxt_presencia = new System.Windows.Forms.MaskedTextBox();
-            this.Mtxt_horarioLlegada = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.Mtxt_horarioSalida = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.lbl_horarioLlegada = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagrid_viajes)).BeginInit();
             this.panel3.SuspendLayout();
@@ -75,6 +78,7 @@ namespace TrabajoPrácticoPAV.Formularios
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.btn_refrescar);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
@@ -92,12 +96,25 @@ namespace TrabajoPrácticoPAV.Formularios
             this.panel1.Size = new System.Drawing.Size(730, 391);
             this.panel1.TabIndex = 2;
             // 
+            // button5
+            // 
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.button5.Location = new System.Drawing.Point(475, 94);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(90, 28);
+            this.button5.TabIndex = 26;
+            this.button5.Text = "Cargar Tramos";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // btn_refrescar
             // 
             this.btn_refrescar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_refrescar.Location = new System.Drawing.Point(549, 359);
             this.btn_refrescar.Name = "btn_refrescar";
-            this.btn_refrescar.Size = new System.Drawing.Size(75, 23);
+            this.btn_refrescar.Size = new System.Drawing.Size(83, 23);
             this.btn_refrescar.TabIndex = 24;
             this.btn_refrescar.Text = "Refrescar";
             this.btn_refrescar.UseVisualStyleBackColor = true;
@@ -140,7 +157,7 @@ namespace TrabajoPrácticoPAV.Formularios
             this.datagrid_viajes.Location = new System.Drawing.Point(67, 203);
             this.datagrid_viajes.Name = "datagrid_viajes";
             this.datagrid_viajes.ReadOnly = true;
-            this.datagrid_viajes.Size = new System.Drawing.Size(557, 150);
+            this.datagrid_viajes.Size = new System.Drawing.Size(565, 150);
             this.datagrid_viajes.TabIndex = 21;
             // 
             // numeroDeViaje
@@ -197,22 +214,42 @@ namespace TrabajoPrácticoPAV.Formularios
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.lbl_tramosCargados);
             this.panel3.Controls.Add(this.lbl_duracionEstimada);
+            this.panel3.Controls.Add(this.label10);
             this.panel3.Location = new System.Drawing.Point(424, 29);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 59);
+            this.panel3.Size = new System.Drawing.Size(208, 59);
             this.panel3.TabIndex = 19;
+            // 
+            // lbl_tramosCargados
+            // 
+            this.lbl_tramosCargados.AutoSize = true;
+            this.lbl_tramosCargados.Location = new System.Drawing.Point(127, 32);
+            this.lbl_tramosCargados.Name = "lbl_tramosCargados";
+            this.lbl_tramosCargados.Size = new System.Drawing.Size(13, 13);
+            this.lbl_tramosCargados.TabIndex = 28;
+            this.lbl_tramosCargados.Text = "0";
             // 
             // lbl_duracionEstimada
             // 
             this.lbl_duracionEstimada.AutoSize = true;
             this.lbl_duracionEstimada.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lbl_duracionEstimada.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.lbl_duracionEstimada.Location = new System.Drawing.Point(86, 25);
+            this.lbl_duracionEstimada.Location = new System.Drawing.Point(86, 7);
             this.lbl_duracionEstimada.Name = "lbl_duracionEstimada";
             this.lbl_duracionEstimada.Size = new System.Drawing.Size(34, 19);
             this.lbl_duracionEstimada.TabIndex = 9;
             this.lbl_duracionEstimada.Text = "???";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(75, 32);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(45, 13);
+            this.label10.TabIndex = 27;
+            this.label10.Text = "Tramos:";
             // 
             // button2
             // 
@@ -243,7 +280,7 @@ namespace TrabajoPrácticoPAV.Formularios
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.button1.Location = new System.Drawing.Point(534, 137);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 28);
+            this.button1.Size = new System.Drawing.Size(98, 28);
             this.button1.TabIndex = 13;
             this.button1.Text = "Cancelar";
             this.button1.UseVisualStyleBackColor = true;
@@ -252,10 +289,10 @@ namespace TrabajoPrácticoPAV.Formularios
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.lbl_horarioLlegada);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.Mtxt_presencia);
-            this.panel2.Controls.Add(this.Mtxt_horarioLlegada);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.Mtxt_horarioSalida);
             this.panel2.Controls.Add(this.label4);
@@ -293,16 +330,6 @@ namespace TrabajoPrácticoPAV.Formularios
             this.Mtxt_presencia.Size = new System.Drawing.Size(37, 20);
             this.Mtxt_presencia.TabIndex = 0;
             this.Mtxt_presencia.ValidatingType = typeof(System.DateTime);
-            // 
-            // Mtxt_horarioLlegada
-            // 
-            this.Mtxt_horarioLlegada.Location = new System.Drawing.Point(194, 100);
-            this.Mtxt_horarioLlegada.Mask = "00:00";
-            this.Mtxt_horarioLlegada.Name = "Mtxt_horarioLlegada";
-            this.Mtxt_horarioLlegada.Size = new System.Drawing.Size(37, 20);
-            this.Mtxt_horarioLlegada.TabIndex = 2;
-            this.Mtxt_horarioLlegada.ValidatingType = typeof(System.DateTime);
-            this.Mtxt_horarioLlegada.TextChanged += new System.EventHandler(this.maskedTextBox2_TextChanged);
             // 
             // label3
             // 
@@ -345,6 +372,15 @@ namespace TrabajoPrácticoPAV.Formularios
             this.label2.TabIndex = 4;
             this.label2.Text = "Horario de Presencia";
             // 
+            // lbl_horarioLlegada
+            // 
+            this.lbl_horarioLlegada.AutoSize = true;
+            this.lbl_horarioLlegada.Location = new System.Drawing.Point(199, 106);
+            this.lbl_horarioLlegada.Name = "lbl_horarioLlegada";
+            this.lbl_horarioLlegada.Size = new System.Drawing.Size(25, 13);
+            this.lbl_horarioLlegada.TabIndex = 19;
+            this.lbl_horarioLlegada.Text = "???";
+            // 
             // Frm_ABMViajes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -377,7 +413,6 @@ namespace TrabajoPrácticoPAV.Formularios
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.MaskedTextBox Mtxt_horarioLlegada;
         private System.Windows.Forms.MaskedTextBox Mtxt_horarioSalida;
         private System.Windows.Forms.Label lbl_duracionEstimada;
         private System.Windows.Forms.Label label6;
@@ -397,5 +432,9 @@ namespace TrabajoPrácticoPAV.Formularios
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btn_refrescar;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label lbl_tramosCargados;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lbl_horarioLlegada;
     }
 }
