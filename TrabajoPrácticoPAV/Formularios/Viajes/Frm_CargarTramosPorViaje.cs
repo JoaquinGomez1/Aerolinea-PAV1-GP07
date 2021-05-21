@@ -27,11 +27,6 @@ namespace TrabajoPrácticoPAV.Formularios.Viajes
         {
             string sql = "SELECT * FROM TRAMO";
             _NE_Tramo.CargarGrilla(sql, grid_tramos);
-
-            if (TramosDelViaje.Count >= 1)
-            {
-                cargarTramosDelViaje(Frm_ABMViajes.TramosDelViaje);
-            }
         }
 
         private void Btn_Cerrar_Click(object sender, EventArgs e)
@@ -49,8 +44,8 @@ namespace TrabajoPrácticoPAV.Formularios.Viajes
             DataGridViewCellCollection selectedRowCells = grid_tramos.CurrentRow.Cells;
             Tramo tramo = new Tramo()
             {
-                codigoAeropuertoSalida = selectedRowCells[0].Value.ToString(),
-                codigoAeropuertoDestino = selectedRowCells[1].Value.ToString(),
+                codigoAeropuertoSalida = _NE_Tramo.BuscarCodigoAeropuerto(selectedRowCells[0].Value.ToString()),
+                codigoAeropuertoDestino = _NE_Tramo.BuscarCodigoAeropuerto(selectedRowCells[1].Value.ToString()),
                 duracion = Int32.Parse(selectedRowCells[2].Value.ToString()),
                 distancia = Int32.Parse(selectedRowCells[3].Value.ToString()),
             };
@@ -75,8 +70,8 @@ namespace TrabajoPrácticoPAV.Formularios.Viajes
             // El orden es importante 
 
             // NO usar cargarTramosDelViaje()
-            grid_tramoViaje.Rows[indiceRow].Cells[0].Value = tramo.codigoAeropuertoSalida;
-            grid_tramoViaje.Rows[indiceRow].Cells[1].Value = tramo.codigoAeropuertoDestino;
+            grid_tramoViaje.Rows[indiceRow].Cells[0].Value = _NE_Tramo.BuscarNombreAeropuerto(tramo.codigoAeropuertoSalida);
+            grid_tramoViaje.Rows[indiceRow].Cells[1].Value = _NE_Tramo.BuscarNombreAeropuerto(tramo.codigoAeropuertoDestino);
             grid_tramoViaje.Rows[indiceRow].Cells[2].Value = tramo.duracion;
             grid_tramoViaje.Rows[indiceRow].Cells[3].Value = tramo.distancia;
         }
@@ -91,45 +86,10 @@ namespace TrabajoPrácticoPAV.Formularios.Viajes
 
         }
 
-
-        class compareDuplicateElements : IEqualityComparer<Tramo>
-        {
-            public bool Equals(Tramo x, Tramo y)
-            {
-                bool igualDestino = x.codigoAeropuertoDestino.Equals(y.codigoAeropuertoDestino);
-                bool igualSalida = x.codigoAeropuertoSalida.Equals(y.codigoAeropuertoSalida);
-                bool igualDuracion = x.duracion.Equals(y.duracion);
-
-                return igualDestino && igualSalida && igualDuracion;
-            }
-
-            public int GetHashCode(Tramo obj)
-            {
-                return obj.codigoAeropuertoSalida.GetHashCode();
-            }
-        }
-
         private void btn_registrar_Click(object sender, EventArgs e)
         {
             Frm_ABMViajes.TramosDelViaje = this.TramosDelViaje;
             this.Close();
-        }
-
-        private void cargarTramosDelViaje(List<Tramo> listTramos)
-        {
-            // Solo deben cargarse la misma cantidad de elementos que tenga la lista
-            if (grid_tramoViaje.Rows.Count == listTramos.Count) return;
-
-            for (int i = 0; i < listTramos.Count; i++)
-            {
-                Tramo tramo = listTramos[i];
-
-                grid_tramoViaje.Rows.Add();
-                grid_tramoViaje.Rows[i].Cells[0].Value = tramo.codigoAeropuertoSalida;
-                grid_tramoViaje.Rows[i].Cells[1].Value = tramo.codigoAeropuertoDestino;
-                grid_tramoViaje.Rows[i].Cells[2].Value = tramo.duracion;
-                grid_tramoViaje.Rows[i].Cells[3].Value = tramo.distancia;
-            }
         }
     }
 }

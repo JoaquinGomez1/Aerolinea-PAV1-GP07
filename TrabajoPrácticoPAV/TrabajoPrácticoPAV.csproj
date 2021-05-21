@@ -394,6 +394,12 @@
     <Compile Include="Formularios\Tripulacion\Frm_ABMTripulacion.Designer.cs">
       <DependentUpon>Frm_ABMTripulacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Viajes\Frm_ConsultarTramosPorViaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Viajes\Frm_ConsultarTramosPorViaje.Designer.cs">
+      <DependentUpon>Frm_ConsultarTramosPorViaje.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Viajes\Frm_ABMViajes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -620,6 +626,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Tripulacion\Frm_ABMTripulacion.resx">
       <DependentUpon>Frm_ABMTripulacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Viajes\Frm_ConsultarTramosPorViaje.resx">
+      <DependentUpon>Frm_ConsultarTramosPorViaje.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Viajes\Frm_ABMViajes.resx">
       <DependentUpon>Frm_ABMViajes.cs</DependentUpon>

@@ -95,7 +95,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion.Cargo_Tripulacion
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.label4.Location = new System.Drawing.Point(27, 48);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 13);
+            this.label4.Size = new System.Drawing.Size(62, 17);
             this.label4.TabIndex = 0;
             this.label4.Text = "Nombre:";
             // 
@@ -177,7 +177,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion.Cargo_Tripulacion
             this.lbl_nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.lbl_nombre.Location = new System.Drawing.Point(28, 45);
             this.lbl_nombre.Name = "lbl_nombre";
-            this.lbl_nombre.Size = new System.Drawing.Size(47, 13);
+            this.lbl_nombre.Size = new System.Drawing.Size(62, 17);
             this.lbl_nombre.TabIndex = 0;
             this.lbl_nombre.Text = "Nombre:";
             // 
@@ -232,6 +232,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion.Cargo_Tripulacion
             this.grid_tripulantes.Name = "grid_tripulantes";
             this.grid_tripulantes.Pp_FormatoGrid = null;
             this.grid_tripulantes.Pp_NombreTabla = null;
+            this.grid_tripulantes.ReadOnly = true;
             this.grid_tripulantes.Size = new System.Drawing.Size(400, 175);
             this.grid_tripulantes.TabIndex = 10;
             // 
