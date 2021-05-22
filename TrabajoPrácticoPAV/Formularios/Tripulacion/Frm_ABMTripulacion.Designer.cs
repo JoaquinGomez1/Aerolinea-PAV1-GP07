@@ -333,6 +333,8 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
             // 
             // grid_tripulantes
             // 
+            this.grid_tripulantes.AllowUserToAddRows = false;
+            this.grid_tripulantes.AllowUserToDeleteRows = false;
             this.grid_tripulantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_tripulantes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idTripulacion,
@@ -344,6 +346,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
             this.grid_tripulantes.Name = "grid_tripulantes";
             this.grid_tripulantes.Pp_FormatoGrid = null;
             this.grid_tripulantes.Pp_NombreTabla = null;
+            this.grid_tripulantes.ReadOnly = true;
             this.grid_tripulantes.Size = new System.Drawing.Size(593, 175);
             this.grid_tripulantes.TabIndex = 4;
             // 
@@ -352,6 +355,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
             this.idTripulacion.Frozen = true;
             this.idTripulacion.HeaderText = "ID";
             this.idTripulacion.Name = "idTripulacion";
+            this.idTripulacion.ReadOnly = true;
             this.idTripulacion.Width = 65;
             // 
             // nombre
@@ -359,6 +363,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
             this.nombre.Frozen = true;
             this.nombre.HeaderText = "Nombre";
             this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
             this.nombre.Width = 150;
             // 
             // apellido
@@ -366,6 +371,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
             this.apellido.Frozen = true;
             this.apellido.HeaderText = "Apellido";
             this.apellido.Name = "apellido";
+            this.apellido.ReadOnly = true;
             this.apellido.Width = 185;
             // 
             // nombreCargo
@@ -373,6 +379,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
             this.nombreCargo.Frozen = true;
             this.nombreCargo.HeaderText = "Cargo";
             this.nombreCargo.Name = "nombreCargo";
+            this.nombreCargo.ReadOnly = true;
             this.nombreCargo.Width = 143;
             // 
             // idCargo
@@ -380,6 +387,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
             this.idCargo.Frozen = true;
             this.idCargo.HeaderText = "IdCargo";
             this.idCargo.Name = "idCargo";
+            this.idCargo.ReadOnly = true;
             this.idCargo.Visible = false;
             // 
             // btn_cerrar

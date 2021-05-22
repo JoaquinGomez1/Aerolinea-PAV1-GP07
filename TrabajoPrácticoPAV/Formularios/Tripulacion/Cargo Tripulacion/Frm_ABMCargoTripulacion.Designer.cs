@@ -222,6 +222,8 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion.Cargo_Tripulacion
             // 
             // grid_tripulantes
             // 
+            this.grid_tripulantes.AllowUserToAddRows = false;
+            this.grid_tripulantes.AllowUserToDeleteRows = false;
             this.grid_tripulantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_tripulantes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idTripulacion,
@@ -230,6 +232,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion.Cargo_Tripulacion
             this.grid_tripulantes.Name = "grid_tripulantes";
             this.grid_tripulantes.Pp_FormatoGrid = null;
             this.grid_tripulantes.Pp_NombreTabla = null;
+            this.grid_tripulantes.ReadOnly = true;
             this.grid_tripulantes.Size = new System.Drawing.Size(400, 175);
             this.grid_tripulantes.TabIndex = 10;
             // 
@@ -238,6 +241,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion.Cargo_Tripulacion
             this.idTripulacion.Frozen = true;
             this.idTripulacion.HeaderText = "ID";
             this.idTripulacion.Name = "idTripulacion";
+            this.idTripulacion.ReadOnly = true;
             this.idTripulacion.Width = 65;
             // 
             // nombre
@@ -245,6 +249,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion.Cargo_Tripulacion
             this.nombre.Frozen = true;
             this.nombre.HeaderText = "Nombre";
             this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
             this.nombre.Width = 150;
             // 
             // button_Aerolinea1

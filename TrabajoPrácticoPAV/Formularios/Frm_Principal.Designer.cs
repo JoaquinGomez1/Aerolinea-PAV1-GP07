@@ -57,13 +57,13 @@
             this.cargosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tripulaciónToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Btn_Minimizar = new System.Windows.Forms.PictureBox();
+            this.Btn_Cerrar = new System.Windows.Forms.PictureBox();
             this.Btn_ABM = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.Btn_Procesos = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.Btn_Configuracion = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.Btn_Listado = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.Btn_Estadistica = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
-            this.Btn_Minimizar = new System.Windows.Forms.PictureBox();
-            this.Btn_Cerrar = new System.Windows.Forms.PictureBox();
             this.BarraSuperior.SuspendLayout();
             this.PanelMenu.SuspendLayout();
             this.PanelFormularios.SuspendLayout();
@@ -334,6 +334,34 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // Btn_Minimizar
+            // 
+            this.Btn_Minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Btn_Minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_Minimizar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Minimizar.Image")));
+            this.Btn_Minimizar.Location = new System.Drawing.Point(848, 4);
+            this.Btn_Minimizar.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_Minimizar.Name = "Btn_Minimizar";
+            this.Btn_Minimizar.Size = new System.Drawing.Size(22, 24);
+            this.Btn_Minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Btn_Minimizar.TabIndex = 3;
+            this.Btn_Minimizar.TabStop = false;
+            this.Btn_Minimizar.Click += new System.EventHandler(this.Btn_Minimizar_Click);
+            // 
+            // Btn_Cerrar
+            // 
+            this.Btn_Cerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Btn_Cerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_Cerrar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Cerrar.Image")));
+            this.Btn_Cerrar.Location = new System.Drawing.Point(874, 4);
+            this.Btn_Cerrar.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_Cerrar.Name = "Btn_Cerrar";
+            this.Btn_Cerrar.Size = new System.Drawing.Size(22, 24);
+            this.Btn_Cerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Btn_Cerrar.TabIndex = 0;
+            this.Btn_Cerrar.TabStop = false;
+            this.Btn_Cerrar.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // Btn_ABM
             // 
             this.Btn_ABM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
@@ -384,7 +412,7 @@
             this.Btn_Configuracion.ForeColor = System.Drawing.Color.White;
             this.Btn_Configuracion.Image = global::TrabajoPrácticoPAV.Properties.Resources.pngegg;
             this.Btn_Configuracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Configuracion.Location = new System.Drawing.Point(2, 385);
+            this.Btn_Configuracion.Location = new System.Drawing.Point(2, 381);
             this.Btn_Configuracion.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Configuracion.Name = "Btn_Configuracion";
             this.Btn_Configuracion.Pp_Presionado = false;
@@ -433,34 +461,6 @@
             this.Btn_Estadistica.Text = "    Estadísticas";
             this.Btn_Estadistica.UseVisualStyleBackColor = false;
             this.Btn_Estadistica.Click += new System.EventHandler(this.MouseClickButton);
-            // 
-            // Btn_Minimizar
-            // 
-            this.Btn_Minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Btn_Minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_Minimizar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Minimizar.Image")));
-            this.Btn_Minimizar.Location = new System.Drawing.Point(848, 4);
-            this.Btn_Minimizar.Margin = new System.Windows.Forms.Padding(2);
-            this.Btn_Minimizar.Name = "Btn_Minimizar";
-            this.Btn_Minimizar.Size = new System.Drawing.Size(22, 24);
-            this.Btn_Minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Btn_Minimizar.TabIndex = 3;
-            this.Btn_Minimizar.TabStop = false;
-            this.Btn_Minimizar.Click += new System.EventHandler(this.Btn_Minimizar_Click);
-            // 
-            // Btn_Cerrar
-            // 
-            this.Btn_Cerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Btn_Cerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_Cerrar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Cerrar.Image")));
-            this.Btn_Cerrar.Location = new System.Drawing.Point(874, 4);
-            this.Btn_Cerrar.Margin = new System.Windows.Forms.Padding(2);
-            this.Btn_Cerrar.Name = "Btn_Cerrar";
-            this.Btn_Cerrar.Size = new System.Drawing.Size(22, 24);
-            this.Btn_Cerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Btn_Cerrar.TabIndex = 0;
-            this.Btn_Cerrar.TabStop = false;
-            this.Btn_Cerrar.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Frm_Principal
             // 
