@@ -63,6 +63,7 @@
     </Compile>
     <Compile Include="Clase\Modelos\CargoTripulacion.cs" />
     <Compile Include="Clase\Modelos\Ciudad.cs" />
+    <Compile Include="Clase\Modelos\Tramo.cs" />
     <Compile Include="Clase\Modelos\Tripulante.cs" />
     <Compile Include="Clase\Modelos\Viaje.cs" />
     <Compile Include="Clase\TextBox_Aerolinea.cs">
@@ -393,11 +394,23 @@
     <Compile Include="Formularios\Tripulacion\Frm_ABMTripulacion.Designer.cs">
       <DependentUpon>Frm_ABMTripulacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Viajes\Frm_ConsultarTramosPorViaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Viajes\Frm_ConsultarTramosPorViaje.Designer.cs">
+      <DependentUpon>Frm_ConsultarTramosPorViaje.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Viajes\Frm_ABMViajes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Viajes\Frm_ABMViajes.Designer.cs">
       <DependentUpon>Frm_ABMViajes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Viajes\Frm_CargarTramosPorViaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Viajes\Frm_CargarTramosPorViaje.Designer.cs">
+      <DependentUpon>Frm_CargarTramosPorViaje.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Viajes\Frm_ModificarViaje.cs">
       <SubType>Form</SubType>
@@ -614,8 +627,14 @@
     <EmbeddedResource Include="Formularios\Tripulacion\Frm_ABMTripulacion.resx">
       <DependentUpon>Frm_ABMTripulacion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Viajes\Frm_ConsultarTramosPorViaje.resx">
+      <DependentUpon>Frm_ConsultarTramosPorViaje.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Viajes\Frm_ABMViajes.resx">
       <DependentUpon>Frm_ABMViajes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Viajes\Frm_CargarTramosPorViaje.resx">
+      <DependentUpon>Frm_CargarTramosPorViaje.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Viajes\Frm_ModificarViaje.resx">
       <DependentUpon>Frm_ModificarViaje.cs</DependentUpon>

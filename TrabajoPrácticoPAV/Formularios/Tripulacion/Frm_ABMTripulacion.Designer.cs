@@ -148,7 +148,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
             this.lbl_cargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.lbl_cargo.Location = new System.Drawing.Point(57, 81);
             this.lbl_cargo.Name = "lbl_cargo";
-            this.lbl_cargo.Size = new System.Drawing.Size(50, 17);
+            this.lbl_cargo.Size = new System.Drawing.Size(38, 13);
             this.lbl_cargo.TabIndex = 2;
             this.lbl_cargo.Text = "Cargo:";
             // 
@@ -158,7 +158,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
             this.lbl_apellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.lbl_apellido.Location = new System.Drawing.Point(46, 54);
             this.lbl_apellido.Name = "lbl_apellido";
-            this.lbl_apellido.Size = new System.Drawing.Size(62, 17);
+            this.lbl_apellido.Size = new System.Drawing.Size(47, 13);
             this.lbl_apellido.TabIndex = 1;
             this.lbl_apellido.Text = "Apellido:";
             // 
@@ -168,7 +168,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
             this.lbl_nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.lbl_nombre.Location = new System.Drawing.Point(46, 29);
             this.lbl_nombre.Name = "lbl_nombre";
-            this.lbl_nombre.Size = new System.Drawing.Size(62, 17);
+            this.lbl_nombre.Size = new System.Drawing.Size(47, 13);
             this.lbl_nombre.TabIndex = 0;
             this.lbl_nombre.Text = "Nombre:";
             // 
@@ -268,7 +268,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.label2.Location = new System.Drawing.Point(51, 84);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 17);
+            this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Cargo:";
             // 
@@ -278,7 +278,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.label3.Location = new System.Drawing.Point(40, 57);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 17);
+            this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 1;
             this.label3.Text = "Apellido:";
             // 
@@ -288,7 +288,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.label4.Location = new System.Drawing.Point(40, 32);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 17);
+            this.label4.Size = new System.Drawing.Size(47, 13);
             this.label4.TabIndex = 0;
             this.label4.Text = "Nombre:";
             // 
@@ -334,7 +334,6 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
             // grid_tripulantes
             // 
             this.grid_tripulantes.AllowUserToAddRows = false;
-            this.grid_tripulantes.AllowUserToDeleteRows = false;
             this.grid_tripulantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_tripulantes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idTripulacion,

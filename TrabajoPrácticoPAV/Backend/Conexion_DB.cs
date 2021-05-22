@@ -91,7 +91,7 @@ namespace TrabajoPrácticoPAV.Backend
         public EstadoTransaccion Insertar(string SqlInsertar, bool InsercionSilenciosa)
         {
             EstadoTransaccion res = InsModBorr(SqlInsertar);
-            if(res == EstadoTransaccion.correcto && !InsercionSilenciosa)
+            if (res == EstadoTransaccion.correcto && !InsercionSilenciosa)
                 MessageBox.Show("Formulario cargado correctamente");
             return res;
         }
@@ -129,6 +129,27 @@ namespace TrabajoPrácticoPAV.Backend
             return ControlTransaccion;
 
 
+        }
+
+        public string InsertarConId(string sql)
+        {
+            // inserta a la tabla provista y devuelve el ultimo ID generado
+            Conectar();
+            cmd.CommandText = sql;
+            try
+            {
+                return cmd.ExecuteReader().ToString();
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show("Error en el comando: \n "
+                                 + sql + "\n"
+                                 + "El mensaje de error es: \n"
+                                 + e.Message);
+            }
+            Desconectar();
+            return "";
         }
     }
 }

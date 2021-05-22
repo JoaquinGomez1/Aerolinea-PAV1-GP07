@@ -79,7 +79,7 @@ namespace TrabajoPrácticoPAV.Formularios.Grupos_familiares
 
         private void Btn_AgregarPrimero_Click(object sender, EventArgs e)
         {
-            if(agrego2)
+            if (agrego2)
             {
                 CantFilas++;
                 Grid_Grupo.Rows.Add();
@@ -89,7 +89,7 @@ namespace TrabajoPrácticoPAV.Formularios.Grupos_familiares
                 Grid_Grupo.Rows[CantFilas].Cells[3].Value = _NE.RecuperarApellidoPasajero(tipoDoc, numeroDoc);
                 agrego2 = false;
             }
-            else if(!agrego2)
+            else if (!agrego2)
                 MessageBox.Show("Primero debe completar la relación existente");
 
         }
@@ -152,7 +152,7 @@ namespace TrabajoPrácticoPAV.Formularios.Grupos_familiares
         {
             for (int i = 0; i < grid.Rows.Count; i++)
             {
-                if(grid.Rows[i].Cells[4].Value == null)
+                if (grid.Rows[i].Cells[4].Value == null)
                 {
                     MessageBox.Show("Debe escribir la relación entre estos dos pasajeros");
                     grid.Rows[i].Cells[4].Selected = true;
@@ -175,7 +175,7 @@ namespace TrabajoPrácticoPAV.Formularios.Grupos_familiares
         private void Grid_Grupo_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             int indiceClickeado = Grid_Grupo.CurrentCell.ColumnIndex;
-            if(indiceClickeado == 2 || indiceClickeado == 3)
+            if (indiceClickeado == 2 || indiceClickeado == 3)
             {
                 Frm_MostrarPasajero mostrar = new Frm_MostrarPasajero();
 
@@ -184,7 +184,7 @@ namespace TrabajoPrácticoPAV.Formularios.Grupos_familiares
 
                 mostrar.ShowDialog();
             }
-            else if(indiceClickeado == 7 || indiceClickeado == 8)
+            else if (indiceClickeado == 7 || indiceClickeado == 8)
             {
                 Frm_MostrarPasajero mostrar = new Frm_MostrarPasajero();
 

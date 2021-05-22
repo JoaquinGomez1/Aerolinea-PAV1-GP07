@@ -1,6 +1,6 @@
 ﻿namespace TrabajoPrácticoPAV.Clase.Modelos
 {
-    class Tripulante
+    public class Tripulante
     {
         public int Id { get; set; }
         public string Nombre { get; set; }
