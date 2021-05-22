@@ -7,19 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TrabajoPrácticoPAV.Clase;
 
-namespace TrabajoPrácticoPAV.Formularios
+namespace TrabajoPrácticoPAV.Formularios.Reservas
 {
-    public partial class Frm_ABMReservas : Form
+    public partial class Frm_ModificarReserva : Form
     {
-        public Frm_ABMReservas()
+        public Frm_ModificarReserva()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
+            this.BackColor = Estilo.ColorFondoForms;
+            Estilo.FormatearEstilo(this.Controls);
         }
     }
 }
