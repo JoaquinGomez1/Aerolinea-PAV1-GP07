@@ -33,6 +33,9 @@
             this.Titulo = new System.Windows.Forms.Label();
             this.PanelMenu = new System.Windows.Forms.Panel();
             this.PanelFormularios = new System.Windows.Forms.Panel();
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.reservasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.facturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.aeropuertosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.avionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,6 +70,7 @@
             this.BarraSuperior.SuspendLayout();
             this.PanelMenu.SuspendLayout();
             this.PanelFormularios.SuspendLayout();
+            this.menuStrip2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Minimizar)).BeginInit();
@@ -120,6 +124,7 @@
             this.PanelFormularios.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.PanelFormularios.BackgroundImage = global::TrabajoPrácticoPAV.Properties.Resources.ElbpHR6W0AAInBS;
             this.PanelFormularios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PanelFormularios.Controls.Add(this.menuStrip2);
             this.PanelFormularios.Controls.Add(this.menuStrip1);
             this.PanelFormularios.Controls.Add(this.pictureBox1);
             this.PanelFormularios.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -128,6 +133,36 @@
             this.PanelFormularios.Name = "PanelFormularios";
             this.PanelFormularios.Size = new System.Drawing.Size(750, 413);
             this.PanelFormularios.TabIndex = 2;
+            // 
+            // menuStrip2
+            // 
+            this.menuStrip2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
+            this.menuStrip2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.menuStrip2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.menuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.reservasToolStripMenuItem,
+            this.facturasToolStripMenuItem});
+            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip2.Name = "menuStrip2";
+            this.menuStrip2.Padding = new System.Windows.Forms.Padding(4, 5, 5, 5);
+            this.menuStrip2.Size = new System.Drawing.Size(129, 413);
+            this.menuStrip2.TabIndex = 5;
+            this.menuStrip2.Text = "menuStrip2";
+            this.menuStrip2.Visible = false;
+            // 
+            // reservasToolStripMenuItem
+            // 
+            this.reservasToolStripMenuItem.Name = "reservasToolStripMenuItem";
+            this.reservasToolStripMenuItem.Size = new System.Drawing.Size(110, 24);
+            this.reservasToolStripMenuItem.Text = "Reservas";
+            this.reservasToolStripMenuItem.Click += new System.EventHandler(this.reservasToolStripMenuItem_Click);
+            // 
+            // facturasToolStripMenuItem
+            // 
+            this.facturasToolStripMenuItem.Name = "facturasToolStripMenuItem";
+            this.facturasToolStripMenuItem.Size = new System.Drawing.Size(110, 24);
+            this.facturasToolStripMenuItem.Text = "Facturas";
             // 
             // menuStrip1
             // 
@@ -144,7 +179,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 5, 5, 5);
-            this.menuStrip1.Size = new System.Drawing.Size(129, 417);
+            this.menuStrip1.Size = new System.Drawing.Size(129, 413);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.Visible = false;
@@ -483,6 +518,8 @@
             this.PanelMenu.ResumeLayout(false);
             this.PanelFormularios.ResumeLayout(false);
             this.PanelFormularios.PerformLayout();
+            this.menuStrip2.ResumeLayout(false);
+            this.menuStrip2.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -530,7 +567,9 @@
         private System.Windows.Forms.ToolStripMenuItem tripulaciónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cargosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tripulaciónToolStripMenuItem1;
-
+        private System.Windows.Forms.MenuStrip menuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem reservasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem facturasToolStripMenuItem;
     }
 }
 

@@ -30,7 +30,6 @@ namespace TrabajoPrácticoPAV.Formularios.Pasajeros
             Estilo.FormatearEstilo(this.Controls);
             Cmb_TipoDoc.CargarCombo();
             Grid_Pasajero.Formatear();
-
         }
 
         private void Btn_Buscar_Click(object sender, EventArgs e)
@@ -83,7 +82,7 @@ namespace TrabajoPrácticoPAV.Formularios.Pasajeros
             Frm_BajaPasajero baja = new Frm_BajaPasajero();
             baja.tipoDoc = _NE.BuscarIdTipoDoc(Grid_Pasajero.CurrentRow.Cells["tipoDoc"].Value.ToString());
             baja.numeroDoc = Grid_Pasajero.CurrentRow.Cells["numeroDoc"].Value.ToString();
-            
+
 
 
             baja.ShowDialog();

@@ -75,6 +75,8 @@ namespace TrabajoPrácticoPAV
 
             // ↓ Permite que se puedan aplicar los cambios de estilo en la configuración incluso si ya fueron abiertos anteriormente
             CerrarTodosLosForms();
+            CerrarTodosLosMenuStrip();
+
             boton.BackColor = Estilo.FormActivo;
             switch (boton.Name.ToString())
             {
@@ -90,11 +92,32 @@ namespace TrabajoPrácticoPAV
                         // ver la función Abrir Formulario
                     }
                     break;
+                case "Btn_Procesos":
+                    if (!menuStrip2.Visible)
+                    {
+                        menuStrip2.Visible = true;
+                        menuStrip2.BringToFront();
+
+                    }
+                    break;
+
                 default:
                     MessageBox.Show("Esperando implementación");
                     break;
             }
 
+        }
+
+
+        private void CerrarTodosLosMenuStrip()
+        {
+            List<MenuStrip> list = new List<MenuStrip>() { menuStrip1, menuStrip2 };
+
+            foreach (MenuStrip menu in list)
+            {
+                menu.Visible = false;
+                menu.SendToBack();
+            }
         }
 
         private void CerrarTodosLosForms()
@@ -172,8 +195,8 @@ namespace TrabajoPrácticoPAV
 
         // Eventos de los items del menuStrip
         // El que tenga tiempo vea si lo puede dejar un poco mejor
-        
-            
+
+
         #region MenuStrip
         private void aeropuertosToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -255,5 +278,11 @@ namespace TrabajoPrácticoPAV
             AbrirFormulario<Frm_ABMTripulacion>();
         }
         #endregion
+
+        private void reservasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_ABMReservas>();
+        }
     }
 }
