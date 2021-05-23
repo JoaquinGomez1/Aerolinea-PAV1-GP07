@@ -8,11 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Clase;
+using TrabajoPrácticoPAV.Formularios.Reservas;
 
 namespace TrabajoPrácticoPAV.Formularios
 {
     public partial class Frm_ABMReservas : Form
     {
+        private readonly Frm_ModificarReserva modificarReserva = new Frm_ModificarReserva();
+
         public Frm_ABMReservas()
         {
             InitializeComponent();
@@ -34,9 +37,14 @@ namespace TrabajoPrácticoPAV.Formularios
             grid_pasajeros.Formatear();
         }
 
-        private void label8_Click(object sender, EventArgs e)
+        private void btn_cerrar_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
 
+        private void btn_modificar_Click(object sender, EventArgs e)
+        {
+            modificarReserva.ShowDialog();
         }
     }
 }
