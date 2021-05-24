@@ -39,7 +39,7 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
 
             if (nombre != "" && provincia != "")
             {
-                string sql = $"SELECT * FROM Ciudad JOIN Provincia on Ciudad.idProvincia = Provincia.idProvincia JOIN Pais on Provincia.idPais = Pais.idPais WHERE (nombreCiudad='{nombre}') AND (Provincia.idPais={pais}) AND (Ciudad.idProvincia={provincia}";
+                string sql = $"SELECT * FROM Ciudad JOIN Provincia on Ciudad.idProvincia = Provincia.idProvincia JOIN Pais on Provincia.idPais = Pais.idPais WHERE (nombreCiudad='{nombre}') AND (Provincia.idPais={pais}) AND (Ciudad.idProvincia={provincia})";
                 DataTable resultadoSelect = _DB.EjecutarSelect(sql);
                 return resultadoSelect;
             }

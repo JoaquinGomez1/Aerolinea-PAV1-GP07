@@ -460,6 +460,7 @@
     <Compile Include="NE_Usuarios\NE_CargoTripulacion.cs" />
     <Compile Include="NE_Usuarios\NE_Ciudad.cs" />
     <Compile Include="NE_Usuarios\NE_Clientes.cs" />
+    <Compile Include="NE_Usuarios\NE_Resevas.cs" />
     <Compile Include="NE_Usuarios\NE_TipoAsiento.cs" />
     <Compile Include="NE_Usuarios\NE_GrupoFamiliar.cs" />
     <Compile Include="NE_Usuarios\NE_Modelo.cs" />

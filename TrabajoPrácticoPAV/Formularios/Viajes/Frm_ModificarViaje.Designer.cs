@@ -43,16 +43,16 @@ namespace TrabajoPrácticoPAV.Formularios.Viajes
             this.mtb_horario_presencia = new TrabajoPrácticoPAV.Clase.MaskedTextBox_Aerolinea();
             this.mtb_horario_salida = new TrabajoPrácticoPAV.Clase.MaskedTextBox_Aerolinea();
             this.mtb_llegada = new TrabajoPrácticoPAV.Clase.MaskedTextBox_Aerolinea();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.Titulo = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.BarraSuperior = new System.Windows.Forms.Panel();
             this.Btn_Minimizar = new System.Windows.Forms.PictureBox();
             this.Btn_Cerrar = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.Titulo = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.BarraSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Cerrar)).BeginInit();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -214,19 +214,56 @@ namespace TrabajoPrácticoPAV.Formularios.Viajes
             this.mtb_llegada.ValidatingType = typeof(System.DateTime);
             this.mtb_llegada.TextChanged += new System.EventHandler(this.mtb_llegada_TextChanged);
             // 
-            // panel2
+            // panel3
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.panel2.Controls.Add(this.Titulo);
-            this.panel2.Controls.Add(this.Btn_Minimizar);
-            this.panel2.Controls.Add(this.Btn_Cerrar);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(334, 32);
-            this.panel2.TabIndex = 14;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.panel1);
+            this.panel3.Location = new System.Drawing.Point(0, 31);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(334, 320);
+            this.panel3.TabIndex = 15;
+            // 
+            // BarraSuperior
+            // 
+            this.BarraSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.BarraSuperior.Controls.Add(this.Btn_Minimizar);
+            this.BarraSuperior.Controls.Add(this.Btn_Cerrar);
+            this.BarraSuperior.Controls.Add(this.Titulo);
+            this.BarraSuperior.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BarraSuperior.Location = new System.Drawing.Point(0, 0);
+            this.BarraSuperior.Margin = new System.Windows.Forms.Padding(2);
+            this.BarraSuperior.Name = "BarraSuperior";
+            this.BarraSuperior.Size = new System.Drawing.Size(334, 32);
+            this.BarraSuperior.TabIndex = 107;
+            this.BarraSuperior.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BarraSuperior_MouseMove);
+            // 
+            // Btn_Minimizar
+            // 
+            this.Btn_Minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Btn_Minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_Minimizar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Minimizar.Image")));
+            this.Btn_Minimizar.Location = new System.Drawing.Point(275, 4);
+            this.Btn_Minimizar.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_Minimizar.Name = "Btn_Minimizar";
+            this.Btn_Minimizar.Size = new System.Drawing.Size(22, 24);
+            this.Btn_Minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Btn_Minimizar.TabIndex = 6;
+            this.Btn_Minimizar.TabStop = false;
+            this.Btn_Minimizar.Click += new System.EventHandler(this.Btn_Minimizar_Click_1);
+            // 
+            // Btn_Cerrar
+            // 
+            this.Btn_Cerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Btn_Cerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_Cerrar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Cerrar.Image")));
+            this.Btn_Cerrar.Location = new System.Drawing.Point(301, 4);
+            this.Btn_Cerrar.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_Cerrar.Name = "Btn_Cerrar";
+            this.Btn_Cerrar.Size = new System.Drawing.Size(22, 24);
+            this.Btn_Cerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Btn_Cerrar.TabIndex = 5;
+            this.Btn_Cerrar.TabStop = false;
+            this.Btn_Cerrar.Click += new System.EventHandler(this.Btn_Cerrar_Click_1);
             // 
             // Titulo
             // 
@@ -236,45 +273,9 @@ namespace TrabajoPrácticoPAV.Formularios.Viajes
             this.Titulo.Location = new System.Drawing.Point(9, 6);
             this.Titulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Titulo.Name = "Titulo";
-            this.Titulo.Size = new System.Drawing.Size(155, 22);
+            this.Titulo.Size = new System.Drawing.Size(183, 22);
             this.Titulo.TabIndex = 4;
-            this.Titulo.Text = "MODIFICAR VIAJE";
-            // 
-            // Btn_Minimizar
-            // 
-            this.Btn_Minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Btn_Minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_Minimizar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Minimizar.Image")));
-            this.Btn_Minimizar.Location = new System.Drawing.Point(282, 4);
-            this.Btn_Minimizar.Margin = new System.Windows.Forms.Padding(2);
-            this.Btn_Minimizar.Name = "Btn_Minimizar";
-            this.Btn_Minimizar.Size = new System.Drawing.Size(22, 24);
-            this.Btn_Minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Btn_Minimizar.TabIndex = 3;
-            this.Btn_Minimizar.TabStop = false;
-            this.Btn_Minimizar.Click += new System.EventHandler(this.Btn_Minimizar_Click);
-            // 
-            // Btn_Cerrar
-            // 
-            this.Btn_Cerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Btn_Cerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_Cerrar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Cerrar.Image")));
-            this.Btn_Cerrar.Location = new System.Drawing.Point(308, 4);
-            this.Btn_Cerrar.Margin = new System.Windows.Forms.Padding(2);
-            this.Btn_Cerrar.Name = "Btn_Cerrar";
-            this.Btn_Cerrar.Size = new System.Drawing.Size(22, 24);
-            this.Btn_Cerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Btn_Cerrar.TabIndex = 0;
-            this.Btn_Cerrar.TabStop = false;
-            this.Btn_Cerrar.Click += new System.EventHandler(this.Btn_Cerrar_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.panel1);
-            this.panel3.Location = new System.Drawing.Point(0, 31);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(333, 320);
-            this.panel3.TabIndex = 15;
+            this.Titulo.Text = "MODIFICAR RESERVA";
             // 
             // Frm_ModificarViaje
             // 
@@ -282,19 +283,20 @@ namespace TrabajoPrácticoPAV.Formularios.Viajes
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(227)))), ((int)(((byte)(187)))));
             this.ClientSize = new System.Drawing.Size(334, 352);
+            this.Controls.Add(this.BarraSuperior);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_ModificarViaje";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar Viaje";
+            this.Load += new System.EventHandler(this.Frm_ModificarViaje_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.BarraSuperior.ResumeLayout(false);
+            this.BarraSuperior.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Minimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Cerrar)).EndInit();
-            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -313,10 +315,10 @@ namespace TrabajoPrácticoPAV.Formularios.Viajes
         private System.Windows.Forms.Button btn_modificar;
         private System.Windows.Forms.Button btn_cancelar;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label Titulo;
-        private System.Windows.Forms.PictureBox Btn_Cerrar;
-        private System.Windows.Forms.PictureBox Btn_Minimizar;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel BarraSuperior;
+        private System.Windows.Forms.PictureBox Btn_Minimizar;
+        private System.Windows.Forms.PictureBox Btn_Cerrar;
+        private System.Windows.Forms.Label Titulo;
     }
 }
