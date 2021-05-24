@@ -196,7 +196,7 @@ namespace TrabajoPrácticoPAV.Formularios
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(433, 20);
+            this.label6.Location = new System.Drawing.Point(395, 20);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(149, 17);
             this.label6.TabIndex = 8;
@@ -210,16 +210,16 @@ namespace TrabajoPrácticoPAV.Formularios
             this.panel3.Controls.Add(this.btn_cargar_tramos);
             this.panel3.Controls.Add(this.lbl_duracionEstimada);
             this.panel3.Controls.Add(this.label10);
-            this.panel3.Location = new System.Drawing.Point(424, 29);
+            this.panel3.Location = new System.Drawing.Point(382, 29);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(208, 102);
+            this.panel3.Size = new System.Drawing.Size(250, 102);
             this.panel3.TabIndex = 19;
             // 
             // btn_consultar_tramos
             // 
             this.btn_consultar_tramos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_consultar_tramos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.btn_consultar_tramos.Location = new System.Drawing.Point(105, 69);
+            this.btn_consultar_tramos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.btn_consultar_tramos.Location = new System.Drawing.Point(147, 69);
             this.btn_consultar_tramos.Name = "btn_consultar_tramos";
             this.btn_consultar_tramos.Size = new System.Drawing.Size(98, 28);
             this.btn_consultar_tramos.TabIndex = 27;
@@ -230,7 +230,7 @@ namespace TrabajoPrácticoPAV.Formularios
             // lbl_tramosCargados
             // 
             this.lbl_tramosCargados.AutoSize = true;
-            this.lbl_tramosCargados.Location = new System.Drawing.Point(121, 39);
+            this.lbl_tramosCargados.Location = new System.Drawing.Point(146, 39);
             this.lbl_tramosCargados.Name = "lbl_tramosCargados";
             this.lbl_tramosCargados.Size = new System.Drawing.Size(13, 13);
             this.lbl_tramosCargados.TabIndex = 28;
@@ -239,10 +239,10 @@ namespace TrabajoPrácticoPAV.Formularios
             // btn_cargar_tramos
             // 
             this.btn_cargar_tramos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cargar_tramos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.btn_cargar_tramos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.btn_cargar_tramos.Location = new System.Drawing.Point(3, 69);
             this.btn_cargar_tramos.Name = "btn_cargar_tramos";
-            this.btn_cargar_tramos.Size = new System.Drawing.Size(90, 28);
+            this.btn_cargar_tramos.Size = new System.Drawing.Size(117, 28);
             this.btn_cargar_tramos.TabIndex = 26;
             this.btn_cargar_tramos.Text = "Cargar Tramos";
             this.btn_cargar_tramos.UseVisualStyleBackColor = true;
@@ -253,7 +253,7 @@ namespace TrabajoPrácticoPAV.Formularios
             this.lbl_duracionEstimada.AutoSize = true;
             this.lbl_duracionEstimada.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lbl_duracionEstimada.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.lbl_duracionEstimada.Location = new System.Drawing.Point(86, 14);
+            this.lbl_duracionEstimada.Location = new System.Drawing.Point(111, 14);
             this.lbl_duracionEstimada.Name = "lbl_duracionEstimada";
             this.lbl_duracionEstimada.Size = new System.Drawing.Size(34, 19);
             this.lbl_duracionEstimada.TabIndex = 9;
@@ -262,7 +262,7 @@ namespace TrabajoPrácticoPAV.Formularios
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(69, 39);
+            this.label10.Location = new System.Drawing.Point(94, 39);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(45, 13);
             this.label10.TabIndex = 27;
@@ -272,7 +272,7 @@ namespace TrabajoPrácticoPAV.Formularios
             // 
             this.btn_registrar_viaje.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_registrar_viaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.btn_registrar_viaje.Location = new System.Drawing.Point(428, 137);
+            this.btn_registrar_viaje.Location = new System.Drawing.Point(413, 137);
             this.btn_registrar_viaje.Name = "btn_registrar_viaje";
             this.btn_registrar_viaje.Size = new System.Drawing.Size(90, 28);
             this.btn_registrar_viaje.TabIndex = 18;
@@ -295,7 +295,7 @@ namespace TrabajoPrácticoPAV.Formularios
             this.btn_cancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.btn_cancelar.Location = new System.Drawing.Point(530, 137);
+            this.btn_cancelar.Location = new System.Drawing.Point(509, 137);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(98, 28);
             this.btn_cancelar.TabIndex = 13;

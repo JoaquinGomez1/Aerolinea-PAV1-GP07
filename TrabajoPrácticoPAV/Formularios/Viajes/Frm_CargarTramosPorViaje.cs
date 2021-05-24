@@ -7,11 +7,17 @@ using System.Windows.Forms;
 using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.Clase.Modelos;
 using TrabajoPrácticoPAV.NE_Usuarios;
+using System.Runtime.InteropServices;
 
 namespace TrabajoPrácticoPAV.Formularios.Viajes
 {
     public partial class Frm_CargarTramosPorViaje : Form
     {
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWind, int wMsg, int wParam, int lParam);
+
         private List<Tramo> TramosDelViaje = Frm_ABMViajes.TramosDelViaje;
         private readonly NE_Tramos _NE_Tramo = new NE_Tramos();
 
@@ -90,6 +96,12 @@ namespace TrabajoPrácticoPAV.Formularios.Viajes
         {
             Frm_ABMViajes.TramosDelViaje = this.TramosDelViaje;
             this.Close();
+        }
+
+        private void BarraSuperior_MouseMove(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

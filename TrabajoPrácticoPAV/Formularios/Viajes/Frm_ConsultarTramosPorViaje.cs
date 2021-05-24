@@ -9,11 +9,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Clase.Modelos;
 using TrabajoPrácticoPAV.NE_Usuarios;
+using System.Runtime.InteropServices;
+using TrabajoPrácticoPAV.Clase;
 
 namespace TrabajoPrácticoPAV.Formularios.Viajes
 {
     public partial class Frm_ConsultarTramosPorViaje : Form
     {
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWind, int wMsg, int wParam, int lParam);
 
         private readonly NE_Tramos _NE_Tramos = new NE_Tramos();
         private readonly NE_Viajes _NE_Viajes = new NE_Viajes();
@@ -22,6 +28,8 @@ namespace TrabajoPrácticoPAV.Formularios.Viajes
         public Frm_ConsultarTramosPorViaje()
         {
             InitializeComponent();
+            this.BackColor = Estilo.ColorFondoForms;
+            Estilo.FormatearEstilo(this.Controls);
         }
 
         private void Btn_Cerrar_Click(object sender, EventArgs e)
@@ -78,6 +86,12 @@ namespace TrabajoPrácticoPAV.Formularios.Viajes
 
                 grid_tramoViaje.Rows.Remove(selectedRow);
             }
+        }
+
+        private void BarraSuperior_MouseMove(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }
