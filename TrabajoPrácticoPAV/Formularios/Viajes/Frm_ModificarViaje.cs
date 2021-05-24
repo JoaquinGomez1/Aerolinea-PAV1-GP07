@@ -21,6 +21,11 @@ namespace TrabajoPrácticoPAV.Formularios.Viajes
 
     public partial class Frm_ModificarViaje : Form
     {
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWind, int wMsg, int wParam, int lParam);
+
         [DllImport("user32.DLL", EntryPoint = "CargarTodos")]
         private extern static void CargarTodos();
         private static readonly DataGridView datagrid_viajes = new DataGridView();
@@ -101,19 +106,25 @@ namespace TrabajoPrácticoPAV.Formularios.Viajes
             }
         }
 
-        private void Btn_Cerrar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void Btn_Minimizar_Click(object sender, EventArgs e)
+        private void Btn_Minimizar_Click_1(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private void Btn_Cerrar_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Frm_ModificarViaje_Load(object sender, EventArgs e)
         {
             cmb_numero_viaje.CargarCombo();
+        }
+
+        private void BarraSuperior_MouseMove(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }
