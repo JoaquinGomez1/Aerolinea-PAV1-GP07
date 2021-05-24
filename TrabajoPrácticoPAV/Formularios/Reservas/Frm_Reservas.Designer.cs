@@ -64,7 +64,7 @@
             // 
             // btn_registrar
             // 
-            this.btn_registrar.Location = new System.Drawing.Point(652, 337);
+            this.btn_registrar.Location = new System.Drawing.Point(633, 337);
             this.btn_registrar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_registrar.Name = "btn_registrar";
             this.btn_registrar.Size = new System.Drawing.Size(71, 26);
