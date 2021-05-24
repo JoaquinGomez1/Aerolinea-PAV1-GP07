@@ -251,6 +251,7 @@ namespace TrabajoPrácticoPAV
         private void ciudadToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AbrirFormulario<Frm_Ciudad>();
+            Estilo.FormatearEstilo(this.Controls);
         }
 
         private void vueloToolStripMenuItem_Click(object sender, EventArgs e)

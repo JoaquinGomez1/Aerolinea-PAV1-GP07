@@ -31,7 +31,6 @@ namespace TrabajoPrácticoPAV.Formularios
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_cargar_tramos = new System.Windows.Forms.Button();
             this.btn_refrescar = new System.Windows.Forms.Button();
             this.btn_borrar_viaje = new System.Windows.Forms.Button();
             this.btn_modificar_viaje = new System.Windows.Forms.Button();
@@ -44,7 +43,9 @@ namespace TrabajoPrácticoPAV.Formularios
             this.label9 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btn_consultar_tramos = new System.Windows.Forms.Button();
             this.lbl_tramosCargados = new System.Windows.Forms.Label();
+            this.btn_cargar_tramos = new System.Windows.Forms.Button();
             this.lbl_duracionEstimada = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.btn_registrar_viaje = new System.Windows.Forms.Button();
@@ -59,7 +60,6 @@ namespace TrabajoPrácticoPAV.Formularios
             this.Mtxt_horarioSalida = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btn_consultar_tramos = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagrid_viajes)).BeginInit();
             this.panel3.SuspendLayout();
@@ -96,24 +96,12 @@ namespace TrabajoPrácticoPAV.Formularios
             this.panel1.Size = new System.Drawing.Size(730, 391);
             this.panel1.TabIndex = 2;
             // 
-            // btn_cargar_tramos
-            // 
-            this.btn_cargar_tramos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cargar_tramos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.btn_cargar_tramos.Location = new System.Drawing.Point(3, 69);
-            this.btn_cargar_tramos.Name = "btn_cargar_tramos";
-            this.btn_cargar_tramos.Size = new System.Drawing.Size(90, 28);
-            this.btn_cargar_tramos.TabIndex = 26;
-            this.btn_cargar_tramos.Text = "Cargar Tramos";
-            this.btn_cargar_tramos.UseVisualStyleBackColor = true;
-            this.btn_cargar_tramos.Click += new System.EventHandler(this.button5_Click);
-            // 
             // btn_refrescar
             // 
             this.btn_refrescar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_refrescar.Location = new System.Drawing.Point(549, 359);
             this.btn_refrescar.Name = "btn_refrescar";
-            this.btn_refrescar.Size = new System.Drawing.Size(83, 23);
+            this.btn_refrescar.Size = new System.Drawing.Size(100, 28);
             this.btn_refrescar.TabIndex = 24;
             this.btn_refrescar.Text = "Refrescar";
             this.btn_refrescar.UseVisualStyleBackColor = true;
@@ -164,31 +152,35 @@ namespace TrabajoPrácticoPAV.Formularios
             this.numeroDeViaje.HeaderText = "Id";
             this.numeroDeViaje.Name = "numeroDeViaje";
             this.numeroDeViaje.ReadOnly = true;
-            this.numeroDeViaje.Width = 50;
+            this.numeroDeViaje.Width = 104;
             // 
             // horarioPresencia
             // 
             this.horarioPresencia.HeaderText = "H. de Presencia";
             this.horarioPresencia.Name = "horarioPresencia";
             this.horarioPresencia.ReadOnly = true;
+            this.horarioPresencia.Width = 105;
             // 
             // horarioSalida
             // 
             this.horarioSalida.HeaderText = "H. de Salida";
             this.horarioSalida.Name = "horarioSalida";
             this.horarioSalida.ReadOnly = true;
+            this.horarioSalida.Width = 104;
             // 
             // horarioLlegada
             // 
             this.horarioLlegada.HeaderText = "H. de Llegada";
             this.horarioLlegada.Name = "horarioLlegada";
             this.horarioLlegada.ReadOnly = true;
+            this.horarioLlegada.Width = 105;
             // 
             // duracionEstimada
             // 
             this.duracionEstimada.HeaderText = "Duracion Estimada";
             this.duracionEstimada.Name = "duracionEstimada";
             this.duracionEstimada.ReadOnly = true;
+            this.duracionEstimada.Width = 104;
             // 
             // label9
             // 
@@ -223,6 +215,18 @@ namespace TrabajoPrácticoPAV.Formularios
             this.panel3.Size = new System.Drawing.Size(208, 102);
             this.panel3.TabIndex = 19;
             // 
+            // btn_consultar_tramos
+            // 
+            this.btn_consultar_tramos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_consultar_tramos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.btn_consultar_tramos.Location = new System.Drawing.Point(105, 69);
+            this.btn_consultar_tramos.Name = "btn_consultar_tramos";
+            this.btn_consultar_tramos.Size = new System.Drawing.Size(98, 28);
+            this.btn_consultar_tramos.TabIndex = 27;
+            this.btn_consultar_tramos.Text = "Ver Tramos";
+            this.btn_consultar_tramos.UseVisualStyleBackColor = true;
+            this.btn_consultar_tramos.Click += new System.EventHandler(this.btn_consultar_tramos_Click);
+            // 
             // lbl_tramosCargados
             // 
             this.lbl_tramosCargados.AutoSize = true;
@@ -231,6 +235,18 @@ namespace TrabajoPrácticoPAV.Formularios
             this.lbl_tramosCargados.Size = new System.Drawing.Size(13, 13);
             this.lbl_tramosCargados.TabIndex = 28;
             this.lbl_tramosCargados.Text = "0";
+            // 
+            // btn_cargar_tramos
+            // 
+            this.btn_cargar_tramos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cargar_tramos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.btn_cargar_tramos.Location = new System.Drawing.Point(3, 69);
+            this.btn_cargar_tramos.Name = "btn_cargar_tramos";
+            this.btn_cargar_tramos.Size = new System.Drawing.Size(90, 28);
+            this.btn_cargar_tramos.TabIndex = 26;
+            this.btn_cargar_tramos.Text = "Cargar Tramos";
+            this.btn_cargar_tramos.UseVisualStyleBackColor = true;
+            this.btn_cargar_tramos.Click += new System.EventHandler(this.button5_Click);
             // 
             // lbl_duracionEstimada
             // 
@@ -380,18 +396,6 @@ namespace TrabajoPrácticoPAV.Formularios
             this.label2.Size = new System.Drawing.Size(142, 17);
             this.label2.TabIndex = 4;
             this.label2.Text = "Horario de Presencia";
-            // 
-            // btn_consultar_tramos
-            // 
-            this.btn_consultar_tramos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_consultar_tramos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.btn_consultar_tramos.Location = new System.Drawing.Point(105, 69);
-            this.btn_consultar_tramos.Name = "btn_consultar_tramos";
-            this.btn_consultar_tramos.Size = new System.Drawing.Size(98, 28);
-            this.btn_consultar_tramos.TabIndex = 27;
-            this.btn_consultar_tramos.Text = "Ver Tramos";
-            this.btn_consultar_tramos.UseVisualStyleBackColor = true;
-            this.btn_consultar_tramos.Click += new System.EventHandler(this.btn_consultar_tramos_Click);
             // 
             // Frm_ABMViajes
             // 

@@ -222,7 +222,7 @@ namespace TrabajoPrácticoPAV.Formularios.Viajes
             this.panel2.Controls.Add(this.Btn_Cerrar);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(334, 32);
             this.panel2.TabIndex = 14;
@@ -246,7 +246,7 @@ namespace TrabajoPrácticoPAV.Formularios.Viajes
             this.Btn_Minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Btn_Minimizar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Minimizar.Image")));
             this.Btn_Minimizar.Location = new System.Drawing.Point(282, 4);
-            this.Btn_Minimizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_Minimizar.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Minimizar.Name = "Btn_Minimizar";
             this.Btn_Minimizar.Size = new System.Drawing.Size(22, 24);
             this.Btn_Minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -260,7 +260,7 @@ namespace TrabajoPrácticoPAV.Formularios.Viajes
             this.Btn_Cerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Btn_Cerrar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Cerrar.Image")));
             this.Btn_Cerrar.Location = new System.Drawing.Point(308, 4);
-            this.Btn_Cerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_Cerrar.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Cerrar.Name = "Btn_Cerrar";
             this.Btn_Cerrar.Size = new System.Drawing.Size(22, 24);
             this.Btn_Cerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

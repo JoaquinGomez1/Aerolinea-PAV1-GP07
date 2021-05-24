@@ -41,6 +41,7 @@ namespace TrabajoPrácticoPAV.Formularios.Viajes
 
         private void btn_agregar_Click(object sender, EventArgs e)
         {
+
             DataGridViewCellCollection selectedRowCells = grid_tramos.CurrentRow.Cells;
             Tramo tramo = new Tramo()
             {
@@ -50,6 +51,15 @@ namespace TrabajoPrácticoPAV.Formularios.Viajes
                 distancia = Int32.Parse(selectedRowCells[3].Value.ToString()),
             };
 
+            if (TramosDelViaje.Count > 0)
+            {
+                string aeroDestino = TramosDelViaje[TramosDelViaje.Count - 1].codigoAeropuertoDestino;
+                if (tramo.codigoAeropuertoSalida != aeroDestino)
+                {
+                    MessageBox.Show("El aeropuerto salida debe ser el mismo que el ultimo destino");
+                    return;
+                }
+            }
             // Verifica que no haya elementos repetidos, en caso de ser así retorna null
             int cantidadTramosDelViaje = TramosDelViaje.Count;
             TramosDelViaje.Add(tramo);

@@ -63,6 +63,7 @@
     </Compile>
     <Compile Include="Clase\Modelos\CargoTripulacion.cs" />
     <Compile Include="Clase\Modelos\Ciudad.cs" />
+    <Compile Include="Clase\Modelos\Pasajero.cs" />
     <Compile Include="Clase\Modelos\Tramo.cs" />
     <Compile Include="Clase\Modelos\Tripulante.cs" />
     <Compile Include="Clase\Modelos\Viaje.cs" />
@@ -460,6 +461,7 @@
     <Compile Include="NE_Usuarios\NE_CargoTripulacion.cs" />
     <Compile Include="NE_Usuarios\NE_Ciudad.cs" />
     <Compile Include="NE_Usuarios\NE_Clientes.cs" />
+    <Compile Include="NE_Usuarios\NE_Reserva.cs" />
     <Compile Include="NE_Usuarios\NE_TipoAsiento.cs" />
     <Compile Include="NE_Usuarios\NE_GrupoFamiliar.cs" />
     <Compile Include="NE_Usuarios\NE_Modelo.cs" />
