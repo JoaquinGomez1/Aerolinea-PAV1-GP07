@@ -52,17 +52,6 @@ namespace TrabajoPrácticoPAV.Formularios
             modificarReserva.ShowDialog();
         }
 
-        private void button_Aerolinea1_Click(object sender, EventArgs e)
-        {
-            if (_TE.Validar(this.panel1.Controls) == Resultado.error) return;
-            Pasajero pasajeroBuscado = new NE_Reserva().GetPasajero(Mtxt_numeroDoc.Text, cmb_tipoDoc.SelectedValue.ToString());
-            if (pasajeroBuscado.numeroDoc == null || pasajeroBuscado.numeroDoc == "")
-            {
-                return;
-            }
-            actualizarDatosPasajero(pasajeroBuscado);
-        }
-
         private void actualizarDatosPasajero(Pasajero pasajero)
         {
             lbl_nombre.Text = pasajero.nombre;
@@ -84,22 +73,6 @@ namespace TrabajoPrácticoPAV.Formularios
             grid.Rows[lastRowIndex].Cells[3].Value = pasajero.numeroDoc;
         }
 
-        private void button_Aerolinea2_Click(object sender, EventArgs e)
-        {
-            if (_TE.Validar(this.panel1.Controls) == Resultado.error) return;
-            Pasajero pasajeroBuscado = new NE_Reserva().GetPasajero(Mtxt_numeroDoc.Text, cmb_tipoDoc.SelectedValue.ToString());
-            if (pasajeroBuscado.numeroDoc == null || pasajeroBuscado.numeroDoc == "")
-            {
-                return;
-            }
-            agregarPasajeroAGrilla(pasajeroBuscado, grid_pasajeros);
-            EliminarDatosPasajeroBuscado();
-            if (grid_pasajeros.Rows.Count == 1)
-            {
-                ActualizarNombreTitular();
-            }
-        }
-
         private void EliminarDatosPasajeroBuscado()
         {
             lbl_nombre.Text = "???";
@@ -117,6 +90,33 @@ namespace TrabajoPrácticoPAV.Formularios
         private void ActualizarNombreTitular()
         {
             lbl_titularReserva.Text = $"{grid_pasajeros.Rows[0].Cells[0].Value} {grid_pasajeros.Rows[0].Cells[1].Value}";
+        }
+
+        private void btn_agregar_Click(object sender, EventArgs e)
+        {
+            if (_TE.Validar(this.panel1.Controls) == Resultado.error) return;
+            Pasajero pasajeroBuscado = new NE_Reserva().GetPasajero(Mtxt_numeroDoc.Text, cmb_tipoDoc.SelectedValue.ToString());
+            if (pasajeroBuscado.numeroDoc == null || pasajeroBuscado.numeroDoc == "")
+            {
+                return;
+            }
+            agregarPasajeroAGrilla(pasajeroBuscado, grid_pasajeros);
+            EliminarDatosPasajeroBuscado();
+            if (grid_pasajeros.Rows.Count == 1)
+            {
+                ActualizarNombreTitular();
+            }
+        }
+
+        private void btn_buscar_Click(object sender, EventArgs e)
+        {
+            if (_TE.Validar(this.panel1.Controls) == Resultado.error) return;
+            Pasajero pasajeroBuscado = new NE_Reserva().GetPasajero(Mtxt_numeroDoc.Text, cmb_tipoDoc.SelectedValue.ToString());
+            if (pasajeroBuscado.numeroDoc == null || pasajeroBuscado.numeroDoc == "")
+            {
+                return;
+            }
+            actualizarDatosPasajero(pasajeroBuscado);
         }
     }
 }
