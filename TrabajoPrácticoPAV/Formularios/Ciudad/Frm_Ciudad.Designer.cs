@@ -345,6 +345,8 @@ namespace TrabajoPrácticoPAV.Formularios.Ciudad
             // 
             // grid_ciudades
             // 
+            this.grid_ciudades.AllowUserToAddRows = false;
+            this.grid_ciudades.AllowUserToDeleteRows = false;
             this.grid_ciudades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_ciudades.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idCiudad,
@@ -358,6 +360,7 @@ namespace TrabajoPrácticoPAV.Formularios.Ciudad
             this.grid_ciudades.Name = "grid_ciudades";
             this.grid_ciudades.Pp_FormatoGrid = null;
             this.grid_ciudades.Pp_NombreTabla = null;
+            this.grid_ciudades.ReadOnly = true;
             this.grid_ciudades.Size = new System.Drawing.Size(553, 175);
             this.grid_ciudades.TabIndex = 8;
             // 
@@ -366,6 +369,7 @@ namespace TrabajoPrácticoPAV.Formularios.Ciudad
             this.idCiudad.Frozen = true;
             this.idCiudad.HeaderText = "ID";
             this.idCiudad.Name = "idCiudad";
+            this.idCiudad.ReadOnly = true;
             this.idCiudad.Width = 65;
             // 
             // nombre
@@ -373,6 +377,7 @@ namespace TrabajoPrácticoPAV.Formularios.Ciudad
             this.nombre.Frozen = true;
             this.nombre.HeaderText = "Nombre";
             this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
             this.nombre.Width = 150;
             // 
             // nombrePais
@@ -380,12 +385,14 @@ namespace TrabajoPrácticoPAV.Formularios.Ciudad
             this.nombrePais.Frozen = true;
             this.nombrePais.HeaderText = "Pais";
             this.nombrePais.Name = "nombrePais";
+            this.nombrePais.ReadOnly = true;
             // 
             // nombreProvincia
             // 
             this.nombreProvincia.Frozen = true;
             this.nombreProvincia.HeaderText = "Provincia";
             this.nombreProvincia.Name = "nombreProvincia";
+            this.nombreProvincia.ReadOnly = true;
             this.nombreProvincia.Width = 143;
             // 
             // idProvincia
@@ -393,18 +400,21 @@ namespace TrabajoPrácticoPAV.Formularios.Ciudad
             this.idProvincia.Frozen = true;
             this.idProvincia.HeaderText = "IdProvincia";
             this.idProvincia.Name = "idProvincia";
+            this.idProvincia.ReadOnly = true;
             this.idProvincia.Visible = false;
             // 
             // idProvinciaOculto
             // 
             this.idProvinciaOculto.HeaderText = "idProvincia";
             this.idProvinciaOculto.Name = "idProvinciaOculto";
+            this.idProvinciaOculto.ReadOnly = true;
             this.idProvinciaOculto.Visible = false;
             // 
             // idPais
             // 
             this.idPais.HeaderText = "idPais";
             this.idPais.Name = "idPais";
+            this.idPais.ReadOnly = true;
             this.idPais.Visible = false;
             // 
             // btn_cerrar

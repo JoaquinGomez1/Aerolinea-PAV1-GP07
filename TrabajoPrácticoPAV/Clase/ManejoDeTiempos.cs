@@ -161,6 +161,6 @@ namespace TrabajoPrácticoPAV.Clase
         // El parametro tiene que seguir la siguiente estructura:  "14:00" 
         // Documentación oficial del método: https://docs.microsoft.com/en-us/dotnet/api/system.datetime.parseexact?view=net-5.0
         public DateTime ParseTime(string horasYMin) => DateTime.ParseExact(horasYMin, "HH:mm", null, System.Globalization.DateTimeStyles.None);
-
+        public DateTime ParseTime(int horasYMin) => DateTime.ParseExact(horasYMin.ToString(), "HH:mm", null, System.Globalization.DateTimeStyles.None);
     }
 }

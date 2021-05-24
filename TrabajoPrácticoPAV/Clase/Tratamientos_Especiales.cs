@@ -22,10 +22,12 @@ namespace TrabajoPrácticoPAV.Clase
             string atributosTabla = "";
             bool todos = false;
 
-
-
             foreach (var control in controles)
             {
+                if (control.GetType().ToString() == "System.Windows.Forms.Panel")
+                {
+                    ConstructorSelect(((Panel)control).Controls, join, nombreTabla);
+                }
                 //SELECT ATRIBUTOS FROM TABLA
                 if (control.GetType().ToString() == "TrabajoPrácticoPAV.Clase.DataGridView_Aerolinea")
                 {
