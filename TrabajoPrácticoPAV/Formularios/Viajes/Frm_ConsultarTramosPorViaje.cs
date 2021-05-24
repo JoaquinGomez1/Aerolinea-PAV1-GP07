@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.Clase.Modelos;
 using TrabajoPrácticoPAV.NE_Usuarios;
 
@@ -22,6 +23,8 @@ namespace TrabajoPrácticoPAV.Formularios.Viajes
         public Frm_ConsultarTramosPorViaje()
         {
             InitializeComponent();
+            this.BackColor = Estilo.ColorFondoForms;
+            Estilo.FormatearEstilo(this.Controls);
         }
 
         private void Btn_Cerrar_Click(object sender, EventArgs e)

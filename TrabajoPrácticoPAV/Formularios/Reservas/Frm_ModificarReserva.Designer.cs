@@ -45,18 +45,21 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.BarraSuperior = new System.Windows.Forms.Panel();
+            this.Btn_Minimizar = new System.Windows.Forms.PictureBox();
+            this.Btn_Cerrar = new System.Windows.Forms.PictureBox();
             this.Titulo = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.Btn_Minimizar = new System.Windows.Forms.PictureBox();
-            this.Btn_Cerrar = new System.Windows.Forms.PictureBox();
             this.btn_modify = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.btn_cancelar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.BarraSuperior.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Cerrar)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBox_Aerolinea2
@@ -235,48 +238,7 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             this.BarraSuperior.Name = "BarraSuperior";
             this.BarraSuperior.Size = new System.Drawing.Size(718, 32);
             this.BarraSuperior.TabIndex = 106;
-            // 
-            // Titulo
-            // 
-            this.Titulo.AutoSize = true;
-            this.Titulo.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.Titulo.ForeColor = System.Drawing.Color.White;
-            this.Titulo.Location = new System.Drawing.Point(9, 6);
-            this.Titulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Titulo.Name = "Titulo";
-            this.Titulo.Size = new System.Drawing.Size(183, 22);
-            this.Titulo.TabIndex = 4;
-            this.Titulo.Text = "MODIFICAR RESERVA";
-            // 
-            // panel1
-            // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.cmb_claseAsiento);
-            this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.maskedTextBox_Aerolinea2);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.label13);
-            this.panel1.Controls.Add(this.textBox_Aerolinea1);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textBox_Aerolinea2);
-            this.panel1.Location = new System.Drawing.Point(12, 37);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(295, 168);
-            this.panel1.TabIndex = 107;
-            // 
-            // panel2
-            // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.maskedTextBox_Aerolinea1);
-            this.panel2.Controls.Add(this.cmb_tipoDoc);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(13, 211);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(294, 94);
-            this.panel2.TabIndex = 108;
+            this.BarraSuperior.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BarraSuperior_MouseMove);
             // 
             // Btn_Minimizar
             // 
@@ -306,11 +268,53 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             this.Btn_Cerrar.TabStop = false;
             this.Btn_Cerrar.Click += new System.EventHandler(this.Btn_Cerrar_Click);
             // 
+            // Titulo
+            // 
+            this.Titulo.AutoSize = true;
+            this.Titulo.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Titulo.ForeColor = System.Drawing.Color.White;
+            this.Titulo.Location = new System.Drawing.Point(9, 6);
+            this.Titulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Titulo.Name = "Titulo";
+            this.Titulo.Size = new System.Drawing.Size(183, 22);
+            this.Titulo.TabIndex = 4;
+            this.Titulo.Text = "MODIFICAR RESERVA";
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.cmb_claseAsiento);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.maskedTextBox_Aerolinea2);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.label12);
+            this.panel1.Controls.Add(this.label13);
+            this.panel1.Controls.Add(this.textBox_Aerolinea1);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.textBox_Aerolinea2);
+            this.panel1.Location = new System.Drawing.Point(14, 4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(295, 168);
+            this.panel1.TabIndex = 107;
+            // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.maskedTextBox_Aerolinea1);
+            this.panel2.Controls.Add(this.cmb_tipoDoc);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Location = new System.Drawing.Point(15, 178);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(294, 94);
+            this.panel2.TabIndex = 108;
+            // 
             // btn_modify
             // 
             this.btn_modify.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_modify.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.btn_modify.Location = new System.Drawing.Point(62, 313);
+            this.btn_modify.Location = new System.Drawing.Point(64, 280);
             this.btn_modify.Name = "btn_modify";
             this.btn_modify.Pp_Presionado = false;
             this.btn_modify.Size = new System.Drawing.Size(90, 28);
@@ -322,7 +326,7 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             // 
             this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.btn_cancelar.Location = new System.Drawing.Point(186, 313);
+            this.btn_cancelar.Location = new System.Drawing.Point(188, 280);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Pp_Presionado = false;
             this.btn_cancelar.Size = new System.Drawing.Size(90, 28);
@@ -331,27 +335,47 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             this.btn_cancelar.UseVisualStyleBackColor = true;
             this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
+            // panel3
+            // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.flowLayoutPanel1);
+            this.panel3.Controls.Add(this.btn_cancelar);
+            this.panel3.Controls.Add(this.panel1);
+            this.panel3.Controls.Add(this.btn_modify);
+            this.panel3.Controls.Add(this.panel2);
+            this.panel3.Location = new System.Drawing.Point(0, 31);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(718, 319);
+            this.panel3.TabIndex = 111;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(8, 18);
+            this.flowLayoutPanel1.TabIndex = 0;
+            // 
             // Frm_ModificarReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(718, 350);
-            this.Controls.Add(this.btn_cancelar);
-            this.Controls.Add(this.btn_modify);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.BarraSuperior);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_ModificarReserva";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Frm_ModificarReserva";
+            this.Load += new System.EventHandler(this.Frm_ModificarReserva_Load);
             this.BarraSuperior.ResumeLayout(false);
             this.BarraSuperior.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_Minimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_Cerrar)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Btn_Minimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Btn_Cerrar)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -380,5 +404,7 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
         private System.Windows.Forms.PictureBox Btn_Cerrar;
         private Clase.Button_Aerolinea btn_modify;
         private Clase.Button_Aerolinea btn_cancelar;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

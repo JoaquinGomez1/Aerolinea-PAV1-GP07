@@ -18,14 +18,14 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
 
         public void InsertarTelefonos(DataGridView_Aerolinea grid, string numeroDoc, string tipoDoc)
         {
-            if(grid.Rows.Count > 1)
-            for (int i = 0; i < grid.Rows.Count -1; i++)
-            {
-                string sql = $"INSERT INTO Telefono(numeroTelefono, tipoDoc, numeroDoc) VALUES(" +
-                    $"'{grid.Rows[i].Cells[0].Value.ToString()}', {tipoDoc}, {numeroDoc})";
+            if (grid.Rows.Count > 1)
+                for (int i = 0; i < grid.Rows.Count - 1; i++)
+                {
+                    string sql = $"INSERT INTO Telefono(numeroTelefono, tipoDoc, numeroDoc) VALUES(" +
+                        $"'{grid.Rows[i].Cells[0].Value.ToString()}', {tipoDoc}, {numeroDoc})";
 
-                _BD.Insertar(sql, true);
-            }
+                    _BD.Insertar(sql, true);
+                }
         }
 
         public string BuscarNombreDoc(string idTipoDoc)
@@ -43,6 +43,7 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
         public void CargarGrilla(string sql, DataGridView_Aerolinea grid)
         {
             DataTable tabla = _BD.EjecutarSelect(sql);
+            if (tabla.Rows.Count < 1) MessageBox.Show($"No se encontró ningun pasajero con esos datos");
             grid.Rows.Clear();
             for (int i = 0; i < tabla.Rows.Count; i++)
             {
