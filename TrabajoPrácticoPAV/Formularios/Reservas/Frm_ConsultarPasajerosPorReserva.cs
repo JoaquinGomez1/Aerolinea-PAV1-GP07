@@ -8,8 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Clase;
+using TrabajoPrácticoPAV.Clase.Modelos;
 using System.Runtime.InteropServices;
 using TrabajoPrácticoPAV.NE_Usuarios;
+using static TrabajoPrácticoPAV.Clase.Tratamientos_Especiales;
+
 
 namespace TrabajoPrácticoPAV.Formularios.Reservas
 {
@@ -20,9 +23,13 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWind, int wMsg, int wParam, int lParam);
+        private readonly Tratamientos_Especiales _TE = new Tratamientos_Especiales();
+        private readonly NE_Clientes _NE_Pasajeros = new NE_Clientes();
+        private string numeroDeReservaActual = "";
 
         // Logica
         private readonly NE_Reserva _NE_Reserva = new NE_Reserva();
+
 
 
         public Frm_ConsultarPasajerosPorReserva()
@@ -65,14 +72,36 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
 
             DataTable pasajerosDelViaje = _NE_Reserva.GetTodosLosPasajeros(viajeSeleccionado);
 
+            lbl_CantPasajeros.Text = pasajerosDelViaje.Rows.Count.ToString();
+
             if (pasajerosDelViaje.Rows.Count >= 1)
                 CargarGrilla(pasajerosDelViaje);
             else
                 MessageBox.Show("No hay pasajeros en el viaje seleccionado");
+
+            string numReserva = comboBox_Aerolinea1.Text;
+
+            if (numReserva == null)
+            {
+                MessageBox.Show("Debe indicar un numero de reserva.");
+                return;
+            }
+
+            numeroDeReservaActual = numReserva;
+            DataTable result = _NE_Reserva.GetPasajeroPorDoc(numReserva);
+            Pasajero pasajero = new Pasajero()
+            {
+                numeroDoc = result.Rows[0]["numeroDoc"].ToString(),
+                nombre = result.Rows[0]["nombre"].ToString(),
+            };
+            lbl_DocTitular.Text = pasajero.numeroDoc;
+            lbl_nombreTitular.Text = pasajero.nombre;
+
         }
 
         private void CargarGrilla(DataTable table)
         {
+            lbl_CantPasajeros.Text = table.Rows.Count.ToString();
             if (table.Rows.Count <= 0) MessageBox.Show("No hay datos en la tabla");
 
             for (int i = 0; i < table.Rows.Count; i++)
@@ -85,5 +114,6 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
                 grid_pasajeros.Rows[i].Cells[3].Value = $"{table.Rows[i]["apellido"]}";
             }
         }
+        
     }
 }

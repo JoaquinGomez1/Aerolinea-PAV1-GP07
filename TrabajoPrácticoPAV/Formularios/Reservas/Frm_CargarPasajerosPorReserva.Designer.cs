@@ -143,6 +143,7 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             this.panel3.Controls.Add(this.panel1);
             this.panel3.Location = new System.Drawing.Point(0, 31);
             this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(752, 412);
             this.panel3.Size = new System.Drawing.Size(752, 414);
             this.panel3.TabIndex = 116;
             // 
