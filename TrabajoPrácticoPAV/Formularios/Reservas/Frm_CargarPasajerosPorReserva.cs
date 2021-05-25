@@ -48,7 +48,13 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             if (grid_pasajeros.CurrentRow == null)
                 return;
 
+            int index = grid_pasajeros.CurrentRow.Index;
             grid_pasajeros.Rows.Remove(grid_pasajeros.CurrentRow);
+            Frm_ABMReservas.ObserverListaPasajeros.RemoveAt(index);
+
+            if (grid_pasajeros.Rows.Count >= 1)
+                ActualizarNombreTitular();
+
         }
 
         private void actualizarDatosPasajero(Pasajero pasajero)
@@ -94,6 +100,9 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             {
                 return;
             }
+
+            // A partir de aca está todo validado
+            Frm_ABMReservas.ObserverListaPasajeros.Add(pasajeroBuscado); // Agrega a la lista de pasajeros
             agregarPasajeroAGrilla(pasajeroBuscado, grid_pasajeros);
             EliminarDatosPasajeroBuscado();
             if (grid_pasajeros.Rows.Count == 1)

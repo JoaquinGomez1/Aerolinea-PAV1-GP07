@@ -22,6 +22,7 @@ using TrabajoPrácticoPAV.Formularios.Provincia;
 using TrabajoPrácticoPAV.Formularios.Ciudad;
 using TrabajoPrácticoPAV.Formularios.Tripulacion.Cargo_Tripulacion;
 using TrabajoPrácticoPAV.Formularios.Tripulacion;
+using TrabajoPrácticoPAV.Formularios.Facturaciones;
 
 namespace TrabajoPrácticoPAV
 {
@@ -284,6 +285,12 @@ namespace TrabajoPrácticoPAV
         {
             CerrarTodosLosMenuStrip();
             AbrirFormulario<Frm_ABMReservas>();
+        }
+
+        private void facturasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_Facturacion>();
         }
     }
 }

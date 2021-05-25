@@ -13,6 +13,12 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
     {
         private readonly Conexion_DB _DB = new Conexion_DB();
 
+        public DataTable GetTodos()
+        {
+            string sql = "SELECT * FROM RESERVA";
+            return _DB.EjecutarSelect(sql);
+        }
+
         public Pasajero GetPasajero(string numeroDoc, string tipoDoc)
         {
             DataTable result = GetDataTablePasajero(numeroDoc, tipoDoc);
@@ -48,7 +54,7 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             DataTable result = _DB.EjecutarSelect(sql);
 
             decimal value = decimal.Parse($"{result.Rows[0]["costo"]}", NumberStyles.Currency);
-            
+
             return value;
         }
 

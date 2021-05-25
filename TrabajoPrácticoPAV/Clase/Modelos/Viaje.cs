@@ -7,5 +7,6 @@
         public string HorarioSalida { get; set; }
         public string HorarioLlegada { get; set; }
         public int DuracionEstimada { get; set; }
+        public int CantidadTramos { get; set; }
     }
 }

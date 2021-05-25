@@ -2,7 +2,7 @@
 
 namespace TrabajoPrácticoPAV.Clase.Modelos
 {
-    class Pasajero
+    public class Pasajero
     {
         // Son todos los campos de tipo string porque no tiene sentido hacer ninguna operación con ningun dato de esta tabla
         // Cuanto mucho se modifican pero no se realizan operaciones con ninguno 

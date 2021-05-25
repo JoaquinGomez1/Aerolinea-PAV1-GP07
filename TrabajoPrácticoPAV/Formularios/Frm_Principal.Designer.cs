@@ -31,7 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Principal));
             this.BarraSuperior = new System.Windows.Forms.Panel();
             this.Titulo = new System.Windows.Forms.Label();
+            this.Btn_Minimizar = new System.Windows.Forms.PictureBox();
+            this.Btn_Cerrar = new System.Windows.Forms.PictureBox();
             this.PanelMenu = new System.Windows.Forms.Panel();
+            this.Btn_ABM = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
+            this.Btn_Procesos = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
+            this.Btn_Configuracion = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
+            this.Btn_Listado = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
+            this.Btn_Estadistica = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.PanelFormularios = new System.Windows.Forms.Panel();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.reservasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,21 +67,14 @@
             this.cargosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tripulaciónToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Btn_Minimizar = new System.Windows.Forms.PictureBox();
-            this.Btn_Cerrar = new System.Windows.Forms.PictureBox();
-            this.Btn_ABM = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
-            this.Btn_Procesos = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
-            this.Btn_Configuracion = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
-            this.Btn_Listado = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
-            this.Btn_Estadistica = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.BarraSuperior.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_Minimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_Cerrar)).BeginInit();
             this.PanelMenu.SuspendLayout();
             this.PanelFormularios.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Btn_Minimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Btn_Cerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // BarraSuperior
@@ -102,6 +102,34 @@
             this.Titulo.TabIndex = 4;
             this.Titulo.Text = "AEROLÍNEA AEROLIMPO";
             // 
+            // Btn_Minimizar
+            // 
+            this.Btn_Minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Btn_Minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_Minimizar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Minimizar.Image")));
+            this.Btn_Minimizar.Location = new System.Drawing.Point(848, 4);
+            this.Btn_Minimizar.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_Minimizar.Name = "Btn_Minimizar";
+            this.Btn_Minimizar.Size = new System.Drawing.Size(22, 24);
+            this.Btn_Minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Btn_Minimizar.TabIndex = 3;
+            this.Btn_Minimizar.TabStop = false;
+            this.Btn_Minimizar.Click += new System.EventHandler(this.Btn_Minimizar_Click);
+            // 
+            // Btn_Cerrar
+            // 
+            this.Btn_Cerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Btn_Cerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_Cerrar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Cerrar.Image")));
+            this.Btn_Cerrar.Location = new System.Drawing.Point(874, 4);
+            this.Btn_Cerrar.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_Cerrar.Name = "Btn_Cerrar";
+            this.Btn_Cerrar.Size = new System.Drawing.Size(22, 24);
+            this.Btn_Cerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Btn_Cerrar.TabIndex = 0;
+            this.Btn_Cerrar.TabStop = false;
+            this.Btn_Cerrar.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // PanelMenu
             // 
             this.PanelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
@@ -118,6 +146,106 @@
             this.PanelMenu.Name = "PanelMenu";
             this.PanelMenu.Size = new System.Drawing.Size(150, 413);
             this.PanelMenu.TabIndex = 1;
+            // 
+            // Btn_ABM
+            // 
+            this.Btn_ABM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
+            this.Btn_ABM.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.Btn_ABM.FlatAppearance.BorderSize = 2;
+            this.Btn_ABM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_ABM.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.Btn_ABM.ForeColor = System.Drawing.Color.White;
+            this.Btn_ABM.Image = global::TrabajoPrácticoPAV.Properties.Resources.klipartz_com__1_;
+            this.Btn_ABM.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_ABM.Location = new System.Drawing.Point(2, 2);
+            this.Btn_ABM.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_ABM.Name = "Btn_ABM";
+            this.Btn_ABM.Pp_Presionado = false;
+            this.Btn_ABM.Size = new System.Drawing.Size(146, 41);
+            this.Btn_ABM.TabIndex = 2;
+            this.Btn_ABM.Text = "Registros";
+            this.Btn_ABM.UseVisualStyleBackColor = false;
+            this.Btn_ABM.Click += new System.EventHandler(this.MouseClickButton);
+            // 
+            // Btn_Procesos
+            // 
+            this.Btn_Procesos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
+            this.Btn_Procesos.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.Btn_Procesos.FlatAppearance.BorderSize = 2;
+            this.Btn_Procesos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Procesos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.Btn_Procesos.ForeColor = System.Drawing.Color.White;
+            this.Btn_Procesos.Image = global::TrabajoPrácticoPAV.Properties.Resources.reboot_arrow_3726__1_;
+            this.Btn_Procesos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_Procesos.Location = new System.Drawing.Point(2, 49);
+            this.Btn_Procesos.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_Procesos.Name = "Btn_Procesos";
+            this.Btn_Procesos.Pp_Presionado = false;
+            this.Btn_Procesos.Size = new System.Drawing.Size(146, 41);
+            this.Btn_Procesos.TabIndex = 8;
+            this.Btn_Procesos.Text = "Procesos";
+            this.Btn_Procesos.UseVisualStyleBackColor = false;
+            this.Btn_Procesos.Click += new System.EventHandler(this.MouseClickButton);
+            // 
+            // Btn_Configuracion
+            // 
+            this.Btn_Configuracion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
+            this.Btn_Configuracion.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.Btn_Configuracion.FlatAppearance.BorderSize = 2;
+            this.Btn_Configuracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Configuracion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.Btn_Configuracion.ForeColor = System.Drawing.Color.White;
+            this.Btn_Configuracion.Image = global::TrabajoPrácticoPAV.Properties.Resources.pngegg;
+            this.Btn_Configuracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_Configuracion.Location = new System.Drawing.Point(2, 381);
+            this.Btn_Configuracion.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_Configuracion.Name = "Btn_Configuracion";
+            this.Btn_Configuracion.Pp_Presionado = false;
+            this.Btn_Configuracion.Size = new System.Drawing.Size(146, 30);
+            this.Btn_Configuracion.TabIndex = 3;
+            this.Btn_Configuracion.Text = "     Configuración";
+            this.Btn_Configuracion.UseVisualStyleBackColor = false;
+            this.Btn_Configuracion.Click += new System.EventHandler(this.MouseClickButton);
+            // 
+            // Btn_Listado
+            // 
+            this.Btn_Listado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
+            this.Btn_Listado.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.Btn_Listado.FlatAppearance.BorderSize = 2;
+            this.Btn_Listado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Listado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.Btn_Listado.ForeColor = System.Drawing.Color.White;
+            this.Btn_Listado.Image = global::TrabajoPrácticoPAV.Properties.Resources._8b1a89d3f271913146d4cd63f3920464_icono_de_trazo_de_lista_de_verificaci_oacute_n_m_eacute_dica_by_vexels1;
+            this.Btn_Listado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_Listado.Location = new System.Drawing.Point(2, 97);
+            this.Btn_Listado.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_Listado.Name = "Btn_Listado";
+            this.Btn_Listado.Pp_Presionado = false;
+            this.Btn_Listado.Size = new System.Drawing.Size(146, 41);
+            this.Btn_Listado.TabIndex = 7;
+            this.Btn_Listado.Text = "Listados";
+            this.Btn_Listado.UseVisualStyleBackColor = false;
+            this.Btn_Listado.Click += new System.EventHandler(this.MouseClickButton);
+            // 
+            // Btn_Estadistica
+            // 
+            this.Btn_Estadistica.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
+            this.Btn_Estadistica.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.Btn_Estadistica.FlatAppearance.BorderSize = 2;
+            this.Btn_Estadistica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Estadistica.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.Btn_Estadistica.ForeColor = System.Drawing.Color.White;
+            this.Btn_Estadistica.Image = global::TrabajoPrácticoPAV.Properties.Resources.Icon_66_512;
+            this.Btn_Estadistica.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_Estadistica.Location = new System.Drawing.Point(2, 145);
+            this.Btn_Estadistica.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_Estadistica.Name = "Btn_Estadistica";
+            this.Btn_Estadistica.Pp_Presionado = false;
+            this.Btn_Estadistica.Size = new System.Drawing.Size(146, 41);
+            this.Btn_Estadistica.TabIndex = 6;
+            this.Btn_Estadistica.Text = "    Estadísticas";
+            this.Btn_Estadistica.UseVisualStyleBackColor = false;
+            this.Btn_Estadistica.Click += new System.EventHandler(this.MouseClickButton);
             // 
             // PanelFormularios
             // 
@@ -163,6 +291,7 @@
             this.facturasToolStripMenuItem.Name = "facturasToolStripMenuItem";
             this.facturasToolStripMenuItem.Size = new System.Drawing.Size(110, 24);
             this.facturasToolStripMenuItem.Text = "Facturas";
+            this.facturasToolStripMenuItem.Click += new System.EventHandler(this.facturasToolStripMenuItem_Click);
             // 
             // menuStrip1
             // 
@@ -369,134 +498,6 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // Btn_Minimizar
-            // 
-            this.Btn_Minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Btn_Minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_Minimizar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Minimizar.Image")));
-            this.Btn_Minimizar.Location = new System.Drawing.Point(848, 4);
-            this.Btn_Minimizar.Margin = new System.Windows.Forms.Padding(2);
-            this.Btn_Minimizar.Name = "Btn_Minimizar";
-            this.Btn_Minimizar.Size = new System.Drawing.Size(22, 24);
-            this.Btn_Minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Btn_Minimizar.TabIndex = 3;
-            this.Btn_Minimizar.TabStop = false;
-            this.Btn_Minimizar.Click += new System.EventHandler(this.Btn_Minimizar_Click);
-            // 
-            // Btn_Cerrar
-            // 
-            this.Btn_Cerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Btn_Cerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_Cerrar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Cerrar.Image")));
-            this.Btn_Cerrar.Location = new System.Drawing.Point(874, 4);
-            this.Btn_Cerrar.Margin = new System.Windows.Forms.Padding(2);
-            this.Btn_Cerrar.Name = "Btn_Cerrar";
-            this.Btn_Cerrar.Size = new System.Drawing.Size(22, 24);
-            this.Btn_Cerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Btn_Cerrar.TabIndex = 0;
-            this.Btn_Cerrar.TabStop = false;
-            this.Btn_Cerrar.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // Btn_ABM
-            // 
-            this.Btn_ABM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
-            this.Btn_ABM.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.Btn_ABM.FlatAppearance.BorderSize = 2;
-            this.Btn_ABM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_ABM.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.Btn_ABM.ForeColor = System.Drawing.Color.White;
-            this.Btn_ABM.Image = global::TrabajoPrácticoPAV.Properties.Resources.klipartz_com__1_;
-            this.Btn_ABM.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_ABM.Location = new System.Drawing.Point(2, 2);
-            this.Btn_ABM.Margin = new System.Windows.Forms.Padding(2);
-            this.Btn_ABM.Name = "Btn_ABM";
-            this.Btn_ABM.Pp_Presionado = false;
-            this.Btn_ABM.Size = new System.Drawing.Size(146, 41);
-            this.Btn_ABM.TabIndex = 2;
-            this.Btn_ABM.Text = "Registros";
-            this.Btn_ABM.UseVisualStyleBackColor = false;
-            this.Btn_ABM.Click += new System.EventHandler(this.MouseClickButton);
-            // 
-            // Btn_Procesos
-            // 
-            this.Btn_Procesos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
-            this.Btn_Procesos.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.Btn_Procesos.FlatAppearance.BorderSize = 2;
-            this.Btn_Procesos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Procesos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.Btn_Procesos.ForeColor = System.Drawing.Color.White;
-            this.Btn_Procesos.Image = global::TrabajoPrácticoPAV.Properties.Resources.reboot_arrow_3726__1_;
-            this.Btn_Procesos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Procesos.Location = new System.Drawing.Point(2, 49);
-            this.Btn_Procesos.Margin = new System.Windows.Forms.Padding(2);
-            this.Btn_Procesos.Name = "Btn_Procesos";
-            this.Btn_Procesos.Pp_Presionado = false;
-            this.Btn_Procesos.Size = new System.Drawing.Size(146, 41);
-            this.Btn_Procesos.TabIndex = 8;
-            this.Btn_Procesos.Text = "Procesos";
-            this.Btn_Procesos.UseVisualStyleBackColor = false;
-            this.Btn_Procesos.Click += new System.EventHandler(this.MouseClickButton);
-            // 
-            // Btn_Configuracion
-            // 
-            this.Btn_Configuracion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
-            this.Btn_Configuracion.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.Btn_Configuracion.FlatAppearance.BorderSize = 2;
-            this.Btn_Configuracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Configuracion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.Btn_Configuracion.ForeColor = System.Drawing.Color.White;
-            this.Btn_Configuracion.Image = global::TrabajoPrácticoPAV.Properties.Resources.pngegg;
-            this.Btn_Configuracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Configuracion.Location = new System.Drawing.Point(2, 381);
-            this.Btn_Configuracion.Margin = new System.Windows.Forms.Padding(2);
-            this.Btn_Configuracion.Name = "Btn_Configuracion";
-            this.Btn_Configuracion.Pp_Presionado = false;
-            this.Btn_Configuracion.Size = new System.Drawing.Size(146, 30);
-            this.Btn_Configuracion.TabIndex = 3;
-            this.Btn_Configuracion.Text = "     Configuración";
-            this.Btn_Configuracion.UseVisualStyleBackColor = false;
-            this.Btn_Configuracion.Click += new System.EventHandler(this.MouseClickButton);
-            // 
-            // Btn_Listado
-            // 
-            this.Btn_Listado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
-            this.Btn_Listado.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.Btn_Listado.FlatAppearance.BorderSize = 2;
-            this.Btn_Listado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Listado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.Btn_Listado.ForeColor = System.Drawing.Color.White;
-            this.Btn_Listado.Image = global::TrabajoPrácticoPAV.Properties.Resources._8b1a89d3f271913146d4cd63f3920464_icono_de_trazo_de_lista_de_verificaci_oacute_n_m_eacute_dica_by_vexels1;
-            this.Btn_Listado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Listado.Location = new System.Drawing.Point(2, 97);
-            this.Btn_Listado.Margin = new System.Windows.Forms.Padding(2);
-            this.Btn_Listado.Name = "Btn_Listado";
-            this.Btn_Listado.Pp_Presionado = false;
-            this.Btn_Listado.Size = new System.Drawing.Size(146, 41);
-            this.Btn_Listado.TabIndex = 7;
-            this.Btn_Listado.Text = "Listados";
-            this.Btn_Listado.UseVisualStyleBackColor = false;
-            this.Btn_Listado.Click += new System.EventHandler(this.MouseClickButton);
-            // 
-            // Btn_Estadistica
-            // 
-            this.Btn_Estadistica.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
-            this.Btn_Estadistica.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.Btn_Estadistica.FlatAppearance.BorderSize = 2;
-            this.Btn_Estadistica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Estadistica.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.Btn_Estadistica.ForeColor = System.Drawing.Color.White;
-            this.Btn_Estadistica.Image = global::TrabajoPrácticoPAV.Properties.Resources.Icon_66_512;
-            this.Btn_Estadistica.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Estadistica.Location = new System.Drawing.Point(2, 145);
-            this.Btn_Estadistica.Margin = new System.Windows.Forms.Padding(2);
-            this.Btn_Estadistica.Name = "Btn_Estadistica";
-            this.Btn_Estadistica.Pp_Presionado = false;
-            this.Btn_Estadistica.Size = new System.Drawing.Size(146, 41);
-            this.Btn_Estadistica.TabIndex = 6;
-            this.Btn_Estadistica.Text = "    Estadísticas";
-            this.Btn_Estadistica.UseVisualStyleBackColor = false;
-            this.Btn_Estadistica.Click += new System.EventHandler(this.MouseClickButton);
-            // 
             // Frm_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -515,6 +516,8 @@
             this.Load += new System.EventHandler(this.Frm_Principal_Load);
             this.BarraSuperior.ResumeLayout(false);
             this.BarraSuperior.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_Minimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_Cerrar)).EndInit();
             this.PanelMenu.ResumeLayout(false);
             this.PanelFormularios.ResumeLayout(false);
             this.PanelFormularios.PerformLayout();
@@ -523,8 +526,6 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Btn_Minimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Btn_Cerrar)).EndInit();
             this.ResumeLayout(false);
 
         }
