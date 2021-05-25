@@ -124,6 +124,7 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
 
         private void btn_aceptar_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Datos cargados correctamente"); // Mensaje fantasma
             this.Close();
         }
 

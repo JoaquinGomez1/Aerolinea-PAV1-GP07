@@ -143,7 +143,7 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             this.panel3.Controls.Add(this.panel1);
             this.panel3.Location = new System.Drawing.Point(0, 31);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(741, 411);
+            this.panel3.Size = new System.Drawing.Size(752, 414);
             this.panel3.TabIndex = 116;
             // 
             // btn_aceptar
@@ -163,7 +163,7 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             // 
             this.lbl_titularReserva.AutoSize = true;
             this.lbl_titularReserva.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.lbl_titularReserva.Location = new System.Drawing.Point(487, 15);
+            this.lbl_titularReserva.Location = new System.Drawing.Point(483, 38);
             this.lbl_titularReserva.Name = "lbl_titularReserva";
             this.lbl_titularReserva.Size = new System.Drawing.Size(32, 17);
             this.lbl_titularReserva.TabIndex = 123;
@@ -173,7 +173,7 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label15.Location = new System.Drawing.Point(286, 15);
+            this.label15.Location = new System.Drawing.Point(282, 38);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(153, 17);
             this.label15.TabIndex = 120;
@@ -196,7 +196,7 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             // 
             this.btn_refrescar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_refrescar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.btn_refrescar.Location = new System.Drawing.Point(645, 114);
+            this.btn_refrescar.Location = new System.Drawing.Point(639, 155);
             this.btn_refrescar.Name = "btn_refrescar";
             this.btn_refrescar.Pp_Presionado = false;
             this.btn_refrescar.Size = new System.Drawing.Size(90, 28);
@@ -214,7 +214,7 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             this.apellido,
             this.tipoDoc,
             this.numeroDoc});
-            this.grid_pasajeros.Location = new System.Drawing.Point(289, 43);
+            this.grid_pasajeros.Location = new System.Drawing.Point(285, 66);
             this.grid_pasajeros.Name = "grid_pasajeros";
             this.grid_pasajeros.Pp_FormatoGrid = "nombre, Nombre, 120;apellido,Apellido, 120;tipoDoc, Tipo Documento, 65;numeroDoc," +
     " Número de documento, 100";
@@ -251,7 +251,7 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             // 
             this.btn_eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.btn_eliminar.Location = new System.Drawing.Point(645, 148);
+            this.btn_eliminar.Location = new System.Drawing.Point(639, 188);
             this.btn_eliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.Size = new System.Drawing.Size(90, 28);
