@@ -39,7 +39,7 @@ namespace TrabajoPrácticoPAV.Formularios.Facturaciones
 
         private void btn_buscarPasajero_Click(object sender, EventArgs e)
         {
-            tabla = facturacion.RecuperarPasajero(txt_numeroReserva.ToString());
+            tabla = facturacion.RecuperarPasajero(txt_numeroReserva.Text);
             if (tabla.Rows.Count != 0)
             {
                 txt_numeroDoc.Text = tabla.Rows[0][0].ToString();
@@ -54,5 +54,15 @@ namespace TrabajoPrácticoPAV.Formularios.Facturaciones
             }
 
         }
+        //public string CompletarNumero(string numero, string mascara)
+        //{
+        //    int comaMascar = mascara.IndexOf(',', 0);
+        //    int comaNumero = numero.IndexOf(',', 0);
+        //    if (comaNumero < comaMascar)
+        //    {
+        //        numero = numero.PadLeft(comaMascar + 3, ' ');
+        //    }
+        //    return numero;
+        //}
     }
 }
