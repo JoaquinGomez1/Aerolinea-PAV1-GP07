@@ -11,7 +11,6 @@ using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.Clase.Modelos;
 using TrabajoPrácticoPAV.NE_Usuarios;
 using System.Runtime.InteropServices;
-using TrabajoPrácticoPAV.Clase;
 
 namespace TrabajoPrácticoPAV.Formularios.Viajes
 {

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Backend;
@@ -40,5 +41,17 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             DataTable result = _DB.EjecutarSelect(sql);
             return result;
         }
+
+        public decimal BuscarCosto(string clase)
+        {
+            string sql = $"SELECT * FROM Tipo_Asiento WHERE nombre = '{clase}'";
+            DataTable result = _DB.EjecutarSelect(sql);
+
+            decimal value = decimal.Parse($"{result.Rows[0]["costo"]}", NumberStyles.Currency);
+            
+            return value;
+        }
+
+
     }
 }
