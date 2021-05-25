@@ -43,12 +43,14 @@ namespace TrabajoPrácticoPAV.Formularios.Facturaciones
         {
             tabla1 = facturacion.RecuperarPasajero(txt_numeroReserva.Text);
             tabla2 = facturacion.RecuperarVueloxReserva(txt_numeroReserva.Text);
-
-            grid_vuelo.Rows.Add(
+            if (tabla2.Rows.Count != 0)
+            {
+                grid_vuelo.Rows.Add(
                 tabla2.Rows[0][0].ToString()
                 , tabla2.Rows[0][1].ToString()
                 , tabla2.Rows[0][2].ToString()
                 );
+            }
             if (tabla1.Rows.Count != 0)
             {
                 txt_numeroDoc.Text = tabla1.Rows[0][0].ToString();
@@ -60,6 +62,11 @@ namespace TrabajoPrácticoPAV.Formularios.Facturaciones
             {
                 MessageBox.Show("No se ha encontrado una reserva con el número de reserva ingresado.");
             }
+        }
+
+        private void btn_GenerarFactura_Click(object sender, EventArgs e)
+        {
+
         }
         //public string CompletarNumero(string numero, string mascara)
         //{
