@@ -8,7 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Clase;
+using TrabajoPrácticoPAV.Clase.Modelos;
 using System.Runtime.InteropServices;
+using static TrabajoPrácticoPAV.Clase.Tratamientos_Especiales;
+using TrabajoPrácticoPAV.NE_Usuarios;
 
 namespace TrabajoPrácticoPAV.Formularios.Reservas
 {
@@ -18,6 +21,11 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWind, int wMsg, int wParam, int lParam);
+        private readonly Tratamientos_Especiales _TE = new Tratamientos_Especiales();
+        private readonly NE_Clientes _NE_Pasajeros = new NE_Clientes();
+        private readonly NE_Reserva _NE_Reserva = new NE_Reserva();
+        private string numeroDeReservaActual = "";
+
 
         public Frm_ConsultarPasajerosPorReserva()
         {
@@ -52,6 +60,22 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             this.Close();
         }
 
+        private void comboBox_Aerolinea1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string numReserva = comboBox_Aerolinea1.Text;
 
+            if (numReserva == null)
+            {
+                MessageBox.Show("Debe indicar un numero de reserva.");
+                return;
+            }
+
+            numeroDeReservaActual = numReserva;
+            Pasajero pasajero = _NE_Reserva.GetPasajeroPorDoc(numReserva);
+            lbl_DocTitular.Text = pasajero.numeroDoc;
+            lbl_nombreTitular.Text = pasajero.nombre;
+        }
+
+        
     }
 }

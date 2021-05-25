@@ -48,6 +48,41 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             return result;
         }
 
+        public DataTable GetDataTableReserva(string numeroReserva)
+        {
+            string sql = $"SELECT * FROM Reserva WHERE numeroDeReserva = {numeroReserva}";
+            DataTable result = _DB.EjecutarSelect(sql);
+            return result;
+        }
+
+        public Reserva GetPasajeroPorReserva(string numeroReserva)
+        {
+            DataTable result = GetDataTableReserva(numeroReserva);
+            if (result.Rows.Count < 1)
+            {
+                MessageBox.Show("No se encontró ninguna reserva con ese numero");
+                return new Reserva() { };
+            }
+
+            return new Reserva()
+            {
+                numeroDocTitular = result.Rows[0]["numeroDocTitular"].ToString(),
+                tipoDocTitular = result.Rows[0]["tipoDocTitular"].ToString(),
+            };
+        }
+
+        public Pasajero GetPasajeroPorDoc(string numReserva)
+        {
+            Reserva reserva = GetPasajeroPorReserva(numReserva);
+            string sql = $"SELECT * FROM Pasajero JOIN Reserva ON { reserva.numeroDocTitular} = Pasajero.numeroDoc AND { reserva.tipoDocTitular} = Pasajero.tipoDoc";
+            DataTable result = _DB.EjecutarSelect(sql);
+            return new Pasajero()
+            {
+                numeroDoc = result.Rows[0]["numeroDoc"].ToString(),
+                nombre = result.Rows[0]["nombre"].ToString(),
+            };
+        }
+
         public decimal BuscarCosto(string clase)
         {
             string sql = $"SELECT * FROM Tipo_Asiento WHERE nombre = '{clase}'";

@@ -36,16 +36,16 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             this.Titulo = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_aceptar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
-            this.dataGridView_Aerolinea1 = new TrabajoPrácticoPAV.Clase.DataGridView_Aerolinea();
+            this.grid_pasajeros = new TrabajoPrácticoPAV.Clase.DataGridView_Aerolinea();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipoDoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numeroDoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comboBox_Aerolinea1 = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
             this.label1 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lbl_CantPasajeros = new System.Windows.Forms.Label();
+            this.lbl_DocTitular = new System.Windows.Forms.Label();
+            this.lbl_nombreTitular = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -53,7 +53,7 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Cerrar)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Aerolinea1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grid_pasajeros)).BeginInit();
             this.SuspendLayout();
             // 
             // BarraSuperior
@@ -114,18 +114,18 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.btn_aceptar);
-            this.panel1.Controls.Add(this.dataGridView_Aerolinea1);
+            this.panel1.Controls.Add(this.grid_pasajeros);
             this.panel1.Controls.Add(this.comboBox_Aerolinea1);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.lbl_CantPasajeros);
+            this.panel1.Controls.Add(this.lbl_DocTitular);
+            this.panel1.Controls.Add(this.lbl_nombreTitular);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(0, 31);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(416, 374);
+            this.panel1.Size = new System.Drawing.Size(427, 374);
             this.panel1.TabIndex = 109;
             // 
             // btn_aceptar
@@ -141,23 +141,23 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             this.btn_aceptar.UseVisualStyleBackColor = true;
             this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
             // 
-            // dataGridView_Aerolinea1
+            // grid_pasajeros
             // 
-            this.dataGridView_Aerolinea1.AllowUserToAddRows = false;
-            this.dataGridView_Aerolinea1.AllowUserToDeleteRows = false;
-            this.dataGridView_Aerolinea1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_Aerolinea1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.grid_pasajeros.AllowUserToAddRows = false;
+            this.grid_pasajeros.AllowUserToDeleteRows = false;
+            this.grid_pasajeros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grid_pasajeros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nombre,
             this.apellido,
             this.tipoDoc,
             this.numeroDoc});
-            this.dataGridView_Aerolinea1.Location = new System.Drawing.Point(14, 180);
-            this.dataGridView_Aerolinea1.Name = "dataGridView_Aerolinea1";
-            this.dataGridView_Aerolinea1.Pp_FormatoGrid = null;
-            this.dataGridView_Aerolinea1.Pp_NombreTabla = null;
-            this.dataGridView_Aerolinea1.ReadOnly = true;
-            this.dataGridView_Aerolinea1.Size = new System.Drawing.Size(387, 150);
-            this.dataGridView_Aerolinea1.TabIndex = 116;
+            this.grid_pasajeros.Location = new System.Drawing.Point(14, 180);
+            this.grid_pasajeros.Name = "grid_pasajeros";
+            this.grid_pasajeros.Pp_FormatoGrid = null;
+            this.grid_pasajeros.Pp_NombreTabla = null;
+            this.grid_pasajeros.ReadOnly = true;
+            this.grid_pasajeros.Size = new System.Drawing.Size(387, 150);
+            this.grid_pasajeros.TabIndex = 116;
             // 
             // nombre
             // 
@@ -197,6 +197,7 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             this.comboBox_Aerolinea1.Pp_PkTabla = "numeroDeReserva";
             this.comboBox_Aerolinea1.Size = new System.Drawing.Size(63, 21);
             this.comboBox_Aerolinea1.TabIndex = 115;
+            this.comboBox_Aerolinea1.SelectedIndexChanged += new System.EventHandler(this.comboBox_Aerolinea1_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -209,38 +210,38 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             this.label1.Text = "Numero Reserva";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label7
+            // lbl_CantPasajeros
             // 
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.label7.Location = new System.Drawing.Point(174, 129);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 15, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(125, 34);
-            this.label7.TabIndex = 113;
-            this.label7.Text = "???";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbl_CantPasajeros.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.lbl_CantPasajeros.Location = new System.Drawing.Point(174, 129);
+            this.lbl_CantPasajeros.Margin = new System.Windows.Forms.Padding(2, 15, 2, 0);
+            this.lbl_CantPasajeros.Name = "lbl_CantPasajeros";
+            this.lbl_CantPasajeros.Size = new System.Drawing.Size(125, 34);
+            this.lbl_CantPasajeros.TabIndex = 113;
+            this.lbl_CantPasajeros.Text = "???";
+            this.lbl_CantPasajeros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label6
+            // lbl_DocTitular
             // 
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.label6.Location = new System.Drawing.Point(130, 91);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 15, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(125, 34);
-            this.label6.TabIndex = 112;
-            this.label6.Text = "???";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_DocTitular.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.lbl_DocTitular.Location = new System.Drawing.Point(130, 91);
+            this.lbl_DocTitular.Margin = new System.Windows.Forms.Padding(2, 15, 2, 0);
+            this.lbl_DocTitular.Name = "lbl_DocTitular";
+            this.lbl_DocTitular.Size = new System.Drawing.Size(125, 34);
+            this.lbl_DocTitular.TabIndex = 112;
+            this.lbl_DocTitular.Text = "???";
+            this.lbl_DocTitular.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label5
+            // lbl_nombreTitular
             // 
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.label5.Location = new System.Drawing.Point(132, 48);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 15, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(125, 34);
-            this.label5.TabIndex = 111;
-            this.label5.Text = "???";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_nombreTitular.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.lbl_nombreTitular.Location = new System.Drawing.Point(132, 48);
+            this.lbl_nombreTitular.Margin = new System.Windows.Forms.Padding(2, 15, 2, 0);
+            this.lbl_nombreTitular.Name = "lbl_nombreTitular";
+            this.lbl_nombreTitular.Size = new System.Drawing.Size(125, 34);
+            this.lbl_nombreTitular.TabIndex = 111;
+            this.lbl_nombreTitular.Text = "???";
+            this.lbl_nombreTitular.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
@@ -292,7 +293,7 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Minimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Cerrar)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Aerolinea1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grid_pasajeros)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -304,13 +305,13 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
         private System.Windows.Forms.PictureBox Btn_Cerrar;
         private System.Windows.Forms.Label Titulo;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbl_CantPasajeros;
+        private System.Windows.Forms.Label lbl_DocTitular;
+        private System.Windows.Forms.Label lbl_nombreTitular;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private Clase.DataGridView_Aerolinea dataGridView_Aerolinea1;
+        private Clase.DataGridView_Aerolinea grid_pasajeros;
         private Clase.ComboBox_Aerolinea comboBox_Aerolinea1;
         private System.Windows.Forms.Label label1;
         private Clase.Button_Aerolinea btn_aceptar;

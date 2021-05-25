@@ -100,7 +100,7 @@ namespace TrabajoPrácticoPAV.Formularios
             else
                 pasajeroTitular = ObserverListaPasajeros[0];
 
-            if (cantPasajeros != 0) actualizarLabelPrecio(precio * cantPasajeros);
+            if (cantPasajeros != 0) actualizarLabelPrecio(precio);
             actualizarCantidadPasajeros($"{ObserverListaPasajeros.Count}");
         }
 
@@ -115,7 +115,9 @@ namespace TrabajoPrácticoPAV.Formularios
 
         private void actualizarLabelPrecio(decimal precio)
         {
-            string precioStr = $"{precio}";
+            int cantPasajeros = ObserverListaPasajeros.Count;
+            decimal precioXPasajero = precio * cantPasajeros;
+            string precioStr = $"{precioXPasajero}";
             string precioFinal = precioStr.Substring(0, precioStr.Length - 2);
             lbl_precio.Text = $"${precioFinal}";
         }
