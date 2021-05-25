@@ -54,10 +54,10 @@
             this.maskedTextBox_Aerolinea2 = new TrabajoPrácticoPAV.Clase.MaskedTextBox_Aerolinea();
             this.cmb_tipoDoc = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
             this.Mtxt_numeroDoc = new TrabajoPrácticoPAV.Clase.MaskedTextBox_Aerolinea();
-            this.button_Aerolinea1 = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
+            this.btn_buscar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.btn_modificar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button_Aerolinea2 = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
+            this.btn_agregar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.grid_pasajeros = new TrabajoPrácticoPAV.Clase.DataGridView_Aerolinea();
             this.label14 = new System.Windows.Forms.Label();
             this.btn_refrescar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
@@ -370,18 +370,18 @@
             this.Mtxt_numeroDoc.TabIndex = 4;
             this.Mtxt_numeroDoc.ValidatingType = typeof(int);
             // 
-            // button_Aerolinea1
+            // btn_buscar
             // 
-            this.button_Aerolinea1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Aerolinea1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.button_Aerolinea1.Location = new System.Drawing.Point(9, 91);
-            this.button_Aerolinea1.Name = "button_Aerolinea1";
-            this.button_Aerolinea1.Pp_Presionado = false;
-            this.button_Aerolinea1.Size = new System.Drawing.Size(90, 28);
-            this.button_Aerolinea1.TabIndex = 3;
-            this.button_Aerolinea1.Text = "Buscar";
-            this.button_Aerolinea1.UseVisualStyleBackColor = true;
-            this.button_Aerolinea1.Click += new System.EventHandler(this.button_Aerolinea1_Click);
+            this.btn_buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.btn_buscar.Location = new System.Drawing.Point(9, 91);
+            this.btn_buscar.Name = "btn_buscar";
+            this.btn_buscar.Pp_Presionado = false;
+            this.btn_buscar.Size = new System.Drawing.Size(90, 28);
+            this.btn_buscar.TabIndex = 3;
+            this.btn_buscar.Text = "Buscar";
+            this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
             // btn_modificar
             // 
@@ -408,18 +408,18 @@
             this.button1.Text = "Eliminar Reserva";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // button_Aerolinea2
+            // btn_agregar
             // 
-            this.button_Aerolinea2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Aerolinea2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.button_Aerolinea2.Location = new System.Drawing.Point(121, 91);
-            this.button_Aerolinea2.Name = "button_Aerolinea2";
-            this.button_Aerolinea2.Pp_Presionado = false;
-            this.button_Aerolinea2.Size = new System.Drawing.Size(90, 28);
-            this.button_Aerolinea2.TabIndex = 93;
-            this.button_Aerolinea2.Text = "Agregar";
-            this.button_Aerolinea2.UseVisualStyleBackColor = true;
-            this.button_Aerolinea2.Click += new System.EventHandler(this.button_Aerolinea2_Click);
+            this.btn_agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.btn_agregar.Location = new System.Drawing.Point(121, 91);
+            this.btn_agregar.Name = "btn_agregar";
+            this.btn_agregar.Pp_Presionado = false;
+            this.btn_agregar.Size = new System.Drawing.Size(90, 28);
+            this.btn_agregar.TabIndex = 93;
+            this.btn_agregar.Text = "Agregar";
+            this.btn_agregar.UseVisualStyleBackColor = true;
+            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
             // grid_pasajeros
             // 
@@ -475,10 +475,10 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.cmb_tipoDoc);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button_Aerolinea1);
+            this.panel1.Controls.Add(this.btn_buscar);
             this.panel1.Controls.Add(this.Mtxt_numeroDoc);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.button_Aerolinea2);
+            this.panel1.Controls.Add(this.btn_agregar);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(15, 30);
             this.panel1.Name = "panel1";
@@ -592,7 +592,7 @@
 
         private System.Windows.Forms.Button btn_registrar;
         private System.Windows.Forms.Label label1;
-        private Clase.Button_Aerolinea button_Aerolinea1;
+        private Clase.Button_Aerolinea btn_buscar;
         private Clase.MaskedTextBox_Aerolinea Mtxt_numeroDoc;
         private Clase.ComboBox_Aerolinea cmb_tipoDoc;
         private System.Windows.Forms.Label label2;
@@ -619,7 +619,7 @@
         private System.Windows.Forms.Label lbl_currentDate;
         private System.Windows.Forms.Button btn_modificar;
         private System.Windows.Forms.Button button1;
-        private Clase.Button_Aerolinea button_Aerolinea2;
+        private Clase.Button_Aerolinea btn_agregar;
         private Clase.DataGridView_Aerolinea grid_pasajeros;
         private System.Windows.Forms.Label label14;
         private Clase.Button_Aerolinea btn_refrescar;

@@ -156,6 +156,12 @@
     <Compile Include="Formularios\Ciudad\Frm_Ciudad.Designer.cs">
       <DependentUpon>Frm_Ciudad.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Facturaciones\Frm_Facturacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Facturaciones\Frm_Facturacion.Designer.cs">
+      <DependentUpon>Frm_Facturacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Reservas\Frm_ModificarReserva.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -462,6 +468,7 @@
     <Compile Include="NE_Usuarios\NE_CargoTripulacion.cs" />
     <Compile Include="NE_Usuarios\NE_Ciudad.cs" />
     <Compile Include="NE_Usuarios\NE_Clientes.cs" />
+    <Compile Include="NE_Usuarios\NE_Facturacion.cs" />
     <Compile Include="NE_Usuarios\NE_Reserva.cs" />
     <Compile Include="NE_Usuarios\NE_TipoAsiento.cs" />
     <Compile Include="NE_Usuarios\NE_GrupoFamiliar.cs" />
@@ -514,6 +521,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Ciudad\Frm_Ciudad.resx">
       <DependentUpon>Frm_Ciudad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Facturaciones\Frm_Facturacion.resx">
+      <DependentUpon>Frm_Facturacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Reservas\Frm_ModificarReserva.resx">
       <DependentUpon>Frm_ModificarReserva.cs</DependentUpon>

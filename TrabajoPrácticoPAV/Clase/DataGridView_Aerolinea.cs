@@ -12,8 +12,9 @@ namespace TrabajoPrácticoPAV.Clase
     {
         public string Pp_FormatoGrid { get; set; }
         public string Pp_NombreTabla { get; set; }
-
-        //El formato se pasa de la siguiente forma ("NombreDelCampoEnLaBD, NombreAMostrarEnLaGrid, Ancho; ...")
+   
+        ///El formato se pasa de la siguiente forma ("NombreDelCampoEnLaBD, NombreAMostrarEnLaGrid, Ancho; ...")
+        
         public void Formatear()
         {
             string[] datos_columna = Pp_FormatoGrid.Split(';');
