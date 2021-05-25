@@ -71,16 +71,12 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             };
         }
 
-        public Pasajero GetPasajeroPorDoc(string numReserva)
+        public DataTable GetPasajeroPorDoc(string numReserva)
         {
-            Reserva reserva = GetPasajeroPorReserva(numReserva);
-            string sql = $"SELECT * FROM Pasajero JOIN Reserva ON { reserva.numeroDocTitular} = Pasajero.numeroDoc AND { reserva.tipoDocTitular} = Pasajero.tipoDoc";
+            //Reserva reserva = GetPasajeroPorReserva(numReserva);
+            string sql = $"SELECT * FROM Pasajero JOIN Reserva ON Reserva.numeroDocTitular = Pasajero.numeroDoc AND Reserva.tipoDocTitular = Pasajero.tipoDoc WHERE Reserva.numeroDeReserva = {numReserva}";
             DataTable result = _DB.EjecutarSelect(sql);
-            return new Pasajero()
-            {
-                numeroDoc = result.Rows[0]["numeroDoc"].ToString(),
-                nombre = result.Rows[0]["nombre"].ToString(),
-            };
+            return result;
         }
 
         public decimal BuscarCosto(string clase)

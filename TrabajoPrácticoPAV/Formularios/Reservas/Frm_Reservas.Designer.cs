@@ -398,7 +398,7 @@
             // button_Aerolinea1
             // 
             this.button_Aerolinea1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Aerolinea1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Aerolinea1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.button_Aerolinea1.Location = new System.Drawing.Point(508, 240);
             this.button_Aerolinea1.Name = "button_Aerolinea1";
             this.button_Aerolinea1.Pp_Presionado = false;

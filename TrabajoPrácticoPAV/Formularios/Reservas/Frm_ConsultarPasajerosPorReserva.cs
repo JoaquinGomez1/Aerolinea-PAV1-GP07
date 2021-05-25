@@ -72,6 +72,8 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
 
             DataTable pasajerosDelViaje = _NE_Reserva.GetTodosLosPasajeros(viajeSeleccionado);
 
+            lbl_CantPasajeros.Text = pasajerosDelViaje.Rows.Count.ToString();
+
             if (pasajerosDelViaje.Rows.Count >= 1)
                 CargarGrilla(pasajerosDelViaje);
             else
@@ -86,13 +88,20 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             }
 
             numeroDeReservaActual = numReserva;
-            Pasajero pasajero = _NE_Reserva.GetPasajeroPorDoc(numReserva);
+            DataTable result = _NE_Reserva.GetPasajeroPorDoc(numReserva);
+            Pasajero pasajero = new Pasajero()
+            {
+                numeroDoc = result.Rows[0]["numeroDoc"].ToString(),
+                nombre = result.Rows[0]["nombre"].ToString(),
+            };
             lbl_DocTitular.Text = pasajero.numeroDoc;
             lbl_nombreTitular.Text = pasajero.nombre;
+
         }
 
         private void CargarGrilla(DataTable table)
         {
+            lbl_CantPasajeros.Text = table.Rows.Count.ToString();
             if (table.Rows.Count <= 0) MessageBox.Show("No hay datos en la tabla");
 
             for (int i = 0; i < table.Rows.Count; i++)
