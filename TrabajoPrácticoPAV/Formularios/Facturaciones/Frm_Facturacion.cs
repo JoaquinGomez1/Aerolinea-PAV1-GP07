@@ -1,18 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Clase;
-using TrabajoPrácticoPAV.Clase.Modelos;
-using TrabajoPrácticoPAV.Formularios.Reservas;
 using TrabajoPrácticoPAV.NE_Usuarios;
-using static TrabajoPrácticoPAV.Clase.Tratamientos_Especiales;
-
 
 namespace TrabajoPrácticoPAV.Formularios.Facturaciones
 {
@@ -36,19 +26,21 @@ namespace TrabajoPrácticoPAV.Formularios.Facturaciones
         private void Frm_Facturacion_Load(object sender, EventArgs e)
         {
             grid_vuelo.Formatear();
-            
+
         }
 
         private void btn_buscarReserva_Click(object sender, EventArgs e)
         {
             tabla1 = facturacion.RecuperarPasajero(txt_numeroReserva.Text);
             tabla2 = facturacion.RecuperarVueloxReserva(txt_numeroReserva.Text);
-
-            grid_vuelo.Rows.Add(
+            if (tabla2.Rows.Count != 0)
+            {
+                grid_vuelo.Rows.Add(
                 tabla2.Rows[0][0].ToString()
                 , tabla2.Rows[0][1].ToString()
                 , tabla2.Rows[0][2].ToString()
                 );
+            }
             if (tabla1.Rows.Count != 0)
             {
                 txt_numeroDoc.Text = tabla1.Rows[0][0].ToString();
@@ -60,6 +52,11 @@ namespace TrabajoPrácticoPAV.Formularios.Facturaciones
             {
                 MessageBox.Show("No se ha encontrado una reserva con el número de reserva ingresado.");
             }
+        }
+
+        private void btn_GenerarFactura_Click(object sender, EventArgs e)
+        {
+
         }
         //public string CompletarNumero(string numero, string mascara)
         //{
