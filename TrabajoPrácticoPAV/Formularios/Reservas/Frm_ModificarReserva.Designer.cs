@@ -236,7 +236,7 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             this.BarraSuperior.Location = new System.Drawing.Point(0, 0);
             this.BarraSuperior.Margin = new System.Windows.Forms.Padding(2);
             this.BarraSuperior.Name = "BarraSuperior";
-            this.BarraSuperior.Size = new System.Drawing.Size(718, 32);
+            this.BarraSuperior.Size = new System.Drawing.Size(320, 32);
             this.BarraSuperior.TabIndex = 106;
             this.BarraSuperior.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BarraSuperior_MouseMove);
             // 
@@ -245,7 +245,7 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             this.Btn_Minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Btn_Minimizar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Minimizar.Image")));
-            this.Btn_Minimizar.Location = new System.Drawing.Point(659, 4);
+            this.Btn_Minimizar.Location = new System.Drawing.Point(265, 6);
             this.Btn_Minimizar.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Minimizar.Name = "Btn_Minimizar";
             this.Btn_Minimizar.Size = new System.Drawing.Size(22, 24);
@@ -259,7 +259,7 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             this.Btn_Cerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Cerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Btn_Cerrar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Cerrar.Image")));
-            this.Btn_Cerrar.Location = new System.Drawing.Point(685, 4);
+            this.Btn_Cerrar.Location = new System.Drawing.Point(291, 6);
             this.Btn_Cerrar.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Cerrar.Name = "Btn_Cerrar";
             this.Btn_Cerrar.Size = new System.Drawing.Size(22, 24);
@@ -345,7 +345,7 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             this.panel3.Controls.Add(this.panel2);
             this.panel3.Location = new System.Drawing.Point(0, 31);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(718, 319);
+            this.panel3.Size = new System.Drawing.Size(320, 319);
             this.panel3.TabIndex = 111;
             // 
             // flowLayoutPanel1
@@ -359,7 +359,7 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(718, 350);
+            this.ClientSize = new System.Drawing.Size(320, 350);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.BarraSuperior);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

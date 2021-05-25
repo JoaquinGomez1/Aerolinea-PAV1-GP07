@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Backend;
@@ -11,6 +12,12 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
     class NE_Reserva
     {
         private readonly Conexion_DB _DB = new Conexion_DB();
+
+        public DataTable GetTodos()
+        {
+            string sql = "SELECT * FROM RESERVA";
+            return _DB.EjecutarSelect(sql);
+        }
 
         public Pasajero GetPasajero(string numeroDoc, string tipoDoc)
         {
@@ -40,5 +47,23 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             DataTable result = _DB.EjecutarSelect(sql);
             return result;
         }
+
+        public decimal BuscarCosto(string clase)
+        {
+            string sql = $"SELECT * FROM Tipo_Asiento WHERE nombre = '{clase}'";
+            DataTable result = _DB.EjecutarSelect(sql);
+
+            decimal value = decimal.Parse($"{result.Rows[0]["costo"]}", NumberStyles.Currency);
+
+            return value;
+        }
+
+        public DataTable GetTodosLosPasajeros(string numeroDeViaje)
+        {
+            string sql = $"SELECT * FROM RESERVA WHERE numeroDeViaje = {numeroDeViaje}";
+            return _DB.EjecutarSelect(sql);
+        }
+
+
     }
 }

@@ -64,6 +64,7 @@
     <Compile Include="Clase\Modelos\CargoTripulacion.cs" />
     <Compile Include="Clase\Modelos\Ciudad.cs" />
     <Compile Include="Clase\Modelos\Pasajero.cs" />
+    <Compile Include="Clase\Modelos\Reserva.cs" />
     <Compile Include="Clase\Modelos\Tramo.cs" />
     <Compile Include="Clase\Modelos\Tripulante.cs" />
     <Compile Include="Clase\Modelos\Viaje.cs" />
@@ -160,6 +161,18 @@
     </Compile>
     <Compile Include="Formularios\Facturaciones\Frm_Facturacion.Designer.cs">
       <DependentUpon>Frm_Facturacion.cs</DependentUpon>
+      </Compile>
+    <Compile Include="Formularios\Reservas\Frm_CargarPasajerosPorReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reservas\Frm_CargarPasajerosPorReserva.Designer.cs">
+      <DependentUpon>Frm_CargarPasajerosPorReserva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reservas\Frm_ConsultarPasajerosPorReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reservas\Frm_ConsultarPasajerosPorReserva.Designer.cs">
+      <DependentUpon>Frm_ConsultarPasajerosPorReserva.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Reservas\Frm_ModificarReserva.cs">
       <SubType>Form</SubType>
@@ -523,6 +536,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Facturaciones\Frm_Facturacion.resx">
       <DependentUpon>Frm_Facturacion.cs</DependentUpon>
+      </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reservas\Frm_CargarPasajerosPorReserva.resx">
+      <DependentUpon>Frm_CargarPasajerosPorReserva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reservas\Frm_ConsultarPasajerosPorReserva.resx">
+      <DependentUpon>Frm_ConsultarPasajerosPorReserva.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Reservas\Frm_ModificarReserva.resx">
       <DependentUpon>Frm_ModificarReserva.cs</DependentUpon>

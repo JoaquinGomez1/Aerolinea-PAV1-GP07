@@ -97,10 +97,9 @@ namespace TrabajoPrácticoPAV.Formularios
                     HorarioPresencia = Mtxt_presencia.Text,
                     DuracionEstimada = duracionEstimadaViaje
                 };
-                _NE_Viajes.InsertViaje(myViaje);
+                _NE_Viajes.InsertViaje(myViaje, TramosDelViaje.Count);
                 string numeroViajeInsertado = _NE_Viajes.GetIdentityDeViaje();
                 _NE_Viajes.CargarTramosPorViaje(TramosDelViaje, numeroViajeInsertado);
-
 
                 // Permite refrescar los datos del data grid con lo que fue ingresado recientemente
                 CargarTodos();

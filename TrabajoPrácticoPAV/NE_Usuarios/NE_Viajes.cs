@@ -20,11 +20,11 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             return resultadoSelect;
         }
 
-        public void InsertViaje(Viaje Viaje)
+        public void InsertViaje(Viaje Viaje, int cantTramos)
         {
             // Devuelve el numero de viaje insertado
-            string sql = @"INSERT INTO Viaje(horarioPresencia, horarioSalida, horarioLlegada, duracionEstimada) 
-                        VALUES(" + $"'{Viaje.HorarioPresencia}', '{Viaje.HorarioSalida}', '{Viaje.HorarioLlegada}', '{Viaje.DuracionEstimada}'" + ") "
+            string sql = @"INSERT INTO Viaje(horarioPresencia, horarioSalida, horarioLlegada, duracionEstimada, cantidadTramos) 
+                        VALUES(" + $"'{Viaje.HorarioPresencia}', '{Viaje.HorarioSalida}', '{Viaje.HorarioLlegada}', '{Viaje.DuracionEstimada}', {cantTramos}" + ") "
                        ;
 
             _DB.Insertar(sql, true);
@@ -109,6 +109,36 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             // Ej: Salida 18:00hs Llegada 19:00
             string horarioResultado = Tiempo.RestarDateTimes(horarioLlegada, horarioSalida);
             return horarioResultado;
+        }
+
+
+        public Viaje ViajeQueCoinciden(string codSalida, string codDestino)
+        {
+            // IMPORTANTE.
+            // La consulta que hace esta función está mal. Solo devuelve el numero de viaje
+            // Si estan conectados por solo UN tramo.
+            // hay que modificar la consulta para que devuelva viajes conectados por mas de un tramo
+            // Para simplificar solo deberia devolver 1 Viaje (el primero que encuentre)
+            string sql = $"SELECT TOP 1 * FROM Viaje_X_Tramo JOIN Viaje ON Viaje_X_Tramo.numeroDeViaje = Viaje.numeroDeViaje WHERE (Viaje_X_Tramo.orden = 1 AND Viaje_X_Tramo.codigoAeropuertoSalida = '{codSalida}') AND (Viaje_X_Tramo.orden = Viaje.cantidadTramos AND Viaje_X_Tramo.codigoAeropuertoDestino = '{codDestino}') ";
+            DataTable table = _DB.EjecutarSelect(sql);
+
+            if (table.Rows.Count == 0)
+            {
+                MessageBox.Show("No se encontró ningun viaje con esos parámetros");
+                return null;
+            }
+
+            Viaje viaje = new Viaje()
+            {
+                NumeroDeViaje = Int32.Parse(table.Rows[0]["numeroDeViaje"].ToString()),
+                HorarioPresencia = table.Rows[0]["horarioPresencia"].ToString(),
+                HorarioLlegada = table.Rows[0]["horarioLlegada"].ToString(),
+                HorarioSalida = table.Rows[0]["horarioSalida"].ToString(),
+                DuracionEstimada = Int32.Parse(table.Rows[0]["duracionEstimada"].ToString()),
+                CantidadTramos = Int32.Parse(table.Rows[0]["cantidadTramos"].ToString())
+            };
+
+            return viaje;
         }
     }
 }
