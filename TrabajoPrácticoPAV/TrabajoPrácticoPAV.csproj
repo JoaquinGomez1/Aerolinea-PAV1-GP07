@@ -64,6 +64,7 @@
     <Compile Include="Clase\Modelos\CargoTripulacion.cs" />
     <Compile Include="Clase\Modelos\Ciudad.cs" />
     <Compile Include="Clase\Modelos\Pasajero.cs" />
+    <Compile Include="Clase\Modelos\Reserva.cs" />
     <Compile Include="Clase\Modelos\Tramo.cs" />
     <Compile Include="Clase\Modelos\Tripulante.cs" />
     <Compile Include="Clase\Modelos\Viaje.cs" />

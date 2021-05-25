@@ -387,10 +387,10 @@
             // 
             this.btn_modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_modificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.btn_modificar.Location = new System.Drawing.Point(635, 245);
+            this.btn_modificar.Location = new System.Drawing.Point(635, 263);
             this.btn_modificar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_modificar.Name = "btn_modificar";
-            this.btn_modificar.Size = new System.Drawing.Size(90, 28);
+            this.btn_modificar.Size = new System.Drawing.Size(87, 28);
             this.btn_modificar.TabIndex = 91;
             this.btn_modificar.Text = "Modificar Reserva";
             this.btn_modificar.UseVisualStyleBackColor = true;
@@ -400,10 +400,10 @@
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.button1.Location = new System.Drawing.Point(635, 277);
+            this.button1.Location = new System.Drawing.Point(635, 300);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 28);
+            this.button1.Size = new System.Drawing.Size(87, 28);
             this.button1.TabIndex = 92;
             this.button1.Text = "Eliminar Reserva";
             this.button1.UseVisualStyleBackColor = true;
@@ -449,10 +449,10 @@
             // 
             this.btn_refrescar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_refrescar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.btn_refrescar.Location = new System.Drawing.Point(635, 212);
+            this.btn_refrescar.Location = new System.Drawing.Point(635, 226);
             this.btn_refrescar.Name = "btn_refrescar";
             this.btn_refrescar.Pp_Presionado = false;
-            this.btn_refrescar.Size = new System.Drawing.Size(90, 28);
+            this.btn_refrescar.Size = new System.Drawing.Size(87, 28);
             this.btn_refrescar.TabIndex = 96;
             this.btn_refrescar.Text = "Refrescar";
             this.btn_refrescar.UseVisualStyleBackColor = true;
@@ -461,10 +461,10 @@
             // 
             this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.btn_cerrar.Location = new System.Drawing.Point(635, 310);
+            this.btn_cerrar.Location = new System.Drawing.Point(635, 336);
             this.btn_cerrar.Name = "btn_cerrar";
             this.btn_cerrar.Pp_Presionado = false;
-            this.btn_cerrar.Size = new System.Drawing.Size(90, 28);
+            this.btn_cerrar.Size = new System.Drawing.Size(87, 28);
             this.btn_cerrar.TabIndex = 97;
             this.btn_cerrar.Text = "Cerrar";
             this.btn_cerrar.UseVisualStyleBackColor = true;
@@ -507,7 +507,6 @@
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.button_Aerolinea3);
             this.panel3.Controls.Add(this.textBox_Aerolinea2);
             this.panel3.Controls.Add(this.btn_registrar);
             this.panel3.Controls.Add(this.label8);
@@ -528,10 +527,10 @@
             // 
             this.button_Aerolinea3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Aerolinea3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.button_Aerolinea3.Location = new System.Drawing.Point(318, 87);
+            this.button_Aerolinea3.Location = new System.Drawing.Point(635, 189);
             this.button_Aerolinea3.Name = "button_Aerolinea3";
             this.button_Aerolinea3.Pp_Presionado = false;
-            this.button_Aerolinea3.Size = new System.Drawing.Size(101, 28);
+            this.button_Aerolinea3.Size = new System.Drawing.Size(87, 28);
             this.button_Aerolinea3.TabIndex = 101;
             this.button_Aerolinea3.Text = "Registrar";
             this.button_Aerolinea3.UseVisualStyleBackColor = true;
@@ -561,6 +560,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(734, 374);
+            this.Controls.Add(this.button_Aerolinea3);
             this.Controls.Add(this.lbl_titularReserva);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.panel3);
