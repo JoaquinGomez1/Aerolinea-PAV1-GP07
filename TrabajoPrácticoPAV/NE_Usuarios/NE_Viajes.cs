@@ -119,7 +119,7 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             // Si estan conectados por solo UN tramo.
             // hay que modificar la consulta para que devuelva viajes conectados por mas de un tramo
             // Para simplificar solo deberia devolver 1 Viaje (el primero que encuentre)
-            string sql = $"SELECT TOP 1 * FROM Viaje_X_Tramo JOIN Viaje ON Viaje_X_Tramo.numeroDeViaje = Viaje.numeroDeViaje WHERE (Viaje_X_Tramo.orden = 1 AND Viaje_X_Tramo.codigoAeropuertoSalida = '{codSalida}') AND (Viaje_X_Tramo.orden = Viaje.cantidadTramos AND Viaje_X_Tramo.codigoAeropuertoDestino = '{codDestino}') ";
+            string sql = $"SELECT * FROM (SELECT Viaje_X_Tramo.numeroDeViaje as nViaj, orden, codigoAeropuertoSalida, codigoAeropuertoDestino FROM Viaje_X_Tramo JOIN Viaje ON Viaje_X_Tramo.numeroDeViaje = Viaje.numeroDeViaje WHERE (Viaje_X_Tramo.orden = 1 AND Viaje_X_Tramo.codigoAeropuertoSalida = '{codSalida}')) t1 JOIN (SELECT Viaje_X_Tramo.numeroDeViaje as nViaj, orden, codigoAeropuertoSalida, codigoAeropuertoDestino FROM Viaje_X_Tramo JOIN Viaje ON Viaje_X_Tramo.numeroDeViaje = Viaje.numeroDeViaje WHERE (Viaje_X_Tramo.orden = Viaje.cantidadTramos AND Viaje_X_Tramo.codigoAeropuertoDestino = '{codDestino}')) t2 ON t1.nViaj = t2.nViaj";
             DataTable table = _DB.EjecutarSelect(sql);
 
             if (table.Rows.Count == 0)
@@ -130,12 +130,7 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
 
             Viaje viaje = new Viaje()
             {
-                NumeroDeViaje = Int32.Parse(table.Rows[0]["numeroDeViaje"].ToString()),
-                HorarioPresencia = table.Rows[0]["horarioPresencia"].ToString(),
-                HorarioLlegada = table.Rows[0]["horarioLlegada"].ToString(),
-                HorarioSalida = table.Rows[0]["horarioSalida"].ToString(),
-                DuracionEstimada = Int32.Parse(table.Rows[0]["duracionEstimada"].ToString()),
-                CantidadTramos = Int32.Parse(table.Rows[0]["cantidadTramos"].ToString())
+                NumeroDeViaje = Int32.Parse(table.Rows[0]["nViaj"].ToString()),
             };
 
             return viaje;

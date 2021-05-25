@@ -21,6 +21,7 @@ namespace TrabajoPrácticoPAV.Formularios
 
         private readonly Tratamientos_Especiales _TE = new Tratamientos_Especiales();
         private Viaje ViajeSeleccionado;
+
         public static ObservableCollection<Pasajero> ObserverListaPasajeros;
 
         // NO borrar _pasajeroTitular porque se genera un ciclo infinito
@@ -151,12 +152,8 @@ namespace TrabajoPrácticoPAV.Formularios
 
         private void eventoCargado()
         {
-            // IMPORTANTE.
-            // La consulta que hace esta función está mal. Solo devuelve el numero de viaje
-            // Si estan conectados por solo UN tramo.
-            // hay que modificar la consulta para que devuelva viajes conectados por mas de un tramo
-            // Para simplificar solo deberia devolver 1 Viaje (el primero que encuentre)
-            Viaje viaje = _NE_Viaje.ViajeQueCoinciden($"{cmb_origen.SelectedValue}", $"{cmb_destino.SelectedValue}");
+            Viaje numeroViajeQueCoincide = _NE_Viaje.ViajeQueCoinciden($"{cmb_origen.SelectedValue}", $"{cmb_destino.SelectedValue}");
+            Viaje viaje = _NE_Viaje.GetViajePorId(numeroViajeQueCoincide.NumeroDeViaje.ToString());
 
             if (viaje != null)
             {
