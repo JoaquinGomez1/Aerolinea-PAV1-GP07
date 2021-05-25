@@ -88,6 +88,7 @@ namespace TrabajoPrácticoPAV.Backend
             Desconectar();
             return tabla;
         }
+
         public EstadoTransaccion Insertar(string SqlInsertar, bool InsercionSilenciosa)
         {
             EstadoTransaccion res = InsModBorr(SqlInsertar);
