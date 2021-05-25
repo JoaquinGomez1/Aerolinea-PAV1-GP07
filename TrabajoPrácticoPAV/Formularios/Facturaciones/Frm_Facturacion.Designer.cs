@@ -34,15 +34,8 @@ namespace TrabajoPrácticoPAV.Formularios.Facturaciones
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txt_numeroReserva = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
-            this.txt_fechaPago = new TrabajoPrácticoPAV.Clase.MaskedTextBox_Aerolinea();
-            this.textBox_Aerolinea5 = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
             this.label9 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txt_numeroDoc = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
-            this.txt_tipoDoc = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
-            this.txt_apellido = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
-            this.txt_nombre = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -52,6 +45,13 @@ namespace TrabajoPrácticoPAV.Formularios.Facturaciones
             this.btn_eliminar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.btn_cancelar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.btn_GenerarFactura = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
+            this.txt_numeroDoc = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
+            this.txt_tipoDoc = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
+            this.txt_apellido = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
+            this.txt_nombre = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
+            this.txt_numeroReserva = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
+            this.txt_fechaPago = new TrabajoPrácticoPAV.Clase.MaskedTextBox_Aerolinea();
+            this.textBox_Aerolinea5 = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_vuelo)).BeginInit();
@@ -111,41 +111,6 @@ namespace TrabajoPrácticoPAV.Formularios.Facturaciones
             this.panel1.Size = new System.Drawing.Size(293, 90);
             this.panel1.TabIndex = 2;
             // 
-            // txt_numeroReserva
-            // 
-            this.txt_numeroReserva.Location = new System.Drawing.Point(171, 6);
-            this.txt_numeroReserva.Name = "txt_numeroReserva";
-            this.txt_numeroReserva.Pp_EsPk = false;
-            this.txt_numeroReserva.Pp_MensajeError = null;
-            this.txt_numeroReserva.Pp_NombreCampo = "numeroDeReserva";
-            this.txt_numeroReserva.Pp_NombreTabla = "Reserva";
-            this.txt_numeroReserva.Size = new System.Drawing.Size(100, 20);
-            this.txt_numeroReserva.TabIndex = 4;
-            // 
-            // txt_fechaPago
-            // 
-            this.txt_fechaPago.Location = new System.Drawing.Point(171, 32);
-            this.txt_fechaPago.Mask = "99/99/9999";
-            this.txt_fechaPago.Name = "txt_fechaPago";
-            this.txt_fechaPago.Pp_EsPk = false;
-            this.txt_fechaPago.Pp_MensajeError = null;
-            this.txt_fechaPago.Pp_NombreCampo = null;
-            this.txt_fechaPago.Pp_NombreTabla = null;
-            this.txt_fechaPago.Size = new System.Drawing.Size(100, 20);
-            this.txt_fechaPago.TabIndex = 3;
-            // 
-            // textBox_Aerolinea5
-            // 
-            this.textBox_Aerolinea5.Enabled = false;
-            this.textBox_Aerolinea5.Location = new System.Drawing.Point(171, 59);
-            this.textBox_Aerolinea5.Name = "textBox_Aerolinea5";
-            this.textBox_Aerolinea5.Pp_EsPk = true;
-            this.textBox_Aerolinea5.Pp_MensajeError = null;
-            this.textBox_Aerolinea5.Pp_NombreCampo = "idFactura";
-            this.textBox_Aerolinea5.Pp_NombreTabla = "Factura";
-            this.textBox_Aerolinea5.Size = new System.Drawing.Size(100, 20);
-            this.textBox_Aerolinea5.TabIndex = 1;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -171,50 +136,6 @@ namespace TrabajoPrácticoPAV.Formularios.Facturaciones
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(557, 65);
             this.panel2.TabIndex = 3;
-            // 
-            // txt_numeroDoc
-            // 
-            this.txt_numeroDoc.Location = new System.Drawing.Point(444, 36);
-            this.txt_numeroDoc.Name = "txt_numeroDoc";
-            this.txt_numeroDoc.Pp_EsPk = true;
-            this.txt_numeroDoc.Pp_MensajeError = null;
-            this.txt_numeroDoc.Pp_NombreCampo = "numeroDoc";
-            this.txt_numeroDoc.Pp_NombreTabla = "Pasajero";
-            this.txt_numeroDoc.Size = new System.Drawing.Size(100, 20);
-            this.txt_numeroDoc.TabIndex = 4;
-            // 
-            // txt_tipoDoc
-            // 
-            this.txt_tipoDoc.Location = new System.Drawing.Point(444, 10);
-            this.txt_tipoDoc.Name = "txt_tipoDoc";
-            this.txt_tipoDoc.Pp_EsPk = true;
-            this.txt_tipoDoc.Pp_MensajeError = null;
-            this.txt_tipoDoc.Pp_NombreCampo = "tipoDoc";
-            this.txt_tipoDoc.Pp_NombreTabla = "Pasajero";
-            this.txt_tipoDoc.Size = new System.Drawing.Size(100, 20);
-            this.txt_tipoDoc.TabIndex = 5;
-            // 
-            // txt_apellido
-            // 
-            this.txt_apellido.Location = new System.Drawing.Point(70, 37);
-            this.txt_apellido.Name = "txt_apellido";
-            this.txt_apellido.Pp_EsPk = false;
-            this.txt_apellido.Pp_MensajeError = null;
-            this.txt_apellido.Pp_NombreCampo = "apellido";
-            this.txt_apellido.Pp_NombreTabla = "Pasajero";
-            this.txt_apellido.Size = new System.Drawing.Size(116, 20);
-            this.txt_apellido.TabIndex = 3;
-            // 
-            // txt_nombre
-            // 
-            this.txt_nombre.Location = new System.Drawing.Point(70, 11);
-            this.txt_nombre.Name = "txt_nombre";
-            this.txt_nombre.Pp_EsPk = false;
-            this.txt_nombre.Pp_MensajeError = null;
-            this.txt_nombre.Pp_NombreCampo = "nombre";
-            this.txt_nombre.Pp_NombreTabla = "Pasajero";
-            this.txt_nombre.Size = new System.Drawing.Size(116, 20);
-            this.txt_nombre.TabIndex = 3;
             // 
             // label7
             // 
@@ -289,9 +210,9 @@ namespace TrabajoPrácticoPAV.Formularios.Facturaciones
             this.btn_eliminar.Location = new System.Drawing.Point(566, 281);
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.Pp_Presionado = false;
-            this.btn_eliminar.Size = new System.Drawing.Size(90, 28);
+            this.btn_eliminar.Size = new System.Drawing.Size(119, 28);
             this.btn_eliminar.TabIndex = 4;
-            this.btn_eliminar.Text = "Eliminar ";
+            this.btn_eliminar.Text = "Eliminar factura";
             this.btn_eliminar.UseVisualStyleBackColor = true;
             // 
             // btn_cancelar
@@ -318,6 +239,86 @@ namespace TrabajoPrácticoPAV.Formularios.Facturaciones
             this.btn_GenerarFactura.TabIndex = 4;
             this.btn_GenerarFactura.Text = "Generar factura";
             this.btn_GenerarFactura.UseVisualStyleBackColor = true;
+            this.btn_GenerarFactura.Click += new System.EventHandler(this.btn_GenerarFactura_Click);
+            // 
+            // txt_numeroDoc
+            // 
+            this.txt_numeroDoc.Location = new System.Drawing.Point(444, 36);
+            this.txt_numeroDoc.Name = "txt_numeroDoc";
+            this.txt_numeroDoc.Pp_EsPk = true;
+            this.txt_numeroDoc.Pp_MensajeError = null;
+            this.txt_numeroDoc.Pp_NombreCampo = "numeroDoc";
+            this.txt_numeroDoc.Pp_NombreTabla = "Pasajero";
+            this.txt_numeroDoc.Size = new System.Drawing.Size(100, 20);
+            this.txt_numeroDoc.TabIndex = 4;
+            // 
+            // txt_tipoDoc
+            // 
+            this.txt_tipoDoc.Location = new System.Drawing.Point(444, 10);
+            this.txt_tipoDoc.Name = "txt_tipoDoc";
+            this.txt_tipoDoc.Pp_EsPk = true;
+            this.txt_tipoDoc.Pp_MensajeError = null;
+            this.txt_tipoDoc.Pp_NombreCampo = "tipoDoc";
+            this.txt_tipoDoc.Pp_NombreTabla = "Pasajero";
+            this.txt_tipoDoc.Size = new System.Drawing.Size(100, 20);
+            this.txt_tipoDoc.TabIndex = 5;
+            // 
+            // txt_apellido
+            // 
+            this.txt_apellido.Location = new System.Drawing.Point(70, 37);
+            this.txt_apellido.Name = "txt_apellido";
+            this.txt_apellido.Pp_EsPk = false;
+            this.txt_apellido.Pp_MensajeError = null;
+            this.txt_apellido.Pp_NombreCampo = "apellido";
+            this.txt_apellido.Pp_NombreTabla = "Pasajero";
+            this.txt_apellido.Size = new System.Drawing.Size(116, 20);
+            this.txt_apellido.TabIndex = 3;
+            // 
+            // txt_nombre
+            // 
+            this.txt_nombre.Location = new System.Drawing.Point(70, 11);
+            this.txt_nombre.Name = "txt_nombre";
+            this.txt_nombre.Pp_EsPk = false;
+            this.txt_nombre.Pp_MensajeError = null;
+            this.txt_nombre.Pp_NombreCampo = "nombre";
+            this.txt_nombre.Pp_NombreTabla = "Pasajero";
+            this.txt_nombre.Size = new System.Drawing.Size(116, 20);
+            this.txt_nombre.TabIndex = 3;
+            // 
+            // txt_numeroReserva
+            // 
+            this.txt_numeroReserva.Location = new System.Drawing.Point(171, 6);
+            this.txt_numeroReserva.Name = "txt_numeroReserva";
+            this.txt_numeroReserva.Pp_EsPk = false;
+            this.txt_numeroReserva.Pp_MensajeError = null;
+            this.txt_numeroReserva.Pp_NombreCampo = "numeroDeReserva";
+            this.txt_numeroReserva.Pp_NombreTabla = "Reserva";
+            this.txt_numeroReserva.Size = new System.Drawing.Size(100, 20);
+            this.txt_numeroReserva.TabIndex = 4;
+            // 
+            // txt_fechaPago
+            // 
+            this.txt_fechaPago.Location = new System.Drawing.Point(171, 32);
+            this.txt_fechaPago.Mask = "99/99/9999";
+            this.txt_fechaPago.Name = "txt_fechaPago";
+            this.txt_fechaPago.Pp_EsPk = false;
+            this.txt_fechaPago.Pp_MensajeError = null;
+            this.txt_fechaPago.Pp_NombreCampo = null;
+            this.txt_fechaPago.Pp_NombreTabla = null;
+            this.txt_fechaPago.Size = new System.Drawing.Size(100, 20);
+            this.txt_fechaPago.TabIndex = 3;
+            // 
+            // textBox_Aerolinea5
+            // 
+            this.textBox_Aerolinea5.Enabled = false;
+            this.textBox_Aerolinea5.Location = new System.Drawing.Point(171, 59);
+            this.textBox_Aerolinea5.Name = "textBox_Aerolinea5";
+            this.textBox_Aerolinea5.Pp_EsPk = true;
+            this.textBox_Aerolinea5.Pp_MensajeError = null;
+            this.textBox_Aerolinea5.Pp_NombreCampo = "idFactura";
+            this.textBox_Aerolinea5.Pp_NombreTabla = "Factura";
+            this.textBox_Aerolinea5.Size = new System.Drawing.Size(100, 20);
+            this.textBox_Aerolinea5.TabIndex = 1;
             // 
             // Frm_Facturacion
             // 
