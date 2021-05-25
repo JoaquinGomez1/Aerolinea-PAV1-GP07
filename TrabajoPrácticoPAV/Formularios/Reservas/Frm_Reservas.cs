@@ -110,7 +110,6 @@ namespace TrabajoPrácticoPAV.Formularios
             bool titularNoEsNull = _pasajeroTitular != null;
             lbl_nombreTitular.Text = titularNoEsNull ? pasajeroTitular.nombre : "???";
             lbl_docTitular.Text = titularNoEsNull ? pasajeroTitular.numeroDoc : "???";
-            MessageBox.Show($"No es null: { titularNoEsNull }");
         }
 
         private void actualizarLabelPrecio(decimal precio)
@@ -131,7 +130,7 @@ namespace TrabajoPrácticoPAV.Formularios
             if (esValidoTE == Resultado.correcto && tieneTitular && tienePasajeros)
             {
                 // Ejecutar en caso valido
-                MessageBox.Show("Formulario Válido");
+                MessageBox.Show("Formulario Válido .... Esperando implementación");
             }
         }
 
@@ -139,6 +138,7 @@ namespace TrabajoPrácticoPAV.Formularios
         {
             if (cmb_origen.SelectedIndex == -1) return; // No ejecutar si no se seleccionó nada
 
+            // Controlo que el otro comboBox se haya cargado también
             if (cmb_destino.SelectedIndex != -1) eventoCargado();
         }
 
@@ -151,6 +151,11 @@ namespace TrabajoPrácticoPAV.Formularios
 
         private void eventoCargado()
         {
+            // IMPORTANTE.
+            // La consulta que hace esta función está mal. Solo devuelve el numero de viaje
+            // Si estan conectados por solo UN tramo.
+            // hay que modificar la consulta para que devuelva viajes conectados por mas de un tramo
+            // Para simplificar solo deberia devolver 1 Viaje (el primero que encuentre)
             Viaje viaje = _NE_Viaje.ViajeQueCoinciden($"{cmb_origen.SelectedValue}", $"{cmb_destino.SelectedValue}");
 
             if (viaje != null)

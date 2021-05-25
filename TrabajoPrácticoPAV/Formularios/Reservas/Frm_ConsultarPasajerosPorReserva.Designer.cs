@@ -35,13 +35,6 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             this.Btn_Cerrar = new System.Windows.Forms.PictureBox();
             this.Titulo = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_aceptar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
-            this.grid_pasajeros = new TrabajoPrácticoPAV.Clase.DataGridView_Aerolinea();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipoDoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numeroDoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comboBox_Aerolinea1 = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_CantPasajeros = new System.Windows.Forms.Label();
             this.lbl_DocTitular = new System.Windows.Forms.Label();
@@ -49,6 +42,13 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btn_aceptar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
+            this.grid_pasajeros = new TrabajoPrácticoPAV.Clase.DataGridView_Aerolinea();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoDoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numeroDoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comboBox_Aerolinea1 = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
             this.BarraSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Cerrar)).BeginInit();
@@ -128,77 +128,6 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             this.panel1.Size = new System.Drawing.Size(427, 374);
             this.panel1.TabIndex = 109;
             // 
-            // btn_aceptar
-            // 
-            this.btn_aceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_aceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.btn_aceptar.Location = new System.Drawing.Point(311, 336);
-            this.btn_aceptar.Name = "btn_aceptar";
-            this.btn_aceptar.Pp_Presionado = false;
-            this.btn_aceptar.Size = new System.Drawing.Size(90, 28);
-            this.btn_aceptar.TabIndex = 125;
-            this.btn_aceptar.Text = "Aceptar";
-            this.btn_aceptar.UseVisualStyleBackColor = true;
-            this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
-            // 
-            // grid_pasajeros
-            // 
-            this.grid_pasajeros.AllowUserToAddRows = false;
-            this.grid_pasajeros.AllowUserToDeleteRows = false;
-            this.grid_pasajeros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grid_pasajeros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nombre,
-            this.apellido,
-            this.tipoDoc,
-            this.numeroDoc});
-            this.grid_pasajeros.Location = new System.Drawing.Point(14, 180);
-            this.grid_pasajeros.Name = "grid_pasajeros";
-            this.grid_pasajeros.Pp_FormatoGrid = null;
-            this.grid_pasajeros.Pp_NombreTabla = null;
-            this.grid_pasajeros.ReadOnly = true;
-            this.grid_pasajeros.Size = new System.Drawing.Size(387, 150);
-            this.grid_pasajeros.TabIndex = 116;
-            // 
-            // nombre
-            // 
-            this.nombre.HeaderText = "Nombre";
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
-            // 
-            // apellido
-            // 
-            this.apellido.HeaderText = "Apellido";
-            this.apellido.Name = "apellido";
-            this.apellido.ReadOnly = true;
-            // 
-            // tipoDoc
-            // 
-            this.tipoDoc.HeaderText = "Tipo Documento";
-            this.tipoDoc.Name = "tipoDoc";
-            this.tipoDoc.ReadOnly = true;
-            // 
-            // numeroDoc
-            // 
-            this.numeroDoc.HeaderText = "Documento";
-            this.numeroDoc.Name = "numeroDoc";
-            this.numeroDoc.ReadOnly = true;
-            // 
-            // comboBox_Aerolinea1
-            // 
-            this.comboBox_Aerolinea1.FormattingEnabled = true;
-            this.comboBox_Aerolinea1.Location = new System.Drawing.Point(160, 25);
-            this.comboBox_Aerolinea1.Name = "comboBox_Aerolinea1";
-            this.comboBox_Aerolinea1.Pp_CampoAceptaNull = false;
-            this.comboBox_Aerolinea1.Pp_EsPk = true;
-            this.comboBox_Aerolinea1.Pp_MensajeError = "Cargar numero de Reserva";
-            this.comboBox_Aerolinea1.Pp_NombreCampo = "numeroDeReserva";
-            this.comboBox_Aerolinea1.Pp_NombreCampoInsert = null;
-            this.comboBox_Aerolinea1.Pp_NombreTabla = "Reserva";
-            this.comboBox_Aerolinea1.Pp_PkTabla = "numeroDeReserva";
-            this.comboBox_Aerolinea1.Size = new System.Drawing.Size(63, 21);
-            this.comboBox_Aerolinea1.TabIndex = 115;
-            this.comboBox_Aerolinea1.SelectedIndexChanged += new System.EventHandler(this.comboBox_Aerolinea1_SelectedIndexChanged);
-            // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
@@ -275,6 +204,77 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             this.label2.TabIndex = 108;
             this.label2.Text = "Pasajero Titular";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // btn_aceptar
+            // 
+            this.btn_aceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_aceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.btn_aceptar.Location = new System.Drawing.Point(311, 336);
+            this.btn_aceptar.Name = "btn_aceptar";
+            this.btn_aceptar.Pp_Presionado = false;
+            this.btn_aceptar.Size = new System.Drawing.Size(90, 28);
+            this.btn_aceptar.TabIndex = 125;
+            this.btn_aceptar.Text = "Aceptar";
+            this.btn_aceptar.UseVisualStyleBackColor = true;
+            this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
+            // 
+            // grid_pasajeros
+            // 
+            this.grid_pasajeros.AllowUserToAddRows = false;
+            this.grid_pasajeros.AllowUserToDeleteRows = false;
+            this.grid_pasajeros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grid_pasajeros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nombre,
+            this.apellido,
+            this.tipoDoc,
+            this.numeroDoc});
+            this.grid_pasajeros.Location = new System.Drawing.Point(14, 180);
+            this.grid_pasajeros.Name = "grid_pasajeros";
+            this.grid_pasajeros.Pp_FormatoGrid = null;
+            this.grid_pasajeros.Pp_NombreTabla = null;
+            this.grid_pasajeros.ReadOnly = true;
+            this.grid_pasajeros.Size = new System.Drawing.Size(387, 150);
+            this.grid_pasajeros.TabIndex = 116;
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            // 
+            // apellido
+            // 
+            this.apellido.HeaderText = "Apellido";
+            this.apellido.Name = "apellido";
+            this.apellido.ReadOnly = true;
+            // 
+            // tipoDoc
+            // 
+            this.tipoDoc.HeaderText = "Tipo Documento";
+            this.tipoDoc.Name = "tipoDoc";
+            this.tipoDoc.ReadOnly = true;
+            // 
+            // numeroDoc
+            // 
+            this.numeroDoc.HeaderText = "Documento";
+            this.numeroDoc.Name = "numeroDoc";
+            this.numeroDoc.ReadOnly = true;
+            // 
+            // comboBox_Aerolinea1
+            // 
+            this.comboBox_Aerolinea1.FormattingEnabled = true;
+            this.comboBox_Aerolinea1.Location = new System.Drawing.Point(160, 25);
+            this.comboBox_Aerolinea1.Name = "comboBox_Aerolinea1";
+            this.comboBox_Aerolinea1.Pp_CampoAceptaNull = false;
+            this.comboBox_Aerolinea1.Pp_EsPk = true;
+            this.comboBox_Aerolinea1.Pp_MensajeError = "Cargar numero de Reserva";
+            this.comboBox_Aerolinea1.Pp_NombreCampo = "numeroDeReserva";
+            this.comboBox_Aerolinea1.Pp_NombreCampoInsert = null;
+            this.comboBox_Aerolinea1.Pp_NombreTabla = "Reserva";
+            this.comboBox_Aerolinea1.Pp_PkTabla = "numeroDeReserva";
+            this.comboBox_Aerolinea1.Size = new System.Drawing.Size(63, 21);
+            this.comboBox_Aerolinea1.TabIndex = 115;
+            this.comboBox_Aerolinea1.SelectedIndexChanged += new System.EventHandler(this.comboBox_Aerolinea1_SelectedIndexChanged);
             // 
             // Frm_ConsultarPasajerosPorReserva
             // 

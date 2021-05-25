@@ -42,29 +42,28 @@
             this.lbl_precio = new System.Windows.Forms.Label();
             this.lbl_numeroViaje = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.cmb_destino = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
+            this.cmb_origen = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
             this.lbl_cantPasajeros = new System.Windows.Forms.Label();
             this.lbl_docTitular = new System.Windows.Forms.Label();
             this.lbl_nombreTitular = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.button_Aerolinea3 = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
+            this.maskedTextBox_Aerolinea2 = new TrabajoPrácticoPAV.Clase.MaskedTextBox_Aerolinea();
+            this.cmb_claseAsiento = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
             this.label1 = new System.Windows.Forms.Label();
             this.button_Aerolinea1 = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.btn_cargarPasajeros = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.btn_consultarPasajeros = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.grid_reservas = new TrabajoPrácticoPAV.Clase.DataGridView_Aerolinea();
-            this.cmb_destino = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
-            this.cmb_origen = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
-            this.button_Aerolinea3 = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
-            this.maskedTextBox_Aerolinea2 = new TrabajoPrácticoPAV.Clase.MaskedTextBox_Aerolinea();
-            this.cmb_claseAsiento = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
-            this.btn_cerrar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
-            this.btn_refrescar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.numeroReserva = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaReserva = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaViaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numeroDeViaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.costo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_cerrar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.panel_registro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_reservas)).BeginInit();
             this.SuspendLayout();
@@ -149,7 +148,7 @@
             // 
             this.btn_modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_modificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.btn_modificar.Location = new System.Drawing.Point(506, 287);
+            this.btn_modificar.Location = new System.Drawing.Point(508, 273);
             this.btn_modificar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_modificar.Name = "btn_modificar";
             this.btn_modificar.Size = new System.Drawing.Size(87, 28);
@@ -162,7 +161,7 @@
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.button1.Location = new System.Drawing.Point(506, 319);
+            this.button1.Location = new System.Drawing.Point(508, 305);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(87, 28);
@@ -245,6 +244,38 @@
             this.label10.Text = "Numero de Viaje";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // cmb_destino
+            // 
+            this.cmb_destino.FormattingEnabled = true;
+            this.cmb_destino.Location = new System.Drawing.Point(170, 97);
+            this.cmb_destino.Name = "cmb_destino";
+            this.cmb_destino.Pp_CampoAceptaNull = true;
+            this.cmb_destino.Pp_EsPk = false;
+            this.cmb_destino.Pp_MensajeError = "Cargar destino del viaje";
+            this.cmb_destino.Pp_NombreCampo = "nombre";
+            this.cmb_destino.Pp_NombreCampoInsert = null;
+            this.cmb_destino.Pp_NombreTabla = "Aeropuerto";
+            this.cmb_destino.Pp_PkTabla = "codigo";
+            this.cmb_destino.Size = new System.Drawing.Size(101, 21);
+            this.cmb_destino.TabIndex = 109;
+            this.cmb_destino.SelectedIndexChanged += new System.EventHandler(this.cmb_destino_SelectedIndexChanged);
+            // 
+            // cmb_origen
+            // 
+            this.cmb_origen.FormattingEnabled = true;
+            this.cmb_origen.Location = new System.Drawing.Point(170, 67);
+            this.cmb_origen.Name = "cmb_origen";
+            this.cmb_origen.Pp_CampoAceptaNull = true;
+            this.cmb_origen.Pp_EsPk = false;
+            this.cmb_origen.Pp_MensajeError = "Cargar origen viaje";
+            this.cmb_origen.Pp_NombreCampo = "nombre";
+            this.cmb_origen.Pp_NombreCampoInsert = null;
+            this.cmb_origen.Pp_NombreTabla = "Aeropuerto";
+            this.cmb_origen.Pp_PkTabla = "codigo";
+            this.cmb_origen.Size = new System.Drawing.Size(101, 21);
+            this.cmb_origen.TabIndex = 108;
+            this.cmb_origen.SelectedIndexChanged += new System.EventHandler(this.cmb_origen_SelectedIndexChanged);
+            // 
             // lbl_cantPasajeros
             // 
             this.lbl_cantPasajeros.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
@@ -311,6 +342,49 @@
             this.label2.Text = "Pasajero Titular";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // button_Aerolinea3
+            // 
+            this.button_Aerolinea3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Aerolinea3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.button_Aerolinea3.Location = new System.Drawing.Point(305, 118);
+            this.button_Aerolinea3.Name = "button_Aerolinea3";
+            this.button_Aerolinea3.Pp_Presionado = false;
+            this.button_Aerolinea3.Size = new System.Drawing.Size(87, 28);
+            this.button_Aerolinea3.TabIndex = 101;
+            this.button_Aerolinea3.Text = "Registrar";
+            this.button_Aerolinea3.UseVisualStyleBackColor = true;
+            this.button_Aerolinea3.Click += new System.EventHandler(this.button_Aerolinea3_Click);
+            // 
+            // maskedTextBox_Aerolinea2
+            // 
+            this.maskedTextBox_Aerolinea2.Location = new System.Drawing.Point(170, 41);
+            this.maskedTextBox_Aerolinea2.Mask = "00/00/0000";
+            this.maskedTextBox_Aerolinea2.Name = "maskedTextBox_Aerolinea2";
+            this.maskedTextBox_Aerolinea2.Pp_EsPk = false;
+            this.maskedTextBox_Aerolinea2.Pp_MensajeError = null;
+            this.maskedTextBox_Aerolinea2.Pp_NombreCampo = null;
+            this.maskedTextBox_Aerolinea2.Pp_NombreTabla = null;
+            this.maskedTextBox_Aerolinea2.Size = new System.Drawing.Size(101, 20);
+            this.maskedTextBox_Aerolinea2.TabIndex = 83;
+            this.maskedTextBox_Aerolinea2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.maskedTextBox_Aerolinea2.ValidatingType = typeof(System.DateTime);
+            // 
+            // cmb_claseAsiento
+            // 
+            this.cmb_claseAsiento.FormattingEnabled = true;
+            this.cmb_claseAsiento.Location = new System.Drawing.Point(302, 40);
+            this.cmb_claseAsiento.Name = "cmb_claseAsiento";
+            this.cmb_claseAsiento.Pp_CampoAceptaNull = false;
+            this.cmb_claseAsiento.Pp_EsPk = false;
+            this.cmb_claseAsiento.Pp_MensajeError = "Cargar clase de asiento";
+            this.cmb_claseAsiento.Pp_NombreCampo = "nombre";
+            this.cmb_claseAsiento.Pp_NombreCampoInsert = null;
+            this.cmb_claseAsiento.Pp_NombreTabla = "Tipo_Asiento";
+            this.cmb_claseAsiento.Pp_PkTabla = "idTipo";
+            this.cmb_claseAsiento.Size = new System.Drawing.Size(101, 21);
+            this.cmb_claseAsiento.TabIndex = 84;
+            this.cmb_claseAsiento.TextChanged += new System.EventHandler(this.cmb_claseAsiento_TextChanged);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -325,7 +399,7 @@
             // 
             this.button_Aerolinea1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Aerolinea1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Aerolinea1.Location = new System.Drawing.Point(506, 254);
+            this.button_Aerolinea1.Location = new System.Drawing.Point(508, 240);
             this.button_Aerolinea1.Name = "button_Aerolinea1";
             this.button_Aerolinea1.Pp_Presionado = false;
             this.button_Aerolinea1.Size = new System.Drawing.Size(87, 28);
@@ -379,106 +453,6 @@
             this.grid_reservas.Size = new System.Drawing.Size(466, 178);
             this.grid_reservas.TabIndex = 102;
             // 
-            // cmb_destino
-            // 
-            this.cmb_destino.FormattingEnabled = true;
-            this.cmb_destino.Location = new System.Drawing.Point(170, 97);
-            this.cmb_destino.Name = "cmb_destino";
-            this.cmb_destino.Pp_CampoAceptaNull = true;
-            this.cmb_destino.Pp_EsPk = false;
-            this.cmb_destino.Pp_MensajeError = "Cargar destino del viaje";
-            this.cmb_destino.Pp_NombreCampo = "nombre";
-            this.cmb_destino.Pp_NombreCampoInsert = null;
-            this.cmb_destino.Pp_NombreTabla = "Aeropuerto";
-            this.cmb_destino.Pp_PkTabla = "codigo";
-            this.cmb_destino.Size = new System.Drawing.Size(101, 21);
-            this.cmb_destino.TabIndex = 109;
-            this.cmb_destino.SelectedIndexChanged += new System.EventHandler(this.cmb_destino_SelectedIndexChanged);
-            // 
-            // cmb_origen
-            // 
-            this.cmb_origen.FormattingEnabled = true;
-            this.cmb_origen.Location = new System.Drawing.Point(170, 67);
-            this.cmb_origen.Name = "cmb_origen";
-            this.cmb_origen.Pp_CampoAceptaNull = true;
-            this.cmb_origen.Pp_EsPk = false;
-            this.cmb_origen.Pp_MensajeError = "Cargar origen viaje";
-            this.cmb_origen.Pp_NombreCampo = "nombre";
-            this.cmb_origen.Pp_NombreCampoInsert = null;
-            this.cmb_origen.Pp_NombreTabla = "Aeropuerto";
-            this.cmb_origen.Pp_PkTabla = "codigo";
-            this.cmb_origen.Size = new System.Drawing.Size(101, 21);
-            this.cmb_origen.TabIndex = 108;
-            this.cmb_origen.SelectedIndexChanged += new System.EventHandler(this.cmb_origen_SelectedIndexChanged);
-            // 
-            // button_Aerolinea3
-            // 
-            this.button_Aerolinea3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Aerolinea3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.button_Aerolinea3.Location = new System.Drawing.Point(305, 118);
-            this.button_Aerolinea3.Name = "button_Aerolinea3";
-            this.button_Aerolinea3.Pp_Presionado = false;
-            this.button_Aerolinea3.Size = new System.Drawing.Size(87, 28);
-            this.button_Aerolinea3.TabIndex = 101;
-            this.button_Aerolinea3.Text = "Registrar";
-            this.button_Aerolinea3.UseVisualStyleBackColor = true;
-            this.button_Aerolinea3.Click += new System.EventHandler(this.button_Aerolinea3_Click);
-            // 
-            // maskedTextBox_Aerolinea2
-            // 
-            this.maskedTextBox_Aerolinea2.Location = new System.Drawing.Point(170, 41);
-            this.maskedTextBox_Aerolinea2.Mask = "00/00/0000";
-            this.maskedTextBox_Aerolinea2.Name = "maskedTextBox_Aerolinea2";
-            this.maskedTextBox_Aerolinea2.Pp_EsPk = false;
-            this.maskedTextBox_Aerolinea2.Pp_MensajeError = null;
-            this.maskedTextBox_Aerolinea2.Pp_NombreCampo = null;
-            this.maskedTextBox_Aerolinea2.Pp_NombreTabla = null;
-            this.maskedTextBox_Aerolinea2.Size = new System.Drawing.Size(101, 20);
-            this.maskedTextBox_Aerolinea2.TabIndex = 83;
-            this.maskedTextBox_Aerolinea2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.maskedTextBox_Aerolinea2.ValidatingType = typeof(System.DateTime);
-            // 
-            // cmb_claseAsiento
-            // 
-            this.cmb_claseAsiento.FormattingEnabled = true;
-            this.cmb_claseAsiento.Location = new System.Drawing.Point(302, 40);
-            this.cmb_claseAsiento.Name = "cmb_claseAsiento";
-            this.cmb_claseAsiento.Pp_CampoAceptaNull = false;
-            this.cmb_claseAsiento.Pp_EsPk = false;
-            this.cmb_claseAsiento.Pp_MensajeError = "Cargar clase de asiento";
-            this.cmb_claseAsiento.Pp_NombreCampo = "nombre";
-            this.cmb_claseAsiento.Pp_NombreCampoInsert = null;
-            this.cmb_claseAsiento.Pp_NombreTabla = "Tipo_Asiento";
-            this.cmb_claseAsiento.Pp_PkTabla = "idTipo";
-            this.cmb_claseAsiento.Size = new System.Drawing.Size(101, 21);
-            this.cmb_claseAsiento.TabIndex = 84;
-            this.cmb_claseAsiento.TextChanged += new System.EventHandler(this.cmb_claseAsiento_TextChanged);
-            // 
-            // btn_cerrar
-            // 
-            this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.btn_cerrar.Location = new System.Drawing.Point(506, 352);
-            this.btn_cerrar.Name = "btn_cerrar";
-            this.btn_cerrar.Pp_Presionado = false;
-            this.btn_cerrar.Size = new System.Drawing.Size(87, 28);
-            this.btn_cerrar.TabIndex = 97;
-            this.btn_cerrar.Text = "Cerrar";
-            this.btn_cerrar.UseVisualStyleBackColor = true;
-            this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
-            // 
-            // btn_refrescar
-            // 
-            this.btn_refrescar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_refrescar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.btn_refrescar.Location = new System.Drawing.Point(506, 220);
-            this.btn_refrescar.Name = "btn_refrescar";
-            this.btn_refrescar.Pp_Presionado = false;
-            this.btn_refrescar.Size = new System.Drawing.Size(87, 28);
-            this.btn_refrescar.TabIndex = 96;
-            this.btn_refrescar.Text = "Refrescar";
-            this.btn_refrescar.UseVisualStyleBackColor = true;
-            // 
             // numeroReserva
             // 
             this.numeroReserva.HeaderText = "Numero Reserva";
@@ -509,6 +483,19 @@
             this.costo.Name = "costo";
             this.costo.ReadOnly = true;
             // 
+            // btn_cerrar
+            // 
+            this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.btn_cerrar.Location = new System.Drawing.Point(508, 338);
+            this.btn_cerrar.Name = "btn_cerrar";
+            this.btn_cerrar.Pp_Presionado = false;
+            this.btn_cerrar.Size = new System.Drawing.Size(87, 28);
+            this.btn_cerrar.TabIndex = 97;
+            this.btn_cerrar.Text = "Cerrar";
+            this.btn_cerrar.UseVisualStyleBackColor = true;
+            this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
+            // 
             // Frm_ABMReservas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -521,7 +508,6 @@
             this.Controls.Add(this.grid_reservas);
             this.Controls.Add(this.panel_registro);
             this.Controls.Add(this.btn_cerrar);
-            this.Controls.Add(this.btn_refrescar);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_modificar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -550,7 +536,6 @@
         private System.Windows.Forms.Label lbl_currentDate;
         private System.Windows.Forms.Button btn_modificar;
         private System.Windows.Forms.Button button1;
-        private Clase.Button_Aerolinea btn_refrescar;
         private Clase.Button_Aerolinea btn_cerrar;
         private System.Windows.Forms.Panel panel_registro;
         private Clase.Button_Aerolinea button_Aerolinea3;

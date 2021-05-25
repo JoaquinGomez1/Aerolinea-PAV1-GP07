@@ -93,6 +93,12 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             return value;
         }
 
+        public DataTable GetTodosLosPasajeros(string numeroDeViaje)
+        {
+            string sql = $"SELECT * FROM RESERVA WHERE numeroDeViaje = {numeroDeViaje}";
+            return _DB.EjecutarSelect(sql);
+        }
+
 
     }
 }
