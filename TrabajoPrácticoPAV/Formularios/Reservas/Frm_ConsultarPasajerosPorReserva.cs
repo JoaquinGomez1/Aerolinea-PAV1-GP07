@@ -26,6 +26,11 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             Estilo.FormatearEstilo(this.Controls);
         }
 
+        private void Frm_ConsultarPasajerosPorReserva_Load(object sender, EventArgs e)
+        {
+            comboBox_Aerolinea1.CargarCombo();
+        }
+
         private void BarraSuperior_MouseMove(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
@@ -46,5 +51,7 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
         {
             this.Close();
         }
+
+
     }
 }

@@ -181,6 +181,11 @@ namespace TrabajoPrácticoPAV.Formularios
                 grid_reservas.Rows[i].Cells[4].Value = tabla.Rows[i]["precio"].ToString();
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Esperando implementación");
+        }
         //private void CargarPasajeroClosed(object sender, EventArgs e)
         //{
 
