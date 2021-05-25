@@ -175,6 +175,7 @@ namespace TrabajoPrácticoPAV.Formularios
 
         private void CargarGrilla(DataTable tabla)
         {
+            grid_reservas.Rows.Clear();
             for (int i = 0; i < tabla.Rows.Count; i++)
             {
                 grid_reservas.Rows.Add();
@@ -188,7 +189,11 @@ namespace TrabajoPrácticoPAV.Formularios
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Esperando implementación");
+            var selectedRow = grid_reservas.CurrentRow;
+            string numeroReservaSeleccionada = selectedRow.Cells[0].Value.ToString();
+
+            _NE_Reserva.EliminarReserva(numeroReservaSeleccionada);
+            grid_reservas.Rows.Remove(selectedRow);
         }
         //private void CargarPasajeroClosed(object sender, EventArgs e)
         //{

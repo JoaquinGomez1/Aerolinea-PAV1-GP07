@@ -95,6 +95,10 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             return _DB.EjecutarSelect(sql);
         }
 
-
+        public void EliminarReserva(string id)
+        {
+            string sql = $"DELETE FROM Reserva WHERE numeroDeReserva = {id}";
+            _DB.Borrar(sql, false);
+        }
     }
 }
