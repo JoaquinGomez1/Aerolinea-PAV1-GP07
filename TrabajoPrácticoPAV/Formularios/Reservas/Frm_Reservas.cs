@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.Data;
@@ -130,8 +131,45 @@ namespace TrabajoPrácticoPAV.Formularios
 
             if (esValidoTE == Resultado.correcto && tieneTitular && tienePasajeros)
             {
-                // Ejecutar en caso valido
-                MessageBox.Show("Formulario Válido .... Esperando implementación");
+                Reserva NReserva = new Reserva()
+                {
+                    fechaDeReserva = lbl_currentDate.Text,
+                    fechaDeSalida = maskedTextBox_Aerolinea2.Text,
+                    confirmacion = "0",
+                    numeroDeViaje = lbl_numeroViaje.Text,
+                    numeroDocTitular = _pasajeroTitular.numeroDoc,
+                    tipoDocTitular = _pasajeroTitular.tipoDoc,
+                    precio = Double.Parse(lbl_precio.Text.Substring(1, lbl_precio.Text.Length - 1))
+                };
+
+                _NE_Reserva.InsertarReserva(NReserva);
+
+                //Sacar la cantidad de asientos, sacar la cantidad de pasajeros del viaje y si la cantidad a insertar sumada a los que estan es menor a 90 hago el for
+                //
+
+                List<int> numerosGenerados = new List<int>() { };
+
+                DataTable asientos = _NE_Reserva.Buscar_Asientos(lbl_numeroViaje.Text);
+                int cantidad_asientos = asientos.Rows.Count;
+                string idModelo = asientos.Rows[0]["idModelo"].ToString();
+                string numeroPorModelo = asientos.Rows[0]["numeroPorModelo"].ToString();
+
+                string fecha_ven = DateTime.UtcNow.AddDays(30).ToString("dd-MM-yyyy");
+                NReserva.numeroDeReserva = _NE_Reserva.Numero_reserva();
+
+
+                foreach (var item in ObserverListaPasajeros)
+                {
+                    int n_asiento = new Random().Next(1, 99);
+                    while (numerosGenerados.Contains(n_asiento))
+                    {
+                        n_asiento = new Random().Next(1, 99);
+                    }
+                    numerosGenerados.Add(n_asiento);
+                    _NE_Reserva.Insertar_RXP(item, NReserva, cmb_claseAsiento.SelectedValue.ToString(),
+                                            n_asiento, numeroPorModelo, idModelo, fecha_ven);
+                }
+
             }
         }
 
@@ -152,7 +190,11 @@ namespace TrabajoPrácticoPAV.Formularios
 
         private void eventoCargado()
         {
+
             Viaje numeroViajeQueCoincide = _NE_Viaje.ViajeQueCoinciden($"{cmb_origen.SelectedValue}", $"{cmb_destino.SelectedValue}");
+            if (numeroViajeQueCoincide == null)
+                return;
+
             Viaje viaje = _NE_Viaje.GetViajePorId(numeroViajeQueCoincide.NumeroDeViaje.ToString());
 
             if (viaje != null)
@@ -175,6 +217,7 @@ namespace TrabajoPrácticoPAV.Formularios
 
         private void CargarGrilla(DataTable tabla)
         {
+            grid_reservas.Rows.Clear();
             for (int i = 0; i < tabla.Rows.Count; i++)
             {
                 grid_reservas.Rows.Add();
@@ -188,7 +231,11 @@ namespace TrabajoPrácticoPAV.Formularios
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Esperando implementación");
+            var selectedRow = grid_reservas.CurrentRow;
+            string numeroReservaSeleccionada = selectedRow.Cells[0].Value.ToString();
+
+            _NE_Reserva.EliminarReserva(numeroReservaSeleccionada);
+            grid_reservas.Rows.Remove(selectedRow);
         }
         //private void CargarPasajeroClosed(object sender, EventArgs e)
         //{

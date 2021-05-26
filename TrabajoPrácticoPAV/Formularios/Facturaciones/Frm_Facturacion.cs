@@ -1,18 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.Clase.Modelos;
 using TrabajoPrácticoPAV.Backend;
 using TrabajoPrácticoPAV.NE_Usuarios;
-using static TrabajoPrácticoPAV.Clase.Tratamientos_Especiales;
-
 
 namespace TrabajoPrácticoPAV.Formularios.Facturaciones
 {
@@ -22,7 +14,7 @@ namespace TrabajoPrácticoPAV.Formularios.Facturaciones
         public string Forma_Pago { get; set; }
         public DataTable pasajero { get; set; }
         public DataTable vuelo { get; set; }
-        
+
         NE_Facturacion facturacion = new NE_Facturacion();
         Conexion_DB _BD = new Conexion_DB();
 
@@ -75,6 +67,5 @@ namespace TrabajoPrácticoPAV.Formularios.Facturaciones
             mostrarFacturacion.vuelo = vuelo;
             mostrarFacturacion.ShowDialog();
         }
-      
     }
 }
