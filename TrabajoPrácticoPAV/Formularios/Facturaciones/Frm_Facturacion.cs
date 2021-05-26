@@ -40,11 +40,7 @@ namespace TrabajoPrácticoPAV.Formularios.Facturaciones
             vuelo = facturacion.RecuperarVueloxReserva(txt_numeroReserva.Text);
             if (vuelo.Rows.Count != 0)
             {
-                grid_vuelo.Rows.Add(
-                vuelo.Rows[0][0].ToString()
-                , vuelo.Rows[0][1].ToString()
-                , vuelo.Rows[0][2].ToString()
-                );
+                facturacion.CargarGrillaVuelos(vuelo, grid_vuelo);
             }
             if (pasajero.Rows.Count != 0)
             {
@@ -59,6 +55,7 @@ namespace TrabajoPrácticoPAV.Formularios.Facturaciones
                 MessageBox.Show("No se ha encontrado una reserva con el número de reserva ingresado.");
             }
         }
+
         private void btn_GenerarFactura_Click(object sender, EventArgs e)
         {
             Frm_MostrarFacturacion mostrarFacturacion = new Frm_MostrarFacturacion();
@@ -68,5 +65,15 @@ namespace TrabajoPrácticoPAV.Formularios.Facturaciones
             mostrarFacturacion.ShowDialog();
         }
 
+        private void btn_eliminar_Click(object sender, EventArgs e)
+        {
+            Frm_EliminarFactura eliminarFactura = new Frm_EliminarFactura();
+
+            eliminarFactura.Id_reserva = Id_reserva;
+            eliminarFactura.pasajero = pasajero;
+            eliminarFactura.vuelo = vuelo;
+
+            eliminarFactura.ShowDialog();
+        }
     }
 }
