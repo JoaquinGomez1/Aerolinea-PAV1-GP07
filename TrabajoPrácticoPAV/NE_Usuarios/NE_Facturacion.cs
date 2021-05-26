@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.Backend;
 using System.Data;
+using System.Windows.Forms;
 
 namespace TrabajoPrácticoPAV.NE_Usuarios
 {
     class NE_Facturacion
     {
         Conexion_DB _BD = new Conexion_DB();
+        Tratamientos_Especiales tratamiento = new Tratamientos_Especiales();
         public DataTable RecuperarPasajero(string reserva)
         {
             return _BD.EjecutarSelect(@"SELECT R.numeroDocTitular, R.tipoDocTitular, P.nombre, P.apellido "
@@ -26,6 +28,10 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
                                       + " JOIN Vuelo V ON V.codigoAeropuertoDestino = VT.codigoAeropuertoDestino"
                                       + " AND V.codigoAeropuertoSalida = VT.codigoAeropuertoSalida " 
                                       + " WHERE R.numeroDeReserva = " + reserva);
+        }
+        public void Insertar(Control.ControlCollection controles)
+        {
+            _BD.Insertar(tratamiento.CostructorInsert("Factura", controles), false);
         }
     }
 }

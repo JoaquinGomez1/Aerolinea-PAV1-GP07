@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.Clase.Modelos;
-using TrabajoPrácticoPAV.Formularios.Reservas;
+using TrabajoPrácticoPAV.Backend;
 using TrabajoPrácticoPAV.NE_Usuarios;
 using static TrabajoPrácticoPAV.Clase.Tratamientos_Especiales;
 
@@ -18,65 +18,63 @@ namespace TrabajoPrácticoPAV.Formularios.Facturaciones
 {
     public partial class Frm_Facturacion : Form
     {
+        public string Id_reserva { get; set; }
+        public string Forma_Pago { get; set; }
+        public DataTable pasajero { get; set; }
+        public DataTable vuelo { get; set; }
+        
         NE_Facturacion facturacion = new NE_Facturacion();
-        DataTable tabla1 = new DataTable();
-        DataTable tabla2 = new DataTable();
+        Conexion_DB _BD = new Conexion_DB();
+
         public Frm_Facturacion()
         {
             InitializeComponent();
             this.BackColor = Estilo.ColorFondoForms;
             Estilo.FormatearEstilo(this.Controls);
         }
-
         private void btn_cancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
         private void Frm_Facturacion_Load(object sender, EventArgs e)
         {
             grid_vuelo.Formatear();
-            
+            btn_GenerarFactura.Enabled = false;
         }
-
         private void btn_buscarReserva_Click(object sender, EventArgs e)
         {
-            tabla1 = facturacion.RecuperarPasajero(txt_numeroReserva.Text);
-            tabla2 = facturacion.RecuperarVueloxReserva(txt_numeroReserva.Text);
-            if (tabla2.Rows.Count != 0)
+            Id_reserva = txt_numeroReserva.Text;
+            pasajero = facturacion.RecuperarPasajero(txt_numeroReserva.Text);
+            vuelo = facturacion.RecuperarVueloxReserva(txt_numeroReserva.Text);
+            if (vuelo.Rows.Count != 0)
             {
                 grid_vuelo.Rows.Add(
-                tabla2.Rows[0][0].ToString()
-                , tabla2.Rows[0][1].ToString()
-                , tabla2.Rows[0][2].ToString()
+                vuelo.Rows[0][0].ToString()
+                , vuelo.Rows[0][1].ToString()
+                , vuelo.Rows[0][2].ToString()
                 );
             }
-            if (tabla1.Rows.Count != 0)
+            if (pasajero.Rows.Count != 0)
             {
-                txt_numeroDoc.Text = tabla1.Rows[0][0].ToString();
-                txt_tipoDoc.Text = tabla1.Rows[0][1].ToString();
-                txt_nombre.Text = tabla1.Rows[0][2].ToString();
-                txt_apellido.Text = tabla1.Rows[0][3].ToString();
+                txt_numeroDoc.Text = pasajero.Rows[0][0].ToString();
+                txt_tipoDoc.Text = pasajero.Rows[0][1].ToString();
+                txt_nombre.Text = pasajero.Rows[0][2].ToString();
+                txt_apellido.Text = pasajero.Rows[0][3].ToString();
+                btn_GenerarFactura.Enabled = true;
             }
             else
             {
                 MessageBox.Show("No se ha encontrado una reserva con el número de reserva ingresado.");
             }
         }
-
         private void btn_GenerarFactura_Click(object sender, EventArgs e)
         {
-
+            Frm_MostrarFacturacion mostrarFacturacion = new Frm_MostrarFacturacion();
+            mostrarFacturacion.Id_reserva = Id_reserva;
+            mostrarFacturacion.pasajero = pasajero;
+            mostrarFacturacion.vuelo = vuelo;
+            mostrarFacturacion.ShowDialog();
         }
-        //public string CompletarNumero(string numero, string mascara)
-        //{
-        //    int comaMascar = mascara.IndexOf(',', 0);
-        //    int comaNumero = numero.IndexOf(',', 0);
-        //    if (comaNumero < comaMascar)
-        //    {
-        //        numero = numero.PadLeft(comaMascar + 3, ' ');
-        //    }
-        //    return numero;
-        //}
+      
     }
 }
