@@ -96,7 +96,6 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             };
             lbl_DocTitular.Text = pasajero.numeroDoc;
             lbl_nombreTitular.Text = pasajero.nombre;
-
         }
 
         private void CargarGrilla(DataTable table)
