@@ -69,6 +69,7 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
         {
             string viajeSeleccionado = $"{comboBox_Aerolinea1.SelectedValue}";
             if (viajeSeleccionado == "" || viajeSeleccionado == "null") return;
+            MessageBox.Show($"{viajeSeleccionado}");
 
             DataTable pasajerosDelViaje = _NE_Reserva.GetTodosLosPasajeros(viajeSeleccionado);
 
@@ -114,6 +115,6 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
                 grid_pasajeros.Rows[i].Cells[3].Value = $"{table.Rows[i]["apellido"]}";
             }
         }
-        
+
     }
 }

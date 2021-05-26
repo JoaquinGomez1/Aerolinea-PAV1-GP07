@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.Data;
@@ -8,6 +9,9 @@ using TrabajoPrácticoPAV.Clase.Modelos;
 using TrabajoPrácticoPAV.Formularios.Reservas;
 using TrabajoPrácticoPAV.NE_Usuarios;
 using static TrabajoPrácticoPAV.Clase.Tratamientos_Especiales;
+
+
+// 6789
 
 namespace TrabajoPrácticoPAV.Formularios
 {
@@ -132,6 +136,20 @@ namespace TrabajoPrácticoPAV.Formularios
             {
                 // Ejecutar en caso valido
                 MessageBox.Show("Formulario Válido .... Esperando implementación");
+
+                List<int> numerosGenerados = new List<int>() { };
+
+                foreach (var item in ObserverListaPasajeros)
+                {
+                    int rnd = new Random().Next(1, 99);
+                    while (numerosGenerados.Contains(rnd))
+                    {
+                        rnd = new Random().Next(1, 99);
+
+                    }
+                    numerosGenerados.Add(rnd);
+
+                }
             }
         }
 

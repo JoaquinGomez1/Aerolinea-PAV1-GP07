@@ -89,9 +89,11 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             return value;
         }
 
-        public DataTable GetTodosLosPasajeros(string numeroDeViaje)
+        public DataTable GetTodosLosPasajeros(string numeroDeReserva)
         {
-            string sql = $"SELECT * FROM RESERVA WHERE numeroDeViaje = {numeroDeViaje}";
+            string sql = $"SELECT * FROM Reservas_X_Pasajero " +
+                         $"JOIN Pasajero ON Pasajero.tipoDoc = Reservas_X_Pasajero.tipoDoc " +
+                         $"AND Pasajero.numeroDoc = Reservas_X_Pasajero.numeroDoc WHERE numeroDeReserva = {numeroDeReserva}";
             return _DB.EjecutarSelect(sql);
         }
 
