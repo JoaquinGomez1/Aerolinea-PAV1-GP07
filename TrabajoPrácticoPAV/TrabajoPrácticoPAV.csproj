@@ -156,12 +156,24 @@
     <Compile Include="Formularios\Ciudad\Frm_Ciudad.Designer.cs">
       <DependentUpon>Frm_Ciudad.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Facturaciones\Frm_EliminarFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Facturaciones\Frm_EliminarFactura.Designer.cs">
+      <DependentUpon>Frm_EliminarFactura.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Facturaciones\Frm_Facturacion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Facturaciones\Frm_Facturacion.Designer.cs">
       <DependentUpon>Frm_Facturacion.cs</DependentUpon>
-      </Compile>
+    </Compile>
+    <Compile Include="Formularios\Facturaciones\Frm_MostrarFacturacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Facturaciones\Frm_MostrarFacturacion.Designer.cs">
+      <DependentUpon>Frm_MostrarFacturacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Reservas\Frm_CargarPasajerosPorReserva.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -534,9 +546,15 @@
     <EmbeddedResource Include="Formularios\Ciudad\Frm_Ciudad.resx">
       <DependentUpon>Frm_Ciudad.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Facturaciones\Frm_EliminarFactura.resx">
+      <DependentUpon>Frm_EliminarFactura.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Facturaciones\Frm_Facturacion.resx">
       <DependentUpon>Frm_Facturacion.cs</DependentUpon>
-      </EmbeddedResource>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Facturaciones\Frm_MostrarFacturacion.resx">
+      <DependentUpon>Frm_MostrarFacturacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Reservas\Frm_CargarPasajerosPorReserva.resx">
       <DependentUpon>Frm_CargarPasajerosPorReserva.cs</DependentUpon>
     </EmbeddedResource>

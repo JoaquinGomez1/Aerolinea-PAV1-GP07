@@ -96,11 +96,11 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             };
             lbl_DocTitular.Text = pasajero.numeroDoc;
             lbl_nombreTitular.Text = pasajero.nombre;
-
         }
 
         private void CargarGrilla(DataTable table)
         {
+            grid_pasajeros.Rows.Clear();
             lbl_CantPasajeros.Text = table.Rows.Count.ToString();
             if (table.Rows.Count <= 0) MessageBox.Show("No hay datos en la tabla");
 
@@ -114,6 +114,6 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
                 grid_pasajeros.Rows[i].Cells[3].Value = $"{table.Rows[i]["apellido"]}";
             }
         }
-        
+
     }
 }
