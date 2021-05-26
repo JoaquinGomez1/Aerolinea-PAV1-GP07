@@ -69,7 +69,6 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
         {
             string viajeSeleccionado = $"{comboBox_Aerolinea1.SelectedValue}";
             if (viajeSeleccionado == "" || viajeSeleccionado == "null") return;
-            MessageBox.Show($"{viajeSeleccionado}");
 
             DataTable pasajerosDelViaje = _NE_Reserva.GetTodosLosPasajeros(viajeSeleccionado);
 
@@ -102,6 +101,7 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
 
         private void CargarGrilla(DataTable table)
         {
+            grid_pasajeros.Rows.Clear();
             lbl_CantPasajeros.Text = table.Rows.Count.ToString();
             if (table.Rows.Count <= 0) MessageBox.Show("No hay datos en la tabla");
 

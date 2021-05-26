@@ -33,6 +33,10 @@ namespace TrabajoPrácticoPAV.Formularios.Facturaciones
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txt_numeroDoc = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
+            this.txt_tipoDoc = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
+            this.txt_apellido = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
+            this.txt_nombre = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -43,10 +47,6 @@ namespace TrabajoPrácticoPAV.Formularios.Facturaciones
             this.btn_eliminar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.btn_cancelar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.btn_GenerarFactura = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
-            this.txt_numeroDoc = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
-            this.txt_tipoDoc = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
-            this.txt_apellido = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
-            this.txt_nombre = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_vuelo)).BeginInit();
             this.SuspendLayout();
@@ -96,6 +96,50 @@ namespace TrabajoPrácticoPAV.Formularios.Facturaciones
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(557, 65);
             this.panel2.TabIndex = 3;
+            // 
+            // txt_numeroDoc
+            // 
+            this.txt_numeroDoc.Location = new System.Drawing.Point(444, 36);
+            this.txt_numeroDoc.Name = "txt_numeroDoc";
+            this.txt_numeroDoc.Pp_EsPk = true;
+            this.txt_numeroDoc.Pp_MensajeError = null;
+            this.txt_numeroDoc.Pp_NombreCampo = "numeroDoc";
+            this.txt_numeroDoc.Pp_NombreTabla = "Pasajero";
+            this.txt_numeroDoc.Size = new System.Drawing.Size(100, 20);
+            this.txt_numeroDoc.TabIndex = 4;
+            // 
+            // txt_tipoDoc
+            // 
+            this.txt_tipoDoc.Location = new System.Drawing.Point(444, 10);
+            this.txt_tipoDoc.Name = "txt_tipoDoc";
+            this.txt_tipoDoc.Pp_EsPk = true;
+            this.txt_tipoDoc.Pp_MensajeError = null;
+            this.txt_tipoDoc.Pp_NombreCampo = "tipoDoc";
+            this.txt_tipoDoc.Pp_NombreTabla = "Pasajero";
+            this.txt_tipoDoc.Size = new System.Drawing.Size(100, 20);
+            this.txt_tipoDoc.TabIndex = 5;
+            // 
+            // txt_apellido
+            // 
+            this.txt_apellido.Location = new System.Drawing.Point(70, 37);
+            this.txt_apellido.Name = "txt_apellido";
+            this.txt_apellido.Pp_EsPk = false;
+            this.txt_apellido.Pp_MensajeError = null;
+            this.txt_apellido.Pp_NombreCampo = "apellido";
+            this.txt_apellido.Pp_NombreTabla = "Pasajero";
+            this.txt_apellido.Size = new System.Drawing.Size(116, 20);
+            this.txt_apellido.TabIndex = 3;
+            // 
+            // txt_nombre
+            // 
+            this.txt_nombre.Location = new System.Drawing.Point(70, 11);
+            this.txt_nombre.Name = "txt_nombre";
+            this.txt_nombre.Pp_EsPk = false;
+            this.txt_nombre.Pp_MensajeError = null;
+            this.txt_nombre.Pp_NombreCampo = "nombre";
+            this.txt_nombre.Pp_NombreTabla = "Pasajero";
+            this.txt_nombre.Size = new System.Drawing.Size(116, 20);
+            this.txt_nombre.TabIndex = 3;
             // 
             // label7
             // 
@@ -212,50 +256,6 @@ namespace TrabajoPrácticoPAV.Formularios.Facturaciones
             this.btn_GenerarFactura.Text = "Generar factura";
             this.btn_GenerarFactura.UseVisualStyleBackColor = true;
             this.btn_GenerarFactura.Click += new System.EventHandler(this.btn_GenerarFactura_Click);
-            // 
-            // txt_numeroDoc
-            // 
-            this.txt_numeroDoc.Location = new System.Drawing.Point(444, 36);
-            this.txt_numeroDoc.Name = "txt_numeroDoc";
-            this.txt_numeroDoc.Pp_EsPk = true;
-            this.txt_numeroDoc.Pp_MensajeError = null;
-            this.txt_numeroDoc.Pp_NombreCampo = "numeroDoc";
-            this.txt_numeroDoc.Pp_NombreTabla = "Pasajero";
-            this.txt_numeroDoc.Size = new System.Drawing.Size(100, 20);
-            this.txt_numeroDoc.TabIndex = 4;
-            // 
-            // txt_tipoDoc
-            // 
-            this.txt_tipoDoc.Location = new System.Drawing.Point(444, 10);
-            this.txt_tipoDoc.Name = "txt_tipoDoc";
-            this.txt_tipoDoc.Pp_EsPk = true;
-            this.txt_tipoDoc.Pp_MensajeError = null;
-            this.txt_tipoDoc.Pp_NombreCampo = "tipoDoc";
-            this.txt_tipoDoc.Pp_NombreTabla = "Pasajero";
-            this.txt_tipoDoc.Size = new System.Drawing.Size(100, 20);
-            this.txt_tipoDoc.TabIndex = 5;
-            // 
-            // txt_apellido
-            // 
-            this.txt_apellido.Location = new System.Drawing.Point(70, 37);
-            this.txt_apellido.Name = "txt_apellido";
-            this.txt_apellido.Pp_EsPk = false;
-            this.txt_apellido.Pp_MensajeError = null;
-            this.txt_apellido.Pp_NombreCampo = "apellido";
-            this.txt_apellido.Pp_NombreTabla = "Pasajero";
-            this.txt_apellido.Size = new System.Drawing.Size(116, 20);
-            this.txt_apellido.TabIndex = 3;
-            // 
-            // txt_nombre
-            // 
-            this.txt_nombre.Location = new System.Drawing.Point(70, 11);
-            this.txt_nombre.Name = "txt_nombre";
-            this.txt_nombre.Pp_EsPk = false;
-            this.txt_nombre.Pp_MensajeError = null;
-            this.txt_nombre.Pp_NombreCampo = "nombre";
-            this.txt_nombre.Pp_NombreTabla = "Pasajero";
-            this.txt_nombre.Size = new System.Drawing.Size(116, 20);
-            this.txt_nombre.TabIndex = 3;
             // 
             // Frm_Facturacion
             // 
