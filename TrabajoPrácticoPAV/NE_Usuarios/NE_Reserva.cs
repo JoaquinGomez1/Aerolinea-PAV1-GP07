@@ -95,6 +95,12 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             return _DB.EjecutarSelect(sql);
         }
 
+        public void ModificarReserva(Reserva reserva)
+        {
+            string sql = $"UPDATE Reserva SET fechaDeSalida = {reserva.fechaDeSalida}, numeroDeViaje = {reserva.numeroDeViaje}, precio = {reserva.precio} WHERE numeroDeReserva = {reserva.numeroDeReserva}";
+            _DB.Modificar(sql, false);
+        }
+
 
     }
 }

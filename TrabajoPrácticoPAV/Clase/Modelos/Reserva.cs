@@ -10,6 +10,7 @@ namespace TrabajoPrácticoPAV.Clase.Modelos
     {
         public string numeroDeReserva { get; set; }
         public string fechaDeReserva { get; set; }
+        public string fechaDeSalida { get; set; }
         public string confirmacion { get; set; }
         public string numeroDeViaje { get; set; }
         public string numeroDocTitular { get; set; }
