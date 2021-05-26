@@ -122,6 +122,12 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
 
         }
 
+        public void ModificarReserva(Reserva reserva)
+        {
+            string sql = $"UPDATE Reserva SET fechaDeSalida = {reserva.fechaDeSalida}, numeroDeViaje = {reserva.numeroDeViaje}, precio = {reserva.precio} WHERE numeroDeReserva = {reserva.numeroDeReserva}";
+            _DB.Modificar(sql, false);
+        }
+
         public string Numero_reserva()
         {
             string sql = "SELECT TOP 1 numeroDeReserva FROM Reserva ORDER BY numeroDeReserva DESC";
