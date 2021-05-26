@@ -42,15 +42,15 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             this.Btn_Cerrar = new System.Windows.Forms.PictureBox();
             this.Titulo = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbl_precio = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lbl_numViaje = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.btn_cancelar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.txt_cantPasajeros = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
             this.cmb_destino = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
@@ -200,7 +200,7 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.lbl_precio);
             this.panel1.Controls.Add(this.txt_cantPasajeros);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
@@ -221,6 +221,39 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(488, 220);
             this.panel1.TabIndex = 107;
+            // 
+            // lbl_precio
+            // 
+            this.lbl_precio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.lbl_precio.Location = new System.Drawing.Point(145, 182);
+            this.lbl_precio.Margin = new System.Windows.Forms.Padding(2, 15, 2, 0);
+            this.lbl_precio.Name = "lbl_precio";
+            this.lbl_precio.Size = new System.Drawing.Size(101, 16);
+            this.lbl_precio.TabIndex = 112;
+            this.lbl_precio.Text = "???";
+            this.lbl_precio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label8
+            // 
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.label8.Location = new System.Drawing.Point(6, 182);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 15, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(126, 16);
+            this.label8.TabIndex = 110;
+            this.label8.Text = "Precio";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label7
+            // 
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.label7.Location = new System.Drawing.Point(5, 129);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 15, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(128, 38);
+            this.label7.TabIndex = 109;
+            this.label7.Text = "Cantidad de Pasajeros";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
             // 
@@ -290,39 +323,6 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             this.panel3.Size = new System.Drawing.Size(514, 399);
             this.panel3.TabIndex = 111;
             // 
-            // label7
-            // 
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.label7.Location = new System.Drawing.Point(5, 129);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 15, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(128, 38);
-            this.label7.TabIndex = 109;
-            this.label7.Text = "Cantidad de Pasajeros";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label8
-            // 
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.label8.Location = new System.Drawing.Point(6, 182);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 15, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(126, 16);
-            this.label8.TabIndex = 110;
-            this.label8.Text = "Precio";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label10
-            // 
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.label10.Location = new System.Drawing.Point(145, 182);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 15, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(101, 16);
-            this.label10.TabIndex = 112;
-            this.label10.Text = "???";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // btn_cancelar
             // 
             this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -354,13 +354,14 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             this.cmb_destino.Name = "cmb_destino";
             this.cmb_destino.Pp_CampoAceptaNull = false;
             this.cmb_destino.Pp_EsPk = false;
-            this.cmb_destino.Pp_MensajeError = "Cargar clase de asiento";
+            this.cmb_destino.Pp_MensajeError = "Cargar destino de viaje";
             this.cmb_destino.Pp_NombreCampo = "nombre";
             this.cmb_destino.Pp_NombreCampoInsert = null;
-            this.cmb_destino.Pp_NombreTabla = "Tipo_Asiento";
-            this.cmb_destino.Pp_PkTabla = "idTipo";
+            this.cmb_destino.Pp_NombreTabla = "Aeropuerto";
+            this.cmb_destino.Pp_PkTabla = "codigo";
             this.cmb_destino.Size = new System.Drawing.Size(101, 21);
             this.cmb_destino.TabIndex = 108;
+            this.cmb_destino.SelectedIndexChanged += new System.EventHandler(this.cmb_destino_SelectedIndexChanged);
             // 
             // cmb_origen
             // 
@@ -369,13 +370,14 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             this.cmb_origen.Name = "cmb_origen";
             this.cmb_origen.Pp_CampoAceptaNull = false;
             this.cmb_origen.Pp_EsPk = false;
-            this.cmb_origen.Pp_MensajeError = "Cargar clase de asiento";
+            this.cmb_origen.Pp_MensajeError = "Cargar origen de viaje";
             this.cmb_origen.Pp_NombreCampo = "nombre";
             this.cmb_origen.Pp_NombreCampoInsert = null;
-            this.cmb_origen.Pp_NombreTabla = "Tipo_Asiento";
-            this.cmb_origen.Pp_PkTabla = "idTipo";
+            this.cmb_origen.Pp_NombreTabla = "Aeropuerto";
+            this.cmb_origen.Pp_PkTabla = "codigo";
             this.cmb_origen.Size = new System.Drawing.Size(101, 21);
             this.cmb_origen.TabIndex = 107;
+            this.cmb_origen.SelectedIndexChanged += new System.EventHandler(this.cmb_origen_SelectedIndexChanged);
             // 
             // cmb_numReserva
             // 
@@ -513,7 +515,7 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
         private Clase.ComboBox_Aerolinea cmb_numReserva;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lbl_precio;
         private Clase.TextBox_Aerolinea txt_cantPasajeros;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
