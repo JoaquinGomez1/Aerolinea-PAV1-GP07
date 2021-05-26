@@ -161,7 +161,13 @@
     </Compile>
     <Compile Include="Formularios\Facturaciones\Frm_Facturacion.Designer.cs">
       <DependentUpon>Frm_Facturacion.cs</DependentUpon>
-      </Compile>
+    </Compile>
+    <Compile Include="Formularios\Facturaciones\Frm_MostrarFacturacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Facturaciones\Frm_MostrarFacturacion.Designer.cs">
+      <DependentUpon>Frm_MostrarFacturacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Reservas\Frm_CargarPasajerosPorReserva.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -536,7 +542,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Facturaciones\Frm_Facturacion.resx">
       <DependentUpon>Frm_Facturacion.cs</DependentUpon>
-      </EmbeddedResource>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Facturaciones\Frm_MostrarFacturacion.resx">
+      <DependentUpon>Frm_MostrarFacturacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Reservas\Frm_CargarPasajerosPorReserva.resx">
       <DependentUpon>Frm_CargarPasajerosPorReserva.cs</DependentUpon>
     </EmbeddedResource>
