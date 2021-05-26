@@ -53,19 +53,19 @@ namespace TrabajoPrácticoPAV.Formularios.Asientos
         {
             Tratamientos_Especiales Tratamiento = new Tratamientos_Especiales();
 
-            if (Tratamiento.Validar(this.Controls) == Tratamientos_Especiales.Resultado.correcto)
+            if (Tratamiento.Validar(this.Controls) == Tratamientos_Especiales.Resultado.correcto
+                 && Tratamiento.Validar(this.panel1.Controls) == Tratamientos_Especiales.Resultado.correcto)
             {
-                Conexion_DB _BD = new Conexion_DB();
-                Tratamiento.Validar(this.Controls);
 
-                //string sql = Tratamiento.CostructorInsert("Asientos", panel1.Controls);
-                //_BD.Insertar(sql, false);
-                asiento.Insertar(this.Controls);
+                for (int i = 0; i < Int32.Parse(mtxt_cantidad.Text); i++)
+                {
+
+                    //string sql = Tratamiento.CostructorInsert("Asientos", panel1.Controls);
+                    //_BD.Insertar(sql, false);
+                    asiento.Insertar(this.Controls);
                     this.Close();
-            }
-            else
-            {
-                return;
+
+                }
             }
         }
 
