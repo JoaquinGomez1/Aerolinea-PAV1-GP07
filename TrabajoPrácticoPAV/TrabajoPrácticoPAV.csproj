@@ -156,6 +156,12 @@
     <Compile Include="Formularios\Ciudad\Frm_Ciudad.Designer.cs">
       <DependentUpon>Frm_Ciudad.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Facturaciones\Frm_EliminarFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Facturaciones\Frm_EliminarFactura.Designer.cs">
+      <DependentUpon>Frm_EliminarFactura.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Facturaciones\Frm_Facturacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -539,6 +545,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Ciudad\Frm_Ciudad.resx">
       <DependentUpon>Frm_Ciudad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Facturaciones\Frm_EliminarFactura.resx">
+      <DependentUpon>Frm_EliminarFactura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Facturaciones\Frm_Facturacion.resx">
       <DependentUpon>Frm_Facturacion.cs</DependentUpon>
