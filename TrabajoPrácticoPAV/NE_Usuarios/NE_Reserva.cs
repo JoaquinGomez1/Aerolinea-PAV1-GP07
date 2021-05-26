@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using System.Data;
 using System.Globalization;
-using System.Linq;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Backend;
 using TrabajoPrácticoPAV.Clase.Modelos;
@@ -185,7 +182,5 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             MessageBox.Show(sql);
             return (_DB.EjecutarSelect(sql));
         }
-
-
     }
 }
