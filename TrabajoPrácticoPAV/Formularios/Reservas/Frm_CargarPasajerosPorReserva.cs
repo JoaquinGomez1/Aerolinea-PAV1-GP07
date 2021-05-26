@@ -11,7 +11,6 @@ using TrabajoPrácticoPAV.Clase;
 using System.Runtime.InteropServices;
 using static TrabajoPrácticoPAV.Clase.Tratamientos_Especiales;
 using TrabajoPrácticoPAV.Clase.Modelos;
-using TrabajoPrácticoPAV.Formularios.Reservas;
 using TrabajoPrácticoPAV.NE_Usuarios;
 
 namespace TrabajoPrácticoPAV.Formularios.Reservas

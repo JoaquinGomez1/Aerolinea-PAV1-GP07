@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using System.Data;
 using System.Globalization;
-using System.Linq;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Backend;
 using TrabajoPrácticoPAV.Clase.Modelos;
@@ -125,6 +122,12 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
 
         }
 
+        public void ModificarReserva(Reserva reserva)
+        {
+            string sql = $"UPDATE Reserva SET fechaSalida = {reserva.fechaDeSalida}, numeroDeViaje = {reserva.numeroDeViaje}, precio = {reserva.precio} WHERE numeroDeReserva = {reserva.numeroDeReserva}";
+            _DB.Modificar(sql, false);
+        }
+
         public string Numero_reserva()
         {
             string sql = "SELECT TOP 1 numeroDeReserva FROM Reserva ORDER BY numeroDeReserva DESC";
@@ -185,7 +188,5 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             MessageBox.Show(sql);
             return (_DB.EjecutarSelect(sql));
         }
-
-
     }
 }
