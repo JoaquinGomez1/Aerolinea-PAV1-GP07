@@ -196,7 +196,7 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
 
         private void btn_modify_Click(object sender, EventArgs e)
         {
-            double valdec = Convert.ToDouble(lbl_precio.Text);
+            double precioDouble = Convert.ToDouble(lbl_precio.Text);
 
             Reserva reserva = new Reserva()
             {
@@ -204,11 +204,12 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
                 fechaDeSalida = mtxt_fechaViaje.Text.ToString(),
                 numeroDeViaje = lbl_numViaje.Text,
                 numeroDocTitular = mtxt_numDoc.Text,
-                tipoDocTitular = cmb_tipoDoc.Text,
-                precio = valdec,
+                tipoDocTitular = cmb_tipoDoc.SelectedValue.ToString(),
+                precio = precioDouble,
 
             };
             _NE.ModificarReserva(reserva);
+            this.Close();
         }
     }
 }

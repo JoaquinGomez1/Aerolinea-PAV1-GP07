@@ -49,7 +49,7 @@ namespace TrabajoPrácticoPAV.Formularios
 
             ObserverListaPasajeros = new ObservableCollection<Pasajero>();
             ObserverListaPasajeros.CollectionChanged += listChanged;
-            //            cargarPasajero.FormClosed += CargarPasajeroClosed;
+            modificarReserva.FormClosed += ModificarReservaClosed;
         }
 
         private void Frm_ABMReservas_Load(object sender, EventArgs e)
@@ -227,6 +227,12 @@ namespace TrabajoPrácticoPAV.Formularios
                 grid_reservas.Rows[i].Cells[3].Value = tabla.Rows[i]["numeroDeViaje"].ToString();
                 grid_reservas.Rows[i].Cells[4].Value = tabla.Rows[i]["precio"].ToString();
             }
+        }
+
+        private void ModificarReservaClosed(object sender, FormClosedEventArgs e)
+        {
+            DataTable tabla = _NE_Reserva.GetTodos();
+            CargarGrilla(tabla);
         }
 
         private void button1_Click(object sender, EventArgs e)
