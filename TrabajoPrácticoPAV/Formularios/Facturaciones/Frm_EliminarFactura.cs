@@ -52,7 +52,15 @@ namespace TrabajoPrácticoPAV.Formularios.Facturaciones
             pasajero = facturacion.RecuperarPasajero(Id_reserva);
             vuelo = facturacion.RecuperarVueloxReserva(Id_reserva);
             factura = facturacion.RecuperarFactura(Id_reserva);
-            MostrarDatos(pasajero, vuelo);
+            if (factura.Rows.Count != 0 ){
+                MostrarDatos(pasajero, vuelo);
+            }
+            else
+            {
+                MessageBox.Show("No hay facturas para la reserva.");
+                this.Close();
+            }
+            
         }
 
         private void btn_cancelar_Click(object sender, EventArgs e)

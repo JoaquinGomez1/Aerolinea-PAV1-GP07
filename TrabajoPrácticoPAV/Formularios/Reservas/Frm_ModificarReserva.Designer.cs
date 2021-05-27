@@ -43,24 +43,24 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             this.Titulo = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbl_precio = new System.Windows.Forms.Label();
+            this.txt_cantPasajeros = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.cmb_destino = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
+            this.cmb_origen = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
             this.label6 = new System.Windows.Forms.Label();
             this.lbl_numViaje = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btn_cancelar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
-            this.txt_cantPasajeros = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
-            this.cmb_destino = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
-            this.cmb_origen = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
             this.cmb_numReserva = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
+            this.label1 = new System.Windows.Forms.Label();
             this.cmb_claseAsiento = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
             this.mtxt_fechaViaje = new TrabajoPrácticoPAV.Clase.MaskedTextBox_Aerolinea();
-            this.btn_modify = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.mtxt_numDoc = new TrabajoPrácticoPAV.Clase.MaskedTextBox_Aerolinea();
             this.cmb_tipoDoc = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btn_cancelar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
+            this.btn_modify = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.BarraSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Cerrar)).BeginInit();
@@ -233,6 +233,17 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             this.lbl_precio.Text = "???";
             this.lbl_precio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // txt_cantPasajeros
+            // 
+            this.txt_cantPasajeros.Location = new System.Drawing.Point(145, 139);
+            this.txt_cantPasajeros.Name = "txt_cantPasajeros";
+            this.txt_cantPasajeros.Pp_EsPk = false;
+            this.txt_cantPasajeros.Pp_MensajeError = null;
+            this.txt_cantPasajeros.Pp_NombreCampo = null;
+            this.txt_cantPasajeros.Pp_NombreTabla = null;
+            this.txt_cantPasajeros.Size = new System.Drawing.Size(100, 20);
+            this.txt_cantPasajeros.TabIndex = 111;
+            // 
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
@@ -254,98 +265,6 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             this.label7.TabIndex = 109;
             this.label7.Text = "Cantidad de Pasajeros";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(133, 17);
-            this.label6.TabIndex = 106;
-            this.label6.Text = "Datos de reserva";
-            // 
-            // lbl_numViaje
-            // 
-            this.lbl_numViaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.lbl_numViaje.Location = new System.Drawing.Point(378, 98);
-            this.lbl_numViaje.Margin = new System.Windows.Forms.Padding(2, 15, 2, 0);
-            this.lbl_numViaje.Name = "lbl_numViaje";
-            this.lbl_numViaje.Size = new System.Drawing.Size(100, 20);
-            this.lbl_numViaje.TabIndex = 101;
-            this.lbl_numViaje.Text = "???";
-            this.lbl_numViaje.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label5
-            // 
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.label5.Location = new System.Drawing.Point(254, 98);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 15, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(120, 20);
-            this.label5.TabIndex = 100;
-            this.label5.Text = "Numero de Viaje";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.label1.Location = new System.Drawing.Point(2, 32);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 15, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 20);
-            this.label1.TabIndex = 98;
-            this.label1.Text = "Numero de Reserva";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // panel2
-            // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.mtxt_numDoc);
-            this.panel2.Controls.Add(this.cmb_tipoDoc);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(12, 250);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(489, 79);
-            this.panel2.TabIndex = 108;
-            // 
-            // panel3
-            // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.btn_cancelar);
-            this.panel3.Controls.Add(this.panel1);
-            this.panel3.Controls.Add(this.btn_modify);
-            this.panel3.Controls.Add(this.panel2);
-            this.panel3.Location = new System.Drawing.Point(0, 31);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(514, 399);
-            this.panel3.TabIndex = 111;
-            // 
-            // btn_cancelar
-            // 
-            this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.btn_cancelar.Location = new System.Drawing.Point(295, 351);
-            this.btn_cancelar.Name = "btn_cancelar";
-            this.btn_cancelar.Pp_Presionado = false;
-            this.btn_cancelar.Size = new System.Drawing.Size(90, 28);
-            this.btn_cancelar.TabIndex = 110;
-            this.btn_cancelar.Text = "Cancelar";
-            this.btn_cancelar.UseVisualStyleBackColor = true;
-            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
-            // 
-            // txt_cantPasajeros
-            // 
-            this.txt_cantPasajeros.Location = new System.Drawing.Point(145, 139);
-            this.txt_cantPasajeros.Name = "txt_cantPasajeros";
-            this.txt_cantPasajeros.Pp_EsPk = false;
-            this.txt_cantPasajeros.Pp_MensajeError = null;
-            this.txt_cantPasajeros.Pp_NombreCampo = null;
-            this.txt_cantPasajeros.Pp_NombreTabla = null;
-            this.txt_cantPasajeros.Size = new System.Drawing.Size(100, 20);
-            this.txt_cantPasajeros.TabIndex = 111;
             // 
             // cmb_destino
             // 
@@ -379,6 +298,38 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             this.cmb_origen.TabIndex = 107;
             this.cmb_origen.SelectedIndexChanged += new System.EventHandler(this.cmb_origen_SelectedIndexChanged);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label6.Location = new System.Drawing.Point(2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(133, 17);
+            this.label6.TabIndex = 106;
+            this.label6.Text = "Datos de reserva";
+            // 
+            // lbl_numViaje
+            // 
+            this.lbl_numViaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.lbl_numViaje.Location = new System.Drawing.Point(378, 98);
+            this.lbl_numViaje.Margin = new System.Windows.Forms.Padding(2, 15, 2, 0);
+            this.lbl_numViaje.Name = "lbl_numViaje";
+            this.lbl_numViaje.Size = new System.Drawing.Size(100, 20);
+            this.lbl_numViaje.TabIndex = 101;
+            this.lbl_numViaje.Text = "???";
+            this.lbl_numViaje.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.label5.Location = new System.Drawing.Point(254, 98);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 15, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(120, 20);
+            this.label5.TabIndex = 100;
+            this.label5.Text = "Numero de Viaje";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // cmb_numReserva
             // 
             this.cmb_numReserva.FormattingEnabled = true;
@@ -394,6 +345,17 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             this.cmb_numReserva.Size = new System.Drawing.Size(101, 21);
             this.cmb_numReserva.TabIndex = 99;
             this.cmb_numReserva.TextChanged += new System.EventHandler(this.cmb_numReserva_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.label1.Location = new System.Drawing.Point(2, 32);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 15, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(145, 20);
+            this.label1.TabIndex = 98;
+            this.label1.Text = "Numero de Reserva";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // cmb_claseAsiento
             // 
@@ -424,17 +386,18 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             this.mtxt_fechaViaje.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mtxt_fechaViaje.ValidatingType = typeof(System.DateTime);
             // 
-            // btn_modify
+            // panel2
             // 
-            this.btn_modify.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_modify.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.btn_modify.Location = new System.Drawing.Point(132, 351);
-            this.btn_modify.Name = "btn_modify";
-            this.btn_modify.Pp_Presionado = false;
-            this.btn_modify.Size = new System.Drawing.Size(90, 28);
-            this.btn_modify.TabIndex = 109;
-            this.btn_modify.Text = "Modificar";
-            this.btn_modify.UseVisualStyleBackColor = true;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.mtxt_numDoc);
+            this.panel2.Controls.Add(this.cmb_tipoDoc);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Location = new System.Drawing.Point(12, 250);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(489, 79);
+            this.panel2.TabIndex = 108;
             // 
             // mtxt_numDoc
             // 
@@ -463,6 +426,44 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             this.cmb_tipoDoc.Pp_PkTabla = "tipoDoc";
             this.cmb_tipoDoc.Size = new System.Drawing.Size(60, 21);
             this.cmb_tipoDoc.TabIndex = 102;
+            // 
+            // panel3
+            // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.btn_cancelar);
+            this.panel3.Controls.Add(this.panel1);
+            this.panel3.Controls.Add(this.btn_modify);
+            this.panel3.Controls.Add(this.panel2);
+            this.panel3.Location = new System.Drawing.Point(0, 31);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(514, 399);
+            this.panel3.TabIndex = 111;
+            // 
+            // btn_cancelar
+            // 
+            this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.btn_cancelar.Location = new System.Drawing.Point(295, 351);
+            this.btn_cancelar.Name = "btn_cancelar";
+            this.btn_cancelar.Pp_Presionado = false;
+            this.btn_cancelar.Size = new System.Drawing.Size(90, 28);
+            this.btn_cancelar.TabIndex = 110;
+            this.btn_cancelar.Text = "Cancelar";
+            this.btn_cancelar.UseVisualStyleBackColor = true;
+            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
+            // 
+            // btn_modify
+            // 
+            this.btn_modify.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_modify.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.btn_modify.Location = new System.Drawing.Point(132, 351);
+            this.btn_modify.Name = "btn_modify";
+            this.btn_modify.Pp_Presionado = false;
+            this.btn_modify.Size = new System.Drawing.Size(90, 28);
+            this.btn_modify.TabIndex = 109;
+            this.btn_modify.Text = "Modificar";
+            this.btn_modify.UseVisualStyleBackColor = true;
+            this.btn_modify.Click += new System.EventHandler(this.btn_modify_Click);
             // 
             // Frm_ModificarReserva
             // 

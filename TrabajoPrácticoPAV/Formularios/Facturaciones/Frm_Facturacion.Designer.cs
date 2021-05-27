@@ -49,6 +49,7 @@ namespace TrabajoPrácticoPAV.Formularios.Facturaciones
             this.btn_eliminar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.btn_cancelar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.btn_GenerarFactura = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
+            this.button_Aerolinea1 = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_vuelo)).BeginInit();
@@ -243,17 +244,18 @@ namespace TrabajoPrácticoPAV.Formularios.Facturaciones
     "opuertoDestino, Aeropuerto Destino, 200";
             this.grid_vuelo.Pp_NombreTabla = "Vuelo";
             this.grid_vuelo.ReadOnly = true;
-            this.grid_vuelo.Size = new System.Drawing.Size(572, 218);
+            this.grid_vuelo.Size = new System.Drawing.Size(563, 218);
             this.grid_vuelo.TabIndex = 5;
             // 
             // btn_eliminar
             // 
+            this.btn_eliminar.Enabled = false;
             this.btn_eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.btn_eliminar.Location = new System.Drawing.Point(619, 217);
+            this.btn_eliminar.Location = new System.Drawing.Point(610, 251);
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.Pp_Presionado = false;
-            this.btn_eliminar.Size = new System.Drawing.Size(119, 28);
+            this.btn_eliminar.Size = new System.Drawing.Size(128, 28);
             this.btn_eliminar.TabIndex = 4;
             this.btn_eliminar.Text = "Eliminar factura";
             this.btn_eliminar.UseVisualStyleBackColor = true;
@@ -277,14 +279,28 @@ namespace TrabajoPrácticoPAV.Formularios.Facturaciones
             this.btn_GenerarFactura.Enabled = false;
             this.btn_GenerarFactura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_GenerarFactura.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.btn_GenerarFactura.Location = new System.Drawing.Point(619, 183);
+            this.btn_GenerarFactura.Location = new System.Drawing.Point(610, 183);
             this.btn_GenerarFactura.Name = "btn_GenerarFactura";
             this.btn_GenerarFactura.Pp_Presionado = false;
-            this.btn_GenerarFactura.Size = new System.Drawing.Size(119, 28);
+            this.btn_GenerarFactura.Size = new System.Drawing.Size(128, 28);
             this.btn_GenerarFactura.TabIndex = 4;
             this.btn_GenerarFactura.Text = "Generar factura";
             this.btn_GenerarFactura.UseVisualStyleBackColor = true;
             this.btn_GenerarFactura.Click += new System.EventHandler(this.btn_GenerarFactura_Click);
+            // 
+            // button_Aerolinea1
+            // 
+            this.button_Aerolinea1.Enabled = false;
+            this.button_Aerolinea1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Aerolinea1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.button_Aerolinea1.Location = new System.Drawing.Point(610, 217);
+            this.button_Aerolinea1.Name = "button_Aerolinea1";
+            this.button_Aerolinea1.Pp_Presionado = false;
+            this.button_Aerolinea1.Size = new System.Drawing.Size(128, 28);
+            this.button_Aerolinea1.TabIndex = 9;
+            this.button_Aerolinea1.Text = "Consultar factura";
+            this.button_Aerolinea1.UseVisualStyleBackColor = true;
+            this.button_Aerolinea1.Click += new System.EventHandler(this.button_Aerolinea1_Click);
             // 
             // Frm_Facturacion
             // 
@@ -292,6 +308,7 @@ namespace TrabajoPrácticoPAV.Formularios.Facturaciones
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(750, 413);
+            this.Controls.Add(this.button_Aerolinea1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_buscarReserva);
@@ -338,5 +355,6 @@ namespace TrabajoPrácticoPAV.Formularios.Facturaciones
         private Clase.DataGridView_Aerolinea grid_vuelo;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private Clase.Button_Aerolinea button_Aerolinea1;
     }
 }

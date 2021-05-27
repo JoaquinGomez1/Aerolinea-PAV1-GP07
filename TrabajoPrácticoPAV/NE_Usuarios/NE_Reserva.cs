@@ -135,16 +135,6 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
 
         }
 
-
-        //public void Eliminar_Asientos_Usados (DataTable asientos)
-        //{
-        //    DataTable asientos = new DataTable();
-        //    string sql = "SELECT numeroAsiento, numeroPorModelo FROM Resercas_X_Pasajero WHERE "
-
-        //}
-
-
-
         public DataTable Buscar_Asientos(string viaje)
         {
             DataTable tramo = new DataTable();
@@ -185,7 +175,6 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             string numeroPorModelo = vuelo.Rows[0]["numeroPorModelo"].ToString();
             string sql = "SELECT A.numeroAsiento, A.numeroPorModelo, A.idModelo FROM Asientos A WHERE A.numeroPorModelo = " + numeroPorModelo +
                         " AND A.idModelo = " + idModelo;
-            MessageBox.Show(sql);
             return (_DB.EjecutarSelect(sql));
         }
     }

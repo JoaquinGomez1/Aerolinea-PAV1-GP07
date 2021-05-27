@@ -186,5 +186,10 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             string precioFinal = precioStr.Substring(0, precioStr.Length - 2);
             lbl_precio.Text = $"${precioFinal}";
         }
+
+        private void btn_modify_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
