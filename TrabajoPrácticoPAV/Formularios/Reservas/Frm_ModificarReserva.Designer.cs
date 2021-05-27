@@ -409,6 +409,7 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             this.cmb_claseAsiento.Pp_PkTabla = "idTipo";
             this.cmb_claseAsiento.Size = new System.Drawing.Size(101, 21);
             this.cmb_claseAsiento.TabIndex = 92;
+            this.cmb_claseAsiento.TextChanged += new System.EventHandler(this.cmb_claseAsiento_TextChanged_1);
             // 
             // mtxt_fechaViaje
             // 
@@ -435,6 +436,7 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             this.btn_modify.TabIndex = 109;
             this.btn_modify.Text = "Modificar";
             this.btn_modify.UseVisualStyleBackColor = true;
+            this.btn_modify.Click += new System.EventHandler(this.btn_modify_Click);
             // 
             // mtxt_numDoc
             // 
@@ -457,7 +459,7 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             this.cmb_tipoDoc.Pp_CampoAceptaNull = false;
             this.cmb_tipoDoc.Pp_EsPk = false;
             this.cmb_tipoDoc.Pp_MensajeError = "Cargar tipo doc";
-            this.cmb_tipoDoc.Pp_NombreCampo = "nombreTipoDoc";
+            this.cmb_tipoDoc.Pp_NombreCampo = "tipoDoc";
             this.cmb_tipoDoc.Pp_NombreCampoInsert = null;
             this.cmb_tipoDoc.Pp_NombreTabla = "Tipo_Documento";
             this.cmb_tipoDoc.Pp_PkTabla = "tipoDoc";

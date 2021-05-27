@@ -124,7 +124,7 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
 
         public void ModificarReserva(Reserva reserva)
         {
-            string sql = $"UPDATE Reserva SET fechaSalida = {reserva.fechaDeSalida}, numeroDeViaje = {reserva.numeroDeViaje}, precio = {reserva.precio} WHERE numeroDeReserva = {reserva.numeroDeReserva}";
+            string sql = $"UPDATE Reserva SET fechaSalida='{reserva.fechaDeSalida}', numeroDeViaje={reserva.numeroDeViaje}, numeroDocTitular={reserva.numeroDocTitular}, tipoDocTitular={reserva.tipoDocTitular}, precio={reserva.precio} WHERE numeroDeReserva={reserva.numeroDeReserva}";
             _DB.Modificar(sql, false);
         }
 

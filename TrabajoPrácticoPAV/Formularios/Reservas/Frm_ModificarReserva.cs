@@ -72,15 +72,21 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
 
         private void listChanged(object sender, NotifyCollectionChangedEventArgs args)
         {
+            int cantPasajeros = 0;
             // El pasajero titular es el primero en cargarse a la lista
-            int cantPasajeros = ObserverListaPasajeros.Count;
+            if (txt_cantPasajeros.Text != null)
+            { cantPasajeros = Int32.Parse(txt_cantPasajeros.ToString()); }
 
             if (cantPasajeros == 0)
                 pasajeroTitular = null;
             else
                 pasajeroTitular = ObserverListaPasajeros[0];
 
-            if (cantPasajeros != 0) actualizarLabelPrecio(precio);
+            if (cantPasajeros != 0)
+            {
+                int precioInt = Decimal.ToInt32(precio) * cantPasajeros;
+                actualizarLabelPrecio(precioInt); 
+            }
             actualizarCantidadPasajeros($"{ObserverListaPasajeros.Count}");
         }
 
@@ -117,14 +123,14 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
                     numeroDeViaje = result.Rows[0]["numeroDeViaje"].ToString(),
                     numeroDocTitular = result.Rows[0]["numeroDocTitular"].ToString(),
                     tipoDocTitular = result.Rows[0]["tipoDocTitular"].ToString(),
-                    //precio = Int32.Parse(result.Rows[0]["precio"].ToString()),
-
+                    precio = Decimal.ToInt32((decimal)result.Rows[0]["precio"]),
             };
 
                 lbl_numViaje.Text = reserva.numeroDeViaje.ToString();
                 mtxt_numDoc.Text = reserva.numeroDocTitular.ToString();
                 cmb_tipoDoc.Text = reserva.tipoDocTitular.ToString();
                 mtxt_fechaViaje.Text = reserva.fechaDeSalida.ToString();
+                lbl_precio.Text = reserva.precio.ToString();
 
             }
 
@@ -167,24 +173,42 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             lbl_numViaje.Text = viaje.NumeroDeViaje.ToString();
         }
 
-        private void cmb_claseAsiento_TextChanged(object sender, EventArgs e)
+        private void actualizarLabelPrecio(int precio)
+        {
+            string precioStr = $"{precio}";
+            //string precioFinal = precioStr.Substring(0, precioStr.Length - 2);
+            lbl_precio.Text = $"{precioStr}";
+        }
+
+        private void cmb_claseAsiento_TextChanged_1(object sender, EventArgs e)
         {
             string clase = cmb_claseAsiento.Text;
 
             if (cmb_claseAsiento.Text != null)
             {
                 precio = _NE_Reserva.BuscarCosto(clase);
-                actualizarLabelPrecio(precio);
+                int cantPasajeros = 0;
+                Int32.TryParse(txt_cantPasajeros.Text.ToString(), out cantPasajeros);
+                int precioInt = Decimal.ToInt32(precio) * cantPasajeros;
+                actualizarLabelPrecio(precioInt);
             }
         }
 
-        private void actualizarLabelPrecio(decimal precio)
+        private void btn_modify_Click(object sender, EventArgs e)
         {
-            int cantPasajeros = ObserverListaPasajeros.Count;
-            decimal precioXPasajero = precio * cantPasajeros;
-            string precioStr = $"{precioXPasajero}";
-            string precioFinal = precioStr.Substring(0, precioStr.Length - 2);
-            lbl_precio.Text = $"${precioFinal}";
+            double valdec = Convert.ToDouble(lbl_precio.Text);
+
+            Reserva reserva = new Reserva()
+            {
+                numeroDeReserva = cmb_numReserva.Text,
+                fechaDeSalida = mtxt_fechaViaje.Text.ToString(),
+                numeroDeViaje = lbl_numViaje.Text,
+                numeroDocTitular = mtxt_numDoc.Text,
+                tipoDocTitular = cmb_tipoDoc.Text,
+                precio = valdec,
+
+            };
+            _NE.ModificarReserva(reserva);
         }
     }
 }
