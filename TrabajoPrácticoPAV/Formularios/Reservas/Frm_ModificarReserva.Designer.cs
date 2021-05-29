@@ -464,7 +464,6 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             this.btn_modify.TabIndex = 109;
             this.btn_modify.Text = "Modificar";
             this.btn_modify.UseVisualStyleBackColor = true;
-            this.btn_modify.Click += new System.EventHandler(this.btn_modify_Click);
             // 
             // Frm_ModificarReserva
             // 

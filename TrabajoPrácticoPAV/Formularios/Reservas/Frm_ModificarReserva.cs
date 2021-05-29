@@ -212,9 +212,5 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             this.Close();
         }
 
-        private void btn_modify_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
     }
 }
