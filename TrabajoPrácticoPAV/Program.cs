@@ -13,6 +13,8 @@ using TrabajoPrácticoPAV.Formularios.Ciudad;
 using TrabajoPrácticoPAV.Formularios.Asientos;
 using TrabajoPrácticoPAV.Formularios.Modelo;
 using TrabajoPrácticoPAV.Formularios.Aeropuertos;
+using TrabajoPrácticoPAV.Formularios.Listados;
+
 
 namespace TrabajoPrácticoPAV
 {
@@ -26,9 +28,10 @@ namespace TrabajoPrácticoPAV
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frm_Principal());
+            //Application.Run(new Frm_Principal());
             //Application.Run(new Frm_ABM_Aeropuerto());
             //Application.Run(new Frm_ABMProvincia());
+            Application.Run(new Frm_Reportes());
         }
     }
 }
