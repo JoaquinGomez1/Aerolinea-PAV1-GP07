@@ -101,6 +101,15 @@ namespace TrabajoPrácticoPAV
 
                     }
                     break;
+                case "Btn_Listado":
+                    if (!menuStrip3.Visible)
+                    {
+                        menuStrip3.Visible = true;
+                        menuStrip3.BringToFront();
+
+                    }
+                    break;
+
 
                 default:
                     MessageBox.Show("Esperando implementación");
@@ -112,7 +121,7 @@ namespace TrabajoPrácticoPAV
 
         private void CerrarTodosLosMenuStrip()
         {
-            List<MenuStrip> list = new List<MenuStrip>() { menuStrip1, menuStrip2 };
+            List<MenuStrip> list = new List<MenuStrip>() { menuStrip1, menuStrip2, menuStrip3 };
 
             foreach (MenuStrip menu in list)
             {
