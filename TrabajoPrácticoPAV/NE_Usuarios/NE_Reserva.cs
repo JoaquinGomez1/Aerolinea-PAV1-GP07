@@ -124,7 +124,7 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
 
         public void ModificarReserva(Reserva reserva)
         {
-            string sql = $"UPDATE Reserva SET fechaSalida = {reserva.fechaDeSalida}, numeroDeViaje = {reserva.numeroDeViaje}, precio = {reserva.precio} WHERE numeroDeReserva = {reserva.numeroDeReserva}";
+            string sql = $"UPDATE Reserva SET fechaSalida='{reserva.fechaDeSalida}', numeroDeViaje={reserva.numeroDeViaje}, numeroDocTitular={reserva.numeroDocTitular}, tipoDocTitular={reserva.tipoDocTitular}, precio={reserva.precio} WHERE numeroDeReserva={reserva.numeroDeReserva}";
             _DB.Modificar(sql, false);
         }
 
@@ -134,16 +134,6 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             return _DB.EjecutarSelect(sql).Rows[0][0].ToString();
 
         }
-
-
-        //public void Eliminar_Asientos_Usados (DataTable asientos)
-        //{
-        //    DataTable asientos = new DataTable();
-        //    string sql = "SELECT numeroAsiento, numeroPorModelo FROM Resercas_X_Pasajero WHERE "
-
-        //}
-
-
 
         public DataTable Buscar_Asientos(string viaje)
         {
@@ -185,7 +175,6 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             string numeroPorModelo = vuelo.Rows[0]["numeroPorModelo"].ToString();
             string sql = "SELECT A.numeroAsiento, A.numeroPorModelo, A.idModelo FROM Asientos A WHERE A.numeroPorModelo = " + numeroPorModelo +
                         " AND A.idModelo = " + idModelo;
-            MessageBox.Show(sql);
             return (_DB.EjecutarSelect(sql));
         }
     }

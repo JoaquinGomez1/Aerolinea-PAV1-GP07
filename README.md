@@ -5,7 +5,7 @@
 ```bash
  git clone <url-de-su-repositorio> 
  cd Aerolinea-PAV1-GP07-1 !-- Importante verificar que aparezca "(main)" entre parentesis y en azul al lado del nombre del directorio 
- git remote add upstream main https://github.com/JoaquinGomez1/Aerolinea-PAV1-GP07 --> Agregamos este repositorio como remoto
+ git remote add main https://github.com/JoaquinGomez1/Aerolinea-PAV1-GP07 --> Agregamos este repositorio como remoto
 ```
 para la url de su repositorio es importante que sea el que esta en su cuenta y no el original.
 para saber cual es la url van a su perfil en GitHub > Repositorios > abren el ultimo > copian la dirección del navegador

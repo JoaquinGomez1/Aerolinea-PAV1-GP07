@@ -61,13 +61,19 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
         }
 
 
-       //public DataTable Editar_avion (string numero , object idModelo)
-       // {
-       //     string sql = @"Update Avion set Avion.numeroPorModelo = " + numero + ", Avion.idModelo= " + idModelo
-       //     + " where Avion.numeroPorModelo = " + numero;
-       //     return _BD.EjecutarSelect(sql);
-            
-       // }
+        //public DataTable Editar_avion (string numero , object idModelo)
+        // {
+        //     string sql = @"Update Avion set Avion.numeroPorModelo = " + numero + ", Avion.idModelo= " + idModelo
+        //     + " where Avion.numeroPorModelo = " + numero;
+        //     return _BD.EjecutarSelect(sql);
+
+        // }
+
+        public DataTable RecuperarTodosReporte()
+        {
+            string sql = @"SELECT Avion.numeroPorModelo, Modelo.nombre from Avion inner join  Modelo on Avion.idModelo = Modelo.idModelo order by Modelo.nombre, Avion.numeroPorModelo";
+            return _BD.EjecutarSelect(sql);
+        }
     }
 }
 

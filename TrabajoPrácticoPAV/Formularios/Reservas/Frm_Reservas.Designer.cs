@@ -148,10 +148,10 @@
             // 
             this.btn_modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_modificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.btn_modificar.Location = new System.Drawing.Point(508, 273);
+            this.btn_modificar.Location = new System.Drawing.Point(566, 284);
             this.btn_modificar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_modificar.Name = "btn_modificar";
-            this.btn_modificar.Size = new System.Drawing.Size(87, 28);
+            this.btn_modificar.Size = new System.Drawing.Size(157, 28);
             this.btn_modificar.TabIndex = 91;
             this.btn_modificar.Text = "Modificar Reserva";
             this.btn_modificar.UseVisualStyleBackColor = true;
@@ -161,10 +161,10 @@
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.button1.Location = new System.Drawing.Point(508, 305);
+            this.button1.Location = new System.Drawing.Point(566, 320);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(87, 28);
+            this.button1.Size = new System.Drawing.Size(157, 28);
             this.button1.TabIndex = 92;
             this.button1.Text = "Eliminar Reserva";
             this.button1.UseVisualStyleBackColor = true;
@@ -175,17 +175,18 @@
             this.panel_registro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_registro.Controls.Add(this.label14);
             this.panel_registro.Controls.Add(this.lbl_precio);
+            this.panel_registro.Controls.Add(this.btn_cargarPasajeros);
             this.panel_registro.Controls.Add(this.lbl_numeroViaje);
             this.panel_registro.Controls.Add(this.label10);
             this.panel_registro.Controls.Add(this.cmb_destino);
             this.panel_registro.Controls.Add(this.cmb_origen);
             this.panel_registro.Controls.Add(this.lbl_cantPasajeros);
+            this.panel_registro.Controls.Add(this.button_Aerolinea3);
             this.panel_registro.Controls.Add(this.lbl_docTitular);
             this.panel_registro.Controls.Add(this.lbl_nombreTitular);
             this.panel_registro.Controls.Add(this.label4);
             this.panel_registro.Controls.Add(this.label3);
             this.panel_registro.Controls.Add(this.label2);
-            this.panel_registro.Controls.Add(this.button_Aerolinea3);
             this.panel_registro.Controls.Add(this.btn_registrar);
             this.panel_registro.Controls.Add(this.label8);
             this.panel_registro.Controls.Add(this.label11);
@@ -346,10 +347,10 @@
             // 
             this.button_Aerolinea3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Aerolinea3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.button_Aerolinea3.Location = new System.Drawing.Point(305, 118);
+            this.button_Aerolinea3.Location = new System.Drawing.Point(575, 121);
             this.button_Aerolinea3.Name = "button_Aerolinea3";
             this.button_Aerolinea3.Pp_Presionado = false;
-            this.button_Aerolinea3.Size = new System.Drawing.Size(87, 28);
+            this.button_Aerolinea3.Size = new System.Drawing.Size(108, 28);
             this.button_Aerolinea3.TabIndex = 101;
             this.button_Aerolinea3.Text = "Registrar";
             this.button_Aerolinea3.UseVisualStyleBackColor = true;
@@ -399,10 +400,10 @@
             // 
             this.button_Aerolinea1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Aerolinea1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.button_Aerolinea1.Location = new System.Drawing.Point(508, 240);
+            this.button_Aerolinea1.Location = new System.Drawing.Point(564, 248);
             this.button_Aerolinea1.Name = "button_Aerolinea1";
             this.button_Aerolinea1.Pp_Presionado = false;
-            this.button_Aerolinea1.Size = new System.Drawing.Size(87, 28);
+            this.button_Aerolinea1.Size = new System.Drawing.Size(157, 28);
             this.button_Aerolinea1.TabIndex = 106;
             this.button_Aerolinea1.Text = "Todos";
             this.button_Aerolinea1.UseVisualStyleBackColor = true;
@@ -412,10 +413,10 @@
             // 
             this.btn_cargarPasajeros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cargarPasajeros.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.btn_cargarPasajeros.Location = new System.Drawing.Point(619, 299);
+            this.btn_cargarPasajeros.Location = new System.Drawing.Point(290, 115);
             this.btn_cargarPasajeros.Name = "btn_cargarPasajeros";
             this.btn_cargarPasajeros.Pp_Presionado = false;
-            this.btn_cargarPasajeros.Size = new System.Drawing.Size(90, 51);
+            this.btn_cargarPasajeros.Size = new System.Drawing.Size(142, 34);
             this.btn_cargarPasajeros.TabIndex = 104;
             this.btn_cargarPasajeros.Text = "Cargar Pasajeros";
             this.btn_cargarPasajeros.UseVisualStyleBackColor = true;
@@ -425,10 +426,10 @@
             // 
             this.btn_consultarPasajeros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_consultarPasajeros.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.btn_consultarPasajeros.Location = new System.Drawing.Point(619, 240);
+            this.btn_consultarPasajeros.Location = new System.Drawing.Point(565, 209);
             this.btn_consultarPasajeros.Name = "btn_consultarPasajeros";
             this.btn_consultarPasajeros.Pp_Presionado = false;
-            this.btn_consultarPasajeros.Size = new System.Drawing.Size(90, 53);
+            this.btn_consultarPasajeros.Size = new System.Drawing.Size(157, 31);
             this.btn_consultarPasajeros.TabIndex = 103;
             this.btn_consultarPasajeros.Text = "Consultar Pasajeros";
             this.btn_consultarPasajeros.UseVisualStyleBackColor = true;
@@ -450,7 +451,7 @@
             this.grid_reservas.Pp_FormatoGrid = null;
             this.grid_reservas.Pp_NombreTabla = null;
             this.grid_reservas.ReadOnly = true;
-            this.grid_reservas.Size = new System.Drawing.Size(466, 178);
+            this.grid_reservas.Size = new System.Drawing.Size(534, 178);
             this.grid_reservas.TabIndex = 102;
             // 
             // numeroReserva
@@ -487,10 +488,10 @@
             // 
             this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.btn_cerrar.Location = new System.Drawing.Point(508, 338);
+            this.btn_cerrar.Location = new System.Drawing.Point(566, 356);
             this.btn_cerrar.Name = "btn_cerrar";
             this.btn_cerrar.Pp_Presionado = false;
-            this.btn_cerrar.Size = new System.Drawing.Size(87, 28);
+            this.btn_cerrar.Size = new System.Drawing.Size(157, 28);
             this.btn_cerrar.TabIndex = 97;
             this.btn_cerrar.Text = "Cerrar";
             this.btn_cerrar.UseVisualStyleBackColor = true;
@@ -503,7 +504,6 @@
             this.ClientSize = new System.Drawing.Size(734, 413);
             this.Controls.Add(this.button_Aerolinea1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btn_cargarPasajeros);
             this.Controls.Add(this.btn_consultarPasajeros);
             this.Controls.Add(this.grid_reservas);
             this.Controls.Add(this.panel_registro);
