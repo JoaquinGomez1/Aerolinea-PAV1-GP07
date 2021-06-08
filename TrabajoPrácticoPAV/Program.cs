@@ -32,8 +32,8 @@ namespace TrabajoPrácticoPAV
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Frm_Principal());
             //Application.Run(new Frm_ReporteAeroPais());
-            Application.Run(new Frm_Reportes());
-            //Application.Run(new Frm_ReporteFamiliareXPasajero());
+            //Application.Run(new Frm_Reportes());
+            Application.Run(new Frm_ReporteFamiliareXPasajero());
 
         }
     }
