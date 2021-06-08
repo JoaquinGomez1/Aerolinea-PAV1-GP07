@@ -198,6 +198,12 @@
     <Compile Include="Formularios\Facturaciones\Frm_MostrarFacturacion.Designer.cs">
       <DependentUpon>Frm_MostrarFacturacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Listados\Aeropuertos\Frm_ReporteAeroPais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Listados\Aeropuertos\Frm_ReporteAeroPais.Designer.cs">
+      <DependentUpon>Frm_ReporteAeroPais.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Listados\DataSet1.cs">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
@@ -211,6 +217,12 @@
     </Compile>
     <Compile Include="Formularios\Listados\Frm_Reportes.Designer.cs">
       <DependentUpon>Frm_Reportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Listados\Pasajeros\Frm_ReporteFamiliareXPasajero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Listados\Pasajeros\Frm_ReporteFamiliareXPasajero.Designer.cs">
+      <DependentUpon>Frm_ReporteFamiliareXPasajero.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Reservas\Frm_CargarPasajerosPorReserva.cs">
       <SubType>Form</SubType>
@@ -597,10 +609,13 @@
     <EmbeddedResource Include="Formularios\Facturaciones\Frm_MostrarFacturacion.resx">
       <DependentUpon>Frm_MostrarFacturacion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Listados\Aeropuertos\Frm_ReporteAeroPais.rdlc" />
     <EmbeddedResource Include="Formularios\Listados\Frm_Reportes.resx">
       <DependentUpon>Frm_Reportes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Listados\Pasajeros\Frm_ReporteFamiliareXPasajero.rdlc" />
     <EmbeddedResource Include="Formularios\Listados\Report1.rdlc" />
+    <EmbeddedResource Include="Formularios\Listados\Report2.rdlc" />
     <EmbeddedResource Include="Formularios\Reservas\Frm_CargarPasajerosPorReserva.resx">
       <DependentUpon>Frm_CargarPasajerosPorReserva.cs</DependentUpon>
     </EmbeddedResource>

@@ -23,6 +23,7 @@ using TrabajoPrácticoPAV.Formularios.Ciudad;
 using TrabajoPrácticoPAV.Formularios.Tripulacion.Cargo_Tripulacion;
 using TrabajoPrácticoPAV.Formularios.Tripulacion;
 using TrabajoPrácticoPAV.Formularios.Facturaciones;
+using TrabajoPrácticoPAV.Formularios.Listados.Aeropuertos;
 
 namespace TrabajoPrácticoPAV
 {
@@ -300,6 +301,12 @@ namespace TrabajoPrácticoPAV
         {
             CerrarTodosLosMenuStrip();
             AbrirFormulario<Frm_Facturacion>();
+        }
+
+        private void aeropuertoPorPaisToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_ReporteAeroPais>();
         }
     }
 }

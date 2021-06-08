@@ -28,10 +28,8 @@ namespace TrabajoPrácticoPAV
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Frm_Principal());
-            //Application.Run(new Frm_ABM_Aeropuerto());
-            //Application.Run(new Frm_ABMProvincia());
-            Application.Run(new Frm_Reportes());
+            Application.Run(new Frm_Principal());
+            //Application.Run(new Frm_Reportes());
         }
     }
 }
