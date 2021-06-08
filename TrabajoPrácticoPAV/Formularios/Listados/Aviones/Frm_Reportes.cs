@@ -72,7 +72,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados
         }
 
         // Carga Report Viewer
-        private void ArmarReporteUsuario01(DataTable tabla) // Aca hay algo mal 
+        private void ArmarReporteUsuario01(DataTable tabla)
         {
             ReportDataSource PaqueteDatos = new ReportDataSource("DataSet1", tabla);
             reportViewer1.LocalReport.ReportEmbeddedResource = "TrabajoPrácticoPAV.Formularios.Listados.Aviones.Report1.rdlc";
