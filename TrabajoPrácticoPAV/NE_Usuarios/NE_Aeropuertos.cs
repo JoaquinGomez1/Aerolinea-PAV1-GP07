@@ -36,7 +36,7 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
         }
         public DataTable Reporte_recuperarTodos()
         {
-            string sql = @"select codigo, nombre,idCiudad from aeropuerto ";
+            string sql = @"select codigo, nombre,c.nombreCiudad as idCiudad from aeropuerto join ciudad c on c.idCiudad = Aeropuerto.idCiudad ";
             return _BD.EjecutarSelect(sql);
         }
         public DataTable Recuperar_por_CodigoYNombre(string patronNombre , string codigo)
@@ -53,20 +53,36 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
                         +" WHERE a.codigo = " + "'" + codigo + "'";
             return _BD.EjecutarSelect(sql);
         }
+        public DataTable  Reporte_recuperarXCodigo(string codigo)
+        {
+            string sql = @"SELECT a.codigo, a.nombre, c.nombreCiudad as idCiudad from Aeropuerto a join ciudad c on c.idCiudad = A.idCiudad "
+                        + " WHERE a.codigo = " + "'" + codigo + "'";
+            return _BD.EjecutarSelect(sql);
+        }
         public DataTable Recuperar_por_PatronNombre(string patronNombre)
         {
             string sql = @"SELECT a.* FROM Aeropuerto a "
                      + " WHERE a.nombre like '%" + patronNombre.Trim() + "%'";
             return _BD.EjecutarSelect(sql);
         }
-
+        public DataTable Reporte_recuperarXNonmbre(string patronNombre)
+        {
+            string sql = @"SELECT a.codigo, a.nombre, c.nombreCiudad as idCiudad from Aeropuerto a join ciudad c on c.idCiudad = A.idCiudad "
+                   + " WHERE a.nombre like '%" + patronNombre.Trim() + "%'";
+            return _BD.EjecutarSelect(sql);
+        }
         public DataTable Recuperar_por_ciudad(string ciudad)
         {
             string sql = @"SELECT a.* FROM Aeropuerto a "
                      + " WHERE a.idCiudad = " + ciudad;
             return _BD.EjecutarSelect(sql);
         }
-
+       public DataTable Reporte_recuperarXciudad(string ciudad)
+        {
+            string sql = @"SELECT a.codigo, a.nombre, c.nombreCiudad as idCiudad from Aeropuerto a join ciudad c on c.idCiudad = A.idCiudad "
+                     + " WHERE c.nombreCiudad like '%" + ciudad.Trim() + "%'";
+            return _BD.EjecutarSelect(sql);
+        }
         public void Modificar()
         {
             string sqlModificar = @"UPDATE Aeropuerto SET"

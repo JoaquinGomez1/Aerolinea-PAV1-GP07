@@ -2,44 +2,6 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <Body>
     <ReportItems>
-      <Textbox Name="Textbox1">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>hola</Value>
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value />
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>0.76412cm</Top>
-        <Left>7.6962cm</Left>
-        <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
       <Tablix Name="Tablix1">
         <TablixBody>
           <TablixColumns>
@@ -59,121 +21,29 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox13">
+                    <Textbox Name="numerodocPrimerPasajero1">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>tipo Doc Primer Pasajero</Value>
+                              <Value>=Fields!numerodocPrimerPasajero.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox13</rd:DefaultName>
+                      <rd:DefaultName>numerodocPrimerPasajero1</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox15">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>numerodoc Primer Pasajero</Value>
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox15</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox17">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>tipo Doc Segundo Pasajero</Value>
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox17</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-              </TablixCells>
-            </TablixRow>
-            <TablixRow>
-              <Height>0.6cm</Height>
-              <TablixCells>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="tipoDocPrimerPasajero">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Fields!tipoDocPrimerPasajero.Value</Value>
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>tipoDocPrimerPasajero</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -195,7 +65,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>numerodocPrimerPasajero</rd:DefaultName>
@@ -204,6 +76,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -214,26 +87,29 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="tipoDocSegundoPasajero">
+                    <Textbox Name="tipoParentesco">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!tipoDocSegundoPasajero.Value</Value>
+                              <Value>=Fields!tipoParentesco.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>tipoDocSegundoPasajero</rd:DefaultName>
+                      <rd:DefaultName>tipoParentesco</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -256,19 +132,14 @@
         <TablixRowHierarchy>
           <TablixMembers>
             <TablixMember>
-              <KeepWithGroup>After</KeepWithGroup>
-            </TablixMember>
-            <TablixMember>
               <Group Name="Detalles" />
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>FamiliarXPasajero</DataSetName>
-        <Top>1.82245cm</Top>
-        <Left>0cm</Left>
-        <Height>1.2cm</Height>
-        <Width>16.03862cm</Width>
-        <ZIndex>1</ZIndex>
+        <Top>0.03528cm</Top>
+        <Height>0.6cm</Height>
+        <Width>16.03863cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -276,10 +147,10 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>2in</Height>
+    <Height>0.26042in</Height>
     <Style />
   </Body>
-  <Width>6.5in</Width>
+  <Width>6.52084in</Width>
   <Page>
     <PageHeader>
       <Height>2.54cm</Height>
@@ -308,6 +179,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
           <Top>0.46376cm</Top>
+          <Left>0.00001cm</Left>
           <Height>0.85866cm</Height>
           <Width>16.51cm</Width>
           <Style>
@@ -321,7 +193,7 @@
         </Textbox>
         <Line Name="Line2">
           <Top>1.62524cm</Top>
-          <Left>0.47138cm</Left>
+          <Left>0.47139cm</Left>
           <Height>0cm</Height>
           <Width>15.56724cm</Width>
           <ZIndex>1</ZIndex>
@@ -339,7 +211,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Código</Value>
+                  <Value>Documento titular</Value>
                   <Style>
                     <FontFamily>microsoft sans Serif</FontFamily>
                     <FontWeight>Bold</FontWeight>
@@ -353,9 +225,9 @@
           </Paragraphs>
           <rd:DefaultName>Textbox10</rd:DefaultName>
           <Top>1.94cm</Top>
-          <Left>0cm</Left>
+          <Left>0.00001cm</Left>
           <Height>0.6cm</Height>
-          <Width>4.63021cm</Width>
+          <Width>5.3462cm</Width>
           <ZIndex>2</ZIndex>
           <Style>
             <Border />
@@ -384,7 +256,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Nombre</Value>
+                  <Value>Documento familiar</Value>
                   <Style>
                     <FontFamily>Microsoft Sans Serif</FontFamily>
                     <FontWeight>Bold</FontWeight>
@@ -398,9 +270,9 @@
           </Paragraphs>
           <rd:DefaultName>Textbox11</rd:DefaultName>
           <Top>1.94cm</Top>
-          <Left>4.63021cm</Left>
+          <Left>5.34621cm</Left>
           <Height>0.6cm</Height>
-          <Width>7.42597cm</Width>
+          <Width>5.34621cm</Width>
           <ZIndex>3</ZIndex>
           <Style>
             <Border>
@@ -423,7 +295,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Ciudad</Value>
+                  <Value>Parentesco</Value>
                   <Style>
                     <FontFamily>Microsoft Sans Serif</FontFamily>
                     <FontWeight>Bold</FontWeight>
@@ -437,9 +309,9 @@
           </Paragraphs>
           <rd:DefaultName>Textbox11</rd:DefaultName>
           <Top>1.94cm</Top>
-          <Left>12.05618cm</Left>
+          <Left>10.69242cm</Left>
           <Height>0.6cm</Height>
-          <Width>4.45382cm</Width>
+          <Width>5.81759cm</Width>
           <ZIndex>4</ZIndex>
           <Style>
             <Border>
@@ -463,9 +335,113 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>2.54cm</Height>
+      <Height>1.42875cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Line Name="Line3">
+          <Top>0.17639cm</Top>
+          <Left>0.49784cm</Left>
+          <Height>0cm</Height>
+          <Width>15.56724cm</Width>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+              <Width>1.5pt</Width>
+            </Border>
+          </Style>
+        </Line>
+        <Textbox Name="Textbox13">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Globals!ExecutionTime</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox13</rd:DefaultName>
+          <Top>0.41438cm</Top>
+          <Left>0.47139cm</Left>
+          <Height>0.6cm</Height>
+          <Width>3.10854cm</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox14">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Globals!PageNumber</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox14</rd:DefaultName>
+          <Top>0.41438cm</Top>
+          <Left>13.25199cm</Left>
+          <Height>0.6cm</Height>
+          <Width>2.68521cm</Width>
+          <ZIndex>2</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox3">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Pág.</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox3</rd:DefaultName>
+          <Top>0.41438cm</Top>
+          <Left>12.05572cm</Left>
+          <Height>0.6cm</Height>
+          <Width>0.9125cm</Width>
+          <ZIndex>3</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
       <Style>
         <Border>
           <Style>None</Style>

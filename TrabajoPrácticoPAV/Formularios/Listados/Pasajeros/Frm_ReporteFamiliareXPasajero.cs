@@ -18,51 +18,109 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Pasajeros
     public partial class Frm_ReporteFamiliareXPasajero : Form
     {
         NE_GrupoFamiliar grupo = new NE_GrupoFamiliar();
+        DataTable tabla = new DataTable();
 
         public Frm_ReporteFamiliareXPasajero()
         {
             InitializeComponent();
-            this.BackColor = Estilo.ColorFondoForms;
-            Estilo.FormatearEstilo(this.Controls);
-
-
-            reportViewer1.RefreshReport();
-            DataTable tabla = new DataTable();
-            tabla = grupo.RecuperarTodos();
-            ArmarReporteAeropuertos(tabla);
         }
 
         private void Frm_ReporteFamiliareXPasajero_Load(object sender, EventArgs e)
         {
-            InitializeComponent();
+            //InitializeComponent();
             this.BackColor = Estilo.ColorFondoForms;
             Estilo.FormatearEstilo(this.Controls);
 
-
-            //reportViewer1.RefreshReport();
-            //DataTable tabla = new DataTable();
-            //tabla = grupo.RecuperarTodos();
-            //ArmarReporteAeropuertos(tabla);
+            tabla = grupo.RecuperarTodos();
 
         }
-        private void ArmarReporteAeropuertos(DataTable table)
+        private void ArmarReportePasajeroxfamiliar()
         {
-            MessageBox.Show("tabla " + table.Rows.Count);
-            ReportDataSource datos = new ReportDataSource("FamiliarXPasajero", table);
+            MessageBox.Show("tabla " + tabla.Rows.Count);
+            ReportDataSource datos = new ReportDataSource("FamiliarXPasajero", tabla);
             reportViewer1.LocalReport.ReportEmbeddedResource = "TrabajoPrácticoPAV.Formularios.Listados.Pasajeros.ReporteFamiliareXPasajero.rdlc";
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.DataSources.Add(datos);
             reportViewer1.RefreshReport();
-
+            
         }
-
         private void btn_consultar_Click(object sender, EventArgs e)
         {
-           
-            //reportViewer1.RefreshReport();
-            //DataTable tabla = new DataTable();
-            //tabla = grupo.RecuperarTodos();
-            //ArmarReporteAeropuertos(tabla);
+            if (rbu04.Checked == true)
+            {
+                tabla = grupo.RecuperarTodos();
+                if (tabla.Rows.Count != 0)
+                    ArmarReportePasajeroxfamiliar();
+                else
+                {
+                    reportViewer1.LocalReport.DataSources.Clear();
+                    reportViewer1.RefreshReport();
+                    MessageBox.Show("No se encontraron resultados para la búsqueda");
+                }
+                   
+            }
+
+            else if (rbu01.Checked == true)
+            {
+                if(Msktxt_NumDocTitular.Text != "")
+                {
+                    tabla = grupo.Reporte_recuperarNumDocTitular(Msktxt_NumDocTitular.Text);
+                    if (tabla.Rows.Count != 0)
+                        ArmarReportePasajeroxfamiliar();
+                    else
+                    {
+                        reportViewer1.LocalReport.DataSources.Clear();
+                        reportViewer1.RefreshReport();
+                        MessageBox.Show("No se encontraron resultados para la búsqueda");
+                    }
+                } 
+                    
+
+            }
+
+            else if (rbu02.Checked == true)
+            {
+                if (Msktxt_NumDocFamiliar.Text != "")
+                {
+                    tabla = grupo.Reporte_recuperarNumDocFamiliar(Msktxt_NumDocFamiliar.Text);
+                    if (tabla.Rows.Count != 0)
+                        ArmarReportePasajeroxfamiliar();
+                    else
+                    {
+                        reportViewer1.LocalReport.DataSources.Clear();
+                        reportViewer1.RefreshReport();
+                        MessageBox.Show("No se encontraron resultados para la búsqueda");
+                    }
+                }
+                   
+
+            }
+            else if (rbu03.Checked == true)
+            {
+                if (txt_parentesco.Text != "")
+                {
+                    tabla = grupo.Reporte_recuperarXParentesco(txt_parentesco.Text);
+                    if (tabla.Rows.Count != 0)
+                        ArmarReportePasajeroxfamiliar();
+                    else
+                    {
+                        reportViewer1.LocalReport.DataSources.Clear();
+                        reportViewer1.RefreshReport();
+                        MessageBox.Show("No se encontraron resultados para la búsqueda");
+                    }
+                }
+                   
+            }
+            else
+            {
+                Tratamientos_Especiales Tratamiento = new Tratamientos_Especiales();
+                if (Tratamiento.Validar(this.Controls) == Tratamientos_Especiales.Resultado.error)
+                {
+                    MessageBox.Show("No realizo selección para la búsqueda");
+                }
+                    
+            }
+
         }
     }
 }
