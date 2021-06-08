@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_ReporteAeroPais" targetNamespace="http://tempuri.org/Ds_ReporteAeroPais.xsd" xmlns:mstns="http://tempuri.org/Ds_ReporteAeroPais.xsd" xmlns="http://tempuri.org/Ds_ReporteAeroPais.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_ReporteAeroPais" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Ds_ReporteAeroPais" msprop:Generator_UserDSName="Ds_ReporteAeroPais">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="RepAeroPais" msprop:Generator_TableClassName="RepAeroPaisDataTable" msprop:Generator_TableVarName="tableRepAeroPais" msprop:Generator_RowChangedName="RepAeroPaisRowChanged" msprop:Generator_TablePropName="RepAeroPais" msprop:Generator_RowDeletingName="RepAeroPaisRowDeleting" msprop:Generator_RowChangingName="RepAeroPaisRowChanging" msprop:Generator_RowEvHandlerName="RepAeroPaisRowChangeEventHandler" msprop:Generator_RowDeletedName="RepAeroPaisRowDeleted" msprop:Generator_RowClassName="RepAeroPaisRow" msprop:Generator_UserTableName="RepAeroPais" msprop:Generator_RowEvArgName="RepAeroPaisRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="codigo" msprop:Generator_ColumnVarNameInTable="columncodigo" msprop:Generator_ColumnPropNameInRow="codigo" msprop:Generator_ColumnPropNameInTable="codigoColumn" msprop:Generator_UserColumnName="codigo" type="xs:string" minOccurs="0" />
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre" type="xs:string" minOccurs="0" />
+              <xs:element name="idCiudad" msprop:Generator_ColumnVarNameInTable="columnidCiudad" msprop:Generator_ColumnPropNameInRow="idCiudad" msprop:Generator_ColumnPropNameInTable="idCiudadColumn" msprop:Generator_UserColumnName="idCiudad" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

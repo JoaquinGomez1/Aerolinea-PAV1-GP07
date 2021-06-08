@@ -23,10 +23,10 @@ namespace TrabajoPrácticoPAV.Formularios.Listados
         private void Frm_Reportes_Load(object sender, EventArgs e)
         {
 
-            this.Rv_01.RefreshReport();
+            this.reportViewer1.RefreshReport();
             cmb_modelos.CargarCombo();
 
-            this.Rv_01.RefreshReport();
+            this.reportViewer1.RefreshReport();
         }
         private void btn_buscar_Click_1(object sender, EventArgs e)
         {
@@ -60,10 +60,10 @@ namespace TrabajoPrácticoPAV.Formularios.Listados
         private void ArmarReporteUsuario01(DataTable tabla) // Aca hay algo mal 
         {
             ReportDataSource PaqueteDatos = new ReportDataSource("DataSet1", tabla);
-            Rv_01.LocalReport.ReportEmbeddedResource = "TrabajoPrácticoPAV.Formularios.Listados.Aviones.Report1.rdlc";
-            Rv_01.LocalReport.DataSources.Clear();
-            Rv_01.LocalReport.DataSources.Add(PaqueteDatos);
-            Rv_01.RefreshReport();
+            reportViewer1.LocalReport.ReportEmbeddedResource = "TrabajoPrácticoPAV.Formularios.Listados.Aviones.Report1.rdlc";
+            reportViewer1.LocalReport.DataSources.Clear();
+            reportViewer1.LocalReport.DataSources.Add(PaqueteDatos);
+            reportViewer1.RefreshReport();
         }
 
         private void Rv_01_Load(object sender, EventArgs e)

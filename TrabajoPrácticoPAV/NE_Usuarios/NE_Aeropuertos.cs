@@ -34,6 +34,11 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             string sql = @"SELECT a.* FROM Aeropuerto a ";
             return _BD.EjecutarSelect(sql);
         }
+        public DataTable Reporte_recuperarTodos()
+        {
+            string sql = @"select codigo, nombre,idCiudad from aeropuerto ";
+            return _BD.EjecutarSelect(sql);
+        }
         public DataTable Recuperar_por_CodigoYNombre(string patronNombre , string codigo)
         {
             string sql = @"SELECT a.* FROM Aeropuerto a "

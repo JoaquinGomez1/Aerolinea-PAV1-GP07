@@ -52,6 +52,12 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             return _BD.EjecutarSelect(sql).Rows[0]["nombre"].ToString();
         }
 
+        public DataTable RecuperarTodos()
+        {
+            string sql = $"select tipoDocPrimerPasajero,numerodocPrimerPasajero, tipoDocSegundoPasajero,numerodocSegundoPasajero,tipoParentesco from Familiar_X_Pasajero";
+            return _BD.EjecutarSelect(sql);
+        }
+
         /// <summary>
         /// Recupera el apellido del Pasajero pasando el tipoDoc y numeroDoc como strings 
         /// </summary>

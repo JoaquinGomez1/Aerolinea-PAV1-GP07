@@ -29,9 +29,10 @@ namespace TrabajoPrácticoPAV.Formularios.Listados
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.Rv_01 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_id = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
@@ -58,11 +59,16 @@ namespace TrabajoPrácticoPAV.Formularios.Listados
             this.rv_02 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.DataSet1 = new TrabajoPrácticoPAV.Formularios.Listados.Aviones.DataSet1();
+            this.DataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -79,7 +85,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.Rv_01);
+            this.tabPage1.Controls.Add(this.reportViewer1);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.txt_id);
@@ -93,15 +99,6 @@ namespace TrabajoPrácticoPAV.Formularios.Listados
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Aviones";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // Rv_01
-            // 
-            this.Rv_01.LocalReport.ReportEmbeddedResource = "TrabajoPrácticoPAV.Formularios.Listados.Aviones.Report1.rdlc";
-            this.Rv_01.Location = new System.Drawing.Point(116, 125);
-            this.Rv_01.Name = "Rv_01";
-            this.Rv_01.ServerReport.BearerToken = null;
-            this.Rv_01.Size = new System.Drawing.Size(593, 397);
-            this.Rv_01.TabIndex = 14;
             // 
             // label2
             // 
@@ -392,6 +389,28 @@ namespace TrabajoPrácticoPAV.Formularios.Listados
             this.tabPage4.Text = "tabPage4";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // reportViewer1
+            // 
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.DataTable1BindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "TrabajoPrácticoPAV.Formularios.Listados.Report1.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(29, 135);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(801, 246);
+            this.reportViewer1.TabIndex = 14;
+            // 
+            // DataSet1
+            // 
+            this.DataSet1.DataSetName = "DataSet1";
+            this.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // DataTable1BindingSource
+            // 
+            this.DataTable1BindingSource.DataMember = "DataTable1";
+            this.DataTable1BindingSource.DataSource = this.DataSet1;
+            // 
             // Frm_Reportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -410,6 +429,8 @@ namespace TrabajoPrácticoPAV.Formularios.Listados
             this.tabPage2.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -444,6 +465,8 @@ namespace TrabajoPrácticoPAV.Formularios.Listados
         private System.Windows.Forms.Label label3;
         private Clase.MaskedTextBox_Aerolinea maskedTextBox_Aerolinea1;
         private Clase.ComboBox_Aerolinea comboBox_Aerolinea1;
-        private Microsoft.Reporting.WinForms.ReportViewer Rv_01;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.BindingSource DataTable1BindingSource;
+        private Aviones.DataSet1 DataSet1;
     }
 }

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_ReporteFamiliareXPasajero" targetNamespace="http://tempuri.org/Ds_ReporteFamiliareXPasajero.xsd" xmlns:mstns="http://tempuri.org/Ds_ReporteFamiliareXPasajero.xsd" xmlns="http://tempuri.org/Ds_ReporteFamiliareXPasajero.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_ReporteFamiliareXPasajero" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Ds_ReporteFamiliareXPasajero" msprop:Generator_UserDSName="Ds_ReporteFamiliareXPasajero">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="RepoFamPasaj" msprop:Generator_TableClassName="RepoFamPasajDataTable" msprop:Generator_TableVarName="tableRepoFamPasaj" msprop:Generator_TablePropName="RepoFamPasaj" msprop:Generator_RowDeletingName="RepoFamPasajRowDeleting" msprop:Generator_RowChangingName="RepoFamPasajRowChanging" msprop:Generator_RowEvHandlerName="RepoFamPasajRowChangeEventHandler" msprop:Generator_RowDeletedName="RepoFamPasajRowDeleted" msprop:Generator_UserTableName="RepoFamPasaj" msprop:Generator_RowChangedName="RepoFamPasajRowChanged" msprop:Generator_RowEvArgName="RepoFamPasajRowChangeEvent" msprop:Generator_RowClassName="RepoFamPasajRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="tipoDocPrimerPasajero" msprop:Generator_ColumnVarNameInTable="columntipoDocPrimerPasajero" msprop:Generator_ColumnPropNameInRow="tipoDocPrimerPasajero" msprop:Generator_ColumnPropNameInTable="tipoDocPrimerPasajeroColumn" msprop:Generator_UserColumnName="tipoDocPrimerPasajero" type="xs:int" minOccurs="0" />
+              <xs:element name="numerodocPrimerPasajero" msprop:Generator_ColumnVarNameInTable="columnnumerodocPrimerPasajero" msprop:Generator_ColumnPropNameInRow="numerodocPrimerPasajero" msprop:Generator_ColumnPropNameInTable="numerodocPrimerPasajeroColumn" msprop:Generator_UserColumnName="numerodocPrimerPasajero" type="xs:int" minOccurs="0" />
+              <xs:element name="tipoDocSegundoPasajero" msprop:Generator_ColumnVarNameInTable="columntipoDocSegundoPasajero" msprop:Generator_ColumnPropNameInRow="tipoDocSegundoPasajero" msprop:Generator_ColumnPropNameInTable="tipoDocSegundoPasajeroColumn" msprop:Generator_UserColumnName="tipoDocSegundoPasajero" type="xs:int" minOccurs="0" />
+              <xs:element name="numerodocSegundoPasajero" msprop:Generator_ColumnVarNameInTable="columnnumerodocSegundoPasajero" msprop:Generator_ColumnPropNameInRow="numerodocSegundoPasajero" msprop:Generator_ColumnPropNameInTable="numerodocSegundoPasajeroColumn" msprop:Generator_UserColumnName="numerodocSegundoPasajero" type="xs:int" minOccurs="0" />
+              <xs:element name="tipoParentesco" msprop:Generator_ColumnVarNameInTable="columntipoParentesco" msprop:Generator_ColumnPropNameInRow="tipoParentesco" msprop:Generator_ColumnPropNameInTable="tipoParentescoColumn" msprop:Generator_UserColumnName="tipoParentesco" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
