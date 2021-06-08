@@ -25,7 +25,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados
 
             this.reportViewer1.RefreshReport();
             cmb_modelos.CargarCombo();
-
+            cmb_modelos.SelectedIndex = -1;
             this.reportViewer1.RefreshReport();
         }
         private void btn_buscar_Click_1(object sender, EventArgs e)
@@ -40,12 +40,27 @@ namespace TrabajoPrácticoPAV.Formularios.Listados
             // Busca Por Modelo
             if (rbu01.Checked == true)
             {
-                ArmarReporteUsuario01(aviones.Recuperar_x_modelo(modelo));
+                if (cmb_modelos.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Seleccione un Modelo");
+                }
+                else
+                {
+
+                    ArmarReporteUsuario01(aviones.Recuperar_x_modelo(modelo));
+                }
             }
             // Busca Por Id
             if (rbu02.Checked == true)
             {
-                ArmarReporteUsuario01(aviones.Recuperar_x_numero(id));
+                if (txt_id.Text.Length == 0)
+                {
+                    MessageBox.Show("Ingrese un Id valido");
+                }
+                else
+                {
+                    ArmarReporteUsuario01(aviones.Recuperar_x_numero(id));
+                }
             }
             // Busca Todos
             if (rbu03.Checked == true)
