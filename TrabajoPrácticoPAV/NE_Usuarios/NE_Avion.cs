@@ -72,7 +72,9 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
         public DataTable RecuperarTodosReporte()
         {
             string sql = @"SELECT Avion.numeroPorModelo, Modelo.nombre from Avion inner join  Modelo on Avion.idModelo = Modelo.idModelo order by Modelo.nombre, Avion.numeroPorModelo";
-            return _BD.EjecutarSelect(sql);
+            DataTable tabla = new DataTable();
+            tabla = _BD.EjecutarSelect(sql);
+            return tabla;
         }
     }
 }

@@ -198,18 +198,18 @@
     <Compile Include="Formularios\Facturaciones\Frm_MostrarFacturacion.Designer.cs">
       <DependentUpon>Frm_MostrarFacturacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Listados\DataSet1.cs">
+    <Compile Include="Formularios\Listados\Aviones\DataSet1.cs">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Listados\DataSet1.Designer.cs">
+    <Compile Include="Formularios\Listados\Aviones\DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Listados\Frm_Reportes.cs">
+    <Compile Include="Formularios\Listados\Aviones\Frm_Reportes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Listados\Frm_Reportes.Designer.cs">
+    <Compile Include="Formularios\Listados\Aviones\Frm_Reportes.Designer.cs">
       <DependentUpon>Frm_Reportes.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Reservas\Frm_CargarPasajerosPorReserva.cs">
@@ -597,10 +597,11 @@
     <EmbeddedResource Include="Formularios\Facturaciones\Frm_MostrarFacturacion.resx">
       <DependentUpon>Frm_MostrarFacturacion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Listados\Frm_Reportes.resx">
+    <EmbeddedResource Include="Formularios\Listados\Aviones\Frm_Reportes.resx">
       <DependentUpon>Frm_Reportes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Listados\Report1.rdlc" />
+    <EmbeddedResource Include="Formularios\Listados\Aviones\Report1.rdlc" />
+    <EmbeddedResource Include="Formularios\Listados\Report2.rdlc" />
     <EmbeddedResource Include="Formularios\Reservas\Frm_CargarPasajerosPorReserva.resx">
       <DependentUpon>Frm_CargarPasajerosPorReserva.cs</DependentUpon>
     </EmbeddedResource>
@@ -768,15 +769,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="Formularios\Listados\DataSet1.xsc">
+    <None Include="Formularios\Listados\Aviones\DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
-    <None Include="Formularios\Listados\DataSet1.xsd">
+    <None Include="Formularios\Listados\Aviones\DataSet1.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Formularios\Listados\DataSet1.xss">
+    <None Include="Formularios\Listados\Aviones\DataSet1.xss">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
