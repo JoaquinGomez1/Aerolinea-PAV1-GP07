@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace TrabajoPrácticoPAV.Formularios.Listados {
+namespace TrabajoPrácticoPAV.Formularios.Listados.Aviones {
     
     
     /// <summary>

@@ -24,29 +24,43 @@ namespace TrabajoPrácticoPAV.Formularios.Listados
         {
 
             this.Rv_01.RefreshReport();
-          
-        }
+            cmb_modelos.CargarCombo();
 
-        private void btn_buscar_Click(object sender, EventArgs e)
+            this.Rv_01.RefreshReport();
+        }
+        private void btn_buscar_Click_1(object sender, EventArgs e)
         {
             BuscarAviones();
         }
- 
         private void BuscarAviones()
         {
+            string id = txt_id.Text;
+            string modelo = cmb_modelos.Text;
             DataTable tabla = new DataTable();
+            // Busca Por Modelo
+            if (rbu01.Checked == true)
+            {
+                ArmarReporteUsuario01(aviones.Recuperar_x_modelo(modelo));
+            }
+            // Busca Por Id
+            if (rbu02.Checked == true)
+            {
+                ArmarReporteUsuario01(aviones.Recuperar_x_numero(id));
+            }
+            // Busca Todos
             if (rbu03.Checked == true)
             {
-                tabla = aviones.RecuperarTodosReporte(); // recuperar usuairos sql
-
+                MessageBox.Show("si");
+                tabla = aviones.RecuperarTodosReporte(); // BuscarAviones() anda
                 ArmarReporteUsuario01(tabla);
             }
         }
 
-        private void ArmarReporteUsuario01(DataTable tabla)
+        // Carga Report Viewer
+        private void ArmarReporteUsuario01(DataTable tabla) // Aca hay algo mal 
         {
             ReportDataSource PaqueteDatos = new ReportDataSource("DataSet1", tabla);
-            Rv_01.LocalReport.ReportEmbeddedResource = "TrabajoPrácticoPAV.Fromularios.Listados.Report1.rdlc";
+            Rv_01.LocalReport.ReportEmbeddedResource = "TrabajoPrácticoPAV.Formularios.Listados.Aviones.Report1.rdlc";
             Rv_01.LocalReport.DataSources.Clear();
             Rv_01.LocalReport.DataSources.Add(PaqueteDatos);
             Rv_01.RefreshReport();
@@ -61,5 +75,6 @@ namespace TrabajoPrácticoPAV.Formularios.Listados
         {
 
         }
+
     }
 }

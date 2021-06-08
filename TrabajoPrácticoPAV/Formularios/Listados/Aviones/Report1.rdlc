@@ -18,71 +18,6 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox20">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value />
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox20</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox22">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value />
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox22</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-              </TablixCells>
-            </TablixRow>
-            <TablixRow>
-              <Height>0.6cm</Height>
-              <TablixCells>
-                <TablixCell>
-                  <CellContents>
                     <Textbox Name="numeroPorModelo">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
@@ -94,7 +29,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>numeroPorModelo</rd:DefaultName>
@@ -103,6 +40,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -124,7 +62,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>nombre</rd:DefaultName>
@@ -133,6 +73,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -154,17 +95,14 @@
         <TablixRowHierarchy>
           <TablixMembers>
             <TablixMember>
-              <KeepWithGroup>After</KeepWithGroup>
-            </TablixMember>
-            <TablixMember>
               <Group Name="Detalles" />
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
         <Left>3.17183cm</Left>
-        <Height>1.2cm</Height>
-        <Width>10.63562cm</Width>
+        <Height>0.6cm</Height>
+        <Width>10.63563cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -264,7 +202,7 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
-        <Textbox Name="Textbox27">
+        <Textbox Name="Textbox2">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
@@ -281,23 +219,12 @@
                 <TextAlign>Center</TextAlign>
               </Style>
             </Paragraph>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value />
-                  <Style>
-                    <FontWeight>Bold</FontWeight>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>Textbox26</rd:DefaultName>
+          <rd:DefaultName>Textbox2</rd:DefaultName>
           <Top>2.21932cm</Top>
-          <Left>6.80953cm</Left>
+          <Left>6.80954cm</Left>
           <Height>0.6cm</Height>
-          <Width>6.99792cm</Width>
+          <Width>6.99791cm</Width>
           <ZIndex>2</ZIndex>
           <Style>
             <Border>
@@ -345,19 +272,22 @@
                   <Style />
                 </TextRun>
               </TextRuns>
-              <Style />
+              <Style>
+                <TextAlign>Left</TextAlign>
+              </Style>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox28</rd:DefaultName>
           <Top>0.74938cm</Top>
           <Left>3.17183cm</Left>
           <Height>0.6cm</Height>
-          <Width>2.73812cm</Width>
+          <Width>4.9077cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
             </Border>
+            <VerticalAlign>Middle</VerticalAlign>
             <PaddingLeft>2pt</PaddingLeft>
             <PaddingRight>2pt</PaddingRight>
             <PaddingTop>2pt</PaddingTop>
@@ -380,7 +310,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox29</rd:DefaultName>
           <Top>0.74938cm</Top>
-          <Left>12.23349cm</Left>
+          <Left>11.96891cm</Left>
           <Height>0.6cm</Height>
           <Width>1.57396cm</Width>
           <ZIndex>2</ZIndex>
@@ -438,7 +368,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSet1</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\usuario\Desktop\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\Formularios\Listados\DataSet1.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\usuario\Desktop\Aerolinea-PAV1-GP07\TrabajoPrácticoPAV\Formularios\Listados\Aviones\DataSet1.xsd</rd:SchemaPath>
         <rd:TableName>DataTable1</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
