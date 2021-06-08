@@ -244,6 +244,17 @@
     <Compile Include="Formularios\Listados\Pasajeros\Frm_ReporteFamiliareXPasajero.Designer.cs">
       <DependentUpon>Frm_ReporteFamiliareXPasajero.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Listados\Tripulación\Ds_TripulacionXCargo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ds_TripulacionXCargo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Listados\Tripulación\Frm_Tripulacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Listados\Tripulación\Frm_Tripulacion.Designer.cs">
+      <DependentUpon>Frm_Tripulacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Reservas\Frm_CargarPasajerosPorReserva.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -643,6 +654,10 @@
       <DependentUpon>Frm_ReporteFamiliareXPasajero.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Listados\Pasajeros\ReporteFamiliareXPasajero.rdlc" />
+    <EmbeddedResource Include="Formularios\Listados\Tripulación\Frm_Tripulacion.resx">
+      <DependentUpon>Frm_Tripulacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Listados\Tripulación\ReporteTripulacion.rdlc" />
     <EmbeddedResource Include="Formularios\Reservas\Frm_CargarPasajerosPorReserva.resx">
       <DependentUpon>Frm_CargarPasajerosPorReserva.cs</DependentUpon>
     </EmbeddedResource>
@@ -842,6 +857,17 @@
     </None>
     <None Include="Formularios\Listados\Pasajeros\Ds_ReporteFamiliareXPasajero.xss">
       <DependentUpon>Ds_ReporteFamiliareXPasajero.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Listados\Tripulación\Ds_TripulacionXCargo.xsc">
+      <DependentUpon>Ds_TripulacionXCargo.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Listados\Tripulación\Ds_TripulacionXCargo.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Ds_TripulacionXCargo.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Formularios\Listados\Tripulación\Ds_TripulacionXCargo.xss">
+      <DependentUpon>Ds_TripulacionXCargo.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

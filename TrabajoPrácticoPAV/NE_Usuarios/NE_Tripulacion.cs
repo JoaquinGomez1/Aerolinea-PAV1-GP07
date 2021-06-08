@@ -103,6 +103,18 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
                 DataTable resultadoSelect = null;
                 return resultadoSelect;
             }
+
+            
         }
+        public DataTable RecuperarTripulantes()
+        {
+            string sql = @"SELECT Tripulacion.idTripulacion, Tripulacion.nombre AS nombre, Tripulacion.apellido AS apellido, Cargo_Tripulacion.nombre AS cargo
+                         FROM Tripulacion 
+                         JOIN Cargo_Tripulacion ON
+                         Tripulacion.idCargoTripulacion = Cargo_Tripulacion.idCargoTripulacion";
+            DataTable resultadoSelect = _DB.EjecutarSelect(sql);
+            return resultadoSelect;
+        }
+
     }
 }
