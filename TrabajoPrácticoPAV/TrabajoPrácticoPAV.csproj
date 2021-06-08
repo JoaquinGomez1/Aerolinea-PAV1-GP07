@@ -53,6 +53,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -198,6 +199,14 @@
     <Compile Include="Formularios\Facturaciones\Frm_MostrarFacturacion.Designer.cs">
       <DependentUpon>Frm_MostrarFacturacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Listados\Aeropuertos\Ds_ReporteAeroPais.cs">
+      <DependentUpon>Ds_ReporteAeroPais.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Listados\Aeropuertos\Ds_ReporteAeroPais.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ds_ReporteAeroPais.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Listados\Aeropuertos\Frm_ReporteAeroPais.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,11 +221,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Listados\Frm_Reportes.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Formularios\Listados\Pasajeros\Ds_ReporteFamiliareXPasajero.cs">
+      <DependentUpon>Ds_ReporteFamiliareXPasajero.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Listados\Frm_Reportes.Designer.cs">
-      <DependentUpon>Frm_Reportes.cs</DependentUpon>
+    <Compile Include="Formularios\Listados\Pasajeros\Ds_ReporteFamiliareXPasajero.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ds_ReporteFamiliareXPasajero.xsd</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Listados\Pasajeros\Frm_ReporteFamiliareXPasajero.cs">
       <SubType>Form</SubType>
@@ -609,11 +620,15 @@
     <EmbeddedResource Include="Formularios\Facturaciones\Frm_MostrarFacturacion.resx">
       <DependentUpon>Frm_MostrarFacturacion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Listados\Aeropuertos\Frm_ReporteAeroPais.rdlc" />
-    <EmbeddedResource Include="Formularios\Listados\Frm_Reportes.resx">
-      <DependentUpon>Frm_Reportes.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Listados\Aeropuertos\ReporteAeroPais.rdlc" />
+    <EmbeddedResource Include="Formularios\Listados\Aeropuertos\Frm_ReporteAeroPais.resx">
+      <DependentUpon>Frm_ReporteAeroPais.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Listados\Pasajeros\Frm_ReporteFamiliareXPasajero.rdlc" />
+    <EmbeddedResource Include="Formularios\Listados\Pasajeros\Frm_ReporteFamiliareXPasajero.resx">
+      <DependentUpon>Frm_ReporteFamiliareXPasajero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Listados\Pasajeros\ReporteFamiliareXPasajero.rdlc" />
     <EmbeddedResource Include="Formularios\Listados\Report1.rdlc" />
     <EmbeddedResource Include="Formularios\Listados\Report2.rdlc" />
     <EmbeddedResource Include="Formularios\Reservas\Frm_CargarPasajerosPorReserva.resx">
@@ -783,6 +798,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Formularios\Listados\Aeropuertos\Ds_ReporteAeroPais.xsc">
+      <DependentUpon>Ds_ReporteAeroPais.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Listados\Aeropuertos\Ds_ReporteAeroPais.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Ds_ReporteAeroPais.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Formularios\Listados\Aeropuertos\Ds_ReporteAeroPais.xss">
+      <DependentUpon>Ds_ReporteAeroPais.xsd</DependentUpon>
+    </None>
     <None Include="Formularios\Listados\DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
@@ -793,6 +819,17 @@
     </None>
     <None Include="Formularios\Listados\DataSet1.xss">
       <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Listados\Pasajeros\Ds_ReporteFamiliareXPasajero.xsc">
+      <DependentUpon>Ds_ReporteFamiliareXPasajero.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Listados\Pasajeros\Ds_ReporteFamiliareXPasajero.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Ds_ReporteFamiliareXPasajero.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Formularios\Listados\Pasajeros\Ds_ReporteFamiliareXPasajero.xss">
+      <DependentUpon>Ds_ReporteFamiliareXPasajero.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -44,13 +44,6 @@ namespace TrabajoPrácticoPAV.Formularios.Vuelo
             this.BackColor = Estilo.ColorFondoForms;
             Estilo.FormatearEstilo(this.Controls);
         }
-
-        private void btn_Registrar_Click(object sender, EventArgs e)
-        {
-            
-        }
-        
-
         private void btn_Cancelar_Click_1(object sender, EventArgs e)
         {
             this.Close();

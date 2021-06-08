@@ -46,7 +46,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados
         private void ArmarReporteUsuario01(DataTable tabla)
         {
             ReportDataSource PaqueteDatos = new ReportDataSource("DataSet1", tabla);
-            Rv_01.LocalReport.ReportEmbeddedResource = "TrabajoPrácticoPAV.Fromularios.Listados.Report1.rdlc";
+            Rv_01.LocalReport.ReportEmbeddedResource = "TrabajoPrácticoPAV.Formularios.Listados.Report1.rdlc";
             Rv_01.LocalReport.DataSources.Clear();
             Rv_01.LocalReport.DataSources.Add(PaqueteDatos);
             Rv_01.RefreshReport();
