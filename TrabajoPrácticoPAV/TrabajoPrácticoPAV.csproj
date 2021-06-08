@@ -601,7 +601,6 @@
       <DependentUpon>Frm_Reportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Listados\Aviones\Report1.rdlc" />
-    <EmbeddedResource Include="Formularios\Listados\Report2.rdlc" />
     <EmbeddedResource Include="Formularios\Reservas\Frm_CargarPasajerosPorReserva.resx">
       <DependentUpon>Frm_CargarPasajerosPorReserva.cs</DependentUpon>
     </EmbeddedResource>
