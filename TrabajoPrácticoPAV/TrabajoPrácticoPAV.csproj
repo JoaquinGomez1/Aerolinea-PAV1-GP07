@@ -53,6 +53,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -75,6 +76,12 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Clase\Estilo.cs" />
+    <Compile Include="Clase\LabelText02.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Clase\LabelText02.designer.cs">
+      <DependentUpon>LabelText02.cs</DependentUpon>
+    </Compile>
     <Compile Include="Clase\ManejoDeTiempos.cs" />
     <Compile Include="Clase\MaskedTextBox_Aerolinea.cs">
       <SubType>Component</SubType>
@@ -198,19 +205,44 @@
     <Compile Include="Formularios\Facturaciones\Frm_MostrarFacturacion.Designer.cs">
       <DependentUpon>Frm_MostrarFacturacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Listados\DataSet1.cs">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
+    <Compile Include="Formularios\Listados\Aeropuertos\Ds_ReporteAeroPais.cs">
+      <DependentUpon>Ds_ReporteAeroPais.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Listados\DataSet1.Designer.cs">
+    <Compile Include="Formularios\Listados\Aeropuertos\Ds_ReporteAeroPais.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ds_ReporteAeroPais.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Listados\Aeropuertos\Frm_ReporteAeroPais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Listados\Aeropuertos\Frm_ReporteAeroPais.Designer.cs">
+      <DependentUpon>Frm_ReporteAeroPais.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Listados\Aviones\DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Listados\Frm_Reportes.cs">
+    <Compile Include="Formularios\Listados\Aviones\Frm_Reportes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Listados\Frm_Reportes.Designer.cs">
+    <Compile Include="Formularios\Listados\Aviones\Frm_Reportes.Designer.cs">
       <DependentUpon>Frm_Reportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Listados\Pasajeros\Ds_ReporteFamiliareXPasajero.cs">
+      <DependentUpon>Ds_ReporteFamiliareXPasajero.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Listados\Pasajeros\Ds_ReporteFamiliareXPasajero.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ds_ReporteFamiliareXPasajero.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Listados\Pasajeros\Frm_ReporteFamiliareXPasajero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Listados\Pasajeros\Frm_ReporteFamiliareXPasajero.Designer.cs">
+      <DependentUpon>Frm_ReporteFamiliareXPasajero.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Reservas\Frm_CargarPasajerosPorReserva.cs">
       <SubType>Form</SubType>
@@ -543,6 +575,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="Clase\LabelText02.resx">
+      <DependentUpon>LabelText02.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Aeropuertos\Frm_ABM_Aeropuerto.resx">
       <DependentUpon>Frm_ABM_Aeropuerto.cs</DependentUpon>
     </EmbeddedResource>
@@ -597,10 +632,17 @@
     <EmbeddedResource Include="Formularios\Facturaciones\Frm_MostrarFacturacion.resx">
       <DependentUpon>Frm_MostrarFacturacion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Listados\Frm_Reportes.resx">
+    <EmbeddedResource Include="Formularios\Listados\Aeropuertos\ReporteAeroPais.rdlc" />
+    <EmbeddedResource Include="Formularios\Listados\Aeropuertos\Frm_ReporteAeroPais.resx">
+      <DependentUpon>Frm_ReporteAeroPais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Listados\Aviones\Frm_Reportes.resx">
       <DependentUpon>Frm_Reportes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Listados\Report1.rdlc" />
+    <EmbeddedResource Include="Formularios\Listados\Pasajeros\Frm_ReporteFamiliareXPasajero.resx">
+      <DependentUpon>Frm_ReporteFamiliareXPasajero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Listados\Pasajeros\ReporteFamiliareXPasajero.rdlc" />
     <EmbeddedResource Include="Formularios\Reservas\Frm_CargarPasajerosPorReserva.resx">
       <DependentUpon>Frm_CargarPasajerosPorReserva.cs</DependentUpon>
     </EmbeddedResource>
@@ -768,16 +810,38 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="Formularios\Listados\DataSet1.xsc">
+    <None Include="Formularios\Listados\Aeropuertos\Ds_ReporteAeroPais.xsc">
+      <DependentUpon>Ds_ReporteAeroPais.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Listados\Aeropuertos\Ds_ReporteAeroPais.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Ds_ReporteAeroPais.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Formularios\Listados\Aeropuertos\Ds_ReporteAeroPais.xss">
+      <DependentUpon>Ds_ReporteAeroPais.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Listados\Aviones\DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
-    <None Include="Formularios\Listados\DataSet1.xsd">
+    <None Include="Formularios\Listados\Aviones\DataSet1.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Formularios\Listados\DataSet1.xss">
+    <None Include="Formularios\Listados\Aviones\DataSet1.xss">
       <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Listados\Pasajeros\Ds_ReporteFamiliareXPasajero.xsc">
+      <DependentUpon>Ds_ReporteFamiliareXPasajero.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Listados\Pasajeros\Ds_ReporteFamiliareXPasajero.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Ds_ReporteFamiliareXPasajero.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Formularios\Listados\Pasajeros\Ds_ReporteFamiliareXPasajero.xss">
+      <DependentUpon>Ds_ReporteFamiliareXPasajero.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -795,6 +859,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controles\" />
+    <Folder Include="SqlServerTypes\x64\" />
+    <Folder Include="SqlServerTypes\x86\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\gear-wheel-304395_960_720.png" />
@@ -898,18 +964,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="SqlServerTypes\readme.htm" />
-    <Content Include="SqlServerTypes\x64\msvcr120.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x86\msvcr120.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
