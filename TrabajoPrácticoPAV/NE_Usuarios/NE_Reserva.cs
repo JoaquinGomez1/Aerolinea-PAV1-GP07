@@ -16,6 +16,14 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             return _DB.EjecutarSelect(sql);
         }
 
+        public DataTable getTodosReservasPorPasajero()
+        {
+            string sql = "SELECT * FROM Reservas_X_Pasajero " +
+                "JOIN Tipo_Asiento ON idTipo = tipoClase " +
+                "JOIN Tipo_Documento ON Reservas_X_Pasajero.tipoDoc = Tipo_Documento.tipoDoc";
+            return _DB.EjecutarSelect(sql);
+        }
+
         public Pasajero GetPasajero(string numeroDoc, string tipoDoc)
         {
             DataTable result = GetDataTablePasajero(numeroDoc, tipoDoc);
@@ -36,6 +44,16 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
                 idCiudad = result.Rows[0]["idCiudad"].ToString(),
                 fechaNacimiento = result.Rows[0]["fechaNacimiento"].ToString(),
             };
+        }
+
+        public DataTable GetReservaPorParametro(string parametro, string documento)
+        {
+            string sql = "SELECT * FROM Reservas_X_Pasajero " +
+              "JOIN Tipo_Asiento ON idTipo = tipoClase " +
+              "JOIN Tipo_Documento ON Reservas_X_Pasajero.tipoDoc = Tipo_Documento.tipoDoc " +
+              $"WHERE {parametro} = {documento}";
+
+            return _DB.EjecutarSelect(sql);
         }
 
         public DataTable GetDataTablePasajero(string numeroDoc, string tipoDoc)
@@ -177,5 +195,7 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
                         " AND A.idModelo = " + idModelo;
             return (_DB.EjecutarSelect(sql));
         }
+
+
     }
 }
