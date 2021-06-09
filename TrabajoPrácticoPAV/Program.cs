@@ -14,6 +14,7 @@ using TrabajoPrácticoPAV.Formularios.Listados.Reservas;
 using TrabajoPrácticoPAV.Formularios.Listados.Tripulacion_Por_Vuelo;
 
 using TrabajoPrácticoPAV.Formularios.Listados.Tripulación;
+using TrabajoPrácticoPAV.Formularios.Listados.Factura;
 
 
 namespace TrabajoPrácticoPAV
@@ -34,7 +35,8 @@ namespace TrabajoPrácticoPAV
             //Application.Run(new Frm_ReporteFamiliareXPasajero());
 
             //Application.Run(new Frm_Reservas());
-            Application.Run(new Frm_ListadoTripPorVuelo());
+            //Application.Run(new Frm_ListadoTripPorVuelo());
+            Application.Run(new Frm_Reporte_FacturasPorFecha());
 
             //Application.Run(new Frm_Tripulacion());
         }

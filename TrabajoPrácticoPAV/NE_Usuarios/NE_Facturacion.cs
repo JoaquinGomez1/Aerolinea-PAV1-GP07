@@ -63,5 +63,17 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             string sql = $"DELETE FROM Factura WHERE idFactura = {idFactura}";
             _BD.Borrar(sql, false);
         }
+        public DataTable Reporte_Factura_Todas()
+        {
+            return _BD.EjecutarSelect("SELECT idFactura, fechaPago, idTipoPago, numeroDeReserva FROM Factura");
+        }
+        public DataTable Reporte_Factura_PorID(int idFactura)
+        {
+            return _BD.EjecutarSelect("SELECT idFactura, fechaPago, idTipoPago, numeroDeReserva FROM Factura WHERE idFactura = " + idFactura);
+        }
+        public DataTable Reporte_Factura_PorFecha(string fechaDesde, string fechaHasta)
+        {
+            return _BD.EjecutarSelect("SELECT * FROM Factura WHERE fechaPago BETWEEN '" + fechaDesde + "' AND '" + fechaHasta + "'");
+        }
     }
 }
