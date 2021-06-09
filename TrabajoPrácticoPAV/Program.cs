@@ -14,7 +14,7 @@ using TrabajoPrácticoPAV.Formularios.Listados.Reservas;
 using TrabajoPrácticoPAV.Formularios.Listados.Tripulacion_Por_Vuelo;
 
 using TrabajoPrácticoPAV.Formularios.Listados.Tripulación;
-
+using TrabajoPrácticoPAV.Formularios.Listados.Avion_Por_Modelo;
 
 namespace TrabajoPrácticoPAV
 {
@@ -34,7 +34,7 @@ namespace TrabajoPrácticoPAV
             //Application.Run(new Frm_ReporteFamiliareXPasajero());
 
             //Application.Run(new Frm_Reservas());
-            Application.Run(new Frm_ListadoTripPorVuelo());
+            Application.Run(new Frm_AvionPorModelo());
 
             //Application.Run(new Frm_Tripulacion());
         }

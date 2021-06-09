@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_AvionPorModelo" targetNamespace="http://tempuri.org/Ds_AvionPorModelo.xsd" xmlns:mstns="http://tempuri.org/Ds_AvionPorModelo.xsd" xmlns="http://tempuri.org/Ds_AvionPorModelo.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_AvionPorModelo" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Ds_AvionPorModelo" msprop:Generator_UserDSName="Ds_AvionPorModelo">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Ds_AvionPorModelo" msprop:Generator_TableClassName="Ds_AvionPorModeloDataTable" msprop:Generator_TableVarName="tableDs_AvionPorModelo" msprop:Generator_TablePropName="_Ds_AvionPorModelo" msprop:Generator_RowDeletingName="Ds_AvionPorModeloRowDeleting" msprop:Generator_RowChangingName="Ds_AvionPorModeloRowChanging" msprop:Generator_RowEvHandlerName="Ds_AvionPorModeloRowChangeEventHandler" msprop:Generator_RowDeletedName="Ds_AvionPorModeloRowDeleted" msprop:Generator_UserTableName="Ds_AvionPorModelo" msprop:Generator_RowChangedName="Ds_AvionPorModeloRowChanged" msprop:Generator_RowEvArgName="Ds_AvionPorModeloRowChangeEvent" msprop:Generator_RowClassName="Ds_AvionPorModeloRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="numeroPorModelo" msprop:Generator_ColumnVarNameInTable="columnnumeroPorModelo" msprop:Generator_ColumnPropNameInRow="numeroPorModelo" msprop:Generator_ColumnPropNameInTable="numeroPorModeloColumn" msprop:Generator_UserColumnName="numeroPorModelo" type="xs:string" minOccurs="0" />
+              <xs:element name="idModelo" msprop:Generator_ColumnVarNameInTable="columnidModelo" msprop:Generator_ColumnPropNameInRow="idModelo" msprop:Generator_ColumnPropNameInTable="idModeloColumn" msprop:Generator_UserColumnName="idModelo" type="xs:string" minOccurs="0" />
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

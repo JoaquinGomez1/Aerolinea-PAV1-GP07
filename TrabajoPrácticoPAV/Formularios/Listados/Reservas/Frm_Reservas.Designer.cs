@@ -30,9 +30,13 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Reservas
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.dsReservasPorPasajerosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ds_ReservasPorPasajeros = new TrabajoPrácticoPAV.Formularios.Listados.Reservas.Ds_ReservasPorPasajeros();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Rb_Todos = new System.Windows.Forms.RadioButton();
             this.Rb_documento = new System.Windows.Forms.RadioButton();
@@ -40,18 +44,24 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Reservas
             this.btn_search = new System.Windows.Forms.Button();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dsReservasPorPasajerosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ds_ReservasPorPasajeros = new TrabajoPrácticoPAV.Formularios.Listados.Reservas.Ds_ReservasPorPasajeros();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.Mtxt_documento = new TrabajoPrácticoPAV.Clase.MaskedTextBox_Aerolinea();
             this.Mtxt_reserva = new TrabajoPrácticoPAV.Clase.MaskedTextBox_Aerolinea();
+            this.Mtxt_documento = new TrabajoPrácticoPAV.Clase.MaskedTextBox_Aerolinea();
+            ((System.ComponentModel.ISupportInitialize)(this.dsReservasPorPasajerosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ds_ReservasPorPasajeros)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dsReservasPorPasajerosBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ds_ReservasPorPasajeros)).BeginInit();
             this.SuspendLayout();
+            // 
+            // dsReservasPorPasajerosBindingSource
+            // 
+            this.dsReservasPorPasajerosBindingSource.DataSource = this.ds_ReservasPorPasajeros;
+            this.dsReservasPorPasajerosBindingSource.Position = 0;
+            // 
+            // ds_ReservasPorPasajeros
+            // 
+            this.ds_ReservasPorPasajeros.DataSetName = "Ds_ReservasPorPasajeros";
+            this.ds_ReservasPorPasajeros.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tabControl1
             // 
@@ -80,6 +90,26 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Reservas
             this.tabPage1.Text = "Por Pasajero";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(43, 67);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(87, 13);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Numero Reserva";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(28, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(102, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Numero Documento";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -90,6 +120,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Reservas
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(150, 74);
             this.panel1.TabIndex = 4;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // Rb_Todos
             // 
@@ -136,9 +167,9 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Reservas
             // 
             // reportViewer1
             // 
-            reportDataSource2.Name = "ReservasPorPasajeros";
-            reportDataSource2.Value = this.dsReservasPorPasajerosBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            reportDataSource1.Name = "ReservasPorPasajeros";
+            reportDataSource1.Value = this.dsReservasPorPasajerosBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "TrabajoPrácticoPAV.Formularios.Listados.Reservas.ReporteReservasPorPasajeros.rdlc" +
     "";
             this.reportViewer1.Location = new System.Drawing.Point(6, 148);
@@ -146,6 +177,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Reservas
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(756, 246);
             this.reportViewer1.TabIndex = 2;
+            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
             // tabPage2
             // 
@@ -156,47 +188,6 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Reservas
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // dsReservasPorPasajerosBindingSource
-            // 
-            this.dsReservasPorPasajerosBindingSource.DataSource = this.ds_ReservasPorPasajeros;
-            this.dsReservasPorPasajerosBindingSource.Position = 0;
-            // 
-            // ds_ReservasPorPasajeros
-            // 
-            this.ds_ReservasPorPasajeros.DataSetName = "Ds_ReservasPorPasajeros";
-            this.ds_ReservasPorPasajeros.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 13);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Numero Documento";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(43, 67);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 13);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Numero Reserva";
-            // 
-            // Mtxt_documento
-            // 
-            this.Mtxt_documento.Location = new System.Drawing.Point(151, 34);
-            this.Mtxt_documento.Mask = "00000000";
-            this.Mtxt_documento.Name = "Mtxt_documento";
-            this.Mtxt_documento.Pp_EsPk = false;
-            this.Mtxt_documento.Pp_MensajeError = null;
-            this.Mtxt_documento.Pp_NombreCampo = null;
-            this.Mtxt_documento.Pp_NombreTabla = null;
-            this.Mtxt_documento.Size = new System.Drawing.Size(57, 20);
-            this.Mtxt_documento.TabIndex = 9;
-            this.Mtxt_documento.ValidatingType = typeof(int);
             // 
             // Mtxt_reserva
             // 
@@ -210,6 +201,21 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Reservas
             this.Mtxt_reserva.Size = new System.Drawing.Size(57, 20);
             this.Mtxt_reserva.TabIndex = 10;
             this.Mtxt_reserva.ValidatingType = typeof(int);
+            this.Mtxt_reserva.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.Mtxt_reserva_MaskInputRejected);
+            // 
+            // Mtxt_documento
+            // 
+            this.Mtxt_documento.Location = new System.Drawing.Point(151, 34);
+            this.Mtxt_documento.Mask = "00000000";
+            this.Mtxt_documento.Name = "Mtxt_documento";
+            this.Mtxt_documento.Pp_EsPk = false;
+            this.Mtxt_documento.Pp_MensajeError = null;
+            this.Mtxt_documento.Pp_NombreCampo = null;
+            this.Mtxt_documento.Pp_NombreTabla = null;
+            this.Mtxt_documento.Size = new System.Drawing.Size(57, 20);
+            this.Mtxt_documento.TabIndex = 9;
+            this.Mtxt_documento.ValidatingType = typeof(int);
+            this.Mtxt_documento.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.Mtxt_documento_MaskInputRejected);
             // 
             // Frm_Reservas
             // 
@@ -220,13 +226,13 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Reservas
             this.Name = "Frm_Reservas";
             this.Text = "Frm_Reservas";
             this.Load += new System.EventHandler(this.Frm_ListadoReservasPorPasajero_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dsReservasPorPasajerosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ds_ReservasPorPasajeros)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dsReservasPorPasajerosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ds_ReservasPorPasajeros)).EndInit();
             this.ResumeLayout(false);
 
         }

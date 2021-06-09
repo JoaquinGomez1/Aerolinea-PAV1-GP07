@@ -66,9 +66,12 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
 
         public DataTable GetTodosTripulantesPorVuelo()
         {
-            string sql = "SELECT * FROM Tripulacion_X_Vuelo " +
-                "JOIN Tripulacion on Tripulacion_X_Vuelo.idTripulacion = Tripulacion.idTripulacion " +
-                "JOIN Vuelo ON Vuelo.idVuelo = Tripulacion_X_Vuelo.idVuelo";
+            string sql = "SELECT tv.idVuelo, tv.idTripulacion,t.nombre,t.apellido, t.idCargoTripulacion, " +
+                        "(SELECT nombre FROM Cargo_Tripulacion WHERE t.idCargoTripulacion = idCargoTripulacion) as nombreCargo, " +
+                        "v.codigoAeropuertoSalida, v.codigoAeropuertoDestino, v.idModelo, v.duracionEstimada " +
+                        "FROM Tripulacion_X_Vuelo tv  " +
+                        "JOIN Tripulacion t ON tv.idTripulacion = t.idTripulacion " +
+                        "JOIN Vuelo v ON v.idVuelo = tv.idVuelo";
             return _DB.EjecutarSelect(sql);
         }
 
@@ -118,7 +121,7 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
                 return resultadoSelect;
             }
 
-            
+
         }
         public DataTable RecuperarTripulantes()
         {

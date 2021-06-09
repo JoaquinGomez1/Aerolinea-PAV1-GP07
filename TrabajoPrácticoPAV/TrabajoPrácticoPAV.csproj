@@ -245,6 +245,20 @@
     <Compile Include="Formularios\Listados\Asientos\Frm_ReporteAsientoXAvion.Designer.cs">
       <DependentUpon>Frm_ReporteAsientoXAvion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Listados\Avion Por Modelo\Ds_AvionPorModelo.cs">
+      <DependentUpon>Ds_AvionPorModelo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Listados\Avion Por Modelo\Ds_AvionPorModelo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ds_AvionPorModelo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Listados\Avion Por Modelo\Frm_AvionPorModelo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Listados\Avion Por Modelo\Frm_AvionPorModelo.Designer.cs">
+      <DependentUpon>Frm_AvionPorModelo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Listados\Vuelos\Frm_ReporteVueloXAeropuerto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -726,6 +740,10 @@
       <DependentUpon>Frm_ReporteAsientoXAvion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Listados\Asientos\Reporte_AsientoXAvion.rdlc" />
+    <EmbeddedResource Include="Formularios\Listados\Avion Por Modelo\Frm_AvionPorModelo.resx">
+      <DependentUpon>Frm_AvionPorModelo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Listados\Avion Por Modelo\ReporteAvionPorModelo.rdlc" />
     <EmbeddedResource Include="Formularios\Listados\Vuelos\Frm_ReporteVueloXAeropuerto.resx">
       <DependentUpon>Frm_ReporteVueloXAeropuerto.cs</DependentUpon>
     </EmbeddedResource>
@@ -980,6 +998,17 @@
     <None Include="Formularios\Listados\Asientos\Ds_ReporteAsientoXAvion.xss">
       <DependentUpon>Ds_ReporteAsientoXAvion.xsd</DependentUpon>
     </None>
+    <None Include="Formularios\Listados\Avion Por Modelo\Ds_AvionPorModelo.xsc">
+      <DependentUpon>Ds_AvionPorModelo.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Listados\Avion Por Modelo\Ds_AvionPorModelo.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Ds_AvionPorModelo.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Formularios\Listados\Avion Por Modelo\Ds_AvionPorModelo.xss">
+      <DependentUpon>Ds_AvionPorModelo.xsd</DependentUpon>
+    </None>
     <None Include="Formularios\Listados\Aviones\DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
@@ -1079,7 +1108,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controles\" />
-    <Folder Include="Formularios\Listados\Avion Por Modelo\" />
     <Folder Include="Formularios\Listados\Tramo\" />
     <Folder Include="SqlServerTypes\x64\" />
     <Folder Include="SqlServerTypes\x86\" />
