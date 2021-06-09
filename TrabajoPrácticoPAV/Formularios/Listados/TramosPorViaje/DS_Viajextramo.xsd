@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_Viajextramo" targetNamespace="http://tempuri.org/DS_Viajextramo.xsd" xmlns:mstns="http://tempuri.org/DS_Viajextramo.xsd" xmlns="http://tempuri.org/DS_Viajextramo.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_Viajextramo" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS_Viajextramo" msprop:Generator_UserDSName="DS_Viajextramo">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ViajeXTramo" msprop:Generator_TableClassName="ViajeXTramoDataTable" msprop:Generator_TableVarName="tableViajeXTramo" msprop:Generator_TablePropName="ViajeXTramo" msprop:Generator_RowDeletingName="ViajeXTramoRowDeleting" msprop:Generator_RowChangingName="ViajeXTramoRowChanging" msprop:Generator_RowEvHandlerName="ViajeXTramoRowChangeEventHandler" msprop:Generator_RowDeletedName="ViajeXTramoRowDeleted" msprop:Generator_UserTableName="ViajeXTramo" msprop:Generator_RowChangedName="ViajeXTramoRowChanged" msprop:Generator_RowEvArgName="ViajeXTramoRowChangeEvent" msprop:Generator_RowClassName="ViajeXTramoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="numeroDeViaje" msprop:Generator_ColumnVarNameInTable="columnnumeroDeViaje" msprop:Generator_ColumnPropNameInRow="numeroDeViaje" msprop:Generator_ColumnPropNameInTable="numeroDeViajeColumn" msprop:Generator_UserColumnName="numeroDeViaje" type="xs:string" minOccurs="0" />
+              <xs:element name="orden" msprop:Generator_ColumnVarNameInTable="columnorden" msprop:Generator_ColumnPropNameInRow="orden" msprop:Generator_ColumnPropNameInTable="ordenColumn" msprop:Generator_UserColumnName="orden" type="xs:string" minOccurs="0" />
+              <xs:element name="AeropuertoSalida" msprop:Generator_ColumnVarNameInTable="columnAeropuertoSalida" msprop:Generator_ColumnPropNameInRow="AeropuertoSalida" msprop:Generator_ColumnPropNameInTable="AeropuertoSalidaColumn" msprop:Generator_UserColumnName="AeropuertoSalida" type="xs:string" minOccurs="0" />
+              <xs:element name="AeropuertoDestino" msprop:Generator_ColumnVarNameInTable="columnAeropuertoDestino" msprop:Generator_ColumnPropNameInRow="AeropuertoDestino" msprop:Generator_ColumnPropNameInTable="AeropuertoDestinoColumn" msprop:Generator_UserColumnName="AeropuertoDestino" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

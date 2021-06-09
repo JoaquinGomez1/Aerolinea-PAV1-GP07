@@ -139,9 +139,17 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
         public DataTable RecuperarViajes()
         {
             DataTable table = new DataTable();
-            string sql = $"select Viaje.horarioSalida, Viaje.numeroDeViaje , Viaje_X_Tramo.codigoAeropuertoSalida, Viaje_X_Tramo.codigoAeropuertoDestino from Viaje inner join Viaje_X_Tramo on Viaje.numeroDeViaje = Viaje_X_Tramo.numeroDeViaje  order by Viaje.horarioSalida, Viaje.numeroDeViaje; ";
+            string sql = $"select numeroDeViaje, horarioLlegada, horarioSalida, cantidadTramos, duracionEstimada from Viaje order by  horarioSalida, numeroDeviaje";
             table = _DB.EjecutarSelect(sql);
             return table;
+        }
+
+        public DataTable RecuperarViajesXHorario(string horarioSalida, string horarioLlegada)
+        {
+            DataTable tabla = new DataTable();
+            string sql = $"select numeroDeViaje, horarioLlegada, horarioSalida, cantidadTramos, duracionEstimada from Viaje  where horarioSalida >= ' {horarioSalida} ' and horarioLlegada <= ' {horarioLlegada} ' order by  numeroDeViaje,horarioLlegada,horarioSalida";
+            tabla = _DB.EjecutarSelect(sql);
+            return tabla;
         }
     }
 }

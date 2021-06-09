@@ -93,7 +93,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Tripulación
         private void ArmarReporteTripulacion01()
         {
             ReportDataSource PaqueteDatos = new ReportDataSource("Ds_TripulacionXCargo", tabla);            
-            reportViewer1.LocalReport.ReportEmbeddedResource = "TrabajoPrácticoPAV.Formularios.Listados.Tripulación.ReporteTripulacion.rdlc";   
+            reportViewer1.LocalReport.ReportEmbeddedResource = "TrabajoPrácticoPAV.Formularios.Listados.TripulaciónXCargo.ReporteTripulacion.rdlc";   
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.DataSources.Add(PaqueteDatos);
             reportViewer1.RefreshReport(); 
