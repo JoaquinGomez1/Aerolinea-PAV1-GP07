@@ -403,6 +403,7 @@
             this.tripulacionPorVueloToolStripMenuItem1.Name = "tripulacionPorVueloToolStripMenuItem1";
             this.tripulacionPorVueloToolStripMenuItem1.Size = new System.Drawing.Size(246, 24);
             this.tripulacionPorVueloToolStripMenuItem1.Text = "Tripulacion por vuelo";
+            this.tripulacionPorVueloToolStripMenuItem1.Click += new System.EventHandler(this.tripulacionPorVueloToolStripMenuItem1_Click);
             // 
             // tripulacionToolStripMenuItem
             // 
@@ -438,6 +439,7 @@
             this.reservaToolStripMenuItem.Name = "reservaToolStripMenuItem";
             this.reservaToolStripMenuItem.Size = new System.Drawing.Size(113, 24);
             this.reservaToolStripMenuItem.Text = "Reservas";
+            this.reservaToolStripMenuItem.Click += new System.EventHandler(this.reservaToolStripMenuItem_Click);
             // 
             // menuStrip1
             // 

@@ -59,11 +59,12 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Pasajeros
                 }
                    
             }
+
             else if (rbu01.Checked == true)
             {
-                if(Msktxt_NumDocTitular.Text != "" && msk_numHasta.Text != "")
+                if(Msktxt_NumDocTitular.Text != "")
                 {
-                    tabla = grupo.Reporte_recuperarNumDocTitularRango(Msktxt_NumDocTitular.Text, msk_numHasta.Text, "numerodocPrimerPasajero");
+                    tabla = grupo.Reporte_recuperarNumDocTitular(Msktxt_NumDocTitular.Text);
                     if (tabla.Rows.Count != 0)
                         ArmarReportePasajeroxfamiliar();
                     else
@@ -73,13 +74,15 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Pasajeros
                         MessageBox.Show("No se encontraron resultados para la búsqueda");
                     }
                 } 
+                    
+
             }
 
             else if (rbu02.Checked == true)
             {
-                if (Msktxt_NumDocFamiliar.Text != "" && Msktxt_NumDocFamiliarhasta.Text != "")
+                if (Msktxt_NumDocFamiliar.Text != "")
                 {
-                    tabla = grupo.Reporte_recuperarNumDocTitularRango(Msktxt_NumDocFamiliar.Text, Msktxt_NumDocFamiliarhasta.Text, "numerodocSegundoPasajero");
+                    tabla = grupo.Reporte_recuperarNumDocFamiliar(Msktxt_NumDocFamiliar.Text);
                     if (tabla.Rows.Count != 0)
                         ArmarReportePasajeroxfamiliar();
                     else
@@ -89,6 +92,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Pasajeros
                         MessageBox.Show("No se encontraron resultados para la búsqueda");
                     }
                 }
+                   
 
             }
             else if (rbu03.Checked == true)
@@ -105,6 +109,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Pasajeros
                         MessageBox.Show("No se encontraron resultados para la búsqueda");
                     }
                 }
+                   
             }
             else
             {
@@ -113,13 +118,9 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Pasajeros
                 {
                     MessageBox.Show("No realizo selección para la búsqueda");
                 }
+                    
             }
 
-        }
-
-        private void btn_cerrar_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

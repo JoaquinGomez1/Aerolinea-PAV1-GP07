@@ -26,6 +26,8 @@ using TrabajoPrácticoPAV.Formularios.Facturaciones;
 using TrabajoPrácticoPAV.Formularios.Listados.Aeropuertos;
 using TrabajoPrácticoPAV.Formularios.Listados.Viajes.Tramos;
 using TrabajoPrácticoPAV.Formularios.Listados.Avion_Por_Modelo;
+using TrabajoPrácticoPAV.Formularios.Listados.Reservas;
+using TrabajoPrácticoPAV.Formularios.Listados.Tripulacion_Por_Vuelo;
 
 namespace TrabajoPrácticoPAV
 {
@@ -321,6 +323,18 @@ namespace TrabajoPrácticoPAV
         {
             CerrarTodosLosMenuStrip();
             AbrirFormulario<Frm_AvionPorModelo>();
+        }
+
+        private void reservaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_Reservas>();
+        }
+
+        private void tripulacionPorVueloToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_ListadoTripPorVuelo>();
         }
     }
 }
