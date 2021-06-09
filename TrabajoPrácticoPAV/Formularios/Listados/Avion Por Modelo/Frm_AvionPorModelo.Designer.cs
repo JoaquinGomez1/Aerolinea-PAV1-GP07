@@ -29,7 +29,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Avion_Por_Modelo
         /// </summary>
         private void InitializeComponent()
         {
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -43,6 +43,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Avion_Por_Modelo
             this.cmb_idModelo = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
             this.cmb_numModelo = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
             this.label4 = new System.Windows.Forms.Label();
+            this.btn_cerrar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -140,9 +141,9 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Avion_Por_Modelo
             // 
             // rv_avionPorModelo
             // 
-            reportDataSource4.Name = "ReservasPorPasajeros";
-            reportDataSource4.Value = null;
-            this.rv_avionPorModelo.LocalReport.DataSources.Add(reportDataSource4);
+            reportDataSource1.Name = "ReservasPorPasajeros";
+            reportDataSource1.Value = null;
+            this.rv_avionPorModelo.LocalReport.DataSources.Add(reportDataSource1);
             this.rv_avionPorModelo.LocalReport.ReportEmbeddedResource = "TrabajoPrácticoPAV.Formularios.Listados.Reservas.ReporteReservasPorPasajeros.rdlc" +
     "";
             this.rv_avionPorModelo.Location = new System.Drawing.Point(12, 173);
@@ -204,11 +205,24 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Avion_Por_Modelo
             this.label4.TabIndex = 18;
             this.label4.Text = "Reporte de avion por modelo";
             // 
+            // btn_cerrar
+            // 
+            this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.btn_cerrar.Location = new System.Drawing.Point(631, 376);
+            this.btn_cerrar.Name = "btn_cerrar";
+            this.btn_cerrar.Size = new System.Drawing.Size(90, 28);
+            this.btn_cerrar.TabIndex = 19;
+            this.btn_cerrar.Text = "Cerrar";
+            this.btn_cerrar.UseVisualStyleBackColor = true;
+            this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
+            // 
             // Frm_AvionPorModelo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(733, 379);
+            this.ClientSize = new System.Drawing.Size(733, 407);
+            this.Controls.Add(this.btn_cerrar);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.rv_avionPorModelo);
@@ -238,5 +252,6 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Avion_Por_Modelo
         private System.Windows.Forms.Label label4;
         private Clase.ComboBox_Aerolinea cmb_idModelo;
         private Clase.ComboBox_Aerolinea cmb_numModelo;
+        private System.Windows.Forms.Button btn_cerrar;
     }
 }

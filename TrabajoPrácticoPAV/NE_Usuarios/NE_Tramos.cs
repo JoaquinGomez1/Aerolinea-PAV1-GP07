@@ -64,9 +64,33 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             return _BD.EjecutarSelect(sql);
         }
 
+        public DataTable RecuperarPorDistanciaMayor(int distancia)
+        {
+            string sql = $"SELECT * FROM Tramo WHERE distancia > {distancia}";
+            return _BD.EjecutarSelect(sql);
+        }
+
+        public DataTable RecuperarPorDistanciaMenor(int distancia)
+        {
+            string sql = $"SELECT * FROM Tramo WHERE distancia < {distancia}";
+            return _BD.EjecutarSelect(sql);
+        }
+
         public DataTable RecuperarPorDuracion(int duracion)
         {
             string sql = $"SELECT * FROM Tramo WHERE duracion = {duracion}";
+            return _BD.EjecutarSelect(sql);
+        }
+
+        public DataTable RecuperarPorDuracionMayor(int duracion)
+        {
+            string sql = $"SELECT * FROM Tramo WHERE duracion > {duracion}";
+            return _BD.EjecutarSelect(sql);
+        }
+
+        public DataTable RecuperarPorDuracionMenor(int duracion)
+        {
+            string sql = $"SELECT * FROM Tramo WHERE duracion < {duracion}";
             return _BD.EjecutarSelect(sql);
         }
 
