@@ -99,11 +99,71 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Viajes.Tramos
                     }
                 }
             }
+            else if (rbu_duracionMayor.Checked == true)
+            {
+                if (txt_duracion.Text != "")
+                {
+                    tabla = tramo.RecuperarPorDuracionMayor(Int32.Parse(txt_duracion.Text));
+                    if (tabla.Rows.Count != 0)
+                        CargarListadoTramos();
+                    else
+                    {
+                        rv_tramos.LocalReport.DataSources.Clear();
+                        rv_tramos.RefreshReport();
+                        MessageBox.Show("No se encontraron resultados para la búsqueda");
+                    }
+                }
+            }
+            else if (rbu_duracionMenor.Checked == true)
+            {
+                if (txt_duracion.Text != "")
+                {
+                    tabla = tramo.RecuperarPorDuracionMenor(Int32.Parse(txt_duracion.Text));
+                    if (tabla.Rows.Count != 0)
+                        CargarListadoTramos();
+                    else
+                    {
+                        rv_tramos.LocalReport.DataSources.Clear();
+                        rv_tramos.RefreshReport();
+                        MessageBox.Show("No se encontraron resultados para la búsqueda");
+                    }
+                }
+            }
             else if (rbu_distancia.Checked == true)
             {
                 if (txt_distancia.Text != "")
                 {
                     tabla = tramo.RecuperarPorDistancia(Int32.Parse(txt_distancia.Text));
+                    if (tabla.Rows.Count != 0)
+                        CargarListadoTramos();
+                    else
+                    {
+                        rv_tramos.LocalReport.DataSources.Clear();
+                        rv_tramos.RefreshReport();
+                        MessageBox.Show("No se encontraron resultados para la búsqueda");
+                    }
+                }
+            }
+            else if (rbu_distanciaMayor.Checked == true)
+            {
+                if (txt_distancia.Text != "")
+                {
+                    tabla = tramo.RecuperarPorDistanciaMayor(Int32.Parse(txt_distancia.Text));
+                    if (tabla.Rows.Count != 0)
+                        CargarListadoTramos();
+                    else
+                    {
+                        rv_tramos.LocalReport.DataSources.Clear();
+                        rv_tramos.RefreshReport();
+                        MessageBox.Show("No se encontraron resultados para la búsqueda");
+                    }
+                }
+            }
+            else if (rbu_distanciaMenor.Checked == true)
+            {
+                if (txt_distancia.Text != "")
+                {
+                    tabla = tramo.RecuperarPorDistanciaMenor(Int32.Parse(txt_distancia.Text));
                     if (tabla.Rows.Count != 0)
                         CargarListadoTramos();
                     else
@@ -131,6 +191,11 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Viajes.Tramos
             rv_tramos.LocalReport.DataSources.Clear();
             rv_tramos.LocalReport.DataSources.Add(datos);
             rv_tramos.RefreshReport();
+        }
+
+        private void btn_cerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
