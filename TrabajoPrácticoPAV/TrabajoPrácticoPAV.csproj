@@ -219,6 +219,23 @@
     <Compile Include="Formularios\Listados\Aeropuertos\Frm_ReporteAeroPais.Designer.cs">
       <DependentUpon>Frm_ReporteAeroPais.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Listados\Asientos\Ds_ReporteAsientoXAvion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ds_ReporteAsientoXAvion.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Listados\Asientos\Frm_ReporteAsientoXAvion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Listados\Asientos\Frm_ReporteAsientoXAvion.Designer.cs">
+      <DependentUpon>Frm_ReporteAsientoXAvion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Listados\Vuelos\Frm_ReporteVueloXAeropuerto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Listados\Vuelos\Frm_ReporteVueloXAeropuerto.Designer.cs">
+      <DependentUpon>Frm_ReporteVueloXAeropuerto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Listados\Aviones\DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -243,6 +260,11 @@
     </Compile>
     <Compile Include="Formularios\Listados\Pasajeros\Frm_ReporteFamiliareXPasajero.Designer.cs">
       <DependentUpon>Frm_ReporteFamiliareXPasajero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Listados\Vuelos\Ds_ReporteVueloXAeropuerto.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ds_ReporteVueloXAeropuerto.xsd</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Reservas\Frm_CargarPasajerosPorReserva.cs">
       <SubType>Form</SubType>
@@ -632,6 +654,13 @@
     <EmbeddedResource Include="Formularios\Facturaciones\Frm_MostrarFacturacion.resx">
       <DependentUpon>Frm_MostrarFacturacion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Listados\Asientos\Frm_ReporteAsientoXAvion.resx">
+      <DependentUpon>Frm_ReporteAsientoXAvion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Listados\Asientos\Reporte_AsientoXAvion.rdlc" />
+    <EmbeddedResource Include="Formularios\Listados\Vuelos\Frm_ReporteVueloXAeropuerto.resx">
+      <DependentUpon>Frm_ReporteVueloXAeropuerto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Listados\Aeropuertos\ReporteAeroPais.rdlc" />
     <EmbeddedResource Include="Formularios\Listados\Aeropuertos\Frm_ReporteAeroPais.resx">
       <DependentUpon>Frm_ReporteAeroPais.cs</DependentUpon>
@@ -643,6 +672,7 @@
       <DependentUpon>Frm_ReporteFamiliareXPasajero.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Listados\Pasajeros\ReporteFamiliareXPasajero.rdlc" />
+    <EmbeddedResource Include="Formularios\Listados\Vuelos\Reporte_VuelosXAeropuerto.rdlc" />
     <EmbeddedResource Include="Formularios\Reservas\Frm_CargarPasajerosPorReserva.resx">
       <DependentUpon>Frm_CargarPasajerosPorReserva.cs</DependentUpon>
     </EmbeddedResource>
@@ -821,6 +851,17 @@
     <None Include="Formularios\Listados\Aeropuertos\Ds_ReporteAeroPais.xss">
       <DependentUpon>Ds_ReporteAeroPais.xsd</DependentUpon>
     </None>
+    <None Include="Formularios\Listados\Asientos\Ds_ReporteAsientoXAvion.xsc">
+      <DependentUpon>Ds_ReporteAsientoXAvion.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Listados\Asientos\Ds_ReporteAsientoXAvion.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Ds_ReporteAsientoXAvion.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Formularios\Listados\Asientos\Ds_ReporteAsientoXAvion.xss">
+      <DependentUpon>Ds_ReporteAsientoXAvion.xsd</DependentUpon>
+    </None>
     <None Include="Formularios\Listados\Aviones\DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
@@ -842,6 +883,17 @@
     </None>
     <None Include="Formularios\Listados\Pasajeros\Ds_ReporteFamiliareXPasajero.xss">
       <DependentUpon>Ds_ReporteFamiliareXPasajero.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Listados\Vuelos\Ds_ReporteVueloXAeropuerto.xsc">
+      <DependentUpon>Ds_ReporteVueloXAeropuerto.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Listados\Vuelos\Ds_ReporteVueloXAeropuerto.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Ds_ReporteVueloXAeropuerto.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Formularios\Listados\Vuelos\Ds_ReporteVueloXAeropuerto.xss">
+      <DependentUpon>Ds_ReporteVueloXAeropuerto.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
