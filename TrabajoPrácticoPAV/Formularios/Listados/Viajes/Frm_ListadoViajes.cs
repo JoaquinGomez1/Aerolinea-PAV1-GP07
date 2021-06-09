@@ -25,9 +25,13 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Viajes
         private void button_Aerolinea1_Click(object sender, EventArgs e)
         { 
             if (rbu01.Checked == true)
+            {              
+                ArmarReporteUsuario01(viajes.RecuperarViajesXHorarioSalida(msk_txt1.Text, msk_txt2.Text));
+            }
+            if (rbu02.Checked ==true )
             {
-                
-                ArmarReporteUsuario01(viajes.RecuperarViajesXHorario(msk_txt1.Text, msk_txt2.Text));
+                ArmarReporteUsuario01(viajes.RecuperarViajesXHorarioLlegada(msk_txt1.Text, msk_txt2.Text));
+
             }
             if (rbu04.Checked == true)
             {
@@ -52,6 +56,21 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Viajes
             rv_01.LocalReport.DataSources.Clear();
             rv_01.LocalReport.DataSources.Add(PaqueteDatos);
             rv_01.RefreshReport();
+        }
+
+        private void msk_txt1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void rbu01_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rbu04_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

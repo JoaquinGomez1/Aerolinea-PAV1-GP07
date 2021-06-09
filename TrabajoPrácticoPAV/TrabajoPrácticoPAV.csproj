@@ -243,6 +243,20 @@
     <Compile Include="Formularios\Listados\Avion Por Modelo\Frm_AvionPorModelo.Designer.cs">
       <DependentUpon>Frm_AvionPorModelo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Listados\Pasajeros\Ds_ReporteFamiliareXPasajero.cs">
+      <DependentUpon>Ds_ReporteFamiliareXPasajero.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Listados\Pasajeros\Ds_ReporteFamiliareXPasajero.Designer.cs">
+      <DependentUpon>Ds_ReporteFamiliareXPasajero.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Formularios\Listados\Pasajeros\Frm_ReporteFamiliareXPasajero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Listados\Pasajeros\Frm_ReporteFamiliareXPasajero.Designer.cs">
+      <DependentUpon>Frm_ReporteFamiliareXPasajero.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Listados\Pasajeros\Reporte_Pasajeros.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -279,20 +293,6 @@
     </Compile>
     <Compile Include="Formularios\Listados\Aviones\Frm_Reportes.Designer.cs">
       <DependentUpon>Frm_Reportes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Listados\Pasajeros\Ds_ReporteFamiliareXPasajero.cs">
-      <DependentUpon>Ds_ReporteFamiliareXPasajero.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Listados\Pasajeros\Ds_ReporteFamiliareXPasajero.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Ds_ReporteFamiliareXPasajero.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Listados\Pasajeros\Frm_ReporteFamiliareXPasajero.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Listados\Pasajeros\Frm_ReporteFamiliareXPasajero.Designer.cs">
-      <DependentUpon>Frm_ReporteFamiliareXPasajero.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Listados\Reservas\Ds_ReservasPorPasajeros.cs">
       <DependentUpon>Ds_ReservasPorPasajeros.xsd</DependentUpon>
@@ -756,6 +756,10 @@
       <DependentUpon>Frm_AvionPorModelo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Listados\Avion Por Modelo\ReporteAvionPorModelo.rdlc" />
+    <EmbeddedResource Include="Formularios\Listados\Pasajeros\Frm_ReporteFamiliareXPasajero.resx">
+      <DependentUpon>Frm_ReporteFamiliareXPasajero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Listados\Pasajeros\ReporteFamiliareXPasajero.rdlc" />
     <EmbeddedResource Include="Formularios\Listados\Pasajeros\ReportePasajero.rdlc" />
     <EmbeddedResource Include="Formularios\Listados\Pasajeros\Reporte_Pasajeros.resx">
       <DependentUpon>Reporte_Pasajeros.cs</DependentUpon>
@@ -775,10 +779,6 @@
       <DependentUpon>Frm_Reportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Listados\Aviones\Report1.rdlc" />
-    <EmbeddedResource Include="Formularios\Listados\Pasajeros\Frm_ReporteFamiliareXPasajero.resx">
-      <DependentUpon>Frm_ReporteFamiliareXPasajero.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Listados\Pasajeros\ReporteFamiliareXPasajero.rdlc" />
     <EmbeddedResource Include="Formularios\Listados\Reservas\Frm_Reservas.resx">
       <DependentUpon>Frm_Reservas.cs</DependentUpon>
     </EmbeddedResource>
