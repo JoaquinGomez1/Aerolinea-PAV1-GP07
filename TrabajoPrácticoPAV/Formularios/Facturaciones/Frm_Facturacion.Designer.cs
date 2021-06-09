@@ -1,7 +1,7 @@
 ﻿
 namespace TrabajoPrácticoPAV.Formularios.Facturaciones
 {
-    partial class Frm_Facturacion
+    partial class Reporte_Pasajeros
     {
         /// <summary>
         /// Required designer variable.

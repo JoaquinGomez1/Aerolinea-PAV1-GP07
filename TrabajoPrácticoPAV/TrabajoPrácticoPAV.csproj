@@ -198,12 +198,6 @@
     <Compile Include="Formularios\Facturaciones\Frm_EliminarFactura.Designer.cs">
       <DependentUpon>Frm_EliminarFactura.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Facturaciones\Frm_Facturacion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Facturaciones\Frm_Facturacion.Designer.cs">
-      <DependentUpon>Frm_Facturacion.cs</DependentUpon>
-    </Compile>
     <Compile Include="Formularios\Facturaciones\Frm_MostrarFacturacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -248,6 +242,12 @@
     </Compile>
     <Compile Include="Formularios\Listados\Avion Por Modelo\Frm_AvionPorModelo.Designer.cs">
       <DependentUpon>Frm_AvionPorModelo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Listados\Pasajeros\Reporte_Pasajeros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Listados\Pasajeros\Reporte_Pasajeros.designer.cs">
+      <DependentUpon>Reporte_Pasajeros.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Listados\TramosPorViaje\Ds_ViajeXTramo.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -745,9 +745,6 @@
     <EmbeddedResource Include="Formularios\Facturaciones\Frm_EliminarFactura.resx">
       <DependentUpon>Frm_EliminarFactura.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Facturaciones\Frm_Facturacion.resx">
-      <DependentUpon>Frm_Facturacion.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Facturaciones\Frm_MostrarFacturacion.resx">
       <DependentUpon>Frm_MostrarFacturacion.cs</DependentUpon>
     </EmbeddedResource>
@@ -759,6 +756,10 @@
       <DependentUpon>Frm_AvionPorModelo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Listados\Avion Por Modelo\ReporteAvionPorModelo.rdlc" />
+    <EmbeddedResource Include="Formularios\Listados\Pasajeros\ReportePasajero.rdlc" />
+    <EmbeddedResource Include="Formularios\Listados\Pasajeros\Reporte_Pasajeros.resx">
+      <DependentUpon>Reporte_Pasajeros.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Listados\TramosPorViaje\Frm_ReporteViajeXTramo.resx">
       <DependentUpon>Frm_ReporteViajeXTramo.cs</DependentUpon>
     </EmbeddedResource>

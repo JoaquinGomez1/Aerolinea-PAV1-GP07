@@ -273,8 +273,8 @@
             this.PanelFormularios.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.PanelFormularios.BackgroundImage = global::TrabajoPrácticoPAV.Properties.Resources.ElbpHR6W0AAInBS;
             this.PanelFormularios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PanelFormularios.Controls.Add(this.menuStrip2);
             this.PanelFormularios.Controls.Add(this.menuStrip3);
+            this.PanelFormularios.Controls.Add(this.menuStrip2);
             this.PanelFormularios.Controls.Add(this.menuStrip1);
             this.PanelFormularios.Controls.Add(this.pictureBox1);
             this.PanelFormularios.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -310,10 +310,10 @@
             // 
             // facturasToolStripMenuItem
             // 
-            this.facturasToolStripMenuItem.Name = "facturasToolStripMenuItem";
-            this.facturasToolStripMenuItem.Size = new System.Drawing.Size(86, 24);
-            this.facturasToolStripMenuItem.Text = "Facturas";
-            this.facturasToolStripMenuItem.Click += new System.EventHandler(this.facturasToolStripMenuItem_Click);
+            //this.facturasToolStripMenuItem.Name = "facturasToolStripMenuItem";
+            //this.facturasToolStripMenuItem.Size = new System.Drawing.Size(86, 24);
+            //this.facturasToolStripMenuItem.Text = "Facturas";
+            //this.facturasToolStripMenuItem.Click += new System.EventHandler(this.facturasToolStripMenuItem_Click);
             // 
             // menuStrip3
             // 
@@ -403,6 +403,7 @@
             this.pasajerosToolStripMenuItem1.Name = "pasajerosToolStripMenuItem1";
             this.pasajerosToolStripMenuItem1.Size = new System.Drawing.Size(265, 24);
             this.pasajerosToolStripMenuItem1.Text = "Pasajeros";
+            this.pasajerosToolStripMenuItem1.Click += new System.EventHandler(this.pasajerosToolStripMenuItem1_Click);
             // 
             // telefonoPorPasajeroToolStripMenuItem
             // 

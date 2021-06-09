@@ -40,6 +40,40 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
                         $"'{nombreDoc}'").Rows[0]["tipoDoc"].ToString();
         }
 
+        public DataTable buscar_todos()
+        {
+            string sql = "SELECT tp.nombreTipoDoc as 'tipoDoc', p.numeroDoc, p.nombre, p.apellido, p.fechaNacimiento, c.nombreCiudad as 'ciudad' " +
+                "FROM Pasajero p JOIN Ciudad c ON p.idCiudad=c.idCiudad JOIN Tipo_Documento tp ON p.tipoDoc = tp.tipoDoc";
+            return _BD.EjecutarSelect(sql);
+        }
+
+        public DataTable buscar_por_ranngo_dni(string desde, string hasta)
+        {
+            string sql = "SELECT tp.nombreTipoDoc as 'tipoDoc', p.numeroDoc, p.nombre, p.apellido, p.fechaNacimiento, c.nombreCiudad as 'ciudad' " +
+               "FROM Pasajero p JOIN Ciudad c ON p.idCiudad=c.idCiudad JOIN Tipo_Documento tp ON p.tipoDoc = tp.tipoDoc" +
+               " WHERE p.numeroDoc BETWEEN " + desde + " AND " + hasta;
+
+            return _BD.EjecutarSelect(sql);
+        }
+
+        public DataTable buscar_por_ciudad(string ciudad)
+        {
+            string sql = "SELECT tp.nombreTipoDoc as 'tipoDoc', p.numeroDoc, p.nombre, p.apellido, p.fechaNacimiento, c.nombreCiudad as 'ciudad' " +
+               "FROM Pasajero p JOIN Ciudad c ON p.idCiudad=c.idCiudad JOIN Tipo_Documento tp ON p.tipoDoc = tp.tipoDoc" +
+               " WHERE c.idCiudad = " + ciudad;
+
+            return _BD.EjecutarSelect(sql);
+        }
+
+        public DataTable buscar_por_apellido(string apellido)
+        {
+            string sql = "SELECT tp.nombreTipoDoc as 'tipoDoc', p.numeroDoc, p.nombre, p.apellido, p.fechaNacimiento, c.nombreCiudad as 'ciudad' " +
+               "FROM Pasajero p JOIN Ciudad c ON p.idCiudad=c.idCiudad JOIN Tipo_Documento tp ON p.tipoDoc = tp.tipoDoc" +
+               " WHERE p.apellido LIKE '%" + apellido + "%'";
+
+            return _BD.EjecutarSelect(sql);
+        }
+
         public void CargarGrilla(string sql, DataGridView_Aerolinea grid)
         {
             DataTable tabla = _BD.EjecutarSelect(sql);

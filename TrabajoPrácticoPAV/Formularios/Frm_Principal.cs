@@ -308,11 +308,11 @@ namespace TrabajoPrácticoPAV
             AbrirFormulario<Frm_ABMReservas>();
         }
 
-        private void facturasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            CerrarTodosLosMenuStrip();
-            AbrirFormulario<Frm_Facturacion>();
-        }
+        //private void facturasToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+        //    CerrarTodosLosMenuStrip();
+        //    AbrirFormulario<Frm_Facturacion>();
+        //}
 
         private void aeropuertoPorPaisToolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -381,5 +381,10 @@ namespace TrabajoPrácticoPAV
         }
         #endregion
 
+        private void pasajerosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Formularios.Listados.Pasajeros.Reporte_Pasajeros>();
+        }
     }
 }

@@ -22,7 +22,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Pasajeros
         public Reporte_Pasajeros()
         {
             InitializeComponent();
-            cmb_ciudad.CargarCombo(); 
+            cmb_ciudad.CargarCombo();
         }
 
         private void Reporte_Pasajeros_Load(object sender, EventArgs e)
@@ -85,7 +85,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Pasajeros
                 {
                     MessageBox.Show("Ingrese un apellido");
                 }
-                
+
 
             }
             else if (rbu03.Checked)
@@ -126,7 +126,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Pasajeros
                 MessageBox.Show("No seleccionó ninguna opción");
             }
         }
-    
+
         private void ArmarReportePasajero(DataTable tabla)
         {
             ReportDataSource datos = new ReportDataSource("RepoPasajero", tabla);
