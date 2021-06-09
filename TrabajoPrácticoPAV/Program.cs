@@ -4,21 +4,17 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Formularios;
-using TrabajoPrácticoPAV.Formularios.Provincia;
-using TrabajoPrácticoPAV.Formularios.Pais;
-using TrabajoPrácticoPAV.Formularios.TipoDoc;
-using TrabajoPrácticoPAV.Formularios.Tipo_Asientos;
-using TrabajoPrácticoPAV.Formularios.Tripulacion;
-using TrabajoPrácticoPAV.Formularios.Ciudad;
-using TrabajoPrácticoPAV.Formularios.Asientos;
-using TrabajoPrácticoPAV.Formularios.Modelo;
-using TrabajoPrácticoPAV.Formularios.Aeropuertos;
 using TrabajoPrácticoPAV.Formularios.Listados.Aeropuertos;
 using TrabajoPrácticoPAV.Formularios.Listados.Pasajeros;
 using TrabajoPrácticoPAV.Formularios.Listados.Aviones;
 using TrabajoPrácticoPAV.Formularios.Listados.Viajes;
 using TrabajoPrácticoPAV.Formularios.Listados;
 
+using TrabajoPrácticoPAV.Formularios.Listados.Reservas;
+using TrabajoPrácticoPAV.Formularios.Listados.Tripulacion_Por_Vuelo;
+
+using TrabajoPrácticoPAV.Formularios.Listados.Tripulación;
+using TrabajoPrácticoPAV.Formularios.Listados.Avion_Por_Modelo;
 
 namespace TrabajoPrácticoPAV
 {

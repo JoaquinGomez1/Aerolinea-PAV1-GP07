@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_ReporteVueloXAeropuerto" targetNamespace="http://tempuri.org/Ds_ReporteVueloXAeropuerto.xsd" xmlns:mstns="http://tempuri.org/Ds_ReporteVueloXAeropuerto.xsd" xmlns="http://tempuri.org/Ds_ReporteVueloXAeropuerto.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_ReporteVueloXAeropuerto" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Ds_ReporteVueloXAeropuerto" msprop:Generator_UserDSName="Ds_ReporteVueloXAeropuerto">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ReporteVueloXAeropuerto" msprop:Generator_TableClassName="ReporteVueloXAeropuertoDataTable" msprop:Generator_TableVarName="tableReporteVueloXAeropuerto" msprop:Generator_RowChangedName="ReporteVueloXAeropuertoRowChanged" msprop:Generator_TablePropName="ReporteVueloXAeropuerto" msprop:Generator_RowDeletingName="ReporteVueloXAeropuertoRowDeleting" msprop:Generator_RowChangingName="ReporteVueloXAeropuertoRowChanging" msprop:Generator_RowEvHandlerName="ReporteVueloXAeropuertoRowChangeEventHandler" msprop:Generator_RowDeletedName="ReporteVueloXAeropuertoRowDeleted" msprop:Generator_RowClassName="ReporteVueloXAeropuertoRow" msprop:Generator_UserTableName="ReporteVueloXAeropuerto" msprop:Generator_RowEvArgName="ReporteVueloXAeropuertoRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idVuelo" msprop:Generator_ColumnVarNameInTable="columnidVuelo" msprop:Generator_ColumnPropNameInRow="idVuelo" msprop:Generator_ColumnPropNameInTable="idVueloColumn" msprop:Generator_UserColumnName="idVuelo" type="xs:int" minOccurs="0" />
+              <xs:element name="duracionEstimada" msprop:Generator_ColumnVarNameInTable="columnduracionEstimada" msprop:Generator_ColumnPropNameInRow="duracionEstimada" msprop:Generator_ColumnPropNameInTable="duracionEstimadaColumn" msprop:Generator_UserColumnName="duracionEstimada" type="xs:int" minOccurs="0" />
+              <xs:element name="Modelo" msprop:Generator_ColumnVarNameInTable="columnModelo" msprop:Generator_ColumnPropNameInRow="Modelo" msprop:Generator_ColumnPropNameInTable="ModeloColumn" msprop:Generator_UserColumnName="Modelo" type="xs:string" minOccurs="0" />
+              <xs:element name="AeropuertoDestino" msprop:Generator_ColumnVarNameInTable="columnAeropuertoDestino" msprop:Generator_ColumnPropNameInRow="AeropuertoDestino" msprop:Generator_ColumnPropNameInTable="AeropuertoDestinoColumn" msprop:Generator_UserColumnName="AeropuertoDestino" type="xs:string" minOccurs="0" />
+              <xs:element name="AeropuertoSalida" msprop:Generator_ColumnVarNameInTable="columnAeropuertoSalida" msprop:Generator_ColumnPropNameInRow="AeropuertoSalida" msprop:Generator_ColumnPropNameInTable="AeropuertoSalidaColumn" msprop:Generator_UserColumnName="AeropuertoSalida" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -8,7 +8,6 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
 {
     class NE_Tripulacion
     {
-
         private readonly Conexion_DB _DB = new Conexion_DB();
 
         public DataTable GetTodosLosTripulantes()
@@ -53,7 +52,7 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
         }
 
         // Overrides para eliminar por Tripulante o id (int o string)
-       
+
         public void EliminarTripulante(string idTripulante)
         {
             EliminarTripulacion(idTripulante);
@@ -61,14 +60,33 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
 
         private void EliminarTripulacion(string idTripulante)
         {
-
             string sql = $"DELETE FROM Tripulacion WHERE idTripulacion = {idTripulante}";
             _DB.Borrar(sql, true);
         }
 
+        public DataTable GetTodosTripulantesPorVuelo()
+        {
+            string sql = "SELECT tv.idVuelo, tv.idTripulacion,t.nombre,t.apellido, t.idCargoTripulacion, " +
+                        "(SELECT nombre FROM Cargo_Tripulacion WHERE t.idCargoTripulacion = idCargoTripulacion) as nombreCargo, " +
+                        "v.codigoAeropuertoSalida, v.codigoAeropuertoDestino, v.idModelo, v.duracionEstimada " +
+                        "FROM Tripulacion_X_Vuelo tv  " +
+                        "JOIN Tripulacion t ON tv.idTripulacion = t.idTripulacion " +
+                        "JOIN Vuelo v ON v.idVuelo = tv.idVuelo";
+            return _DB.EjecutarSelect(sql);
+        }
+
+        public DataTable GetTripulacionEnVueloPorParametro(string parametro, string cargo)
+        {
+            string sql = "SELECT * FROM Tripulacion_X_Vuelo " +
+                        "JOIN Tripulacion on Tripulacion_X_Vuelo.idTripulacion = Tripulacion.idTripulacion " +
+                        "JOIN Vuelo ON Vuelo.idVuelo = Tripulacion_X_Vuelo.idVuelo " +
+                        $"WHERE {parametro} = {cargo}";
+            return _DB.EjecutarSelect(sql);
+        }
+
         public DataTable GetTripulante(string nombre, string apellido, string cargo)
         {
-            
+
             if (nombre != "" && apellido != "")
             {
                 string sql = $"SELECT idTripulacion, Tripulacion.nombre AS nombre, apellido, Tripulacion.idCargoTripulacion AS idCargoTripulacion, Cargo_Tripulacion.nombre AS nombreCargo FROM Tripulacion JOIN Cargo_Tripulacion on Tripulacion.idCargoTripulacion = Cargo_Tripulacion.idCargoTripulacion WHERE (Tripulacion.nombre='{nombre}') AND (apellido='{apellido}') AND (Tripulacion.idCargoTripulacion={cargo})";
@@ -97,12 +115,23 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
                 return resultadoSelect;
             }
 
-
             else
             {
                 DataTable resultadoSelect = null;
                 return resultadoSelect;
             }
+
+
         }
+        public DataTable RecuperarTripulantes()
+        {
+            string sql = @"SELECT Tripulacion.idTripulacion, Tripulacion.nombre AS nombre, Tripulacion.apellido AS apellido, Cargo_Tripulacion.nombre AS cargo
+                         FROM Tripulacion 
+                         JOIN Cargo_Tripulacion ON
+                         Tripulacion.idCargoTripulacion = Cargo_Tripulacion.idCargoTripulacion";
+            DataTable resultadoSelect = _DB.EjecutarSelect(sql);
+            return resultadoSelect;
+        }
+
     }
 }

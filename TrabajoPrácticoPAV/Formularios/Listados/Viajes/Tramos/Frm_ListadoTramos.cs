@@ -70,7 +70,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Viajes.Tramos
             }
             else if (rbu_destino.Checked == true)
             {
-                if (cmb_destino.Text != null)
+                if (cmb_destino.SelectedValue != null)
                 {
                     tabla = tramo.RecuperarPorCodigoDestino(cmb_destino.Text);
                     if (tabla.Rows.Count != 0)
@@ -103,7 +103,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Viajes.Tramos
             {
                 if (txt_distancia.Text != "")
                 {
-                    tabla = tramo.RecuperarPorDuracion(Int32.Parse(txt_distancia.Text));
+                    tabla = tramo.RecuperarPorDistancia(Int32.Parse(txt_distancia.Text));
                     if (tabla.Rows.Count != 0)
                         CargarListadoTramos();
                     else

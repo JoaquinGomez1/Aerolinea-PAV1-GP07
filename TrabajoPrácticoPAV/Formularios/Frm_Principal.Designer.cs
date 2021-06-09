@@ -346,6 +346,7 @@
             this.avionPorModeloToolStripMenuItem.Name = "avionPorModeloToolStripMenuItem";
             this.avionPorModeloToolStripMenuItem.Size = new System.Drawing.Size(395, 24);
             this.avionPorModeloToolStripMenuItem.Text = "Avion por modelo";
+            this.avionPorModeloToolStripMenuItem.Click += new System.EventHandler(this.avionPorModeloToolStripMenuItem_Click);
             // 
             // aeropuertoPorPaisToolStripMenuItem
             // 

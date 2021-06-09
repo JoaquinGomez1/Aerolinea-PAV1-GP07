@@ -287,6 +287,14 @@ namespace TrabajoPrácticoPAV {
             
             private global::System.Data.DataColumn columndistancia;
             
+            private global::System.Data.DataColumn columntipoClase;
+            
+            private global::System.Data.DataColumn columnnumeroAsiento;
+            
+            private global::System.Data.DataColumn columnnumeroPorModelo;
+            
+            private global::System.Data.DataColumn columnidModelo;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public TramoDataTable() {
@@ -349,6 +357,38 @@ namespace TrabajoPrácticoPAV {
             public global::System.Data.DataColumn distanciaColumn {
                 get {
                     return this.columndistancia;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn tipoClaseColumn {
+                get {
+                    return this.columntipoClase;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn numeroAsientoColumn {
+                get {
+                    return this.columnnumeroAsiento;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn numeroPorModeloColumn {
+                get {
+                    return this.columnnumeroPorModelo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn idModeloColumn {
+                get {
+                    return this.columnidModelo;
                 }
             }
             
@@ -622,7 +662,13 @@ namespace TrabajoPrácticoPAV {
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("El valor de la columna \'duracion\' de la tabla \'Tramo\' es DBNull.", e);
-                    }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int tipoClase {
+                get {
+                    return ((int)(this[this.tableReservas_X_Pasajero.tipoClaseColumn]));
                 }
                 set {
                     this[this.tableTramo.duracionColumn] = value;
@@ -650,6 +696,19 @@ namespace TrabajoPrácticoPAV {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetduracionNull() {
                 this[this.tableTramo.duracionColumn] = global::System.Convert.DBNull;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsfechaHoraVencimientoNull() {
+                return this.IsNull(this.tableReservas_X_Pasajero.fechaHoraVencimientoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetfechaHoraVencimientoNull() {
+                this[this.tableReservas_X_Pasajero.fechaHoraVencimientoColumn] = global::System.Convert.DBNull;
             }
         }
         
