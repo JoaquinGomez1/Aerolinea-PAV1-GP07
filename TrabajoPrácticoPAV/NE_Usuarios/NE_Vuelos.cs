@@ -42,6 +42,7 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
                 MessageBox.Show("No se encontraron vuelos.");
             }
         }
+
         public void Insertar(Control.ControlCollection controles)
         {
             _BD.Insertar(tratamiento.CostructorInsert("Vuelo", controles), false);
@@ -72,5 +73,52 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
                 $"'{codigoAeropuerto}'").Rows[0]["nombre"].ToString();
         }
 
+        public DataTable Reporte_RecuperarTodos()
+        {
+            string sql = "SELECT v.idVuelo, v.duracionEstimada, CONCAT(m.nombre,' ',v.numeroPorModelo) as Modelo, "
+            + "(SELECT nombre FROM Aeropuerto WHERE codigo = v.codigoAeropuertoSalida) as AeropuertoSalida, "
+            + "(SELECT nombre FROM Aeropuerto WHERE codigo = v.codigoAeropuertoDestino) as AeropuertoDestino "
+            + "FROM Vuelo v "
+            + "JOIN Modelo m ON v.idModelo = m.idModelo";
+
+            return _BD.EjecutarSelect(sql);
+        }
+
+
+        public DataTable Reporte_RecuperarXNombreAeropuerto(string nombreAeropuerto)
+        {
+            string sql = "SELECT v.idVuelo, v.duracionEstimada, CONCAT(m.nombre,' ',v.numeroPorModelo) as Modelo, "
+            + "(SELECT nombre FROM Aeropuerto WHERE codigo = v.codigoAeropuertoSalida) as AeropuertoSalida, "
+            + "(SELECT nombre FROM Aeropuerto WHERE codigo = v.codigoAeropuertoDestino) as AeropuertoDestino "
+            + "FROM Vuelo v "
+            + "JOIN Modelo m ON v.idModelo = m.idModelo" +
+            $" WHERE codigoAeropuertoSalida IN (SELECT codigo FROM Aeropuerto WHERE nombre LIKE '%{nombreAeropuerto}%')";
+
+            return _BD.EjecutarSelect(sql);
+        }
+
+        public DataTable Reporte_RecuperarXCodigoAeropuerto(string codigoAeropuerto)
+        {
+            string sql = "SELECT v.idVuelo, v.duracionEstimada, CONCAT(m.nombre,' ',v.numeroPorModelo) as Modelo, "
+            + "(SELECT nombre FROM Aeropuerto WHERE codigo = v.codigoAeropuertoSalida) as AeropuertoSalida, "
+            + "(SELECT nombre FROM Aeropuerto WHERE codigo = v.codigoAeropuertoDestino) as AeropuertoDestino "
+            + "FROM Vuelo v "
+            + "JOIN Modelo m ON v.idModelo = m.idModelo" +
+            $" WHERE codigoAeropuertoSalida LIKE '%{codigoAeropuerto}%'";
+
+            return _BD.EjecutarSelect(sql);
+        }
+
+        public DataTable Reporte_RecuperarXIdVuelo(string idDesde, string idHasta)
+        {
+            string sql = "SELECT v.idVuelo, v.duracionEstimada, CONCAT(m.nombre,' ',v.numeroPorModelo) as Modelo, "
+            + "(SELECT nombre FROM Aeropuerto WHERE codigo = v.codigoAeropuertoSalida) as AeropuertoSalida, "
+            + "(SELECT nombre FROM Aeropuerto WHERE codigo = v.codigoAeropuertoDestino) as AeropuertoDestino "
+            + "FROM Vuelo v "
+            + "JOIN Modelo m ON v.idModelo = m.idModelo" +
+            $" WHERE idVuelo > {idDesde} AND idVuelo < {idHasta}";
+
+            return _BD.EjecutarSelect(sql);
+        }
     }
 }

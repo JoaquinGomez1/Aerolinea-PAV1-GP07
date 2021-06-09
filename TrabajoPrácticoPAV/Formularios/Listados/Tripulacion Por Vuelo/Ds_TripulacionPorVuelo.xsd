@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Ds_TripulacionPorVuelo" msprop:Generator_TableClassName="Ds_TripulacionPorVueloDataTable" msprop:Generator_TableVarName="tableDs_TripulacionPorVuelo" msprop:Generator_TablePropName="Ds_TripulacionPorVuelo" msprop:Generator_RowDeletingName="Ds_TripulacionPorVueloRowDeleting" msprop:Generator_RowChangingName="Ds_TripulacionPorVueloRowChanging" msprop:Generator_RowEvHandlerName="Ds_TripulacionPorVueloRowChangeEventHandler" msprop:Generator_RowDeletedName="Ds_TripulacionPorVueloRowDeleted" msprop:Generator_UserTableName="Ds_TripulacionPorVuelo" msprop:Generator_RowChangedName="Ds_TripulacionPorVueloRowChanged" msprop:Generator_RowEvArgName="Ds_TripulacionPorVueloRowChangeEvent" msprop:Generator_RowClassName="Ds_TripulacionPorVueloRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idVuelo" msprop:Generator_ColumnVarNameInTable="columnidVuelo" msprop:Generator_ColumnPropNameInRow="idVuelo" msprop:Generator_ColumnPropNameInTable="idVueloColumn" msprop:Generator_UserColumnName="idVuelo" type="xs:string" minOccurs="0" />
+              <xs:element name="idTripulacion" msprop:Generator_ColumnVarNameInTable="columnidTripulacion" msprop:Generator_ColumnPropNameInRow="idTripulacion" msprop:Generator_ColumnPropNameInTable="idTripulacionColumn" msprop:Generator_UserColumnName="idTripulacion" type="xs:string" minOccurs="0" />
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre" type="xs:string" minOccurs="0" />
+              <xs:element name="apellido" msprop:Generator_ColumnVarNameInTable="columnapellido" msprop:Generator_ColumnPropNameInRow="apellido" msprop:Generator_ColumnPropNameInTable="apellidoColumn" msprop:Generator_UserColumnName="apellido" type="xs:string" minOccurs="0" />
+              <xs:element name="idCargoTripulacion" msprop:Generator_ColumnVarNameInTable="columnidCargoTripulacion" msprop:Generator_ColumnPropNameInRow="idCargoTripulacion" msprop:Generator_ColumnPropNameInTable="idCargoTripulacionColumn" msprop:Generator_UserColumnName="idCargoTripulacion" type="xs:string" minOccurs="0" />
+              <xs:element name="nombreCargo" msprop:Generator_ColumnVarNameInTable="columnnombreCargo" msprop:Generator_ColumnPropNameInRow="nombreCargo" msprop:Generator_ColumnPropNameInTable="nombreCargoColumn" msprop:Generator_UserColumnName="nombreCargo" type="xs:string" minOccurs="0" />
+              <xs:element name="codigoAeropuertoSalida" msprop:Generator_ColumnVarNameInTable="columncodigoAeropuertoSalida" msprop:Generator_ColumnPropNameInRow="codigoAeropuertoSalida" msprop:Generator_ColumnPropNameInTable="codigoAeropuertoSalidaColumn" msprop:Generator_UserColumnName="codigoAeropuertoSalida" type="xs:string" minOccurs="0" />
+              <xs:element name="codigoAeropuertoDestino" msprop:Generator_ColumnVarNameInTable="columncodigoAeropuertoDestino" msprop:Generator_ColumnPropNameInRow="codigoAeropuertoDestino" msprop:Generator_ColumnPropNameInTable="codigoAeropuertoDestinoColumn" msprop:Generator_UserColumnName="codigoAeropuertoDestino" type="xs:string" minOccurs="0" />
+              <xs:element name="idModelo" msprop:Generator_ColumnVarNameInTable="columnidModelo" msprop:Generator_ColumnPropNameInRow="idModelo" msprop:Generator_ColumnPropNameInTable="idModeloColumn" msprop:Generator_UserColumnName="idModelo" type="xs:string" minOccurs="0" />
+              <xs:element name="duracionEstimada" msprop:Generator_ColumnVarNameInTable="columnduracionEstimada" msprop:Generator_ColumnPropNameInRow="duracionEstimada" msprop:Generator_ColumnPropNameInTable="duracionEstimadaColumn" msprop:Generator_UserColumnName="duracionEstimada" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
