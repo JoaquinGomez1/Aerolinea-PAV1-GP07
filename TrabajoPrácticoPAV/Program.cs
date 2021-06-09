@@ -4,18 +4,16 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Formularios;
-using TrabajoPrácticoPAV.Formularios.Provincia;
-using TrabajoPrácticoPAV.Formularios.Pais;
-using TrabajoPrácticoPAV.Formularios.TipoDoc;
-using TrabajoPrácticoPAV.Formularios.Tipo_Asientos;
-using TrabajoPrácticoPAV.Formularios.Tripulacion;
-using TrabajoPrácticoPAV.Formularios.Ciudad;
-using TrabajoPrácticoPAV.Formularios.Asientos;
-using TrabajoPrácticoPAV.Formularios.Modelo;
-using TrabajoPrácticoPAV.Formularios.Aeropuertos;
 using TrabajoPrácticoPAV.Formularios.Listados.Aeropuertos;
 using TrabajoPrácticoPAV.Formularios.Listados.Pasajeros;
+using TrabajoPrácticoPAV.Formularios.Listados.Aviones;
+using TrabajoPrácticoPAV.Formularios.Listados.Viajes;
 using TrabajoPrácticoPAV.Formularios.Listados;
+
+using TrabajoPrácticoPAV.Formularios.Listados.Reservas;
+using TrabajoPrácticoPAV.Formularios.Listados.Tripulacion_Por_Vuelo;
+
+using TrabajoPrácticoPAV.Formularios.Listados.Tripulación;
 
 
 namespace TrabajoPrácticoPAV
@@ -33,8 +31,12 @@ namespace TrabajoPrácticoPAV
             //Application.Run(new Frm_Principal());
             //Application.Run(new Frm_ReporteAeroPais());
             //Application.Run(new Frm_Reportes());
-            Application.Run(new Frm_ReporteFamiliareXPasajero());
+            //Application.Run(new Frm_ReporteFamiliareXPasajero());
 
+            //Application.Run(new Frm_Reservas());
+            Application.Run(new Frm_ListadoTripPorVuelo());
+
+            //Application.Run(new Frm_Tripulacion());
         }
     }
 }
