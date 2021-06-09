@@ -9,8 +9,12 @@ using TrabajoPrácticoPAV.Formularios.Listados.Pasajeros;
 using TrabajoPrácticoPAV.Formularios.Listados.Aviones;
 using TrabajoPrácticoPAV.Formularios.Listados.Viajes;
 using TrabajoPrácticoPAV.Formularios.Listados;
+
 using TrabajoPrácticoPAV.Formularios.Listados.Reservas;
 using TrabajoPrácticoPAV.Formularios.Listados.Tripulacion_Por_Vuelo;
+
+using TrabajoPrácticoPAV.Formularios.Listados.Tripulación;
+
 
 namespace TrabajoPrácticoPAV
 {
@@ -28,8 +32,11 @@ namespace TrabajoPrácticoPAV
             //Application.Run(new Frm_ReporteAeroPais());
             //Application.Run(new Frm_Reportes());
             //Application.Run(new Frm_ReporteFamiliareXPasajero());
+
             //Application.Run(new Frm_Reservas());
             Application.Run(new Frm_ListadoTripPorVuelo());
+
+            //Application.Run(new Frm_Tripulacion());
         }
     }
 }
