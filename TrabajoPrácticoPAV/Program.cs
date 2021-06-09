@@ -34,9 +34,9 @@ namespace TrabajoPrácticoPAV
             //Application.Run(new Frm_ReporteFamiliareXPasajero());
 
             //Application.Run(new Frm_Reservas());
-            Application.Run(new Frm_AvionPorModelo());
+            //Application.Run(new Frm_AvionPorModelo());
 
-            //Application.Run(new Frm_Tripulacion());
+            Application.Run(new Frm_Tripulacion());
         }
     }
 }

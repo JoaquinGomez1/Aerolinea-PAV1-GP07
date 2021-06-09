@@ -32,9 +32,13 @@
             this.btn_Calcular = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.labelText021 = new Clase11.Clases.LabelText02();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rbu_Cargo = new System.Windows.Forms.RadioButton();
-            this.rbu_RangoId = new System.Windows.Forms.RadioButton();
             this.rbu_Todos = new System.Windows.Forms.RadioButton();
+            this.rbu_RangoId = new System.Windows.Forms.RadioButton();
+            this.rbu_Cargo = new System.Windows.Forms.RadioButton();
+            this.Txt_Hasta = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
+            this.Txt_Desde = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cmb_Cargo = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,7 +65,7 @@
             // labelText021
             // 
             this.labelText021.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelText021.Location = new System.Drawing.Point(173, 77);
+            this.labelText021.Location = new System.Drawing.Point(-1, 12);
             this.labelText021.Margin = new System.Windows.Forms.Padding(4);
             this.labelText021.Name = "labelText021";
             this.labelText021.Pp_ancho = 10;
@@ -89,16 +93,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tipo Búsqueda";
             // 
-            // rbu_Cargo
+            // rbu_Todos
             // 
-            this.rbu_Cargo.AutoSize = true;
-            this.rbu_Cargo.Location = new System.Drawing.Point(31, 21);
-            this.rbu_Cargo.Name = "rbu_Cargo";
-            this.rbu_Cargo.Size = new System.Drawing.Size(93, 21);
-            this.rbu_Cargo.TabIndex = 0;
-            this.rbu_Cargo.TabStop = true;
-            this.rbu_Cargo.Text = "Por Cargo";
-            this.rbu_Cargo.UseVisualStyleBackColor = true;
+            this.rbu_Todos.AutoSize = true;
+            this.rbu_Todos.Location = new System.Drawing.Point(30, 74);
+            this.rbu_Todos.Name = "rbu_Todos";
+            this.rbu_Todos.Size = new System.Drawing.Size(69, 21);
+            this.rbu_Todos.TabIndex = 2;
+            this.rbu_Todos.TabStop = true;
+            this.rbu_Todos.Text = "Todos";
+            this.rbu_Todos.UseVisualStyleBackColor = true;
             // 
             // rbu_RangoId
             // 
@@ -111,22 +115,76 @@
             this.rbu_RangoId.Text = "Por Rango Id";
             this.rbu_RangoId.UseVisualStyleBackColor = true;
             // 
-            // rbu_Todos
+            // rbu_Cargo
             // 
-            this.rbu_Todos.AutoSize = true;
-            this.rbu_Todos.Location = new System.Drawing.Point(30, 74);
-            this.rbu_Todos.Name = "rbu_Todos";
-            this.rbu_Todos.Size = new System.Drawing.Size(69, 21);
-            this.rbu_Todos.TabIndex = 2;
-            this.rbu_Todos.TabStop = true;
-            this.rbu_Todos.Text = "Todos";
-            this.rbu_Todos.UseVisualStyleBackColor = true;
+            this.rbu_Cargo.AutoSize = true;
+            this.rbu_Cargo.Location = new System.Drawing.Point(31, 21);
+            this.rbu_Cargo.Name = "rbu_Cargo";
+            this.rbu_Cargo.Size = new System.Drawing.Size(93, 21);
+            this.rbu_Cargo.TabIndex = 0;
+            this.rbu_Cargo.TabStop = true;
+            this.rbu_Cargo.Text = "Por Cargo";
+            this.rbu_Cargo.UseVisualStyleBackColor = true;
+            // 
+            // Txt_Hasta
+            // 
+            this.Txt_Hasta.Location = new System.Drawing.Point(260, 107);
+            this.Txt_Hasta.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_Hasta.Name = "Txt_Hasta";
+            this.Txt_Hasta.Pp_EsPk = false;
+            this.Txt_Hasta.Pp_MensajeError = null;
+            this.Txt_Hasta.Pp_NombreCampo = "codigo";
+            this.Txt_Hasta.Pp_NombreTabla = "aeropuerto";
+            this.Txt_Hasta.Size = new System.Drawing.Size(56, 22);
+            this.Txt_Hasta.TabIndex = 49;
+            // 
+            // Txt_Desde
+            // 
+            this.Txt_Desde.Location = new System.Drawing.Point(186, 107);
+            this.Txt_Desde.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_Desde.Name = "Txt_Desde";
+            this.Txt_Desde.Pp_EsPk = false;
+            this.Txt_Desde.Pp_MensajeError = null;
+            this.Txt_Desde.Pp_NombreCampo = "codigo";
+            this.Txt_Desde.Pp_NombreTabla = "aeropuerto";
+            this.Txt_Desde.Size = new System.Drawing.Size(56, 22);
+            this.Txt_Desde.TabIndex = 48;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.label5.Location = new System.Drawing.Point(238, 99);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(25, 36);
+            this.label5.TabIndex = 50;
+            this.label5.Text = "-";
+            // 
+            // cmb_Cargo
+            // 
+            this.cmb_Cargo.FormattingEnabled = true;
+            this.cmb_Cargo.Location = new System.Drawing.Point(194, 73);
+            this.cmb_Cargo.Name = "cmb_Cargo";
+            this.cmb_Cargo.Pp_CampoAceptaNull = true;
+            this.cmb_Cargo.Pp_EsPk = false;
+            this.cmb_Cargo.Pp_MensajeError = null;
+            this.cmb_Cargo.Pp_NombreCampo = "nombre";
+            this.cmb_Cargo.Pp_NombreCampoInsert = null;
+            this.cmb_Cargo.Pp_NombreTabla = "Cargo_Tripulacion";
+            this.cmb_Cargo.Pp_PkTabla = "idCargoTripulacion";
+            this.cmb_Cargo.Size = new System.Drawing.Size(121, 24);
+            this.cmb_Cargo.TabIndex = 51;
             // 
             // Frm_Tripulacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cmb_Cargo);
+            this.Controls.Add(this.Txt_Hasta);
+            this.Controls.Add(this.Txt_Desde);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.labelText021);
             this.Controls.Add(this.btn_Calcular);
@@ -137,6 +195,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -149,5 +208,9 @@
         private System.Windows.Forms.RadioButton rbu_Todos;
         private System.Windows.Forms.RadioButton rbu_RangoId;
         private System.Windows.Forms.RadioButton rbu_Cargo;
+        private Clase.TextBox_Aerolinea Txt_Hasta;
+        private Clase.TextBox_Aerolinea Txt_Desde;
+        private System.Windows.Forms.Label label5;
+        private Clase.ComboBox_Aerolinea cmb_Cargo;
     }
 }
