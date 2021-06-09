@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace TrabajoPrácticoPAV.Formularios.Listados.Tripulación {
+namespace TrabajoPrácticoPAV.Formularios.Listados.TripulaciónXCargo {
     
     
     /// <summary>

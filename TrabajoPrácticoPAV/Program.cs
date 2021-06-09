@@ -33,7 +33,13 @@ namespace TrabajoPrácticoPAV
             //Application.Run(new Frm_ReporteAeroPais());
             //Application.Run(new Frm_Reportes());
             //Application.Run(new Frm_ReporteFamiliareXPasajero());
+
+
+            //Application.Run(new Frm_Reservas());
+            //Application.Run(new Frm_AvionPorModelo());
+
             //Application.Run(new Frm_ListadoViajes());
+
         }
     }
 }
