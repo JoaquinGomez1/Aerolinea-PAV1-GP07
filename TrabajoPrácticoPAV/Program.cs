@@ -6,6 +6,8 @@ using System.Windows.Forms;
 using TrabajoPrácticoPAV.Formularios;
 using TrabajoPrácticoPAV.Formularios.Listados.Aeropuertos;
 using TrabajoPrácticoPAV.Formularios.Listados.Pasajeros;
+using TrabajoPrácticoPAV.Formularios.Listados.Aviones;
+using TrabajoPrácticoPAV.Formularios.Listados.Viajes;
 using TrabajoPrácticoPAV.Formularios.Listados;
 using TrabajoPrácticoPAV.Formularios.Listados.Reservas;
 using TrabajoPrácticoPAV.Formularios.Listados.Tripulacion_Por_Vuelo;

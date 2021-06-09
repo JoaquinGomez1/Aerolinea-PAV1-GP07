@@ -144,5 +144,23 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
                 grid.Rows[i].Cells[3].Value = tabla.Rows[i]["numeroDoc"].ToString();
             }
         }
+        public DataTable Reporte_recuperarNumDocTitular(string docTit)
+        {
+            string sql = $"select tipoDocPrimerPasajero, numerodocPrimerPasajero, tipoDocSegundoPasajero,numerodocSegundoPasajero,tipoParentesco from Familiar_X_Pasajero "
+                + " where numerodocPrimerPasajero = " + docTit;
+            return _BD.EjecutarSelect(sql);
+        }
+        public DataTable Reporte_recuperarNumDocFamiliar(string docFam)
+        {
+            string sql = $"select tipoDocPrimerPasajero, numerodocPrimerPasajero, tipoDocSegundoPasajero,numerodocSegundoPasajero,tipoParentesco from Familiar_X_Pasajero "
+                + " where numerodocSegundoPasajero = " + docFam;
+            return _BD.EjecutarSelect(sql);
+        }
+        public DataTable Reporte_recuperarXParentesco(string parentesco)
+        {
+            string sql = $"select tipoDocPrimerPasajero, numerodocPrimerPasajero, tipoDocSegundoPasajero,numerodocSegundoPasajero,tipoParentesco from Familiar_X_Pasajero "
+                + " where tipoParentesco like '%" + parentesco.Trim() + "%'";
+            return _BD.EjecutarSelect(sql);
+        }
     }
 }

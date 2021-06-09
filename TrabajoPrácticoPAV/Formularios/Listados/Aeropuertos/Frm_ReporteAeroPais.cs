@@ -24,32 +24,24 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Aeropuertos
         public Frm_ReporteAeroPais()
         {
             InitializeComponent();
-            //tabla = aeropuerto.Reporte_recuperarTodos();
-            //ArmarReporteAeropuertos();
         }
         
 
         private void Frm_ReporteAeroPais_Load_1(object sender, EventArgs e)
         {
-            //InitializeComponent();
             this.BackColor = Estilo.ColorFondoForms;
             Estilo.FormatearEstilo(this.Controls);
             tabla = aeropuerto.Reporte_recuperarTodos();
-            //ArmarReporteAeropuertos();
         }
 
         private void btn_calcular_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("f " + rbu04.Checked);
-            //if (rbu04.Checked == true)
-            //{
             tabla = aeropuerto.Reporte_recuperarTodos();
                 ArmarReporteAeropuertos();
-            //}
+
         }
         public void ArmarReporteAeropuertos() 
         {
-            MessageBox.Show("tabla " + tabla.Rows.Count);
             ReportDataSource datos = new ReportDataSource("DataSet01", tabla);
             reportViewer1.LocalReport.ReportEmbeddedResource = "TrabajoPrácticoPAV.Formularios.Listados.Aeropuertos.ReporteAeroPais.rdlc";
             reportViewer1.LocalReport.DataSources.Clear();
@@ -60,9 +52,75 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Aeropuertos
 
         private void button_Aerolinea1_Click(object sender, EventArgs e)
         {
+            if (rbu04.Checked == true)
+            {
+                tabla = aeropuerto.Reporte_recuperarTodos();
+                if (tabla.Rows.Count != 0)
+                    ArmarReporteAeropuertos();
+                else
+                {
+                    reportViewer1.LocalReport.DataSources.Clear();
+                    reportViewer1.RefreshReport();
+                    MessageBox.Show("No se encontraron resultados para la búsqueda");
+                }
+            }
+            else if (rbu01.Checked == true)
+            {
+                if (Txt_nombres.Text != "")
+                {
+                    MessageBox.Show("entro");
+                    tabla = aeropuerto.Reporte_recuperarXNonmbre(Txt_nombres.Text);
+                    if (tabla.Rows.Count != 0)
+                        ArmarReporteAeropuertos();
+                    else
+                    {
+                        reportViewer1.LocalReport.DataSources.Clear();
+                        reportViewer1.RefreshReport();
+                        MessageBox.Show("No se encontraron resultados para la búsqueda");
+                    }
+                }
+
+            }
+            else if (rbu02.Checked == true)
+            {
+                if (txt_codigo.Text != "")
+                {
+                    tabla = aeropuerto.Reporte_recuperarXCodigo(txt_codigo.Text);
+                    if (tabla.Rows.Count != 0)
+                        ArmarReporteAeropuertos();
+                    else
+                    {
+                        reportViewer1.LocalReport.DataSources.Clear();
+                        reportViewer1.RefreshReport();
+                        MessageBox.Show("No se encontraron resultados para la búsqueda");
+                    }
+                }
+
+            }
+            else if (rbu03.Checked == true)
+            {
+                if (txt_pais.Text != "")
+                {
+                    tabla = aeropuerto.Reporte_recuperarXciudad(txt_pais.Text);
+                    if (tabla.Rows.Count != 0)
+                        ArmarReporteAeropuertos();
+                    else
+                    {
+                        reportViewer1.LocalReport.DataSources.Clear();
+                        reportViewer1.RefreshReport();
+                        MessageBox.Show("No se encontraron resultados para la búsqueda");
+                    }
+                }
+            }
+            else
+            {
+                Tratamientos_Especiales Tratamiento = new Tratamientos_Especiales();
+                if (Tratamiento.Validar(this.Controls) == Tratamientos_Especiales.Resultado.error)
+                {
+                    MessageBox.Show("No realizo selección para la búsqueda");
+                }
+            }
            
-            tabla = aeropuerto.Reporte_recuperarTodos();
-            ArmarReporteAeropuertos();
         }
     }
 }

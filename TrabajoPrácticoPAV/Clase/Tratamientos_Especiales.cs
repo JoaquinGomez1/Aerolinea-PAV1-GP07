@@ -111,7 +111,6 @@ namespace TrabajoPrácticoPAV.Clase
                 condiciones = "";
 
             sql += atributosTabla + join + condiciones;
-
             return sql;
         }
 
