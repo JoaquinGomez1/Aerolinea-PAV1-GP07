@@ -139,15 +139,22 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
         public DataTable RecuperarViajes()
         {
             DataTable table = new DataTable();
-            string sql = $"select numeroDeViaje, horarioLlegada, horarioSalida, cantidadTramos, duracionEstimada from Viaje order by  horarioSalida, numeroDeviaje";
+            string sql = $"select numeroDeViaje, horarioLlegada, horarioSalida, cantidadTramos, duracionEstimada from Viaje order by   horarioSalida,  numeroDeViaje, horarioLlegada";
             table = _DB.EjecutarSelect(sql);
             return table;
         }
 
-        public DataTable RecuperarViajesXHorario(string horarioSalida, string horarioLlegada)
+        public DataTable RecuperarViajesXHorarioSalida(string horarioDesde, string horarioHasta)
         {
             DataTable tabla = new DataTable();
-            string sql = $"select numeroDeViaje, horarioLlegada, horarioSalida, cantidadTramos, duracionEstimada from Viaje  where horarioSalida >= ' {horarioSalida} ' and horarioLlegada <= ' {horarioLlegada} ' order by  numeroDeViaje,horarioLlegada,horarioSalida";
+            string sql = $"select numeroDeViaje, horarioLlegada, horarioSalida, cantidadTramos, duracionEstimada from Viaje  where horarioSalida >= ' {horarioDesde} ' and horarioSalida <= ' {horarioHasta} ' order by  numeroDeViaje,horarioLlegada";
+            tabla = _DB.EjecutarSelect(sql);
+            return tabla;
+        }
+        public DataTable RecuperarViajesXHorarioLlegada(string horarioDesde, string horarioHasta)
+        {
+            DataTable tabla = new DataTable();
+            string sql = $"select numeroDeViaje, horarioLlegada, horarioSalida, cantidadTramos, duracionEstimada from Viaje  where horarioLlegada >= ' {horarioDesde} ' and horarioLlegada <= ' {horarioHasta} ' order by  numeroDeViaje,horarioLlegada";
             tabla = _DB.EjecutarSelect(sql);
             return tabla;
         }
