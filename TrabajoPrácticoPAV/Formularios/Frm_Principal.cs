@@ -24,6 +24,7 @@ using TrabajoPrácticoPAV.Formularios.Tripulacion.Cargo_Tripulacion;
 using TrabajoPrácticoPAV.Formularios.Tripulacion;
 using TrabajoPrácticoPAV.Formularios.Facturaciones;
 using TrabajoPrácticoPAV.Formularios.Listados.Aeropuertos;
+using TrabajoPrácticoPAV.Formularios.Listados.Viajes.Tramos;
 
 namespace TrabajoPrácticoPAV
 {
@@ -307,6 +308,12 @@ namespace TrabajoPrácticoPAV
         {
             CerrarTodosLosMenuStrip();
             AbrirFormulario<Frm_ReporteAeroPais>();
+        }
+
+        private void tramoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_ListadoTramos>();
         }
     }
 }

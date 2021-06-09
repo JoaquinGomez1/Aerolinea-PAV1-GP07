@@ -66,6 +66,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Backend\Conexion_DB.cs" />
+    <Compile Include="BD3K6G07_2021DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD3K6G07_2021DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BD3K6G07_2021DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD3K6G07_2021DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Clase\Button_Aerolinea.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -257,6 +267,17 @@
     </Compile>
     <Compile Include="Formularios\Listados\Viajes\Frm_ListadoViajes.Designer.cs">
       <DependentUpon>Frm_ListadoViajes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Listados\Viajes\Tramos\Ds_ReporteTramos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ds_ReporteTramos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Listados\Viajes\Tramos\Frm_ListadoTramos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Listados\Viajes\Tramos\Frm_ListadoTramos.Designer.cs">
+      <DependentUpon>Frm_ListadoTramos.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Reservas\Frm_CargarPasajerosPorReserva.cs">
       <SubType>Form</SubType>
@@ -662,6 +683,10 @@
       <DependentUpon>Frm_ListadoViajes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Listados\Viajes\ReporteViajes.rdlc" />
+    <EmbeddedResource Include="Formularios\Listados\Viajes\Tramos\Frm_ListadoTramos.resx">
+      <DependentUpon>Frm_ListadoTramos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Listados\Viajes\Tramos\ReporteTramos.rdlc" />
     <EmbeddedResource Include="Formularios\Reservas\Frm_CargarPasajerosPorReserva.resx">
       <DependentUpon>Frm_CargarPasajerosPorReserva.cs</DependentUpon>
     </EmbeddedResource>
@@ -829,6 +854,28 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="BD3K6G07_2021DataSet.xsc">
+      <DependentUpon>BD3K6G07_2021DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BD3K6G07_2021DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BD3K6G07_2021DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BD3K6G07_2021DataSet.xss">
+      <DependentUpon>BD3K6G07_2021DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BD3K6G07_2021DataSet1.xsc">
+      <DependentUpon>BD3K6G07_2021DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="BD3K6G07_2021DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BD3K6G07_2021DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BD3K6G07_2021DataSet1.xss">
+      <DependentUpon>BD3K6G07_2021DataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Formularios\Listados\Aeropuertos\Ds_ReporteAeroPais.xsc">
       <DependentUpon>Ds_ReporteAeroPais.xsd</DependentUpon>
     </None>
@@ -872,6 +919,17 @@
     </None>
     <None Include="Formularios\Listados\Viajes\Ds_Viajes.xss">
       <DependentUpon>Ds_Viajes.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Listados\Viajes\Tramos\Ds_ReporteTramos.xsc">
+      <DependentUpon>Ds_ReporteTramos.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Listados\Viajes\Tramos\Ds_ReporteTramos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Ds_ReporteTramos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Formularios\Listados\Viajes\Tramos\Ds_ReporteTramos.xss">
+      <DependentUpon>Ds_ReporteTramos.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
