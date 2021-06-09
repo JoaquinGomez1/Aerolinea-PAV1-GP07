@@ -22,6 +22,18 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             return _BD.EjecutarSelect(sql);
         }
 
+        public DataTable RecuperarPorNumModelo(string numModelo)
+        {
+            string sql = $"SELECT * FROM Avion WHERE numeroPorModelo = {numModelo}";
+            return _BD.EjecutarSelect(sql);
+        }
+
+        public DataTable RecuperarPorIdModelo(string idModelo)
+        {
+            string sql = $"SELECT * FROM Avion WHERE idModelo = {idModelo}";
+            return _BD.EjecutarSelect(sql);
+        }
+
         public void Insertar()
         {
             string sqlInsertar = @"INSERT INTO Avion (numeroPorModelo, idModelo) " + " VALUES ( " + Pp_numero_modelo + ", " + Pp_id_modelo + ")";

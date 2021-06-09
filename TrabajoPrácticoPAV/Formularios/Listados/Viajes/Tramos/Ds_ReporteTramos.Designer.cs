@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace TrabajoPrácticoPAV {
+namespace TrabajoPrácticoPAV.Formularios.Listados.Viajes.Tramos {
     
     
     /// <summary>
@@ -20,18 +20,17 @@ namespace TrabajoPrácticoPAV {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("BD3K6G07_2021DataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("Ds_ReporteTramos")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class BD3K6G07_2021DataSet : global::System.Data.DataSet {
+    public partial class Ds_ReporteTramos : global::System.Data.DataSet {
         
-        private Reservas_X_PasajeroDataTable tableReservas_X_Pasajero;
         private TramoDataTable tableTramo;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public BD3K6G07_2021DataSet() {
+        public Ds_ReporteTramos() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -42,7 +41,7 @@ namespace TrabajoPrácticoPAV {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected BD3K6G07_2021DataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected Ds_ReporteTramos(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -55,8 +54,6 @@ namespace TrabajoPrácticoPAV {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Reservas_X_Pasajero"] != null)) {
-                    base.Tables.Add(new Reservas_X_PasajeroDataTable(ds.Tables["Reservas_X_Pasajero"]));
                 if ((ds.Tables["Tramo"] != null)) {
                     base.Tables.Add(new TramoDataTable(ds.Tables["Tramo"]));
                 }
@@ -82,10 +79,8 @@ namespace TrabajoPrácticoPAV {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public Reservas_X_PasajeroDataTable Reservas_X_Pasajero {
         public TramoDataTable Tramo {
             get {
-                return this.tableReservas_X_Pasajero;
                 return this.tableTramo;
             }
         }
@@ -132,7 +127,7 @@ namespace TrabajoPrácticoPAV {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            BD3K6G07_2021DataSet cln = ((BD3K6G07_2021DataSet)(base.Clone()));
+            Ds_ReporteTramos cln = ((Ds_ReporteTramos)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -157,8 +152,6 @@ namespace TrabajoPrácticoPAV {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Reservas_X_Pasajero"] != null)) {
-                    base.Tables.Add(new Reservas_X_PasajeroDataTable(ds.Tables["Reservas_X_Pasajero"]));
                 if ((ds.Tables["Tramo"] != null)) {
                     base.Tables.Add(new TramoDataTable(ds.Tables["Tramo"]));
                 }
@@ -195,11 +188,8 @@ namespace TrabajoPrácticoPAV {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableReservas_X_Pasajero = ((Reservas_X_PasajeroDataTable)(base.Tables["Reservas_X_Pasajero"]));
             this.tableTramo = ((TramoDataTable)(base.Tables["Tramo"]));
             if ((initTable == true)) {
-                if ((this.tableReservas_X_Pasajero != null)) {
-                    this.tableReservas_X_Pasajero.InitVars();
                 if ((this.tableTramo != null)) {
                     this.tableTramo.InitVars();
                 }
@@ -209,20 +199,17 @@ namespace TrabajoPrácticoPAV {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "BD3K6G07_2021DataSet";
+            this.DataSetName = "Ds_ReporteTramos";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/BD3K6G07_2021DataSet.xsd";
+            this.Namespace = "http://tempuri.org/Ds_ReporteTramos.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableReservas_X_Pasajero = new Reservas_X_PasajeroDataTable();
-            base.Tables.Add(this.tableReservas_X_Pasajero);
             this.tableTramo = new TramoDataTable();
             base.Tables.Add(this.tableTramo);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeReservas_X_Pasajero() {
         private bool ShouldSerializeTramo() {
             return false;
         }
@@ -238,7 +225,7 @@ namespace TrabajoPrácticoPAV {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            BD3K6G07_2021DataSet ds = new BD3K6G07_2021DataSet();
+            Ds_ReporteTramos ds = new Ds_ReporteTramos();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -283,7 +270,6 @@ namespace TrabajoPrácticoPAV {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void Reservas_X_PasajeroRowChangeEventHandler(object sender, Reservas_X_PasajeroRowChangeEvent e);
         public delegate void TramoRowChangeEventHandler(object sender, TramoRowChangeEvent e);
         
         /// <summary>
@@ -291,33 +277,18 @@ namespace TrabajoPrácticoPAV {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class Reservas_X_PasajeroDataTable : global::System.Data.TypedTableBase<Reservas_X_PasajeroRow> {
         public partial class TramoDataTable : global::System.Data.TypedTableBase<TramoRow> {
             
-            private global::System.Data.DataColumn columntipoDoc;
             private global::System.Data.DataColumn columncodigoAeropuertoDestino;
             
-            private global::System.Data.DataColumn columnnumeroDoc;
             private global::System.Data.DataColumn columncodigoAeropuertoSalida;
             
-            private global::System.Data.DataColumn columnnumeroDeReserva;
             private global::System.Data.DataColumn columnduracion;
             
-            private global::System.Data.DataColumn columnfechaHoraVencimiento;
             private global::System.Data.DataColumn columndistancia;
-            
-            private global::System.Data.DataColumn columntipoClase;
-            
-            private global::System.Data.DataColumn columnnumeroAsiento;
-            
-            private global::System.Data.DataColumn columnnumeroPorModelo;
-            
-            private global::System.Data.DataColumn columnidModelo;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public Reservas_X_PasajeroDataTable() {
-                this.TableName = "Reservas_X_Pasajero";
             public TramoDataTable() {
                 this.TableName = "Tramo";
                 this.BeginInit();
@@ -327,7 +298,6 @@ namespace TrabajoPrácticoPAV {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal Reservas_X_PasajeroDataTable(global::System.Data.DataTable table) {
             internal TramoDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
@@ -345,7 +315,6 @@ namespace TrabajoPrácticoPAV {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected Reservas_X_PasajeroDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
             protected TramoDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
@@ -353,73 +322,33 @@ namespace TrabajoPrácticoPAV {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn tipoDocColumn {
             public global::System.Data.DataColumn codigoAeropuertoDestinoColumn {
                 get {
-                    return this.columntipoDoc;
                     return this.columncodigoAeropuertoDestino;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn numeroDocColumn {
             public global::System.Data.DataColumn codigoAeropuertoSalidaColumn {
                 get {
-                    return this.columnnumeroDoc;
                     return this.columncodigoAeropuertoSalida;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn numeroDeReservaColumn {
             public global::System.Data.DataColumn duracionColumn {
                 get {
-                    return this.columnnumeroDeReserva;
                     return this.columnduracion;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn fechaHoraVencimientoColumn {
             public global::System.Data.DataColumn distanciaColumn {
                 get {
-                    return this.columnfechaHoraVencimiento;
                     return this.columndistancia;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn tipoClaseColumn {
-                get {
-                    return this.columntipoClase;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn numeroAsientoColumn {
-                get {
-                    return this.columnnumeroAsiento;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn numeroPorModeloColumn {
-                get {
-                    return this.columnnumeroPorModelo;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn idModeloColumn {
-                get {
-                    return this.columnidModelo;
                 }
             }
             
@@ -434,55 +363,35 @@ namespace TrabajoPrácticoPAV {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public Reservas_X_PasajeroRow this[int index] {
             public TramoRow this[int index] {
                 get {
-                    return ((Reservas_X_PasajeroRow)(this.Rows[index]));
                     return ((TramoRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event Reservas_X_PasajeroRowChangeEventHandler Reservas_X_PasajeroRowChanging;
             public event TramoRowChangeEventHandler TramoRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event Reservas_X_PasajeroRowChangeEventHandler Reservas_X_PasajeroRowChanged;
             public event TramoRowChangeEventHandler TramoRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event Reservas_X_PasajeroRowChangeEventHandler Reservas_X_PasajeroRowDeleting;
             public event TramoRowChangeEventHandler TramoRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event Reservas_X_PasajeroRowChangeEventHandler Reservas_X_PasajeroRowDeleted;
             public event TramoRowChangeEventHandler TramoRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddReservas_X_PasajeroRow(Reservas_X_PasajeroRow row) {
             public void AddTramoRow(TramoRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public Reservas_X_PasajeroRow AddReservas_X_PasajeroRow(int tipoDoc, int numeroDoc, int numeroDeReserva, System.DateTime fechaHoraVencimiento, int tipoClase, int numeroAsiento, int numeroPorModelo, int idModelo) {
-                Reservas_X_PasajeroRow rowReservas_X_PasajeroRow = ((Reservas_X_PasajeroRow)(this.NewRow()));
             public TramoRow AddTramoRow(string codigoAeropuertoDestino, string codigoAeropuertoSalida, int duracion, int distancia) {
                 TramoRow rowTramoRow = ((TramoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        tipoDoc,
-                        numeroDoc,
-                        numeroDeReserva,
-                        fechaHoraVencimiento,
-                        tipoClase,
-                        numeroAsiento,
-                        numeroPorModelo,
-                        idModelo};
-                rowReservas_X_PasajeroRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowReservas_X_PasajeroRow);
-                return rowReservas_X_PasajeroRow;
                         codigoAeropuertoDestino,
                         codigoAeropuertoSalida,
                         duracion,
@@ -494,11 +403,6 @@ namespace TrabajoPrácticoPAV {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public Reservas_X_PasajeroRow FindBytipoDocnumeroDocnumeroDeReserva(int tipoDoc, int numeroDoc, int numeroDeReserva) {
-                return ((Reservas_X_PasajeroRow)(this.Rows.Find(new object[] {
-                            tipoDoc,
-                            numeroDoc,
-                            numeroDeReserva})));
             public TramoRow FindBycodigoAeropuertoDestinocodigoAeropuertoSalida(string codigoAeropuertoDestino, string codigoAeropuertoSalida) {
                 return ((TramoRow)(this.Rows.Find(new object[] {
                             codigoAeropuertoDestino,
@@ -508,7 +412,6 @@ namespace TrabajoPrácticoPAV {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                Reservas_X_PasajeroDataTable cln = ((Reservas_X_PasajeroDataTable)(base.Clone()));
                 TramoDataTable cln = ((TramoDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
@@ -517,21 +420,12 @@ namespace TrabajoPrácticoPAV {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new Reservas_X_PasajeroDataTable();
                 return new TramoDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columntipoDoc = base.Columns["tipoDoc"];
-                this.columnnumeroDoc = base.Columns["numeroDoc"];
-                this.columnnumeroDeReserva = base.Columns["numeroDeReserva"];
-                this.columnfechaHoraVencimiento = base.Columns["fechaHoraVencimiento"];
-                this.columntipoClase = base.Columns["tipoClase"];
-                this.columnnumeroAsiento = base.Columns["numeroAsiento"];
-                this.columnnumeroPorModelo = base.Columns["numeroPorModelo"];
-                this.columnidModelo = base.Columns["idModelo"];
                 this.columncodigoAeropuertoDestino = base.Columns["codigoAeropuertoDestino"];
                 this.columncodigoAeropuertoSalida = base.Columns["codigoAeropuertoSalida"];
                 this.columnduracion = base.Columns["duracion"];
@@ -541,22 +435,6 @@ namespace TrabajoPrácticoPAV {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columntipoDoc = new global::System.Data.DataColumn("tipoDoc", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntipoDoc);
-                this.columnnumeroDoc = new global::System.Data.DataColumn("numeroDoc", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnumeroDoc);
-                this.columnnumeroDeReserva = new global::System.Data.DataColumn("numeroDeReserva", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnumeroDeReserva);
-                this.columnfechaHoraVencimiento = new global::System.Data.DataColumn("fechaHoraVencimiento", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfechaHoraVencimiento);
-                this.columntipoClase = new global::System.Data.DataColumn("tipoClase", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntipoClase);
-                this.columnnumeroAsiento = new global::System.Data.DataColumn("numeroAsiento", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnumeroAsiento);
-                this.columnnumeroPorModelo = new global::System.Data.DataColumn("numeroPorModelo", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnumeroPorModelo);
-                this.columnidModelo = new global::System.Data.DataColumn("idModelo", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnidModelo);
                 this.columncodigoAeropuertoDestino = new global::System.Data.DataColumn("codigoAeropuertoDestino", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncodigoAeropuertoDestino);
                 this.columncodigoAeropuertoSalida = new global::System.Data.DataColumn("codigoAeropuertoSalida", typeof(string), null, global::System.Data.MappingType.Element);
@@ -566,16 +444,6 @@ namespace TrabajoPrácticoPAV {
                 this.columndistancia = new global::System.Data.DataColumn("distancia", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndistancia);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columntipoDoc,
-                                this.columnnumeroDoc,
-                                this.columnnumeroDeReserva}, true));
-                this.columntipoDoc.AllowDBNull = false;
-                this.columnnumeroDoc.AllowDBNull = false;
-                this.columnnumeroDeReserva.AllowDBNull = false;
-                this.columntipoClase.AllowDBNull = false;
-                this.columnnumeroAsiento.AllowDBNull = false;
-                this.columnnumeroPorModelo.AllowDBNull = false;
-                this.columnidModelo.AllowDBNull = false;
                                 this.columncodigoAeropuertoDestino,
                                 this.columncodigoAeropuertoSalida}, true));
                 this.columncodigoAeropuertoDestino.AllowDBNull = false;
@@ -587,8 +455,6 @@ namespace TrabajoPrácticoPAV {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public Reservas_X_PasajeroRow NewReservas_X_PasajeroRow() {
-                return ((Reservas_X_PasajeroRow)(this.NewRow()));
             public TramoRow NewTramoRow() {
                 return ((TramoRow)(this.NewRow()));
             }
@@ -596,14 +462,12 @@ namespace TrabajoPrácticoPAV {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new Reservas_X_PasajeroRow(builder);
                 return new TramoRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(Reservas_X_PasajeroRow);
                 return typeof(TramoRow);
             }
             
@@ -611,8 +475,6 @@ namespace TrabajoPrácticoPAV {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.Reservas_X_PasajeroRowChanged != null)) {
-                    this.Reservas_X_PasajeroRowChanged(this, new Reservas_X_PasajeroRowChangeEvent(((Reservas_X_PasajeroRow)(e.Row)), e.Action));
                 if ((this.TramoRowChanged != null)) {
                     this.TramoRowChanged(this, new TramoRowChangeEvent(((TramoRow)(e.Row)), e.Action));
                 }
@@ -622,8 +484,6 @@ namespace TrabajoPrácticoPAV {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.Reservas_X_PasajeroRowChanging != null)) {
-                    this.Reservas_X_PasajeroRowChanging(this, new Reservas_X_PasajeroRowChangeEvent(((Reservas_X_PasajeroRow)(e.Row)), e.Action));
                 if ((this.TramoRowChanging != null)) {
                     this.TramoRowChanging(this, new TramoRowChangeEvent(((TramoRow)(e.Row)), e.Action));
                 }
@@ -633,8 +493,6 @@ namespace TrabajoPrácticoPAV {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.Reservas_X_PasajeroRowDeleted != null)) {
-                    this.Reservas_X_PasajeroRowDeleted(this, new Reservas_X_PasajeroRowChangeEvent(((Reservas_X_PasajeroRow)(e.Row)), e.Action));
                 if ((this.TramoRowDeleted != null)) {
                     this.TramoRowDeleted(this, new TramoRowChangeEvent(((TramoRow)(e.Row)), e.Action));
                 }
@@ -644,8 +502,6 @@ namespace TrabajoPrácticoPAV {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.Reservas_X_PasajeroRowDeleting != null)) {
-                    this.Reservas_X_PasajeroRowDeleting(this, new Reservas_X_PasajeroRowChangeEvent(((Reservas_X_PasajeroRow)(e.Row)), e.Action));
                 if ((this.TramoRowDeleting != null)) {
                     this.TramoRowDeleting(this, new TramoRowChangeEvent(((TramoRow)(e.Row)), e.Action));
                 }
@@ -653,7 +509,6 @@ namespace TrabajoPrácticoPAV {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveReservas_X_PasajeroRow(Reservas_X_PasajeroRow row) {
             public void RemoveTramoRow(TramoRow row) {
                 this.Rows.Remove(row);
             }
@@ -663,7 +518,7 @@ namespace TrabajoPrácticoPAV {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                BD3K6G07_2021DataSet ds = new BD3K6G07_2021DataSet();
+                Ds_ReporteTramos ds = new Ds_ReporteTramos();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -681,7 +536,6 @@ namespace TrabajoPrácticoPAV {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "Reservas_X_PasajeroDataTable";
                 attribute2.FixedValue = "TramoDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
@@ -726,142 +580,76 @@ namespace TrabajoPrácticoPAV {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class Reservas_X_PasajeroRow : global::System.Data.DataRow {
         public partial class TramoRow : global::System.Data.DataRow {
             
-            private Reservas_X_PasajeroDataTable tableReservas_X_Pasajero;
             private TramoDataTable tableTramo;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal Reservas_X_PasajeroRow(global::System.Data.DataRowBuilder rb) : 
             internal TramoRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableReservas_X_Pasajero = ((Reservas_X_PasajeroDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int tipoDoc {
-                get {
-                    return ((int)(this[this.tableReservas_X_Pasajero.tipoDocColumn]));
-                }
-                set {
-                    this[this.tableReservas_X_Pasajero.tipoDocColumn] = value;
-                }
                 this.tableTramo = ((TramoDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int numeroDoc {
             public string codigoAeropuertoDestino {
                 get {
-                    return ((int)(this[this.tableReservas_X_Pasajero.numeroDocColumn]));
                     return ((string)(this[this.tableTramo.codigoAeropuertoDestinoColumn]));
                 }
                 set {
-                    this[this.tableReservas_X_Pasajero.numeroDocColumn] = value;
                     this[this.tableTramo.codigoAeropuertoDestinoColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int numeroDeReserva {
             public string codigoAeropuertoSalida {
                 get {
-                    return ((int)(this[this.tableReservas_X_Pasajero.numeroDeReservaColumn]));
                     return ((string)(this[this.tableTramo.codigoAeropuertoSalidaColumn]));
                 }
                 set {
-                    this[this.tableReservas_X_Pasajero.numeroDeReservaColumn] = value;
                     this[this.tableTramo.codigoAeropuertoSalidaColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime fechaHoraVencimiento {
             public int duracion {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableReservas_X_Pasajero.fechaHoraVencimientoColumn]));
                         return ((int)(this[this.tableTramo.duracionColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fechaHoraVencimiento\' de la tabla \'Reservas_X_Pasajero\' e" +
-                                "s DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'duracion\' de la tabla \'Tramo\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableReservas_X_Pasajero.fechaHoraVencimientoColumn] = value;
-                }
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'duracion\' de la tabla \'Tramo\' es DBNull.", e);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int tipoClase {
-                get {
-                    return ((int)(this[this.tableReservas_X_Pasajero.tipoClaseColumn]));
-                }
-                set {
-                    this[this.tableReservas_X_Pasajero.tipoClaseColumn] = value;
                     this[this.tableTramo.duracionColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int numeroAsiento {
             public int distancia {
                 get {
-                    return ((int)(this[this.tableReservas_X_Pasajero.numeroAsientoColumn]));
                     return ((int)(this[this.tableTramo.distanciaColumn]));
                 }
                 set {
-                    this[this.tableReservas_X_Pasajero.numeroAsientoColumn] = value;
                     this[this.tableTramo.distanciaColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int numeroPorModelo {
-                get {
-                    return ((int)(this[this.tableReservas_X_Pasajero.numeroPorModeloColumn]));
-                }
-                set {
-                    this[this.tableReservas_X_Pasajero.numeroPorModeloColumn] = value;
-                }
             public bool IsduracionNull() {
                 return this.IsNull(this.tableTramo.duracionColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int idModelo {
-                get {
-                    return ((int)(this[this.tableReservas_X_Pasajero.idModeloColumn]));
-                }
-                set {
-                    this[this.tableReservas_X_Pasajero.idModeloColumn] = value;
             public void SetduracionNull() {
                 this[this.tableTramo.duracionColumn] = global::System.Convert.DBNull;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsfechaHoraVencimientoNull() {
-                return this.IsNull(this.tableReservas_X_Pasajero.fechaHoraVencimientoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetfechaHoraVencimientoNull() {
-                this[this.tableReservas_X_Pasajero.fechaHoraVencimientoColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -869,17 +657,14 @@ namespace TrabajoPrácticoPAV {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class Reservas_X_PasajeroRowChangeEvent : global::System.EventArgs {
         public class TramoRowChangeEvent : global::System.EventArgs {
             
-            private Reservas_X_PasajeroRow eventRow;
             private TramoRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public Reservas_X_PasajeroRowChangeEvent(Reservas_X_PasajeroRow row, global::System.Data.DataRowAction action) {
             public TramoRowChangeEvent(TramoRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
@@ -887,7 +672,6 @@ namespace TrabajoPrácticoPAV {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public Reservas_X_PasajeroRow Row {
             public TramoRow Row {
                 get {
                     return this.eventRow;
@@ -904,7 +688,7 @@ namespace TrabajoPrácticoPAV {
         }
     }
 }
-namespace TrabajoPrácticoPAV.BD3K6G07_2021DataSetTableAdapters {
+namespace TrabajoPrácticoPAV.Formularios.Listados.Viajes.Tramos.Ds_ReporteTramosTableAdapters {
     
     
     /// <summary>
@@ -916,7 +700,6 @@ namespace TrabajoPrácticoPAV.BD3K6G07_2021DataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class Reservas_X_PasajeroTableAdapter : global::System.ComponentModel.Component {
     public partial class TramoTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
@@ -931,7 +714,6 @@ namespace TrabajoPrácticoPAV.BD3K6G07_2021DataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public Reservas_X_PasajeroTableAdapter() {
         public TramoTableAdapter() {
             this.ClearBeforeFill = true;
         }
@@ -1029,15 +811,6 @@ namespace TrabajoPrácticoPAV.BD3K6G07_2021DataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Reservas_X_Pasajero";
-            tableMapping.ColumnMappings.Add("tipoDoc", "tipoDoc");
-            tableMapping.ColumnMappings.Add("numeroDoc", "numeroDoc");
-            tableMapping.ColumnMappings.Add("numeroDeReserva", "numeroDeReserva");
-            tableMapping.ColumnMappings.Add("fechaHoraVencimiento", "fechaHoraVencimiento");
-            tableMapping.ColumnMappings.Add("tipoClase", "tipoClase");
-            tableMapping.ColumnMappings.Add("numeroAsiento", "numeroAsiento");
-            tableMapping.ColumnMappings.Add("numeroPorModelo", "numeroPorModelo");
-            tableMapping.ColumnMappings.Add("idModelo", "idModelo");
             tableMapping.DataSetTable = "Tramo";
             tableMapping.ColumnMappings.Add("codigoAeropuertoDestino", "codigoAeropuertoDestino");
             tableMapping.ColumnMappings.Add("codigoAeropuertoSalida", "codigoAeropuertoSalida");
@@ -1046,18 +819,8 @@ namespace TrabajoPrácticoPAV.BD3K6G07_2021DataSetTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Reservas_X_Pasajero] WHERE (([tipoDoc] = @Original_tipoDoc) AND ([numeroDoc] = @Original_numeroDoc) AND ([numeroDeReserva] = @Original_numeroDeReserva) AND ((@IsNull_fechaHoraVencimiento = 1 AND [fechaHoraVencimiento] IS NULL) OR ([fechaHoraVencimiento] = @Original_fechaHoraVencimiento)) AND ([tipoClase] = @Original_tipoClase) AND ([numeroAsiento] = @Original_numeroAsiento) AND ([numeroPorModelo] = @Original_numeroPorModelo) AND ([idModelo] = @Original_idModelo))";
             this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Tramo] WHERE (([codigoAeropuertoDestino] = @Original_codigoAeropuertoDestino) AND ([codigoAeropuertoSalida] = @Original_codigoAeropuertoSalida) AND ((@IsNull_duracion = 1 AND [duracion] IS NULL) OR ([duracion] = @Original_duracion)) AND ([distancia] = @Original_distancia))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tipoDoc", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tipoDoc", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_numeroDoc", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "numeroDoc", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_numeroDeReserva", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "numeroDeReserva", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_fechaHoraVencimiento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fechaHoraVencimiento", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_fechaHoraVencimiento", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fechaHoraVencimiento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tipoClase", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tipoClase", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_numeroAsiento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "numeroAsiento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_numeroPorModelo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "numeroPorModelo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idModelo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idModelo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_codigoAeropuertoDestino", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "codigoAeropuertoDestino", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_codigoAeropuertoSalida", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "codigoAeropuertoSalida", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_duracion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "duracion", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -1065,47 +828,18 @@ namespace TrabajoPrácticoPAV.BD3K6G07_2021DataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_distancia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "distancia", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Reservas_X_Pasajero] ([tipoDoc], [numeroDoc], [numeroDeReserva], [fechaHoraVencimiento], [tipoClase], [numeroAsiento], [numeroPorModelo], [idModelo]) VALUES (@tipoDoc, @numeroDoc, @numeroDeReserva, @fechaHoraVencimiento, @tipoClase, @numeroAsiento, @numeroPorModelo, @idModelo);
-SELECT tipoDoc, numeroDoc, numeroDeReserva, fechaHoraVencimiento, tipoClase, numeroAsiento, numeroPorModelo, idModelo FROM Reservas_X_Pasajero WHERE (numeroDeReserva = @numeroDeReserva) AND (numeroDoc = @numeroDoc) AND (tipoDoc = @tipoDoc)";
             this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Tramo] ([codigoAeropuertoDestino], [codigoAeropuertoSalida], [duracion], [distancia]) VALUES (@codigoAeropuertoDestino, @codigoAeropuertoSalida, @duracion, @distancia);
 SELECT codigoAeropuertoDestino, codigoAeropuertoSalida, duracion, distancia FROM Tramo WHERE (codigoAeropuertoDestino = @codigoAeropuertoDestino) AND (codigoAeropuertoSalida = @codigoAeropuertoSalida)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tipoDoc", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tipoDoc", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@numeroDoc", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "numeroDoc", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@numeroDeReserva", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "numeroDeReserva", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaHoraVencimiento", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fechaHoraVencimiento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tipoClase", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tipoClase", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@numeroAsiento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "numeroAsiento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@numeroPorModelo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "numeroPorModelo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idModelo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idModelo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@codigoAeropuertoDestino", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "codigoAeropuertoDestino", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@codigoAeropuertoSalida", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "codigoAeropuertoSalida", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@duracion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "duracion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@distancia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "distancia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Reservas_X_Pasajero] SET [tipoDoc] = @tipoDoc, [numeroDoc] = @numeroDoc, [numeroDeReserva] = @numeroDeReserva, [fechaHoraVencimiento] = @fechaHoraVencimiento, [tipoClase] = @tipoClase, [numeroAsiento] = @numeroAsiento, [numeroPorModelo] = @numeroPorModelo, [idModelo] = @idModelo WHERE (([tipoDoc] = @Original_tipoDoc) AND ([numeroDoc] = @Original_numeroDoc) AND ([numeroDeReserva] = @Original_numeroDeReserva) AND ((@IsNull_fechaHoraVencimiento = 1 AND [fechaHoraVencimiento] IS NULL) OR ([fechaHoraVencimiento] = @Original_fechaHoraVencimiento)) AND ([tipoClase] = @Original_tipoClase) AND ([numeroAsiento] = @Original_numeroAsiento) AND ([numeroPorModelo] = @Original_numeroPorModelo) AND ([idModelo] = @Original_idModelo));
-SELECT tipoDoc, numeroDoc, numeroDeReserva, fechaHoraVencimiento, tipoClase, numeroAsiento, numeroPorModelo, idModelo FROM Reservas_X_Pasajero WHERE (numeroDeReserva = @numeroDeReserva) AND (numeroDoc = @numeroDoc) AND (tipoDoc = @tipoDoc)";
             this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Tramo] SET [codigoAeropuertoDestino] = @codigoAeropuertoDestino, [codigoAeropuertoSalida] = @codigoAeropuertoSalida, [duracion] = @duracion, [distancia] = @distancia WHERE (([codigoAeropuertoDestino] = @Original_codigoAeropuertoDestino) AND ([codigoAeropuertoSalida] = @Original_codigoAeropuertoSalida) AND ((@IsNull_duracion = 1 AND [duracion] IS NULL) OR ([duracion] = @Original_duracion)) AND ([distancia] = @Original_distancia));
 SELECT codigoAeropuertoDestino, codigoAeropuertoSalida, duracion, distancia FROM Tramo WHERE (codigoAeropuertoDestino = @codigoAeropuertoDestino) AND (codigoAeropuertoSalida = @codigoAeropuertoSalida)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tipoDoc", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tipoDoc", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@numeroDoc", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "numeroDoc", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@numeroDeReserva", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "numeroDeReserva", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaHoraVencimiento", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fechaHoraVencimiento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tipoClase", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tipoClase", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@numeroAsiento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "numeroAsiento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@numeroPorModelo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "numeroPorModelo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idModelo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idModelo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tipoDoc", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tipoDoc", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_numeroDoc", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "numeroDoc", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_numeroDeReserva", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "numeroDeReserva", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_fechaHoraVencimiento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fechaHoraVencimiento", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_fechaHoraVencimiento", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fechaHoraVencimiento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tipoClase", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tipoClase", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_numeroAsiento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "numeroAsiento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_numeroPorModelo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "numeroPorModelo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idModelo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idModelo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@codigoAeropuertoDestino", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "codigoAeropuertoDestino", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@codigoAeropuertoSalida", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "codigoAeropuertoSalida", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@duracion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "duracion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1130,8 +864,6 @@ SELECT codigoAeropuertoDestino, codigoAeropuertoSalida, duracion, distancia FROM
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT tipoDoc, numeroDoc, numeroDeReserva, fechaHoraVencimiento, tipoClase, nume" +
-                "roAsiento, numeroPorModelo, idModelo FROM dbo.Reservas_X_Pasajero";
             this._commandCollection[0].CommandText = "SELECT codigoAeropuertoDestino, codigoAeropuertoSalida, duracion, distancia FROM " +
                 "dbo.Tramo";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
@@ -1141,8 +873,7 @@ SELECT codigoAeropuertoDestino, codigoAeropuertoSalida, duracion, distancia FROM
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(BD3K6G07_2021DataSet.Reservas_X_PasajeroDataTable dataTable) {
-        public virtual int Fill(BD3K6G07_2021DataSet.TramoDataTable dataTable) {
+        public virtual int Fill(Ds_ReporteTramos.TramoDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1155,11 +886,9 @@ SELECT codigoAeropuertoDestino, codigoAeropuertoSalida, duracion, distancia FROM
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual BD3K6G07_2021DataSet.Reservas_X_PasajeroDataTable GetData() {
-        public virtual BD3K6G07_2021DataSet.TramoDataTable GetData() {
+        public virtual Ds_ReporteTramos.TramoDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            BD3K6G07_2021DataSet.Reservas_X_PasajeroDataTable dataTable = new BD3K6G07_2021DataSet.Reservas_X_PasajeroDataTable();
-            BD3K6G07_2021DataSet.TramoDataTable dataTable = new BD3K6G07_2021DataSet.TramoDataTable();
+            Ds_ReporteTramos.TramoDataTable dataTable = new Ds_ReporteTramos.TramoDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1167,16 +896,14 @@ SELECT codigoAeropuertoDestino, codigoAeropuertoSalida, duracion, distancia FROM
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(BD3K6G07_2021DataSet.Reservas_X_PasajeroDataTable dataTable) {
-        public virtual int Update(BD3K6G07_2021DataSet.TramoDataTable dataTable) {
+        public virtual int Update(Ds_ReporteTramos.TramoDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(BD3K6G07_2021DataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Reservas_X_Pasajero");
+        public virtual int Update(Ds_ReporteTramos dataSet) {
             return this.Adapter.Update(dataSet, "Tramo");
         }
         
@@ -1199,26 +926,13 @@ SELECT codigoAeropuertoDestino, codigoAeropuertoSalida, duracion, distancia FROM
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_tipoDoc, int Original_numeroDoc, int Original_numeroDeReserva, global::System.Nullable<global::System.DateTime> Original_fechaHoraVencimiento, int Original_tipoClase, int Original_numeroAsiento, int Original_numeroPorModelo, int Original_idModelo) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_tipoDoc));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_numeroDoc));
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_numeroDeReserva));
-            if ((Original_fechaHoraVencimiento.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((System.DateTime)(Original_fechaHoraVencimiento.Value));
         public virtual int Delete(string Original_codigoAeropuertoDestino, string Original_codigoAeropuertoSalida, global::System.Nullable<int> Original_duracion, int Original_distancia) {
             if ((Original_codigoAeropuertoDestino == null)) {
                 throw new global::System.ArgumentNullException("Original_codigoAeropuertoDestino");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
                 this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_codigoAeropuertoDestino));
             }
-            this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_tipoClase));
-            this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_numeroAsiento));
-            this.Adapter.DeleteCommand.Parameters[7].Value = ((int)(Original_numeroPorModelo));
-            this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_idModelo));
             if ((Original_codigoAeropuertoSalida == null)) {
                 throw new global::System.ArgumentNullException("Original_codigoAeropuertoSalida");
             }
@@ -1254,12 +968,6 @@ SELECT codigoAeropuertoDestino, codigoAeropuertoSalida, duracion, distancia FROM
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int tipoDoc, int numeroDoc, int numeroDeReserva, global::System.Nullable<global::System.DateTime> fechaHoraVencimiento, int tipoClase, int numeroAsiento, int numeroPorModelo, int idModelo) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(tipoDoc));
-            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(numeroDoc));
-            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(numeroDeReserva));
-            if ((fechaHoraVencimiento.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(fechaHoraVencimiento.Value));
         public virtual int Insert(string codigoAeropuertoDestino, string codigoAeropuertoSalida, global::System.Nullable<int> duracion, int distancia) {
             if ((codigoAeropuertoDestino == null)) {
                 throw new global::System.ArgumentNullException("codigoAeropuertoDestino");
@@ -1277,13 +985,8 @@ SELECT codigoAeropuertoDestino, codigoAeropuertoSalida, duracion, distancia FROM
                 this.Adapter.InsertCommand.Parameters[2].Value = ((int)(duracion.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            this.Adapter.InsertCommand.Parameters[4].Value = ((int)(tipoClase));
-            this.Adapter.InsertCommand.Parameters[5].Value = ((int)(numeroAsiento));
-            this.Adapter.InsertCommand.Parameters[6].Value = ((int)(numeroPorModelo));
-            this.Adapter.InsertCommand.Parameters[7].Value = ((int)(idModelo));
             this.Adapter.InsertCommand.Parameters[3].Value = ((int)(distancia));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1305,28 +1008,6 @@ SELECT codigoAeropuertoDestino, codigoAeropuertoSalida, duracion, distancia FROM
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    int tipoDoc, 
-                    int numeroDoc, 
-                    int numeroDeReserva, 
-                    global::System.Nullable<global::System.DateTime> fechaHoraVencimiento, 
-                    int tipoClase, 
-                    int numeroAsiento, 
-                    int numeroPorModelo, 
-                    int idModelo, 
-                    int Original_tipoDoc, 
-                    int Original_numeroDoc, 
-                    int Original_numeroDeReserva, 
-                    global::System.Nullable<global::System.DateTime> Original_fechaHoraVencimiento, 
-                    int Original_tipoClase, 
-                    int Original_numeroAsiento, 
-                    int Original_numeroPorModelo, 
-                    int Original_idModelo) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(tipoDoc));
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(numeroDoc));
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(numeroDeReserva));
-            if ((fechaHoraVencimiento.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(fechaHoraVencimiento.Value));
         public virtual int Update(string codigoAeropuertoDestino, string codigoAeropuertoSalida, global::System.Nullable<int> duracion, int distancia, string Original_codigoAeropuertoDestino, string Original_codigoAeropuertoSalida, global::System.Nullable<int> Original_duracion, int Original_distancia) {
             if ((codigoAeropuertoDestino == null)) {
                 throw new global::System.ArgumentNullException("codigoAeropuertoDestino");
@@ -1357,33 +1038,16 @@ SELECT codigoAeropuertoDestino, codigoAeropuertoSalida, duracion, distancia FROM
                 throw new global::System.ArgumentNullException("Original_codigoAeropuertoSalida");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
                 this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_codigoAeropuertoSalida));
             }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(tipoClase));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(numeroAsiento));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(numeroPorModelo));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(idModelo));
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_tipoDoc));
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_numeroDoc));
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_numeroDeReserva));
-            if ((Original_fechaHoraVencimiento.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((System.DateTime)(Original_fechaHoraVencimiento.Value));
             if ((Original_duracion.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
                 this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_duracion.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
                 this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_tipoClase));
-            this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(Original_numeroAsiento));
-            this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Original_numeroPorModelo));
-            this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Original_idModelo));
             this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_distancia));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1405,8 +1069,6 @@ SELECT codigoAeropuertoDestino, codigoAeropuertoSalida, duracion, distancia FROM
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<global::System.DateTime> fechaHoraVencimiento, int tipoClase, int numeroAsiento, int numeroPorModelo, int idModelo, int Original_tipoDoc, int Original_numeroDoc, int Original_numeroDeReserva, global::System.Nullable<global::System.DateTime> Original_fechaHoraVencimiento, int Original_tipoClase, int Original_numeroAsiento, int Original_numeroPorModelo, int Original_idModelo) {
-            return this.Update(Original_tipoDoc, Original_numeroDoc, Original_numeroDeReserva, fechaHoraVencimiento, tipoClase, numeroAsiento, numeroPorModelo, idModelo, Original_tipoDoc, Original_numeroDoc, Original_numeroDeReserva, Original_fechaHoraVencimiento, Original_tipoClase, Original_numeroAsiento, Original_numeroPorModelo, Original_idModelo);
         public virtual int Update(global::System.Nullable<int> duracion, int distancia, string Original_codigoAeropuertoDestino, string Original_codigoAeropuertoSalida, global::System.Nullable<int> Original_duracion, int Original_distancia) {
             return this.Update(Original_codigoAeropuertoDestino, Original_codigoAeropuertoSalida, duracion, distancia, Original_codigoAeropuertoDestino, Original_codigoAeropuertoSalida, Original_duracion, Original_distancia);
         }
@@ -1424,7 +1086,6 @@ SELECT codigoAeropuertoDestino, codigoAeropuertoSalida, duracion, distancia FROM
         
         private UpdateOrderOption _updateOrder;
         
-        private Reservas_X_PasajeroTableAdapter _reservas_X_PasajeroTableAdapter;
         private TramoTableAdapter _tramoTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
@@ -1447,14 +1108,11 @@ SELECT codigoAeropuertoDestino, codigoAeropuertoSalida, duracion, distancia FROM
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public Reservas_X_PasajeroTableAdapter Reservas_X_PasajeroTableAdapter {
         public TramoTableAdapter TramoTableAdapter {
             get {
-                return this._reservas_X_PasajeroTableAdapter;
                 return this._tramoTableAdapter;
             }
             set {
-                this._reservas_X_PasajeroTableAdapter = value;
                 this._tramoTableAdapter = value;
             }
         }
@@ -1478,9 +1136,6 @@ SELECT codigoAeropuertoDestino, codigoAeropuertoSalida, duracion, distancia FROM
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._reservas_X_PasajeroTableAdapter != null) 
-                            && (this._reservas_X_PasajeroTableAdapter.Connection != null))) {
-                    return this._reservas_X_PasajeroTableAdapter.Connection;
                 if (((this._tramoTableAdapter != null) 
                             && (this._tramoTableAdapter.Connection != null))) {
                     return this._tramoTableAdapter.Connection;
@@ -1498,7 +1153,6 @@ SELECT codigoAeropuertoDestino, codigoAeropuertoSalida, duracion, distancia FROM
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._reservas_X_PasajeroTableAdapter != null)) {
                 if ((this._tramoTableAdapter != null)) {
                     count = (count + 1);
                 }
@@ -1511,16 +1165,13 @@ SELECT codigoAeropuertoDestino, codigoAeropuertoSalida, duracion, distancia FROM
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(BD3K6G07_2021DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(Ds_ReporteTramos dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._reservas_X_PasajeroTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Reservas_X_Pasajero.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
             if ((this._tramoTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Tramo.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._reservas_X_PasajeroTableAdapter.Update(updatedRows));
                     result = (result + this._tramoTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
@@ -1533,15 +1184,12 @@ SELECT codigoAeropuertoDestino, codigoAeropuertoSalida, duracion, distancia FROM
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(BD3K6G07_2021DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(Ds_ReporteTramos dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._reservas_X_PasajeroTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Reservas_X_Pasajero.Select(null, null, global::System.Data.DataViewRowState.Added);
             if ((this._tramoTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Tramo.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._reservas_X_PasajeroTableAdapter.Update(addedRows));
                     result = (result + this._tramoTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
@@ -1554,15 +1202,12 @@ SELECT codigoAeropuertoDestino, codigoAeropuertoSalida, duracion, distancia FROM
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(BD3K6G07_2021DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(Ds_ReporteTramos dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._reservas_X_PasajeroTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Reservas_X_Pasajero.Select(null, null, global::System.Data.DataViewRowState.Deleted);
             if ((this._tramoTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Tramo.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._reservas_X_PasajeroTableAdapter.Update(deletedRows));
                     result = (result + this._tramoTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
@@ -1599,15 +1244,13 @@ SELECT codigoAeropuertoDestino, codigoAeropuertoSalida, duracion, distancia FROM
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(BD3K6G07_2021DataSet dataSet) {
+        public virtual int UpdateAll(Ds_ReporteTramos dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._reservas_X_PasajeroTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._reservas_X_PasajeroTableAdapter.Connection) == false))) {
             if (((this._tramoTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._tramoTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi" +
@@ -1645,13 +1288,6 @@ SELECT codigoAeropuertoDestino, codigoAeropuertoSalida, duracion, distancia FROM
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._reservas_X_PasajeroTableAdapter != null)) {
-                    revertConnections.Add(this._reservas_X_PasajeroTableAdapter, this._reservas_X_PasajeroTableAdapter.Connection);
-                    this._reservas_X_PasajeroTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._reservas_X_PasajeroTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._reservas_X_PasajeroTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._reservas_X_PasajeroTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._reservas_X_PasajeroTableAdapter.Adapter);
                 if ((this._tramoTableAdapter != null)) {
                     revertConnections.Add(this._tramoTableAdapter, this._tramoTableAdapter.Connection);
                     this._tramoTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
@@ -1719,9 +1355,6 @@ SELECT codigoAeropuertoDestino, codigoAeropuertoSalida, duracion, distancia FROM
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._reservas_X_PasajeroTableAdapter != null)) {
-                    this._reservas_X_PasajeroTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._reservas_X_PasajeroTableAdapter]));
-                    this._reservas_X_PasajeroTableAdapter.Transaction = null;
                 if ((this._tramoTableAdapter != null)) {
                     this._tramoTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tramoTableAdapter]));
                     this._tramoTableAdapter.Transaction = null;

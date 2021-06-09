@@ -40,5 +40,35 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             return _BD.EjecutarSelect($"SELECT nombre FROM Aeropuerto WHERE codigo = " +
                 $"'{codigoAeropuerto}'").Rows[0]["nombre"].ToString();
         }
+
+        public DataTable RecuperarTodos()
+        {
+            string sql = @"select codigoAeropuertoSalida, codigoAeropuertoDestino, duracion, distancia FROM Tramo";
+            return _BD.EjecutarSelect(sql);
+        }
+
+        public DataTable RecuperarPorCodigoSalida(string codigoSalida)
+        {
+            string sql = $"SELECT * FROM Tramo WHERE codigoAeropuertoSalida = '{codigoSalida}'";
+            return _BD.EjecutarSelect(sql);
+        }
+        public DataTable RecuperarPorCodigoDestino(string codigoDestino)
+        {
+            string sql = $"SELECT * FROM Tramo WHERE codigoAeropuertoDestino = '{codigoDestino}'";
+            return _BD.EjecutarSelect(sql);
+        }
+
+        public DataTable RecuperarPorDistancia(int distancia)
+        {
+            string sql = $"SELECT * FROM Tramo WHERE distancia = {distancia}";
+            return _BD.EjecutarSelect(sql);
+        }
+
+        public DataTable RecuperarPorDuracion(int duracion)
+        {
+            string sql = $"SELECT * FROM Tramo WHERE duracion = {duracion}";
+            return _BD.EjecutarSelect(sql);
+        }
+
     }
 }
