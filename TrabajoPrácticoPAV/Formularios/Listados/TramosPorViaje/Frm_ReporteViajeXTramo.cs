@@ -34,8 +34,8 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Tramos_por_viaje
                     ArmarReporteTramos(tabla);
                 else
                 {
-                    rpv_Viajextramo.LocalReport.DataSources.Clear();
-                    rpv_Viajextramo.RefreshReport();
+                    reportViewer1.LocalReport.DataSources.Clear();
+                    reportViewer1.RefreshReport();
                     MessageBox.Show("No se encontraron resultados");
                 }               
             }
@@ -60,8 +60,8 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Tramos_por_viaje
                     ArmarReporteTramos(tabla);
                 else
                 {
-                    rpv_Viajextramo.LocalReport.DataSources.Clear();
-                    rpv_Viajextramo.RefreshReport();
+                    reportViewer1.LocalReport.DataSources.Clear();
+                    reportViewer1.RefreshReport();
                     MessageBox.Show("No se encontraron resultados");
                 }
             }
@@ -83,8 +83,8 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Tramos_por_viaje
 
                     else
                     {
-                        rpv_Viajextramo.LocalReport.DataSources.Clear();
-                        rpv_Viajextramo.RefreshReport();
+                        reportViewer1.LocalReport.DataSources.Clear();
+                        reportViewer1.RefreshReport();
                         MessageBox.Show("No se encontraron resultados");
                         cmb_aeropuertoSalida.SelectedValue = -1;
                     }
@@ -110,8 +110,8 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Tramos_por_viaje
 
                     else
                     {
-                        rpv_Viajextramo.LocalReport.DataSources.Clear();
-                        rpv_Viajextramo.RefreshReport();
+                        reportViewer1.LocalReport.DataSources.Clear();
+                        reportViewer1.RefreshReport();
                         MessageBox.Show("No se encontraron resultados");
                         cmb_aeropuertoDestino.SelectedValue = -1;
                     }
@@ -129,11 +129,11 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Tramos_por_viaje
    
         private void ArmarReporteTramos(DataTable tabla)
         {
-            ReportDataSource PaqueteDatos = new ReportDataSource("DS_Viajextramo", tabla);
-            rpv_Viajextramo.LocalReport.ReportEmbeddedResource = "TrabajoPrácticoPAV.Formularios.Listados.TramosPorViaje.Rpr_ViajeXTramos.rdlc";
-            rpv_Viajextramo.LocalReport.DataSources.Clear();
-            rpv_Viajextramo.LocalReport.DataSources.Add(PaqueteDatos);
-            rpv_Viajextramo.RefreshReport();
+            ReportDataSource PaqueteDatos = new ReportDataSource("DS_ViajeXTramo", tabla);
+            reportViewer1.LocalReport.ReportEmbeddedResource = "TrabajoPrácticoPAV.Formularios.Listados.TramosPorViaje.Rpr_ViajeXTramos.rdlc";
+            reportViewer1.LocalReport.DataSources.Clear();
+            reportViewer1.LocalReport.DataSources.Add(PaqueteDatos);
+            reportViewer1.RefreshReport();
         }
 
         private void Frm_ReporteViajeXTramo_Load(object sender, EventArgs e)
@@ -143,6 +143,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Tramos_por_viaje
             //this..RefreshReport();
             cmb_aeropuertoDestino.CargarCombo();
             cmb_aeropuertoSalida.CargarCombo();
+            this.reportViewer1.RefreshReport();
         }
     }
 }

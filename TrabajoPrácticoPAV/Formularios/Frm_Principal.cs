@@ -32,6 +32,7 @@ using TrabajoPrácticoPAV.Formularios.Listados.Pasajeros;
 using TrabajoPrácticoPAV.Formularios.Listados.Tripulación;
 using TrabajoPrácticoPAV.Formularios.Listados.Viajes;
 using TrabajoPrácticoPAV.Formularios.Listados.Asientos;
+using TrabajoPrácticoPAV.Formularios.Listados.Tramos_por_viaje;
 
 namespace TrabajoPrácticoPAV
 {
@@ -373,6 +374,12 @@ namespace TrabajoPrácticoPAV
             AbrirFormulario<Frm_ReporteAsientoXAvion>();
         }
 
+        private void tramosPorViajeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_ReporteViajeXTramo>();
+        }
         #endregion
+
     }
 }

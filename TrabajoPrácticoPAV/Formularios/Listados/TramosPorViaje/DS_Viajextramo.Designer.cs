@@ -20,17 +20,17 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.TramosPorViaje {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("DS_Viajextramo")]
+    [global::System.Xml.Serialization.XmlRootAttribute("Ds_ViajeXTramo")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class DS_Viajextramo : global::System.Data.DataSet {
+    public partial class Ds_ViajeXTramo : global::System.Data.DataSet {
         
-        private ViajeXTramoDataTable tableViajeXTramo;
+        private Ds_ViajextramoDataTable tableDs_Viajextramo;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public DS_Viajextramo() {
+        public Ds_ViajeXTramo() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.TramosPorViaje {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected DS_Viajextramo(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected Ds_ViajeXTramo(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.TramosPorViaje {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["ViajeXTramo"] != null)) {
-                    base.Tables.Add(new ViajeXTramoDataTable(ds.Tables["ViajeXTramo"]));
+                if ((ds.Tables["Ds_Viajextramo"] != null)) {
+                    base.Tables.Add(new Ds_ViajextramoDataTable(ds.Tables["Ds_Viajextramo"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.TramosPorViaje {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public ViajeXTramoDataTable ViajeXTramo {
+        public Ds_ViajextramoDataTable Ds_Viajextramo {
             get {
-                return this.tableViajeXTramo;
+                return this.tableDs_Viajextramo;
             }
         }
         
@@ -127,7 +127,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.TramosPorViaje {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            DS_Viajextramo cln = ((DS_Viajextramo)(base.Clone()));
+            Ds_ViajeXTramo cln = ((Ds_ViajeXTramo)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.TramosPorViaje {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["ViajeXTramo"] != null)) {
-                    base.Tables.Add(new ViajeXTramoDataTable(ds.Tables["ViajeXTramo"]));
+                if ((ds.Tables["Ds_Viajextramo"] != null)) {
+                    base.Tables.Add(new Ds_ViajextramoDataTable(ds.Tables["Ds_Viajextramo"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.TramosPorViaje {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableViajeXTramo = ((ViajeXTramoDataTable)(base.Tables["ViajeXTramo"]));
+            this.tableDs_Viajextramo = ((Ds_ViajextramoDataTable)(base.Tables["Ds_Viajextramo"]));
             if ((initTable == true)) {
-                if ((this.tableViajeXTramo != null)) {
-                    this.tableViajeXTramo.InitVars();
+                if ((this.tableDs_Viajextramo != null)) {
+                    this.tableDs_Viajextramo.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.TramosPorViaje {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "DS_Viajextramo";
+            this.DataSetName = "Ds_ViajeXTramo";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/DS_Viajextramo.xsd";
+            this.Namespace = "http://tempuri.org/Ds_ViajeXTramo.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableViajeXTramo = new ViajeXTramoDataTable();
-            base.Tables.Add(this.tableViajeXTramo);
+            this.tableDs_Viajextramo = new Ds_ViajextramoDataTable();
+            base.Tables.Add(this.tableDs_Viajextramo);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializeViajeXTramo() {
+        private bool ShouldSerializeDs_Viajextramo() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.TramosPorViaje {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            DS_Viajextramo ds = new DS_Viajextramo();
+            Ds_ViajeXTramo ds = new Ds_ViajeXTramo();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,14 +270,14 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.TramosPorViaje {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void ViajeXTramoRowChangeEventHandler(object sender, ViajeXTramoRowChangeEvent e);
+        public delegate void Ds_ViajextramoRowChangeEventHandler(object sender, Ds_ViajextramoRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class ViajeXTramoDataTable : global::System.Data.TypedTableBase<ViajeXTramoRow> {
+        public partial class Ds_ViajextramoDataTable : global::System.Data.TypedTableBase<Ds_ViajextramoRow> {
             
             private global::System.Data.DataColumn columnnumeroDeViaje;
             
@@ -289,8 +289,8 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.TramosPorViaje {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ViajeXTramoDataTable() {
-                this.TableName = "ViajeXTramo";
+            public Ds_ViajextramoDataTable() {
+                this.TableName = "Ds_Viajextramo";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -298,7 +298,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.TramosPorViaje {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal ViajeXTramoDataTable(global::System.Data.DataTable table) {
+            internal Ds_ViajextramoDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -315,7 +315,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.TramosPorViaje {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected ViajeXTramoDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected Ds_ViajextramoDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -363,48 +363,48 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.TramosPorViaje {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ViajeXTramoRow this[int index] {
+            public Ds_ViajextramoRow this[int index] {
                 get {
-                    return ((ViajeXTramoRow)(this.Rows[index]));
+                    return ((Ds_ViajextramoRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event ViajeXTramoRowChangeEventHandler ViajeXTramoRowChanging;
+            public event Ds_ViajextramoRowChangeEventHandler Ds_ViajextramoRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event ViajeXTramoRowChangeEventHandler ViajeXTramoRowChanged;
+            public event Ds_ViajextramoRowChangeEventHandler Ds_ViajextramoRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event ViajeXTramoRowChangeEventHandler ViajeXTramoRowDeleting;
+            public event Ds_ViajextramoRowChangeEventHandler Ds_ViajextramoRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event ViajeXTramoRowChangeEventHandler ViajeXTramoRowDeleted;
+            public event Ds_ViajextramoRowChangeEventHandler Ds_ViajextramoRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddViajeXTramoRow(ViajeXTramoRow row) {
+            public void AddDs_ViajextramoRow(Ds_ViajextramoRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ViajeXTramoRow AddViajeXTramoRow(string numeroDeViaje, string orden, string AeropuertoSalida, string AeropuertoDestino) {
-                ViajeXTramoRow rowViajeXTramoRow = ((ViajeXTramoRow)(this.NewRow()));
+            public Ds_ViajextramoRow AddDs_ViajextramoRow(int numeroDeViaje, int orden, string AeropuertoSalida, string AeropuertoDestino) {
+                Ds_ViajextramoRow rowDs_ViajextramoRow = ((Ds_ViajextramoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         numeroDeViaje,
                         orden,
                         AeropuertoSalida,
                         AeropuertoDestino};
-                rowViajeXTramoRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowViajeXTramoRow);
-                return rowViajeXTramoRow;
+                rowDs_ViajextramoRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowDs_ViajextramoRow);
+                return rowDs_ViajextramoRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                ViajeXTramoDataTable cln = ((ViajeXTramoDataTable)(base.Clone()));
+                Ds_ViajextramoDataTable cln = ((Ds_ViajextramoDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -412,7 +412,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.TramosPorViaje {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new ViajeXTramoDataTable();
+                return new Ds_ViajextramoDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -427,9 +427,9 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.TramosPorViaje {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this.columnnumeroDeViaje = new global::System.Data.DataColumn("numeroDeViaje", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnnumeroDeViaje = new global::System.Data.DataColumn("numeroDeViaje", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnumeroDeViaje);
-                this.columnorden = new global::System.Data.DataColumn("orden", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnorden = new global::System.Data.DataColumn("orden", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnorden);
                 this.columnAeropuertoSalida = new global::System.Data.DataColumn("AeropuertoSalida", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAeropuertoSalida);
@@ -439,28 +439,28 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.TramosPorViaje {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ViajeXTramoRow NewViajeXTramoRow() {
-                return ((ViajeXTramoRow)(this.NewRow()));
+            public Ds_ViajextramoRow NewDs_ViajextramoRow() {
+                return ((Ds_ViajextramoRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new ViajeXTramoRow(builder);
+                return new Ds_ViajextramoRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(ViajeXTramoRow);
+                return typeof(Ds_ViajextramoRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.ViajeXTramoRowChanged != null)) {
-                    this.ViajeXTramoRowChanged(this, new ViajeXTramoRowChangeEvent(((ViajeXTramoRow)(e.Row)), e.Action));
+                if ((this.Ds_ViajextramoRowChanged != null)) {
+                    this.Ds_ViajextramoRowChanged(this, new Ds_ViajextramoRowChangeEvent(((Ds_ViajextramoRow)(e.Row)), e.Action));
                 }
             }
             
@@ -468,8 +468,8 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.TramosPorViaje {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.ViajeXTramoRowChanging != null)) {
-                    this.ViajeXTramoRowChanging(this, new ViajeXTramoRowChangeEvent(((ViajeXTramoRow)(e.Row)), e.Action));
+                if ((this.Ds_ViajextramoRowChanging != null)) {
+                    this.Ds_ViajextramoRowChanging(this, new Ds_ViajextramoRowChangeEvent(((Ds_ViajextramoRow)(e.Row)), e.Action));
                 }
             }
             
@@ -477,8 +477,8 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.TramosPorViaje {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.ViajeXTramoRowDeleted != null)) {
-                    this.ViajeXTramoRowDeleted(this, new ViajeXTramoRowChangeEvent(((ViajeXTramoRow)(e.Row)), e.Action));
+                if ((this.Ds_ViajextramoRowDeleted != null)) {
+                    this.Ds_ViajextramoRowDeleted(this, new Ds_ViajextramoRowChangeEvent(((Ds_ViajextramoRow)(e.Row)), e.Action));
                 }
             }
             
@@ -486,14 +486,14 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.TramosPorViaje {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.ViajeXTramoRowDeleting != null)) {
-                    this.ViajeXTramoRowDeleting(this, new ViajeXTramoRowChangeEvent(((ViajeXTramoRow)(e.Row)), e.Action));
+                if ((this.Ds_ViajextramoRowDeleting != null)) {
+                    this.Ds_ViajextramoRowDeleting(this, new Ds_ViajextramoRowChangeEvent(((Ds_ViajextramoRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemoveViajeXTramoRow(ViajeXTramoRow row) {
+            public void RemoveDs_ViajextramoRow(Ds_ViajextramoRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -502,7 +502,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.TramosPorViaje {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DS_Viajextramo ds = new DS_Viajextramo();
+                Ds_ViajeXTramo ds = new Ds_ViajeXTramo();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -520,7 +520,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.TramosPorViaje {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "ViajeXTramoDataTable";
+                attribute2.FixedValue = "Ds_ViajextramoDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -564,46 +564,46 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.TramosPorViaje {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class ViajeXTramoRow : global::System.Data.DataRow {
+        public partial class Ds_ViajextramoRow : global::System.Data.DataRow {
             
-            private ViajeXTramoDataTable tableViajeXTramo;
+            private Ds_ViajextramoDataTable tableDs_Viajextramo;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal ViajeXTramoRow(global::System.Data.DataRowBuilder rb) : 
+            internal Ds_ViajextramoRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableViajeXTramo = ((ViajeXTramoDataTable)(this.Table));
+                this.tableDs_Viajextramo = ((Ds_ViajextramoDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string numeroDeViaje {
+            public int numeroDeViaje {
                 get {
                     try {
-                        return ((string)(this[this.tableViajeXTramo.numeroDeViajeColumn]));
+                        return ((int)(this[this.tableDs_Viajextramo.numeroDeViajeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'numeroDeViaje\' de la tabla \'ViajeXTramo\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'numeroDeViaje\' de la tabla \'Ds_Viajextramo\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableViajeXTramo.numeroDeViajeColumn] = value;
+                    this[this.tableDs_Viajextramo.numeroDeViajeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string orden {
+            public int orden {
                 get {
                     try {
-                        return ((string)(this[this.tableViajeXTramo.ordenColumn]));
+                        return ((int)(this[this.tableDs_Viajextramo.ordenColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'orden\' de la tabla \'ViajeXTramo\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'orden\' de la tabla \'Ds_Viajextramo\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableViajeXTramo.ordenColumn] = value;
+                    this[this.tableDs_Viajextramo.ordenColumn] = value;
                 }
             }
             
@@ -612,14 +612,15 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.TramosPorViaje {
             public string AeropuertoSalida {
                 get {
                     try {
-                        return ((string)(this[this.tableViajeXTramo.AeropuertoSalidaColumn]));
+                        return ((string)(this[this.tableDs_Viajextramo.AeropuertoSalidaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'AeropuertoSalida\' de la tabla \'ViajeXTramo\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'AeropuertoSalida\' de la tabla \'Ds_Viajextramo\' es DBNull." +
+                                "", e);
                     }
                 }
                 set {
-                    this[this.tableViajeXTramo.AeropuertoSalidaColumn] = value;
+                    this[this.tableDs_Viajextramo.AeropuertoSalidaColumn] = value;
                 }
             }
             
@@ -628,63 +629,64 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.TramosPorViaje {
             public string AeropuertoDestino {
                 get {
                     try {
-                        return ((string)(this[this.tableViajeXTramo.AeropuertoDestinoColumn]));
+                        return ((string)(this[this.tableDs_Viajextramo.AeropuertoDestinoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'AeropuertoDestino\' de la tabla \'ViajeXTramo\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'AeropuertoDestino\' de la tabla \'Ds_Viajextramo\' es DBNull" +
+                                ".", e);
                     }
                 }
                 set {
-                    this[this.tableViajeXTramo.AeropuertoDestinoColumn] = value;
+                    this[this.tableDs_Viajextramo.AeropuertoDestinoColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsnumeroDeViajeNull() {
-                return this.IsNull(this.tableViajeXTramo.numeroDeViajeColumn);
+                return this.IsNull(this.tableDs_Viajextramo.numeroDeViajeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetnumeroDeViajeNull() {
-                this[this.tableViajeXTramo.numeroDeViajeColumn] = global::System.Convert.DBNull;
+                this[this.tableDs_Viajextramo.numeroDeViajeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsordenNull() {
-                return this.IsNull(this.tableViajeXTramo.ordenColumn);
+                return this.IsNull(this.tableDs_Viajextramo.ordenColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetordenNull() {
-                this[this.tableViajeXTramo.ordenColumn] = global::System.Convert.DBNull;
+                this[this.tableDs_Viajextramo.ordenColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsAeropuertoSalidaNull() {
-                return this.IsNull(this.tableViajeXTramo.AeropuertoSalidaColumn);
+                return this.IsNull(this.tableDs_Viajextramo.AeropuertoSalidaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetAeropuertoSalidaNull() {
-                this[this.tableViajeXTramo.AeropuertoSalidaColumn] = global::System.Convert.DBNull;
+                this[this.tableDs_Viajextramo.AeropuertoSalidaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsAeropuertoDestinoNull() {
-                return this.IsNull(this.tableViajeXTramo.AeropuertoDestinoColumn);
+                return this.IsNull(this.tableDs_Viajextramo.AeropuertoDestinoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetAeropuertoDestinoNull() {
-                this[this.tableViajeXTramo.AeropuertoDestinoColumn] = global::System.Convert.DBNull;
+                this[this.tableDs_Viajextramo.AeropuertoDestinoColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -692,22 +694,22 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.TramosPorViaje {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class ViajeXTramoRowChangeEvent : global::System.EventArgs {
+        public class Ds_ViajextramoRowChangeEvent : global::System.EventArgs {
             
-            private ViajeXTramoRow eventRow;
+            private Ds_ViajextramoRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ViajeXTramoRowChangeEvent(ViajeXTramoRow row, global::System.Data.DataRowAction action) {
+            public Ds_ViajextramoRowChangeEvent(Ds_ViajextramoRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ViajeXTramoRow Row {
+            public Ds_ViajextramoRow Row {
                 get {
                     return this.eventRow;
                 }
