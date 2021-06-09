@@ -15,6 +15,7 @@ using TrabajoPrácticoPAV.Formularios.Listados.Tripulacion_Por_Vuelo;
 
 using TrabajoPrácticoPAV.Formularios.Listados.Tripulación;
 using TrabajoPrácticoPAV.Formularios.Listados.Avion_Por_Modelo;
+using TrabajoPrácticoPAV.Formularios.Listados.Asientos;
 
 namespace TrabajoPrácticoPAV
 {

@@ -26,6 +26,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Aeropuertos
 
         private void Frm_ReporteVueloXAeropuerto_Load(object sender, EventArgs e)
         {
+            Rbu_Nombre.Checked = true;
             this.reportViewer1.RefreshReport();
             this.BackColor = Estilo.ColorFondoForms;
             Estilo.FormatearEstilo(this.Controls);
