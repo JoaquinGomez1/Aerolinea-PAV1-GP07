@@ -74,5 +74,39 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
 
         }
 
+        public DataTable Reporte_RecuperarTodos()
+        {
+            string sql = "SELECT numeroAsiento, CONCAT(m.nombre,' ', a.numeroPorModelo) as Modelo, " +
+                        "(SELECT nombre FROM Tipo_Asiento WHERE idTipo = a.tipoAsiento) as tipoAsiento, " +
+                        "(SELECT 'Ocupado' WHERE a.estado = 0) as estado " +
+                        "FROM Asientos a " +
+                        "JOIN Modelo m ON a.idModelo = m.idModelo";
+
+            return _BD.EjecutarSelect(sql);
+        }
+
+        public DataTable Reporte_RecuperarPorAvion(string modelo, string numeroPorModelo)
+        {
+            string sql = "SELECT numeroAsiento, CONCAT(m.nombre,' ', a.numeroPorModelo) as Modelo, " +
+            "(SELECT nombre FROM Tipo_Asiento WHERE idTipo = a.tipoAsiento) as tipoAsiento, " +
+            "(SELECT 'Ocupado' WHERE a.estado = 0) as estado " +
+            "FROM Asientos a " +
+            "JOIN Modelo m ON a.idModelo = m.idModelo " +
+            $"WHERE a.idModelo IN (SELECT idModelo FROM Modelo WHERE nombre = '{modelo}') AND a.numeroPorModelo = {numeroPorModelo}";
+
+            return _BD.EjecutarSelect(sql);
+        }
+
+        public DataTable Reporte_RecuperarRangoAsiento(string desde, string hasta)
+        {
+            string sql = "SELECT numeroAsiento, CONCAT(m.nombre,' ', a.numeroPorModelo) as Modelo, " +
+            "(SELECT nombre FROM Tipo_Asiento WHERE idTipo = a.tipoAsiento) as tipoAsiento, " +
+            "(SELECT 'Ocupado' WHERE a.estado = 0) as estado " +
+            "FROM Asientos a " +
+            "JOIN Modelo m ON a.idModelo = m.idModelo " +
+            $"WHERE a.numeroAsiento > {desde} AND a.numeroAsiento < {hasta}";
+
+            return _BD.EjecutarSelect(sql);
+        }
     }
 }
