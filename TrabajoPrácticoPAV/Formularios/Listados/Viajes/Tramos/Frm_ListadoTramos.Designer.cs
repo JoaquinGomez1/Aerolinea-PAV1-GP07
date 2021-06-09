@@ -30,28 +30,33 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Viajes.Tramos
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.dsReporteTramosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ds_ReporteTramos = new TrabajoPrácticoPAV.Formularios.Listados.Viajes.Tramos.Ds_ReporteTramos();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txt_distancia = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
             this.lbl_distancia = new System.Windows.Forms.Label();
-            this.cmb_origen = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
             this.lbl_origen = new System.Windows.Forms.Label();
-            this.cmb_destino = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
-            this.txt_duracion = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
             this.lbl_destino = new System.Windows.Forms.Label();
             this.lbl_duracion = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.rbu_distancia = new System.Windows.Forms.RadioButton();
-            this.btn_calcular = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.rbu_todos = new System.Windows.Forms.RadioButton();
             this.rbu_origen = new System.Windows.Forms.RadioButton();
             this.rbu_duracion = new System.Windows.Forms.RadioButton();
             this.rbu_destino = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.rv_tramos = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.btn_cerrar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
+            this.btn_calcular = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
+            this.txt_distancia = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
+            this.cmb_origen = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
+            this.cmb_destino = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
+            this.txt_duracion = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
+            this.rbu_duracionMayor = new System.Windows.Forms.RadioButton();
+            this.rbu_duracionMenor = new System.Windows.Forms.RadioButton();
+            this.rbu_distanciaMayor = new System.Windows.Forms.RadioButton();
+            this.rbu_distanciaMenor = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dsReporteTramosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ds_ReporteTramos)).BeginInit();
             this.panel1.SuspendLayout();
@@ -80,88 +85,36 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Viajes.Tramos
             this.panel1.Controls.Add(this.lbl_destino);
             this.panel1.Controls.Add(this.lbl_duracion);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(15, 9);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(342, 143);
+            this.panel1.Size = new System.Drawing.Size(342, 170);
             this.panel1.TabIndex = 0;
-            // 
-            // txt_distancia
-            // 
-            this.txt_distancia.Location = new System.Drawing.Point(132, 106);
-            this.txt_distancia.Name = "txt_distancia";
-            this.txt_distancia.Pp_EsPk = false;
-            this.txt_distancia.Pp_MensajeError = "Completar nombre";
-            this.txt_distancia.Pp_NombreCampo = null;
-            this.txt_distancia.Pp_NombreTabla = null;
-            this.txt_distancia.Size = new System.Drawing.Size(118, 20);
-            this.txt_distancia.TabIndex = 16;
             // 
             // lbl_distancia
             // 
             this.lbl_distancia.AutoSize = true;
             this.lbl_distancia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.lbl_distancia.Location = new System.Drawing.Point(50, 106);
+            this.lbl_distancia.Location = new System.Drawing.Point(54, 119);
             this.lbl_distancia.Name = "lbl_distancia";
             this.lbl_distancia.Size = new System.Drawing.Size(70, 17);
             this.lbl_distancia.TabIndex = 15;
             this.lbl_distancia.Text = "Distancia:";
             // 
-            // cmb_origen
-            // 
-            this.cmb_origen.FormattingEnabled = true;
-            this.cmb_origen.Location = new System.Drawing.Point(132, 28);
-            this.cmb_origen.Name = "cmb_origen";
-            this.cmb_origen.Pp_CampoAceptaNull = false;
-            this.cmb_origen.Pp_EsPk = true;
-            this.cmb_origen.Pp_MensajeError = "Se ha detectado un error en cargar el origen";
-            this.cmb_origen.Pp_NombreCampo = "codigoAeropuertoSalida";
-            this.cmb_origen.Pp_NombreCampoInsert = null;
-            this.cmb_origen.Pp_NombreTabla = "Tramo";
-            this.cmb_origen.Pp_PkTabla = "codigoAeropuertoSalida";
-            this.cmb_origen.Size = new System.Drawing.Size(118, 21);
-            this.cmb_origen.TabIndex = 14;
-            // 
             // lbl_origen
             // 
             this.lbl_origen.AutoSize = true;
             this.lbl_origen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.lbl_origen.Location = new System.Drawing.Point(64, 28);
+            this.lbl_origen.Location = new System.Drawing.Point(68, 41);
             this.lbl_origen.Name = "lbl_origen";
             this.lbl_origen.Size = new System.Drawing.Size(55, 17);
             this.lbl_origen.TabIndex = 13;
             this.lbl_origen.Text = "Origen:";
             // 
-            // cmb_destino
-            // 
-            this.cmb_destino.FormattingEnabled = true;
-            this.cmb_destino.Location = new System.Drawing.Point(132, 53);
-            this.cmb_destino.Name = "cmb_destino";
-            this.cmb_destino.Pp_CampoAceptaNull = false;
-            this.cmb_destino.Pp_EsPk = false;
-            this.cmb_destino.Pp_MensajeError = "Se ha detectado un error en cargar el destino";
-            this.cmb_destino.Pp_NombreCampo = "codigoAeropuertoSalida";
-            this.cmb_destino.Pp_NombreCampoInsert = null;
-            this.cmb_destino.Pp_NombreTabla = "Tramo";
-            this.cmb_destino.Pp_PkTabla = "codigoAeropuertoDestino";
-            this.cmb_destino.Size = new System.Drawing.Size(118, 21);
-            this.cmb_destino.TabIndex = 12;
-            // 
-            // txt_duracion
-            // 
-            this.txt_duracion.Location = new System.Drawing.Point(132, 80);
-            this.txt_duracion.Name = "txt_duracion";
-            this.txt_duracion.Pp_EsPk = false;
-            this.txt_duracion.Pp_MensajeError = "Completar nombre";
-            this.txt_duracion.Pp_NombreCampo = null;
-            this.txt_duracion.Pp_NombreTabla = null;
-            this.txt_duracion.Size = new System.Drawing.Size(118, 20);
-            this.txt_duracion.TabIndex = 11;
-            // 
             // lbl_destino
             // 
             this.lbl_destino.AutoSize = true;
             this.lbl_destino.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.lbl_destino.Location = new System.Drawing.Point(59, 53);
+            this.lbl_destino.Location = new System.Drawing.Point(63, 66);
             this.lbl_destino.Name = "lbl_destino";
             this.lbl_destino.Size = new System.Drawing.Size(60, 17);
             this.lbl_destino.TabIndex = 10;
@@ -171,7 +124,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Viajes.Tramos
             // 
             this.lbl_duracion.AutoSize = true;
             this.lbl_duracion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.lbl_duracion.Location = new System.Drawing.Point(50, 80);
+            this.lbl_duracion.Location = new System.Drawing.Point(54, 93);
             this.lbl_duracion.Name = "lbl_duracion";
             this.lbl_duracion.Size = new System.Drawing.Size(69, 17);
             this.lbl_duracion.TabIndex = 9;
@@ -190,6 +143,10 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Viajes.Tramos
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.rbu_distanciaMenor);
+            this.panel2.Controls.Add(this.rbu_distanciaMayor);
+            this.panel2.Controls.Add(this.rbu_duracionMenor);
+            this.panel2.Controls.Add(this.rbu_duracionMayor);
             this.panel2.Controls.Add(this.rbu_distancia);
             this.panel2.Controls.Add(this.btn_calcular);
             this.panel2.Controls.Add(this.rbu_todos);
@@ -197,40 +154,27 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Viajes.Tramos
             this.panel2.Controls.Add(this.rbu_duracion);
             this.panel2.Controls.Add(this.rbu_destino);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(373, 12);
+            this.panel2.Location = new System.Drawing.Point(376, 9);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(348, 143);
+            this.panel2.Size = new System.Drawing.Size(348, 170);
             this.panel2.TabIndex = 1;
             // 
             // rbu_distancia
             // 
             this.rbu_distancia.AutoSize = true;
             this.rbu_distancia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.rbu_distancia.Location = new System.Drawing.Point(182, 53);
+            this.rbu_distancia.Location = new System.Drawing.Point(23, 80);
             this.rbu_distancia.Name = "rbu_distancia";
             this.rbu_distancia.Size = new System.Drawing.Size(108, 21);
             this.rbu_distancia.TabIndex = 15;
             this.rbu_distancia.Text = "Por distancia";
             this.rbu_distancia.UseVisualStyleBackColor = true;
             // 
-            // btn_calcular
-            // 
-            this.btn_calcular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_calcular.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.btn_calcular.Location = new System.Drawing.Point(229, 105);
-            this.btn_calcular.Name = "btn_calcular";
-            this.btn_calcular.Pp_Presionado = false;
-            this.btn_calcular.Size = new System.Drawing.Size(90, 28);
-            this.btn_calcular.TabIndex = 14;
-            this.btn_calcular.Text = "Calcular";
-            this.btn_calcular.UseVisualStyleBackColor = true;
-            this.btn_calcular.Click += new System.EventHandler(this.btn_calcular_Click);
-            // 
             // rbu_todos
             // 
             this.rbu_todos.AutoSize = true;
             this.rbu_todos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.rbu_todos.Location = new System.Drawing.Point(58, 80);
+            this.rbu_todos.Location = new System.Drawing.Point(23, 134);
             this.rbu_todos.Name = "rbu_todos";
             this.rbu_todos.Size = new System.Drawing.Size(66, 21);
             this.rbu_todos.TabIndex = 13;
@@ -241,7 +185,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Viajes.Tramos
             // 
             this.rbu_origen.AutoSize = true;
             this.rbu_origen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.rbu_origen.Location = new System.Drawing.Point(58, 28);
+            this.rbu_origen.Location = new System.Drawing.Point(24, 28);
             this.rbu_origen.Name = "rbu_origen";
             this.rbu_origen.Size = new System.Drawing.Size(92, 21);
             this.rbu_origen.TabIndex = 10;
@@ -252,7 +196,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Viajes.Tramos
             // 
             this.rbu_duracion.AutoSize = true;
             this.rbu_duracion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.rbu_duracion.Location = new System.Drawing.Point(182, 28);
+            this.rbu_duracion.Location = new System.Drawing.Point(23, 107);
             this.rbu_duracion.Name = "rbu_duracion";
             this.rbu_duracion.Size = new System.Drawing.Size(107, 21);
             this.rbu_duracion.TabIndex = 11;
@@ -263,7 +207,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Viajes.Tramos
             // 
             this.rbu_destino.AutoSize = true;
             this.rbu_destino.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.rbu_destino.Location = new System.Drawing.Point(58, 53);
+            this.rbu_destino.Location = new System.Drawing.Point(24, 53);
             this.rbu_destino.Name = "rbu_destino";
             this.rbu_destino.Size = new System.Drawing.Size(98, 21);
             this.rbu_destino.TabIndex = 12;
@@ -282,21 +226,144 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Viajes.Tramos
             // 
             // rv_tramos
             // 
-            reportDataSource2.Name = "DataSet1";
-            reportDataSource2.Value = this.dsReporteTramosBindingSource;
-            this.rv_tramos.LocalReport.DataSources.Add(reportDataSource2);
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.dsReporteTramosBindingSource;
+            this.rv_tramos.LocalReport.DataSources.Add(reportDataSource1);
             this.rv_tramos.LocalReport.ReportEmbeddedResource = "TrabajoPrácticoPAV.Formularios.Listados.Viajes.Tramos.ReporteTramos.rdlc";
-            this.rv_tramos.Location = new System.Drawing.Point(12, 170);
+            this.rv_tramos.Location = new System.Drawing.Point(15, 191);
             this.rv_tramos.Name = "rv_tramos";
             this.rv_tramos.ServerReport.BearerToken = null;
-            this.rv_tramos.Size = new System.Drawing.Size(709, 197);
+            this.rv_tramos.Size = new System.Drawing.Size(712, 182);
             this.rv_tramos.TabIndex = 2;
+            // 
+            // btn_cerrar
+            // 
+            this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.btn_cerrar.Location = new System.Drawing.Point(637, 380);
+            this.btn_cerrar.Name = "btn_cerrar";
+            this.btn_cerrar.Pp_Presionado = false;
+            this.btn_cerrar.Size = new System.Drawing.Size(90, 28);
+            this.btn_cerrar.TabIndex = 15;
+            this.btn_cerrar.Text = "Cerrar";
+            this.btn_cerrar.UseVisualStyleBackColor = true;
+            this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
+            // 
+            // btn_calcular
+            // 
+            this.btn_calcular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_calcular.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.btn_calcular.Location = new System.Drawing.Point(243, 134);
+            this.btn_calcular.Name = "btn_calcular";
+            this.btn_calcular.Pp_Presionado = false;
+            this.btn_calcular.Size = new System.Drawing.Size(90, 28);
+            this.btn_calcular.TabIndex = 14;
+            this.btn_calcular.Text = "Calcular";
+            this.btn_calcular.UseVisualStyleBackColor = true;
+            this.btn_calcular.Click += new System.EventHandler(this.btn_calcular_Click);
+            // 
+            // txt_distancia
+            // 
+            this.txt_distancia.Location = new System.Drawing.Point(136, 119);
+            this.txt_distancia.Name = "txt_distancia";
+            this.txt_distancia.Pp_EsPk = false;
+            this.txt_distancia.Pp_MensajeError = "Completar nombre";
+            this.txt_distancia.Pp_NombreCampo = null;
+            this.txt_distancia.Pp_NombreTabla = null;
+            this.txt_distancia.Size = new System.Drawing.Size(118, 20);
+            this.txt_distancia.TabIndex = 16;
+            // 
+            // cmb_origen
+            // 
+            this.cmb_origen.FormattingEnabled = true;
+            this.cmb_origen.Location = new System.Drawing.Point(136, 41);
+            this.cmb_origen.Name = "cmb_origen";
+            this.cmb_origen.Pp_CampoAceptaNull = false;
+            this.cmb_origen.Pp_EsPk = true;
+            this.cmb_origen.Pp_MensajeError = "Se ha detectado un error en cargar el origen";
+            this.cmb_origen.Pp_NombreCampo = "codigoAeropuertoSalida";
+            this.cmb_origen.Pp_NombreCampoInsert = null;
+            this.cmb_origen.Pp_NombreTabla = "Tramo";
+            this.cmb_origen.Pp_PkTabla = "codigoAeropuertoSalida";
+            this.cmb_origen.Size = new System.Drawing.Size(118, 21);
+            this.cmb_origen.TabIndex = 14;
+            // 
+            // cmb_destino
+            // 
+            this.cmb_destino.FormattingEnabled = true;
+            this.cmb_destino.Location = new System.Drawing.Point(136, 66);
+            this.cmb_destino.Name = "cmb_destino";
+            this.cmb_destino.Pp_CampoAceptaNull = false;
+            this.cmb_destino.Pp_EsPk = false;
+            this.cmb_destino.Pp_MensajeError = "Se ha detectado un error en cargar el destino";
+            this.cmb_destino.Pp_NombreCampo = "codigoAeropuertoSalida";
+            this.cmb_destino.Pp_NombreCampoInsert = null;
+            this.cmb_destino.Pp_NombreTabla = "Tramo";
+            this.cmb_destino.Pp_PkTabla = "codigoAeropuertoDestino";
+            this.cmb_destino.Size = new System.Drawing.Size(118, 21);
+            this.cmb_destino.TabIndex = 12;
+            // 
+            // txt_duracion
+            // 
+            this.txt_duracion.Location = new System.Drawing.Point(136, 93);
+            this.txt_duracion.Name = "txt_duracion";
+            this.txt_duracion.Pp_EsPk = false;
+            this.txt_duracion.Pp_MensajeError = "Completar nombre";
+            this.txt_duracion.Pp_NombreCampo = null;
+            this.txt_duracion.Pp_NombreTabla = null;
+            this.txt_duracion.Size = new System.Drawing.Size(118, 20);
+            this.txt_duracion.TabIndex = 11;
+            // 
+            // rbu_duracionMayor
+            // 
+            this.rbu_duracionMayor.AutoSize = true;
+            this.rbu_duracionMayor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.rbu_duracionMayor.Location = new System.Drawing.Point(149, 26);
+            this.rbu_duracionMayor.Name = "rbu_duracionMayor";
+            this.rbu_duracionMayor.Size = new System.Drawing.Size(174, 21);
+            this.rbu_duracionMayor.TabIndex = 16;
+            this.rbu_duracionMayor.Text = "Por duracion mayor a...";
+            this.rbu_duracionMayor.UseVisualStyleBackColor = true;
+            // 
+            // rbu_duracionMenor
+            // 
+            this.rbu_duracionMenor.AutoSize = true;
+            this.rbu_duracionMenor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.rbu_duracionMenor.Location = new System.Drawing.Point(149, 53);
+            this.rbu_duracionMenor.Name = "rbu_duracionMenor";
+            this.rbu_duracionMenor.Size = new System.Drawing.Size(175, 21);
+            this.rbu_duracionMenor.TabIndex = 17;
+            this.rbu_duracionMenor.Text = "Por duracion menor a...";
+            this.rbu_duracionMenor.UseVisualStyleBackColor = true;
+            // 
+            // rbu_distanciaMayor
+            // 
+            this.rbu_distanciaMayor.AutoSize = true;
+            this.rbu_distanciaMayor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.rbu_distanciaMayor.Location = new System.Drawing.Point(149, 80);
+            this.rbu_distanciaMayor.Name = "rbu_distanciaMayor";
+            this.rbu_distanciaMayor.Size = new System.Drawing.Size(175, 21);
+            this.rbu_distanciaMayor.TabIndex = 18;
+            this.rbu_distanciaMayor.Text = "Por distancia mayor a...";
+            this.rbu_distanciaMayor.UseVisualStyleBackColor = true;
+            // 
+            // rbu_distanciaMenor
+            // 
+            this.rbu_distanciaMenor.AutoSize = true;
+            this.rbu_distanciaMenor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.rbu_distanciaMenor.Location = new System.Drawing.Point(149, 107);
+            this.rbu_distanciaMenor.Name = "rbu_distanciaMenor";
+            this.rbu_distanciaMenor.Size = new System.Drawing.Size(176, 21);
+            this.rbu_distanciaMenor.TabIndex = 19;
+            this.rbu_distanciaMenor.Text = "Por distancia menor a...";
+            this.rbu_distanciaMenor.UseVisualStyleBackColor = true;
             // 
             // Frm_ListadoTramos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(733, 379);
+            this.ClientSize = new System.Drawing.Size(733, 427);
+            this.Controls.Add(this.btn_cerrar);
             this.Controls.Add(this.rv_tramos);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -337,5 +404,10 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Viajes.Tramos
         private System.Windows.Forms.RadioButton rbu_distancia;
         private System.Windows.Forms.BindingSource dsReporteTramosBindingSource;
         private Ds_ReporteTramos ds_ReporteTramos;
+        private Clase.Button_Aerolinea btn_cerrar;
+        private System.Windows.Forms.RadioButton rbu_distanciaMenor;
+        private System.Windows.Forms.RadioButton rbu_distanciaMayor;
+        private System.Windows.Forms.RadioButton rbu_duracionMenor;
+        private System.Windows.Forms.RadioButton rbu_duracionMayor;
     }
 }

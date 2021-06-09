@@ -105,6 +105,9 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Avion_Por_Modelo
             ArmarReporteUsuario(dataSet);
         }
 
-
+        private void btn_cerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
