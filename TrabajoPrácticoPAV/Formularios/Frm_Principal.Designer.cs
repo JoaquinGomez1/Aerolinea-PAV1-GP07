@@ -363,6 +363,7 @@
             this.familiaresPorPasajeroToolStripMenuItem1.Name = "familiaresPorPasajeroToolStripMenuItem1";
             this.familiaresPorPasajeroToolStripMenuItem1.Size = new System.Drawing.Size(265, 24);
             this.familiaresPorPasajeroToolStripMenuItem1.Text = "Familiares por pasajero";
+            this.familiaresPorPasajeroToolStripMenuItem1.Click += new System.EventHandler(this.familiaresPorPasajeroToolStripMenuItem1_Click);
             // 
             // pasajerosToolStripMenuItem1
             // 
@@ -391,6 +392,7 @@
             this.tripulacionToolStripMenuItem2.Name = "tripulacionToolStripMenuItem2";
             this.tripulacionToolStripMenuItem2.Size = new System.Drawing.Size(246, 24);
             this.tripulacionToolStripMenuItem2.Text = "Tripulacion";
+            this.tripulacionToolStripMenuItem2.Click += new System.EventHandler(this.tripulacionToolStripMenuItem2_Click);
             // 
             // tripulacionPorCargoToolStripMenuItem1
             // 
@@ -426,6 +428,7 @@
             this.viajesEntreFechaInicialYFechaFinalPorDestinoToolStripMenuItem.Name = "viajesEntreFechaInicialYFechaFinalPorDestinoToolStripMenuItem";
             this.viajesEntreFechaInicialYFechaFinalPorDestinoToolStripMenuItem.Size = new System.Drawing.Size(471, 24);
             this.viajesEntreFechaInicialYFechaFinalPorDestinoToolStripMenuItem.Text = "Viajes entre fecha inicial y fecha final por destino";
+            this.viajesEntreFechaInicialYFechaFinalPorDestinoToolStripMenuItem.Click += new System.EventHandler(this.viajesEntreFechaInicialYFechaFinalPorDestinoToolStripMenuItem_Click);
             // 
             // tramoToolStripMenuItem
             // 

@@ -28,6 +28,9 @@ using TrabajoPrácticoPAV.Formularios.Listados.Viajes.Tramos;
 using TrabajoPrácticoPAV.Formularios.Listados.Avion_Por_Modelo;
 using TrabajoPrácticoPAV.Formularios.Listados.Reservas;
 using TrabajoPrácticoPAV.Formularios.Listados.Tripulacion_Por_Vuelo;
+using TrabajoPrácticoPAV.Formularios.Listados.Pasajeros;
+using TrabajoPrácticoPAV.Formularios.Listados.Tripulación;
+using TrabajoPrácticoPAV.Formularios.Listados.Viajes;
 
 namespace TrabajoPrácticoPAV
 {
@@ -335,6 +338,24 @@ namespace TrabajoPrácticoPAV
         {
             CerrarTodosLosMenuStrip();
             AbrirFormulario<Frm_ListadoTripPorVuelo>();
+        }
+
+        private void familiaresPorPasajeroToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_ReporteFamiliareXPasajero>();
+        }
+
+        private void tripulacionToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_Tripulacion>();
+        }
+
+        private void viajesEntreFechaInicialYFechaFinalPorDestinoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_ListadoViajes>();
         }
     }
 }
