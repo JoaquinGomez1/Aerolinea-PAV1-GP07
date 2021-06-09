@@ -30,7 +30,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.DataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DataSet1 = new TrabajoPrácticoPAV.Formularios.Listados.Aviones.DataSet1();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -87,12 +87,13 @@ namespace TrabajoPrácticoPAV.Formularios.Listados
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Aviones";
             this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // reportViewer1
             // 
-            reportDataSource2.Name = "DataSet1";
-            reportDataSource2.Value = this.DataTable1BindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.DataTable1BindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "TrabajoPrácticoPAV.Formularios.Listados.Aviones.Report1.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(29, 135);
             this.reportViewer1.Name = "reportViewer1";
@@ -143,6 +144,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados
             this.cmb_modelos.Pp_PkTabla = "idModelo";
             this.cmb_modelos.Size = new System.Drawing.Size(169, 21);
             this.cmb_modelos.TabIndex = 10;
+            this.cmb_modelos.SelectedIndexChanged += new System.EventHandler(this.cmb_modelos_SelectedIndexChanged);
             // 
             // groupBox1
             // 

@@ -2,59 +2,29 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <Body>
     <ReportItems>
-      <Tablix Name="Tablix1">
+      <Tablix Name="Tablix2">
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
               <Width>3.76339cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.76339cm</Width>
+              <Width>3.75562cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.76339cm</Width>
+              <Width>3.77116cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.76339cm</Width>
+              <Width>3.47235cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.76458cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
               <Height>0.6cm</Height>
               <TablixCells>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="horarioSalida">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Fields!horarioSalida.Value</Value>
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>horarioSalida</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <VerticalAlign>Middle</VerticalAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
                 <TablixCell>
                   <CellContents>
                     <Textbox Name="numeroDeViaje">
@@ -90,14 +60,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="codigoAeropuertoSalida">
+                    <Textbox Name="horarioSalida1">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!codigoAeropuertoSalida.Value</Value>
+                              <Value>=Fields!horarioSalida.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -106,7 +76,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>codigoAeropuertoSalida</rd:DefaultName>
+                      <rd:DefaultName>horarioSalida1</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -123,14 +93,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="codigoAeropuertoDestino">
+                    <Textbox Name="horarioLlegada">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!codigoAeropuertoDestino.Value</Value>
+                              <Value>=Fields!horarioLlegada.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -139,7 +109,73 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>codigoAeropuertoDestino</rd:DefaultName>
+                      <rd:DefaultName>horarioLlegada</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="cantidadTramos">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!cantidadTramos.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>cantidadTramos</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="duracionEstimada">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!duracionEstimada.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>duracionEstimada</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -164,6 +200,7 @@
             <TablixMember />
             <TablixMember />
             <TablixMember />
+            <TablixMember />
           </TablixMembers>
         </TablixColumnHierarchy>
         <TablixRowHierarchy>
@@ -173,11 +210,11 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>Ds_Viajes</DataSetName>
-        <Top>0.10583cm</Top>
+        <DataSetName>DataSet1</DataSetName>
+        <Top>0.24667cm</Top>
         <Left>1.05516cm</Left>
         <Height>0.6cm</Height>
-        <Width>15.05356cm</Width>
+        <Width>17.5271cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -185,13 +222,13 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>0.32536in</Height>
+    <Height>0.56956in</Height>
     <Style />
   </Body>
-  <Width>6.68067in</Width>
+  <Width>7.97209in</Width>
   <Page>
     <PageHeader>
-      <Height>2.36953cm</Height>
+      <Height>2.52828cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -217,7 +254,7 @@
           <rd:DefaultName>Textbox8</rd:DefaultName>
           <Top>0.49954cm</Top>
           <Height>0.6cm</Height>
-          <Width>16.96891cm</Width>
+          <Width>18.58226cm</Width>
           <Style>
             <Border>
               <Style>Solid</Style>
@@ -237,7 +274,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Horario Salida</Value>
+                  <Value>N° Viaje</Value>
                   <Style>
                     <FontWeight>Bold</FontWeight>
                   </Style>
@@ -272,7 +309,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>N° De Viaje</Value>
+                  <Value>Horario Salida</Value>
                   <Style>
                     <FontWeight>Bold</FontWeight>
                   </Style>
@@ -307,7 +344,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value> Origen</Value>
+                  <Value>Horario Llegada</Value>
                   <Style>
                     <FontWeight>Bold</FontWeight>
                   </Style>
@@ -342,7 +379,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Destino</Value>
+                  <Value>Escalas</Value>
                   <Style>
                     <FontWeight>Bold</FontWeight>
                   </Style>
@@ -357,8 +394,43 @@
           <Top>1.63724cm</Top>
           <Left>12.34533cm</Left>
           <Height>0.6cm</Height>
-          <Width>3.76339cm</Width>
+          <Width>3.47235cm</Width>
           <ZIndex>4</ZIndex>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+            </Border>
+            <VerticalAlign>Middle</VerticalAlign>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox28">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Duracion</Value>
+                  <Style>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox28</rd:DefaultName>
+          <Top>1.63724cm</Top>
+          <Left>15.81768cm</Left>
+          <Height>0.6cm</Height>
+          <Width>2.76458cm</Width>
+          <ZIndex>5</ZIndex>
           <Style>
             <Border>
               <Style>Solid</Style>
@@ -386,7 +458,7 @@
           <Top>0.31984cm</Top>
           <Left>1.05516cm</Left>
           <Height>0cm</Height>
-          <Width>15.05356cm</Width>
+          <Width>17.5271cm</Width>
           <Style>
             <Border>
               <Style>Solid</Style>
@@ -445,7 +517,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox6</rd:DefaultName>
           <Top>0.6638cm</Top>
-          <Left>14.57537cm</Left>
+          <Left>16.95538cm</Left>
           <Height>0.6cm</Height>
           <Width>1.62688cm</Width>
           <ZIndex>2</ZIndex>
@@ -487,26 +559,30 @@
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="Ds_Viajes">
+    <DataSet Name="DataSet1">
       <Query>
         <DataSourceName>Ds_Viajes</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="horarioSalida">
-          <DataField>horarioSalida</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
         <Field Name="numeroDeViaje">
           <DataField>numeroDeViaje</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="codigoAeropuertoSalida">
-          <DataField>codigoAeropuertoSalida</DataField>
+        <Field Name="horarioLlegada">
+          <DataField>horarioLlegada</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="codigoAeropuertoDestino">
-          <DataField>codigoAeropuertoDestino</DataField>
+        <Field Name="horarioSalida">
+          <DataField>horarioSalida</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cantidadTramos">
+          <DataField>cantidadTramos</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="duracionEstimada">
+          <DataField>duracionEstimada</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
