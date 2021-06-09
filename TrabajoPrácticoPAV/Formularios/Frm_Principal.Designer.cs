@@ -40,6 +40,9 @@
             this.Btn_Listado = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.Btn_Estadistica = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.PanelFormularios = new System.Windows.Forms.Panel();
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.reservasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.facturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip3 = new System.Windows.Forms.MenuStrip();
             this.próximosVuelosEnUnAeropuertoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.proximosVuelosEnUnAeropuertoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -83,18 +86,15 @@
             this.tripulaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cargosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tripulaciónToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            this.reservasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.facturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BarraSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Cerrar)).BeginInit();
             this.PanelMenu.SuspendLayout();
             this.PanelFormularios.SuspendLayout();
+            this.menuStrip2.SuspendLayout();
             this.menuStrip3.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -273,9 +273,9 @@
             this.PanelFormularios.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.PanelFormularios.BackgroundImage = global::TrabajoPrácticoPAV.Properties.Resources.ElbpHR6W0AAInBS;
             this.PanelFormularios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PanelFormularios.Controls.Add(this.menuStrip2);
             this.PanelFormularios.Controls.Add(this.menuStrip3);
             this.PanelFormularios.Controls.Add(this.menuStrip1);
-            this.PanelFormularios.Controls.Add(this.menuStrip2);
             this.PanelFormularios.Controls.Add(this.pictureBox1);
             this.PanelFormularios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelFormularios.Location = new System.Drawing.Point(150, 36);
@@ -283,6 +283,37 @@
             this.PanelFormularios.Name = "PanelFormularios";
             this.PanelFormularios.Size = new System.Drawing.Size(750, 413);
             this.PanelFormularios.TabIndex = 2;
+            // 
+            // menuStrip2
+            // 
+            this.menuStrip2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
+            this.menuStrip2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.menuStrip2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.menuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.reservasToolStripMenuItem,
+            this.facturasToolStripMenuItem});
+            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip2.Name = "menuStrip2";
+            this.menuStrip2.Padding = new System.Windows.Forms.Padding(4, 5, 5, 5);
+            this.menuStrip2.Size = new System.Drawing.Size(129, 413);
+            this.menuStrip2.TabIndex = 5;
+            this.menuStrip2.Text = "menuStrip2";
+            this.menuStrip2.Visible = false;
+            // 
+            // reservasToolStripMenuItem
+            // 
+            this.reservasToolStripMenuItem.Name = "reservasToolStripMenuItem";
+            this.reservasToolStripMenuItem.Size = new System.Drawing.Size(86, 24);
+            this.reservasToolStripMenuItem.Text = "Reservas";
+            this.reservasToolStripMenuItem.Click += new System.EventHandler(this.reservasToolStripMenuItem_Click);
+            // 
+            // facturasToolStripMenuItem
+            // 
+            this.facturasToolStripMenuItem.Name = "facturasToolStripMenuItem";
+            this.facturasToolStripMenuItem.Size = new System.Drawing.Size(86, 24);
+            this.facturasToolStripMenuItem.Text = "Facturas";
+            this.facturasToolStripMenuItem.Click += new System.EventHandler(this.facturasToolStripMenuItem_Click);
             // 
             // menuStrip3
             // 
@@ -316,13 +347,14 @@
             // proximosVuelosEnUnAeropuertoToolStripMenuItem
             // 
             this.proximosVuelosEnUnAeropuertoToolStripMenuItem.Name = "proximosVuelosEnUnAeropuertoToolStripMenuItem";
-            this.proximosVuelosEnUnAeropuertoToolStripMenuItem.Size = new System.Drawing.Size(349, 24);
-            this.proximosVuelosEnUnAeropuertoToolStripMenuItem.Text = "Proximos vuelos en un aeropuerto";
+            this.proximosVuelosEnUnAeropuertoToolStripMenuItem.Size = new System.Drawing.Size(276, 24);
+            this.proximosVuelosEnUnAeropuertoToolStripMenuItem.Text = "Vuelos en un aeropuerto";
+            this.proximosVuelosEnUnAeropuertoToolStripMenuItem.Click += new System.EventHandler(this.proximosVuelosEnUnAeropuertoToolStripMenuItem_Click);
             // 
             // aeropuertoPorPaisToolStripMenuItem1
             // 
             this.aeropuertoPorPaisToolStripMenuItem1.Name = "aeropuertoPorPaisToolStripMenuItem1";
-            this.aeropuertoPorPaisToolStripMenuItem1.Size = new System.Drawing.Size(349, 24);
+            this.aeropuertoPorPaisToolStripMenuItem1.Size = new System.Drawing.Size(276, 24);
             this.aeropuertoPorPaisToolStripMenuItem1.Text = "Aeropuerto por pais";
             this.aeropuertoPorPaisToolStripMenuItem1.Click += new System.EventHandler(this.aeropuertoPorPaisToolStripMenuItem1_Click);
             // 
@@ -340,6 +372,7 @@
             this.estadoDeCadaAsientoPorCadaAvionToolStripMenuItem1.Name = "estadoDeCadaAsientoPorCadaAvionToolStripMenuItem1";
             this.estadoDeCadaAsientoPorCadaAvionToolStripMenuItem1.Size = new System.Drawing.Size(395, 24);
             this.estadoDeCadaAsientoPorCadaAvionToolStripMenuItem1.Text = "Estado de  cada asiento por cada avion";
+            this.estadoDeCadaAsientoPorCadaAvionToolStripMenuItem1.Click += new System.EventHandler(this.estadoDeCadaAsientoPorCadaAvionToolStripMenuItem1_Click);
             // 
             // avionPorModeloToolStripMenuItem
             // 
@@ -422,6 +455,7 @@
             this.tramosPorViajeToolStripMenuItem.Name = "tramosPorViajeToolStripMenuItem";
             this.tramosPorViajeToolStripMenuItem.Size = new System.Drawing.Size(471, 24);
             this.tramosPorViajeToolStripMenuItem.Text = "Tramos por viaje";
+            this.tramosPorViajeToolStripMenuItem.Click += new System.EventHandler(this.tramosPorViajeToolStripMenuItem_Click);
             // 
             // viajesEntreFechaInicialYFechaFinalPorDestinoToolStripMenuItem
             // 
@@ -635,37 +669,6 @@
             this.tripulaciónToolStripMenuItem1.Text = "Tripulación";
             this.tripulaciónToolStripMenuItem1.Click += new System.EventHandler(this.tripulaciónToolStripMenuItem1_Click);
             // 
-            // menuStrip2
-            // 
-            this.menuStrip2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
-            this.menuStrip2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.menuStrip2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.menuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.reservasToolStripMenuItem,
-            this.facturasToolStripMenuItem});
-            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Padding = new System.Windows.Forms.Padding(4, 5, 5, 5);
-            this.menuStrip2.Size = new System.Drawing.Size(129, 413);
-            this.menuStrip2.TabIndex = 5;
-            this.menuStrip2.Text = "menuStrip2";
-            this.menuStrip2.Visible = false;
-            // 
-            // reservasToolStripMenuItem
-            // 
-            this.reservasToolStripMenuItem.Name = "reservasToolStripMenuItem";
-            this.reservasToolStripMenuItem.Size = new System.Drawing.Size(86, 24);
-            this.reservasToolStripMenuItem.Text = "Reservas";
-            this.reservasToolStripMenuItem.Click += new System.EventHandler(this.reservasToolStripMenuItem_Click);
-            // 
-            // facturasToolStripMenuItem
-            // 
-            this.facturasToolStripMenuItem.Name = "facturasToolStripMenuItem";
-            this.facturasToolStripMenuItem.Size = new System.Drawing.Size(86, 24);
-            this.facturasToolStripMenuItem.Text = "Facturas";
-            this.facturasToolStripMenuItem.Click += new System.EventHandler(this.facturasToolStripMenuItem_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -704,12 +707,12 @@
             this.PanelMenu.ResumeLayout(false);
             this.PanelFormularios.ResumeLayout(false);
             this.PanelFormularios.PerformLayout();
+            this.menuStrip2.ResumeLayout(false);
+            this.menuStrip2.PerformLayout();
             this.menuStrip3.ResumeLayout(false);
             this.menuStrip3.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.menuStrip2.ResumeLayout(false);
-            this.menuStrip2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

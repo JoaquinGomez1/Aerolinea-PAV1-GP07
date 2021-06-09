@@ -61,6 +61,11 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
         }
         public DataTable Reporte_recuperarXCodigoRango(string codigoDes, string codigoHast)
         {
+            if (codigoDes == "")
+                codigoDes = "a";
+            if (codigoHast == "")
+                codigoHast = "Z";
+
             string sql = @"SELECT a.codigo, a.nombre, c.nombreCiudad as idCiudad from Aeropuerto a join ciudad c on c.idCiudad = A.idCiudad "
                         + " WHERE a.codigo like '[" + codigoDes + "-"+codigoHast + "]%'";
             return _BD.EjecutarSelect(sql);

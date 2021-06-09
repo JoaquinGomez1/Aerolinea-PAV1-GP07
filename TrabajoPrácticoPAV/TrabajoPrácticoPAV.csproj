@@ -249,19 +249,16 @@
     <Compile Include="Formularios\Listados\Avion Por Modelo\Frm_AvionPorModelo.Designer.cs">
       <DependentUpon>Frm_AvionPorModelo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Listados\TramosPorViaje\DS_Viajextramo.cs">
-      <DependentUpon>DS_Viajextramo.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Listados\TramosPorViaje\DS_Viajextramo.designer.cs">
-      <DependentUpon>DS_Viajextramo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Listados\TramosPorViaje\DS_Viajextramo1.Designer.cs">
+    <Compile Include="Formularios\Listados\TramosPorViaje\Ds_ViajeXTramo.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DS_Viajextramo.xsd</DependentUpon>
+      <DependentUpon>Ds_ViajeXTramo.xsd</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Listados\TramosPorViaje\Frm_ReporteViajeXTramo.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Listados\TramosPorViaje\Frm_ReporteViajeXTramo.Designer.cs">
+      <DependentUpon>Frm_ReporteViajeXTramo.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Listados\TramosPorViaje\Frm_ReporteViajeXTramo.designer.cs">
       <DependentUpon>Frm_ReporteViajeXTramo.cs</DependentUpon>
@@ -1045,6 +1042,17 @@
     </None>
     <None Include="Formularios\Listados\Reservas\Ds_ReservasPorPasajeros.xss">
       <DependentUpon>Ds_ReservasPorPasajeros.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Listados\TramosPorViaje\Ds_ViajeXTramo.xsc">
+      <DependentUpon>Ds_ViajeXTramo.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Listados\TramosPorViaje\Ds_ViajeXTramo.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Ds_ViajeXTramo.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Formularios\Listados\TramosPorViaje\Ds_ViajeXTramo.xss">
+      <DependentUpon>Ds_ViajeXTramo.xsd</DependentUpon>
     </None>
     <None Include="Formularios\Listados\TramosPorViaje\DS_Viajextramo.xsc">
       <DependentUpon>DS_Viajextramo.xsd</DependentUpon>

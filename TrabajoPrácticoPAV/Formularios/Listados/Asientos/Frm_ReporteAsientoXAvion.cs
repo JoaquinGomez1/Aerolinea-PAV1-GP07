@@ -26,6 +26,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Asientos
 
         private void Frm_ReporteAsientoXAvion_Load(object sender, EventArgs e)
         {
+            Rbu_Avion.Checked = true;
             this.BackColor = Estilo.ColorFondoForms;
             Estilo.FormatearEstilo(this.Controls);
             cmb_Modelo.CargarCombo();
