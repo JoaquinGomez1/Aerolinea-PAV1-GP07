@@ -237,7 +237,19 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Ds_AvionPorModelo.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Listados\Avion Por Modelo\Frm_AvionPorModelo.cs">
+    <Compile Include="Formularios\Listados\Avion Por Modelo\Frm_AvionPorModelo.cs"></Compile>
+    <Compile Include="Formularios\Listados\Factura\DataSet_FactuaPorFecha.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_FactuaPorFecha.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Listados\Factura\Frm_Reporte_FacturasPorFecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Listados\Factura\Frm_Reporte_FacturasPorFecha.Designer.cs">
+      <DependentUpon>Frm_Reporte_FacturasPorFecha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Listados\Vuelos\Frm_ReporteVueloXAeropuerto.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Listados\Avion Por Modelo\Frm_AvionPorModelo.Designer.cs">
@@ -784,6 +796,10 @@
       <DependentUpon>Frm_ReporteViajeXTramo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Listados\TramosPorViaje\Rpr_ViajeXTramos.rdlc" />
+    <EmbeddedResource Include="Formularios\Listados\Factura\Frm_Reporte_FacturasPorFecha.resx">
+      <DependentUpon>Frm_Reporte_FacturasPorFecha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Listados\Factura\Listado_FacturaPorFecha.rdlc" />
     <EmbeddedResource Include="Formularios\Listados\Vuelos\Frm_ReporteVueloXAeropuerto.resx">
       <DependentUpon>Frm_ReporteVueloXAeropuerto.cs</DependentUpon>
     </EmbeddedResource>
@@ -1048,6 +1064,17 @@
     </None>
     <None Include="Formularios\Listados\EquipajeXPasajero\Ds_EquipajeXPasajero.xss">
       <DependentUpon>Ds_EquipajeXPasajero.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Listados\Factura\DataSet_FactuaPorFecha.xsc">
+      <DependentUpon>DataSet_FactuaPorFecha.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Listados\Factura\DataSet_FactuaPorFecha.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_FactuaPorFecha.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Formularios\Listados\Factura\DataSet_FactuaPorFecha.xss">
+      <DependentUpon>DataSet_FactuaPorFecha.xsd</DependentUpon>
     </None>
     <None Include="Formularios\Listados\Pasajeros\Ds_ReporteFamiliareXPasajero.xsc">
       <DependentUpon>Ds_ReporteFamiliareXPasajero.xsd</DependentUpon>
