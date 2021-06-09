@@ -33,13 +33,14 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Tripulación
         {
             DataTable tabla = tripulacion.RecuperarTripulantes();
             ArmarReporteUsuario01(tabla);
+            //MessageBox.Show(tabla.Rows.Count.ToString());
 
         }
 
         private void ArmarReporteUsuario01(DataTable tabla)
         {
-            ReportDataSource PaqueteDatos = new ReportDataSource("TripulacionXCargo", tabla);
-            reportViewer1.LocalReport.ReportEmbeddedResource = "TrabajoPrácticoPAV.Formulario.Listados.Tripulación.ReporteTripulacion.rdlc";
+            ReportDataSource PaqueteDatos = new ReportDataSource("Ds_TripulacionXCargo", tabla);            
+            reportViewer1.LocalReport.ReportEmbeddedResource = "TrabajoPrácticoPAV.Formularios.Listados.Tripulación.ReporteTripulacion.rdlc";   
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.DataSources.Add(PaqueteDatos);
             reportViewer1.RefreshReport(); 
