@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.label4 = new System.Windows.Forms.Label();
-            this.Btn_Buscar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
-            this.Txt_Codigo = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
-            this.Txt_Nombre = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -40,10 +37,13 @@
             this.Rbu_Nombre = new System.Windows.Forms.RadioButton();
             this.Rbu_Codigo = new System.Windows.Forms.RadioButton();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.Txt_Desde = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
             this.label3 = new System.Windows.Forms.Label();
-            this.Txt_Hasta = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
             this.label5 = new System.Windows.Forms.Label();
+            this.Txt_Hasta = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
+            this.Txt_Desde = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
+            this.Btn_Buscar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
+            this.Txt_Codigo = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
+            this.Txt_Nombre = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,44 +57,11 @@
             this.label4.TabIndex = 29;
             this.label4.Text = "Reporte de Vuelos por Aeropuerto";
             // 
-            // Btn_Buscar
-            // 
-            this.Btn_Buscar.Location = new System.Drawing.Point(581, 80);
-            this.Btn_Buscar.Name = "Btn_Buscar";
-            this.Btn_Buscar.Pp_Presionado = false;
-            this.Btn_Buscar.Size = new System.Drawing.Size(75, 31);
-            this.Btn_Buscar.TabIndex = 28;
-            this.Btn_Buscar.Text = "Buscar";
-            this.Btn_Buscar.UseVisualStyleBackColor = true;
-            this.Btn_Buscar.Click += new System.EventHandler(this.Btn_Buscar_Click);
-            // 
-            // Txt_Codigo
-            // 
-            this.Txt_Codigo.Location = new System.Drawing.Point(159, 63);
-            this.Txt_Codigo.Name = "Txt_Codigo";
-            this.Txt_Codigo.Pp_EsPk = false;
-            this.Txt_Codigo.Pp_MensajeError = null;
-            this.Txt_Codigo.Pp_NombreCampo = "codigo";
-            this.Txt_Codigo.Pp_NombreTabla = "aeropuerto";
-            this.Txt_Codigo.Size = new System.Drawing.Size(100, 20);
-            this.Txt_Codigo.TabIndex = 25;
-            // 
-            // Txt_Nombre
-            // 
-            this.Txt_Nombre.Location = new System.Drawing.Point(159, 39);
-            this.Txt_Nombre.Name = "Txt_Nombre";
-            this.Txt_Nombre.Pp_EsPk = false;
-            this.Txt_Nombre.Pp_MensajeError = null;
-            this.Txt_Nombre.Pp_NombreCampo = "nombre";
-            this.Txt_Nombre.Pp_NombreTabla = "Aeropuerto";
-            this.Txt_Nombre.Size = new System.Drawing.Size(100, 20);
-            this.Txt_Nombre.TabIndex = 24;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(94, 63);
+            this.label2.Location = new System.Drawing.Point(116, 70);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 20);
             this.label2.TabIndex = 22;
@@ -104,7 +71,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(4, 37);
+            this.label1.Location = new System.Drawing.Point(26, 44);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(149, 20);
             this.label1.TabIndex = 21;
@@ -117,7 +84,7 @@
             this.groupBox1.Controls.Add(this.Rbu_Nombre);
             this.groupBox1.Controls.Add(this.Rbu_Codigo);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(345, 6);
+            this.groupBox1.Location = new System.Drawing.Point(358, 13);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 105);
             this.groupBox1.TabIndex = 20;
@@ -171,59 +138,92 @@
             // reportViewer1
             // 
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "TrabajoPrácticoPAV.Formularios.Listados.Vuelos.Reporte_VuelosXAeropuerto.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(8, 117);
+            this.reportViewer1.Location = new System.Drawing.Point(45, 149);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(648, 246);
             this.reportViewer1.TabIndex = 30;
             // 
-            // Txt_Desde
-            // 
-            this.Txt_Desde.Location = new System.Drawing.Point(159, 89);
-            this.Txt_Desde.Name = "Txt_Desde";
-            this.Txt_Desde.Pp_EsPk = false;
-            this.Txt_Desde.Pp_MensajeError = null;
-            this.Txt_Desde.Pp_NombreCampo = "codigo";
-            this.Txt_Desde.Pp_NombreTabla = "aeropuerto";
-            this.Txt_Desde.Size = new System.Drawing.Size(43, 20);
-            this.Txt_Desde.TabIndex = 32;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label3.Location = new System.Drawing.Point(25, 89);
+            this.label3.Location = new System.Drawing.Point(47, 96);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(128, 20);
             this.label3.TabIndex = 31;
             this.label3.Text = "Número de vuelo";
             // 
-            // Txt_Hasta
-            // 
-            this.Txt_Hasta.Location = new System.Drawing.Point(216, 89);
-            this.Txt_Hasta.Name = "Txt_Hasta";
-            this.Txt_Hasta.Pp_EsPk = false;
-            this.Txt_Hasta.Pp_MensajeError = null;
-            this.Txt_Hasta.Pp_NombreCampo = "codigo";
-            this.Txt_Hasta.Pp_NombreTabla = "aeropuerto";
-            this.Txt_Hasta.Size = new System.Drawing.Size(43, 20);
-            this.Txt_Hasta.TabIndex = 34;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.label5.Location = new System.Drawing.Point(200, 82);
+            this.label5.Location = new System.Drawing.Point(237, 89);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(21, 29);
             this.label5.TabIndex = 35;
             this.label5.Text = "-";
             // 
+            // Txt_Hasta
+            // 
+            this.Txt_Hasta.Location = new System.Drawing.Point(263, 96);
+            this.Txt_Hasta.Name = "Txt_Hasta";
+            this.Txt_Hasta.Pp_EsPk = false;
+            this.Txt_Hasta.Pp_MensajeError = null;
+            this.Txt_Hasta.Pp_NombreCampo = "codigo";
+            this.Txt_Hasta.Pp_NombreTabla = "aeropuerto";
+            this.Txt_Hasta.Size = new System.Drawing.Size(52, 20);
+            this.Txt_Hasta.TabIndex = 34;
+            // 
+            // Txt_Desde
+            // 
+            this.Txt_Desde.Location = new System.Drawing.Point(181, 96);
+            this.Txt_Desde.Name = "Txt_Desde";
+            this.Txt_Desde.Pp_EsPk = false;
+            this.Txt_Desde.Pp_MensajeError = null;
+            this.Txt_Desde.Pp_NombreCampo = "codigo";
+            this.Txt_Desde.Pp_NombreTabla = "aeropuerto";
+            this.Txt_Desde.Size = new System.Drawing.Size(52, 20);
+            this.Txt_Desde.TabIndex = 32;
+            // 
+            // Btn_Buscar
+            // 
+            this.Btn_Buscar.Location = new System.Drawing.Point(598, 70);
+            this.Btn_Buscar.Name = "Btn_Buscar";
+            this.Btn_Buscar.Pp_Presionado = false;
+            this.Btn_Buscar.Size = new System.Drawing.Size(95, 48);
+            this.Btn_Buscar.TabIndex = 28;
+            this.Btn_Buscar.Text = "Buscar";
+            this.Btn_Buscar.UseVisualStyleBackColor = true;
+            this.Btn_Buscar.Click += new System.EventHandler(this.Btn_Buscar_Click);
+            // 
+            // Txt_Codigo
+            // 
+            this.Txt_Codigo.Location = new System.Drawing.Point(181, 70);
+            this.Txt_Codigo.Name = "Txt_Codigo";
+            this.Txt_Codigo.Pp_EsPk = false;
+            this.Txt_Codigo.Pp_MensajeError = null;
+            this.Txt_Codigo.Pp_NombreCampo = "codigo";
+            this.Txt_Codigo.Pp_NombreTabla = "aeropuerto";
+            this.Txt_Codigo.Size = new System.Drawing.Size(134, 20);
+            this.Txt_Codigo.TabIndex = 25;
+            // 
+            // Txt_Nombre
+            // 
+            this.Txt_Nombre.Location = new System.Drawing.Point(181, 46);
+            this.Txt_Nombre.Name = "Txt_Nombre";
+            this.Txt_Nombre.Pp_EsPk = false;
+            this.Txt_Nombre.Pp_MensajeError = null;
+            this.Txt_Nombre.Pp_NombreCampo = "nombre";
+            this.Txt_Nombre.Pp_NombreTabla = "Aeropuerto";
+            this.Txt_Nombre.Size = new System.Drawing.Size(134, 20);
+            this.Txt_Nombre.TabIndex = 24;
+            // 
             // Frm_ReporteVueloXAeropuerto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(668, 382);
+            this.ClientSize = new System.Drawing.Size(749, 418);
             this.Controls.Add(this.Txt_Hasta);
             this.Controls.Add(this.Txt_Desde);
             this.Controls.Add(this.label3);

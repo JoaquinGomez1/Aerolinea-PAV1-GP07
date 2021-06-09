@@ -31,6 +31,7 @@ using TrabajoPrácticoPAV.Formularios.Listados.Tripulacion_Por_Vuelo;
 using TrabajoPrácticoPAV.Formularios.Listados.Pasajeros;
 using TrabajoPrácticoPAV.Formularios.Listados.Tripulación;
 using TrabajoPrácticoPAV.Formularios.Listados.Viajes;
+using TrabajoPrácticoPAV.Formularios.Listados.Asientos;
 
 namespace TrabajoPrácticoPAV
 {
@@ -215,7 +216,7 @@ namespace TrabajoPrácticoPAV
         // El que tenga tiempo vea si lo puede dejar un poco mejor
 
 
-        #region MenuStrip
+        #region MenuStripABM
         private void aeropuertosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AbrirFormulario<Frm_ABM_Aeropuerto>();
@@ -298,6 +299,8 @@ namespace TrabajoPrácticoPAV
         }
         #endregion
 
+        #region MenuStripListados
+
         private void reservasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CerrarTodosLosMenuStrip();
@@ -357,5 +360,19 @@ namespace TrabajoPrácticoPAV
             CerrarTodosLosMenuStrip();
             AbrirFormulario<Frm_ListadoViajes>();
         }
+
+        private void proximosVuelosEnUnAeropuertoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_ReporteVueloXAeropuerto>();
+        }
+
+        private void estadoDeCadaAsientoPorCadaAvionToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_ReporteAsientoXAvion>();
+        }
+
+        #endregion
     }
 }
