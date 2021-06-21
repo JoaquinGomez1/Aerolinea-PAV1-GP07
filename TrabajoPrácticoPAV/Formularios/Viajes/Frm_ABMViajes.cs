@@ -205,11 +205,12 @@ namespace TrabajoPrácticoPAV.Formularios
                 datagrid_viajes.Rows[i].Cells[3].Value = tabla.Rows[i]["horarioLlegada"].ToString();
                 datagrid_viajes.Rows[i].Cells[4].Value = duracionEstimadaDeViaje;
             }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Dispose();
         }
 
         private void btn_modificar1_Click(object sender, EventArgs e) => modificarViaje.ShowDialog();

@@ -64,7 +64,6 @@ namespace TrabajoPrácticoPAV.Backend
             {
                 conexion.Close();
             }
-
         }
 
         public DataTable EjecutarSelect(string sql)
@@ -125,7 +124,7 @@ namespace TrabajoPrácticoPAV.Backend
                                  + sql + "\n"
                                  + "El mensaje de error es: \n"
                                  + e.Message);
-            }
+            } 
             Desconectar();
             return ControlTransaccion;
 
