@@ -112,6 +112,14 @@ namespace TrabajoPrácticoPAV
 
                     }
                     break;
+                case "Btn_Estadistica":
+                    if (!menuStrip4.Visible)
+                    {
+                        menuStrip4.Visible = true;
+                        menuStrip4.BringToFront();
+
+                    }
+                    break;
 
 
                 default:
@@ -124,7 +132,7 @@ namespace TrabajoPrácticoPAV
 
         private void CerrarTodosLosMenuStrip()
         {
-            List<MenuStrip> list = new List<MenuStrip>() { menuStrip1, menuStrip2, menuStrip3 };
+            List<MenuStrip> list = new List<MenuStrip>() { menuStrip1, menuStrip2, menuStrip3, menuStrip4 };
 
             foreach (MenuStrip menu in list)
             {
