@@ -162,5 +162,11 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
                 + " where tipoParentesco like '%" + parentesco.Trim() + "%'";
             return _BD.EjecutarSelect(sql);
         }
+        public DataTable Reporte_recuperarNumDocTitularRango(string dniDesde, string dniHasta, string atributo)
+        {
+            string sql = @" SELECT tipoDocPrimerPasajero, numerodocPrimerPasajero, tipoDocSegundoPasajero,numerodocSegundoPasajero,tipoParentesco from Familiar_X_Pasajero "
+            +" WHERE "+ atributo + " in ("+ dniDesde + ","+ dniHasta + ")";
+            return _BD.EjecutarSelect(sql);
+        }
     }
 }

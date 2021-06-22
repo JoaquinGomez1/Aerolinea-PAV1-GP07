@@ -133,5 +133,23 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             return resultadoSelect;
         }
 
+        public DataTable RecuperarPorRango(string Desde, string Hasta)
+        {
+            string sql = @"SELECT idTripulacion, t.nombre, apellido, c.nombre as cargo FROM Tripulacion t 
+                           JOIN Cargo_Tripulacion c ON c.idCargoTripulacion = t.idCargoTripulacion 
+                           WHERE t.idTripulacion BETWEEN " + Desde + " AND " + Hasta;
+
+            return _DB.EjecutarSelect(sql);
+        }
+
+        public DataTable RecuperarPorCargo(string idCargo)
+        {
+            string sql = @"SELECT idTripulacion, t.nombre, apellido, c.nombre as cargo FROM Tripulacion t 
+                           JOIN Cargo_Tripulacion c ON c.idCargoTripulacion = t.idCargoTripulacion 
+                           WHERE t.idCargoTripulacion = " + idCargo;
+
+            return _DB.EjecutarSelect(sql);
+        }
+
     }
 }

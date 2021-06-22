@@ -10,9 +10,10 @@
 
 #pragma warning disable 1591
 
-namespace TrabajoPrácticoPAV.Formularios.Listados.Tripulación {
-    
-    
+namespace TrabajoPrácticoPAV.Formularios.Listados.TramosPorViaje
+{
+
+
     /// <summary>
     ///Represents a strongly typed in-memory cache of data.
     ///</summary>
@@ -20,17 +21,19 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Tripulación {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("Ds_TripulacionXCargo")]
+    [global::System.Xml.Serialization.XmlRootAttribute("Ds_ViajeXTramo")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class Ds_TripulacionXCargo : global::System.Data.DataSet {
-        
-        private TripulacionXCargoDataTable tableTripulacionXCargo;
-        
+    public partial class Ds_ViajeXTramo : global::System.Data.DataSet
+    {
+
+        private Ds_ViajextramoDataTable tableDs_Viajextramo;
+
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-        
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public Ds_TripulacionXCargo() {
+        public Ds_ViajeXTramo()
+        {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -38,12 +41,14 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Tripulación {
             base.Relations.CollectionChanged += schemaChangedHandler;
             this.EndInit();
         }
-        
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected Ds_TripulacionXCargo(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                base(info, context, false) {
-            if ((this.IsBinarySerialized(info, context) == true)) {
+        protected Ds_ViajeXTramo(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) :
+                base(info, context, false)
+        {
+            if ((this.IsBinarySerialized(info, context) == true))
+            {
                 this.InitVars(false);
                 global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler1 = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
                 this.Tables.CollectionChanged += schemaChangedHandler1;
@@ -51,11 +56,13 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Tripulación {
                 return;
             }
             string strSchema = ((string)(info.GetValue("XmlSchema", typeof(string))));
-            if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
+            if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema))
+            {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["TripulacionXCargo"] != null)) {
-                    base.Tables.Add(new TripulacionXCargoDataTable(ds.Tables["TripulacionXCargo"]));
+                if ((ds.Tables["Ds_Viajextramo"] != null))
+                {
+                    base.Tables.Add(new Ds_ViajextramoDataTable(ds.Tables["Ds_Viajextramo"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -66,7 +73,8 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Tripulación {
                 this.Merge(ds, false, global::System.Data.MissingSchemaAction.Add);
                 this.InitVars();
             }
-            else {
+            else
+            {
                 this.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
             }
             this.GetSerializationData(info, context);
@@ -74,86 +82,102 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Tripulación {
             base.Tables.CollectionChanged += schemaChangedHandler;
             this.Relations.CollectionChanged += schemaChangedHandler;
         }
-        
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public TripulacionXCargoDataTable TripulacionXCargo {
-            get {
-                return this.tableTripulacionXCargo;
+        public Ds_ViajextramoDataTable Ds_Viajextramo
+        {
+            get
+            {
+                return this.tableDs_Viajextramo;
             }
         }
-        
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
-        public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
-            get {
+        public override global::System.Data.SchemaSerializationMode SchemaSerializationMode
+        {
+            get
+            {
                 return this._schemaSerializationMode;
             }
-            set {
+            set
+            {
                 this._schemaSerializationMode = value;
             }
         }
-        
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public new global::System.Data.DataTableCollection Tables {
-            get {
+        public new global::System.Data.DataTableCollection Tables
+        {
+            get
+            {
                 return base.Tables;
             }
         }
-        
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public new global::System.Data.DataRelationCollection Relations {
-            get {
+        public new global::System.Data.DataRelationCollection Relations
+        {
+            get
+            {
                 return base.Relations;
             }
         }
-        
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected override void InitializeDerivedDataSet() {
+        protected override void InitializeDerivedDataSet()
+        {
             this.BeginInit();
             this.InitClass();
             this.EndInit();
         }
-        
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public override global::System.Data.DataSet Clone() {
-            Ds_TripulacionXCargo cln = ((Ds_TripulacionXCargo)(base.Clone()));
+        public override global::System.Data.DataSet Clone()
+        {
+            Ds_ViajeXTramo cln = ((Ds_ViajeXTramo)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
         }
-        
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected override bool ShouldSerializeTables() {
+        protected override bool ShouldSerializeTables()
+        {
             return false;
         }
-        
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected override bool ShouldSerializeRelations() {
+        protected override bool ShouldSerializeRelations()
+        {
             return false;
         }
-        
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected override void ReadXmlSerializable(global::System.Xml.XmlReader reader) {
-            if ((this.DetermineSchemaSerializationMode(reader) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
+        protected override void ReadXmlSerializable(global::System.Xml.XmlReader reader)
+        {
+            if ((this.DetermineSchemaSerializationMode(reader) == global::System.Data.SchemaSerializationMode.IncludeSchema))
+            {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["TripulacionXCargo"] != null)) {
-                    base.Tables.Add(new TripulacionXCargoDataTable(ds.Tables["TripulacionXCargo"]));
+                if ((ds.Tables["Ds_Viajextramo"] != null))
+                {
+                    base.Tables.Add(new Ds_ViajextramoDataTable(ds.Tables["Ds_Viajextramo"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -164,68 +188,79 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Tripulación {
                 this.Merge(ds, false, global::System.Data.MissingSchemaAction.Add);
                 this.InitVars();
             }
-            else {
+            else
+            {
                 this.ReadXml(reader);
                 this.InitVars();
             }
         }
-        
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected override global::System.Xml.Schema.XmlSchema GetSchemaSerializable() {
+        protected override global::System.Xml.Schema.XmlSchema GetSchemaSerializable()
+        {
             global::System.IO.MemoryStream stream = new global::System.IO.MemoryStream();
             this.WriteXmlSchema(new global::System.Xml.XmlTextWriter(stream, null));
             stream.Position = 0;
             return global::System.Xml.Schema.XmlSchema.Read(new global::System.Xml.XmlTextReader(stream), null);
         }
-        
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        internal void InitVars() {
+        internal void InitVars()
+        {
             this.InitVars(true);
         }
-        
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        internal void InitVars(bool initTable) {
-            this.tableTripulacionXCargo = ((TripulacionXCargoDataTable)(base.Tables["TripulacionXCargo"]));
-            if ((initTable == true)) {
-                if ((this.tableTripulacionXCargo != null)) {
-                    this.tableTripulacionXCargo.InitVars();
+        internal void InitVars(bool initTable)
+        {
+            this.tableDs_Viajextramo = ((Ds_ViajextramoDataTable)(base.Tables["Ds_Viajextramo"]));
+            if ((initTable == true))
+            {
+                if ((this.tableDs_Viajextramo != null))
+                {
+                    this.tableDs_Viajextramo.InitVars();
                 }
             }
         }
-        
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private void InitClass() {
-            this.DataSetName = "Ds_TripulacionXCargo";
+        private void InitClass()
+        {
+            this.DataSetName = "Ds_ViajeXTramo";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/Ds_TripulacionXCargo.xsd";
+            this.Namespace = "http://tempuri.org/Ds_ViajeXTramo.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableTripulacionXCargo = new TripulacionXCargoDataTable();
-            base.Tables.Add(this.tableTripulacionXCargo);
+            this.tableDs_Viajextramo = new Ds_ViajextramoDataTable();
+            base.Tables.Add(this.tableDs_Viajextramo);
         }
-        
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializeTripulacionXCargo() {
+        private bool ShouldSerializeDs_Viajextramo()
+        {
             return false;
         }
-        
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private void SchemaChanged(object sender, global::System.ComponentModel.CollectionChangeEventArgs e) {
-            if ((e.Action == global::System.ComponentModel.CollectionChangeAction.Remove)) {
+        private void SchemaChanged(object sender, global::System.ComponentModel.CollectionChangeEventArgs e)
+        {
+            if ((e.Action == global::System.ComponentModel.CollectionChangeAction.Remove))
+            {
                 this.InitVars();
             }
         }
-        
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            Ds_TripulacionXCargo ds = new Ds_TripulacionXCargo();
+        public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs)
+        {
+            Ds_ViajeXTramo ds = new Ds_ViajeXTramo();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -233,34 +268,43 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Tripulación {
             sequence.Items.Add(any);
             type.Particle = sequence;
             global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-            if (xs.Contains(dsSchema.TargetNamespace)) {
+            if (xs.Contains(dsSchema.TargetNamespace))
+            {
                 global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
                 global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                try {
+                try
+                {
                     global::System.Xml.Schema.XmlSchema schema = null;
                     dsSchema.Write(s1);
-                    for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                    for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext();)
+                    {
                         schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
                         s2.SetLength(0);
                         schema.Write(s2);
-                        if ((s1.Length == s2.Length)) {
+                        if ((s1.Length == s2.Length))
+                        {
                             s1.Position = 0;
                             s2.Position = 0;
-                            for (; ((s1.Position != s1.Length) 
-                                        && (s1.ReadByte() == s2.ReadByte())); ) {
+                            for (; ((s1.Position != s1.Length)
+                                        && (s1.ReadByte() == s2.ReadByte()));)
+                            {
                                 ;
                             }
-                            if ((s1.Position == s1.Length)) {
+                            if ((s1.Position == s1.Length))
+                            {
                                 return type;
                             }
                         }
                     }
                 }
-                finally {
-                    if ((s1 != null)) {
+                finally
+                {
+                    if ((s1 != null))
+                    {
                         s1.Close();
                     }
-                    if ((s2 != null)) {
+                    if ((s2 != null))
+                    {
                         s2.Close();
                     }
                 }
@@ -268,241 +312,279 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Tripulación {
             xs.Add(dsSchema);
             return type;
         }
-        
+
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void TripulacionXCargoRowChangeEventHandler(object sender, TripulacionXCargoRowChangeEvent e);
-        
+        public delegate void Ds_ViajextramoRowChangeEventHandler(object sender, Ds_ViajextramoRowChangeEvent e);
+
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class TripulacionXCargoDataTable : global::System.Data.TypedTableBase<TripulacionXCargoRow> {
-            
-            private global::System.Data.DataColumn columnidTripulacion;
-            
-            private global::System.Data.DataColumn columnnombre;
-            
-            private global::System.Data.DataColumn columnapellido;
-            
-            private global::System.Data.DataColumn columncargo;
-            
+        public partial class Ds_ViajextramoDataTable : global::System.Data.TypedTableBase<Ds_ViajextramoRow>
+        {
+
+            private global::System.Data.DataColumn columnnumeroDeViaje;
+
+            private global::System.Data.DataColumn columnorden;
+
+            private global::System.Data.DataColumn columnAeropuertoSalida;
+
+            private global::System.Data.DataColumn columnAeropuertoDestino;
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public TripulacionXCargoDataTable() {
-                this.TableName = "TripulacionXCargo";
+            public Ds_ViajextramoDataTable()
+            {
+                this.TableName = "Ds_Viajextramo";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
             }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal TripulacionXCargoDataTable(global::System.Data.DataTable table) {
+            internal Ds_ViajextramoDataTable(global::System.Data.DataTable table)
+            {
                 this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive))
+                {
                     this.CaseSensitive = table.CaseSensitive;
                 }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString()))
+                {
                     this.Locale = table.Locale;
                 }
-                if ((table.Namespace != table.DataSet.Namespace)) {
+                if ((table.Namespace != table.DataSet.Namespace))
+                {
                     this.Namespace = table.Namespace;
                 }
                 this.Prefix = table.Prefix;
                 this.MinimumCapacity = table.MinimumCapacity;
             }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected TripulacionXCargoDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
+            protected Ds_ViajextramoDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) :
+                    base(info, context)
+            {
                 this.InitVars();
             }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn idTripulacionColumn {
-                get {
-                    return this.columnidTripulacion;
+            public global::System.Data.DataColumn numeroDeViajeColumn
+            {
+                get
+                {
+                    return this.columnnumeroDeViaje;
                 }
             }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn nombreColumn {
-                get {
-                    return this.columnnombre;
+            public global::System.Data.DataColumn ordenColumn
+            {
+                get
+                {
+                    return this.columnorden;
                 }
             }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn apellidoColumn {
-                get {
-                    return this.columnapellido;
+            public global::System.Data.DataColumn AeropuertoSalidaColumn
+            {
+                get
+                {
+                    return this.columnAeropuertoSalida;
                 }
             }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn cargoColumn {
-                get {
-                    return this.columncargo;
+            public global::System.Data.DataColumn AeropuertoDestinoColumn
+            {
+                get
+                {
+                    return this.columnAeropuertoDestino;
                 }
             }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
+            public int Count
+            {
+                get
+                {
                     return this.Rows.Count;
                 }
             }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public TripulacionXCargoRow this[int index] {
-                get {
-                    return ((TripulacionXCargoRow)(this.Rows[index]));
+            public Ds_ViajextramoRow this[int index]
+            {
+                get
+                {
+                    return ((Ds_ViajextramoRow)(this.Rows[index]));
                 }
             }
-            
+
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event TripulacionXCargoRowChangeEventHandler TripulacionXCargoRowChanging;
-            
+            public event Ds_ViajextramoRowChangeEventHandler Ds_ViajextramoRowChanging;
+
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event TripulacionXCargoRowChangeEventHandler TripulacionXCargoRowChanged;
-            
+            public event Ds_ViajextramoRowChangeEventHandler Ds_ViajextramoRowChanged;
+
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event TripulacionXCargoRowChangeEventHandler TripulacionXCargoRowDeleting;
-            
+            public event Ds_ViajextramoRowChangeEventHandler Ds_ViajextramoRowDeleting;
+
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event TripulacionXCargoRowChangeEventHandler TripulacionXCargoRowDeleted;
-            
+            public event Ds_ViajextramoRowChangeEventHandler Ds_ViajextramoRowDeleted;
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddTripulacionXCargoRow(TripulacionXCargoRow row) {
+            public void AddDs_ViajextramoRow(Ds_ViajextramoRow row)
+            {
                 this.Rows.Add(row);
             }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public TripulacionXCargoRow AddTripulacionXCargoRow(int idTripulacion, string nombre, string apellido, string cargo) {
-                TripulacionXCargoRow rowTripulacionXCargoRow = ((TripulacionXCargoRow)(this.NewRow()));
+            public Ds_ViajextramoRow AddDs_ViajextramoRow(int numeroDeViaje, int orden, string AeropuertoSalida, string AeropuertoDestino)
+            {
+                Ds_ViajextramoRow rowDs_ViajextramoRow = ((Ds_ViajextramoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        idTripulacion,
-                        nombre,
-                        apellido,
-                        cargo};
-                rowTripulacionXCargoRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowTripulacionXCargoRow);
-                return rowTripulacionXCargoRow;
+                        numeroDeViaje,
+                        orden,
+                        AeropuertoSalida,
+                        AeropuertoDestino};
+                rowDs_ViajextramoRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowDs_ViajextramoRow);
+                return rowDs_ViajextramoRow;
             }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                TripulacionXCargoDataTable cln = ((TripulacionXCargoDataTable)(base.Clone()));
+            public override global::System.Data.DataTable Clone()
+            {
+                Ds_ViajextramoDataTable cln = ((Ds_ViajextramoDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new TripulacionXCargoDataTable();
+            protected override global::System.Data.DataTable CreateInstance()
+            {
+                return new Ds_ViajextramoDataTable();
             }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal void InitVars() {
-                this.columnidTripulacion = base.Columns["idTripulacion"];
-                this.columnnombre = base.Columns["nombre"];
-                this.columnapellido = base.Columns["apellido"];
-                this.columncargo = base.Columns["cargo"];
+            internal void InitVars()
+            {
+                this.columnnumeroDeViaje = base.Columns["numeroDeViaje"];
+                this.columnorden = base.Columns["orden"];
+                this.columnAeropuertoSalida = base.Columns["AeropuertoSalida"];
+                this.columnAeropuertoDestino = base.Columns["AeropuertoDestino"];
             }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            private void InitClass() {
-                this.columnidTripulacion = new global::System.Data.DataColumn("idTripulacion", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnidTripulacion);
-                this.columnnombre = new global::System.Data.DataColumn("nombre", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnombre);
-                this.columnapellido = new global::System.Data.DataColumn("apellido", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnapellido);
-                this.columncargo = new global::System.Data.DataColumn("cargo", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncargo);
+            private void InitClass()
+            {
+                this.columnnumeroDeViaje = new global::System.Data.DataColumn("numeroDeViaje", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnumeroDeViaje);
+                this.columnorden = new global::System.Data.DataColumn("orden", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnorden);
+                this.columnAeropuertoSalida = new global::System.Data.DataColumn("AeropuertoSalida", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAeropuertoSalida);
+                this.columnAeropuertoDestino = new global::System.Data.DataColumn("AeropuertoDestino", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAeropuertoDestino);
             }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public TripulacionXCargoRow NewTripulacionXCargoRow() {
-                return ((TripulacionXCargoRow)(this.NewRow()));
+            public Ds_ViajextramoRow NewDs_ViajextramoRow()
+            {
+                return ((Ds_ViajextramoRow)(this.NewRow()));
             }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new TripulacionXCargoRow(builder);
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder)
+            {
+                return new Ds_ViajextramoRow(builder);
             }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(TripulacionXCargoRow);
+            protected override global::System.Type GetRowType()
+            {
+                return typeof(Ds_ViajextramoRow);
             }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e)
+            {
                 base.OnRowChanged(e);
-                if ((this.TripulacionXCargoRowChanged != null)) {
-                    this.TripulacionXCargoRowChanged(this, new TripulacionXCargoRowChangeEvent(((TripulacionXCargoRow)(e.Row)), e.Action));
+                if ((this.Ds_ViajextramoRowChanged != null))
+                {
+                    this.Ds_ViajextramoRowChanged(this, new Ds_ViajextramoRowChangeEvent(((Ds_ViajextramoRow)(e.Row)), e.Action));
                 }
             }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e)
+            {
                 base.OnRowChanging(e);
-                if ((this.TripulacionXCargoRowChanging != null)) {
-                    this.TripulacionXCargoRowChanging(this, new TripulacionXCargoRowChangeEvent(((TripulacionXCargoRow)(e.Row)), e.Action));
+                if ((this.Ds_ViajextramoRowChanging != null))
+                {
+                    this.Ds_ViajextramoRowChanging(this, new Ds_ViajextramoRowChangeEvent(((Ds_ViajextramoRow)(e.Row)), e.Action));
                 }
             }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e)
+            {
                 base.OnRowDeleted(e);
-                if ((this.TripulacionXCargoRowDeleted != null)) {
-                    this.TripulacionXCargoRowDeleted(this, new TripulacionXCargoRowChangeEvent(((TripulacionXCargoRow)(e.Row)), e.Action));
+                if ((this.Ds_ViajextramoRowDeleted != null))
+                {
+                    this.Ds_ViajextramoRowDeleted(this, new Ds_ViajextramoRowChangeEvent(((Ds_ViajextramoRow)(e.Row)), e.Action));
                 }
             }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e)
+            {
                 base.OnRowDeleting(e);
-                if ((this.TripulacionXCargoRowDeleting != null)) {
-                    this.TripulacionXCargoRowDeleting(this, new TripulacionXCargoRowChangeEvent(((TripulacionXCargoRow)(e.Row)), e.Action));
+                if ((this.Ds_ViajextramoRowDeleting != null))
+                {
+                    this.Ds_ViajextramoRowDeleting(this, new Ds_ViajextramoRowChangeEvent(((Ds_ViajextramoRow)(e.Row)), e.Action));
                 }
             }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemoveTripulacionXCargoRow(TripulacionXCargoRow row) {
+            public void RemoveDs_ViajextramoRow(Ds_ViajextramoRow row)
+            {
                 this.Rows.Remove(row);
             }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs)
+            {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                Ds_TripulacionXCargo ds = new Ds_TripulacionXCargo();
+                Ds_ViajeXTramo ds = new Ds_ViajeXTramo();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -520,38 +602,47 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Tripulación {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "TripulacionXCargoDataTable";
+                attribute2.FixedValue = "Ds_ViajextramoDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
+                if (xs.Contains(dsSchema.TargetNamespace))
+                {
                     global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
                     global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
+                    try
+                    {
                         global::System.Xml.Schema.XmlSchema schema = null;
                         dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext();)
+                        {
                             schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
                             s2.SetLength(0);
                             schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
+                            if ((s1.Length == s2.Length))
+                            {
                                 s1.Position = 0;
                                 s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                for (; ((s1.Position != s1.Length)
+                                            && (s1.ReadByte() == s2.ReadByte()));)
+                                {
                                     ;
                                 }
-                                if ((s1.Position == s1.Length)) {
+                                if ((s1.Position == s1.Length))
+                                {
                                     return type;
                                 }
                             }
                         }
                     }
-                    finally {
-                        if ((s1 != null)) {
+                    finally
+                    {
+                        if ((s1 != null))
+                        {
                             s1.Close();
                         }
-                        if ((s2 != null)) {
+                        if ((s2 != null))
+                        {
                             s2.Close();
                         }
                     }
@@ -560,164 +651,201 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Tripulación {
                 return type;
             }
         }
-        
+
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class TripulacionXCargoRow : global::System.Data.DataRow {
-            
-            private TripulacionXCargoDataTable tableTripulacionXCargo;
-            
+        public partial class Ds_ViajextramoRow : global::System.Data.DataRow
+        {
+
+            private Ds_ViajextramoDataTable tableDs_Viajextramo;
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal TripulacionXCargoRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableTripulacionXCargo = ((TripulacionXCargoDataTable)(this.Table));
+            internal Ds_ViajextramoRow(global::System.Data.DataRowBuilder rb) :
+                    base(rb)
+            {
+                this.tableDs_Viajextramo = ((Ds_ViajextramoDataTable)(this.Table));
             }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int idTripulacion {
-                get {
-                    try {
-                        return ((int)(this[this.tableTripulacionXCargo.idTripulacionColumn]));
+            public int numeroDeViaje
+            {
+                get
+                {
+                    try
+                    {
+                        return ((int)(this[this.tableDs_Viajextramo.numeroDeViajeColumn]));
                     }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'idTripulacion\' de la tabla \'TripulacionXCargo\' es DBNull." +
+                    catch (global::System.InvalidCastException e)
+                    {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'numeroDeViaje\' de la tabla \'Ds_Viajextramo\' es DBNull.", e);
+                    }
+                }
+                set
+                {
+                    this[this.tableDs_Viajextramo.numeroDeViajeColumn] = value;
+                }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int orden
+            {
+                get
+                {
+                    try
+                    {
+                        return ((int)(this[this.tableDs_Viajextramo.ordenColumn]));
+                    }
+                    catch (global::System.InvalidCastException e)
+                    {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'orden\' de la tabla \'Ds_Viajextramo\' es DBNull.", e);
+                    }
+                }
+                set
+                {
+                    this[this.tableDs_Viajextramo.ordenColumn] = value;
+                }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string AeropuertoSalida
+            {
+                get
+                {
+                    try
+                    {
+                        return ((string)(this[this.tableDs_Viajextramo.AeropuertoSalidaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e)
+                    {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'AeropuertoSalida\' de la tabla \'Ds_Viajextramo\' es DBNull." +
                                 "", e);
                     }
                 }
-                set {
-                    this[this.tableTripulacionXCargo.idTripulacionColumn] = value;
+                set
+                {
+                    this[this.tableDs_Viajextramo.AeropuertoSalidaColumn] = value;
                 }
             }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string nombre {
-                get {
-                    try {
-                        return ((string)(this[this.tableTripulacionXCargo.nombreColumn]));
+            public string AeropuertoDestino
+            {
+                get
+                {
+                    try
+                    {
+                        return ((string)(this[this.tableDs_Viajextramo.AeropuertoDestinoColumn]));
                     }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'nombre\' de la tabla \'TripulacionXCargo\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableTripulacionXCargo.nombreColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string apellido {
-                get {
-                    try {
-                        return ((string)(this[this.tableTripulacionXCargo.apellidoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'apellido\' de la tabla \'TripulacionXCargo\' es DBNull.", e);
+                    catch (global::System.InvalidCastException e)
+                    {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'AeropuertoDestino\' de la tabla \'Ds_Viajextramo\' es DBNull" +
+                                ".", e);
                     }
                 }
-                set {
-                    this[this.tableTripulacionXCargo.apellidoColumn] = value;
+                set
+                {
+                    this[this.tableDs_Viajextramo.AeropuertoDestinoColumn] = value;
                 }
             }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string cargo {
-                get {
-                    try {
-                        return ((string)(this[this.tableTripulacionXCargo.cargoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cargo\' de la tabla \'TripulacionXCargo\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableTripulacionXCargo.cargoColumn] = value;
-                }
+            public bool IsnumeroDeViajeNull()
+            {
+                return this.IsNull(this.tableDs_Viajextramo.numeroDeViajeColumn);
             }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsidTripulacionNull() {
-                return this.IsNull(this.tableTripulacionXCargo.idTripulacionColumn);
+            public void SetnumeroDeViajeNull()
+            {
+                this[this.tableDs_Viajextramo.numeroDeViajeColumn] = global::System.Convert.DBNull;
             }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetidTripulacionNull() {
-                this[this.tableTripulacionXCargo.idTripulacionColumn] = global::System.Convert.DBNull;
+            public bool IsordenNull()
+            {
+                return this.IsNull(this.tableDs_Viajextramo.ordenColumn);
             }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsnombreNull() {
-                return this.IsNull(this.tableTripulacionXCargo.nombreColumn);
+            public void SetordenNull()
+            {
+                this[this.tableDs_Viajextramo.ordenColumn] = global::System.Convert.DBNull;
             }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetnombreNull() {
-                this[this.tableTripulacionXCargo.nombreColumn] = global::System.Convert.DBNull;
+            public bool IsAeropuertoSalidaNull()
+            {
+                return this.IsNull(this.tableDs_Viajextramo.AeropuertoSalidaColumn);
             }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsapellidoNull() {
-                return this.IsNull(this.tableTripulacionXCargo.apellidoColumn);
+            public void SetAeropuertoSalidaNull()
+            {
+                this[this.tableDs_Viajextramo.AeropuertoSalidaColumn] = global::System.Convert.DBNull;
             }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetapellidoNull() {
-                this[this.tableTripulacionXCargo.apellidoColumn] = global::System.Convert.DBNull;
+            public bool IsAeropuertoDestinoNull()
+            {
+                return this.IsNull(this.tableDs_Viajextramo.AeropuertoDestinoColumn);
             }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IscargoNull() {
-                return this.IsNull(this.tableTripulacionXCargo.cargoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetcargoNull() {
-                this[this.tableTripulacionXCargo.cargoColumn] = global::System.Convert.DBNull;
+            public void SetAeropuertoDestinoNull()
+            {
+                this[this.tableDs_Viajextramo.AeropuertoDestinoColumn] = global::System.Convert.DBNull;
             }
         }
-        
+
         /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class TripulacionXCargoRowChangeEvent : global::System.EventArgs {
-            
-            private TripulacionXCargoRow eventRow;
-            
+        public class Ds_ViajextramoRowChangeEvent : global::System.EventArgs
+        {
+
+            private Ds_ViajextramoRow eventRow;
+
             private global::System.Data.DataRowAction eventAction;
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public TripulacionXCargoRowChangeEvent(TripulacionXCargoRow row, global::System.Data.DataRowAction action) {
+            public Ds_ViajextramoRowChangeEvent(Ds_ViajextramoRow row, global::System.Data.DataRowAction action)
+            {
                 this.eventRow = row;
                 this.eventAction = action;
             }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public TripulacionXCargoRow Row {
-                get {
+            public Ds_ViajextramoRow Row
+            {
+                get
+                {
                     return this.eventRow;
                 }
             }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataRowAction Action {
-                get {
+            public global::System.Data.DataRowAction Action
+            {
+                get
+                {
                     return this.eventAction;
                 }
             }

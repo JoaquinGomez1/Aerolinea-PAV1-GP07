@@ -29,8 +29,10 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Aeropuertos
 
         private void Frm_ReporteAeroPais_Load_1(object sender, EventArgs e)
         {
+            rbu01.Checked = true;
             this.BackColor = Estilo.ColorFondoForms;
             Estilo.FormatearEstilo(this.Controls);
+            cmb_pais.CargarCombo();
             tabla = aeropuerto.Reporte_recuperarTodos();
         }
 
@@ -68,7 +70,6 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Aeropuertos
             {
                 if (Txt_nombres.Text != "")
                 {
-                    MessageBox.Show("entro");
                     tabla = aeropuerto.Reporte_recuperarXNonmbre(Txt_nombres.Text);
                     if (tabla.Rows.Count != 0)
                         ArmarReporteAeropuertos();
@@ -79,29 +80,39 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Aeropuertos
                         MessageBox.Show("No se encontraron resultados para la búsqueda");
                     }
                 }
+                else
+                    MessageBox.Show("Por favor ingrese un nombre para realizar la búsqueda");
 
             }
             else if (rbu02.Checked == true)
             {
-                if (txt_codigo.Text != "")
+                string desde = "";
+                string hasta = "";
+                if (txt_codigodesde.Text == "")
+                    desde = "a";
+                else
+                    desde = txt_codigodesde.Text;
+                if (txt_codigohasta.Text == "")
+                    hasta = "Z";
+                else
+                    hasta = txt_codigohasta.Text;
+                
+                tabla = aeropuerto.Reporte_recuperarXCodigoRango(desde, hasta);
+                if (tabla.Rows.Count != 0)
+                    ArmarReporteAeropuertos();
+                else
                 {
-                    tabla = aeropuerto.Reporte_recuperarXCodigo(txt_codigo.Text);
-                    if (tabla.Rows.Count != 0)
-                        ArmarReporteAeropuertos();
-                    else
-                    {
-                        reportViewer1.LocalReport.DataSources.Clear();
-                        reportViewer1.RefreshReport();
-                        MessageBox.Show("No se encontraron resultados para la búsqueda");
-                    }
+                    reportViewer1.LocalReport.DataSources.Clear();
+                    reportViewer1.RefreshReport();
+                    MessageBox.Show("No se encontraron resultados para la búsqueda");
                 }
-
             }
+
             else if (rbu03.Checked == true)
             {
-                if (txt_pais.Text != "")
+                if (cmb_pais.SelectedIndex != -1)
                 {
-                    tabla = aeropuerto.Reporte_recuperarXciudad(txt_pais.Text);
+                    tabla = aeropuerto.Reporte_recuperarXpais(cmb_pais.SelectedValue.ToString());
                     if (tabla.Rows.Count != 0)
                         ArmarReporteAeropuertos();
                     else
@@ -116,11 +127,19 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Aeropuertos
             {
                 Tratamientos_Especiales Tratamiento = new Tratamientos_Especiales();
                 if (Tratamiento.Validar(this.Controls) == Tratamientos_Especiales.Resultado.error)
-                {
                     MessageBox.Show("No realizo selección para la búsqueda");
-                }
             }
            
+        }
+
+        private void btn_cerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void cmb_ciudad_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

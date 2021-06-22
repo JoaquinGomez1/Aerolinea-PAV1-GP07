@@ -103,5 +103,11 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Reservas
         {
 
         }
+
+        private void btn_search_Click_1(object sender, EventArgs e)
+        {
+            DataTable dataSet = determineDataSet();
+            ArmarReporteUsuario(dataSet);
+        }
     }
 }

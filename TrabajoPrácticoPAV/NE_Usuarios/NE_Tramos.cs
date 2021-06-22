@@ -29,6 +29,14 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
 
         }
 
+        public DataTable buscar_todos_tramos()
+        {
+            string sql = "SELECT v.numeroDeViaje, v.orden, a1.nombre as 'AeropuertoSalida', a2.nombre as 'AeropuertoDestino' FROM Viaje_X_Tramo v " +
+                "JOIN Aeropuerto a1 ON v.codigoAeropuertoSalida=a1.codigo " +
+                "JOIN Aeropuerto a2 ON v.codigoAeropuertoDestino=a2.codigo";
+            return _BD.EjecutarSelect(sql);
+        }
+
         public string BuscarCodigoAeropuerto(string nombreAeropuerto)
         {
             return _BD.EjecutarSelect($"SELECT codigo FROM Aeropuerto WHERE nombre = " +
@@ -82,6 +90,32 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             return _BD.EjecutarSelect(sql);
         }
 
+        public DataTable buscar_por_ranngo_viaje(string desde, string hasta)
+        {
+            string sql = "SELECT v.numeroDeViaje, v.orden, a1.nombre as 'AeropuertoSalida', a2.nombre as 'AeropuertoDestino' FROM Viaje_X_Tramo v " +
+                "JOIN Aeropuerto a1 ON v.codigoAeropuertoSalida=a1.codigo " +
+                "JOIN Aeropuerto a2 ON v.codigoAeropuertoDestino=a2.codigo" +
+                " WHERE v.numeroDeViaje BETWEEN " + desde + " AND " + hasta;
+            return _BD.EjecutarSelect(sql);
+        }
+
+        public DataTable buscar_por_aeropuerto_salida(string id)
+        {
+            string sql = "SELECT v.numeroDeViaje, v.orden, a1.nombre as 'AeropuertoSalida', a2.nombre as 'AeropuertoDestino' FROM Viaje_X_Tramo v " +
+                "JOIN Aeropuerto a1 ON v.codigoAeropuertoSalida=a1.codigo " +
+                "JOIN Aeropuerto a2 ON v.codigoAeropuertoDestino=a2.codigo" +
+                " WHERE  v.codigoAeropuertoSalida = '" + id + "'";
+            return _BD.EjecutarSelect(sql);
+        }
+
+        public DataTable buscar_por_aeropuerto_destino(string id)
+        {
+            string sql = "SELECT v.numeroDeViaje, v.orden, a1.nombre as 'AeropuertoSalida', a2.nombre as 'AeropuertoDestino' FROM Viaje_X_Tramo v " +
+                "JOIN Aeropuerto a1 ON v.codigoAeropuertoSalida=a1.codigo " +
+                "JOIN Aeropuerto a2 ON v.codigoAeropuertoDestino=a2.codigo" +
+                " WHERE  v.codigoAeropuertoDestino = '" + id + "'";
+            return _BD.EjecutarSelect(sql);
+        }
         public DataTable RecuperarPorDuracionMayor(int duracion)
         {
             string sql = $"SELECT * FROM Tramo WHERE duracion > {duracion}";

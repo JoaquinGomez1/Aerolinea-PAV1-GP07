@@ -279,13 +279,15 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Viajes {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class DataTable1DataTable : global::System.Data.TypedTableBase<DataTable1Row> {
             
-            private global::System.Data.DataColumn columnhorarioSalida;
-            
             private global::System.Data.DataColumn columnnumeroDeViaje;
             
-            private global::System.Data.DataColumn columncodigoAeropuertoSalida;
+            private global::System.Data.DataColumn columnhorarioLlegada;
             
-            private global::System.Data.DataColumn columncodigoAeropuertoDestino;
+            private global::System.Data.DataColumn columnhorarioSalida;
+            
+            private global::System.Data.DataColumn columncantidadTramos;
+            
+            private global::System.Data.DataColumn columnduracionEstimada;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -322,14 +324,6 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Viajes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn horarioSalidaColumn {
-                get {
-                    return this.columnhorarioSalida;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn numeroDeViajeColumn {
                 get {
                     return this.columnnumeroDeViaje;
@@ -338,17 +332,33 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Viajes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn codigoAeropuertoSalidaColumn {
+            public global::System.Data.DataColumn horarioLlegadaColumn {
                 get {
-                    return this.columncodigoAeropuertoSalida;
+                    return this.columnhorarioLlegada;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn codigoAeropuertoDestinoColumn {
+            public global::System.Data.DataColumn horarioSalidaColumn {
                 get {
-                    return this.columncodigoAeropuertoDestino;
+                    return this.columnhorarioSalida;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn cantidadTramosColumn {
+                get {
+                    return this.columncantidadTramos;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn duracionEstimadaColumn {
+                get {
+                    return this.columnduracionEstimada;
                 }
             }
             
@@ -389,13 +399,14 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Viajes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public DataTable1Row AddDataTable1Row(string horarioSalida, string numeroDeViaje, string codigoAeropuertoSalida, string codigoAeropuertoDestino) {
+            public DataTable1Row AddDataTable1Row(string numeroDeViaje, string horarioLlegada, string horarioSalida, string cantidadTramos, string duracionEstimada) {
                 DataTable1Row rowDataTable1Row = ((DataTable1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        horarioSalida,
                         numeroDeViaje,
-                        codigoAeropuertoSalida,
-                        codigoAeropuertoDestino};
+                        horarioLlegada,
+                        horarioSalida,
+                        cantidadTramos,
+                        duracionEstimada};
                 rowDataTable1Row.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDataTable1Row);
                 return rowDataTable1Row;
@@ -418,23 +429,26 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Viajes {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnhorarioSalida = base.Columns["horarioSalida"];
                 this.columnnumeroDeViaje = base.Columns["numeroDeViaje"];
-                this.columncodigoAeropuertoSalida = base.Columns["codigoAeropuertoSalida"];
-                this.columncodigoAeropuertoDestino = base.Columns["codigoAeropuertoDestino"];
+                this.columnhorarioLlegada = base.Columns["horarioLlegada"];
+                this.columnhorarioSalida = base.Columns["horarioSalida"];
+                this.columncantidadTramos = base.Columns["cantidadTramos"];
+                this.columnduracionEstimada = base.Columns["duracionEstimada"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnhorarioSalida = new global::System.Data.DataColumn("horarioSalida", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnhorarioSalida);
                 this.columnnumeroDeViaje = new global::System.Data.DataColumn("numeroDeViaje", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnumeroDeViaje);
-                this.columncodigoAeropuertoSalida = new global::System.Data.DataColumn("codigoAeropuertoSalida", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncodigoAeropuertoSalida);
-                this.columncodigoAeropuertoDestino = new global::System.Data.DataColumn("codigoAeropuertoDestino", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncodigoAeropuertoDestino);
+                this.columnhorarioLlegada = new global::System.Data.DataColumn("horarioLlegada", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnhorarioLlegada);
+                this.columnhorarioSalida = new global::System.Data.DataColumn("horarioSalida", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnhorarioSalida);
+                this.columncantidadTramos = new global::System.Data.DataColumn("cantidadTramos", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncantidadTramos);
+                this.columnduracionEstimada = new global::System.Data.DataColumn("duracionEstimada", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnduracionEstimada);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -577,22 +591,6 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Viajes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string horarioSalida {
-                get {
-                    try {
-                        return ((string)(this[this.tableDataTable1.horarioSalidaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'horarioSalida\' de la tabla \'DataTable1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTable1.horarioSalidaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string numeroDeViaje {
                 get {
                     try {
@@ -609,48 +607,66 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Viajes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string codigoAeropuertoSalida {
+            public string horarioLlegada {
                 get {
                     try {
-                        return ((string)(this[this.tableDataTable1.codigoAeropuertoSalidaColumn]));
+                        return ((string)(this[this.tableDataTable1.horarioLlegadaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'codigoAeropuertoSalida\' de la tabla \'DataTable1\' es DBNul" +
-                                "l.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'horarioLlegada\' de la tabla \'DataTable1\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable1.codigoAeropuertoSalidaColumn] = value;
+                    this[this.tableDataTable1.horarioLlegadaColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string codigoAeropuertoDestino {
+            public string horarioSalida {
                 get {
                     try {
-                        return ((string)(this[this.tableDataTable1.codigoAeropuertoDestinoColumn]));
+                        return ((string)(this[this.tableDataTable1.horarioSalidaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'codigoAeropuertoDestino\' de la tabla \'DataTable1\' es DBNu" +
-                                "ll.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'horarioSalida\' de la tabla \'DataTable1\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable1.codigoAeropuertoDestinoColumn] = value;
+                    this[this.tableDataTable1.horarioSalidaColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IshorarioSalidaNull() {
-                return this.IsNull(this.tableDataTable1.horarioSalidaColumn);
+            public string cantidadTramos {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataTable1.cantidadTramosColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cantidadTramos\' de la tabla \'DataTable1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.cantidadTramosColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SethorarioSalidaNull() {
-                this[this.tableDataTable1.horarioSalidaColumn] = global::System.Convert.DBNull;
+            public string duracionEstimada {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataTable1.duracionEstimadaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'duracionEstimada\' de la tabla \'DataTable1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.duracionEstimadaColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -667,26 +683,50 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Viajes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IscodigoAeropuertoSalidaNull() {
-                return this.IsNull(this.tableDataTable1.codigoAeropuertoSalidaColumn);
+            public bool IshorarioLlegadaNull() {
+                return this.IsNull(this.tableDataTable1.horarioLlegadaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetcodigoAeropuertoSalidaNull() {
-                this[this.tableDataTable1.codigoAeropuertoSalidaColumn] = global::System.Convert.DBNull;
+            public void SethorarioLlegadaNull() {
+                this[this.tableDataTable1.horarioLlegadaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IscodigoAeropuertoDestinoNull() {
-                return this.IsNull(this.tableDataTable1.codigoAeropuertoDestinoColumn);
+            public bool IshorarioSalidaNull() {
+                return this.IsNull(this.tableDataTable1.horarioSalidaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetcodigoAeropuertoDestinoNull() {
-                this[this.tableDataTable1.codigoAeropuertoDestinoColumn] = global::System.Convert.DBNull;
+            public void SethorarioSalidaNull() {
+                this[this.tableDataTable1.horarioSalidaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IscantidadTramosNull() {
+                return this.IsNull(this.tableDataTable1.cantidadTramosColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetcantidadTramosNull() {
+                this[this.tableDataTable1.cantidadTramosColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsduracionEstimadaNull() {
+                return this.IsNull(this.tableDataTable1.duracionEstimadaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetduracionEstimadaNull() {
+                this[this.tableDataTable1.duracionEstimadaColumn] = global::System.Convert.DBNull;
             }
         }
         

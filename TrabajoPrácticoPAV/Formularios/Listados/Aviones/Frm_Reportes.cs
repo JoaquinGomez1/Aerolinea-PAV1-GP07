@@ -91,5 +91,14 @@ namespace TrabajoPrácticoPAV.Formularios.Listados
 
         }
 
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmb_modelos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

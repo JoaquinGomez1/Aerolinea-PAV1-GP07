@@ -19,8 +19,8 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
         public DataTable getTodosReservasPorPasajero()
         {
             string sql = "SELECT * FROM Reservas_X_Pasajero " +
-                "JOIN Tipo_Asiento ON idTipo = tipoClase " +
-                "JOIN Tipo_Documento ON Reservas_X_Pasajero.tipoDoc = Tipo_Documento.tipoDoc";
+                        "JOIN Tipo_Asiento ON idTipo = tipoClase " +
+                        "JOIN Tipo_Documento ON Reservas_X_Pasajero.tipoDoc = Tipo_Documento.tipoDoc";
             return _DB.EjecutarSelect(sql);
         }
 

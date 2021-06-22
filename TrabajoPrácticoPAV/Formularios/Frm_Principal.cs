@@ -26,7 +26,15 @@ using TrabajoPrácticoPAV.Formularios.Facturaciones;
 using TrabajoPrácticoPAV.Formularios.Listados.Aeropuertos;
 using TrabajoPrácticoPAV.Formularios.Listados.Viajes.Tramos;
 using TrabajoPrácticoPAV.Formularios.Listados.Avion_Por_Modelo;
+using TrabajoPrácticoPAV.Formularios.Listados.Reservas;
+using TrabajoPrácticoPAV.Formularios.Listados.Tripulacion_Por_Vuelo;
+using TrabajoPrácticoPAV.Formularios.Listados.Pasajeros;
+using TrabajoPrácticoPAV.Formularios.Listados.Tripulación;
+using TrabajoPrácticoPAV.Formularios.Listados.Viajes;
+using TrabajoPrácticoPAV.Formularios.Listados.Asientos;
+using TrabajoPrácticoPAV.Formularios.Listados.Tramos_por_viaje;
 using TrabajoPrácticoPAV.Formularios.Estadisticas.PasajerosMayores;
+using TrabajoPrácticoPAV.Formularios.Estadisticas.ViajesPorMes;
 
 namespace TrabajoPrácticoPAV
 {
@@ -43,6 +51,7 @@ namespace TrabajoPrácticoPAV
         }
 
         #region Funcionalidades del formulario
+
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             DialogResult decision = MessageBox.Show("¿Está seguro que desea salir?",
@@ -66,9 +75,11 @@ namespace TrabajoPrácticoPAV
 
         [System.Runtime.InteropServices.DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
+
         [System.Runtime.InteropServices.DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWind, int wMsg, int wParam, int lParam);
-        #endregion    }
+
+        #endregion Funcionalidades del formulario
 
         #region Botones del Menu
 
@@ -88,6 +99,7 @@ namespace TrabajoPrácticoPAV
                 case "Btn_Configuracion":
                     AbrirFormulario<Frm_Configuracion>();
                     break;
+
                 case "Btn_ABM":
                     if (!menuStrip1.Visible)
                     {
@@ -97,39 +109,36 @@ namespace TrabajoPrácticoPAV
                         // ver la función Abrir Formulario
                     }
                     break;
+
                 case "Btn_Procesos":
                     if (!menuStrip2.Visible)
                     {
                         menuStrip2.Visible = true;
                         menuStrip2.BringToFront();
-
                     }
                     break;
+
                 case "Btn_Listado":
                     if (!menuStrip3.Visible)
                     {
                         menuStrip3.Visible = true;
                         menuStrip3.BringToFront();
-
                     }
                     break;
+
                 case "Btn_Estadistica":
                     if (!menuStrip4.Visible)
                     {
                         menuStrip4.Visible = true;
                         menuStrip4.BringToFront();
-
                     }
                     break;
-
 
                 default:
                     MessageBox.Show("Esperando implementación");
                     break;
             }
-
         }
-
 
         private void CerrarTodosLosMenuStrip()
         {
@@ -154,19 +163,14 @@ namespace TrabajoPrácticoPAV
                 if (form.Name != "Frm_Principal")
                     form.Close();
             }
-
         }
 
-        #endregion
-
-        #region Colores de Botones
-
-        #endregion
+        #endregion Abrir Formularios con Botones del Menu
 
         //Método abrir Form dentro de panel
         private void AbrirFormulario<MiForm>() where MiForm : Form, new()
         {
-            menuStrip1.Visible = false; //<- Previene que el menu strip quede abierto al abrir un formulario 
+            menuStrip1.Visible = false; //<- Previene que el menu strip quede abierto al abrir un formulario
             //RestaurarColorBoton(Btn_ABM);
             Form formulario;
             formulario = PanelFormularios.Controls.OfType<MiForm>().FirstOrDefault();
@@ -181,13 +185,11 @@ namespace TrabajoPrácticoPAV
                 formulario.Show();
                 formulario.BringToFront();
                 formulario.FormClosed += new FormClosedEventHandler(FormCerrado);
-
             }
             else
             {
                 formulario.BringToFront();
             }
-
         }
 
         //Regresa a su color original el botón de un Form cerrado
@@ -212,14 +214,14 @@ namespace TrabajoPrácticoPAV
                 boton.BackColor = Estilo.ColorBoton;
             }
         }
-        #endregion
 
+        #endregion Botones del Menu
 
         // Eventos de los items del menuStrip
         // El que tenga tiempo vea si lo puede dejar un poco mejor
 
+        #region MenuStripABM
 
-        #region MenuStrip
         private void aeropuertosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AbrirFormulario<Frm_ABM_Aeropuerto>();
@@ -300,7 +302,10 @@ namespace TrabajoPrácticoPAV
         {
             AbrirFormulario<Frm_ABMTripulacion>();
         }
-        #endregion
+
+        #endregion MenuStripABM
+
+        #region MenuStripListados
 
         private void reservasToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -308,11 +313,11 @@ namespace TrabajoPrácticoPAV
             AbrirFormulario<Frm_ABMReservas>();
         }
 
-        private void facturasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            CerrarTodosLosMenuStrip();
-            AbrirFormulario<Frm_Facturacion>();
-        }
+        //private void facturasToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+        //    CerrarTodosLosMenuStrip();
+        //    AbrirFormulario<Frm_Facturacion>();
+        //}
 
         private void aeropuertoPorPaisToolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -332,10 +337,72 @@ namespace TrabajoPrácticoPAV
             AbrirFormulario<Frm_AvionPorModelo>();
         }
 
+        private void reservaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_Reservas>();
+        }
+
+        private void tripulacionPorVueloToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_ListadoTripPorVuelo>();
+        }
+
+        private void familiaresPorPasajeroToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_ReporteFamiliareXPasajero>();
+        }
+
+        private void tripulacionToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_Tripulacion>();
+        }
+
+        private void viajesEntreFechaInicialYFechaFinalPorDestinoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_ListadoViajes>();
+        }
+
+        private void proximosVuelosEnUnAeropuertoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_ReporteVueloXAeropuerto>();
+        }
+
+        private void estadoDeCadaAsientoPorCadaAvionToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_ReporteAsientoXAvion>();
+        }
+
+        private void tramosPorViajeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_ReporteViajeXTramo>();
+        }
+
+        #endregion MenuStripListados
+
+        private void pasajerosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Formularios.Listados.Pasajeros.Reporte_Pasajeros>();
+        }
+
         private void porcentajeDePasajerosMayoresDeEdadToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CerrarTodosLosMenuStrip();
             AbrirFormulario<Frm_PasajerosMayores>();
+        }
+
+        private void porcentajeDeViajesPorMesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_EViajesPorMes>();
         }
     }
 }

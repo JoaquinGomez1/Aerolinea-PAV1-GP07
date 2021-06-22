@@ -59,6 +59,17 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
                         + " WHERE a.codigo = " + "'" + codigo + "'";
             return _BD.EjecutarSelect(sql);
         }
+        public DataTable Reporte_recuperarXCodigoRango(string codigoDes, string codigoHast)
+        {
+            if (codigoDes == "")
+                codigoDes = "a";
+            if (codigoHast == "")
+                codigoHast = "Z";
+
+            string sql = @"SELECT a.codigo, a.nombre, c.nombreCiudad as idCiudad from Aeropuerto a join ciudad c on c.idCiudad = A.idCiudad "
+                        + " WHERE a.codigo like '[" + codigoDes + "-"+codigoHast + "]%'";
+            return _BD.EjecutarSelect(sql);
+        }
         public DataTable Recuperar_por_PatronNombre(string patronNombre)
         {
             string sql = @"SELECT a.* FROM Aeropuerto a "
@@ -77,12 +88,19 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
                      + " WHERE a.idCiudad = " + ciudad;
             return _BD.EjecutarSelect(sql);
         }
-       public DataTable Reporte_recuperarXciudad(string ciudad)
+        public DataTable Reporte_recuperarXpais(string pais)
         {
+            string sql = @"select a.codigo, a.nombre, c.nombreCiudad as idCiudad from Aeropuerto a"+
+               " join ciudad c on c.idCiudad = a.idCiudad join Provincia p on c.idProvincia = p.idProvincia "+
+                " join pais pa on p.idPais = "+ pais;
+            return _BD.EjecutarSelect(sql);
+        }
+        public DataTable Reporte_recuperarXciudad(string ciudad)
+       {
             string sql = @"SELECT a.codigo, a.nombre, c.nombreCiudad as idCiudad from Aeropuerto a join ciudad c on c.idCiudad = A.idCiudad "
                      + " WHERE c.nombreCiudad like '%" + ciudad.Trim() + "%'";
             return _BD.EjecutarSelect(sql);
-        }
+       }
         public void Modificar()
         {
             string sqlModificar = @"UPDATE Aeropuerto SET"

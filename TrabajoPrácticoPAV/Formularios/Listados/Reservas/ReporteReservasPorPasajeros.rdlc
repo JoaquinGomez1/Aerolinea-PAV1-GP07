@@ -9,7 +9,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Reservas por Pasajero</Value>
+                <Value>Reservas </Value>
                 <Style>
                   <FontSize>26pt</FontSize>
                   <FontWeight>Bold</FontWeight>
@@ -636,9 +636,9 @@ Documento</Value>
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>ReservasPorPasajeros</DataSetName>
-        <Top>1.04042in</Top>
+        <Top>0.91542in</Top>
         <Left>0.155in</Left>
-        <Height>0.80208in</Height>
+        <Height>0.80209in</Height>
         <Width>7.23958in</Width>
         <ZIndex>1</ZIndex>
         <Style>

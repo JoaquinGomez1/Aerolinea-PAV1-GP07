@@ -4,5 +4,8 @@
 
     partial class Ds_Viajes
     {
+        partial class DataTable1DataTable
+        {
+        }
     }
 }

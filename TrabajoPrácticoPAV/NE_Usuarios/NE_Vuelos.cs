@@ -88,11 +88,12 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
         public DataTable Reporte_RecuperarXNombreAeropuerto(string nombreAeropuerto)
         {
             string sql = "SELECT v.idVuelo, v.duracionEstimada, CONCAT(m.nombre,' ',v.numeroPorModelo) as Modelo, "
-            + "(SELECT nombre FROM Aeropuerto WHERE codigo = v.codigoAeropuertoSalida) as AeropuertoSalida, "
+            + "ae.nombre as AeropuertoSalida, "
             + "(SELECT nombre FROM Aeropuerto WHERE codigo = v.codigoAeropuertoDestino) as AeropuertoDestino "
             + "FROM Vuelo v "
-            + "JOIN Modelo m ON v.idModelo = m.idModelo" +
-            $" WHERE codigoAeropuertoSalida IN (SELECT codigo FROM Aeropuerto WHERE nombre LIKE '%{nombreAeropuerto}%')";
+            + "JOIN Modelo m ON v.idModelo = m.idModelo "
+            + "JOIN Aeropuerto ae ON ae.codigo = v.codigoAeropuertoSalida" +
+            $" WHERE ae.codigo LIKE '%{nombreAeropuerto}%'";
 
             return _BD.EjecutarSelect(sql);
         }
@@ -116,7 +117,7 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             + "(SELECT nombre FROM Aeropuerto WHERE codigo = v.codigoAeropuertoDestino) as AeropuertoDestino "
             + "FROM Vuelo v "
             + "JOIN Modelo m ON v.idModelo = m.idModelo" +
-            $" WHERE idVuelo > {idDesde} AND idVuelo < {idHasta}";
+            $" WHERE idVuelo BETWEEN {idDesde} AND {idHasta}";
 
             return _BD.EjecutarSelect(sql);
         }

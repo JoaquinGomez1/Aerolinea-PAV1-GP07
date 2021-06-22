@@ -45,23 +45,6 @@ namespace TrabajoPrácticoPAV.Formularios.Listados
             this.rbu02 = new System.Windows.Forms.RadioButton();
             this.rbu01 = new System.Windows.Forms.RadioButton();
             this.btn_buscar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
-            //this.tabPage2 = new System.Windows.Forms.TabPage();
-            //this.maskedTextBox_Aerolinea2 = new TrabajoPrácticoPAV.Clase.MaskedTextBox_Aerolinea();
-            //this.label6 = new System.Windows.Forms.Label();
-            //this.label5 = new System.Windows.Forms.Label();
-            //this.label4 = new System.Windows.Forms.Label();
-            //this.label3 = new System.Windows.Forms.Label();
-            //this.maskedTextBox_Aerolinea1 = new TrabajoPrácticoPAV.Clase.MaskedTextBox_Aerolinea();
-            //this.comboBox_Aerolinea1 = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
-            //this.groupBox2 = new System.Windows.Forms.GroupBox();
-            //this.radioButton1 = new System.Windows.Forms.RadioButton();
-            //this.rbu07 = new System.Windows.Forms.RadioButton();
-            //this.rbu05 = new System.Windows.Forms.RadioButton();
-            //this.rbu04 = new System.Windows.Forms.RadioButton();
-            //this.button_Aerolinea1 = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
-            //this.rv_02 = new Microsoft.Reporting.WinForms.ReportViewer();
-            //this.tabPage3 = new System.Windows.Forms.TabPage();
-            //this.tabPage4 = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -104,13 +87,14 @@ namespace TrabajoPrácticoPAV.Formularios.Listados
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Aviones";
             this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // reportViewer1
             // 
             reportDataSource1.Name = "DataSet1";
             reportDataSource1.Value = this.DataTable1BindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "TrabajoPrácticoPAV.Formularios.Listados.Report1.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "TrabajoPrácticoPAV.Formularios.Listados.Aviones.Report1.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(29, 135);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
@@ -160,6 +144,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados
             this.cmb_modelos.Pp_PkTabla = "idModelo";
             this.cmb_modelos.Size = new System.Drawing.Size(169, 21);
             this.cmb_modelos.TabIndex = 10;
+            this.cmb_modelos.SelectedIndexChanged += new System.EventHandler(this.cmb_modelos_SelectedIndexChanged);
             // 
             // groupBox1
             // 
@@ -221,7 +206,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(882, 619);
+            this.ClientSize = new System.Drawing.Size(878, 566);
             this.Controls.Add(this.tabControl1);
             this.Name = "Frm_Reportes";
             this.Text = "Frm_Reportes";

@@ -1,6 +1,7 @@
-﻿namespace TrabajoPrácticoPAV.Formularios.Listados.Tripulación
+﻿
+namespace TrabajoPrácticoPAV.Formularios.Estadisticas.ViajesPorMes
 {
-    partial class Frm_Tripulacion
+    partial class Frm_EViajesPorMes
     {
         /// <summary>
         /// Required designer variable.
@@ -29,46 +30,46 @@
         private void InitializeComponent()
         {
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.btn_Calcular = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // reportViewer1
             // 
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "TrabajoPrácticoPAV.Formularios.Listados.Tripulación.ReporteTripulacion.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(-1, 155);
+            this.reportViewer1.Location = new System.Drawing.Point(12, 36);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(800, 296);
+            this.reportViewer1.Size = new System.Drawing.Size(710, 326);
             this.reportViewer1.TabIndex = 0;
             // 
-            // btn_Calcular
+            // label1
             // 
-            this.btn_Calcular.Location = new System.Drawing.Point(641, 77);
-            this.btn_Calcular.Name = "btn_Calcular";
-            this.btn_Calcular.Pp_Presionado = false;
-            this.btn_Calcular.Size = new System.Drawing.Size(81, 26);
-            this.btn_Calcular.TabIndex = 1;
-            this.btn_Calcular.Text = "Calcular";
-            this.btn_Calcular.UseVisualStyleBackColor = true;
-            this.btn_Calcular.Click += new System.EventHandler(this.btn_Calcular_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(253, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(231, 24);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Porcentaje Viajes Por Mes";
             // 
-            // Frm_Tripulacion
+            // Frm_EViajesPorMes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btn_Calcular);
+            this.ClientSize = new System.Drawing.Size(734, 374);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.reportViewer1);
-            this.Name = "Frm_Tripulacion";
-            this.Text = "Frm_Tripulacion";
-            this.Load += new System.EventHandler(this.Frm_Tripulacion_Load);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "Frm_EViajesPorMes";
+            this.Text = "Frm_EViajesPorMes";
+            this.Load += new System.EventHandler(this.Frm_EViajesPorMes_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private Clase.Button_Aerolinea btn_Calcular;
+        private System.Windows.Forms.Label label1;
     }
 }

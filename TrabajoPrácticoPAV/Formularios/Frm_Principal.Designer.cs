@@ -457,6 +457,7 @@
             this.porcentajeDeViajesPorMesToolStripMenuItem.Name = "porcentajeDeViajesPorMesToolStripMenuItem";
             this.porcentajeDeViajesPorMesToolStripMenuItem.Size = new System.Drawing.Size(425, 24);
             this.porcentajeDeViajesPorMesToolStripMenuItem.Text = "Porcentaje de viajes por mes";
+            this.porcentajeDeViajesPorMesToolStripMenuItem.Click += new System.EventHandler(this.porcentajeDeViajesPorMesToolStripMenuItem_Click);
             // 
             // porcentajeDeViajesPorDíaDeSemanaToolStripMenuItem
             // 
@@ -531,13 +532,14 @@
             // proximosVuelosEnUnAeropuertoToolStripMenuItem
             // 
             this.proximosVuelosEnUnAeropuertoToolStripMenuItem.Name = "proximosVuelosEnUnAeropuertoToolStripMenuItem";
-            this.proximosVuelosEnUnAeropuertoToolStripMenuItem.Size = new System.Drawing.Size(349, 24);
-            this.proximosVuelosEnUnAeropuertoToolStripMenuItem.Text = "Proximos vuelos en un aeropuerto";
+            this.proximosVuelosEnUnAeropuertoToolStripMenuItem.Size = new System.Drawing.Size(276, 24);
+            this.proximosVuelosEnUnAeropuertoToolStripMenuItem.Text = "Vuelos en un aeropuerto";
+            this.proximosVuelosEnUnAeropuertoToolStripMenuItem.Click += new System.EventHandler(this.proximosVuelosEnUnAeropuertoToolStripMenuItem_Click);
             // 
             // aeropuertoPorPaisToolStripMenuItem1
             // 
             this.aeropuertoPorPaisToolStripMenuItem1.Name = "aeropuertoPorPaisToolStripMenuItem1";
-            this.aeropuertoPorPaisToolStripMenuItem1.Size = new System.Drawing.Size(349, 24);
+            this.aeropuertoPorPaisToolStripMenuItem1.Size = new System.Drawing.Size(276, 24);
             this.aeropuertoPorPaisToolStripMenuItem1.Text = "Aeropuerto por pais";
             this.aeropuertoPorPaisToolStripMenuItem1.Click += new System.EventHandler(this.aeropuertoPorPaisToolStripMenuItem1_Click);
             // 
@@ -555,6 +557,7 @@
             this.estadoDeCadaAsientoPorCadaAvionToolStripMenuItem1.Name = "estadoDeCadaAsientoPorCadaAvionToolStripMenuItem1";
             this.estadoDeCadaAsientoPorCadaAvionToolStripMenuItem1.Size = new System.Drawing.Size(395, 24);
             this.estadoDeCadaAsientoPorCadaAvionToolStripMenuItem1.Text = "Estado de  cada asiento por cada avion";
+            this.estadoDeCadaAsientoPorCadaAvionToolStripMenuItem1.Click += new System.EventHandler(this.estadoDeCadaAsientoPorCadaAvionToolStripMenuItem1_Click);
             // 
             // avionPorModeloToolStripMenuItem
             // 
@@ -578,12 +581,14 @@
             this.familiaresPorPasajeroToolStripMenuItem1.Name = "familiaresPorPasajeroToolStripMenuItem1";
             this.familiaresPorPasajeroToolStripMenuItem1.Size = new System.Drawing.Size(265, 24);
             this.familiaresPorPasajeroToolStripMenuItem1.Text = "Familiares por pasajero";
+            this.familiaresPorPasajeroToolStripMenuItem1.Click += new System.EventHandler(this.familiaresPorPasajeroToolStripMenuItem1_Click);
             // 
             // pasajerosToolStripMenuItem1
             // 
             this.pasajerosToolStripMenuItem1.Name = "pasajerosToolStripMenuItem1";
             this.pasajerosToolStripMenuItem1.Size = new System.Drawing.Size(265, 24);
             this.pasajerosToolStripMenuItem1.Text = "Pasajeros";
+            this.pasajerosToolStripMenuItem1.Click += new System.EventHandler(this.pasajerosToolStripMenuItem1_Click);
             // 
             // telefonoPorPasajeroToolStripMenuItem
             // 
@@ -606,6 +611,7 @@
             this.tripulacionToolStripMenuItem2.Name = "tripulacionToolStripMenuItem2";
             this.tripulacionToolStripMenuItem2.Size = new System.Drawing.Size(246, 24);
             this.tripulacionToolStripMenuItem2.Text = "Tripulacion";
+            this.tripulacionToolStripMenuItem2.Click += new System.EventHandler(this.tripulacionToolStripMenuItem2_Click);
             // 
             // tripulacionPorCargoToolStripMenuItem1
             // 
@@ -618,6 +624,7 @@
             this.tripulacionPorVueloToolStripMenuItem1.Name = "tripulacionPorVueloToolStripMenuItem1";
             this.tripulacionPorVueloToolStripMenuItem1.Size = new System.Drawing.Size(246, 24);
             this.tripulacionPorVueloToolStripMenuItem1.Text = "Tripulacion por vuelo";
+            this.tripulacionPorVueloToolStripMenuItem1.Click += new System.EventHandler(this.tripulacionPorVueloToolStripMenuItem1_Click);
             // 
             // tripulacionToolStripMenuItem
             // 
@@ -634,12 +641,14 @@
             this.tramosPorViajeToolStripMenuItem.Name = "tramosPorViajeToolStripMenuItem";
             this.tramosPorViajeToolStripMenuItem.Size = new System.Drawing.Size(471, 24);
             this.tramosPorViajeToolStripMenuItem.Text = "Tramos por viaje";
+            this.tramosPorViajeToolStripMenuItem.Click += new System.EventHandler(this.tramosPorViajeToolStripMenuItem_Click);
             // 
             // viajesEntreFechaInicialYFechaFinalPorDestinoToolStripMenuItem
             // 
             this.viajesEntreFechaInicialYFechaFinalPorDestinoToolStripMenuItem.Name = "viajesEntreFechaInicialYFechaFinalPorDestinoToolStripMenuItem";
             this.viajesEntreFechaInicialYFechaFinalPorDestinoToolStripMenuItem.Size = new System.Drawing.Size(471, 24);
             this.viajesEntreFechaInicialYFechaFinalPorDestinoToolStripMenuItem.Text = "Viajes entre fecha inicial y fecha final por destino";
+            this.viajesEntreFechaInicialYFechaFinalPorDestinoToolStripMenuItem.Click += new System.EventHandler(this.viajesEntreFechaInicialYFechaFinalPorDestinoToolStripMenuItem_Click);
             // 
             // tramoToolStripMenuItem
             // 
@@ -653,6 +662,7 @@
             this.reservaToolStripMenuItem.Name = "reservaToolStripMenuItem";
             this.reservaToolStripMenuItem.Size = new System.Drawing.Size(113, 24);
             this.reservaToolStripMenuItem.Text = "Reservas";
+            this.reservaToolStripMenuItem.Click += new System.EventHandler(this.reservaToolStripMenuItem_Click);
             // 
             // menuStrip2
             // 
@@ -683,7 +693,6 @@
             this.facturasToolStripMenuItem.Name = "facturasToolStripMenuItem";
             this.facturasToolStripMenuItem.Size = new System.Drawing.Size(86, 24);
             this.facturasToolStripMenuItem.Text = "Facturas";
-            this.facturasToolStripMenuItem.Click += new System.EventHandler(this.facturasToolStripMenuItem_Click);
             // 
             // menuStrip1
             // 
