@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Backend;
 using TrabajoPrácticoPAV.Clase;
+using static TrabajoPrácticoPAV.Formularios.Estadisticas.PasajerosMayores.Ds_EstadisticaPasajerosMayores;
 
 namespace TrabajoPrácticoPAV.NE_Usuarios
 {
@@ -91,7 +92,10 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
 
         public DataTable RecuperarTodos()
         {
-            string sql = @"select nombre, apellido, fechaNacimiento FROM Pasajero";
+            string sql = @"SELECT 'Mayores' as descripcion, COUNT(numeroDoc) as cantidad FROM Pasajero WHERE DATEDIFF(year, fechaNacimiento, GETDATE()) >= 18 
+            UNION 
+            SELECT 'Menores' as descripcion, COUNT(numeroDoc) as cantidad FROM Pasajero WHERE DATEDIFF(year, fechaNacimiento, GETDATE()) < 18
+             ";
             return _BD.EjecutarSelect(sql);
         }
     }
