@@ -26,6 +26,7 @@ using TrabajoPrácticoPAV.Formularios.Facturaciones;
 using TrabajoPrácticoPAV.Formularios.Listados.Aeropuertos;
 using TrabajoPrácticoPAV.Formularios.Listados.Viajes.Tramos;
 using TrabajoPrácticoPAV.Formularios.Listados.Avion_Por_Modelo;
+using TrabajoPrácticoPAV.Formularios.Estadisticas.PasajerosMayores;
 
 namespace TrabajoPrácticoPAV
 {
@@ -329,6 +330,12 @@ namespace TrabajoPrácticoPAV
         {
             CerrarTodosLosMenuStrip();
             AbrirFormulario<Frm_AvionPorModelo>();
+        }
+
+        private void porcentajeDePasajerosMayoresDeEdadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_PasajerosMayores>();
         }
     }
 }
