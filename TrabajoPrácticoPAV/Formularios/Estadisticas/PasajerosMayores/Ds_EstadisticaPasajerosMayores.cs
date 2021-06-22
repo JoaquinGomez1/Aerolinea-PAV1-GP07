@@ -6,8 +6,6 @@
     {
         partial class EstadisticaPasajerosPorEdadDataTable
         {
-            public int cantidadMayores { get; set; }
-            public int cantidadMenores { get; set; }
         }
 
     }

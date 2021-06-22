@@ -16,24 +16,23 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.PasajerosMayores
     public partial class Frm_PasajerosMayores : Form
     {
         Tratamientos_Especiales tratamientos = new Tratamientos_Especiales();
-        DataTable tabla = new DataTable();
         NE_Clientes pasajero = new NE_Clientes();
 
         public Frm_PasajerosMayores()
         {
             InitializeComponent();
+            this.BackColor = Estilo.ColorFondoForms;
+            Estilo.FormatearEstilo(this.Controls);
         }
 
         private void Frm_PasajerosMayores_Load(object sender, EventArgs e)
         {
-
+            DataTable tabla = determineDataSet();
             this.rv_pasajerosMayores.RefreshReport();
-            this.BackColor = Estilo.ColorFondoForms;
-            Estilo.FormatearEstilo(this.Controls);
-            tabla = pasajero.RecuperarTodos();
+
 
             if (tabla.Rows.Count != 0)
-                CargarEstadisticaPasajeros();
+                CargarEstadisticaPasajeros(tabla);
             else
             {
                 rv_pasajerosMayores.LocalReport.DataSources.Clear();
@@ -42,13 +41,18 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.PasajerosMayores
             }
         }
 
-        public void CargarEstadisticaPasajeros()
+        public void CargarEstadisticaPasajeros(DataTable tabla)
         {
             ReportDataSource datos = new ReportDataSource("Ds_EstadisticaPasajerosMayores", tabla);
             rv_pasajerosMayores.LocalReport.ReportEmbeddedResource = "TrabajoPrácticoPAV.Formularios.Estadisticas.PasajerosMayores.EstadisticaPasajerosMayores.rdlc";
             rv_pasajerosMayores.LocalReport.DataSources.Clear();
             rv_pasajerosMayores.LocalReport.DataSources.Add(datos);
             rv_pasajerosMayores.RefreshReport();
+        }
+
+        private DataTable determineDataSet()
+        {
+            return pasajero.RecuperarTodos();
         }
 
         private void btn_cerrar_Click(object sender, EventArgs e)

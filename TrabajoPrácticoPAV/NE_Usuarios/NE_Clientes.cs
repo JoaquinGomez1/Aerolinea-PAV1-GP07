@@ -98,6 +98,5 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
              ";
             return _BD.EjecutarSelect(sql);
         }
-
     }
 }

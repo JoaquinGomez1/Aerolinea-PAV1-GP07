@@ -11,25 +11,25 @@
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="Ds_EstadisticaPasajerosPorEdad">
+    <DataSet Name="Ds_EstadisticaPasajerosMayores">
       <Query>
         <DataSourceName>Ds_EstadisticaPasajerosMayores</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="cantidadMayores">
-          <DataField>cantidadMayores</DataField>
+        <Field Name="descripcion">
+          <DataField>descripcion</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="cantidadMenores">
-          <DataField>cantidadMenores</DataField>
+        <Field Name="cantidad">
+          <DataField>cantidad</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>Ds_EstadisticaPasajerosMayores</rd:DataSetName>
         <rd:SchemaPath>C:\Users\Usuario\Documents\TERCER AÑO\PAVI\Teorico\Aerolinea-PAV1-GP07-1\TrabajoPrácticoPAV\Formularios\Estadisticas\PasajerosMayores\Ds_EstadisticaPasajerosMayores.xsd</rd:SchemaPath>
-        <rd:TableName>EstadisticaPasajerosMayores</rd:TableName>
+        <rd:TableName>EstadisticaPasajerosPorEdad</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
         <rd:TableAdapterName />
@@ -64,7 +64,7 @@
             <Top>0.28787cm</Top>
             <Left>0.42016cm</Left>
             <Height>0.75875cm</Height>
-            <Width>13.89882cm</Width>
+            <Width>16.98029cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -77,10 +77,10 @@
             </Style>
           </Textbox>
           <Line Name="Line1">
-            <Top>8.35766cm</Top>
+            <Top>8.04016cm</Top>
             <Left>0.42016cm</Left>
             <Height>0cm</Height>
-            <Width>13.89882cm</Width>
+            <Width>17.55007cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -100,7 +100,7 @@
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>1.53927cm</Height>
+                  <Height>1.03656cm</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -111,7 +111,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Pasajeros mayores de edad</Value>
+                                  <Value>Descripcion</Value>
                                   <Style>
                                     <FontFamily>Maiandra GD</FontFamily>
                                     <FontWeight>Bold</FontWeight>
@@ -147,7 +147,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Pasajeros menores de edad</Value>
+                                  <Value>Cantidad</Value>
                                   <Style>
                                     <FontFamily>Malgun Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
@@ -177,18 +177,18 @@
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>1.53927cm</Height>
+                  <Height>1.03656cm</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="cantidadMayores">
+                        <Textbox Name="descripcion">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!cantidadMayores.Value</Value>
+                                  <Value>=Fields!descripcion.Value</Value>
                                   <Style>
                                     <Format>0.00;(0.00)</Format>
                                   </Style>
@@ -199,7 +199,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>cantidadMayores</rd:DefaultName>
+                          <rd:DefaultName>descripcion</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -215,14 +215,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="cantidadMenores">
+                        <Textbox Name="cantidad">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!cantidadMenores.Value</Value>
+                                  <Value>=Fields!cantidad.Value</Value>
                                   <Style>
                                     <Format>0.00;(0.00)</Format>
                                   </Style>
@@ -233,7 +233,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>cantidadMenores</rd:DefaultName>
+                          <rd:DefaultName>cantidad</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -267,10 +267,10 @@
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
-            <DataSetName>Ds_EstadisticaPasajerosPorEdad</DataSetName>
-            <Top>2.90724cm</Top>
-            <Left>8.38412cm</Left>
-            <Height>3.07854cm</Height>
+            <DataSetName>Ds_EstadisticaPasajerosMayores</DataSetName>
+            <Top>1.95474cm</Top>
+            <Left>11.46559cm</Left>
+            <Height>2.07312cm</Height>
             <Width>5.93486cm</Width>
             <ZIndex>2</ZIndex>
             <Style>
@@ -283,61 +283,34 @@
             <ChartCategoryHierarchy>
               <ChartMembers>
                 <ChartMember>
-                  <Label />
+                  <Group Name="Chart1_CategoryGroup">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!descripcion.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Group>
+                  <SortExpressions>
+                    <SortExpression>
+                      <Value>=Fields!descripcion.Value</Value>
+                    </SortExpression>
+                  </SortExpressions>
+                  <Label>=Fields!descripcion.Value</Label>
                 </ChartMember>
               </ChartMembers>
             </ChartCategoryHierarchy>
             <ChartSeriesHierarchy>
               <ChartMembers>
                 <ChartMember>
-                  <Label>cantidad Mayores</Label>
-                </ChartMember>
-                <ChartMember>
-                  <Label>cantidad Menores</Label>
+                  <Label>cantidad</Label>
                 </ChartMember>
               </ChartMembers>
             </ChartSeriesHierarchy>
             <ChartData>
               <ChartSeriesCollection>
-                <ChartSeries Name="cantidadMayores">
+                <ChartSeries Name="cantidad">
                   <ChartDataPoints>
                     <ChartDataPoint>
                       <ChartDataPointValues>
-                        <Y>=Count(Fields!cantidadMayores.Value)</Y>
-                      </ChartDataPointValues>
-                      <ChartDataLabel>
-                        <Style />
-                      </ChartDataLabel>
-                      <Style />
-                      <ChartMarker>
-                        <Style />
-                      </ChartMarker>
-                      <DataElementOutput>Output</DataElementOutput>
-                    </ChartDataPoint>
-                  </ChartDataPoints>
-                  <Type>Shape</Type>
-                  <Style />
-                  <ChartEmptyPoints>
-                    <Style />
-                    <ChartMarker>
-                      <Style />
-                    </ChartMarker>
-                    <ChartDataLabel>
-                      <Style />
-                    </ChartDataLabel>
-                  </ChartEmptyPoints>
-                  <ValueAxisName>Primary</ValueAxisName>
-                  <CategoryAxisName>Primary</CategoryAxisName>
-                  <ChartSmartLabel>
-                    <CalloutLineColor>Black</CalloutLineColor>
-                    <MinMovingDistance>0pt</MinMovingDistance>
-                  </ChartSmartLabel>
-                </ChartSeries>
-                <ChartSeries Name="cantidadMenores">
-                  <ChartDataPoints>
-                    <ChartDataPoint>
-                      <ChartDataPointValues>
-                        <Y>=Count(Fields!cantidadMenores.Value)</Y>
+                        <Y>=Sum(Fields!cantidad.Value)</Y>
                       </ChartDataPointValues>
                       <ChartDataLabel>
                         <Style />
@@ -619,7 +592,7 @@
                 <ColumnSeparatorColor>Black</ColumnSeparatorColor>
               </ChartLegend>
             </ChartLegends>
-            <Palette>Pacific</Palette>
+            <Palette>BrightPastel</Palette>
             <ChartBorderSkin>
               <Style>
                 <BackgroundColor>Gray</BackgroundColor>
@@ -636,11 +609,11 @@
                 <VerticalAlign>Top</VerticalAlign>
               </Style>
             </ChartNoDataMessage>
-            <DataSetName>Ds_EstadisticaPasajerosPorEdad</DataSetName>
-            <Top>2.90724cm</Top>
+            <DataSetName>Ds_EstadisticaPasajerosMayores</DataSetName>
+            <Top>1.95474cm</Top>
             <Left>0.42016cm</Left>
             <Height>5cm</Height>
-            <Width>7.5cm</Width>
+            <Width>9.85479cm</Width>
             <ZIndex>3</ZIndex>
             <Style>
               <Border>
@@ -651,45 +624,15 @@
               <BackgroundGradientType>None</BackgroundGradientType>
             </Style>
           </Chart>
-          <Textbox Name="Rp_EstadisticaPasajerosMayores">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=Parameters!Rp_EstadisticaPasajerosMayores.Value</Value>
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Rp_EstadisticaPasajerosMayores</rd:DefaultName>
-            <Top>1.95474cm</Top>
-            <Left>0.42016cm</Left>
-            <Height>0.6cm</Height>
-            <Width>7.5cm</Width>
-            <ZIndex>4</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
         </ReportItems>
-        <Height>3.54017in</Height>
+        <Height>3.36309in</Height>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
         </Style>
       </Body>
-      <Width>5.82651in</Width>
+      <Width>7.35566in</Width>
       <Page>
         <PageFooter>
           <Height>1.5875cm</Height>
@@ -712,7 +655,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox3</rd:DefaultName>
               <Top>0.41438cm</Top>
-              <Left>10.14677cm</Left>
+              <Left>13.79802cm</Left>
               <Height>0.6cm</Height>
               <Width>0.9125cm</Width>
               <Style>
@@ -741,7 +684,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox14</rd:DefaultName>
               <Top>0.41438cm</Top>
-              <Left>11.63377cm</Left>
+              <Left>15.28502cm</Left>
               <Height>0.6cm</Height>
               <Width>2.68521cm</Width>
               <ZIndex>1</ZIndex>

@@ -279,9 +279,9 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.PasajerosMayores {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class EstadisticaPasajerosPorEdadDataTable : global::System.Data.TypedTableBase<EstadisticaPasajerosPorEdadRow> {
             
-            private global::System.Data.DataColumn columncantidadMayores;
+            private global::System.Data.DataColumn columndescripcion;
             
-            private global::System.Data.DataColumn columncantidadMenores;
+            private global::System.Data.DataColumn columncantidad;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -318,17 +318,17 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.PasajerosMayores {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn cantidadMayoresColumn {
+            public global::System.Data.DataColumn descripcionColumn {
                 get {
-                    return this.columncantidadMayores;
+                    return this.columndescripcion;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn cantidadMenoresColumn {
+            public global::System.Data.DataColumn cantidadColumn {
                 get {
-                    return this.columncantidadMenores;
+                    return this.columncantidad;
                 }
             }
             
@@ -369,11 +369,11 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.PasajerosMayores {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public EstadisticaPasajerosPorEdadRow AddEstadisticaPasajerosPorEdadRow(string cantidadMayores, string cantidadMenores) {
+            public EstadisticaPasajerosPorEdadRow AddEstadisticaPasajerosPorEdadRow(string descripcion, string cantidad) {
                 EstadisticaPasajerosPorEdadRow rowEstadisticaPasajerosPorEdadRow = ((EstadisticaPasajerosPorEdadRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        cantidadMayores,
-                        cantidadMenores};
+                        descripcion,
+                        cantidad};
                 rowEstadisticaPasajerosPorEdadRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowEstadisticaPasajerosPorEdadRow);
                 return rowEstadisticaPasajerosPorEdadRow;
@@ -396,17 +396,17 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.PasajerosMayores {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columncantidadMayores = base.Columns["cantidadMayores"];
-                this.columncantidadMenores = base.Columns["cantidadMenores"];
+                this.columndescripcion = base.Columns["descripcion"];
+                this.columncantidad = base.Columns["cantidad"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columncantidadMayores = new global::System.Data.DataColumn("cantidadMayores", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncantidadMayores);
-                this.columncantidadMenores = new global::System.Data.DataColumn("cantidadMenores", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncantidadMenores);
+                this.columndescripcion = new global::System.Data.DataColumn("descripcion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndescripcion);
+                this.columncantidad = new global::System.Data.DataColumn("cantidad", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncantidad);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -549,60 +549,60 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.PasajerosMayores {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string cantidadMayores {
+            public string descripcion {
                 get {
                     try {
-                        return ((string)(this[this.tableEstadisticaPasajerosPorEdad.cantidadMayoresColumn]));
+                        return ((string)(this[this.tableEstadisticaPasajerosPorEdad.descripcionColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cantidadMayores\' de la tabla \'EstadisticaPasajerosPorEdad" +
-                                "\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'descripcion\' de la tabla \'EstadisticaPasajerosPorEdad\' es" +
+                                " DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableEstadisticaPasajerosPorEdad.cantidadMayoresColumn] = value;
+                    this[this.tableEstadisticaPasajerosPorEdad.descripcionColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string cantidadMenores {
+            public string cantidad {
                 get {
                     try {
-                        return ((string)(this[this.tableEstadisticaPasajerosPorEdad.cantidadMenoresColumn]));
+                        return ((string)(this[this.tableEstadisticaPasajerosPorEdad.cantidadColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cantidadMenores\' de la tabla \'EstadisticaPasajerosPorEdad" +
-                                "\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cantidad\' de la tabla \'EstadisticaPasajerosPorEdad\' es DB" +
+                                "Null.", e);
                     }
                 }
                 set {
-                    this[this.tableEstadisticaPasajerosPorEdad.cantidadMenoresColumn] = value;
+                    this[this.tableEstadisticaPasajerosPorEdad.cantidadColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IscantidadMayoresNull() {
-                return this.IsNull(this.tableEstadisticaPasajerosPorEdad.cantidadMayoresColumn);
+            public bool IsdescripcionNull() {
+                return this.IsNull(this.tableEstadisticaPasajerosPorEdad.descripcionColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetcantidadMayoresNull() {
-                this[this.tableEstadisticaPasajerosPorEdad.cantidadMayoresColumn] = global::System.Convert.DBNull;
+            public void SetdescripcionNull() {
+                this[this.tableEstadisticaPasajerosPorEdad.descripcionColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IscantidadMenoresNull() {
-                return this.IsNull(this.tableEstadisticaPasajerosPorEdad.cantidadMenoresColumn);
+            public bool IscantidadNull() {
+                return this.IsNull(this.tableEstadisticaPasajerosPorEdad.cantidadColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetcantidadMenoresNull() {
-                this[this.tableEstadisticaPasajerosPorEdad.cantidadMenoresColumn] = global::System.Convert.DBNull;
+            public void SetcantidadNull() {
+                this[this.tableEstadisticaPasajerosPorEdad.cantidadColumn] = global::System.Convert.DBNull;
             }
         }
         
