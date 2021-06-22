@@ -31,11 +31,7 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.PasajerosMayores
             this.BackColor = Estilo.ColorFondoForms;
             Estilo.FormatearEstilo(this.Controls);
             tabla = pasajero.RecuperarTodos();
-        }
 
-        private void btn_calcular_Click(object sender, EventArgs e)
-        {
-            tabla = pasajero.RecuperarTodos();
             if (tabla.Rows.Count != 0)
                 CargarEstadisticaPasajeros();
             else
@@ -44,7 +40,6 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.PasajerosMayores
                 rv_pasajerosMayores.RefreshReport();
                 MessageBox.Show("No se encontraron resultados para la búsqueda");
             }
-        
         }
 
         public void CargarEstadisticaPasajeros()
