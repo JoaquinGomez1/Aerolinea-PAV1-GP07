@@ -8,7 +8,7 @@ using TrabajoPrácticoPAV.Clase.Modelos;
 
 namespace TrabajoPrácticoPAV.NE_Usuarios
 {
-    class NE_Viajes
+    internal class NE_Viajes
     {
         private readonly Conexion_DB _DB = new Conexion_DB();
 
@@ -23,7 +23,7 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
         public void InsertViaje(Viaje Viaje, int cantTramos)
         {
             // Devuelve el numero de viaje insertado
-            string sql = @"INSERT INTO Viaje(horarioPresencia, horarioSalida, horarioLlegada, duracionEstimada, cantidadTramos) 
+            string sql = @"INSERT INTO Viaje(horarioPresencia, horarioSalida, horarioLlegada, duracionEstimada, cantidadTramos)
                         VALUES(" + $"'{Viaje.HorarioPresencia}', '{Viaje.HorarioSalida}', '{Viaje.HorarioLlegada}', '{Viaje.DuracionEstimada}', {cantTramos}" + ") "
                        ;
 
@@ -75,7 +75,6 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             return _DB.EjecutarSelect(sql);
         }
 
-
         public void CargarTramosPorViaje(List<Tramo> tramos, string numeroDeViaje)
         {
             // Carga todos los tramos segun el numero de viaje correspondiente
@@ -87,16 +86,14 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             };
         }
 
-
         public void EliminarTramoDeViaje(Tramo tramo, string numeroDeViaje, bool silenciosa = false)
         {
             string sql = $"DELETE FROM Viaje_X_Tramo WHERE codigoAeropuertoDestino = '{ tramo.codigoAeropuertoDestino }' AND codigoAeropuertoSalida = '{tramo.codigoAeropuertoSalida}' AND numeroDeViaje = {numeroDeViaje}";
             _DB.Borrar(sql, silenciosa);
         }
 
-
         public string determinarEstimado(string horarioLlegada, string horarioSalida)
-        /// <summary>Retorna un estimado de tiempo que es resultante de restar dos objetos dateTime.</summary> 
+        /// <summary>Retorna un estimado de tiempo que es resultante de restar dos objetos dateTime.</summary>
         {
             ManejoDeTiempos Tiempo = new ManejoDeTiempos();
 
@@ -110,7 +107,6 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             string horarioResultado = Tiempo.RestarDateTimes(horarioLlegada, horarioSalida);
             return horarioResultado;
         }
-
 
         public Viaje ViajeQueCoinciden(string codSalida, string codDestino)
         {
@@ -151,12 +147,20 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             tabla = _DB.EjecutarSelect(sql);
             return tabla;
         }
+
         public DataTable RecuperarViajesXHorarioLlegada(string horarioDesde, string horarioHasta)
         {
             DataTable tabla = new DataTable();
             string sql = $"select numeroDeViaje, horarioLlegada, horarioSalida, cantidadTramos, duracionEstimada from Viaje  where horarioLlegada >= ' {horarioDesde} ' and horarioLlegada <= ' {horarioHasta} ' order by  numeroDeViaje,horarioLlegada";
             tabla = _DB.EjecutarSelect(sql);
             return tabla;
+        }
+
+        public DataTable GetViajesPorMes()
+        {
+            // Busca en reservas porque es lo único que tiene fecha en la tabla y una reserva tiene un solo viaje asi que es casi lo
+            string sql = "SELECT MONTH(fechaSalida) as Mes, COUNT( * ) as Cantidad, COUNT( * ) * 100 / (SELECT COUNT( * ) FROM RESERVA) as Porcentaje FROM Reserva Group By MONTH(fechaSalida)";
+            return _DB.EjecutarSelect(sql);
         }
     }
 }

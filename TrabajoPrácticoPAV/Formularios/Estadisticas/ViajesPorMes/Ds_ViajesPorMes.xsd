@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_ViajesPorMes" targetNamespace="http://tempuri.org/Ds_ViajesPorMes.xsd" xmlns:mstns="http://tempuri.org/Ds_ViajesPorMes.xsd" xmlns="http://tempuri.org/Ds_ViajesPorMes.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BD3K6G07_2021ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BD3K6G07_2021ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.TrabajoPrácticoPAV.Properties.Settings.GlobalReference.Default.BD3K6G07_2021ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_ViajesPorMes" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Ds_ViajesPorMes" msprop:Generator_UserDSName="Ds_ViajesPorMes">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Ds_ViajesPorMes" msprop:Generator_TableClassName="Ds_ViajesPorMesDataTable" msprop:Generator_TableVarName="tableDs_ViajesPorMes" msprop:Generator_TablePropName="_Ds_ViajesPorMes" msprop:Generator_RowDeletingName="Ds_ViajesPorMesRowDeleting" msprop:Generator_RowChangingName="Ds_ViajesPorMesRowChanging" msprop:Generator_RowEvHandlerName="Ds_ViajesPorMesRowChangeEventHandler" msprop:Generator_RowDeletedName="Ds_ViajesPorMesRowDeleted" msprop:Generator_UserTableName="Ds_ViajesPorMes" msprop:Generator_RowChangedName="Ds_ViajesPorMesRowChanged" msprop:Generator_RowEvArgName="Ds_ViajesPorMesRowChangeEvent" msprop:Generator_RowClassName="Ds_ViajesPorMesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Mes" msprop:Generator_ColumnVarNameInTable="columnMes" msprop:Generator_ColumnPropNameInRow="Mes" msprop:Generator_ColumnPropNameInTable="MesColumn" msprop:Generator_UserColumnName="Mes" type="xs:string" minOccurs="0" />
+              <xs:element name="Cantidad" msprop:Generator_ColumnVarNameInTable="columnCantidad" msprop:Generator_ColumnPropNameInRow="Cantidad" msprop:Generator_ColumnPropNameInTable="CantidadColumn" msprop:Generator_UserColumnName="Cantidad" type="xs:string" minOccurs="0" />
+              <xs:element name="Porcentaje" msprop:Generator_ColumnVarNameInTable="columnPorcentaje" msprop:Generator_ColumnPropNameInRow="Porcentaje" msprop:Generator_ColumnPropNameInTable="PorcentajeColumn" msprop:Generator_UserColumnName="Porcentaje" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

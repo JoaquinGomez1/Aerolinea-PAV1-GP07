@@ -88,5 +88,11 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
                 grid.Rows[i].Cells[3].Value = tabla.Rows[i]["numeroDoc"].ToString();
             }
         }
+
+        public DataTable RecuperarTodos()
+        {
+            string sql = @"select nombre, apellido, fechaNacimiento FROM Pasajero";
+            return _BD.EjecutarSelect(sql);
+        }
     }
 }
