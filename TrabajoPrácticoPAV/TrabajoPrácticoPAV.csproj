@@ -210,7 +210,14 @@
     <Compile Include="Formularios\Estadisticas\ViajesPorMes\Frm_EViajesPorMes.Designer.cs">
       <DependentUpon>Frm_EViajesPorMes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Estadisticas\ViajesPorSemana\Ds_ViajesPorSemana.Designer.cs" />
+    <Compile Include="Formularios\Estadisticas\ViajesPorSemana\Ds_ViajesPorSemana.cs">
+      <DependentUpon>Ds_ViajesPorSemana.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Estadisticas\ViajesPorSemana\Ds_ViajesPorSemana1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ds_ViajesPorSemana.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Estadisticas\ViajesPorSemana\Frm_EViajesPorSemana.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -821,6 +828,9 @@
       <DependentUpon>Frm_EViajesPorMes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Estadisticas\ViajesPorSemana\Estadistica_ViajesPorSemana.rdlc" />
+    <EmbeddedResource Include="Formularios\Estadisticas\ViajesPorSemana\Frm_EViajesPorSemana.resx">
+      <DependentUpon>Frm_EViajesPorSemana.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Estadisticas\VuelosXAeropuerto\Frm_VuelosXAeropuerto.resx">
       <DependentUpon>Frm_VuelosXAeropuerto.cs</DependentUpon>
     </EmbeddedResource>

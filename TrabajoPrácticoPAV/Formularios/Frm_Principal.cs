@@ -35,6 +35,7 @@ using TrabajoPrácticoPAV.Formularios.Listados.Asientos;
 using TrabajoPrácticoPAV.Formularios.Listados.Tramos_por_viaje;
 using TrabajoPrácticoPAV.Formularios.Estadisticas.PasajerosMayores;
 using TrabajoPrácticoPAV.Formularios.Estadisticas.ViajesPorMes;
+using TrabajoPrácticoPAV.Formularios.Estadisticas.ViajesPorSemana;
 
 namespace TrabajoPrácticoPAV
 {
@@ -403,6 +404,12 @@ namespace TrabajoPrácticoPAV
         {
             CerrarTodosLosMenuStrip();
             AbrirFormulario<Frm_EViajesPorMes>();
+        }
+
+        private void porcentajeDeViajesPorDíaDeSemanaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_EViajesPorSemana>();
         }
     }
 }

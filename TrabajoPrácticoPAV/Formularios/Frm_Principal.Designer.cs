@@ -464,6 +464,7 @@
             this.porcentajeDeViajesPorDíaDeSemanaToolStripMenuItem.Name = "porcentajeDeViajesPorDíaDeSemanaToolStripMenuItem";
             this.porcentajeDeViajesPorDíaDeSemanaToolStripMenuItem.Size = new System.Drawing.Size(425, 24);
             this.porcentajeDeViajesPorDíaDeSemanaToolStripMenuItem.Text = "Porcentaje de viajes por día de semana";
+            this.porcentajeDeViajesPorDíaDeSemanaToolStripMenuItem.Click += new System.EventHandler(this.porcentajeDeViajesPorDíaDeSemanaToolStripMenuItem_Click);
             // 
             // vuelosToolStripMenuItem
             // 
