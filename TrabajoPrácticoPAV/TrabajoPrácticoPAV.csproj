@@ -239,6 +239,9 @@
     <Compile Include="Formularios\Estadisticas\ViajesPorSemana\Frm_EViajesPorSemana.Designer.cs">
       <DependentUpon>Frm_EViajesPorSemana.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Estadisticas\ViajesXFecha\Ds_ViajesXFecha.cs">
+      <DependentUpon>Ds_ViajesXFecha.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Estadisticas\ViajesXFecha\Ds_ViajesXFecha.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

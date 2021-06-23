@@ -281,7 +281,9 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.ViajesXFecha {
             
             private global::System.Data.DataColumn columnnumeroDeViaje;
             
-            private global::System.Data.DataColumn columnfechaSalida;
+            private global::System.Data.DataColumn columncantidadTramos;
+            
+            private global::System.Data.DataColumn columnduracionEstimada;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -326,9 +328,17 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.ViajesXFecha {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn fechaSalidaColumn {
+            public global::System.Data.DataColumn cantidadTramosColumn {
                 get {
-                    return this.columnfechaSalida;
+                    return this.columncantidadTramos;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn duracionEstimadaColumn {
+                get {
+                    return this.columnduracionEstimada;
                 }
             }
             
@@ -369,11 +379,12 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.ViajesXFecha {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public DataTable1Row AddDataTable1Row(string numeroDeViaje, string fechaSalida) {
+            public DataTable1Row AddDataTable1Row(string numeroDeViaje, string cantidadTramos, string duracionEstimada) {
                 DataTable1Row rowDataTable1Row = ((DataTable1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         numeroDeViaje,
-                        fechaSalida};
+                        cantidadTramos,
+                        duracionEstimada};
                 rowDataTable1Row.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDataTable1Row);
                 return rowDataTable1Row;
@@ -397,7 +408,8 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.ViajesXFecha {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
                 this.columnnumeroDeViaje = base.Columns["numeroDeViaje"];
-                this.columnfechaSalida = base.Columns["fechaSalida"];
+                this.columncantidadTramos = base.Columns["cantidadTramos"];
+                this.columnduracionEstimada = base.Columns["duracionEstimada"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -405,8 +417,10 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.ViajesXFecha {
             private void InitClass() {
                 this.columnnumeroDeViaje = new global::System.Data.DataColumn("numeroDeViaje", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnumeroDeViaje);
-                this.columnfechaSalida = new global::System.Data.DataColumn("fechaSalida", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfechaSalida);
+                this.columncantidadTramos = new global::System.Data.DataColumn("cantidadTramos", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncantidadTramos);
+                this.columnduracionEstimada = new global::System.Data.DataColumn("duracionEstimada", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnduracionEstimada);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -565,17 +579,33 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.ViajesXFecha {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string fechaSalida {
+            public string cantidadTramos {
                 get {
                     try {
-                        return ((string)(this[this.tableDataTable1.fechaSalidaColumn]));
+                        return ((string)(this[this.tableDataTable1.cantidadTramosColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fechaSalida\' de la tabla \'DataTable1\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cantidadTramos\' de la tabla \'DataTable1\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable1.fechaSalidaColumn] = value;
+                    this[this.tableDataTable1.cantidadTramosColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string duracionEstimada {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataTable1.duracionEstimadaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'duracionEstimada\' de la tabla \'DataTable1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.duracionEstimadaColumn] = value;
                 }
             }
             
@@ -593,14 +623,26 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.ViajesXFecha {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsfechaSalidaNull() {
-                return this.IsNull(this.tableDataTable1.fechaSalidaColumn);
+            public bool IscantidadTramosNull() {
+                return this.IsNull(this.tableDataTable1.cantidadTramosColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetfechaSalidaNull() {
-                this[this.tableDataTable1.fechaSalidaColumn] = global::System.Convert.DBNull;
+            public void SetcantidadTramosNull() {
+                this[this.tableDataTable1.cantidadTramosColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsduracionEstimadaNull() {
+                return this.IsNull(this.tableDataTable1.duracionEstimadaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetduracionEstimadaNull() {
+                this[this.tableDataTable1.duracionEstimadaColumn] = global::System.Convert.DBNull;
             }
         }
         

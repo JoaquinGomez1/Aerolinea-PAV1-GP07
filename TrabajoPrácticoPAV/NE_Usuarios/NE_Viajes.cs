@@ -163,12 +163,28 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             return _DB.EjecutarSelect(sql);
         }
 
-        public DataTable RecuperarViajesXFecha(string fecha)
+        public DataTable RecuperarViajesXTramo()
         {
             DataTable table = new DataTable();
-
-            string sql = $"select numeroDeViaje, fechaSalida  from Reserva where fechaSalida = ' {fecha}   'order by fechaSalida, numeroDeViaje";
+            string sql = $"select numeroDeViaje, cantidadTramos, duracionEstimada from Viaje order by   numeroDeViaje ";
+            table = _DB.EjecutarSelect(sql);
             return table;
         }
+        public DataTable RecuperarViajesDirectos()
+        {
+            DataTable table = new DataTable();
+            string sql = $"select numeroDeViaje, cantidadTramos, duracionEstimada from Viaje where cantidadTramos = 1 order by   numeroDeViaje ";
+            table = _DB.EjecutarSelect(sql);
+            return table;
+        }
+        public DataTable RecuperarViajesConTramos()
+        {
+            DataTable table = new DataTable();
+            string sql = $"select numeroDeViaje, cantidadTramos, duracionEstimada from Viaje where cantidadTramos > 1 order by   numeroDeViaje ";
+            table = _DB.EjecutarSelect(sql);
+            return table;
+        }
+
+
     }
 }

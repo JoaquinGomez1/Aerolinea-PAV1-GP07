@@ -15,7 +15,7 @@ using TrabajoPrácticoPAV.Formularios.Listados.Tripulación;
 using TrabajoPrácticoPAV.Formularios.Listados.Avion_Por_Modelo;
 using TrabajoPrácticoPAV.Formularios.Listados.Asientos;
 using TrabajoPrácticoPAV.Formularios.Listados.Factura;
-using TrabajoPrácticoPAV.Formularios.Estadisticas.FacturasXPago;
+using TrabajoPrácticoPAV.Formularios.Estadisticas.ViajesXFecha;
 
 
 namespace TrabajoPrácticoPAV
@@ -34,7 +34,9 @@ namespace TrabajoPrácticoPAV
             //Application.Run(new Frm_ReporteAeroPais());
             //Application.Run(new Frm_Reportes());
             //Application.Run(new Frm_ReporteFamiliareXPasajero());
-            Application.Run(new Frm_FacturasXPago());
+            Application.Run(new Frm_viajesXFecha());
+
+
 
         }
     }

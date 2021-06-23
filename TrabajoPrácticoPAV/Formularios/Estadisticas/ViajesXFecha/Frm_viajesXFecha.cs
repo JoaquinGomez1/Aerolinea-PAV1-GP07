@@ -26,12 +26,26 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.ViajesXFecha
 
             this.rv_1.RefreshReport();
         }
-
         private void button_Aerolinea1_Click(object sender, EventArgs e)
         {
-           string fecha = msk_fecha.Text;
-           MessageBox.Show(fecha);
-           ArmarReporteUsuario01(viajes.RecuperarViajesXFecha(fecha));
+            if (rb_1.Checked == true)
+            {
+                ArmarReporteUsuario01(viajes.RecuperarViajesXTramo());
+            }
+            if (rb_2.Checked == true)
+
+            {
+                ArmarReporteUsuario01(viajes.RecuperarViajesDirectos());
+
+            }
+            if (rb_3.Checked == true)
+            {
+                ArmarReporteUsuario01(viajes.RecuperarViajesConTramos());
+            }
+            else
+            {
+                MessageBox.Show("Debe Seleccionar Una Opcion");
+            }
         }
         private void ArmarReporteUsuario01(DataTable tabla) 
         {
