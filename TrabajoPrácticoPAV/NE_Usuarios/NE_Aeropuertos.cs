@@ -39,10 +39,10 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             string sql = @"select codigo, nombre,c.nombreCiudad as idCiudad from aeropuerto join ciudad c on c.idCiudad = Aeropuerto.idCiudad ";
             return _BD.EjecutarSelect(sql);
         }
-        public DataTable Recuperar_por_CodigoYNombre(string patronNombre , string codigo)
+        public DataTable Recuperar_por_CodigoYNombre(string patronNombre, string codigo)
         {
             string sql = @"SELECT a.* FROM Aeropuerto a "
-                        +" WHERE a.codigo = " + "'" + codigo + "'"
+                        + " WHERE a.codigo = " + "'" + codigo + "'"
                         + " AND a.nombre like '%" + patronNombre.Trim() + "%'";
             return _BD.EjecutarSelect(sql);
         }
@@ -50,10 +50,10 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
         public DataTable Recuperar_por_Codigo(string codigo)
         {
             string sql = @"SELECT a.* FROM Aeropuerto a "
-                        +" WHERE a.codigo = " + "'" + codigo + "'";
+                        + " WHERE a.codigo = " + "'" + codigo + "'";
             return _BD.EjecutarSelect(sql);
         }
-        public DataTable  Reporte_recuperarXCodigo(string codigo)
+        public DataTable Reporte_recuperarXCodigo(string codigo)
         {
             string sql = @"SELECT a.codigo, a.nombre, c.nombreCiudad as idCiudad from Aeropuerto a join ciudad c on c.idCiudad = A.idCiudad "
                         + " WHERE a.codigo = " + "'" + codigo + "'";
@@ -67,7 +67,7 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
                 codigoHast = "Z";
 
             string sql = @"SELECT a.codigo, a.nombre, c.nombreCiudad as idCiudad from Aeropuerto a join ciudad c on c.idCiudad = A.idCiudad "
-                        + " WHERE a.codigo like '[" + codigoDes + "-"+codigoHast + "]%'";
+                        + " WHERE a.codigo like '[" + codigoDes + "-" + codigoHast + "]%'";
             return _BD.EjecutarSelect(sql);
         }
         public DataTable Recuperar_por_PatronNombre(string patronNombre)
@@ -90,17 +90,17 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
         }
         public DataTable Reporte_recuperarXpais(string pais)
         {
-            string sql = @"select a.codigo, a.nombre, c.nombreCiudad as idCiudad from Aeropuerto a"+
-               " join ciudad c on c.idCiudad = a.idCiudad join Provincia p on c.idProvincia = p.idProvincia "+
-                " join pais pa on p.idPais = "+ pais;
+            string sql = @"select a.codigo, a.nombre, c.nombreCiudad as idCiudad from Aeropuerto a" +
+               " join ciudad c on c.idCiudad = a.idCiudad join Provincia p on c.idProvincia = p.idProvincia " +
+                " join pais pa on p.idPais = " + pais;
             return _BD.EjecutarSelect(sql);
         }
         public DataTable Reporte_recuperarXciudad(string ciudad)
-       {
+        {
             string sql = @"SELECT a.codigo, a.nombre, c.nombreCiudad as idCiudad from Aeropuerto a join ciudad c on c.idCiudad = A.idCiudad "
                      + " WHERE c.nombreCiudad like '%" + ciudad.Trim() + "%'";
             return _BD.EjecutarSelect(sql);
-       }
+        }
         public void Modificar()
         {
             string sqlModificar = @"UPDATE Aeropuerto SET"
@@ -118,6 +118,23 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
         {
             string sql = @"select pa.nombrePais as denominacion,count(*) as valor from aeropuerto a join ciudad c on a.idCiudad=c.idCiudad join provincia p on c.idProvincia=p.idProvincia" +
                          @" join Pais pa on p.idPais=pa.idPais group by p.idPais, pa.nombrePais";
+            return _BD.EjecutarSelect(sql);
+        }
+        public DataTable Reporte_recuperarXletra(string letra)
+        {
+            string sql = @"select pa.nombrePais as denominacion, count(*) as valor from aeropuerto a join ciudad c on a.idCiudad=c.idCiudad join provincia p on c.idProvincia=p.idProvincia " +  
+                               @" join Pais pa on p.idPais = pa.idPais where pa.nombrePais like '"+letra+"%'" +
+                                @"group by p.idPais, pa.nombrePais";
+           
+            return _BD.EjecutarSelect(sql);
+        }
+        public DataTable Reporte_recuperarXCiudad(string ciudad)
+        {
+            string sql = @"select pa.nombrePais as denominacion, count(*) as valor from aeropuerto a join ciudad c on a.idCiudad=c.idCiudad " +
+                       @" join provincia p on c.idProvincia=p.idProvincia  " +
+                        @" join Pais pa on p.idPais=pa.idPais where c.nombreCiudad like '" + ciudad + "'" +
+                        @" group by p.idPais, pa.nombrePais";
+            
             return _BD.EjecutarSelect(sql);
         }
     }

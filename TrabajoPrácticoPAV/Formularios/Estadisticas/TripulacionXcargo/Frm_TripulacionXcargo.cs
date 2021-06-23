@@ -19,7 +19,7 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.TripulacionXcargo
         Tratamientos_Especiales tratamientos = new Tratamientos_Especiales();
         NE_Tripulacion tripulacion = new NE_Tripulacion();
         DataTable tabla = new DataTable();
-
+        string parametro;
         public Frm_TripulacionXcargo()
         {
             InitializeComponent();
@@ -30,8 +30,6 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.TripulacionXcargo
             this.BackColor = Estilo.ColorFondoForms;
             Estilo.FormatearEstilo(this.Controls);
             Rbutodos.Checked = true;
-            //cmb_Modelo.CargarCombo();
-            //this.reportViewer1.RefreshReport();
             this.reportViewer1.RefreshReport();
             this.reportViewer1.RefreshReport();
 
@@ -41,8 +39,9 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.TripulacionXcargo
             if (Rbutodos.Checked == true)
             {
                 tabla = tripulacion.Reporte_EstadisticarecuperarTodos();
+                parametro = "Porcentaje de tripulacion por cargos ";
                 if (tabla.Rows.Count != 0)
-                    ArmarEstadisticaTripulacionXcargo();
+                    ArmarEstadisticaTripulacionXcargo(parametro);
                 else
                 {
                     reportViewer1.LocalReport.DataSources.Clear();
@@ -50,63 +49,42 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.TripulacionXcargo
                     MessageBox.Show("No se encontraron resultados para la búsqueda");
                 }
             }
-            //else if (rbu01.Checked == true)
-            //{
-            //    if (Txt_nombres.Text != "")
-            //    {
-            //        tabla = aeropuerto.Reporte_recuperarXNonmbre(Txt_nombres.Text);
-            //        if (tabla.Rows.Count != 0)
-            //            ArmarReporteAeropuertos();
-            //        else
-            //        {
-            //            reportViewer1.LocalReport.DataSources.Clear();
-            //            reportViewer1.RefreshReport();
-            //            MessageBox.Show("No se encontraron resultados para la búsqueda");
-            //        }
-            //    }
-            //    else
-            //        MessageBox.Show("Por favor ingrese un nombre para realizar la búsqueda");
-
-            //}
-            //else if (rbu02.Checked == true)
-            //{
-            //    string desde = "";
-            //    string hasta = "";
-            //    if (txt_codigodesde.Text == "")
-            //        desde = "a";
-            //    else
-            //        desde = txt_codigodesde.Text;
-            //    if (txt_codigohasta.Text == "")
-            //        hasta = "Z";
-            //    else
-            //        hasta = txt_codigohasta.Text;
-
-            //    tabla = aeropuerto.Reporte_recuperarXCodigoRango(desde, hasta);
-            //    if (tabla.Rows.Count != 0)
-            //        ArmarReporteAeropuertos();
-            //    else
-            //    {
-            //        reportViewer1.LocalReport.DataSources.Clear();
-            //        reportViewer1.RefreshReport();
-            //        MessageBox.Show("No se encontraron resultados para la búsqueda");
-            //    }
-            //}
-
-            //else if (rbu03.Checked == true)
-            //{
-            //    if (cmb_pais.SelectedIndex != -1)
-            //    {
-            //        tabla = aeropuerto.Reporte_recuperarXpais(cmb_pais.SelectedValue.ToString());
-            //        if (tabla.Rows.Count != 0)
-            //            ArmarReporteAeropuertos();
-            //        else
-            //        {
-            //            reportViewer1.LocalReport.DataSources.Clear();
-            //            reportViewer1.RefreshReport();
-            //            MessageBox.Show("No se encontraron resultados para la búsqueda");
-            //        }
-            //    }
-            //}
+            else if (Rbu_porLetra.Checked == true)
+            {
+                if (txt_letra.Text != "")
+                {
+                    tabla = tripulacion.Reporte_recuperarXCargoLetra(txt_letra.Text);
+                    parametro = "Porcentaje de cargos que empiecen con la letra " + Rbu_porLetra.Text;
+                    if (tabla.Rows.Count != 0)
+                        ArmarEstadisticaTripulacionXcargo(parametro);
+                    else
+                    {
+                        reportViewer1.LocalReport.DataSources.Clear();
+                        reportViewer1.RefreshReport();
+                        MessageBox.Show("No se encontraron resultados para la búsqueda");
+                    }
+                }
+                else
+                    MessageBox.Show("Por favor ingrese un nombre para realizar la búsqueda");
+            }
+            else if (Rbu_tripulacion.Checked == true)
+            {
+                if (txt_nombreT.Text != "")
+                {
+                    tabla = tripulacion.Reporte_recuperarXNombreTrip(txt_nombreT.Text);
+                    parametro = "Porcentaje de tripulantes con cargos que contengan " + txt_nombreT.Text;
+                    if (tabla.Rows.Count != 0)
+                        ArmarEstadisticaTripulacionXcargo(parametro);
+                    else
+                    {
+                        reportViewer1.LocalReport.DataSources.Clear();
+                        reportViewer1.RefreshReport();
+                        MessageBox.Show("No se encontraron resultados para la búsqueda");
+                    }
+                }
+                else
+                    MessageBox.Show("Por favor ingrese un nombre para realizar la búsqueda");
+            }
             else
             {
                 Tratamientos_Especiales Tratamiento = new Tratamientos_Especiales();
@@ -117,19 +95,18 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.TripulacionXcargo
         
 
         
-        public void ArmarEstadisticaTripulacionXcargo()
+        public void ArmarEstadisticaTripulacionXcargo(string parametro)
         {
             ReportDataSource datos = new ReportDataSource("DataSet1", tabla);
             reportViewer1.LocalReport.ReportEmbeddedResource = "TrabajoPrácticoPAV.Formularios.Estadisticas.TripulacionXcargo.Reporte_TripulacionPorVuelo.rdlc";
-            //ReportParameter[] parametros = new ReportParameter[1];
-            //parametros[0] = new ReportParameter("Rp01", "Hola aca va parametro");
-            //reportViewer1.LocalReport.SetParameters(parametros);
+            ReportParameter[] parametros = new ReportParameter[1];
+            parametros[0] = new ReportParameter("Rp01", parametro);
+            reportViewer1.LocalReport.SetParameters(parametros);
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.DataSources.Add(datos);
             reportViewer1.RefreshReport();
 
         }
-
-
+        
     }
 }

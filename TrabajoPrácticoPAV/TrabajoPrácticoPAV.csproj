@@ -264,6 +264,9 @@
     <Compile Include="Formularios\Estadisticas\PasajerosPorClase\Frm_PasajerosPorClase.Designer.cs">
       <DependentUpon>Frm_PasajerosPorClase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Estadisticas\TripulacionXcargo\Ds_TripulacionXcargo.cs">
+      <DependentUpon>Ds_TripulacionXcargo.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Estadisticas\TripulacionXcargo\Ds_TripulacionXcargo.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

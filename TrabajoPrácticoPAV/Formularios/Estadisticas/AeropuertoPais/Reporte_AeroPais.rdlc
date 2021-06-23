@@ -63,11 +63,13 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>valor</Value>
+                                  <Value>Aeropuerto</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox1</rd:DefaultName>
@@ -93,11 +95,13 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>valor</Value>
+                                  <Value>Cantidad</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox3</rd:DefaultName>
@@ -162,7 +166,9 @@
                                   <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>valor</rd:DefaultName>
@@ -589,7 +595,7 @@
             <Top>1.23155cm</Top>
             <Left>0.34079cm</Left>
             <Height>0.6cm</Height>
-            <Width>9.82833cm</Width>
+            <Width>15.53041cm</Width>
             <ZIndex>3</ZIndex>
             <Style>
               <Border>

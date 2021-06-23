@@ -157,6 +157,20 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
                         @"FROM tripulacion t JOIN Cargo_Tripulacion c ON t.idCargoTripulacion = c.idCargoTripulacion " +
                         @"GROUP BY c.idCargoTripulacion, c.nombre";
             return _DB.EjecutarSelect(sql);
-           }
+        }
+        public DataTable Reporte_recuperarXCargoLetra(string letra)
+        {
+            string sql = @"SELECT c.nombre as denominacion,COUNT(*)*100/(SELECT COUNT(*) FROM tripulacion) as valor "+
+                        @"FROM tripulacion t JOIN Cargo_Tripulacion c ON t.idCargoTripulacion = c.idCargoTripulacion where c.nombre like '"+letra+"%' " +
+                        @"GROUP BY c.idCargoTripulacion, c.nombre";
+            return _DB.EjecutarSelect(sql);
+        }
+        public DataTable Reporte_recuperarXNombreTrip(string letra)
+        {
+            string sql = @"SELECT c.nombre as denominacion,COUNT(*)*100/(SELECT COUNT(*) FROM tripulacion) as valor " +
+                        @"FROM tripulacion t JOIN Cargo_Tripulacion c ON t.idCargoTripulacion = c.idCargoTripulacion where t.nombre like '" + letra + "%' " +
+                        @"GROUP BY c.idCargoTripulacion, c.nombre";
+            return _DB.EjecutarSelect(sql);
+        }
     }
 }
