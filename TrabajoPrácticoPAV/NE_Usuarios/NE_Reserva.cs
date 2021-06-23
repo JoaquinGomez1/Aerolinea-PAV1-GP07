@@ -196,6 +196,19 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             return (_DB.EjecutarSelect(sql));
         }
 
+        public DataTable E_ResuperarPorMes(string msk_Mes)
+        {
+            string[] dato = msk_Mes.Split('/');
+            string sql= @"SELECT MONTH(r.fechaSalida) as denominacion, COUNT(*) FROM Reserva r where MONTH(r.fechaSalida) = " + dato[1] +  "GROUP BY MONTH(r.fechaSalida)";
+            return _DB.EjecutarSelect(sql);
+        }
+        public DataTable ES_RecuperarTodosReservas()
+        {
+            string sql = @"SELECT MONTH(r.fechaSalida) as denominicacion, COUNT(*) as valor FROM Reserva r  GROUP BY MONTH(r.fechaSalida)";
+           // MessageBox.Show("2");
+            return _DB.EjecutarSelect(sql);
+
+        }
 
     }
 }
