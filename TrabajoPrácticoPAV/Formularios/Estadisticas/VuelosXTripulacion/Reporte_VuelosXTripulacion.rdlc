@@ -202,7 +202,7 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet1</DataSetName>
-            <Top>1.16416cm</Top>
+            <Top>0.56416cm</Top>
             <Left>12.61745cm</Left>
             <Height>1.2cm</Height>
             <Width>6.7727cm</Width>
@@ -212,11 +212,11 @@
               </Border>
             </Style>
           </Tablix>
-          <Chart Name="Chart1">
+          <Chart Name="Chart2">
             <ChartCategoryHierarchy>
               <ChartMembers>
                 <ChartMember>
-                  <Group Name="Chart1_CategoryGroup">
+                  <Group Name="Chart2_CategoryGroup">
                     <GroupExpressions>
                       <GroupExpression>=Fields!descripcion.Value</GroupExpression>
                     </GroupExpressions>
@@ -247,8 +247,6 @@
                       </ChartDataPointValues>
                       <ChartDataLabel>
                         <Style />
-                        <UseValueAsLabel>true</UseValueAsLabel>
-                        <Visible>true</Visible>
                       </ChartDataLabel>
                       <Style />
                       <ChartMarker>
@@ -257,7 +255,6 @@
                       <DataElementOutput>Output</DataElementOutput>
                     </ChartDataPoint>
                   </ChartDataPoints>
-                  <Type>Shape</Type>
                   <Style />
                   <ChartEmptyPoints>
                     <Style />
@@ -515,6 +512,7 @@
                   <BackgroundGradientType>None</BackgroundGradientType>
                   <FontSize>8pt</FontSize>
                 </Style>
+                <Position>TopLeft</Position>
                 <ChartLegendTitle>
                   <Caption />
                   <Style>
@@ -527,6 +525,20 @@
                 <ColumnSeparatorColor>Black</ColumnSeparatorColor>
               </ChartLegend>
             </ChartLegends>
+            <ChartTitles>
+              <ChartTitle Name="Default">
+                <Caption>Título del gráfico</Caption>
+                <Style>
+                  <BackgroundGradientType>None</BackgroundGradientType>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextAlign>Left</TextAlign>
+                  <VerticalAlign>Top</VerticalAlign>
+                  <Color>#a6a6a6</Color>
+                </Style>
+                <Position>TopLeft</Position>
+              </ChartTitle>
+            </ChartTitles>
             <Palette>Pacific</Palette>
             <ChartBorderSkin>
               <Style>
@@ -544,10 +556,11 @@
                 <VerticalAlign>Top</VerticalAlign>
               </Style>
             </ChartNoDataMessage>
-            <Top>1.16416cm</Top>
+            <DataSetName>DataSet1</DataSetName>
+            <Top>0.56416cm</Top>
             <Left>0.26977cm</Left>
-            <Height>8.66572cm</Height>
-            <Width>11.99791cm</Width>
+            <Height>8.96875cm</Height>
+            <Width>12.02438cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -559,7 +572,7 @@
             </Style>
           </Chart>
         </ReportItems>
-        <Height>4.02628in</Height>
+        <Height>3.80753in</Height>
         <Style />
       </Body>
       <Width>7.73808in</Width>
