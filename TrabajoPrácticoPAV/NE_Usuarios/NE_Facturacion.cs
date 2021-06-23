@@ -75,5 +75,13 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
         {
             return _BD.EjecutarSelect("SELECT * FROM Factura WHERE fechaPago BETWEEN '" + fechaDesde + "' AND '" + fechaHasta + "'");
         }
+        public DataTable RecuperarFacturasXMesTodas()
+        {
+            return _BD.EjecutarSelect("SELECT idFactura, fechaPago FROM Factura");
+        }
+        public DataTable RecuperarFacturasXMes(int Mes)
+        {
+            return _BD.EjecutarSelect("SELECT idFactura, fechaPago FROM Factura where MONTH(fechaPago) = " + Mes);
+        }
     }
 }
