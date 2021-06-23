@@ -200,6 +200,17 @@
     <Compile Include="Formularios\Estadisticas\PasajerosMayores\Frm_PasajerosMayores.Designer.cs">
       <DependentUpon>Frm_PasajerosMayores.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Estadisticas\PasajerosPorClase\Ds_EstadisticaPasajerosPorClase.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ds_EstadisticaPasajerosPorClase.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Estadisticas\PasajerosPorClase\Frm_PasajerosPorClase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Estadisticas\PasajerosPorClase\Frm_PasajerosPorClase.Designer.cs">
+      <DependentUpon>Frm_PasajerosPorClase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Estadisticas\ViajesPorMes\Ds_ViajesPorMes.cs">
       <DependentUpon>Ds_ViajesPorMes.xsd</DependentUpon>
     </Compile>
@@ -803,6 +814,10 @@
     <EmbeddedResource Include="Formularios\Estadisticas\PasajerosMayores\Frm_PasajerosMayores.resx">
       <DependentUpon>Frm_PasajerosMayores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Estadisticas\PasajerosPorClase\EstadisticaPasajerosPorClase.rdlc" />
+    <EmbeddedResource Include="Formularios\Estadisticas\PasajerosPorClase\Frm_PasajerosPorClase.resx">
+      <DependentUpon>Frm_PasajerosPorClase.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Estadisticas\ViajesPorMes\Estadistica_ViajesPorMes.rdlc" />
     <EmbeddedResource Include="Formularios\Estadisticas\ViajesPorMes\Frm_EViajesPorMes.resx">
       <DependentUpon>Frm_EViajesPorMes.cs</DependentUpon>
@@ -1080,6 +1095,17 @@
     </None>
     <None Include="Formularios\Estadisticas\PasajerosMayores\Ds_EstadisticaPasajerosMayores.xss">
       <DependentUpon>Ds_EstadisticaPasajerosMayores.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Estadisticas\PasajerosPorClase\Ds_EstadisticaPasajerosPorClase.xsc">
+      <DependentUpon>Ds_EstadisticaPasajerosPorClase.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Estadisticas\PasajerosPorClase\Ds_EstadisticaPasajerosPorClase.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Ds_EstadisticaPasajerosPorClase.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Formularios\Estadisticas\PasajerosPorClase\Ds_EstadisticaPasajerosPorClase.xss">
+      <DependentUpon>Ds_EstadisticaPasajerosPorClase.xsd</DependentUpon>
     </None>
     <None Include="Formularios\Estadisticas\ViajesPorMes\Ds_ViajesPorMes.xsc">
       <DependentUpon>Ds_ViajesPorMes.xsd</DependentUpon>

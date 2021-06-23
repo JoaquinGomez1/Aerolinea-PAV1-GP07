@@ -405,15 +405,16 @@
             // porcentajeDePasajerosMayoresDeEdadToolStripMenuItem
             // 
             this.porcentajeDePasajerosMayoresDeEdadToolStripMenuItem.Name = "porcentajeDePasajerosMayoresDeEdadToolStripMenuItem";
-            this.porcentajeDePasajerosMayoresDeEdadToolStripMenuItem.Size = new System.Drawing.Size(435, 24);
+            this.porcentajeDePasajerosMayoresDeEdadToolStripMenuItem.Size = new System.Drawing.Size(414, 24);
             this.porcentajeDePasajerosMayoresDeEdadToolStripMenuItem.Text = "Porcentaje de pasajeros mayores de edad";
             this.porcentajeDePasajerosMayoresDeEdadToolStripMenuItem.Click += new System.EventHandler(this.porcentajeDePasajerosMayoresDeEdadToolStripMenuItem_Click);
             // 
             // porcentajeDePasajerosPorVueloEnUnAñoToolStripMenuItem
             // 
             this.porcentajeDePasajerosPorVueloEnUnAñoToolStripMenuItem.Name = "porcentajeDePasajerosPorVueloEnUnAñoToolStripMenuItem";
-            this.porcentajeDePasajerosPorVueloEnUnAñoToolStripMenuItem.Size = new System.Drawing.Size(435, 24);
-            this.porcentajeDePasajerosPorVueloEnUnAñoToolStripMenuItem.Text = "Porcentaje de pasajeros por vuelo en un año";
+            this.porcentajeDePasajerosPorVueloEnUnAñoToolStripMenuItem.Size = new System.Drawing.Size(414, 24);
+            this.porcentajeDePasajerosPorVueloEnUnAñoToolStripMenuItem.Text = "Porcentaje de pasajeros por clase";
+            this.porcentajeDePasajerosPorVueloEnUnAñoToolStripMenuItem.Click += new System.EventHandler(this.porcentajeDePasajerosPorVueloEnUnAñoToolStripMenuItem_Click);
             // 
             // tripulacionToolStripMenuItem1
             // 
