@@ -217,6 +217,17 @@
     <Compile Include="Formularios\Estadisticas\ViajesPorSemana\Frm_EViajesPorSemana.Designer.cs">
       <DependentUpon>Frm_EViajesPorSemana.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Estadisticas\ViajesXFecha\Ds_ViajesXFecha.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ds_ViajesXFecha.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Estadisticas\ViajesXFecha\Frm_viajesXFecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Estadisticas\ViajesXFecha\Frm_viajesXFecha.Designer.cs">
+      <DependentUpon>Frm_viajesXFecha.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Estadisticas\VuelosXAeropuerto\DS_VuelosXAeropuerto.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -821,6 +832,10 @@
       <DependentUpon>Frm_EViajesPorMes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Estadisticas\ViajesPorSemana\Estadistica_ViajesPorSemana.rdlc" />
+    <EmbeddedResource Include="Formularios\Estadisticas\ViajesXFecha\Frm_viajesXFecha.resx">
+      <DependentUpon>Frm_viajesXFecha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Estadisticas\ViajesXFecha\ViajesXFecha.rdlc" />
     <EmbeddedResource Include="Formularios\Estadisticas\VuelosXAeropuerto\Frm_VuelosXAeropuerto.resx">
       <DependentUpon>Frm_VuelosXAeropuerto.cs</DependentUpon>
     </EmbeddedResource>
@@ -1108,6 +1123,17 @@
     </None>
     <None Include="Formularios\Estadisticas\ViajesPorSemana\Ds_ViajesPorSemana.xss">
       <DependentUpon>Ds_ViajesPorSemana.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Estadisticas\ViajesXFecha\Ds_ViajesXFecha.xsc">
+      <DependentUpon>Ds_ViajesXFecha.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Estadisticas\ViajesXFecha\Ds_ViajesXFecha.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Ds_ViajesXFecha.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Formularios\Estadisticas\ViajesXFecha\Ds_ViajesXFecha.xss">
+      <DependentUpon>Ds_ViajesXFecha.xsd</DependentUpon>
     </None>
     <None Include="Formularios\Estadisticas\VuelosXAeropuerto\DS_VuelosXAeropuerto.xsc">
       <DependentUpon>DS_VuelosXAeropuerto.xsd</DependentUpon>

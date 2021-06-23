@@ -162,5 +162,13 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             string sql = "SELECT MONTH(fechaSalida) as Mes, COUNT( * ) as Cantidad, COUNT( * ) * 100 / (SELECT COUNT( * ) FROM RESERVA) as Porcentaje FROM Reserva Group By MONTH(fechaSalida)";
             return _DB.EjecutarSelect(sql);
         }
+
+        public DataTable RecuperarViajesXFecha(string fecha)
+        {
+            DataTable table = new DataTable();
+
+            string sql = $"select numeroDeViaje, fechaSalida  from Reserva where fechaSalida = ' {fecha}   'order by fechaSalida, numeroDeViaje";
+            return table;
+        }
     }
 }
