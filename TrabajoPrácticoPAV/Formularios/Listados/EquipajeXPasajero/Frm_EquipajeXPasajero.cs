@@ -46,7 +46,11 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.EquipajeXPasajero
 
         private void btn_Buscar_Click(object sender, EventArgs e)
         {
-            
+            if (tabla.Rows.Count > 0)
+                MessageBox.Show("Hay datos!!!");
+            else
+                MessageBox.Show("No hay datos!!!");
+
             if (rbu_Pasajero.Checked && cmb_TipoDoc.SelectedIndex != -1 && msk_NroDoc.Text != " ")
             {
                 tabla = tripulacion.RecuperarPorPasajero(cmb_TipoDoc.Text, msk_NroDoc.Text);

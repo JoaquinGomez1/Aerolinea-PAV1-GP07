@@ -121,5 +121,25 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
 
             return _BD.EjecutarSelect(sql);
         }
+        public DataTable E_RecuperarPorModelo(string NomModelo)
+        {
+            string sql = @"SELECT  CONCAT((SELECT nombre FROM Modelo WHERE idModelo = v.idModelo), ' ',v.numeroPorModelo) as denominacion, 
+                        COUNT(*) as valor
+                        from Vuelo v
+                        WHERE v.idModelo = " + NomModelo + " group by v.numeroPorModelo, v.idModelo";
+
+            return _BD.EjecutarSelect(sql);
+        }
+        public DataTable E_RecuperarTodos()
+        {
+            string sql = @"SELECT  CONCAT((SELECT nombre FROM Modelo WHERE idModelo = v.idModelo), ' ',v.numeroPorModelo) as denominacion, 
+                        COUNT(*) as valor
+                        from Vuelo v
+                        group by v.numeroPorModelo, v.idModelo";
+
+            return _BD.EjecutarSelect(sql);
+
+
+        }
     }
 }

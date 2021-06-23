@@ -220,6 +220,17 @@
     <Compile Include="Formularios\Estadisticas\ViajesPorSemana\Frm_EViajesPorSemana.Designer.cs">
       <DependentUpon>Frm_EViajesPorSemana.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Estadisticas\VueloPorAvion\Ds_VueloPorAvion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ds_VueloPorAvion.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Estadisticas\VueloPorAvion\Frm_EVueloPorAvion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Estadisticas\VueloPorAvion\Frm_EVueloPorAvion.Designer.cs">
+      <DependentUpon>Frm_EVueloPorAvion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Facturaciones\Frm_ConsultarFactura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -332,12 +343,6 @@
     </Compile>
     <Compile Include="Formularios\Listados\TramosPorViaje\Frm_ReporteViajeXTramo.Designer.cs">
       <DependentUpon>Frm_ReporteViajeXTramo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Listados\TramosPorViaje\Frm_ReporteViajeXTramo.designer.cs">
-      <DependentUpon>Frm_ReporteViajeXTramo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Listados\Vuelos\Frm_ReporteVueloXAeropuerto.cs">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Listados\Vuelos\Frm_ReporteVueloXAeropuerto.Designer.cs">
       <DependentUpon>Frm_ReporteVueloXAeropuerto.cs</DependentUpon>
@@ -807,6 +812,10 @@
     <EmbeddedResource Include="Formularios\Estadisticas\ViajesPorMes\Frm_EViajesPorMes.resx">
       <DependentUpon>Frm_EViajesPorMes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Estadisticas\VueloPorAvion\Estadistica_VueloPorAvion.rdlc" />
+    <EmbeddedResource Include="Formularios\Estadisticas\VueloPorAvion\Frm_EVueloPorAvion.resx">
+      <DependentUpon>Frm_EVueloPorAvion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Facturaciones\Frm_ConsultarFactura.resx">
       <DependentUpon>Frm_ConsultarFactura.cs</DependentUpon>
     </EmbeddedResource>
@@ -1091,6 +1100,17 @@
     </None>
     <None Include="Formularios\Estadisticas\ViajesPorMes\Ds_ViajesPorMes.xss">
       <DependentUpon>Ds_ViajesPorMes.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Estadisticas\VueloPorAvion\Ds_VueloPorAvion.xsc">
+      <DependentUpon>Ds_VueloPorAvion.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Estadisticas\VueloPorAvion\Ds_VueloPorAvion.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Ds_VueloPorAvion.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Formularios\Estadisticas\VueloPorAvion\Ds_VueloPorAvion.xss">
+      <DependentUpon>Ds_VueloPorAvion.xsd</DependentUpon>
     </None>
     <None Include="Formularios\Listados\Aeropuertos\Ds_ReporteAeroPais.xsc">
       <DependentUpon>Ds_ReporteAeroPais.xsd</DependentUpon>
