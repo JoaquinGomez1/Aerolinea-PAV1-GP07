@@ -8,17 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Reporting.WinForms;
+using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.NE_Usuarios;
 
 namespace TrabajoPrácticoPAV.Formularios.Estadisticas.FacturasXPago
 {
     public partial class Frm_FacturasXPago : Form
     {
-        NE_Facturacion facturas = new NE_Facturacion();
+        private NE_Facturacion facturas = new NE_Facturacion();
 
         public Frm_FacturasXPago()
         {
             InitializeComponent();
+            this.BackColor = Estilo.ColorFondoForms;
+            Estilo.FormatearEstilo(this.Controls);
             this.CenterToScreen();
         }
 
@@ -54,7 +57,8 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.FacturasXPago
                 ArmarReporteUsuario01(tabla);
             }
         }
-        private void ArmarReporteUsuario01(DataTable tabla) // Aca hay algo mal 
+
+        private void ArmarReporteUsuario01(DataTable tabla) // Aca hay algo mal
         {
             ReportDataSource PaqueteDatos = new ReportDataSource("DataSet1", tabla);
             rv_1.LocalReport.ReportEmbeddedResource = "TrabajoPrácticoPAV.Formularios.Estadisticas.FacturasXPago.ReporteFacturaXPago.rdlc";

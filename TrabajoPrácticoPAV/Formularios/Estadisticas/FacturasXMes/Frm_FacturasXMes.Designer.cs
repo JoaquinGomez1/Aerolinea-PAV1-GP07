@@ -46,12 +46,12 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.FacturasXMes
             this.rv_1.Location = new System.Drawing.Point(12, 65);
             this.rv_1.Name = "rv_1";
             this.rv_1.ServerReport.BearerToken = null;
-            this.rv_1.Size = new System.Drawing.Size(734, 400);
+            this.rv_1.Size = new System.Drawing.Size(697, 311);
             this.rv_1.TabIndex = 0;
             // 
             // btn_Calcular
             // 
-            this.btn_Calcular.Location = new System.Drawing.Point(635, 15);
+            this.btn_Calcular.Location = new System.Drawing.Point(598, 15);
             this.btn_Calcular.Name = "btn_Calcular";
             this.btn_Calcular.Size = new System.Drawing.Size(111, 44);
             this.btn_Calcular.TabIndex = 1;
@@ -134,7 +134,7 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.FacturasXMes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(758, 477);
+            this.ClientSize = new System.Drawing.Size(717, 382);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.msk_annoHasta);

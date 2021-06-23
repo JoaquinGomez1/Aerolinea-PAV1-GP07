@@ -1,7 +1,9 @@
 ﻿
+using System.Windows.Forms;
+
 namespace TrabajoPrácticoPAV.Formularios.Facturaciones
 {
-    partial class Reporte_Pasajeros
+    partial class Frm_Facturacion : Form
     {
         /// <summary>
         /// Required designer variable.
