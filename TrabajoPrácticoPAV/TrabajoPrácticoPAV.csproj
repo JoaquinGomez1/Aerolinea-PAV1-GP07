@@ -217,6 +217,17 @@
     <Compile Include="Formularios\Estadisticas\ViajesPorSemana\Frm_EViajesPorSemana.Designer.cs">
       <DependentUpon>Frm_EViajesPorSemana.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Estadisticas\VueloPorAvion\Ds_VueloPorAvion1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ds_VueloPorAvion.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Estadisticas\VueloPorAvion\Frm_EVueloPorAvion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Estadisticas\VueloPorAvion\Frm_EVueloPorAvion.Designer.cs">
+      <DependentUpon>Frm_EVueloPorAvion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Estadisticas\VuelosXAeropuerto\DS_VuelosXAeropuerto.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -821,6 +832,10 @@
       <DependentUpon>Frm_EViajesPorMes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Estadisticas\ViajesPorSemana\Estadistica_ViajesPorSemana.rdlc" />
+    <EmbeddedResource Include="Formularios\Estadisticas\VueloPorAvion\Estadistica_VueloPorAvion.rdlc" />
+    <EmbeddedResource Include="Formularios\Estadisticas\VueloPorAvion\Frm_EVueloPorAvion.resx">
+      <DependentUpon>Frm_EVueloPorAvion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Estadisticas\VuelosXAeropuerto\Frm_VuelosXAeropuerto.resx">
       <DependentUpon>Frm_VuelosXAeropuerto.cs</DependentUpon>
     </EmbeddedResource>
@@ -1108,6 +1123,17 @@
     </None>
     <None Include="Formularios\Estadisticas\ViajesPorSemana\Ds_ViajesPorSemana.xss">
       <DependentUpon>Ds_ViajesPorSemana.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Estadisticas\VueloPorAvion\Ds_VueloPorAvion.xsc">
+      <DependentUpon>Ds_VueloPorAvion.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Estadisticas\VueloPorAvion\Ds_VueloPorAvion.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Ds_VueloPorAvion1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Formularios\Estadisticas\VueloPorAvion\Ds_VueloPorAvion.xss">
+      <DependentUpon>Ds_VueloPorAvion.xsd</DependentUpon>
     </None>
     <None Include="Formularios\Estadisticas\VuelosXAeropuerto\DS_VuelosXAeropuerto.xsc">
       <DependentUpon>DS_VuelosXAeropuerto.xsd</DependentUpon>
