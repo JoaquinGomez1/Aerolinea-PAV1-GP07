@@ -30,9 +30,6 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.AeropuertoPais
             this.BackColor = Estilo.ColorFondoForms;
             Estilo.FormatearEstilo(this.Controls);
             Rbutodos.Checked = true;
-            //cmb_Modelo.CargarCombo();
-            //this.reportViewer1.RefreshReport();
-            this.reportViewer1.RefreshReport();
             this.reportViewer1.RefreshReport();
         }
 
@@ -41,8 +38,9 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.AeropuertoPais
             if (Rbutodos.Checked == true)
             {
                 tabla = aeropuerto.Reporte_EstadisticarecuperarTodos();
+                string parametro = "Cantidad de aeropuertos por ciudad";
                 if (tabla.Rows.Count != 0)
-                    ArmarEstadisticaAeropuertoXpais();
+                    ArmarEstadisticaAeropuertoXpais(parametro);
                 else
                 {
                     reportViewer1.LocalReport.DataSources.Clear();
@@ -50,63 +48,42 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.AeropuertoPais
                     MessageBox.Show("No se encontraron resultados para la búsqueda");
                 }
             }
-            //else if (rbu01.Checked == true)
-            //{
-            //    if (Txt_nombres.Text != "")
-            //    {
-            //        tabla = aeropuerto.Reporte_recuperarXNonmbre(Txt_nombres.Text);
-            //        if (tabla.Rows.Count != 0)
-            //            ArmarReporteAeropuertos();
-            //        else
-            //        {
-            //            reportViewer1.LocalReport.DataSources.Clear();
-            //            reportViewer1.RefreshReport();
-            //            MessageBox.Show("No se encontraron resultados para la búsqueda");
-            //        }
-            //    }
-            //    else
-            //        MessageBox.Show("Por favor ingrese un nombre para realizar la búsqueda");
-
-            //}
-            //else if (rbu02.Checked == true)
-            //{
-            //    string desde = "";
-            //    string hasta = "";
-            //    if (txt_codigodesde.Text == "")
-            //        desde = "a";
-            //    else
-            //        desde = txt_codigodesde.Text;
-            //    if (txt_codigohasta.Text == "")
-            //        hasta = "Z";
-            //    else
-            //        hasta = txt_codigohasta.Text;
-
-            //    tabla = aeropuerto.Reporte_recuperarXCodigoRango(desde, hasta);
-            //    if (tabla.Rows.Count != 0)
-            //        ArmarReporteAeropuertos();
-            //    else
-            //    {
-            //        reportViewer1.LocalReport.DataSources.Clear();
-            //        reportViewer1.RefreshReport();
-            //        MessageBox.Show("No se encontraron resultados para la búsqueda");
-            //    }
-            //}
-
-            //else if (rbu03.Checked == true)
-            //{
-            //    if (cmb_pais.SelectedIndex != -1)
-            //    {
-            //        tabla = aeropuerto.Reporte_recuperarXpais(cmb_pais.SelectedValue.ToString());
-            //        if (tabla.Rows.Count != 0)
-            //            ArmarReporteAeropuertos();
-            //        else
-            //        {
-            //            reportViewer1.LocalReport.DataSources.Clear();
-            //            reportViewer1.RefreshReport();
-            //            MessageBox.Show("No se encontraron resultados para la búsqueda");
-            //        }
-            //    }
-            //}
+            else if (Rbu_porLetra.Checked == true)
+            {
+                if (txt_letra.Text != "")
+                {
+                    tabla = aeropuerto.Reporte_recuperarXletra(txt_letra.Text);
+                    string parametro = "Cantidad de Aeropuertos que contienen '" + txt_letra.Text+" '";
+                    if (tabla.Rows.Count != 0)
+                        ArmarEstadisticaAeropuertoXpais(parametro);
+                    else
+                    {
+                        reportViewer1.LocalReport.DataSources.Clear();
+                        reportViewer1.RefreshReport();
+                        MessageBox.Show("No se encontraron resultados para la búsqueda");
+                    }
+                }
+                else
+                    MessageBox.Show("Por favor ingrese un nombre para realizar la búsqueda");
+            }
+            else if (Rbu_ciudad.Checked == true)
+            {
+                if (txt_ciudad.Text != "")
+                {
+                    tabla = aeropuerto.Reporte_recuperarXciudad(txt_ciudad.Text);
+                    string parametro = "Cantidad de Aeropuertos en la ciudad '" + txt_ciudad.Text+"'";
+                    if (tabla.Rows.Count != 0)
+                        ArmarEstadisticaAeropuertoXpais(parametro);
+                    else
+                    {
+                        reportViewer1.LocalReport.DataSources.Clear();
+                        reportViewer1.RefreshReport();
+                        MessageBox.Show("No se encontraron resultados para la búsqueda");
+                    }
+                }
+                else
+                    MessageBox.Show("Por favor ingrese un nombre para realizar la búsqueda");
+            }
             else
             {
                 Tratamientos_Especiales Tratamiento = new Tratamientos_Especiales();
@@ -114,12 +91,12 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.AeropuertoPais
                     MessageBox.Show("No realizo selección para la búsqueda");
             }
         }
-        public void ArmarEstadisticaAeropuertoXpais()
+        public void ArmarEstadisticaAeropuertoXpais(string parametro)
         {
             ReportDataSource datos = new ReportDataSource("DataSet1", tabla);
             reportViewer1.LocalReport.ReportEmbeddedResource = "TrabajoPrácticoPAV.Formularios.Estadisticas.AeropuertoPais.Reporte_AeroPais.rdlc";
             ReportParameter[] parametros = new ReportParameter[1];
-            parametros[0] = new ReportParameter("Rp01", "Hola aca va parametro");
+            parametros[0] = new ReportParameter("Rp01", parametro);
             reportViewer1.LocalReport.SetParameters(parametros);
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.DataSources.Add(datos);
@@ -127,24 +104,6 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.AeropuertoPais
 
         }
 
-        private void reportViewer1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
