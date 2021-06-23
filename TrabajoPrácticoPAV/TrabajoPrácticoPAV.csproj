@@ -197,6 +197,9 @@
     <Compile Include="Formularios\Estadisticas\AeropuertoPais\Frm_EstadisticaAeroPais.Designer.cs">
       <DependentUpon>Frm_EstadisticaAeroPais.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Estadisticas\FacturasXMes\Ds_FacturasXMes.cs">
+      <DependentUpon>Ds_FacturasXMes.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Estadisticas\FacturasXMes\Ds_FacturasXMes.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -943,7 +946,6 @@
     <EmbeddedResource Include="Formularios\Estadisticas\FacturasXPago\Frm_FacturasXPago.resx">
       <DependentUpon>Frm_FacturasXPago.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Estadisticas\FacturasXPago\ReporteFacturasXPago.rdlc" />
     <EmbeddedResource Include="Formularios\Estadisticas\AvionesXAeropuerto\Frm_AvionesXAeropuerto.resx">
       <DependentUpon>Frm_AvionesXAeropuerto.cs</DependentUpon>
     </EmbeddedResource>
@@ -952,6 +954,7 @@
       <DependentUpon>Frm_ReporteAvionesXModelos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Estadisticas\AvionesXModelos\Report1.rdlc" />
+    <EmbeddedResource Include="Formularios\Estadisticas\FacturasXPago\ReporteFacturaXPago.rdlc" />
     <EmbeddedResource Include="Formularios\Estadisticas\PasajerosMayores\EstadisticaPasajerosMayores.rdlc" />
     <EmbeddedResource Include="Formularios\Estadisticas\PasajerosMayores\Frm_PasajerosMayores.resx">
       <DependentUpon>Frm_PasajerosMayores.cs</DependentUpon>
@@ -1267,7 +1270,6 @@
     <None Include="Formularios\Estadisticas\FacturasXPago\Ds_FacturasXPago.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Ds_FacturasXPago.Designer.cs</LastGenOutput>
     </None>
     <None Include="Formularios\Estadisticas\FacturasXPago\Ds_FacturasXPago.xss">
       <DependentUpon>Ds_FacturasXPago.xsd</DependentUpon>
