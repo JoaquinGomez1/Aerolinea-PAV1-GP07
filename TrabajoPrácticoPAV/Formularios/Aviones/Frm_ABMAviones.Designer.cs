@@ -36,14 +36,14 @@ namespace TrabajoPrácticoPAV.Formularios
             this.label2 = new System.Windows.Forms.Label();
             this.chk_todos = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txt_numero = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
+            this.cmb_Modelo = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
             this.grid_aviones = new System.Windows.Forms.DataGridView();
             this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idModelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_volver = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txt_numero = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
-            this.cmb_Modelo = new TrabajoPrácticoPAV.Clase.ComboBox_Aerolinea();
             this.btn_eliminar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.btn_limpiar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.btn_agregar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
@@ -123,6 +123,33 @@ namespace TrabajoPrácticoPAV.Formularios
             this.panel1.Size = new System.Drawing.Size(498, 100);
             this.panel1.TabIndex = 18;
             // 
+            // txt_numero
+            // 
+            this.txt_numero.Location = new System.Drawing.Point(90, 19);
+            this.txt_numero.Name = "txt_numero";
+            this.txt_numero.Pp_EsPk = true;
+            this.txt_numero.Pp_MensajeError = null;
+            this.txt_numero.Pp_NombreCampo = "numeroPorModelo";
+            this.txt_numero.Pp_NombreTabla = "Avion";
+            this.txt_numero.Size = new System.Drawing.Size(177, 26);
+            this.txt_numero.TabIndex = 4;
+            // 
+            // cmb_Modelo
+            // 
+            this.cmb_Modelo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_Modelo.FormattingEnabled = true;
+            this.cmb_Modelo.Location = new System.Drawing.Point(90, 50);
+            this.cmb_Modelo.Name = "cmb_Modelo";
+            this.cmb_Modelo.Pp_CampoAceptaNull = false;
+            this.cmb_Modelo.Pp_EsPk = false;
+            this.cmb_Modelo.Pp_MensajeError = "No se ha cargado un valor de modelo";
+            this.cmb_Modelo.Pp_NombreCampo = "nombre";
+            this.cmb_Modelo.Pp_NombreCampoInsert = "idModelo";
+            this.cmb_Modelo.Pp_NombreTabla = "Modelo";
+            this.cmb_Modelo.Pp_PkTabla = "idModelo";
+            this.cmb_Modelo.Size = new System.Drawing.Size(177, 28);
+            this.cmb_Modelo.TabIndex = 7;
+            // 
             // grid_aviones
             // 
             this.grid_aviones.AllowUserToAddRows = false;
@@ -180,32 +207,6 @@ namespace TrabajoPrácticoPAV.Formularios
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(724, 393);
             this.panel2.TabIndex = 21;
-            // 
-            // txt_numero
-            // 
-            this.txt_numero.Location = new System.Drawing.Point(90, 19);
-            this.txt_numero.Name = "txt_numero";
-            this.txt_numero.Pp_EsPk = true;
-            this.txt_numero.Pp_MensajeError = null;
-            this.txt_numero.Pp_NombreCampo = "numeroPorModelo";
-            this.txt_numero.Pp_NombreTabla = "Avion";
-            this.txt_numero.Size = new System.Drawing.Size(177, 26);
-            this.txt_numero.TabIndex = 4;
-            // 
-            // cmb_Modelo
-            // 
-            this.cmb_Modelo.FormattingEnabled = true;
-            this.cmb_Modelo.Location = new System.Drawing.Point(90, 50);
-            this.cmb_Modelo.Name = "cmb_Modelo";
-            this.cmb_Modelo.Pp_CampoAceptaNull = false;
-            this.cmb_Modelo.Pp_EsPk = false;
-            this.cmb_Modelo.Pp_MensajeError = "No se ha cargado un valor de modelo";
-            this.cmb_Modelo.Pp_NombreCampo = "nombre";
-            this.cmb_Modelo.Pp_NombreCampoInsert = "idModelo";
-            this.cmb_Modelo.Pp_NombreTabla = "Modelo";
-            this.cmb_Modelo.Pp_PkTabla = "idModelo";
-            this.cmb_Modelo.Size = new System.Drawing.Size(177, 28);
-            this.cmb_Modelo.TabIndex = 7;
             // 
             // btn_eliminar
             // 

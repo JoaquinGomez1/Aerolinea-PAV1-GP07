@@ -214,6 +214,11 @@
     <Compile Include="Formularios\Estadisticas\ViajesPorMes\Frm_EViajesPorMes.Designer.cs">
       <DependentUpon>Frm_EViajesPorMes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Estadisticas\ViajesPorSemana\Ds_ViajesPorSemana.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ds_ViajesPorSemana.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Estadisticas\ViajesPorSemana\Frm_EViajesPorSemana.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -807,6 +812,7 @@
     <EmbeddedResource Include="Formularios\Estadisticas\ViajesPorMes\Frm_EViajesPorMes.resx">
       <DependentUpon>Frm_EViajesPorMes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Estadisticas\ViajesPorSemana\Estadistica_ViajesPorSemana.rdlc" />
     <EmbeddedResource Include="Formularios\Facturaciones\Frm_ConsultarFactura.resx">
       <DependentUpon>Frm_ConsultarFactura.cs</DependentUpon>
     </EmbeddedResource>
@@ -1091,6 +1097,17 @@
     </None>
     <None Include="Formularios\Estadisticas\ViajesPorMes\Ds_ViajesPorMes.xss">
       <DependentUpon>Ds_ViajesPorMes.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Estadisticas\ViajesPorSemana\Ds_ViajesPorSemana.xsc">
+      <DependentUpon>Ds_ViajesPorSemana.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Estadisticas\ViajesPorSemana\Ds_ViajesPorSemana.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Ds_ViajesPorSemana.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Formularios\Estadisticas\ViajesPorSemana\Ds_ViajesPorSemana.xss">
+      <DependentUpon>Ds_ViajesPorSemana.xsd</DependentUpon>
     </None>
     <None Include="Formularios\Listados\Aeropuertos\Ds_ReporteAeroPais.xsc">
       <DependentUpon>Ds_ReporteAeroPais.xsd</DependentUpon>
