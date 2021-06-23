@@ -114,5 +114,11 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             string sqlDelete = "DELETE FROM Aeropuerto WHERE codigo = '" + Pp_Id_aeropuerto + "'";
             _BD.Borrar(sqlDelete, false);
         }
+        public DataTable Reporte_EstadisticarecuperarTodos()
+        {
+            string sql = @"select pa.nombrePais as denominacion,count(*) as valor from aeropuerto a join ciudad c on a.idCiudad=c.idCiudad join provincia p on c.idProvincia=p.idProvincia" +
+                         @" join Pais pa on p.idPais=pa.idPais group by p.idPais, pa.nombrePais";
+            return _BD.EjecutarSelect(sql);
+        }
     }
 }
