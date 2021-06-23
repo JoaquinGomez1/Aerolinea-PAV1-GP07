@@ -2,34 +2,34 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="Ds_EstadisticaPasajerosMayores">
+    <DataSource Name="Ds_EstadisticaPasajerosPorViaje">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>b9c4432c-7e34-4353-96c8-5c6b3aa6143a</rd:DataSourceID>
+      <rd:DataSourceID>351a2e50-23eb-45ac-afc2-8fbee32e5a28</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="Ds_EstadisticaPasajerosMayores">
+    <DataSet Name="Ds_EstadisticaPasajerosPorClase">
       <Query>
-        <DataSourceName>Ds_EstadisticaPasajerosMayores</DataSourceName>
+        <DataSourceName>Ds_EstadisticaPasajerosPorViaje</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="descripcion">
-          <DataField>descripcion</DataField>
+        <Field Name="Cantidad">
+          <DataField>Cantidad</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="cantidad">
-          <DataField>cantidad</DataField>
+        <Field Name="Clase">
+          <DataField>Clase</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>Ds_EstadisticaPasajerosMayores</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Usuario\Documents\TERCER AÑO\PAVI\Teorico\Aerolinea-PAV1-GP07-1\TrabajoPrácticoPAV\Formularios\Estadisticas\PasajerosMayores\Ds_EstadisticaPasajerosMayores.xsd</rd:SchemaPath>
-        <rd:TableName>EstadisticaPasajerosPorEdad</rd:TableName>
+        <rd:DataSetName>Ds_EstadisticaPasajerosPorViaje</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\Usuario\Documents\TERCER AÑO\PAVI\Teorico\Aerolinea-PAV1-GP07-1\TrabajoPrácticoPAV\Formularios\Estadisticas\PasajerosPorClase\Ds_EstadisticaPasajerosPorClase.xsd</rd:SchemaPath>
+        <rd:TableName>EstadisticaPasajerosPorClase</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
         <rd:TableAdapterName />
@@ -40,48 +40,11 @@
     <ReportSection>
       <Body>
         <ReportItems>
-          <Textbox Name="Textbox1">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>Analisis estadistico de pasajeros mayores de edad.</Value>
-                    <Style>
-                      <FontFamily>Malgun Gothic</FontFamily>
-                      <FontSize>12pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Center</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.28787cm</Top>
-            <Left>0.42016cm</Left>
-            <Height>0.75875cm</Height>
-            <Width>16.98029cm</Width>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <BackgroundColor>LightSteelBlue</BackgroundColor>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
           <Line Name="Line1">
-            <Top>8.04016cm</Top>
-            <Left>0.42016cm</Left>
+            <Top>7.31573cm</Top>
+            <Left>0.72053cm</Left>
             <Height>0cm</Height>
             <Width>17.55007cm</Width>
-            <ZIndex>1</ZIndex>
             <Style>
               <Border>
                 <Style>Solid</Style>
@@ -111,7 +74,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Descripcion</Value>
+                                  <Value>Numero de clase</Value>
                                   <Style>
                                     <FontFamily>Malgun Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
@@ -147,7 +110,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Cantidad</Value>
+                                  <Value>Cantidad de pasajeros</Value>
                                   <Style>
                                     <FontFamily>Malgun Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
@@ -181,14 +144,14 @@
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="descripcion">
+                        <Textbox Name="Clase">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!descripcion.Value</Value>
+                                  <Value>=Fields!Clase.Value</Value>
                                   <Style>
                                     <Format>0.00;(0.00)</Format>
                                   </Style>
@@ -199,7 +162,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>descripcion</rd:DefaultName>
+                          <rd:DefaultName>Clase</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -215,14 +178,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="cantidad">
+                        <Textbox Name="Cantidad">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!cantidad.Value</Value>
+                                  <Value>=Fields!Cantidad.Value</Value>
                                   <Style>
                                     <Format>0.00;(0.00)</Format>
                                   </Style>
@@ -233,7 +196,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>cantidad</rd:DefaultName>
+                          <rd:DefaultName>Cantidad</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -267,12 +230,12 @@
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
-            <DataSetName>Ds_EstadisticaPasajerosMayores</DataSetName>
-            <Top>1.95474cm</Top>
-            <Left>11.46559cm</Left>
+            <DataSetName>Ds_EstadisticaPasajerosPorClase</DataSetName>
+            <Top>1.41615cm</Top>
+            <Left>11.99793cm</Left>
             <Height>2.07312cm</Height>
             <Width>5.93486cm</Width>
-            <ZIndex>2</ZIndex>
+            <ZIndex>1</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -285,32 +248,32 @@
                 <ChartMember>
                   <Group Name="Chart1_CategoryGroup">
                     <GroupExpressions>
-                      <GroupExpression>=Fields!descripcion.Value</GroupExpression>
+                      <GroupExpression>=Fields!Clase.Value</GroupExpression>
                     </GroupExpressions>
                   </Group>
                   <SortExpressions>
                     <SortExpression>
-                      <Value>=Fields!descripcion.Value</Value>
+                      <Value>=Fields!Clase.Value</Value>
                     </SortExpression>
                   </SortExpressions>
-                  <Label>=Fields!descripcion.Value</Label>
+                  <Label>=Fields!Clase.Value</Label>
                 </ChartMember>
               </ChartMembers>
             </ChartCategoryHierarchy>
             <ChartSeriesHierarchy>
               <ChartMembers>
                 <ChartMember>
-                  <Label>cantidad</Label>
+                  <Label>Cantidad</Label>
                 </ChartMember>
               </ChartMembers>
             </ChartSeriesHierarchy>
             <ChartData>
               <ChartSeriesCollection>
-                <ChartSeries Name="cantidad">
+                <ChartSeries Name="Cantidad">
                   <ChartDataPoints>
                     <ChartDataPoint>
                       <ChartDataPointValues>
-                        <Y>=Sum(Fields!cantidad.Value)</Y>
+                        <Y>=Sum(Fields!Cantidad.Value)</Y>
                       </ChartDataPointValues>
                       <ChartDataLabel>
                         <Style />
@@ -322,7 +285,6 @@
                       <DataElementOutput>Output</DataElementOutput>
                     </ChartDataPoint>
                   </ChartDataPoints>
-                  <Type>Shape</Type>
                   <Style />
                   <ChartEmptyPoints>
                     <Style />
@@ -574,24 +536,6 @@
                 </Style>
               </ChartArea>
             </ChartAreas>
-            <ChartLegends>
-              <ChartLegend Name="Default">
-                <Style>
-                  <BackgroundGradientType>None</BackgroundGradientType>
-                  <FontSize>8pt</FontSize>
-                </Style>
-                <ChartLegendTitle>
-                  <Caption />
-                  <Style>
-                    <FontSize>8pt</FontSize>
-                    <FontWeight>Bold</FontWeight>
-                    <TextAlign>Center</TextAlign>
-                  </Style>
-                </ChartLegendTitle>
-                <HeaderSeparatorColor>Black</HeaderSeparatorColor>
-                <ColumnSeparatorColor>Black</ColumnSeparatorColor>
-              </ChartLegend>
-            </ChartLegends>
             <Palette>BrightPastel</Palette>
             <ChartBorderSkin>
               <Style>
@@ -609,12 +553,12 @@
                 <VerticalAlign>Top</VerticalAlign>
               </Style>
             </ChartNoDataMessage>
-            <DataSetName>Ds_EstadisticaPasajerosMayores</DataSetName>
-            <Top>1.95474cm</Top>
-            <Left>0.42016cm</Left>
-            <Height>5cm</Height>
-            <Width>9.85479cm</Width>
-            <ZIndex>3</ZIndex>
+            <DataSetName>Ds_EstadisticaPasajerosPorClase</DataSetName>
+            <Top>1.41615cm</Top>
+            <Left>0.9525cm</Left>
+            <Height>5.42333cm</Height>
+            <Width>9.32245cm</Width>
+            <ZIndex>2</ZIndex>
             <Style>
               <Border>
                 <Color>LightGrey</Color>
@@ -624,18 +568,51 @@
               <BackgroundGradientType>None</BackgroundGradientType>
             </Style>
           </Chart>
+          <Textbox Name="Textbox1">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Estadistica Comparativa de pasajeros por clase.</Value>
+                    <Style>
+                      <FontFamily>Malgun Gothic</FontFamily>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <Top>0.29635cm</Top>
+            <Left>0.9525cm</Left>
+            <Height>0.81167cm</Height>
+            <Width>16.98029cm</Width>
+            <ZIndex>3</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <BackgroundColor>LightSteelBlue</BackgroundColor>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
         </ReportItems>
-        <Height>3.36309in</Height>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-        </Style>
+        <Height>3.07142in</Height>
+        <Style />
       </Body>
-      <Width>7.35566in</Width>
+      <Width>7.47682in</Width>
       <Page>
         <PageFooter>
-          <Height>1.5875cm</Height>
+          <Height>1.64042cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -655,7 +632,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox3</rd:DefaultName>
               <Top>0.41438cm</Top>
-              <Left>13.79802cm</Left>
+              <Left>14.09839cm</Left>
               <Height>0.6cm</Height>
               <Width>0.9125cm</Width>
               <Style>
@@ -684,7 +661,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox14</rd:DefaultName>
               <Top>0.41438cm</Top>
-              <Left>15.28502cm</Left>
+              <Left>15.58539cm</Left>
               <Height>0.6cm</Height>
               <Width>2.68521cm</Width>
               <ZIndex>1</ZIndex>
@@ -714,7 +691,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox13</rd:DefaultName>
               <Top>0.41438cm</Top>
-              <Left>0.42016cm</Left>
+              <Left>0.72053cm</Left>
               <Height>0.6cm</Height>
               <Width>3.10854cm</Width>
               <ZIndex>2</ZIndex>
@@ -746,27 +723,12 @@
       </Page>
     </ReportSection>
   </ReportSections>
-  <ReportParameters>
-    <ReportParameter Name="Rp_EstadisticaPasajerosMayores">
-      <DataType>String</DataType>
-      <Nullable>true</Nullable>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>ReportParameter1</Prompt>
-    </ReportParameter>
-  </ReportParameters>
   <ReportParametersLayout>
     <GridLayoutDefinition>
       <NumberOfColumns>4</NumberOfColumns>
       <NumberOfRows>2</NumberOfRows>
-      <CellDefinitions>
-        <CellDefinition>
-          <ColumnIndex>0</ColumnIndex>
-          <RowIndex>0</RowIndex>
-          <ParameterName>Rp_EstadisticaPasajerosMayores</ParameterName>
-        </CellDefinition>
-      </CellDefinitions>
     </GridLayoutDefinition>
   </ReportParametersLayout>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>533c7fa7-1282-41b6-8272-c84ab886fcbd</rd:ReportID>
+  <rd:ReportID>b2ecb831-9cbc-4fde-8ba9-64fec8fa5eac</rd:ReportID>
 </Report>

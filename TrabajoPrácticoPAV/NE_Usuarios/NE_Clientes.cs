@@ -98,5 +98,18 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
              ";
             return _BD.EjecutarSelect(sql);
         }
+
+        public DataTable RecuperarPasajerosPorClase()
+        {
+            string sql = @"Select nombre as Clase ,
+            COUNT(nombre) as Cantidad FROM Tipo_Asiento JOIN Reservas_X_Pasajero ON idTipo = Reservas_X_Pasajero.tipoClase group by nombre";
+            return _BD.EjecutarSelect(sql);
+        }
+
+        public DataTable RecuperarPorAño(int año)
+        {
+            string sql = $"Select nombre as Clase, COUNT(nombre) as Cantidad FROM Tipo_Asiento JOIN Reservas_X_Pasajero ON idTipo = Reservas_X_Pasajero.tipoClase WHERE YEAR(Reservas_X_Pasajero.fechaHoraVencimiento) = {año} group by nombre";
+            return _BD.EjecutarSelect(sql);
+        }
     }
 }

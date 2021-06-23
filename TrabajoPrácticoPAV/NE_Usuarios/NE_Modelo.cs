@@ -60,5 +60,16 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             }
 
         }
-    }
+
+        //public DataTable CompararVuelosPorAviones(string NomModelo)
+        //{
+        //    string sql = @"SELECT  v.numeroPorModelo, v.idModelo, COUNT(*) 
+        //                  from Vuelo v, Modelo m
+        //                  WHERE v.idModelo = " + NomModelo + " group by v.numeroPorModelo, v.idModelo ";
+
+
+        //}
+        
+       
+       }
 }

@@ -15,16 +15,17 @@ using TrabajoPrácticoPAV.Formularios.Listados.Tripulación;
 using TrabajoPrácticoPAV.Formularios.Listados.Avion_Por_Modelo;
 using TrabajoPrácticoPAV.Formularios.Listados.Asientos;
 using TrabajoPrácticoPAV.Formularios.Listados.Factura;
+using TrabajoPrácticoPAV.Formularios.Estadisticas.VueloPorAvion;
 
 namespace TrabajoPrácticoPAV
 {
-    static class Program
+    internal static class Program
     {
         /// <summary>
         /// Punto de entrada principal para la aplicación.
         /// </summary>
         [STAThread]
-        static void Main()
+        private static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
@@ -32,7 +33,6 @@ namespace TrabajoPrácticoPAV
             //Application.Run(new Frm_ReporteAeroPais());
             //Application.Run(new Frm_Reportes());
             //Application.Run(new Frm_ReporteFamiliareXPasajero());
-
         }
     }
 }

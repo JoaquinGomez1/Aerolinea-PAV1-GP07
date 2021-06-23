@@ -34,6 +34,7 @@ using TrabajoPrácticoPAV.Formularios.Listados.Viajes;
 using TrabajoPrácticoPAV.Formularios.Listados.Asientos;
 using TrabajoPrácticoPAV.Formularios.Listados.Tramos_por_viaje;
 using TrabajoPrácticoPAV.Formularios.Estadisticas.PasajerosMayores;
+using TrabajoPrácticoPAV.Formularios.Estadisticas.PasajerosPorViaje;
 using TrabajoPrácticoPAV.Formularios.Estadisticas.ViajesPorMes;
 using TrabajoPrácticoPAV.Formularios.Estadisticas.AvionesXModelos;
 using TrabajoPrácticoPAV.Formularios.Estadisticas.AvionesXAeropuerto;
@@ -424,6 +425,12 @@ namespace TrabajoPrácticoPAV
         {
             CerrarTodosLosMenuStrip();
             AbrirFormulario<Frm_EViajesPorSemana>();
+        }
+
+        private void porcentajeDePasajerosPorVueloEnUnAñoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_PasajerosPorViaje>();
         }
     }
 }
