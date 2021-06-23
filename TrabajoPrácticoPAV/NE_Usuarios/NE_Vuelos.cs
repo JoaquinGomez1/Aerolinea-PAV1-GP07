@@ -43,6 +43,7 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             }
         }
 
+
         public void Insertar(Control.ControlCollection controles)
         {
             _BD.Insertar(tratamiento.CostructorInsert("Vuelo", controles), false);
@@ -119,6 +120,35 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             + "JOIN Modelo m ON v.idModelo = m.idModelo" +
             $" WHERE idVuelo BETWEEN {idDesde} AND {idHasta}";
 
+            return _BD.EjecutarSelect(sql);
+        }
+
+        public DataTable Estadistica_RecuperarPorcentajes()
+        {
+            string sql = $"SELECT a.nombre as descripcion, " +
+                        "COUNT(*)*100/(SELECT COUNT(*) FROM Vuelo) as valor " +
+                        "FROM Vuelo v JOIN Aeropuerto a ON a.codigo = v.codigoAeropuertoSalida " +
+                        "GROUP BY a.nombre";
+            return _BD.EjecutarSelect(sql);
+        }
+
+
+        public DataTable Estadistica_VuelosXTodosTripulantes()
+        {
+            string sql = $"SELECT CONCAT(t.nombre, ' ', t.apellido) as descripcion, " +
+                        "COUNT(*) as valor FROM Tripulacion_X_Vuelo tv " +
+                        "JOIN Tripulacion t ON tv.idTripulacion = t.idTripulacion " +
+                        "GROUP BY t.idCargoTripulacion, t.nombre, t.apellido";
+            return _BD.EjecutarSelect(sql);
+        }
+
+        public DataTable Estadistica_VuelosXTripulantesCargo(int id)
+        {
+            string sql = $"SELECT CONCAT(t.nombre, ' ', t.apellido) as descripcion, " +
+                        "COUNT(*) as valor FROM Tripulacion_X_Vuelo tv " +
+                        "JOIN Tripulacion t ON tv.idTripulacion = t.idTripulacion " +
+                        $"WHERE t.idCargoTripulacion = {id}" +
+                        "GROUP BY t.idCargoTripulacion, t.nombre, t.apellido";
             return _BD.EjecutarSelect(sql);
         }
         public DataTable E_RecuperarPorModelo(string NomModelo)
