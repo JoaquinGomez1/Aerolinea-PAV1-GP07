@@ -36,6 +36,12 @@ using TrabajoPrácticoPAV.Formularios.Listados.Tramos_por_viaje;
 using TrabajoPrácticoPAV.Formularios.Estadisticas.PasajerosMayores;
 using TrabajoPrácticoPAV.Formularios.Estadisticas.PasajerosPorViaje;
 using TrabajoPrácticoPAV.Formularios.Estadisticas.ViajesPorMes;
+using TrabajoPrácticoPAV.Formularios.Estadisticas.AvionesXModelos;
+using TrabajoPrácticoPAV.Formularios.Estadisticas.AvionesXAeropuerto;
+using TrabajoPrácticoPAV.Formularios.Estadisticas.ViajesPorSemana;
+using TrabajoPrácticoPAV.Formularios.Estadisticas.AeropuertoPais;
+using TrabajoPrácticoPAV.Formularios.Estadisticas.TripulacionXcargo;
+using TrabajoPrácticoPAV.Formularios.Estadisticas.VueloPorAvion;
 
 namespace TrabajoPrácticoPAV
 {
@@ -406,10 +412,46 @@ namespace TrabajoPrácticoPAV
             AbrirFormulario<Frm_EViajesPorMes>();
         }
 
+        private void porcentajeDeAvionesPorModeloToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_ReporteAvionesXModelos>();
+        }
+
+        private void porcentajeDeAvionesPorAeropuertoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_AvionesXAeropuerto>();
+        }
+
+        private void porcentajeDeViajesPorDíaDeSemanaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_EViajesPorSemana>();
+        }
+
         private void porcentajeDePasajerosPorVueloEnUnAñoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CerrarTodosLosMenuStrip();
             AbrirFormulario<Frm_PasajerosPorViaje>();
+        }
+
+        private void cantidadDeAeropuertosPorPaísToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_EstadisticaAeroPais>();
+        }
+
+        private void porcentajeDeTripulaciónPorCargoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_TripulacionXcargo>();
+        }
+
+        private void cantidadDeVuelosRealizadosPorAviónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_EVueloPorAvion>();
         }
     }
 }

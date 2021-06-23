@@ -65,20 +65,21 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.PasajerosPorViaje
             }
             else if (rbu_año.Checked == true)
             {
-                if (mtxt_año.Text != null)
+                if (mtxt_año.Text != "")
                 {
                     int añoSeleccionado = Int32.Parse(mtxt_año.Text);
                     DataTable tabla2 = pasajero.RecuperarPorAño(añoSeleccionado);
                     if (tabla2.Rows.Count != 0)
                         CargarEstadisticaPasajerosPorClase(tabla2);
-                    else
-                    {
-                        rv_pasajerosPorViaje.LocalReport.DataSources.Clear();
-                        rv_pasajerosPorViaje.RefreshReport();
-                        MessageBox.Show("No se encontraron resultados para la búsqueda");
-                    }
+                }
+                else
+                {
+                    rv_pasajerosPorViaje.LocalReport.DataSources.Clear();
+                    rv_pasajerosPorViaje.RefreshReport();
+                    MessageBox.Show("No se encontraron resultados para la búsqueda");
+                }
                 }
             }
         }
     }
-}
+

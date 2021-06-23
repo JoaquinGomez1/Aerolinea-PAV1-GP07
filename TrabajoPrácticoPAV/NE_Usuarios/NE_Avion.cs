@@ -83,7 +83,46 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
 
         public DataTable RecuperarTodosReporte()
         {
-            string sql = @"SELECT Avion.numeroPorModelo, Modelo.nombre from Avion inner join  Modelo on Avion.idModelo = Modelo.idModelo order by Modelo.nombre, Avion.numeroPorModelo";
+            string sql = @"SELECT Modelo.nombre, count(*) as 'Valor' from Avion inner join  Modelo on Avion.idModelo = Modelo.idModelo group by (Modelo.nombre)";
+            DataTable tabla = new DataTable();
+            tabla = _BD.EjecutarSelect(sql);
+            return tabla;
+        }
+
+        public DataTable RecuperarAvionesPorRango(string desde, string hasta)
+        {
+            string sql = "SELECT Modelo.nombre, count(*) as 'Valor' " +
+                "from Avion inner join Modelo on Avion.idModelo = Modelo.idModelo " +
+                 " WHERE numeroPorModelo BETWEEN ("
+                + desde + ") AND (" + hasta + ")" +
+                " group by (Modelo.nombre)";  
+            DataTable tabla = new DataTable();
+            tabla = _BD.EjecutarSelect(sql);
+            return tabla;
+        }
+
+        public DataTable RecuperarAvionesAeropuerto()
+        {
+            string sql = "SELECT a.codigo, a.nombre, count(*) as 'Cantidad' FROM Aeropuerto a " +
+                "JOIN Tramo t ON t.codigoAeropuertoDestino=a.codigo OR t.codigoAeropuertoSalida=a.codigo " +
+                "JOIN Vuelo v ON v.codigoAeropuertoDestino=t.codigoAeropuertoDestino AND " +
+                "v.codigoAeropuertoSalida=t.codigoAeropuertoSalida " +
+                "JOIN Avion av ON av.numeroPorModelo=v.numeroPorModelo AND av.idModelo=v.idModelo " +
+                "GROUP BY a.codigo,a.nombre";
+            DataTable tabla = new DataTable();
+            tabla = _BD.EjecutarSelect(sql);
+            return tabla;
+        }
+
+        public DataTable RecuperarAvionesAeropuerto_SegunId(string desde, string hasta)
+        {
+            string sql = "SELECT a.codigo, a.nombre, count(*) as 'Cantidad' FROM Aeropuerto a " +
+                "JOIN Tramo t ON t.codigoAeropuertoDestino=a.codigo OR t.codigoAeropuertoSalida=a.codigo " +
+                "JOIN Vuelo v ON v.codigoAeropuertoDestino=t.codigoAeropuertoDestino AND " +
+                "v.codigoAeropuertoSalida=t.codigoAeropuertoSalida " +
+                "JOIN Avion av ON av.numeroPorModelo=v.numeroPorModelo AND av.idModelo=v.idModelo " +
+                "WHERE av.numeroPorModelo BETWEEN (" + desde +") AND (" + hasta + ") " +
+                "GROUP BY a.codigo,a.nombre";
             DataTable tabla = new DataTable();
             tabla = _BD.EjecutarSelect(sql);
             return tabla;

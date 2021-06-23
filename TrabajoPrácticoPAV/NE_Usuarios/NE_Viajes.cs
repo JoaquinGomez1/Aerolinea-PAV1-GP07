@@ -156,10 +156,31 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             return tabla;
         }
 
+        public DataTable RecuperarViajesXFecha(string fecha)
+        {
+            DataTable table = new DataTable();
+
+            string sql = $"select numeroDeViaje, fechaSalida  from Reserva where fechaSalida = ' {fecha}   'order by fechaSalida, numeroDeViaje";
+            return table;
+        }
+
         public DataTable GetViajesPorMes()
         {
             // Busca en reservas porque es lo único que tiene fecha en la tabla y una reserva tiene un solo viaje asi que es casi lo
             string sql = "SELECT MONTH(fechaSalida) as Mes, COUNT( * ) as Cantidad, COUNT( * ) * 100 / (SELECT COUNT( * ) FROM RESERVA) as Porcentaje FROM Reserva Group By MONTH(fechaSalida)";
+            return _DB.EjecutarSelect(sql);
+        }
+
+        public DataTable GetViajesPorMes(string initialDate, string finalDate)
+        {
+            // Busca en reservas porque es lo único que tiene fecha en la tabla y una reserva tiene un solo viaje asi que es casi lo
+            string sql = $"SELECT MONTH(fechaSalida) as Mes, COUNT( * ) as Cantidad, COUNT( * ) * 100 / (SELECT COUNT( * ) FROM RESERVA WHERE {initialDate} <= MONTH(fechaSalida) AND {finalDate} >= MONTH(fechaSalida)) as Porcentaje FROM Reserva WHERE {initialDate} <= MONTH(fechaSalida) AND {finalDate} >= MONTH(fechaSalida)  Group By MONTH(fechaSalida)";
+            return _DB.EjecutarSelect(sql);
+        }
+
+        public DataTable GetViajesPorSemana()
+        {
+            string sql = "SELECT DATENAME(DW, fechaSalida) as Dia, COUNT( * ) as Cantidad, COUNT( * ) * 100 / (SELECT COUNT( * ) FROM RESERVA) as Porcentaje FROM Reserva Group By DATENAME(DW,fechaSalida)";
             return _DB.EjecutarSelect(sql);
         }
     }

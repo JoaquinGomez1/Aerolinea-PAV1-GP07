@@ -1,16 +1,27 @@
-﻿<?xml version="1.0" encoding="utf-8" ?> 
-<xs:schema id="Ds_ViajesPorSemana" 
-                  targetNamespace="http://tempuri.org/Ds_ViajesPorSemana.xsd"
-                  elementFormDefault="qualified"
-                  attributeFormDefault="qualified"
-                  xmlns="http://tempuri.org/Ds_ViajesPorSemana.xsd"
-                  xmlns:mstns="http://tempuri.org/Ds_ViajesPorSemana.xsd"
-                  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-                  xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
-                  xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
-    <xs:element name="Ds_ViajesPorSemana" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true">
-        <xs:complexType>
-            <xs:choice minOccurs="0" maxOccurs="unbounded"></xs:choice>
-        </xs:complexType>
-    </xs:element>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_ViajesPorSemana" targetNamespace="http://tempuri.org/Ds_ViajesPorSemana.xsd" xmlns:mstns="http://tempuri.org/Ds_ViajesPorSemana.xsd" xmlns="http://tempuri.org/Ds_ViajesPorSemana.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_ViajesPorSemana" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Ds_ViajesPorSemana" msprop:Generator_UserDSName="Ds_ViajesPorSemana">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Ds_ViajesPorSemana" msprop:Generator_TableClassName="Ds_ViajesPorSemanaDataTable" msprop:Generator_TableVarName="tableDs_ViajesPorSemana" msprop:Generator_RowChangedName="Ds_ViajesPorSemanaRowChanged" msprop:Generator_TablePropName="_Ds_ViajesPorSemana" msprop:Generator_RowDeletingName="Ds_ViajesPorSemanaRowDeleting" msprop:Generator_RowChangingName="Ds_ViajesPorSemanaRowChanging" msprop:Generator_RowEvHandlerName="Ds_ViajesPorSemanaRowChangeEventHandler" msprop:Generator_RowDeletedName="Ds_ViajesPorSemanaRowDeleted" msprop:Generator_RowClassName="Ds_ViajesPorSemanaRow" msprop:Generator_UserTableName="Ds_ViajesPorSemana" msprop:Generator_RowEvArgName="Ds_ViajesPorSemanaRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Dia" msprop:Generator_ColumnVarNameInTable="columnDia" msprop:Generator_ColumnPropNameInRow="Dia" msprop:Generator_ColumnPropNameInTable="DiaColumn" msprop:Generator_UserColumnName="Dia" type="xs:string" minOccurs="0" />
+              <xs:element name="Cantidad" msprop:Generator_ColumnVarNameInTable="columnCantidad" msprop:Generator_ColumnPropNameInRow="Cantidad" msprop:Generator_ColumnPropNameInTable="CantidadColumn" msprop:Generator_UserColumnName="Cantidad" type="xs:string" minOccurs="0" />
+              <xs:element name="Porcentaje" msprop:Generator_ColumnVarNameInTable="columnPorcentaje" msprop:Generator_ColumnPropNameInRow="Porcentaje" msprop:Generator_ColumnPropNameInTable="PorcentajeColumn" msprop:Generator_UserColumnName="Porcentaje" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>
