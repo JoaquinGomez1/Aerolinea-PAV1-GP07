@@ -312,11 +312,28 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Ds_ViajesPorSemana.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Estadisticas\ViajesPorPais\Ds_ViajesPorPais.cs">
+      <DependentUpon>Ds_ViajesPorPais.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Estadisticas\ViajesPorPais\Ds_ViajesPorPais.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ds_ViajesPorPais.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Estadisticas\ViajesPorPais\Frm_ViajesPorPais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Estadisticas\ViajesPorPais\Frm_ViajesPorPais.Designer.cs">
+      <DependentUpon>Frm_ViajesPorPais.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Estadisticas\ViajesPorSemana\Frm_EViajesPorSemana.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Estadisticas\ViajesPorSemana\Frm_EViajesPorSemana.Designer.cs">
       <DependentUpon>Frm_EViajesPorSemana.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Estadisticas\ViajesXFecha\Ds_ViajesXFecha.cs">
+      <DependentUpon>Ds_ViajesXFecha.xsd</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Estadisticas\ViajesXFecha\Ds_ViajesXFecha.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -981,6 +998,10 @@
     <EmbeddedResource Include="Formularios\Estadisticas\ViajesPorMes\Frm_EViajesPorMes.resx">
       <DependentUpon>Frm_EViajesPorMes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Estadisticas\ViajesPorPais\Frm_ViajesPorPais.resx">
+      <DependentUpon>Frm_ViajesPorPais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Estadisticas\ViajesPorPais\ReporteViajesPorPais.rdlc" />
     <EmbeddedResource Include="Formularios\Estadisticas\ViajesPorSemana\Estadistica_ViajesPorSemana.rdlc" />
     <EmbeddedResource Include="Formularios\Estadisticas\ViajesXFecha\Frm_viajesXFecha.resx">
       <DependentUpon>Frm_viajesXFecha.cs</DependentUpon>
@@ -1337,6 +1358,17 @@
     </None>
     <None Include="Formularios\Estadisticas\ViajesPorMes\Ds_ViajesPorMes.xss">
       <DependentUpon>Ds_ViajesPorMes.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Estadisticas\ViajesPorPais\Ds_ViajesPorPais.xsc">
+      <DependentUpon>Ds_ViajesPorPais.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Estadisticas\ViajesPorPais\Ds_ViajesPorPais.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Ds_ViajesPorPais.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Formularios\Estadisticas\ViajesPorPais\Ds_ViajesPorPais.xss">
+      <DependentUpon>Ds_ViajesPorPais.xsd</DependentUpon>
     </None>
     <None Include="Formularios\Estadisticas\ViajesPorSemana\Ds_ViajesPorSemana.xsc">
       <DependentUpon>Ds_ViajesPorSemana.xsd</DependentUpon>

@@ -46,6 +46,8 @@ using TrabajoPrácticoPAV.Formularios.Estadisticas.VuelosXTripulacion;
 using TrabajoPrácticoPAV.Formularios.Estadisticas.VuelosXAeropuerto;
 using TrabajoPrácticoPAV.Formularios.Estadisticas.FacturasXPago;
 using TrabajoPrácticoPAV.Formularios.Estadisticas.FacturasXMes;
+using TrabajoPrácticoPAV.Formularios.Estadisticas.ViajesPorPais;
+using TrabajoPrácticoPAV.Formularios.Estadisticas.ViajesXFecha;
 
 namespace TrabajoPrácticoPAV
 {
@@ -472,6 +474,8 @@ namespace TrabajoPrácticoPAV
 
         private void cantidadDeViajesRealizadosPorPaisToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_ViajesPorPais>();
         }
 
         private void cantidadDeFacturasPorTipoDePagoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -490,6 +494,12 @@ namespace TrabajoPrácticoPAV
         {
             CerrarTodosLosMenuStrip();
             AbrirFormulario<Frm_Facturacion>();
+        }
+
+        private void cantidadDeViajesVendidosPorAeropuertoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_viajesXFecha>();
         }
     }
 }

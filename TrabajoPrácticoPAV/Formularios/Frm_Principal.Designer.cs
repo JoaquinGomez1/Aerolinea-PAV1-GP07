@@ -295,9 +295,9 @@
             this.PanelFormularios.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.PanelFormularios.BackgroundImage = global::TrabajoPrácticoPAV.Properties.Resources.ElbpHR6W0AAInBS;
             this.PanelFormularios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PanelFormularios.Controls.Add(this.menuStrip4);
             this.PanelFormularios.Controls.Add(this.menuStrip3);
             this.PanelFormularios.Controls.Add(this.menuStrip2);
-            this.PanelFormularios.Controls.Add(this.menuStrip4);
             this.PanelFormularios.Controls.Add(this.menuStrip1);
             this.PanelFormularios.Controls.Add(this.pictureBox1);
             this.PanelFormularios.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -621,8 +621,9 @@
             // cantidadDeViajesVendidosPorAeropuertoToolStripMenuItem
             // 
             this.cantidadDeViajesVendidosPorAeropuertoToolStripMenuItem.Name = "cantidadDeViajesVendidosPorAeropuertoToolStripMenuItem";
-            this.cantidadDeViajesVendidosPorAeropuertoToolStripMenuItem.Size = new System.Drawing.Size(425, 24);
-            this.cantidadDeViajesVendidosPorAeropuertoToolStripMenuItem.Text = "Cantidad de viajes vendidos por aeropuerto";
+            this.cantidadDeViajesVendidosPorAeropuertoToolStripMenuItem.Size = new System.Drawing.Size(392, 24);
+            this.cantidadDeViajesVendidosPorAeropuertoToolStripMenuItem.Text = "Cantidad de viajes vendidos por fecha";
+            this.cantidadDeViajesVendidosPorAeropuertoToolStripMenuItem.Click += new System.EventHandler(this.cantidadDeViajesVendidosPorAeropuertoToolStripMenuItem_Click);
             // 
             // cantidadDeViajesRealizadosPorPaisToolStripMenuItem
             // 
