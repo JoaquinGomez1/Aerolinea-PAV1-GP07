@@ -186,6 +186,28 @@
     <Compile Include="Formularios\Ciudad\Frm_Ciudad.Designer.cs">
       <DependentUpon>Frm_Ciudad.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Estadisticas\AvionesXAeropuerto\Ds_Aero.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ds_Aero.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Estadisticas\AvionesXAeropuerto\Frm_AvionesXAeropuerto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Estadisticas\AvionesXAeropuerto\Frm_AvionesXAeropuerto.Designer.cs">
+      <DependentUpon>Frm_AvionesXAeropuerto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Estadisticas\AvionesXModelos\Ds_AvionesXModelo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ds_AvionesXModelo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Estadisticas\AvionesXModelos\Frm_ReporteAvionesXModelos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Estadisticas\AvionesXModelos\Frm_ReporteAvionesXModelos.Designer.cs">
+      <DependentUpon>Frm_ReporteAvionesXModelos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Estadisticas\PasajerosMayores\Ds_EstadisticaPasajerosMayores.cs">
       <DependentUpon>Ds_EstadisticaPasajerosMayores.xsd</DependentUpon>
     </Compile>
@@ -285,9 +307,6 @@
     <Compile Include="Formularios\Listados\Factura\Frm_Reporte_FacturasPorFecha.Designer.cs">
       <DependentUpon>Frm_Reporte_FacturasPorFecha.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Listados\Vuelos\Frm_ReporteVueloXAeropuerto.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Formularios\Listados\Avion Por Modelo\Frm_AvionPorModelo.Designer.cs">
       <DependentUpon>Frm_AvionPorModelo.cs</DependentUpon>
     </Compile>
@@ -331,9 +350,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Listados\TramosPorViaje\Frm_ReporteViajeXTramo.Designer.cs">
-      <DependentUpon>Frm_ReporteViajeXTramo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Listados\TramosPorViaje\Frm_ReporteViajeXTramo.designer.cs">
       <DependentUpon>Frm_ReporteViajeXTramo.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Listados\Vuelos\Frm_ReporteVueloXAeropuerto.cs">
@@ -799,6 +815,14 @@
     <EmbeddedResource Include="Formularios\Ciudad\Frm_Ciudad.resx">
       <DependentUpon>Frm_Ciudad.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Estadisticas\AvionesXAeropuerto\Frm_AvionesXAeropuerto.resx">
+      <DependentUpon>Frm_AvionesXAeropuerto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Estadisticas\AvionesXAeropuerto\Reporte_AvionesAeropuerto.rdlc" />
+    <EmbeddedResource Include="Formularios\Estadisticas\AvionesXModelos\Frm_ReporteAvionesXModelos.resx">
+      <DependentUpon>Frm_ReporteAvionesXModelos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Estadisticas\AvionesXModelos\Report1.rdlc" />
     <EmbeddedResource Include="Formularios\Estadisticas\PasajerosMayores\EstadisticaPasajerosMayores.rdlc" />
     <EmbeddedResource Include="Formularios\Estadisticas\PasajerosMayores\Frm_PasajerosMayores.resx">
       <DependentUpon>Frm_PasajerosMayores.cs</DependentUpon>
@@ -1069,6 +1093,28 @@
     </None>
     <None Include="BD3K6G07_2021DataSet1.xss">
       <DependentUpon>BD3K6G07_2021DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Estadisticas\AvionesXAeropuerto\Ds_Aero.xsc">
+      <DependentUpon>Ds_Aero.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Estadisticas\AvionesXAeropuerto\Ds_Aero.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Ds_Aero.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Formularios\Estadisticas\AvionesXAeropuerto\Ds_Aero.xss">
+      <DependentUpon>Ds_Aero.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Estadisticas\AvionesXModelos\Ds_AvionesXModelo.xsc">
+      <DependentUpon>Ds_AvionesXModelo.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Estadisticas\AvionesXModelos\Ds_AvionesXModelo.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Ds_AvionesXModelo.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Formularios\Estadisticas\AvionesXModelos\Ds_AvionesXModelo.xss">
+      <DependentUpon>Ds_AvionesXModelo.xsd</DependentUpon>
     </None>
     <None Include="Formularios\Estadisticas\PasajerosMayores\Ds_EstadisticaPasajerosMayores.xsc">
       <DependentUpon>Ds_EstadisticaPasajerosMayores.xsd</DependentUpon>
