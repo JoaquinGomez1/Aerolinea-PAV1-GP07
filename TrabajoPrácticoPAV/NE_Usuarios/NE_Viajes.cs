@@ -156,6 +156,14 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             return tabla;
         }
 
+        public DataTable RecuperarViajesXFecha(string fecha)
+        {
+            DataTable table = new DataTable();
+
+            string sql = $"select numeroDeViaje, fechaSalida  from Reserva where fechaSalida = ' {fecha}   'order by fechaSalida, numeroDeViaje";
+            return table;
+        }
+
         public DataTable GetViajesPorMes()
         {
             // Busca en reservas porque es lo único que tiene fecha en la tabla y una reserva tiene un solo viaje asi que es casi lo
