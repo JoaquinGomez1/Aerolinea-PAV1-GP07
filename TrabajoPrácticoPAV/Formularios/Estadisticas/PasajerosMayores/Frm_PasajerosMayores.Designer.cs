@@ -30,7 +30,6 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.PasajerosMayores
         private void InitializeComponent()
         {
             this.rv_pasajerosMayores = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.btn_calcular = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.btn_cerrar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.SuspendLayout();
             // 
@@ -41,19 +40,6 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.PasajerosMayores
             this.rv_pasajerosMayores.ServerReport.BearerToken = null;
             this.rv_pasajerosMayores.Size = new System.Drawing.Size(727, 355);
             this.rv_pasajerosMayores.TabIndex = 0;
-            // 
-            // btn_calcular
-            // 
-            this.btn_calcular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_calcular.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.btn_calcular.Location = new System.Drawing.Point(526, 373);
-            this.btn_calcular.Name = "btn_calcular";
-            this.btn_calcular.Pp_Presionado = false;
-            this.btn_calcular.Size = new System.Drawing.Size(90, 28);
-            this.btn_calcular.TabIndex = 17;
-            this.btn_calcular.Text = "Calcular";
-            this.btn_calcular.UseVisualStyleBackColor = true;
-            this.btn_calcular.Click += new System.EventHandler(this.btn_calcular_Click);
             // 
             // btn_cerrar
             // 
@@ -73,7 +59,6 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.PasajerosMayores
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(751, 413);
-            this.Controls.Add(this.btn_calcular);
             this.Controls.Add(this.btn_cerrar);
             this.Controls.Add(this.rv_pasajerosMayores);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -88,6 +73,5 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.PasajerosMayores
 
         private Microsoft.Reporting.WinForms.ReportViewer rv_pasajerosMayores;
         private Clase.Button_Aerolinea btn_cerrar;
-        private Clase.Button_Aerolinea btn_calcular;
     }
 }
