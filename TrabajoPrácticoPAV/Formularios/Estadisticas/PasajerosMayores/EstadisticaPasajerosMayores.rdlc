@@ -314,6 +314,8 @@
                       </ChartDataPointValues>
                       <ChartDataLabel>
                         <Style />
+                        <Label>#PERCENT</Label>
+                        <Visible>true</Visible>
                       </ChartDataLabel>
                       <Style />
                       <ChartMarker>
