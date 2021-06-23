@@ -24,8 +24,10 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.FacturasXMes
 
         private void Frm_FacturasXFecha_Load(object sender, EventArgs e)
         {
-
+            rb_1.Checked = true;
             this.rv_1.RefreshReport();
+            rv_1.LocalReport.DataSources.Clear();
+            rv_1.RefreshReport();
         }
 
         private void btn_Calcular_Click(object sender, EventArgs e)
@@ -35,16 +37,21 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.FacturasXMes
                 ArmarReporteUsuario01(facturas.RecuperarFacturasXMesTodas());
             }
             else if (rb_2.Checked == true) {
-                if(cmb_Meses.SelectedIndex == -1)
-                {
-                    MessageBox.Show("Seleccione un Mes");
-                }
+                string desde = "";
+                string hasta = "";
+
+                if (msk_annoDesde.Text == "")
+                    desde = "0";
                 else
-                {
-                    int Mes = cmb_Meses.SelectedIndex + 1 ;
-                    MessageBox.Show(Mes.ToString());
-                    ArmarReporteUsuario01(facturas.RecuperarFacturasXMes(Mes));
-                }
+                    desde = msk_annoDesde.Text;
+                if (msk_annoHasta.Text == "")
+                    hasta = "99999";
+                else
+                    hasta = msk_annoHasta.Text;
+
+                DataTable tabla = facturas.RecuperarFacturasXMes(desde, hasta);
+                ArmarReporteUsuario01(tabla);
+               
             }
             else
             {
@@ -53,7 +60,7 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.FacturasXMes
         }
         private void ArmarReporteUsuario01(DataTable tabla) 
         {
-            ReportDataSource PaqueteDatos = new ReportDataSource("Ds_FacturasXMes", tabla);
+            ReportDataSource PaqueteDatos = new ReportDataSource("DataSet1", tabla);
             rv_1.LocalReport.ReportEmbeddedResource = "TrabajoPrácticoPAV.Formularios.Estadisticas.FacturasXMes.ReporteFacturasXMes.rdlc";
             rv_1.LocalReport.DataSources.Clear();
             rv_1.LocalReport.DataSources.Add(PaqueteDatos);

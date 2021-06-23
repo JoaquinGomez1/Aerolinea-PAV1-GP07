@@ -77,21 +77,28 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
         }
         public DataTable RecuperarFacturasXMesTodas()
         {
-            return _BD.EjecutarSelect("SELECT idFactura, fechaPago FROM Factura");
+            return _BD.EjecutarSelect("SELECT COUNT(*) as valor, MONTH(fechaPago) as denominacion From Factura " +
+                "f JOIN Tipo_Pago t ON t.idTipoPago = f.idTipoPago GROUP BY MONTH(f.fechaPago)");
         }
-        public DataTable RecuperarFacturasXMes(int Mes)
+        public DataTable RecuperarFacturasXMes(string desde, string hasta)
         {
-            return _BD.EjecutarSelect("SELECT idFactura, fechaPago FROM Factura where MONTH(fechaPago) = " + Mes);
+            return _BD.EjecutarSelect($"SELECT COUNT(*) as valor, MONTH(fechaPago) as denominacion From Factura f JOIN Tipo_Pago t ON t.idTipoPago = f.idTipoPago WHERE YEAR(f.fechaPago) BETWEEN {desde} AND {hasta} GROUP BY MONTH(f.fechaPago)");
 
         }
         public DataTable RecuperarFacturasXPagoTodas()
         {
-            return _BD.EjecutarSelect("SELECT Factura.idFactura, Tipo_Pago.descripcion from Factura inner join Tipo_Pago on Factura.idTipoPago = Tipo_Pago.idTipoPago");
+
+            return _BD.EjecutarSelect("SELECT COUNT(*) as valor, Tipo_Pago.descripcion from Factura inner  " +
+                                        $"join Tipo_Pago on Factura.idTipoPago = Tipo_Pago.idTipoPago" +
+                                        $" GROUP BY factura.idTipoPago, Tipo_Pago.descripcion");
         }
 
-        public DataTable RecuperarFacturasXPago(int TipoPago)
+        public DataTable RecuperarFacturasXPago(string annoDesde, string annoHasta)
         {
-            return _BD.EjecutarSelect("SELECT Factura.idFactura, Tipo_Pago.descripcion from Factura inner join Tipo_Pago on Factura.idTipoPago = Tipo_Pago.idTipoPago where Factura.idTipoPago = " + TipoPago);
+            string sql = "SELECT COUNT(*) as valor, Tipo_Pago.descripcion from Factura inner  " +
+                                        $"join Tipo_Pago on Factura.idTipoPago = Tipo_Pago.idTipoPago WHERE YEAR(Factura.fechaPago) BETWEEN {annoDesde} AND {annoHasta}" +
+                                        $" GROUP BY factura.idTipoPago, Tipo_Pago.descripcion";
+            return _BD.EjecutarSelect(sql);
         }
     }
 }

@@ -24,8 +24,10 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.FacturasXPago
 
         private void Frm_FacturasXPago_Load(object sender, EventArgs e)
         {
-
+            rb_1.Checked = true;
             this.rv_1.RefreshReport();
+            rv_1.LocalReport.DataSources.Clear();
+            rv_1.RefreshReport();
         }
 
         private void btn_Calcular_Click(object sender, EventArgs e)
@@ -36,26 +38,26 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.FacturasXPago
             }
             else if (rb_2.Checked == true)
             {
-                if (cmb_Pagos.SelectedIndex == -1)
-                {
-                    MessageBox.Show("Seleccione un Mes");
-                }
+                string desde = "";
+                string hasta = "";
+
+                if (msk_annoDesde.Text == "")
+                    desde = "0";
                 else
-                {
-                    int Pago = cmb_Pagos.SelectedIndex + 1;
-                    MessageBox.Show(Pago.ToString());
-                    ArmarReporteUsuario01(facturas.RecuperarFacturasXPago(Pago));
-                }
-            }
-            else
-            {
-                MessageBox.Show("Seleccione una Opcion");
+                    desde = msk_annoDesde.Text;
+                if (msk_annoHasta.Text == "")
+                    hasta = "99999";
+                else
+                    hasta = msk_annoHasta.Text;
+
+                DataTable tabla = facturas.RecuperarFacturasXPago(desde, hasta);
+                ArmarReporteUsuario01(tabla);
             }
         }
         private void ArmarReporteUsuario01(DataTable tabla) // Aca hay algo mal 
         {
-            ReportDataSource PaqueteDatos = new ReportDataSource("Ds_FacturasXPago", tabla);
-            rv_1.LocalReport.ReportEmbeddedResource = "TrabajoPrácticoPAV.Formularios.Estadisticas.FacturasXPago.ReporteFacturasXPago.rdlc";
+            ReportDataSource PaqueteDatos = new ReportDataSource("DataSet1", tabla);
+            rv_1.LocalReport.ReportEmbeddedResource = "TrabajoPrácticoPAV.Formularios.Estadisticas.FacturasXPago.ReporteFacturaXPago.rdlc";
             rv_1.LocalReport.DataSources.Clear();
             rv_1.LocalReport.DataSources.Add(PaqueteDatos);
             rv_1.RefreshReport();
