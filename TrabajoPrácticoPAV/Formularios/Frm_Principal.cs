@@ -39,6 +39,8 @@ using TrabajoPrácticoPAV.Formularios.Estadisticas.ViajesPorMes;
 using TrabajoPrácticoPAV.Formularios.Estadisticas.AvionesXModelos;
 using TrabajoPrácticoPAV.Formularios.Estadisticas.AvionesXAeropuerto;
 using TrabajoPrácticoPAV.Formularios.Estadisticas.ViajesPorSemana;
+using TrabajoPrácticoPAV.Formularios.Estadisticas.AeropuertoPais;
+using TrabajoPrácticoPAV.Formularios.Estadisticas.TripulacionXcargo;
 
 namespace TrabajoPrácticoPAV
 {
@@ -431,6 +433,18 @@ namespace TrabajoPrácticoPAV
         {
             CerrarTodosLosMenuStrip();
             AbrirFormulario<Frm_PasajerosPorViaje>();
+        }
+
+        private void cantidadDeAeropuertosPorPaísToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_EstadisticaAeroPais>();
+        }
+
+        private void porcentajeDeTripulaciónPorCargoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_TripulacionXcargo>();
         }
     }
 }

@@ -186,6 +186,17 @@
     <Compile Include="Formularios\Ciudad\Frm_Ciudad.Designer.cs">
       <DependentUpon>Frm_Ciudad.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Estadisticas\AeropuertoPais\ds_AeropuertoXPais.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_AeropuertoXPais.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Estadisticas\AeropuertoPais\Frm_EstadisticaAeroPais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Estadisticas\AeropuertoPais\Frm_EstadisticaAeroPais.Designer.cs">
+      <DependentUpon>Frm_EstadisticaAeroPais.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Estadisticas\FacturasXMes\Ds_FacturasXMes.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -252,6 +263,17 @@
     </Compile>
     <Compile Include="Formularios\Estadisticas\PasajerosPorClase\Frm_PasajerosPorClase.Designer.cs">
       <DependentUpon>Frm_PasajerosPorClase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Estadisticas\TripulacionXcargo\Ds_TripulacionXcargo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ds_TripulacionXcargo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Estadisticas\TripulacionXcargo\Frm_TripulacionXcargo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Estadisticas\TripulacionXcargo\Frm_TripulacionXcargo.Designer.cs">
+      <DependentUpon>Frm_TripulacionXcargo.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Estadisticas\ViajesPorMes\Ds_ViajesPorMes.cs">
       <DependentUpon>Ds_ViajesPorMes.xsd</DependentUpon>
@@ -896,6 +918,10 @@
     <EmbeddedResource Include="Formularios\Ciudad\Frm_Ciudad.resx">
       <DependentUpon>Frm_Ciudad.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Estadisticas\AeropuertoPais\Frm_EstadisticaAeroPais.resx">
+      <DependentUpon>Frm_EstadisticaAeroPais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Estadisticas\AeropuertoPais\Reporte_AeroPais.rdlc" />
     <EmbeddedResource Include="Formularios\Estadisticas\FacturasXMes\Frm_FacturasXMes.resx">
       <DependentUpon>Frm_FacturasXMes.cs</DependentUpon>
     </EmbeddedResource>
@@ -920,6 +946,10 @@
     <EmbeddedResource Include="Formularios\Estadisticas\PasajerosPorClase\Frm_PasajerosPorClase.resx">
       <DependentUpon>Frm_PasajerosPorClase.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Estadisticas\TripulacionXcargo\Frm_TripulacionXcargo.resx">
+      <DependentUpon>Frm_TripulacionXcargo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Estadisticas\TripulacionXcargo\Reporte_TripulacionPorVuelo.rdlc" />
     <EmbeddedResource Include="Formularios\Estadisticas\ViajesPorMes\Estadistica_ViajesPorMes.rdlc" />
     <EmbeddedResource Include="Formularios\Estadisticas\ViajesPorMes\Frm_EViajesPorMes.resx">
       <DependentUpon>Frm_EViajesPorMes.cs</DependentUpon>
@@ -1191,6 +1221,17 @@
     <None Include="BD3K6G07_2021DataSet2.xss">
       <DependentUpon>BD3K6G07_2021DataSet2.xsd</DependentUpon>
     </None>
+    <None Include="Formularios\Estadisticas\AeropuertoPais\ds_AeropuertoXPais.xsc">
+      <DependentUpon>ds_AeropuertoXPais.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Estadisticas\AeropuertoPais\ds_AeropuertoXPais.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_AeropuertoXPais.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Formularios\Estadisticas\AeropuertoPais\ds_AeropuertoXPais.xss">
+      <DependentUpon>ds_AeropuertoXPais.xsd</DependentUpon>
+    </None>
     <None Include="Formularios\Estadisticas\FacturasXMes\Ds_FacturasXMes.xsc">
       <DependentUpon>Ds_FacturasXMes.xsd</DependentUpon>
     </None>
@@ -1234,6 +1275,17 @@
     </None>
     <None Include="Formularios\Estadisticas\PasajerosPorClase\Ds_EstadisticaPasajerosPorClase.xss">
       <DependentUpon>Ds_EstadisticaPasajerosPorClase.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Estadisticas\TripulacionXcargo\Ds_TripulacionXcargo.xsc">
+      <DependentUpon>Ds_TripulacionXcargo.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Estadisticas\TripulacionXcargo\Ds_TripulacionXcargo.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Ds_TripulacionXcargo.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Formularios\Estadisticas\TripulacionXcargo\Ds_TripulacionXcargo.xss">
+      <DependentUpon>Ds_TripulacionXcargo.xsd</DependentUpon>
     </None>
     <None Include="Formularios\Estadisticas\ViajesPorMes\Ds_ViajesPorMes.xsc">
       <DependentUpon>Ds_ViajesPorMes.xsd</DependentUpon>

@@ -150,6 +150,13 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
 
             return _DB.EjecutarSelect(sql);
         }
-
+        public DataTable Reporte_EstadisticarecuperarTodos()
+        {
+            string sql = @"SELECT c.nombre as denominacion, " +
+                        @" COUNT(*)*100/(SELECT COUNT(*) FROM tripulacion) as valor " +
+                        @"FROM tripulacion t JOIN Cargo_Tripulacion c ON t.idCargoTripulacion = c.idCargoTripulacion " +
+                        @"GROUP BY c.idCargoTripulacion, c.nombre";
+            return _DB.EjecutarSelect(sql);
+           }
     }
 }
