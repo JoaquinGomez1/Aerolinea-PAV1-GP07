@@ -10,19 +10,19 @@ using System.Windows.Forms;
 using Microsoft.Reporting.WinForms;
 using TrabajoPrácticoPAV.NE_Usuarios;
 
-namespace TrabajoPrácticoPAV.Formularios.Estadisticas.FacturasXMes
+namespace TrabajoPrácticoPAV.Formularios.Estadisticas.FacturasXPago
 {
-
-    public partial class Frm_FacturasXMes : Form
+    public partial class Frm_FacturasXPago : Form
     {
         NE_Facturacion facturas = new NE_Facturacion();
-        public Frm_FacturasXMes()
+
+        public Frm_FacturasXPago()
         {
             InitializeComponent();
             this.CenterToScreen();
         }
 
-        private void Frm_FacturasXFecha_Load(object sender, EventArgs e)
+        private void Frm_FacturasXPago_Load(object sender, EventArgs e)
         {
 
             this.rv_1.RefreshReport();
@@ -32,18 +32,19 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.FacturasXMes
         {
             if (rb_1.Checked == true)
             {
-                ArmarReporteUsuario01(facturas.RecuperarFacturasXMesTodas());
+                ArmarReporteUsuario01(facturas.RecuperarFacturasXPagoTodas());
             }
-            else if (rb_2.Checked == true) {
-                if(cmb_Meses.SelectedIndex == -1)
+            else if (rb_2.Checked == true)
+            {
+                if (cmb_Pagos.SelectedIndex == -1)
                 {
                     MessageBox.Show("Seleccione un Mes");
                 }
                 else
                 {
-                    int Mes = cmb_Meses.SelectedIndex + 1 ;
-                    MessageBox.Show(Mes.ToString());
-                    ArmarReporteUsuario01(facturas.RecuperarFacturasXMes(Mes));
+                    int Pago = cmb_Pagos.SelectedIndex + 1;
+                    MessageBox.Show(Pago.ToString());
+                    ArmarReporteUsuario01(facturas.RecuperarFacturasXPago(Pago));
                 }
             }
             else
@@ -51,18 +52,13 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.FacturasXMes
                 MessageBox.Show("Seleccione una Opcion");
             }
         }
-        private void ArmarReporteUsuario01(DataTable tabla) 
+        private void ArmarReporteUsuario01(DataTable tabla) // Aca hay algo mal 
         {
-            ReportDataSource PaqueteDatos = new ReportDataSource("Ds_FacturasXMes", tabla);
-            rv_1.LocalReport.ReportEmbeddedResource = "TrabajoPrácticoPAV.Formularios.Estadisticas.FacturasXMes.ReporteFacturasXMes.rdlc";
+            ReportDataSource PaqueteDatos = new ReportDataSource("Ds_FacturasXPago", tabla);
+            rv_1.LocalReport.ReportEmbeddedResource = "TrabajoPrácticoPAV.Formularios.Estadisticas.FacturasXPago.ReporteFacturasXPago.rdlc";
             rv_1.LocalReport.DataSources.Clear();
             rv_1.LocalReport.DataSources.Add(PaqueteDatos);
             rv_1.RefreshReport();
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

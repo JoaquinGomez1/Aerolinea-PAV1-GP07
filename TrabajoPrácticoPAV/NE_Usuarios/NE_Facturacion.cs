@@ -22,13 +22,13 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
                                     + " FROM Reserva R JOIN Pasajero P ON R.numeroDocTitular = P.numeroDoc "
                                     + " AND R.tipoDocTitular = P.tipoDoc WHERE numeroDeReserva = " + reserva);
         }
-        
+
         public DataTable RecuperarVueloxReserva(string reserva)
         {
             return _BD.EjecutarSelect(@"SELECT V.idVuelo, V.codigoAeropuertoDestino, V.codigoAeropuertoSalida"
                                       + " FROM Reserva R JOIN Viaje_X_Tramo VT ON R.numeroDeViaje = VT.numeroDeViaje "
                                       + " JOIN Vuelo V ON V.codigoAeropuertoDestino = VT.codigoAeropuertoDestino"
-                                      + " AND V.codigoAeropuertoSalida = VT.codigoAeropuertoSalida " 
+                                      + " AND V.codigoAeropuertoSalida = VT.codigoAeropuertoSalida "
                                       + " WHERE R.numeroDeReserva = " + reserva);
         }
 
@@ -82,6 +82,16 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
         public DataTable RecuperarFacturasXMes(int Mes)
         {
             return _BD.EjecutarSelect("SELECT idFactura, fechaPago FROM Factura where MONTH(fechaPago) = " + Mes);
+
+        }
+        public DataTable RecuperarFacturasXPagoTodas()
+        {
+            return _BD.EjecutarSelect("SELECT Factura.idFactura, Tipo_Pago.descripcion from Factura inner join Tipo_Pago on Factura.idTipoPago = Tipo_Pago.idTipoPago");
+        }
+
+        public DataTable RecuperarFacturasXPago(int TipoPago)
+        {
+            return _BD.EjecutarSelect("SELECT Factura.idFactura, Tipo_Pago.descripcion from Factura inner join Tipo_Pago on Factura.idTipoPago = Tipo_Pago.idTipoPago where Factura.idTipoPago = " + TipoPago);
         }
     }
 }

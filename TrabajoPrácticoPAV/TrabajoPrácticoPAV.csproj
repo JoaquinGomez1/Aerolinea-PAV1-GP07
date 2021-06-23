@@ -197,6 +197,17 @@
     <Compile Include="Formularios\Estadisticas\FacturasXMes\Frm_FacturasXMes.Designer.cs">
       <DependentUpon>Frm_FacturasXMes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Estadisticas\FacturasXPago\Ds_FacturasXPago.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ds_FacturasXPago.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Estadisticas\FacturasXPago\Frm_FacturasXPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Estadisticas\FacturasXPago\Frm_FacturasXPago.Designer.cs">
+      <DependentUpon>Frm_FacturasXPago.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Estadisticas\PasajerosMayores\Ds_EstadisticaPasajerosMayores.cs">
       <DependentUpon>Ds_EstadisticaPasajerosMayores.xsd</DependentUpon>
     </Compile>
@@ -838,6 +849,10 @@
       <DependentUpon>Frm_FacturasXMes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Estadisticas\FacturasXMes\ReporteFacturasXMes.rdlc" />
+    <EmbeddedResource Include="Formularios\Estadisticas\FacturasXPago\Frm_FacturasXPago.resx">
+      <DependentUpon>Frm_FacturasXPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Estadisticas\FacturasXPago\ReporteFacturasXPago.rdlc" />
     <EmbeddedResource Include="Formularios\Estadisticas\PasajerosMayores\EstadisticaPasajerosMayores.rdlc" />
     <EmbeddedResource Include="Formularios\Estadisticas\PasajerosMayores\Frm_PasajerosMayores.resx">
       <DependentUpon>Frm_PasajerosMayores.cs</DependentUpon>
@@ -1116,6 +1131,17 @@
     </None>
     <None Include="Formularios\Estadisticas\FacturasXMes\Ds_FacturasXMes.xss">
       <DependentUpon>Ds_FacturasXMes.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Estadisticas\FacturasXPago\Ds_FacturasXPago.xsc">
+      <DependentUpon>Ds_FacturasXPago.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Estadisticas\FacturasXPago\Ds_FacturasXPago.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Ds_FacturasXPago.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Formularios\Estadisticas\FacturasXPago\Ds_FacturasXPago.xss">
+      <DependentUpon>Ds_FacturasXPago.xsd</DependentUpon>
     </None>
     <None Include="Formularios\Estadisticas\PasajerosMayores\Ds_EstadisticaPasajerosMayores.xsc">
       <DependentUpon>Ds_EstadisticaPasajerosMayores.xsd</DependentUpon>
