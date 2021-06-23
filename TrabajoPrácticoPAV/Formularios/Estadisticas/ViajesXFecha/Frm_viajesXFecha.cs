@@ -32,13 +32,13 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.ViajesXFecha
             {
                 ArmarReporteUsuario01(viajes.RecuperarViajesXTramo());
             }
-            if (rb_2.Checked == true)
+            else if (rb_2.Checked == true)
 
             {
                 ArmarReporteUsuario01(viajes.RecuperarViajesDirectos());
 
             }
-            if (rb_3.Checked == true)
+            else if (rb_3.Checked == true)
             {
                 ArmarReporteUsuario01(viajes.RecuperarViajesConTramos());
             }
