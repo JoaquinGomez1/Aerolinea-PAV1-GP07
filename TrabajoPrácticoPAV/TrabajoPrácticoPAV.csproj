@@ -209,6 +209,17 @@
     <Compile Include="Formularios\Estadisticas\PasajerosPorClase\Frm_PasajerosPorClase.Designer.cs">
       <DependentUpon>Frm_PasajerosPorClase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Estadisticas\ReservasMes\Ds_ReservasMes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ds_ReservasMes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Estadisticas\ReservasMes\Frm_EReservasMes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Estadisticas\ReservasMes\Frm_EReservasMes.Designer.cs">
+      <DependentUpon>Frm_EReservasMes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Estadisticas\ViajesPorMes\Ds_ViajesPorMes.cs">
       <DependentUpon>Ds_ViajesPorMes.xsd</DependentUpon>
     </Compile>
@@ -842,6 +853,10 @@
     <EmbeddedResource Include="Formularios\Estadisticas\PasajerosPorClase\Frm_PasajerosPorClase.resx">
       <DependentUpon>Frm_PasajerosPorClase.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Estadisticas\ReservasMes\Estadistica_ReservasMes.rdlc" />
+    <EmbeddedResource Include="Formularios\Estadisticas\ReservasMes\Frm_EReservasMes.resx">
+      <DependentUpon>Frm_EReservasMes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Estadisticas\ViajesPorMes\Estadistica_ViajesPorMes.rdlc" />
     <EmbeddedResource Include="Formularios\Estadisticas\ViajesPorMes\Frm_EViajesPorMes.resx">
       <DependentUpon>Frm_EViajesPorMes.cs</DependentUpon>
@@ -1127,6 +1142,17 @@
     </None>
     <None Include="Formularios\Estadisticas\PasajerosPorClase\Ds_EstadisticaPasajerosPorClase.xss">
       <DependentUpon>Ds_EstadisticaPasajerosPorClase.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Estadisticas\ReservasMes\Ds_ReservasMes.xsc">
+      <DependentUpon>Ds_ReservasMes.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Estadisticas\ReservasMes\Ds_ReservasMes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Ds_ReservasMes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Formularios\Estadisticas\ReservasMes\Ds_ReservasMes.xss">
+      <DependentUpon>Ds_ReservasMes.xsd</DependentUpon>
     </None>
     <None Include="Formularios\Estadisticas\ViajesPorMes\Ds_ViajesPorMes.xsc">
       <DependentUpon>Ds_ViajesPorMes.xsd</DependentUpon>
