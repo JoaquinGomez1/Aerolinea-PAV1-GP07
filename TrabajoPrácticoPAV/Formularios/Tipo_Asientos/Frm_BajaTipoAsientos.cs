@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Clase;
-using TrabajoPrácticoPAV.Backend;
 using TrabajoPrácticoPAV.NE_Usuarios;
 using System.Runtime.InteropServices;
 
@@ -19,11 +11,11 @@ namespace TrabajoPrácticoPAV.Formularios.Tipo_Asientos
         public string Pp_nombreBaja { get; set; }
         public object Pp_costo { get; set; }
         public string Id_Tipo { get; set; }
-        Conexion_DB _BD = new Conexion_DB();
-        NE_TipoAsiento TA = new NE_TipoAsiento();
+        private NE_TipoAsiento TA = new NE_TipoAsiento();
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
+
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWind, int wMsg, int wParam, int lParam);
 
@@ -63,7 +55,5 @@ namespace TrabajoPrácticoPAV.Formularios.Tipo_Asientos
                 this.Close();
             }
         }
-
-       
     }
 }

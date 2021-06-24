@@ -20,6 +20,7 @@ namespace TrabajoPrácticoPAV.Formularios
 
         // Al abrir este formulario creo también estos dos formularios que dependen del principal
         private readonly Frm_CargarTramosPorViaje frm = new Frm_CargarTramosPorViaje();
+
         private readonly Frm_ModificarViaje modificarViaje = new Frm_ModificarViaje();
 
         public Frm_ABMViajes()
@@ -66,7 +67,6 @@ namespace TrabajoPrácticoPAV.Formularios
             }
         }
 
-
         private void button2_Click_1(object sender, EventArgs e)
         {
             bool estanCamposCompletos = ValidarCamposCompletos() == Resultado.correcto;
@@ -87,7 +87,6 @@ namespace TrabajoPrácticoPAV.Formularios
 
             bool estaTodoCorrecto = estanCamposCompletos && esHorarioPresenciaCorrecto && noEstaHorarioDesfasado && existeAlMenosUnTramo;
 
-
             if (estaTodoCorrecto)
             {
                 Viaje myViaje = new Viaje()
@@ -106,9 +105,7 @@ namespace TrabajoPrácticoPAV.Formularios
             }
 
             if (!estaTodoCorrecto)
-            {
                 MessageBox.Show("Ocurrio un error en la validación");
-            }
         }
 
         private Resultado ValidarCamposCompletos()
@@ -182,7 +179,6 @@ namespace TrabajoPrácticoPAV.Formularios
             CargarDataGrid(todosLosViajes);
         }
 
-
         private void CargarDataGrid(DataTable tabla)
         {
             datagrid_viajes.Rows.Clear();
@@ -205,7 +201,6 @@ namespace TrabajoPrácticoPAV.Formularios
                 datagrid_viajes.Rows[i].Cells[3].Value = tabla.Rows[i]["horarioLlegada"].ToString();
                 datagrid_viajes.Rows[i].Cells[4].Value = duracionEstimadaDeViaje;
             }
-            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -214,6 +209,7 @@ namespace TrabajoPrácticoPAV.Formularios
         }
 
         private void btn_modificar1_Click(object sender, EventArgs e) => modificarViaje.ShowDialog();
+
         private void btn_refrescar_Click(object sender, EventArgs e) => CargarTodos();
 
         private void btn_borrar_Click(object sender, EventArgs e)
@@ -227,9 +223,8 @@ namespace TrabajoPrácticoPAV.Formularios
             datagrid_viajes.Rows.Remove(datagrid_viajes.CurrentRow);
         }
 
-
         // Esta funcion es llamada cuando el frm creado en el constructor es cerrado
-        void Form_Closed(object sender, FormClosedEventArgs e)
+        private void Form_Closed(object sender, FormClosedEventArgs e)
         {
             MessageBox.Show("Tramos cargados correctamente");
             lbl_tramosCargados.Text = $"{TramosDelViaje.Count}";
@@ -240,8 +235,8 @@ namespace TrabajoPrácticoPAV.Formularios
         }
 
         private void Form_ModificarClosed(object sender, FormClosedEventArgs e) => CargarTodos();
-        private void button5_Click(object sender, EventArgs e) => frm.ShowDialog();
 
+        private void button5_Click(object sender, EventArgs e) => frm.ShowDialog();
 
         private string obtenerSumaDeTiempoDeTramos()
         {

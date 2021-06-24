@@ -1,14 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Clase;
-using TrabajoPrácticoPAV.Formularios;
 using TrabajoPrácticoPAV.NE_Usuarios;
 using Microsoft.Reporting.WinForms;
 
@@ -16,8 +9,8 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Pasajeros
 {
     public partial class Reporte_Pasajeros : Form
     {
-        NE_Clientes pasajero = new NE_Clientes();
-        DataTable tabla = new DataTable();
+        private NE_Clientes pasajero = new NE_Clientes();
+        private DataTable tabla = new DataTable();
 
         public Reporte_Pasajeros()
         {
@@ -64,7 +57,6 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Pasajeros
                     reportViewer1.RefreshReport();
                     MessageBox.Show("No se encontraron resultados");
                 }
-
             }
             else if (rbu02.Checked)
             {
@@ -79,14 +71,11 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Pasajeros
                         reportViewer1.RefreshReport();
                         MessageBox.Show("No se encontraron resultados para la búsqueda");
                     }
-
                 }
                 else
                 {
                     MessageBox.Show("Ingrese un apellido");
                 }
-
-
             }
             else if (rbu03.Checked)
             {
@@ -102,12 +91,10 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Pasajeros
                         MessageBox.Show("No se encontraron resultados para la búsqueda");
                     }
                 }
-
                 else
                 {
                     MessageBox.Show("Seleccione ciudad");
                 }
-
             }
             else if (rbu04.Checked)
             {

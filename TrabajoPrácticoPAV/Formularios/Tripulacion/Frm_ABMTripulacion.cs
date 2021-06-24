@@ -23,7 +23,6 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
 
         private void Frm_Tripulacion_Load(object sender, EventArgs e)
         {
-
             cmb_cargo_register.CargarCombo();
 
             DataTable TableTripulantes = _NE.GetTodosLosTripulantes();
@@ -86,7 +85,6 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
             CargarDataGrid();
         }
 
-        
         private void btn_modify_Click(object sender, EventArgs e)
         {
             bool esValido = tratamientos.Validar(panel_modify.Controls) == Resultado.correcto;
@@ -116,7 +114,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
 
             DataGridViewRow fila = grid_tripulantes.CurrentRow;
 
-           Tripulante tripulante = new Tripulante()
+            Tripulante tripulante = new Tripulante()
             {
                 Id = Int32.Parse(fila.Cells[0].Value.ToString()),
                 Nombre = fila.Cells[1].Value.ToString(),
@@ -151,7 +149,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion
                 cargo = cmb_cargo_register.SelectedValue.ToString();
             }
 
-            DataTable tabla = _NE.GetTripulante(nombre,apellido,cargo);
+            DataTable tabla = _NE.GetTripulante(nombre, apellido, cargo);
             if (tabla != null)
             { CargarGridTripulantes(tabla); }
             else { MessageBox.Show("Complete los campos para realizar la busqueda"); }

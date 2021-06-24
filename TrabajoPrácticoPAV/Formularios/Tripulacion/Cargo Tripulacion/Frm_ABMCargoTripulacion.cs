@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.NE_Usuarios;
@@ -16,11 +10,9 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion.Cargo_Tripulacion
 {
     public partial class Frm_ABMCargoTripulacion : Form
     {
-
         private readonly NE_CargoTripulacion _NE = new NE_CargoTripulacion();
         private readonly Tratamientos_Especiales tratamientos = new Tratamientos_Especiales();
         private int idTripulanteAModificar { get; set; }
-        private int IdCargoSeleccionado { get; set; }
 
         public Frm_ABMCargoTripulacion()
         {
@@ -90,20 +82,14 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion.Cargo_Tripulacion
             }
         }
 
-
         private void btn_editar_Click(object sender, EventArgs e)
         {
-
             panel_modify.Visible = true;
             lbl_title_modify.Visible = true;
 
-            //string valorSeleccionado = grid_ciudades.CurrentRow.Cells[0].Value.ToString();
-            //CiudadObj ciudad = _NE.GetCiudadPorId(valorSeleccionado);
-            // CiudadSeleccionada = ciudad;
-
             DataGridViewRow fila = grid_tripulantes.CurrentRow;
 
-           CargoTripulacion cargoTripulacion = new CargoTripulacion()
+            CargoTripulacion cargoTripulacion = new CargoTripulacion()
             {
                 Id = Int32.Parse(fila.Cells[0].Value.ToString()),
                 Nombre = fila.Cells[1].Value.ToString(),
@@ -111,12 +97,10 @@ namespace TrabajoPrácticoPAV.Formularios.Tripulacion.Cargo_Tripulacion
 
             idTripulanteAModificar = cargoTripulacion.Id;
             txt_nombre_modify.Text = cargoTripulacion.Nombre;
-            
         }
 
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
-
             if (grid_tripulantes.CurrentRow == null)
                 return;
 

@@ -1,15 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.NE_Usuarios;
-
 
 namespace TrabajoPrácticoPAV.Formularios.TipoDoc
 {
@@ -35,7 +27,6 @@ namespace TrabajoPrácticoPAV.Formularios.TipoDoc
 
         private void btn_alta_Click(object sender, EventArgs e)
         {
-
             Frm_AltaTipoDoc alta = new Frm_AltaTipoDoc();
             alta.ShowDialog();
         }
@@ -57,7 +48,6 @@ namespace TrabajoPrácticoPAV.Formularios.TipoDoc
             modificar.Pp_documento = cmb_tipoDoc.Text;
             modificar.Pp_id_documento = cmb_tipoDoc.SelectedValue;
             modificar.ShowDialog();
-
         }
 
         private void btn_eliminar_Click(object sender, EventArgs e)

@@ -34,6 +34,11 @@
             this.Btn_Minimizar = new System.Windows.Forms.PictureBox();
             this.Btn_Cerrar = new System.Windows.Forms.PictureBox();
             this.PanelMenu = new System.Windows.Forms.Panel();
+            this.Btn_ABM = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
+            this.Btn_Procesos = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
+            this.Btn_Configuracion = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
+            this.Btn_Listado = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
+            this.Btn_Estadistica = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.PanelFormularios = new System.Windows.Forms.Panel();
             this.menuStrip3 = new System.Windows.Forms.MenuStrip();
             this.próximosVuelosEnUnAeropuertoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,7 +50,6 @@
             this.aeropuertoPorPaisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.familiaresPorPasajeroToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.pasajerosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.equipajePorPasajeroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.familiaresPorPasajeroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tripulacionToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.tripulacionPorVueloToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,7 +65,6 @@
             this.avionesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.porcentajeDeAvionesPorModeloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.porcentajeDeAvionesPorAeropuertoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.porcentajeDeAsientosOcupadosPorVueloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aeropuertosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.cantidadDeAeropuertosPorPaísToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.facturacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -78,7 +81,6 @@
             this.porcentajeDeViajesPorMesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.porcentajeDeViajesPorDíaDeSemanaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vuelosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.porcentajeDeAsientosOcupadosPorVueloToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.cantidadDeVuelosRealizadosPorAviónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.porcentajeDeVuelosPorAeropuertoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cantidadDeVuelosRealizadosPorTripulaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -106,14 +108,6 @@
             this.cargosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tripulaciónToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.facruraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.facturasPorFechasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aviónToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.Btn_ABM = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
-            this.Btn_Procesos = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
-            this.Btn_Configuracion = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
-            this.Btn_Listado = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
-            this.Btn_Estadistica = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.BarraSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Cerrar)).BeginInit();
@@ -196,14 +190,114 @@
             this.PanelMenu.Size = new System.Drawing.Size(150, 413);
             this.PanelMenu.TabIndex = 1;
             // 
+            // Btn_ABM
+            // 
+            this.Btn_ABM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
+            this.Btn_ABM.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.Btn_ABM.FlatAppearance.BorderSize = 2;
+            this.Btn_ABM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_ABM.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.Btn_ABM.ForeColor = System.Drawing.Color.White;
+            this.Btn_ABM.Image = global::TrabajoPrácticoPAV.Properties.Resources.klipartz_com__1_;
+            this.Btn_ABM.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_ABM.Location = new System.Drawing.Point(2, 2);
+            this.Btn_ABM.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_ABM.Name = "Btn_ABM";
+            this.Btn_ABM.Pp_Presionado = false;
+            this.Btn_ABM.Size = new System.Drawing.Size(146, 41);
+            this.Btn_ABM.TabIndex = 2;
+            this.Btn_ABM.Text = "Registros";
+            this.Btn_ABM.UseVisualStyleBackColor = false;
+            this.Btn_ABM.Click += new System.EventHandler(this.MouseClickButton);
+            // 
+            // Btn_Procesos
+            // 
+            this.Btn_Procesos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
+            this.Btn_Procesos.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.Btn_Procesos.FlatAppearance.BorderSize = 2;
+            this.Btn_Procesos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Procesos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.Btn_Procesos.ForeColor = System.Drawing.Color.White;
+            this.Btn_Procesos.Image = global::TrabajoPrácticoPAV.Properties.Resources.reboot_arrow_3726__1_;
+            this.Btn_Procesos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_Procesos.Location = new System.Drawing.Point(2, 49);
+            this.Btn_Procesos.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_Procesos.Name = "Btn_Procesos";
+            this.Btn_Procesos.Pp_Presionado = false;
+            this.Btn_Procesos.Size = new System.Drawing.Size(146, 41);
+            this.Btn_Procesos.TabIndex = 8;
+            this.Btn_Procesos.Text = "Procesos";
+            this.Btn_Procesos.UseVisualStyleBackColor = false;
+            this.Btn_Procesos.Click += new System.EventHandler(this.MouseClickButton);
+            // 
+            // Btn_Configuracion
+            // 
+            this.Btn_Configuracion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
+            this.Btn_Configuracion.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.Btn_Configuracion.FlatAppearance.BorderSize = 2;
+            this.Btn_Configuracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Configuracion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.Btn_Configuracion.ForeColor = System.Drawing.Color.White;
+            this.Btn_Configuracion.Image = global::TrabajoPrácticoPAV.Properties.Resources.pngegg;
+            this.Btn_Configuracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_Configuracion.Location = new System.Drawing.Point(2, 381);
+            this.Btn_Configuracion.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_Configuracion.Name = "Btn_Configuracion";
+            this.Btn_Configuracion.Pp_Presionado = false;
+            this.Btn_Configuracion.Size = new System.Drawing.Size(146, 30);
+            this.Btn_Configuracion.TabIndex = 3;
+            this.Btn_Configuracion.Text = "     Configuración";
+            this.Btn_Configuracion.UseVisualStyleBackColor = false;
+            this.Btn_Configuracion.Click += new System.EventHandler(this.MouseClickButton);
+            // 
+            // Btn_Listado
+            // 
+            this.Btn_Listado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
+            this.Btn_Listado.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.Btn_Listado.FlatAppearance.BorderSize = 2;
+            this.Btn_Listado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Listado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.Btn_Listado.ForeColor = System.Drawing.Color.White;
+            this.Btn_Listado.Image = global::TrabajoPrácticoPAV.Properties.Resources._8b1a89d3f271913146d4cd63f3920464_icono_de_trazo_de_lista_de_verificaci_oacute_n_m_eacute_dica_by_vexels1;
+            this.Btn_Listado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_Listado.Location = new System.Drawing.Point(2, 97);
+            this.Btn_Listado.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_Listado.Name = "Btn_Listado";
+            this.Btn_Listado.Pp_Presionado = false;
+            this.Btn_Listado.Size = new System.Drawing.Size(146, 41);
+            this.Btn_Listado.TabIndex = 7;
+            this.Btn_Listado.Text = "Listados";
+            this.Btn_Listado.UseVisualStyleBackColor = false;
+            this.Btn_Listado.Click += new System.EventHandler(this.MouseClickButton);
+            // 
+            // Btn_Estadistica
+            // 
+            this.Btn_Estadistica.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
+            this.Btn_Estadistica.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.Btn_Estadistica.FlatAppearance.BorderSize = 2;
+            this.Btn_Estadistica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Estadistica.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.Btn_Estadistica.ForeColor = System.Drawing.Color.White;
+            this.Btn_Estadistica.Image = global::TrabajoPrácticoPAV.Properties.Resources.Icon_66_512;
+            this.Btn_Estadistica.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_Estadistica.Location = new System.Drawing.Point(2, 145);
+            this.Btn_Estadistica.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_Estadistica.Name = "Btn_Estadistica";
+            this.Btn_Estadistica.Pp_Presionado = false;
+            this.Btn_Estadistica.Size = new System.Drawing.Size(146, 41);
+            this.Btn_Estadistica.TabIndex = 6;
+            this.Btn_Estadistica.Text = "    Estadísticas";
+            this.Btn_Estadistica.UseVisualStyleBackColor = false;
+            this.Btn_Estadistica.Click += new System.EventHandler(this.MouseClickButton);
+            // 
             // PanelFormularios
             // 
             this.PanelFormularios.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.PanelFormularios.BackgroundImage = global::TrabajoPrácticoPAV.Properties.Resources.ElbpHR6W0AAInBS;
             this.PanelFormularios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PanelFormularios.Controls.Add(this.menuStrip4);
             this.PanelFormularios.Controls.Add(this.menuStrip3);
             this.PanelFormularios.Controls.Add(this.menuStrip2);
-            this.PanelFormularios.Controls.Add(this.menuStrip4);
             this.PanelFormularios.Controls.Add(this.menuStrip1);
             this.PanelFormularios.Controls.Add(this.pictureBox1);
             this.PanelFormularios.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -225,8 +319,7 @@
             this.aeropuertoPorPaisToolStripMenuItem,
             this.familiaresPorPasajeroToolStripMenuItem,
             this.tripulacionToolStripMenuItem,
-            this.reservaToolStripMenuItem,
-            this.facruraToolStripMenuItem});
+            this.reservaToolStripMenuItem});
             this.menuStrip3.Location = new System.Drawing.Point(0, 0);
             this.menuStrip3.Name = "menuStrip3";
             this.menuStrip3.Size = new System.Drawing.Size(126, 413);
@@ -261,8 +354,7 @@
             // 
             this.estadoDeCadaAsientoPorCadaAvionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.estadoDeCadaAsientoPorCadaAvionToolStripMenuItem1,
-            this.avionPorModeloToolStripMenuItem,
-            this.aviónToolStripMenuItem1});
+            this.avionPorModeloToolStripMenuItem});
             this.estadoDeCadaAsientoPorCadaAvionToolStripMenuItem.Name = "estadoDeCadaAsientoPorCadaAvionToolStripMenuItem";
             this.estadoDeCadaAsientoPorCadaAvionToolStripMenuItem.Size = new System.Drawing.Size(113, 24);
             this.estadoDeCadaAsientoPorCadaAvionToolStripMenuItem.Text = "Aviones";
@@ -285,8 +377,7 @@
             // 
             this.aeropuertoPorPaisToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.familiaresPorPasajeroToolStripMenuItem1,
-            this.pasajerosToolStripMenuItem1,
-            this.equipajePorPasajeroToolStripMenuItem});
+            this.pasajerosToolStripMenuItem1});
             this.aeropuertoPorPaisToolStripMenuItem.Name = "aeropuertoPorPaisToolStripMenuItem";
             this.aeropuertoPorPaisToolStripMenuItem.Size = new System.Drawing.Size(113, 24);
             this.aeropuertoPorPaisToolStripMenuItem.Text = "Pasajeros";
@@ -305,13 +396,6 @@
             this.pasajerosToolStripMenuItem1.Text = "Pasajeros";
             this.pasajerosToolStripMenuItem1.Click += new System.EventHandler(this.pasajerosToolStripMenuItem1_Click);
             // 
-            // equipajePorPasajeroToolStripMenuItem
-            // 
-            this.equipajePorPasajeroToolStripMenuItem.Name = "equipajePorPasajeroToolStripMenuItem";
-            this.equipajePorPasajeroToolStripMenuItem.Size = new System.Drawing.Size(265, 24);
-            this.equipajePorPasajeroToolStripMenuItem.Text = "Equipaje por pasajero";
-            this.equipajePorPasajeroToolStripMenuItem.Click += new System.EventHandler(this.equipajePorPasajeroToolStripMenuItem_Click);
-            // 
             // familiaresPorPasajeroToolStripMenuItem
             // 
             this.familiaresPorPasajeroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -324,14 +408,14 @@
             // tripulacionToolStripMenuItem2
             // 
             this.tripulacionToolStripMenuItem2.Name = "tripulacionToolStripMenuItem2";
-            this.tripulacionToolStripMenuItem2.Size = new System.Drawing.Size(250, 24);
-            this.tripulacionToolStripMenuItem2.Text = "Tripulacion Por Cargo";
+            this.tripulacionToolStripMenuItem2.Size = new System.Drawing.Size(243, 24);
+            this.tripulacionToolStripMenuItem2.Text = "Tripulacion";
             this.tripulacionToolStripMenuItem2.Click += new System.EventHandler(this.tripulacionToolStripMenuItem2_Click);
             // 
             // tripulacionPorVueloToolStripMenuItem1
             // 
             this.tripulacionPorVueloToolStripMenuItem1.Name = "tripulacionPorVueloToolStripMenuItem1";
-            this.tripulacionPorVueloToolStripMenuItem1.Size = new System.Drawing.Size(250, 24);
+            this.tripulacionPorVueloToolStripMenuItem1.Size = new System.Drawing.Size(243, 24);
             this.tripulacionPorVueloToolStripMenuItem1.Text = "Tripulacion por vuelo";
             this.tripulacionPorVueloToolStripMenuItem1.Click += new System.EventHandler(this.tripulacionPorVueloToolStripMenuItem1_Click);
             // 
@@ -402,6 +486,7 @@
             this.facturasToolStripMenuItem.Name = "facturasToolStripMenuItem";
             this.facturasToolStripMenuItem.Size = new System.Drawing.Size(86, 24);
             this.facturasToolStripMenuItem.Text = "Facturas";
+            this.facturasToolStripMenuItem.Click += new System.EventHandler(this.facturasToolStripMenuItem_Click);
             // 
             // menuStrip4
             // 
@@ -418,7 +503,7 @@
             this.vuelosToolStripMenuItem});
             this.menuStrip4.Location = new System.Drawing.Point(0, 0);
             this.menuStrip4.Name = "menuStrip4";
-            this.menuStrip4.Size = new System.Drawing.Size(126, 414);
+            this.menuStrip4.Size = new System.Drawing.Size(141, 413);
             this.menuStrip4.TabIndex = 7;
             this.menuStrip4.Text = "menuStrip4";
             this.menuStrip4.Visible = false;
@@ -427,8 +512,7 @@
             // 
             this.avionesToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.porcentajeDeAvionesPorModeloToolStripMenuItem,
-            this.porcentajeDeAvionesPorAeropuertoToolStripMenuItem,
-            this.porcentajeDeAsientosOcupadosPorVueloToolStripMenuItem});
+            this.porcentajeDeAvionesPorAeropuertoToolStripMenuItem});
             this.avionesToolStripMenuItem1.Name = "avionesToolStripMenuItem1";
             this.avionesToolStripMenuItem1.Size = new System.Drawing.Size(128, 24);
             this.avionesToolStripMenuItem1.Text = "Aviones";
@@ -436,22 +520,16 @@
             // porcentajeDeAvionesPorModeloToolStripMenuItem
             // 
             this.porcentajeDeAvionesPorModeloToolStripMenuItem.Name = "porcentajeDeAvionesPorModeloToolStripMenuItem";
-            this.porcentajeDeAvionesPorModeloToolStripMenuItem.Size = new System.Drawing.Size(423, 24);
+            this.porcentajeDeAvionesPorModeloToolStripMenuItem.Size = new System.Drawing.Size(379, 24);
             this.porcentajeDeAvionesPorModeloToolStripMenuItem.Text = "Porcentaje de aviones por modelo";
             this.porcentajeDeAvionesPorModeloToolStripMenuItem.Click += new System.EventHandler(this.porcentajeDeAvionesPorModeloToolStripMenuItem_Click);
             // 
             // porcentajeDeAvionesPorAeropuertoToolStripMenuItem
             // 
             this.porcentajeDeAvionesPorAeropuertoToolStripMenuItem.Name = "porcentajeDeAvionesPorAeropuertoToolStripMenuItem";
-            this.porcentajeDeAvionesPorAeropuertoToolStripMenuItem.Size = new System.Drawing.Size(423, 24);
+            this.porcentajeDeAvionesPorAeropuertoToolStripMenuItem.Size = new System.Drawing.Size(379, 24);
             this.porcentajeDeAvionesPorAeropuertoToolStripMenuItem.Text = "Porcentaje de aviones por aeropuerto";
             this.porcentajeDeAvionesPorAeropuertoToolStripMenuItem.Click += new System.EventHandler(this.porcentajeDeAvionesPorAeropuertoToolStripMenuItem_Click);
-            // 
-            // porcentajeDeAsientosOcupadosPorVueloToolStripMenuItem
-            // 
-            this.porcentajeDeAsientosOcupadosPorVueloToolStripMenuItem.Name = "porcentajeDeAsientosOcupadosPorVueloToolStripMenuItem";
-            this.porcentajeDeAsientosOcupadosPorVueloToolStripMenuItem.Size = new System.Drawing.Size(423, 24);
-            this.porcentajeDeAsientosOcupadosPorVueloToolStripMenuItem.Text = "Porcentaje de asientos ocupados por vuelo";
             // 
             // aeropuertosToolStripMenuItem1
             // 
@@ -482,12 +560,14 @@
             this.cantidadFacturadaPorMesToolStripMenuItem.Name = "cantidadFacturadaPorMesToolStripMenuItem";
             this.cantidadFacturadaPorMesToolStripMenuItem.Size = new System.Drawing.Size(382, 24);
             this.cantidadFacturadaPorMesToolStripMenuItem.Text = "Cantidad facturada por mes";
+            this.cantidadFacturadaPorMesToolStripMenuItem.Click += new System.EventHandler(this.cantidadFacturadaPorMesToolStripMenuItem_Click);
             // 
             // cantidadDeFacturasPorTipoDePagoToolStripMenuItem
             // 
             this.cantidadDeFacturasPorTipoDePagoToolStripMenuItem.Name = "cantidadDeFacturasPorTipoDePagoToolStripMenuItem";
             this.cantidadDeFacturasPorTipoDePagoToolStripMenuItem.Size = new System.Drawing.Size(382, 24);
             this.cantidadDeFacturasPorTipoDePagoToolStripMenuItem.Text = "Cantidad de facturas por tipo de pago";
+            this.cantidadDeFacturasPorTipoDePagoToolStripMenuItem.Click += new System.EventHandler(this.cantidadDeFacturasPorTipoDePagoToolStripMenuItem_Click);
             // 
             // viajesToolStripMenuItem2
             // 
@@ -541,14 +621,16 @@
             // cantidadDeViajesVendidosPorAeropuertoToolStripMenuItem
             // 
             this.cantidadDeViajesVendidosPorAeropuertoToolStripMenuItem.Name = "cantidadDeViajesVendidosPorAeropuertoToolStripMenuItem";
-            this.cantidadDeViajesVendidosPorAeropuertoToolStripMenuItem.Size = new System.Drawing.Size(425, 24);
-            this.cantidadDeViajesVendidosPorAeropuertoToolStripMenuItem.Text = "Cantidad de viajes vendidos por aeropuerto";
+            this.cantidadDeViajesVendidosPorAeropuertoToolStripMenuItem.Size = new System.Drawing.Size(392, 24);
+            this.cantidadDeViajesVendidosPorAeropuertoToolStripMenuItem.Text = "Cantidad de viajes vendidos por fecha";
+            this.cantidadDeViajesVendidosPorAeropuertoToolStripMenuItem.Click += new System.EventHandler(this.cantidadDeViajesVendidosPorAeropuertoToolStripMenuItem_Click);
             // 
             // cantidadDeViajesRealizadosPorPaisToolStripMenuItem
             // 
             this.cantidadDeViajesRealizadosPorPaisToolStripMenuItem.Name = "cantidadDeViajesRealizadosPorPaisToolStripMenuItem";
             this.cantidadDeViajesRealizadosPorPaisToolStripMenuItem.Size = new System.Drawing.Size(425, 24);
             this.cantidadDeViajesRealizadosPorPaisToolStripMenuItem.Text = "Cantidad de viajes realizados por pais";
+            this.cantidadDeViajesRealizadosPorPaisToolStripMenuItem.Click += new System.EventHandler(this.cantidadDeViajesRealizadosPorPaisToolStripMenuItem_Click);
             // 
             // porcentajeDeViajesPorMesToolStripMenuItem
             // 
@@ -567,19 +649,12 @@
             // vuelosToolStripMenuItem
             // 
             this.vuelosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.porcentajeDeAsientosOcupadosPorVueloToolStripMenuItem1,
             this.cantidadDeVuelosRealizadosPorAviónToolStripMenuItem,
             this.porcentajeDeVuelosPorAeropuertoToolStripMenuItem,
             this.cantidadDeVuelosRealizadosPorTripulaciónToolStripMenuItem});
             this.vuelosToolStripMenuItem.Name = "vuelosToolStripMenuItem";
             this.vuelosToolStripMenuItem.Size = new System.Drawing.Size(128, 24);
             this.vuelosToolStripMenuItem.Text = "Vuelos";
-            // 
-            // porcentajeDeAsientosOcupadosPorVueloToolStripMenuItem1
-            // 
-            this.porcentajeDeAsientosOcupadosPorVueloToolStripMenuItem1.Name = "porcentajeDeAsientosOcupadosPorVueloToolStripMenuItem1";
-            this.porcentajeDeAsientosOcupadosPorVueloToolStripMenuItem1.Size = new System.Drawing.Size(437, 24);
-            this.porcentajeDeAsientosOcupadosPorVueloToolStripMenuItem1.Text = "Porcentaje de asientos ocupados por vuelo";
             // 
             // cantidadDeVuelosRealizadosPorAviónToolStripMenuItem
             // 
@@ -593,12 +668,14 @@
             this.porcentajeDeVuelosPorAeropuertoToolStripMenuItem.Name = "porcentajeDeVuelosPorAeropuertoToolStripMenuItem";
             this.porcentajeDeVuelosPorAeropuertoToolStripMenuItem.Size = new System.Drawing.Size(437, 24);
             this.porcentajeDeVuelosPorAeropuertoToolStripMenuItem.Text = "Porcentaje de vuelos por aeropuerto";
+            this.porcentajeDeVuelosPorAeropuertoToolStripMenuItem.Click += new System.EventHandler(this.porcentajeDeVuelosPorAeropuertoToolStripMenuItem_Click);
             // 
             // cantidadDeVuelosRealizadosPorTripulaciónToolStripMenuItem
             // 
             this.cantidadDeVuelosRealizadosPorTripulaciónToolStripMenuItem.Name = "cantidadDeVuelosRealizadosPorTripulaciónToolStripMenuItem";
             this.cantidadDeVuelosRealizadosPorTripulaciónToolStripMenuItem.Size = new System.Drawing.Size(437, 24);
             this.cantidadDeVuelosRealizadosPorTripulaciónToolStripMenuItem.Text = "Cantidad de vuelos realizados por tripulación";
+            this.cantidadDeVuelosRealizadosPorTripulaciónToolStripMenuItem.Click += new System.EventHandler(this.cantidadDeVuelosRealizadosPorTripulaciónToolStripMenuItem_Click);
             // 
             // menuStrip1
             // 
@@ -805,128 +882,6 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // facruraToolStripMenuItem
-            // 
-            this.facruraToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.facturasPorFechasToolStripMenuItem});
-            this.facruraToolStripMenuItem.Name = "facruraToolStripMenuItem";
-            this.facruraToolStripMenuItem.Size = new System.Drawing.Size(113, 24);
-            this.facruraToolStripMenuItem.Text = "Factura";
-            // 
-            // facturasPorFechasToolStripMenuItem
-            // 
-            this.facturasPorFechasToolStripMenuItem.Name = "facturasPorFechasToolStripMenuItem";
-            this.facturasPorFechasToolStripMenuItem.Size = new System.Drawing.Size(239, 24);
-            this.facturasPorFechasToolStripMenuItem.Text = "Facturas por fechas";
-            this.facturasPorFechasToolStripMenuItem.Click += new System.EventHandler(this.facturasPorFechasToolStripMenuItem_Click);
-            // 
-            // aviónToolStripMenuItem1
-            // 
-            this.aviónToolStripMenuItem1.Name = "aviónToolStripMenuItem1";
-            this.aviónToolStripMenuItem1.Size = new System.Drawing.Size(395, 24);
-            this.aviónToolStripMenuItem1.Text = "Avión";
-            this.aviónToolStripMenuItem1.Click += new System.EventHandler(this.aviónToolStripMenuItem1_Click);
-            // 
-            // Btn_ABM
-            // 
-            this.Btn_ABM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
-            this.Btn_ABM.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.Btn_ABM.FlatAppearance.BorderSize = 2;
-            this.Btn_ABM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_ABM.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.Btn_ABM.ForeColor = System.Drawing.Color.White;
-            this.Btn_ABM.Image = global::TrabajoPrácticoPAV.Properties.Resources.klipartz_com__1_;
-            this.Btn_ABM.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_ABM.Location = new System.Drawing.Point(2, 2);
-            this.Btn_ABM.Margin = new System.Windows.Forms.Padding(2);
-            this.Btn_ABM.Name = "Btn_ABM";
-            this.Btn_ABM.Pp_Presionado = false;
-            this.Btn_ABM.Size = new System.Drawing.Size(146, 41);
-            this.Btn_ABM.TabIndex = 2;
-            this.Btn_ABM.Text = "Registros";
-            this.Btn_ABM.UseVisualStyleBackColor = false;
-            this.Btn_ABM.Click += new System.EventHandler(this.MouseClickButton);
-            // 
-            // Btn_Procesos
-            // 
-            this.Btn_Procesos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
-            this.Btn_Procesos.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.Btn_Procesos.FlatAppearance.BorderSize = 2;
-            this.Btn_Procesos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Procesos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.Btn_Procesos.ForeColor = System.Drawing.Color.White;
-            this.Btn_Procesos.Image = global::TrabajoPrácticoPAV.Properties.Resources.reboot_arrow_3726__1_;
-            this.Btn_Procesos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Procesos.Location = new System.Drawing.Point(2, 49);
-            this.Btn_Procesos.Margin = new System.Windows.Forms.Padding(2);
-            this.Btn_Procesos.Name = "Btn_Procesos";
-            this.Btn_Procesos.Pp_Presionado = false;
-            this.Btn_Procesos.Size = new System.Drawing.Size(146, 41);
-            this.Btn_Procesos.TabIndex = 8;
-            this.Btn_Procesos.Text = "Procesos";
-            this.Btn_Procesos.UseVisualStyleBackColor = false;
-            this.Btn_Procesos.Click += new System.EventHandler(this.MouseClickButton);
-            // 
-            // Btn_Configuracion
-            // 
-            this.Btn_Configuracion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
-            this.Btn_Configuracion.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.Btn_Configuracion.FlatAppearance.BorderSize = 2;
-            this.Btn_Configuracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Configuracion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.Btn_Configuracion.ForeColor = System.Drawing.Color.White;
-            this.Btn_Configuracion.Image = global::TrabajoPrácticoPAV.Properties.Resources.pngegg;
-            this.Btn_Configuracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Configuracion.Location = new System.Drawing.Point(2, 381);
-            this.Btn_Configuracion.Margin = new System.Windows.Forms.Padding(2);
-            this.Btn_Configuracion.Name = "Btn_Configuracion";
-            this.Btn_Configuracion.Pp_Presionado = false;
-            this.Btn_Configuracion.Size = new System.Drawing.Size(146, 30);
-            this.Btn_Configuracion.TabIndex = 3;
-            this.Btn_Configuracion.Text = "     Configuración";
-            this.Btn_Configuracion.UseVisualStyleBackColor = false;
-            this.Btn_Configuracion.Click += new System.EventHandler(this.MouseClickButton);
-            // 
-            // Btn_Listado
-            // 
-            this.Btn_Listado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
-            this.Btn_Listado.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.Btn_Listado.FlatAppearance.BorderSize = 2;
-            this.Btn_Listado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Listado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.Btn_Listado.ForeColor = System.Drawing.Color.White;
-            this.Btn_Listado.Image = global::TrabajoPrácticoPAV.Properties.Resources._8b1a89d3f271913146d4cd63f3920464_icono_de_trazo_de_lista_de_verificaci_oacute_n_m_eacute_dica_by_vexels1;
-            this.Btn_Listado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Listado.Location = new System.Drawing.Point(2, 97);
-            this.Btn_Listado.Margin = new System.Windows.Forms.Padding(2);
-            this.Btn_Listado.Name = "Btn_Listado";
-            this.Btn_Listado.Pp_Presionado = false;
-            this.Btn_Listado.Size = new System.Drawing.Size(146, 41);
-            this.Btn_Listado.TabIndex = 7;
-            this.Btn_Listado.Text = "Listados";
-            this.Btn_Listado.UseVisualStyleBackColor = false;
-            this.Btn_Listado.Click += new System.EventHandler(this.MouseClickButton);
-            // 
-            // Btn_Estadistica
-            // 
-            this.Btn_Estadistica.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
-            this.Btn_Estadistica.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.Btn_Estadistica.FlatAppearance.BorderSize = 2;
-            this.Btn_Estadistica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Estadistica.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.Btn_Estadistica.ForeColor = System.Drawing.Color.White;
-            this.Btn_Estadistica.Image = global::TrabajoPrácticoPAV.Properties.Resources.Icon_66_512;
-            this.Btn_Estadistica.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Estadistica.Location = new System.Drawing.Point(2, 145);
-            this.Btn_Estadistica.Margin = new System.Windows.Forms.Padding(2);
-            this.Btn_Estadistica.Name = "Btn_Estadistica";
-            this.Btn_Estadistica.Pp_Presionado = false;
-            this.Btn_Estadistica.Size = new System.Drawing.Size(146, 41);
-            this.Btn_Estadistica.TabIndex = 6;
-            this.Btn_Estadistica.Text = "    Estadísticas";
-            this.Btn_Estadistica.UseVisualStyleBackColor = false;
-            this.Btn_Estadistica.Click += new System.EventHandler(this.MouseClickButton);
-            // 
             // Frm_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1027,7 +982,6 @@
         private System.Windows.Forms.ToolStripMenuItem avionesToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem porcentajeDeAvionesPorModeloToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem porcentajeDeAvionesPorAeropuertoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem porcentajeDeAsientosOcupadosPorVueloToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aeropuertosToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem cantidadDeAeropuertosPorPaísToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem facturacionesToolStripMenuItem;
@@ -1044,13 +998,8 @@
         private System.Windows.Forms.ToolStripMenuItem porcentajeDeViajesPorMesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem porcentajeDeViajesPorDíaDeSemanaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem vuelosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem porcentajeDeAsientosOcupadosPorVueloToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem cantidadDeVuelosRealizadosPorAviónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem porcentajeDeVuelosPorAeropuertoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cantidadDeVuelosRealizadosPorTripulaciónToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem equipajePorPasajeroToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem facruraToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem facturasPorFechasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aviónToolStripMenuItem1;
     }
 }

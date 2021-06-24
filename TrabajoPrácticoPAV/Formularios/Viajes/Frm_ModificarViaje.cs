@@ -1,33 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.Clase.Modelos;
 using TrabajoPrácticoPAV.NE_Usuarios;
-using static TrabajoPrácticoPAV.Clase.Tratamientos_Especiales;
 using System.Runtime.InteropServices;
-using TrabajoPrácticoPAV.Formularios.Viajes;
-using static TrabajoPrácticoPAV.Clase.Modelos.Viaje;
-
 
 namespace TrabajoPrácticoPAV.Formularios.Viajes
 {
-
     public partial class Frm_ModificarViaje : Form
     {
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
+
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWind, int wMsg, int wParam, int lParam);
 
         [DllImport("user32.DLL", EntryPoint = "CargarTodos")]
         private extern static void CargarTodos();
+
         private static readonly DataGridView datagrid_viajes = new DataGridView();
         private readonly NE_Viajes NE_Viajes = new NE_Viajes();
         private Viaje ViajeSeleccionado { get; set; }
@@ -52,8 +42,6 @@ namespace TrabajoPrácticoPAV.Formularios.Viajes
             mtb_horario_salida.Text = miViaje.HorarioSalida;
             mtb_horario_presencia.Text = miViaje.HorarioPresencia;
             lbl_duracionEstimada.Text = _Tiempo.FormatearIntMilitarAString(miViaje.DuracionEstimada);
-
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -74,17 +62,14 @@ namespace TrabajoPrácticoPAV.Formularios.Viajes
         private void mtb_llegada_TextChanged(object sender, EventArgs e)
         {
             ControladorDeHorarios();
-
         }
 
         private void ControladorDeHorarios()
         {
             // Esta función va a ser ejecutada cada vez que se ingresen cambios en alguno de los MaskedTextBox de horarios de salida o llegada.
             ManejoDeTiempos Tiempo = new ManejoDeTiempos();
-            if (ViajeSeleccionado == null)
-            {
-                return;
-            }
+            if (ViajeSeleccionado == null) return;
+
             string horarioLlegada = mtb_llegada.Text;
             string horarioSalida = mtb_horario_salida.Text;
 

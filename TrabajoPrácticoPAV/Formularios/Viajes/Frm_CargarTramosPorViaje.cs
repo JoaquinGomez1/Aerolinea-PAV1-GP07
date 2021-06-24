@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.Clase.Modelos;
@@ -15,6 +14,7 @@ namespace TrabajoPrácticoPAV.Formularios.Viajes
     {
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
+
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWind, int wMsg, int wParam, int lParam);
 
@@ -27,7 +27,6 @@ namespace TrabajoPrácticoPAV.Formularios.Viajes
             this.BackColor = Estilo.ColorFondoForms;
             Estilo.FormatearEstilo(this.Controls);
         }
-
 
         private void Frm_CargarTramosPorViaje_Load(object sender, EventArgs e)
         {
@@ -47,7 +46,6 @@ namespace TrabajoPrácticoPAV.Formularios.Viajes
 
         private void btn_agregar_Click(object sender, EventArgs e)
         {
-
             DataGridViewCellCollection selectedRowCells = grid_tramos.CurrentRow.Cells;
             Tramo tramo = new Tramo()
             {
@@ -77,13 +75,12 @@ namespace TrabajoPrácticoPAV.Formularios.Viajes
                 return;
             }
 
-
             grid_tramoViaje.Rows.Add();
 
-            int cantidadDeFilas = grid_tramoViaje.Rows.Count; // Count me devuelve la cantidad empezando de 1 
+            int cantidadDeFilas = grid_tramoViaje.Rows.Count; // Count me devuelve la cantidad empezando de 1
             int indiceRow = cantidadDeFilas - 1; // Resto uno para que lo trabaje la máquina
 
-            // El orden es importante 
+            // El orden es importante
 
             // NO usar cargarTramosDelViaje()
             grid_tramoViaje.Rows[indiceRow].Cells[0].Value = _NE_Tramo.BuscarNombreAeropuerto(tramo.codigoAeropuertoSalida);
@@ -99,7 +96,6 @@ namespace TrabajoPrácticoPAV.Formularios.Viajes
 
             // Elimino de la lista de tramos de viaje segun el índice donde se encontraba la fila seleccionada
             TramosDelViaje.RemoveAt(indexCurrentRow);
-
         }
 
         private void btn_registrar_Click(object sender, EventArgs e)

@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Backend;
 using TrabajoPrácticoPAV.Clase;
-using static TrabajoPrácticoPAV.Formularios.Estadisticas.PasajerosMayores.Ds_EstadisticaPasajerosMayores;
 
 namespace TrabajoPrácticoPAV.NE_Usuarios
 {

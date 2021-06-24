@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TrabajoPrácticoPAV.Clase;
+﻿using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.Backend;
 using System.Data;
-using System.Windows.Forms;
 
 namespace TrabajoPrácticoPAV.NE_Usuarios
 {
@@ -36,6 +30,18 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
         {
             return _BD.EjecutarSelect($"SELECT TOP 1 * FROM Factura WHERE numeroDeReserva = {numeroDeReserva}");
         }
+
+        internal DataTable RecuperarPorPasajero(string tipoDoc, string numeroDoc)
+        {
+            return _BD.EjecutarSelect("SELECT f.idFactura, f.fechaPago, tp.descripcion as idTipoPago, f.numeroDeReserva, " +
+                                    "r.numeroDocTitular, doc.nombreTipoDoc as tipoDoc " +
+                                    "FROM Factura f JOIN Tipo_Pago tp ON tp.idTipoPago=f.idTipoPago " +
+                                    "JOIN Reserva r ON r.numeroDeReserva=f.numeroDeReserva " +
+                                    "JOIN Tipo_Documento doc ON r.tipoDocTitular=doc.tipoDoc " +
+                                    "WHERE r.numeroDocTitular = " + numeroDoc +
+                                    " AND r.tipoDocTitular=" + tipoDoc);
+        }
+
         public void Insertar(string valores)
         {
             string sql = $"INSERT INTO Factura (fechaPago, numeroDeReserva, idTipoPago) VALUES "
@@ -53,6 +59,16 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             }
         }
 
+        internal DataTable RecuperarPorRangoDoc(string desde, string hasta)
+        {
+            return _BD.EjecutarSelect("SELECT f.idFactura, f.fechaPago, tp.descripcion as idTipoPago, f.numeroDeReserva, " +
+                                     "r.numeroDocTitular, doc.nombreTipoDoc as tipoDoc " +
+                                     "FROM Factura f JOIN Tipo_Pago tp ON tp.idTipoPago=f.idTipoPago " +
+                                     "JOIN Reserva r ON r.numeroDeReserva=f.numeroDeReserva " +
+                                     "JOIN Tipo_Documento doc ON r.tipoDocTitular=doc.tipoDoc " +
+                                     "WHERE r.numeroDocTitular BETWEEN (" + desde + ") AND (" + hasta + ")");
+        }
+
         public string RecuperarFechaActual()
         {
             return _BD.EjecutarSelect("SELECT CONVERT(DATE, GETDATE(), 110)").Rows[0][0].ToString();
@@ -67,6 +83,16 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
         {
             return _BD.EjecutarSelect("SELECT idFactura, fechaPago, idTipoPago, numeroDeReserva FROM Factura");
         }
+
+        internal DataTable RecuperarFacturaTodos()
+        {
+            return _BD.EjecutarSelect("SELECT f.idFactura, f.fechaPago, tp.descripcion as idTipoPago, f.numeroDeReserva, " +
+                                    "r.numeroDocTitular, doc.nombreTipoDoc as tipoDoc " +
+                                    "FROM Factura f JOIN Tipo_Pago tp ON tp.idTipoPago=f.idTipoPago " +
+                                    "JOIN Reserva r ON r.numeroDeReserva=f.numeroDeReserva " +
+                                    "JOIN Tipo_Documento doc ON r.tipoDocTitular=doc.tipoDoc");
+        }
+
         public DataTable Reporte_Factura_PorID(int idFactura)
         {
             return _BD.EjecutarSelect("SELECT idFactura, fechaPago, idTipoPago, numeroDeReserva FROM Factura WHERE idFactura = " + idFactura);

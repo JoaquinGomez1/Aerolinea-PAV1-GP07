@@ -33,10 +33,10 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.FacturasXPago
             this.btn_Calcular = new System.Windows.Forms.Button();
             this.rb_1 = new System.Windows.Forms.RadioButton();
             this.rb_2 = new System.Windows.Forms.RadioButton();
-            this.msk_annoDesde = new TrabajoPrácticoPAV.Clase.MaskedTextBox_Aerolinea();
-            this.msk_annoHasta = new TrabajoPrácticoPAV.Clase.MaskedTextBox_Aerolinea();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.msk_annoHasta = new TrabajoPrácticoPAV.Clase.MaskedTextBox_Aerolinea();
+            this.msk_annoDesde = new TrabajoPrácticoPAV.Clase.MaskedTextBox_Aerolinea();
             this.SuspendLayout();
             // 
             // rv_1
@@ -46,15 +46,15 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.FacturasXPago
             this.rv_1.Location = new System.Drawing.Point(12, 68);
             this.rv_1.Name = "rv_1";
             this.rv_1.ServerReport.BearerToken = null;
-            this.rv_1.Size = new System.Drawing.Size(776, 352);
+            this.rv_1.Size = new System.Drawing.Size(713, 334);
             this.rv_1.TabIndex = 0;
             // 
             // btn_Calcular
             // 
             this.btn_Calcular.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.btn_Calcular.Location = new System.Drawing.Point(658, 12);
+            this.btn_Calcular.Location = new System.Drawing.Point(624, 12);
             this.btn_Calcular.Name = "btn_Calcular";
-            this.btn_Calcular.Size = new System.Drawing.Size(130, 43);
+            this.btn_Calcular.Size = new System.Drawing.Size(101, 43);
             this.btn_Calcular.TabIndex = 1;
             this.btn_Calcular.Text = "Calcular";
             this.btn_Calcular.UseVisualStyleBackColor = true;
@@ -84,32 +84,6 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.FacturasXPago
             this.rb_2.Text = "Por año de factura";
             this.rb_2.UseVisualStyleBackColor = true;
             // 
-            // msk_annoDesde
-            // 
-            this.msk_annoDesde.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.msk_annoDesde.Location = new System.Drawing.Point(127, 33);
-            this.msk_annoDesde.Mask = "0000";
-            this.msk_annoDesde.Name = "msk_annoDesde";
-            this.msk_annoDesde.Pp_EsPk = false;
-            this.msk_annoDesde.Pp_MensajeError = null;
-            this.msk_annoDesde.Pp_NombreCampo = null;
-            this.msk_annoDesde.Pp_NombreTabla = null;
-            this.msk_annoDesde.Size = new System.Drawing.Size(54, 24);
-            this.msk_annoDesde.TabIndex = 4;
-            // 
-            // msk_annoHasta
-            // 
-            this.msk_annoHasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.msk_annoHasta.Location = new System.Drawing.Point(237, 33);
-            this.msk_annoHasta.Mask = "0000";
-            this.msk_annoHasta.Name = "msk_annoHasta";
-            this.msk_annoHasta.Pp_EsPk = false;
-            this.msk_annoHasta.Pp_MensajeError = null;
-            this.msk_annoHasta.Pp_NombreCampo = null;
-            this.msk_annoHasta.Pp_NombreTabla = null;
-            this.msk_annoHasta.Size = new System.Drawing.Size(54, 24);
-            this.msk_annoHasta.TabIndex = 5;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -130,11 +104,37 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.FacturasXPago
             this.label2.TabIndex = 7;
             this.label2.Text = "hasta";
             // 
+            // msk_annoHasta
+            // 
+            this.msk_annoHasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.msk_annoHasta.Location = new System.Drawing.Point(237, 33);
+            this.msk_annoHasta.Mask = "0000";
+            this.msk_annoHasta.Name = "msk_annoHasta";
+            this.msk_annoHasta.Pp_EsPk = false;
+            this.msk_annoHasta.Pp_MensajeError = null;
+            this.msk_annoHasta.Pp_NombreCampo = null;
+            this.msk_annoHasta.Pp_NombreTabla = null;
+            this.msk_annoHasta.Size = new System.Drawing.Size(54, 24);
+            this.msk_annoHasta.TabIndex = 5;
+            // 
+            // msk_annoDesde
+            // 
+            this.msk_annoDesde.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.msk_annoDesde.Location = new System.Drawing.Point(127, 33);
+            this.msk_annoDesde.Mask = "0000";
+            this.msk_annoDesde.Name = "msk_annoDesde";
+            this.msk_annoDesde.Pp_EsPk = false;
+            this.msk_annoDesde.Pp_MensajeError = null;
+            this.msk_annoDesde.Pp_NombreCampo = null;
+            this.msk_annoDesde.Pp_NombreTabla = null;
+            this.msk_annoDesde.Size = new System.Drawing.Size(54, 24);
+            this.msk_annoDesde.TabIndex = 4;
+            // 
             // Frm_FacturasXPago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 432);
+            this.ClientSize = new System.Drawing.Size(734, 407);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.msk_annoHasta);

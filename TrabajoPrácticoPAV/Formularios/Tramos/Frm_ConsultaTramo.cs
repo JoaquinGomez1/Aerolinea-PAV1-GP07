@@ -1,16 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Backend;
 using TrabajoPrácticoPAV.Clase;
-using TrabajoPrácticoPAV.NE_Usuarios;
 
 namespace TrabajoPrácticoPAV.Formularios.Tramos
 {
@@ -23,15 +16,15 @@ namespace TrabajoPrácticoPAV.Formularios.Tramos
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
+
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWind, int wMsg, int wParam, int lParam);
 
         public string codigoASalida { get; set; }
         public string codigoADestino { get; set; }
 
-        NE_Tramos _NE = new NE_Tramos();
-        Conexion_DB _BD = new Conexion_DB();
-        Tratamientos_Especiales _TE = new Tratamientos_Especiales();
+        private Conexion_DB _BD = new Conexion_DB();
+        private Tratamientos_Especiales _TE = new Tratamientos_Especiales();
 
         private void Btn_Aceptar_Click(object sender, EventArgs e)
         {
@@ -55,8 +48,8 @@ namespace TrabajoPrácticoPAV.Formularios.Tramos
 
         private void BarraSuperior_MouseMove(object sender, MouseEventArgs e)
         {
-                ReleaseCapture();
-                SendMessage(this.Handle, 0x112, 0xf012, 0);
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

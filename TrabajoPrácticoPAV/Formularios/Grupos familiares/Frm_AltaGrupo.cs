@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Backend;
 using TrabajoPrácticoPAV.Clase;
@@ -18,8 +11,10 @@ namespace TrabajoPrácticoPAV.Formularios.Grupos_familiares
     public partial class Frm_AltaGrupo : Form
     {
         #region Barra y colores
+
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
+
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWind, int wMsg, int wParam, int lParam);
 
@@ -38,17 +33,18 @@ namespace TrabajoPrácticoPAV.Formularios.Grupos_familiares
             Grid_Pasajero.Formatear();
             Cmb_TipoDoc.CargarCombo();
         }
-        #endregion
+
+        #endregion Barra y colores
 
         private int CantFilas = -1;
         private bool agrego2 = true;
         private string tipoDoc = "";
         private string numeroDoc = "";
 
-        Tratamientos_Especiales _TE = new Tratamientos_Especiales();
-        Conexion_DB _BD = new Conexion_DB();
-        NE_GrupoFamiliar _NE = new NE_GrupoFamiliar();
-        NE_Clientes _NE_Cli = new NE_Clientes();
+        private Tratamientos_Especiales _TE = new Tratamientos_Especiales();
+        private Conexion_DB _BD = new Conexion_DB();
+        private NE_GrupoFamiliar _NE = new NE_GrupoFamiliar();
+        private NE_Clientes _NE_Cli = new NE_Clientes();
 
         public Frm_AltaGrupo()
         {
@@ -91,7 +87,6 @@ namespace TrabajoPrácticoPAV.Formularios.Grupos_familiares
             }
             else if (!agrego2)
                 MessageBox.Show("Primero debe completar la relación existente");
-
         }
 
         private void Btn_AgregarSegundo_Click(object sender, EventArgs e)

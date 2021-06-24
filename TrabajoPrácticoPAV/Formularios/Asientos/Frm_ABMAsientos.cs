@@ -1,24 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using TrabajoPrácticoPAV.Backend;
 using TrabajoPrácticoPAV.Clase;
-using TrabajoPrácticoPAV.Formularios;
 using TrabajoPrácticoPAV.NE_Usuarios;
-using TrabajoPrácticoPAV.Formularios.Vuelo;
 
 namespace TrabajoPrácticoPAV.Formularios.Asientos
 {
     public partial class Frm_ABMAsientos : Form
     {
         public string Id_Asiento { get; set; }
-        NE_Asiento NEasiento = new NE_Asiento();
+        private NE_Asiento NEasiento = new NE_Asiento();
 
         public Frm_ABMAsientos()
         {
@@ -47,12 +37,9 @@ namespace TrabajoPrácticoPAV.Formularios.Asientos
             }
             else
             {
-                
                 NEasiento.CargarGrilla_asientos(grilla_ABMAsiento, join, this.Controls);
-
             }
         }
-        
 
         private void cmb_Modelo_SelectionChangeCommitted(object sender, EventArgs e)
         {
@@ -62,7 +49,6 @@ namespace TrabajoPrácticoPAV.Formularios.Asientos
             string CondicionAvion = @" JOIN Modelo ON Modelo.idModelo " +
                        @"= Avion.idModelo WHERE Modelo.idModelo = " + cmb_Modelo.SelectedValue;
             cmb_NumeroAvion.CargarComboJoin(CondicionAvion);
-
         }
 
         private void cmb_NumeroAvion_SelectionChangeCommitted(object sender, EventArgs e)
@@ -124,7 +110,6 @@ namespace TrabajoPrácticoPAV.Formularios.Asientos
             Frm_ConsultarAsiento consultaAsiento = new Frm_ConsultarAsiento();
             consultaAsiento.Id_asiento = Id_Asiento;
             consultaAsiento.ShowDialog();
-
         }
     }
 }

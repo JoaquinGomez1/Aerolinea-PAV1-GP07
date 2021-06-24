@@ -1,15 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.NE_Usuarios;
 using TrabajoPrácticoPAV.Clase;
-using TrabajoPrácticoPAV.Backend;
 using System.Runtime.InteropServices;
 
 namespace TrabajoPrácticoPAV.Formularios.Vuelo
@@ -46,14 +39,14 @@ namespace TrabajoPrácticoPAV.Formularios.Vuelo
             cmb_AeropSalida.CargarCombo();
 
             this.BackColor = Estilo.ColorFondoForms;
-                Estilo.FormatearEstilo(this.Controls);
+            Estilo.FormatearEstilo(this.Controls);
 
             MostrarDatos(vuelo.RecuperarXId(Id_vuelo));
         }
-        private void MostrarDatos( DataTable tabla)
+        private void MostrarDatos(DataTable tabla)
         {
             txt_idVuelo.Text = tabla.Rows[0]["idVuelo"].ToString();
-           // txt_duracionestimada.Text = tabla.Rows[0]["duracionEstimada"].ToString();
+            // txt_duracionestimada.Text = tabla.Rows[0]["duracionEstimada"].ToString();
             cmb_numAvion.SelectedValue = int.Parse(tabla.Rows[0]["numeroPorModelo"].ToString());
             cmb_nomModelo.SelectedValue = int.Parse(tabla.Rows[0]["idModelo"].ToString());
             cmb_AeropDestino.SelectedValue = tabla.Rows[0]["codigoAeropuertoDestino"].ToString();
@@ -68,14 +61,12 @@ namespace TrabajoPrácticoPAV.Formularios.Vuelo
 
         private void btn_ModificacionVuelo_Click(object sender, EventArgs e)
         {
-            
+
             if (MessageBox.Show("¿Esta seguro de Borrar?", "Importante", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
                 vuelo.Borrar(this.Controls);
                 this.Close();
             }
         }
-
-     
     }
 }

@@ -183,5 +183,45 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             string sql = "SELECT DATENAME(DW, fechaSalida) as Dia, COUNT( * ) as Cantidad, COUNT( * ) * 100 / (SELECT COUNT( * ) FROM RESERVA) as Porcentaje FROM Reserva Group By DATENAME(DW,fechaSalida)";
             return _DB.EjecutarSelect(sql);
         }
+
+        public DataTable RecuperarViajesXTramo()
+        {
+            DataTable table = new DataTable();
+            string sql = $"select numeroDeViaje, cantidadTramos, duracionEstimada from Viaje order by   numeroDeViaje ";
+            table = _DB.EjecutarSelect(sql);
+            return table;
+        }
+
+        public DataTable RecuperarViajesDirectos()
+        {
+            DataTable table = new DataTable();
+            string sql = $"select numeroDeViaje, cantidadTramos, duracionEstimada from Viaje where cantidadTramos = 1 order by   numeroDeViaje ";
+            table = _DB.EjecutarSelect(sql);
+            return table;
+        }
+
+        public DataTable RecuperarViajesConTramos()
+        {
+            DataTable table = new DataTable();
+            string sql = $"select numeroDeViaje, cantidadTramos, duracionEstimada from Viaje where cantidadTramos > 1 order by   numeroDeViaje ";
+            table = _DB.EjecutarSelect(sql);
+            return table;
+        }
+
+        public DataTable RecuperarViajesPorPais()
+        {
+            DataTable table = new DataTable();
+            string sql = $"SELECT pa.nombrePais as denominacion, COUNT(*) as valor FROM Viaje_X_Tramo vt JOIN Aeropuerto a ON vt.codigoAeropuertoSalida = a.codigo JOIN Ciudad c ON c.idCiudad = a.idCiudad JOIN Provincia p ON c.idProvincia = p.idProvincia JOIN Pais pa ON pa.idPais = p.idPais WHERE orden = 1 GROUP BY pa.idPais, pa.nombrePais ";
+            table = _DB.EjecutarSelect(sql);
+            return table;
+        }
+
+        public DataTable RecuperarViajesPorPaisFiltro(string letra)
+        {
+            DataTable table = new DataTable();
+            string sql = $"SELECT pa.nombrePais as denominacion, COUNT(*) as valor FROM Viaje_X_Tramo vt JOIN Aeropuerto a ON vt.codigoAeropuertoSalida = a.codigo JOIN Ciudad c ON c.idCiudad = a.idCiudad JOIN Provincia p ON c.idProvincia = p.idProvincia JOIN Pais pa ON pa.idPais = p.idPais WHERE orden = 1 and pa.nombrePais like '" + letra + "%' GROUP BY pa.idPais, pa.nombrePais ";
+            table = _DB.EjecutarSelect(sql);
+            return table;
+        }
     }
 }
