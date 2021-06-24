@@ -47,7 +47,7 @@
             this.reportViewer1.Location = new System.Drawing.Point(12, 134);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(708, 230);
+            this.reportViewer1.Size = new System.Drawing.Size(728, 239);
             this.reportViewer1.TabIndex = 9;
             // 
             // groupBox1
@@ -110,17 +110,17 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(12, 12);
+            this.label1.Location = new System.Drawing.Point(8, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(399, 21);
+            this.label1.Size = new System.Drawing.Size(403, 21);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Estadistica de porcetnaje de Tripulacion por Cargo";
+            this.label1.Text = "Estadistica del porcentaje de Tripulacion por Cargo";
             // 
             // txt_letra
             // 
             this.txt_letra.Location = new System.Drawing.Point(232, 45);
             this.txt_letra.Name = "txt_letra";
-            this.txt_letra.Size = new System.Drawing.Size(117, 20);
+            this.txt_letra.Size = new System.Drawing.Size(68, 20);
             this.txt_letra.TabIndex = 10;
             // 
             // label3
@@ -135,17 +135,19 @@
             // 
             // txt_nombreT
             // 
-            this.txt_nombreT.Location = new System.Drawing.Point(232, 79);
+            this.txt_nombreT.Location = new System.Drawing.Point(232, 77);
             this.txt_nombreT.Name = "txt_nombreT";
             this.txt_nombreT.Size = new System.Drawing.Size(117, 20);
             this.txt_nombreT.TabIndex = 12;
             // 
             // button_Aerolinea1
             // 
-            this.button_Aerolinea1.Location = new System.Drawing.Point(645, 79);
+            this.button_Aerolinea1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_Aerolinea1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button_Aerolinea1.Location = new System.Drawing.Point(645, 87);
             this.button_Aerolinea1.Name = "button_Aerolinea1";
             this.button_Aerolinea1.Pp_Presionado = false;
-            this.button_Aerolinea1.Size = new System.Drawing.Size(75, 33);
+            this.button_Aerolinea1.Size = new System.Drawing.Size(95, 41);
             this.button_Aerolinea1.TabIndex = 8;
             this.button_Aerolinea1.Text = "Buscar";
             this.button_Aerolinea1.UseVisualStyleBackColor = true;

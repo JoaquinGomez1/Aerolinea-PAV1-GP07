@@ -334,11 +334,12 @@
     </Compile>
     <Compile Include="Formularios\Estadisticas\ViajesXFecha\Ds_ViajesXFecha.cs">
       <DependentUpon>Ds_ViajesXFecha.xsd</DependentUpon>
+      <SubType>code</SubType>
     </Compile>
     <Compile Include="Formularios\Estadisticas\ViajesXFecha\Ds_ViajesXFecha.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
       <DependentUpon>Ds_ViajesXFecha.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Formularios\Estadisticas\ViajesXFecha\Frm_viajesXFecha.cs">
       <SubType>Form</SubType>
@@ -440,9 +441,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Listados\FacturasXPasajero\Ds_FacuraPorPasajero.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
       <DependentUpon>Ds_FacuraPorPasajero.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Formularios\Listados\FacturasXPasajero\Frm_facturaXPasajero.cs">
       <SubType>Form</SubType>

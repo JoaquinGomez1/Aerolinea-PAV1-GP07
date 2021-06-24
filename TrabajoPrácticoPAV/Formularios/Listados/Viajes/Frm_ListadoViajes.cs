@@ -28,11 +28,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Viajes
         private void Frm_ListadoViajes_Load(object sender, EventArgs e)
         {
         }
-
-        private void rv_01_Load(object sender, EventArgs e)
-        {
-        }
-
+        
         private void ArmarReporteUsuario01(DataTable tabla) // Aca hay algo mal
         {
             ReportDataSource PaqueteDatos = new ReportDataSource("DataSet1", tabla);
@@ -42,16 +38,6 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Viajes
             rv_01.RefreshReport();
         }
 
-        private void msk_txt1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-        }
-
-        private void rbu01_CheckedChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void rbu04_CheckedChanged(object sender, EventArgs e)
-        {
-        }
+        
     }
 }

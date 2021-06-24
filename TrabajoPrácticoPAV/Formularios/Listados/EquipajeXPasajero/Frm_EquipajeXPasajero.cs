@@ -9,7 +9,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.EquipajeXPasajero
 {
     public partial class Frm_EquipajeXPasajero : Form
     {
-        private NE_Equipaje tripulacion = new NE_Equipaje();
+        private NE_Equipaje Equipaje = new NE_Equipaje();
         private DataTable tabla = new DataTable();
 
         public Frm_EquipajeXPasajero()
@@ -32,19 +32,13 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.EquipajeXPasajero
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.DataSources.Add(PaqueteDatos);
             reportViewer1.RefreshReport();
-            MessageBox.Show(tabla.Rows.Count.ToString());
         }
 
         private void btn_Buscar_Click(object sender, EventArgs e)
         {
-            if (tabla.Rows.Count > 0)
-                MessageBox.Show("Hay datos!!!");
-            else
-                MessageBox.Show("No hay datos!!!");
-
             if (rbu_Pasajero.Checked && cmb_TipoDoc.SelectedIndex != -1 && msk_NroDoc.Text != " ")
             {
-                tabla = tripulacion.RecuperarPorPasajero(cmb_TipoDoc.Text, msk_NroDoc.Text);
+                tabla = Equipaje.RecuperarPorPasajero(cmb_TipoDoc.Text, msk_NroDoc.Text);
                 if (tabla.Rows.Count != 0)
                     ArmarReporteEquipaje01();
                 else
@@ -68,7 +62,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.EquipajeXPasajero
                 else
                     hasta = txt_Hasta.Text;
 
-                tabla = tripulacion.RecuperarPorRango(desde, hasta);
+                tabla = Equipaje.RecuperarPorRango(desde, hasta);
                 if (tabla.Rows.Count != 0)
                     ArmarReporteEquipaje01();
                 else
@@ -81,7 +75,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.EquipajeXPasajero
 
             if (rbu_Todos.Checked)
             {
-                tabla = tripulacion.RecuperarEquipaje();
+                tabla = Equipaje.RecuperarEquipaje();
                 if (tabla.Rows.Count != 0)
                     ArmarReporteEquipaje01();
                 else

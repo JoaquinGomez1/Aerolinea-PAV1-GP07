@@ -47,7 +47,7 @@
             this.reportViewer1.Location = new System.Drawing.Point(12, 134);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(717, 238);
+            this.reportViewer1.Size = new System.Drawing.Size(717, 272);
             this.reportViewer1.TabIndex = 4;
             // 
             // txt_ciudad
@@ -138,14 +138,16 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(282, 21);
             this.label5.TabIndex = 13;
-            this.label5.Text = "Estadistica de Aeropuertos Por País";
+            this.label5.Text = "Estadística de Aeropuertos Por País";
             // 
             // button_Aerolinea1
             // 
-            this.button_Aerolinea1.Location = new System.Drawing.Point(654, 93);
+            this.button_Aerolinea1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_Aerolinea1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button_Aerolinea1.Location = new System.Drawing.Point(634, 86);
             this.button_Aerolinea1.Name = "button_Aerolinea1";
             this.button_Aerolinea1.Pp_Presionado = false;
-            this.button_Aerolinea1.Size = new System.Drawing.Size(75, 25);
+            this.button_Aerolinea1.Size = new System.Drawing.Size(95, 41);
             this.button_Aerolinea1.TabIndex = 3;
             this.button_Aerolinea1.Text = "Buscar";
             this.button_Aerolinea1.UseVisualStyleBackColor = true;
@@ -155,7 +157,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(763, 397);
+            this.ClientSize = new System.Drawing.Size(749, 418);
             this.Controls.Add(this.txt_ciudad);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txt_letra);

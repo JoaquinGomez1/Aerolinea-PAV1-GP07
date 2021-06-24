@@ -63,5 +63,10 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Tripulacion_Por_Vuelo
             }
             return table;
         }
+
+        private void Frm_ListadoTripPorVuelo_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

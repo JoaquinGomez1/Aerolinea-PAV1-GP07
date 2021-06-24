@@ -32,14 +32,15 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Factura
             this.rv_Facturas = new Microsoft.Reporting.WinForms.ReportViewer();
             this.txt_idFactura = new Clase11.Clases.LabelText02();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btn_buscar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
-            this.rb_buscarPorFechas = new System.Windows.Forms.RadioButton();
             this.rb_buscarTodas = new System.Windows.Forms.RadioButton();
             this.rb_buscarPorId = new System.Windows.Forms.RadioButton();
+            this.rb_buscarPorFechas = new System.Windows.Forms.RadioButton();
+            this.btn_buscar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.txt_fecha_desde = new TrabajoPrácticoPAV.Clase.MaskedTextBox_Aerolinea();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_fecha_hasta = new TrabajoPrácticoPAV.Clase.MaskedTextBox_Aerolinea();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,14 +49,14 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Factura
             this.rv_Facturas.Location = new System.Drawing.Point(12, 117);
             this.rv_Facturas.Name = "rv_Facturas";
             this.rv_Facturas.ServerReport.BearerToken = null;
-            this.rv_Facturas.Size = new System.Drawing.Size(757, 309);
+            this.rv_Facturas.Size = new System.Drawing.Size(725, 289);
             this.rv_Facturas.TabIndex = 0;
             // 
             // txt_idFactura
             // 
-            this.txt_idFactura.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_idFactura.Location = new System.Drawing.Point(-5, 31);
-            this.txt_idFactura.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_idFactura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txt_idFactura.Location = new System.Drawing.Point(64, 28);
+            this.txt_idFactura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_idFactura.Name = "txt_idFactura";
             this.txt_idFactura.Pp_ancho = 10;
             this.txt_idFactura.Pp_decimales = 2;
@@ -67,7 +68,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Factura
             this.txt_idFactura.Pp_Text = "";
             this.txt_idFactura.Pp_tipoDato = Clase11.Clases.LabelText02.TipoDato.texto;
             this.txt_idFactura.Pp_validable = false;
-            this.txt_idFactura.Size = new System.Drawing.Size(234, 28);
+            this.txt_idFactura.Size = new System.Drawing.Size(275, 39);
             this.txt_idFactura.TabIndex = 1;
             // 
             // groupBox1
@@ -75,41 +76,20 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Factura
             this.groupBox1.Controls.Add(this.rb_buscarTodas);
             this.groupBox1.Controls.Add(this.rb_buscarPorId);
             this.groupBox1.Controls.Add(this.rb_buscarPorFechas);
-            this.groupBox1.Location = new System.Drawing.Point(472, 11);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.groupBox1.Location = new System.Drawing.Point(407, 11);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(199, 100);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tipo búsqueda";
             // 
-            // btn_buscar
-            // 
-            this.btn_buscar.Location = new System.Drawing.Point(677, 88);
-            this.btn_buscar.Name = "btn_buscar";
-            this.btn_buscar.Pp_Presionado = false;
-            this.btn_buscar.Size = new System.Drawing.Size(75, 23);
-            this.btn_buscar.TabIndex = 0;
-            this.btn_buscar.Text = "Buscar";
-            this.btn_buscar.UseVisualStyleBackColor = true;
-            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
-            // 
-            // rb_buscarPorFechas
-            // 
-            this.rb_buscarPorFechas.AutoSize = true;
-            this.rb_buscarPorFechas.Location = new System.Drawing.Point(6, 21);
-            this.rb_buscarPorFechas.Name = "rb_buscarPorFechas";
-            this.rb_buscarPorFechas.Size = new System.Drawing.Size(111, 17);
-            this.rb_buscarPorFechas.TabIndex = 1;
-            this.rb_buscarPorFechas.TabStop = true;
-            this.rb_buscarPorFechas.Text = "Buscar por fechas";
-            this.rb_buscarPorFechas.UseVisualStyleBackColor = true;
-            // 
             // rb_buscarTodas
             // 
             this.rb_buscarTodas.AutoSize = true;
             this.rb_buscarTodas.Location = new System.Drawing.Point(6, 67);
             this.rb_buscarTodas.Name = "rb_buscarTodas";
-            this.rb_buscarTodas.Size = new System.Drawing.Size(87, 17);
+            this.rb_buscarTodas.Size = new System.Drawing.Size(121, 24);
             this.rb_buscarTodas.TabIndex = 4;
             this.rb_buscarTodas.TabStop = true;
             this.rb_buscarTodas.Text = "Buscar todas";
@@ -120,16 +100,40 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Factura
             this.rb_buscarPorId.AutoSize = true;
             this.rb_buscarPorId.Location = new System.Drawing.Point(6, 44);
             this.rb_buscarPorId.Name = "rb_buscarPorId";
-            this.rb_buscarPorId.Size = new System.Drawing.Size(90, 17);
+            this.rb_buscarPorId.Size = new System.Drawing.Size(124, 24);
             this.rb_buscarPorId.TabIndex = 3;
             this.rb_buscarPorId.TabStop = true;
             this.rb_buscarPorId.Text = "Buscar por id ";
             this.rb_buscarPorId.UseVisualStyleBackColor = true;
             // 
+            // rb_buscarPorFechas
+            // 
+            this.rb_buscarPorFechas.AutoSize = true;
+            this.rb_buscarPorFechas.Location = new System.Drawing.Point(6, 21);
+            this.rb_buscarPorFechas.Name = "rb_buscarPorFechas";
+            this.rb_buscarPorFechas.Size = new System.Drawing.Size(156, 24);
+            this.rb_buscarPorFechas.TabIndex = 1;
+            this.rb_buscarPorFechas.TabStop = true;
+            this.rb_buscarPorFechas.Text = "Buscar por fechas";
+            this.rb_buscarPorFechas.UseVisualStyleBackColor = true;
+            // 
+            // btn_buscar
+            // 
+            this.btn_buscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_buscar.Location = new System.Drawing.Point(642, 70);
+            this.btn_buscar.Name = "btn_buscar";
+            this.btn_buscar.Pp_Presionado = false;
+            this.btn_buscar.Size = new System.Drawing.Size(95, 41);
+            this.btn_buscar.TabIndex = 0;
+            this.btn_buscar.Text = "Buscar";
+            this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
+            // 
             // txt_fecha_desde
             // 
-            this.txt_fecha_desde.Location = new System.Drawing.Point(146, 76);
-            this.txt_fecha_desde.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_fecha_desde.Location = new System.Drawing.Point(212, 62);
+            this.txt_fecha_desde.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_fecha_desde.Mask = "9999-99-99";
             this.txt_fecha_desde.Name = "txt_fecha_desde";
             this.txt_fecha_desde.Pp_EsPk = false;
@@ -142,8 +146,8 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Factura
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(-19, 76);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label1.Location = new System.Drawing.Point(47, 62);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 15, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(161, 18);
@@ -153,19 +157,19 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Factura
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(218, 76);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label2.Location = new System.Drawing.Point(111, 86);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 15, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(161, 18);
+            this.label2.Size = new System.Drawing.Size(97, 18);
             this.label2.TabIndex = 63;
             this.label2.Text = "Fecha Hasta";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // txt_fecha_hasta
             // 
-            this.txt_fecha_hasta.Location = new System.Drawing.Point(383, 74);
-            this.txt_fecha_hasta.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_fecha_hasta.Location = new System.Drawing.Point(212, 86);
+            this.txt_fecha_hasta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_fecha_hasta.Mask = "9999-99-99";
             this.txt_fecha_hasta.Name = "txt_fecha_hasta";
             this.txt_fecha_hasta.Pp_EsPk = false;
@@ -176,11 +180,22 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Factura
             this.txt_fecha_hasta.TabIndex = 62;
             this.txt_fecha_hasta.ValidatingType = typeof(System.DateTime);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label5.Location = new System.Drawing.Point(12, 3);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(242, 21);
+            this.label5.TabIndex = 64;
+            this.label5.Text = "Reporte de facturas por fecha";
+            // 
             // Frm_Reporte_FacturasPorFecha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(749, 418);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_fecha_hasta);
             this.Controls.Add(this.label1);
@@ -189,6 +204,8 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Factura
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txt_idFactura);
             this.Controls.Add(this.rv_Facturas);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_Reporte_FacturasPorFecha";
             this.Text = "Frm_Reporte_FacturasPorFecha";
             this.Load += new System.EventHandler(this.Frm_Reporte_FacturasPorFecha_Load);
@@ -212,5 +229,6 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Factura
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private Clase.MaskedTextBox_Aerolinea txt_fecha_hasta;
+        private System.Windows.Forms.Label label5;
     }
 }
