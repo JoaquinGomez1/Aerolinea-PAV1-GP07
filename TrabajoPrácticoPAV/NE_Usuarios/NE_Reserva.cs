@@ -204,7 +204,7 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
         }
         public DataTable ES_RecuperarTodosReservas()
         {
-            string sql = @"SELECT MONTH(r.fechaSalida) as denominicacion, COUNT(*) as valor FROM Reserva r  GROUP BY MONTH(r.fechaSalida)";
+            string sql = @"SELECT MONTH(r.fechaSalida) as denominacion,COUNT(*)*100/(SELECT COUNT(*) FROM Reserva) as valor FROM Reserva r  GROUP BY MONTH(r.fechaSalida)";
            // MessageBox.Show("2");
             return _DB.EjecutarSelect(sql);
 

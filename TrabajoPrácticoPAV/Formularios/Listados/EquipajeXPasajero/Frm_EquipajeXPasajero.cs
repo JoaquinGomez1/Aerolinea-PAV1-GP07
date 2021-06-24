@@ -22,15 +22,14 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.EquipajeXPasajero
         {
             InitializeComponent();
         }
-
-
+        
         private void Frm_EquipajeXPasajero_Load(object sender, EventArgs e)
         {
-
             this.reportViewer1.RefreshReport();
             this.BackColor = Estilo.ColorFondoForms;
             Estilo.FormatearEstilo(this.Controls);
             cmb_TipoDoc.CargarCombo();
+            this.reportViewer1.RefreshReport();
         }
 
         private void ArmarReporteEquipaje01()
@@ -46,26 +45,26 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.EquipajeXPasajero
 
         private void btn_Buscar_Click(object sender, EventArgs e)
         {
-            if (tabla.Rows.Count > 0)
-                MessageBox.Show("Hay datos!!!");
-            else
-                MessageBox.Show("No hay datos!!!");
 
-            if (rbu_Pasajero.Checked && cmb_TipoDoc.SelectedIndex != -1 && msk_NroDoc.Text != " ")
+            if (rbu_Pasajero.Checked && cmb_TipoDoc.SelectedIndex != -1 && msk_NroDoc.Text != "")
             {
                 tabla = tripulacion.RecuperarPorPasajero(cmb_TipoDoc.Text, msk_NroDoc.Text);
                 if (tabla.Rows.Count != 0)
                     ArmarReporteEquipaje01();
-
                 else
                 {
                     reportViewer1.LocalReport.DataSources.Clear();
-                    reportViewer1.RefreshReport();                    
+                    reportViewer1.RefreshReport();
                     MessageBox.Show("No se encontraron resultados");
                 }
             }
             if (rbu_Peso.Checked)
             {
+
+                if (int.Parse(txt_Desde.Text) > int.Parse(txt_Hasta.Text))
+                {
+                    MessageBox.Show("El rango no es válido. Por favor ingrese nuevamente un rango.");
+                }
                 string desde = "";
                 string hasta = "";
 
@@ -88,22 +87,22 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.EquipajeXPasajero
                     MessageBox.Show("No se encontraron resultados");
                 }
             }
-        
-                if (rbu_Todos.Checked)
+
+            if (rbu_Todos.Checked)
+            {
+                tabla = tripulacion.RecuperarEquipaje();
+                if (tabla.Rows.Count != 0)
+                    ArmarReporteEquipaje01();
+                else
                 {
-                    tabla = tripulacion.RecuperarEquipaje();
-                    if (tabla.Rows.Count != 0)
-                        ArmarReporteEquipaje01();
-                    else
-                    {
-                        reportViewer1.LocalReport.DataSources.Clear();
-                        reportViewer1.RefreshReport();
-                        MessageBox.Show("No se encontraron resultados");
-                    }
+                    reportViewer1.LocalReport.DataSources.Clear();
+                    reportViewer1.RefreshReport();
+                    MessageBox.Show("No se encontraron resultados");
                 }
             }
         }
     }
+}
 
         
 
