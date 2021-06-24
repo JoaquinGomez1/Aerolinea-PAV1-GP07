@@ -1,12 +1,6 @@
 ﻿using Microsoft.Reporting.WinForms;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.NE_Usuarios;
@@ -16,6 +10,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Reservas
     public partial class Frm_Reservas : Form
     {
         private readonly NE_Reserva _NE_Reserva = new NE_Reserva();
+
         public Frm_Reservas()
         {
             InitializeComponent();
@@ -25,7 +20,6 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Reservas
 
         private void Frm_ListadoReservasPorPasajero_Load(object sender, EventArgs e)
         {
-
         }
 
         private void btn_search_Click(object sender, EventArgs e)
@@ -35,7 +29,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Reservas
         }
 
         // Carga Report Viewer
-        private void ArmarReporteUsuario(DataTable tabla) // Aca hay algo mal 
+        private void ArmarReporteUsuario(DataTable tabla) // Aca hay algo mal
         {
             ReportDataSource PaqueteDatos = new ReportDataSource("ReservasPorPasajeros", tabla);
             reportViewer1.LocalReport.ReportEmbeddedResource = "TrabajoPrácticoPAV.Formularios.Listados.Reservas.ReporteReservasPorPasajeros.rdlc";
@@ -76,32 +70,26 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Reservas
 
         private void Mtxt_documento_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
-
         }
 
         private void label2_Click(object sender, EventArgs e)
         {
-
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
-
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-
         }
 
         private void Mtxt_reserva_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
-
         }
 
         private void reportViewer1_Load(object sender, EventArgs e)
         {
-
         }
 
         private void btn_search_Click_1(object sender, EventArgs e)

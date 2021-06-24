@@ -5,46 +5,46 @@ using System.Windows.Forms;
 using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.NE_Usuarios;
 
-namespace TrabajoPrácticoPAV.Formularios.Listados.EquipajeXPasajero
+namespace TrabajoPrácticoPAV.Formularios.Listados.FacturasXPasajero
 {
-    public partial class Frm_EquipajeXPasajero : Form
+    public partial class Frm_facturaXPasajero : Form
     {
-        private NE_Equipaje tripulacion = new NE_Equipaje();
         private DataTable tabla = new DataTable();
+        private NE_Facturacion factura = new NE_Facturacion();
 
-        public Frm_EquipajeXPasajero()
+        public Frm_facturaXPasajero()
         {
             InitializeComponent();
         }
 
-        private void Frm_EquipajeXPasajero_Load(object sender, EventArgs e)
+        private void Frm_facturaXPasajero_Load(object sender, EventArgs e)
         {
             this.reportViewer1.RefreshReport();
             this.BackColor = Estilo.ColorFondoForms;
             Estilo.FormatearEstilo(this.Controls);
+            this.reportViewer1.RefreshReport();
             cmb_TipoDoc.CargarCombo();
         }
 
         private void ArmarReporteEquipaje01()
         {
-            ReportDataSource PaqueteDatos = new ReportDataSource("DataSet1", tabla);
-            reportViewer1.LocalReport.ReportEmbeddedResource = "TrabajoPrácticoPAV.Formularios.Listados.EquipajeXPasajero.ReporteEquipaje.rdlc";
+            ReportDataSource PaqueteDatos = new ReportDataSource("facturaPasajero", tabla);
+            reportViewer1.LocalReport.ReportEmbeddedResource = "TrabajoPrácticoPAV.Formularios.Listados.FacturasXPasajero.Rp_FxP.rdlc";
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.DataSources.Add(PaqueteDatos);
             reportViewer1.RefreshReport();
-            MessageBox.Show(tabla.Rows.Count.ToString());
         }
 
         private void btn_Buscar_Click(object sender, EventArgs e)
         {
-            if (tabla.Rows.Count > 0)
-                MessageBox.Show("Hay datos!!!");
-            else
-                MessageBox.Show("No hay datos!!!");
-
-            if (rbu_Pasajero.Checked && cmb_TipoDoc.SelectedIndex != -1 && msk_NroDoc.Text != " ")
+            if (rbu_Pasajero.Checked == false && rbu_Rango.Checked == false && rbu_Todos.Checked == false)
             {
-                tabla = tripulacion.RecuperarPorPasajero(cmb_TipoDoc.Text, msk_NroDoc.Text);
+                MessageBox.Show("Seleccione una opción");
+                return;
+            }
+            else if ((rbu_Pasajero.Checked && cmb_TipoDoc.SelectedIndex != -1) && (rbu_Pasajero.Checked && msk_NroDoc.Text != ""))
+            {
+                tabla = factura.RecuperarPorPasajero(cmb_TipoDoc.SelectedValue.ToString(), msk_NroDoc.Text);
                 if (tabla.Rows.Count != 0)
                     ArmarReporteEquipaje01();
                 else
@@ -54,7 +54,12 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.EquipajeXPasajero
                     MessageBox.Show("No se encontraron resultados");
                 }
             }
-            if (rbu_Peso.Checked)
+            else if ((rbu_Pasajero.Checked && cmb_TipoDoc.SelectedIndex == -1) || (rbu_Pasajero.Checked && msk_NroDoc.Text != " "))
+            {
+                MessageBox.Show("Ingrese los parametros a buscar.");
+                return;
+            }
+            else if (rbu_Rango.Checked)
             {
                 string desde = "";
                 string hasta = "";
@@ -64,11 +69,11 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.EquipajeXPasajero
                 else
                     desde = txt_Desde.Text;
                 if (txt_Hasta.Text == "")
-                    hasta = "99999";
+                    hasta = "99999999";
                 else
                     hasta = txt_Hasta.Text;
 
-                tabla = tripulacion.RecuperarPorRango(desde, hasta);
+                tabla = factura.RecuperarPorRangoDoc(desde, hasta);
                 if (tabla.Rows.Count != 0)
                     ArmarReporteEquipaje01();
                 else
@@ -78,10 +83,9 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.EquipajeXPasajero
                     MessageBox.Show("No se encontraron resultados");
                 }
             }
-
-            if (rbu_Todos.Checked)
+            else if (rbu_Todos.Checked)
             {
-                tabla = tripulacion.RecuperarEquipaje();
+                tabla = factura.RecuperarFacturaTodos();
                 if (tabla.Rows.Count != 0)
                     ArmarReporteEquipaje01();
                 else

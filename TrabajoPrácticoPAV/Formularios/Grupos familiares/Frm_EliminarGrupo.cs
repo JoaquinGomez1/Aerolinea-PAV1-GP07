@@ -1,16 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Backend;
 using TrabajoPrácticoPAV.Clase;
-using TrabajoPrácticoPAV.NE_Usuarios;
 
 namespace TrabajoPrácticoPAV.Formularios.Grupos_familiares
 {
@@ -22,8 +15,10 @@ namespace TrabajoPrácticoPAV.Formularios.Grupos_familiares
         }
 
         #region Barra y colores
+
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
+
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWind, int wMsg, int wParam, int lParam);
 
@@ -31,10 +26,11 @@ namespace TrabajoPrácticoPAV.Formularios.Grupos_familiares
         public string tipoDoc2 { get; set; }
         public string numeroDoc1 { get; set; }
         public string numeroDoc2 { get; set; }
-        public string  relacion { get; set; }
+        public string relacion { get; set; }
 
-        Tratamientos_Especiales _TE = new Tratamientos_Especiales();
-        Conexion_DB _BD = new Conexion_DB();
+        private Tratamientos_Especiales _TE = new Tratamientos_Especiales();
+        private Conexion_DB _BD = new Conexion_DB();
+
         private void BarraSuperior_MouseMove(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
@@ -61,7 +57,8 @@ namespace TrabajoPrácticoPAV.Formularios.Grupos_familiares
             tabla = _BD.EjecutarSelect(sql2);
             _TE.InsertarDatosEnControles(tabla, PanelP2.Controls);
         }
-        #endregion
+
+        #endregion Barra y colores
 
         private void btn_cancelar_Click(object sender, EventArgs e)
         {

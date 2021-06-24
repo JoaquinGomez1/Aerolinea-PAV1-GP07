@@ -1,24 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.NE_Usuarios;
-using TrabajoPrácticoPAV.Backend;
 using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.Formularios.Tramos;
-using System.Runtime.InteropServices;
 
 namespace TrabajoPrácticoPAV.Formularios
 {
     public partial class Frm_ABMTramos : Form
     {
-        NE_Tramos _NE = new NE_Tramos();
-        Tratamientos_Especiales _TE = new Tratamientos_Especiales();
+        private NE_Tramos _NE = new NE_Tramos();
+        private Tratamientos_Especiales _TE = new Tratamientos_Especiales();
 
         public Frm_ABMTramos()
         {
@@ -80,7 +71,7 @@ namespace TrabajoPrácticoPAV.Formularios
             string codigoASalida = _NE.BuscarCodigoAeropuerto(
                 grid_tramos.CurrentRow.Cells["codigoAeropuertoSalida"].Value.ToString());
 
-            string codigoADestino =_NE.BuscarCodigoAeropuerto(
+            string codigoADestino = _NE.BuscarCodigoAeropuerto(
                 grid_tramos.CurrentRow.Cells["codigoAeropuertoDestino"].Value.ToString());
 
             Frm_ModificacionTramo modif = new Frm_ModificacionTramo();

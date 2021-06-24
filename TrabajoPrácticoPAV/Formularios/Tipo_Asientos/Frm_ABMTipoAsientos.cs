@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Backend;
 using TrabajoPrácticoPAV.Clase;
@@ -17,8 +10,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tipo_Asientos
 
     {
         public string Id_Tipo { get; set; }
-        Conexion_DB _BD = new Conexion_DB();
-        NE_TipoAsiento TA = new NE_TipoAsiento();
+        private NE_TipoAsiento TA = new NE_TipoAsiento();
 
         public Frm_ABMTipoAsientos()
         {
@@ -26,6 +18,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tipo_Asientos
             this.BackColor = Estilo.ColorFondoForms;
             Estilo.FormatearEstilo(this.Controls);
         }
+
         private void Frm_ABMTipoAsientos_Load(object sender, EventArgs e)
         {
             grid_TipoAsiento.Pp_FormatoGrid = "idTipo, ID, 50;nombre, Clase, 100;costo, Costo, 100";
@@ -99,6 +92,4 @@ namespace TrabajoPrácticoPAV.Formularios.Tipo_Asientos
             Id_Tipo = grid_TipoAsiento.CurrentRow.Cells[0].Value.ToString();
         }
     }
-
-   
 }

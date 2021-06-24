@@ -1,12 +1,6 @@
 ﻿using Microsoft.Reporting.WinForms;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.NE_Usuarios;
@@ -16,14 +10,13 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Avion_Por_Modelo
     public partial class Frm_AvionPorModelo : Form
     {
         private readonly NE_Avion _NE = new NE_Avion();
-        Tratamientos_Especiales tratamientos = new Tratamientos_Especiales();
-        DataTable tabla = new DataTable();
+        private DataTable tabla = new DataTable();
 
         public Frm_AvionPorModelo()
         {
             InitializeComponent();
-
         }
+
         private void Frm_AvionPorModelo_Load(object sender, EventArgs e)
         {
             cmb_idModelo.CargarCombo();
@@ -54,7 +47,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Avion_Por_Modelo
             {
                 table = _NE.RecuperarTodos();
                 if (tabla.Rows.Count != 0)
-                   ArmarReporteUsuario(table);
+                    ArmarReporteUsuario(table);
                 else
                 {
                     rv_avionPorModelo.LocalReport.DataSources.Clear();
@@ -83,7 +76,6 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Avion_Por_Modelo
             {
                 if (idModelo != null)
                 {
-
                     table = _NE.RecuperarPorIdModelo(idModelo);
                     if (tabla.Rows.Count != 0)
                         ArmarReporteUsuario(table);
@@ -94,7 +86,6 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Avion_Por_Modelo
                         MessageBox.Show("No se encontraron resultados para la búsqueda");
                     }
                 }
-
             }
             return table;
         }

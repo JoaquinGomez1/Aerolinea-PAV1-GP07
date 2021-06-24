@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using TrabajoPrácticoPAV.Backend;
 using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.Formularios.Pasajeros;
 using TrabajoPrácticoPAV.NE_Usuarios;
@@ -21,8 +13,8 @@ namespace TrabajoPrácticoPAV.Formularios.Grupos_familiares
             InitializeComponent();
         }
 
-        Tratamientos_Especiales _TE = new Tratamientos_Especiales();
-        NE_GrupoFamiliar _NE = new NE_GrupoFamiliar();
+        private Tratamientos_Especiales _TE = new Tratamientos_Especiales();
+        private NE_GrupoFamiliar _NE = new NE_GrupoFamiliar();
 
         private void Frm_ABMGrupoFamiliar_Load(object sender, EventArgs e)
         {
@@ -42,7 +34,7 @@ namespace TrabajoPrácticoPAV.Formularios.Grupos_familiares
         {
             string sql = _NE.ConstructorSelect(this.Controls);
             _NE.CargarGrilla(sql, grid_Familiares);
-            if(grid_Familiares.Rows.Count < 1)
+            if (grid_Familiares.Rows.Count < 1)
                 MessageBox.Show("El pasajero buscado no existe o no pertenece a ningún grupo familiar");
         }
 
@@ -57,12 +49,12 @@ namespace TrabajoPrácticoPAV.Formularios.Grupos_familiares
 
             Frm_MostrarPasajero mostrar = new Frm_MostrarPasajero();
 
-            if(indiceClickeado == 4 || indiceClickeado == 5)
+            if (indiceClickeado == 4 || indiceClickeado == 5)
             {
                 mostrar.tipoDoc = grid_Familiares.CurrentRow.Cells["tipodoc1"].Value.ToString();
                 mostrar.numeroDoc = grid_Familiares.CurrentRow.Cells["numero1"].Value.ToString();
             }
-            else if(indiceClickeado == 7 || indiceClickeado == 8)
+            else if (indiceClickeado == 7 || indiceClickeado == 8)
             {
                 mostrar.tipoDoc = grid_Familiares.CurrentRow.Cells["tipodoc2"].Value.ToString();
                 mostrar.numeroDoc = grid_Familiares.CurrentRow.Cells["numero2"].Value.ToString();

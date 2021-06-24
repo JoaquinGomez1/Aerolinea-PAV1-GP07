@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.Backend;
@@ -17,6 +10,7 @@ namespace TrabajoPrácticoPAV.Formularios.Tipo_Asientos
     {
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
+
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWind, int wMsg, int wParam, int lParam);
 
@@ -32,7 +26,8 @@ namespace TrabajoPrácticoPAV.Formularios.Tipo_Asientos
             this.BackColor = Estilo.ColorFondoForms;
             Estilo.FormatearEstilo(this.Controls);
         }
-        Tratamientos_Especiales _TE = new Tratamientos_Especiales();
+
+        private Tratamientos_Especiales _TE = new Tratamientos_Especiales();
 
         private void Frm_AltaTipoAsiento_Load(object sender, EventArgs e)
         {
@@ -44,7 +39,8 @@ namespace TrabajoPrácticoPAV.Formularios.Tipo_Asientos
         {
             this.Close();
         }
-        Conexion_DB _BD = new Conexion_DB();
+
+        private Conexion_DB _BD = new Conexion_DB();
 
         private void btn_Registrar_Click(object sender, EventArgs e)
         {
@@ -52,9 +48,6 @@ namespace TrabajoPrácticoPAV.Formularios.Tipo_Asientos
             _BD.Insertar(sql, false);
             this.Close();
             //MessageBox.Show("Asiento insertado correctamente.");
-            
         }
-
-        
     }
 }

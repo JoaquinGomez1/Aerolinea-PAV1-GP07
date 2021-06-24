@@ -1,15 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using TrabajoPrácticoPAV.Backend;
 using TrabajoPrácticoPAV.Clase;
-using TrabajoPrácticoPAV.Formularios;
 using TrabajoPrácticoPAV.NE_Usuarios;
 using TrabajoPrácticoPAV.Formularios.Vuelo;
 
@@ -30,23 +21,17 @@ namespace TrabajoPrácticoPAV.Formularios
             cmb_nomModelo.CargarCombo();
 
             this.BackColor = Estilo.ColorFondoForms;
-                Estilo.FormatearEstilo(this.Controls);
+            Estilo.FormatearEstilo(this.Controls);
         }
-        
+
 
         private void btn_consultar1_Click(object sender, EventArgs e)
         {
             if (chk_box.Checked == false && cmb_NumAvion.SelectedIndex == -1 && cmb_nomModelo.SelectedIndex == -1)
-            {
                 MessageBox.Show("Debe seleccionar alguna opción");
-            }
             else
-            {
-                
-                vuelo.CargarGrilla_vuelo1( grilla_ABM_vuelo1, "", this.Controls);
-            }
+                vuelo.CargarGrilla_vuelo1(grilla_ABM_vuelo1, "", this.Controls);
         }
-       
 
         private void btn_registrar1_Click(object sender, EventArgs e)
         {
@@ -91,12 +76,12 @@ namespace TrabajoPrácticoPAV.Formularios
             chk_box.Checked = false;
             grilla_ABM_vuelo1.Rows.Clear();
         }
-       
+
         private void cmb_NumAvion_SelectedIndexChanged(object sender, EventArgs e)
         {
             chk_box.Checked = false;
         }
-        
+
         private void cmb_nomModelo_SelectionChangeCommitted(object sender, EventArgs e)
         {
             string Condicion = @" JOIN Modelo ON Modelo.idModelo " +

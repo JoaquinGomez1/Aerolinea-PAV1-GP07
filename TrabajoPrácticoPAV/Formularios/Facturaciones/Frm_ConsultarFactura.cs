@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Backend;
 using TrabajoPrácticoPAV.Clase;
@@ -22,7 +16,6 @@ namespace TrabajoPrácticoPAV.Formularios.Facturaciones
         public DataTable pasajero { get; set; }
         public DataTable vuelo { get; set; }
         public DataTable factura { get; set; }
-
 
         #region Movimiento de la barra
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -61,7 +54,7 @@ namespace TrabajoPrácticoPAV.Formularios.Facturaciones
                 return;
             }
         }
-       
+
 
         private void btn_cancelar_Click(object sender, EventArgs e)
         {

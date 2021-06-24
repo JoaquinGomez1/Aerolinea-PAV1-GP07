@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.NE_Usuarios;
@@ -25,7 +18,7 @@ namespace TrabajoPrácticoPAV.Formularios.Vuelo
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
-        } 
+        }
 
         NE_Vuelos vuelo = new NE_Vuelos();
         public Frm_AltaVuelo()
@@ -39,7 +32,7 @@ namespace TrabajoPrácticoPAV.Formularios.Vuelo
         {
             cmb_nomModelo.CargarCombo();
             cmb_AeropSalida.CargarCombo();
-           
+
 
             this.BackColor = Estilo.ColorFondoForms;
             Estilo.FormatearEstilo(this.Controls);
@@ -69,7 +62,6 @@ namespace TrabajoPrácticoPAV.Formularios.Vuelo
 
             if (Tratamiento.Validar(this.Controls) == Tratamientos_Especiales.Resultado.correcto)
             {
-                Conexion_DB _BD = new Conexion_DB();
                 Tratamiento.Validar(this.Controls);
                 if (cmb_AeropSalida.SelectedIndex != cmb_AeropDestino.SelectedIndex)
                 {
@@ -81,10 +73,7 @@ namespace TrabajoPrácticoPAV.Formularios.Vuelo
                     MessageBox.Show("El aeropuerto de salida no puede ser igual al aeropuerto de destino. Seleccione otro");
                 }
             }
-            else
-            {
-                return;
-            }
+
         }
-    }   
+    }
 }

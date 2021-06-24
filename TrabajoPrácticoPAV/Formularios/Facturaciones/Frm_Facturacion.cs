@@ -2,7 +2,6 @@
 using System.Data;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Clase;
-using TrabajoPrácticoPAV.Clase.Modelos;
 using TrabajoPrácticoPAV.Backend;
 using TrabajoPrácticoPAV.NE_Usuarios;
 
@@ -16,7 +15,6 @@ namespace TrabajoPrácticoPAV.Formularios.Facturaciones
         public DataTable vuelo { get; set; }
 
         private NE_Facturacion facturacion = new NE_Facturacion();
-        private Conexion_DB _BD = new Conexion_DB();
 
         public Frm_Facturacion()
         {
@@ -44,9 +42,7 @@ namespace TrabajoPrácticoPAV.Formularios.Facturaciones
             vuelo = facturacion.RecuperarVueloxReserva(txt_numeroReserva.Text);
 
             if (vuelo.Rows.Count != 0)
-            {
                 facturacion.CargarGrillaVuelos(vuelo, grid_vuelo);
-            }
             if (pasajero.Rows.Count != 0)
             {
                 txt_numeroDoc.Text = pasajero.Rows[0][0].ToString();
@@ -58,9 +54,8 @@ namespace TrabajoPrácticoPAV.Formularios.Facturaciones
                 button_Aerolinea1.Enabled = true;
             }
             else
-            {
                 MessageBox.Show("No se ha encontrado una reserva con el número de reserva ingresado.");
-            }
+
         }
 
         private void btn_GenerarFactura_Click(object sender, EventArgs e)

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data;
+﻿using System.Data;
 using TrabajoPrácticoPAV.Clase;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Backend;
@@ -21,7 +16,7 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             return _BD.EjecutarSelect(sql);
         }
 
-        public void CargarGrilla_vuelo1( DataGridView_Aerolinea grilla_ABM_vuelo1, string join, Control.ControlCollection controls)
+        public void CargarGrilla_vuelo1(DataGridView_Aerolinea grilla_ABM_vuelo1, string join, Control.ControlCollection controls)
         {
             string sql = tratamiento.ConstructorSelect(controls, join, "Vuelo");
             DataTable tabla = _BD.EjecutarSelect(sql);
