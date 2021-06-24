@@ -48,6 +48,10 @@ using TrabajoPrácticoPAV.Formularios.Estadisticas.FacturasXPago;
 using TrabajoPrácticoPAV.Formularios.Estadisticas.FacturasXMes;
 using TrabajoPrácticoPAV.Formularios.Estadisticas.ViajesPorPais;
 using TrabajoPrácticoPAV.Formularios.Estadisticas.ViajesXFecha;
+using TrabajoPrácticoPAV.Formularios.Listados.FacturasXPasajero;
+using TrabajoPrácticoPAV.Formularios.Listados.Factura;
+using TrabajoPrácticoPAV.Formularios.Listados;
+using TrabajoPrácticoPAV.Formularios.Listados.EquipajeXPasajero;
 
 namespace TrabajoPrácticoPAV
 {
@@ -500,6 +504,30 @@ namespace TrabajoPrácticoPAV
         {
             CerrarTodosLosMenuStrip();
             AbrirFormulario<Frm_viajesXFecha>();
+        }
+
+        private void facturasPorFechaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_facturaXPasajero>();
+        }
+
+        private void facturaPorPasajeroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_Reporte_FacturasPorFecha>();
+        }
+
+        private void aviónToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_Reportes>();
+        }
+
+        private void equipajePorPasajeroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_EquipajeXPasajero>();
         }
     }
 }

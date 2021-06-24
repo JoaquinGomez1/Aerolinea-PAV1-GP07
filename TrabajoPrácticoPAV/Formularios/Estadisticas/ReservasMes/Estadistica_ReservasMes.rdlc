@@ -337,7 +337,7 @@
                 </Style>
               </ChartArea>
             </ChartAreas>
-            <Palette>Pacific</Palette>
+            <Palette>Chocolate</Palette>
             <ChartBorderSkin>
               <Style>
                 <BackgroundColor>Gray</BackgroundColor>
@@ -356,8 +356,8 @@
             </ChartNoDataMessage>
             <DataSetName>Ds_ReservaMes</DataSetName>
             <Top>1.2192cm</Top>
-            <Height>8.6195cm</Height>
-            <Width>11.42507cm</Width>
+            <Height>5.94721cm</Height>
+            <Width>11.58382cm</Width>
             <Style>
               <Border>
                 <Color>LightGrey</Color>
@@ -584,10 +584,10 @@
             </Style>
           </Textbox>
         </ReportItems>
-        <Height>3.8735in</Height>
+        <Height>2.97767in</Height>
         <Style />
       </Body>
-      <Width>7.81609in</Width>
+      <Width>7.02442in</Width>
       <Page>
         <PageHeight>29.7cm</PageHeight>
         <PageWidth>21cm</PageWidth>

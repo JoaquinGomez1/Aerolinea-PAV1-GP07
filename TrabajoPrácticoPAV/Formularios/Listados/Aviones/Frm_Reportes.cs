@@ -23,11 +23,6 @@ namespace TrabajoPrácticoPAV.Formularios.Listados
             this.reportViewer1.RefreshReport();
         }
 
-        private void btn_buscar_Click_1(object sender, EventArgs e)
-        {
-            BuscarAviones();
-        }
-
         private void BuscarAviones()
         {
             string id = txt_id.Text;
@@ -59,8 +54,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados
             // Busca Todos
             if (rbu03.Checked == true)
             {
-                MessageBox.Show("si");
-                DataTable tabla = aviones.RecuperarTodosReporte(); // BuscarAviones() anda
+                DataTable tabla = aviones.RecuperarTodosReporte(); 
                 ArmarReporteUsuario01(tabla);
             }
         }
@@ -75,20 +69,9 @@ namespace TrabajoPrácticoPAV.Formularios.Listados
             reportViewer1.RefreshReport();
         }
 
-        private void Rv_01_Load(object sender, EventArgs e)
+        private void button_Aerolinea1_Click(object sender, EventArgs e)
         {
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void cmb_modelos_SelectedIndexChanged(object sender, EventArgs e)
-        {
+            BuscarAviones();
         }
     }
 }

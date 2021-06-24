@@ -67,20 +67,20 @@
             this.groupBox1.Controls.Add(this.rbu_Peso);
             this.groupBox1.Controls.Add(this.rbu_Pasajero);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.groupBox1.Location = new System.Drawing.Point(332, 10);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Location = new System.Drawing.Point(435, 11);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(160, 109);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Tipo Búsqueda";
+            this.groupBox1.Text = "Selección";
             // 
             // rbu_Todos
             // 
             this.rbu_Todos.AutoSize = true;
             this.rbu_Todos.Location = new System.Drawing.Point(24, 76);
-            this.rbu_Todos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbu_Todos.Margin = new System.Windows.Forms.Padding(2);
             this.rbu_Todos.Name = "rbu_Todos";
             this.rbu_Todos.Size = new System.Drawing.Size(71, 24);
             this.rbu_Todos.TabIndex = 2;
@@ -92,7 +92,7 @@
             // 
             this.rbu_Peso.AutoSize = true;
             this.rbu_Peso.Location = new System.Drawing.Point(24, 54);
-            this.rbu_Peso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbu_Peso.Margin = new System.Windows.Forms.Padding(2);
             this.rbu_Peso.Name = "rbu_Peso";
             this.rbu_Peso.Size = new System.Drawing.Size(91, 24);
             this.rbu_Peso.TabIndex = 1;
@@ -104,7 +104,7 @@
             // 
             this.rbu_Pasajero.AutoSize = true;
             this.rbu_Pasajero.Location = new System.Drawing.Point(24, 32);
-            this.rbu_Pasajero.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbu_Pasajero.Margin = new System.Windows.Forms.Padding(2);
             this.rbu_Pasajero.Name = "rbu_Pasajero";
             this.rbu_Pasajero.Size = new System.Drawing.Size(117, 24);
             this.rbu_Pasajero.TabIndex = 0;
@@ -116,7 +116,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(81, 41);
+            this.label1.Location = new System.Drawing.Point(145, 43);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(126, 20);
@@ -127,7 +127,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(55, 72);
+            this.label2.Location = new System.Drawing.Point(119, 74);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(152, 20);
@@ -138,7 +138,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label3.Location = new System.Drawing.Point(88, 98);
+            this.label3.Location = new System.Drawing.Point(152, 100);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(119, 20);
@@ -147,8 +147,8 @@
             // 
             // txt_Hasta
             // 
-            this.txt_Hasta.Location = new System.Drawing.Point(271, 96);
-            this.txt_Hasta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Hasta.Location = new System.Drawing.Point(335, 98);
+            this.txt_Hasta.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Hasta.Name = "txt_Hasta";
             this.txt_Hasta.Pp_EsPk = false;
             this.txt_Hasta.Pp_MensajeError = null;
@@ -159,8 +159,8 @@
             // 
             // txt_Desde
             // 
-            this.txt_Desde.Location = new System.Drawing.Point(211, 97);
-            this.txt_Desde.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Desde.Location = new System.Drawing.Point(275, 99);
+            this.txt_Desde.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Desde.Name = "txt_Desde";
             this.txt_Desde.Pp_EsPk = false;
             this.txt_Desde.Pp_MensajeError = null;
@@ -172,8 +172,8 @@
             // cmb_TipoDoc
             // 
             this.cmb_TipoDoc.FormattingEnabled = true;
-            this.cmb_TipoDoc.Location = new System.Drawing.Point(211, 41);
-            this.cmb_TipoDoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmb_TipoDoc.Location = new System.Drawing.Point(275, 43);
+            this.cmb_TipoDoc.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_TipoDoc.Name = "cmb_TipoDoc";
             this.cmb_TipoDoc.Pp_CampoAceptaNull = false;
             this.cmb_TipoDoc.Pp_EsPk = false;
@@ -187,11 +187,13 @@
             // 
             // btn_Buscar
             // 
-            this.btn_Buscar.Location = new System.Drawing.Point(544, 80);
-            this.btn_Buscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Buscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_Buscar.Location = new System.Drawing.Point(643, 84);
+            this.btn_Buscar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Buscar.Name = "btn_Buscar";
             this.btn_Buscar.Pp_Presionado = false;
-            this.btn_Buscar.Size = new System.Drawing.Size(75, 37);
+            this.btn_Buscar.Size = new System.Drawing.Size(95, 41);
             this.btn_Buscar.TabIndex = 2;
             this.btn_Buscar.Text = "Buscar";
             this.btn_Buscar.UseVisualStyleBackColor = true;
@@ -211,7 +213,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label5.Location = new System.Drawing.Point(253, 97);
+            this.label5.Location = new System.Drawing.Point(317, 99);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(14, 20);
@@ -220,15 +222,15 @@
             // 
             // reportViewer1
             // 
-            this.reportViewer1.Location = new System.Drawing.Point(12, 136);
+            this.reportViewer1.Location = new System.Drawing.Point(16, 130);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(726, 215);
+            this.reportViewer1.Size = new System.Drawing.Size(726, 276);
             this.reportViewer1.TabIndex = 22;
             // 
             // msk_NroDoc
             // 
-            this.msk_NroDoc.Location = new System.Drawing.Point(211, 71);
+            this.msk_NroDoc.Location = new System.Drawing.Point(275, 73);
             this.msk_NroDoc.Mask = "99999999";
             this.msk_NroDoc.Name = "msk_NroDoc";
             this.msk_NroDoc.Pp_EsPk = false;
@@ -242,7 +244,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(750, 366);
+            this.ClientSize = new System.Drawing.Size(749, 418);
             this.Controls.Add(this.msk_NroDoc);
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.label5);
@@ -256,7 +258,7 @@
             this.Controls.Add(this.btn_Buscar);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Frm_EquipajeXPasajero";
             this.Text = "Frm_EquipajeXPasajero";
             this.Load += new System.EventHandler(this.Frm_EquipajeXPasajero_Load);

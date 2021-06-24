@@ -66,7 +66,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label3.Location = new System.Drawing.Point(62, 95);
+            this.label3.Location = new System.Drawing.Point(92, 95);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(143, 20);
             this.label3.TabIndex = 44;
@@ -86,7 +86,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(57, 67);
+            this.label2.Location = new System.Drawing.Point(87, 67);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(148, 20);
             this.label2.TabIndex = 38;
@@ -96,7 +96,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(144, 43);
+            this.label1.Location = new System.Drawing.Point(174, 43);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(61, 20);
             this.label1.TabIndex = 37;
@@ -107,10 +107,10 @@
             this.groupBox1.Controls.Add(this.Rbu_Numero);
             this.groupBox1.Controls.Add(this.Rbu_Todos);
             this.groupBox1.Controls.Add(this.Rbu_Avion);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(356, 12);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.groupBox1.Location = new System.Drawing.Point(396, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 103);
+            this.groupBox1.Size = new System.Drawing.Size(216, 103);
             this.groupBox1.TabIndex = 36;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tipo búsqueda";
@@ -118,10 +118,10 @@
             // Rbu_Numero
             // 
             this.Rbu_Numero.AutoSize = true;
-            this.Rbu_Numero.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Rbu_Numero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.Rbu_Numero.Location = new System.Drawing.Point(17, 47);
             this.Rbu_Numero.Name = "Rbu_Numero";
-            this.Rbu_Numero.Size = new System.Drawing.Size(170, 21);
+            this.Rbu_Numero.Size = new System.Drawing.Size(187, 24);
             this.Rbu_Numero.TabIndex = 4;
             this.Rbu_Numero.Text = "Por número de asiento";
             this.Rbu_Numero.UseVisualStyleBackColor = true;
@@ -129,10 +129,10 @@
             // Rbu_Todos
             // 
             this.Rbu_Todos.AutoSize = true;
-            this.Rbu_Todos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Rbu_Todos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.Rbu_Todos.Location = new System.Drawing.Point(17, 74);
             this.Rbu_Todos.Name = "Rbu_Todos";
-            this.Rbu_Todos.Size = new System.Drawing.Size(66, 21);
+            this.Rbu_Todos.Size = new System.Drawing.Size(71, 24);
             this.Rbu_Todos.TabIndex = 3;
             this.Rbu_Todos.Text = "Todos";
             this.Rbu_Todos.UseVisualStyleBackColor = true;
@@ -140,10 +140,10 @@
             // Rbu_Avion
             // 
             this.Rbu_Avion.AutoSize = true;
-            this.Rbu_Avion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Rbu_Avion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.Rbu_Avion.Location = new System.Drawing.Point(17, 20);
             this.Rbu_Avion.Name = "Rbu_Avion";
-            this.Rbu_Avion.Size = new System.Drawing.Size(86, 21);
+            this.Rbu_Avion.Size = new System.Drawing.Size(92, 24);
             this.Rbu_Avion.TabIndex = 2;
             this.Rbu_Avion.Text = "Por avión";
             this.Rbu_Avion.UseVisualStyleBackColor = true;
@@ -152,7 +152,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.label5.Location = new System.Drawing.Point(252, 86);
+            this.label5.Location = new System.Drawing.Point(282, 86);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(21, 29);
             this.label5.TabIndex = 47;
@@ -161,7 +161,7 @@
             // cmb_Modelo
             // 
             this.cmb_Modelo.FormattingEnabled = true;
-            this.cmb_Modelo.Location = new System.Drawing.Point(211, 42);
+            this.cmb_Modelo.Location = new System.Drawing.Point(241, 42);
             this.cmb_Modelo.Name = "cmb_Modelo";
             this.cmb_Modelo.Pp_CampoAceptaNull = true;
             this.cmb_Modelo.Pp_EsPk = false;
@@ -175,7 +175,7 @@
             // 
             // Txt_Hasta
             // 
-            this.Txt_Hasta.Location = new System.Drawing.Point(268, 93);
+            this.Txt_Hasta.Location = new System.Drawing.Point(298, 93);
             this.Txt_Hasta.Name = "Txt_Hasta";
             this.Txt_Hasta.Pp_EsPk = false;
             this.Txt_Hasta.Pp_MensajeError = null;
@@ -186,7 +186,7 @@
             // 
             // Txt_Desde
             // 
-            this.Txt_Desde.Location = new System.Drawing.Point(211, 93);
+            this.Txt_Desde.Location = new System.Drawing.Point(241, 93);
             this.Txt_Desde.Name = "Txt_Desde";
             this.Txt_Desde.Pp_EsPk = false;
             this.Txt_Desde.Pp_MensajeError = null;
@@ -197,10 +197,12 @@
             // 
             // Btn_Buscar
             // 
-            this.Btn_Buscar.Location = new System.Drawing.Point(594, 67);
+            this.Btn_Buscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Btn_Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Btn_Buscar.Location = new System.Drawing.Point(642, 67);
             this.Btn_Buscar.Name = "Btn_Buscar";
             this.Btn_Buscar.Pp_Presionado = false;
-            this.Btn_Buscar.Size = new System.Drawing.Size(95, 48);
+            this.Btn_Buscar.Size = new System.Drawing.Size(95, 41);
             this.Btn_Buscar.TabIndex = 41;
             this.Btn_Buscar.Text = "Buscar";
             this.Btn_Buscar.UseVisualStyleBackColor = true;
@@ -208,7 +210,7 @@
             // 
             // Txt_Numero
             // 
-            this.Txt_Numero.Location = new System.Drawing.Point(211, 67);
+            this.Txt_Numero.Location = new System.Drawing.Point(241, 67);
             this.Txt_Numero.Name = "Txt_Numero";
             this.Txt_Numero.Pp_EsPk = false;
             this.Txt_Numero.Pp_MensajeError = null;
@@ -223,10 +225,10 @@
             reportDataSource1.Value = this.DataTable1BindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "TrabajoPrácticoPAV.Formularios.Listados.Asientos.Reporte_AsientoXAvion.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(41, 146);
+            this.reportViewer1.Location = new System.Drawing.Point(16, 121);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(648, 246);
+            this.reportViewer1.Size = new System.Drawing.Size(721, 285);
             this.reportViewer1.TabIndex = 49;
             // 
             // Frm_ReporteAsientoXAvion

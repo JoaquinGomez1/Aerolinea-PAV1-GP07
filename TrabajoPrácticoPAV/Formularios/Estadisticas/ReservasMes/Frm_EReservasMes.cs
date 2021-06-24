@@ -42,62 +42,7 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.ReservasMes
         }
         private void btn_Calcular_Click(object sender, EventArgs e)
         {
-            if (rd_PorMes.Checked) {
-                if (Txt_Desde.Text != "" && Txt_Hasta.Text != "") {
-                    if (int.Parse(Txt_Desde.Text) > int.Parse(Txt_Hasta.Text))
-                    {
-                        MessageBox.Show("El rango no es válido. Por favor ingrese nuevamente un rango.");
-                    }
-
-                    string desde = "";
-                    string hasta = "";
-
-                    if (Txt_Desde.Text == "")
-                        desde = "0";
-                    else
-                        desde = Txt_Desde.Text;
-                    if (Txt_Hasta.Text == "")
-                        hasta = "99999";
-                    else
-                        hasta = Txt_Hasta.Text;
-
-
-                    tabla = reservaMes.E_ResuperarPorMes(msk_Mes.Text.ToString());
-                    if (tabla.Rows.Count != 0)
-                        ArmarEstadisticaReservaMes();
-                    else
-                    {
-                        reportViewer1.LocalReport.DataSources.Clear();
-                        reportViewer1.RefreshReport();
-                        MessageBox.Show("No se encontraron resultados");
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("LLena los campos de meses.");
-
-                }
-            //    if (msk_Mes.Text != "")
-            //    {
-            //        tabla = reservaMes.E_ResuperarPorMes(msk_Mes.Text.ToString());
-            //        ArmarEstadisticaReservaMes(tabla);
-            //    }
-           
-                        else
-                        {
-                    reportViewer1.LocalReport.DataSources.Clear();
-                    reportViewer1.RefreshReport();
-                    MessageBox.Show("No se encontraron resultados");
-                }
-            }
-        
-
-
-            else if (rd_PorMes.Checked && msk_Mes.Mask == "")
-            {
-                MessageBox.Show("Por favor, ingresar una fecha");
-            }
-            else if (rd_Todos.Checked)
+            if (rd_Todos.Checked)
             {
                 tabla = reservaMes.ES_RecuperarTodosReservas();
                 if (tabla.Rows.Count != 0)
@@ -109,6 +54,46 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.ReservasMes
                     MessageBox.Show("No se encontraron resultados para la búsqueda");
                 }
             }
+            else if (rd_PorMes.Checked)
+            {
+                if (Txt_Desde.Text != "" && Txt_Hasta.Text != "")
+                {
+                    //string desde = "";
+                    //string hasta = "";
+
+                    //if (Txt_Desde.Text == "")
+                    //    desde = "0";
+                    //else
+                    //    desde = Txt_Desde.Text;
+                    //if (Txt_Hasta.Text == "")
+                    //    hasta = "99999";
+                    //else
+                    //    hasta = Txt_Hasta.Text;
+
+                    tabla = reservaMes.E_ResuperarPorMes(Txt_Desde.Text, Txt_Hasta.Text);
+                    if (tabla.Rows.Count != 0)
+                        ArmarEstadisticaReservaMes();
+                    else
+                    {
+                        reportViewer1.LocalReport.DataSources.Clear();
+                        reportViewer1.RefreshReport();
+                        MessageBox.Show("No se encontraron resultados");
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Llene los campos de meses por favor.");
+                }
+
+            }
+            else
+            {
+                Tratamientos_Especiales Tratamiento = new Tratamientos_Especiales();
+                if (Tratamiento.Validar(this.Controls) == Tratamientos_Especiales.Resultado.error)
+                    MessageBox.Show("No realizo selección para la búsqueda");
+            }   
+
         }
     }
 }

@@ -122,9 +122,6 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Aeropuertos
         {
             this.Close();
         }
-
-        private void cmb_ciudad_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
+        
     }
 }

@@ -19,7 +19,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Pasajeros
 
         private void Frm_ReporteFamiliareXPasajero_Load(object sender, EventArgs e)
         {
-            //InitializeComponent();
+            
             this.BackColor = Estilo.ColorFondoForms;
             Estilo.FormatearEstilo(this.Controls);
 

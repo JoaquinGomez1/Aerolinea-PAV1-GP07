@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using TrabajoPrácticoPAV.Formularios.Listados.EquipajeXPasajero;
 
 namespace TrabajoPrácticoPAV
 {
@@ -14,6 +15,7 @@ namespace TrabajoPrácticoPAV
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Frm_Principal());
+            //Application.Run(new Frm_EquipajeXPasajero());
         }
     }
 }
