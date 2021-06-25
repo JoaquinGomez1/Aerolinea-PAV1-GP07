@@ -44,13 +44,14 @@ namespace TrabajoPrácticoPAV.Formularios.Teléfono
 
         private void Frm_Borrar_Telefono_Load(object sender, EventArgs e)
         {
+            telefono.Pp_numeroTelefono = Pp_numeroTelefono;
             MostrarDatos(telefono.Recuperar_x_numero());
         }
         private void MostrarDatos(DataTable tabla)
         {
             if (tabla.Rows.Count > 0)
             {
-                txt_nroTelefono.Pp_Text = tabla.Rows[0]["numeroTelefono"].ToString();
+                txt_nroTelefono.Text = tabla.Rows[0]["numeroTelefono"].ToString();
                 txt_tipoDoc.Text = tabla.Rows[0]["tipoDoc"].ToString();
                 txt_nroDoc.Text = tabla.Rows[0]["numeroDoc"].ToString();
             }

@@ -30,18 +30,19 @@ namespace TrabajoPrácticoPAV.Formularios.Teléfono
         private void InitializeComponent()
         {
             this.dataGrid_telefonos = new System.Windows.Forms.DataGridView();
+            this.numeroTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoDoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numeroDoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_agregar = new System.Windows.Forms.Button();
             this.btn_consultar = new System.Windows.Forms.Button();
             this.btn_salir = new System.Windows.Forms.Button();
             this.btn_modificar = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.numeroTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipoDoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numeroDoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.chk_todos = new System.Windows.Forms.CheckBox();
             this.btn_eliminar = new System.Windows.Forms.Button();
-            this.txt_nroTelefono = new Clase11.Clases.LabelText02();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txt_nroTelefono = new TrabajoPrácticoPAV.Clase.TextBox_Aerolinea();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_telefonos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,69 +54,11 @@ namespace TrabajoPrácticoPAV.Formularios.Teléfono
             this.numeroTelefono,
             this.tipoDoc,
             this.numeroDoc});
-            this.dataGrid_telefonos.Location = new System.Drawing.Point(44, 205);
+            this.dataGrid_telefonos.Location = new System.Drawing.Point(44, 174);
             this.dataGrid_telefonos.Name = "dataGrid_telefonos";
-            this.dataGrid_telefonos.Size = new System.Drawing.Size(376, 203);
+            this.dataGrid_telefonos.Size = new System.Drawing.Size(432, 203);
             this.dataGrid_telefonos.TabIndex = 0;
             this.dataGrid_telefonos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_telefonos_CellClick);
-            // 
-            // btn_agregar
-            // 
-            this.btn_agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.btn_agregar.Location = new System.Drawing.Point(446, 239);
-            this.btn_agregar.Name = "btn_agregar";
-            this.btn_agregar.Size = new System.Drawing.Size(90, 28);
-            this.btn_agregar.TabIndex = 19;
-            this.btn_agregar.Text = "Agregar";
-            this.btn_agregar.UseVisualStyleBackColor = true;
-            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
-            // 
-            // btn_consultar
-            // 
-            this.btn_consultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_consultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.btn_consultar.Location = new System.Drawing.Point(318, 102);
-            this.btn_consultar.Name = "btn_consultar";
-            this.btn_consultar.Size = new System.Drawing.Size(90, 28);
-            this.btn_consultar.TabIndex = 19;
-            this.btn_consultar.Text = "Consultar";
-            this.btn_consultar.UseVisualStyleBackColor = true;
-            this.btn_consultar.Click += new System.EventHandler(this.btn_consultar_Click);
-            // 
-            // btn_salir
-            // 
-            this.btn_salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.btn_salir.Location = new System.Drawing.Point(446, 307);
-            this.btn_salir.Name = "btn_salir";
-            this.btn_salir.Size = new System.Drawing.Size(90, 28);
-            this.btn_salir.TabIndex = 19;
-            this.btn_salir.Text = "Salir";
-            this.btn_salir.UseVisualStyleBackColor = true;
-            this.btn_salir.Click += new System.EventHandler(this.btn_salir_Click);
-            // 
-            // btn_modificar
-            // 
-            this.btn_modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_modificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.btn_modificar.Location = new System.Drawing.Point(446, 205);
-            this.btn_modificar.Name = "btn_modificar";
-            this.btn_modificar.Size = new System.Drawing.Size(90, 28);
-            this.btn_modificar.TabIndex = 19;
-            this.btn_modificar.Text = "Modificar";
-            this.btn_modificar.UseVisualStyleBackColor = true;
-            this.btn_modificar.Click += new System.EventHandler(this.btn_modificar_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(40, 169);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(162, 21);
-            this.label9.TabIndex = 21;
-            this.label9.Text = "Consultar Teléfonos";
             // 
             // numeroTelefono
             // 
@@ -132,6 +75,64 @@ namespace TrabajoPrácticoPAV.Formularios.Teléfono
             this.numeroDoc.HeaderText = "Nro. Documento";
             this.numeroDoc.Name = "numeroDoc";
             // 
+            // btn_agregar
+            // 
+            this.btn_agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.btn_agregar.Location = new System.Drawing.Point(494, 208);
+            this.btn_agregar.Name = "btn_agregar";
+            this.btn_agregar.Size = new System.Drawing.Size(90, 28);
+            this.btn_agregar.TabIndex = 19;
+            this.btn_agregar.Text = "Agregar";
+            this.btn_agregar.UseVisualStyleBackColor = true;
+            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
+            // 
+            // btn_consultar
+            // 
+            this.btn_consultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_consultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.btn_consultar.Location = new System.Drawing.Point(386, 71);
+            this.btn_consultar.Name = "btn_consultar";
+            this.btn_consultar.Size = new System.Drawing.Size(90, 28);
+            this.btn_consultar.TabIndex = 19;
+            this.btn_consultar.Text = "Consultar";
+            this.btn_consultar.UseVisualStyleBackColor = true;
+            this.btn_consultar.Click += new System.EventHandler(this.btn_consultar_Click);
+            // 
+            // btn_salir
+            // 
+            this.btn_salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.btn_salir.Location = new System.Drawing.Point(494, 276);
+            this.btn_salir.Name = "btn_salir";
+            this.btn_salir.Size = new System.Drawing.Size(90, 28);
+            this.btn_salir.TabIndex = 19;
+            this.btn_salir.Text = "Salir";
+            this.btn_salir.UseVisualStyleBackColor = true;
+            this.btn_salir.Click += new System.EventHandler(this.btn_salir_Click);
+            // 
+            // btn_modificar
+            // 
+            this.btn_modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_modificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.btn_modificar.Location = new System.Drawing.Point(494, 174);
+            this.btn_modificar.Name = "btn_modificar";
+            this.btn_modificar.Size = new System.Drawing.Size(90, 28);
+            this.btn_modificar.TabIndex = 19;
+            this.btn_modificar.Text = "Modificar";
+            this.btn_modificar.UseVisualStyleBackColor = true;
+            this.btn_modificar.Click += new System.EventHandler(this.btn_modificar_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label9.Location = new System.Drawing.Point(40, 138);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(162, 21);
+            this.label9.TabIndex = 21;
+            this.label9.Text = "Consultar Teléfonos";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -145,7 +146,7 @@ namespace TrabajoPrácticoPAV.Formularios.Teléfono
             // chk_todos
             // 
             this.chk_todos.AutoSize = true;
-            this.chk_todos.Location = new System.Drawing.Point(68, 113);
+            this.chk_todos.Location = new System.Drawing.Point(68, 82);
             this.chk_todos.Name = "chk_todos";
             this.chk_todos.Size = new System.Drawing.Size(56, 17);
             this.chk_todos.TabIndex = 24;
@@ -156,7 +157,7 @@ namespace TrabajoPrácticoPAV.Formularios.Teléfono
             // 
             this.btn_eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.btn_eliminar.Location = new System.Drawing.Point(446, 273);
+            this.btn_eliminar.Location = new System.Drawing.Point(494, 242);
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.Size = new System.Drawing.Size(90, 28);
             this.btn_eliminar.TabIndex = 19;
@@ -164,24 +165,26 @@ namespace TrabajoPrácticoPAV.Formularios.Teléfono
             this.btn_eliminar.UseVisualStyleBackColor = true;
             this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label2.Location = new System.Drawing.Point(64, 48);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(126, 20);
+            this.label2.TabIndex = 38;
+            this.label2.Text = "Nro. de Teléfono";
+            // 
             // txt_nroTelefono
             // 
-            this.txt_nroTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_nroTelefono.Location = new System.Drawing.Point(44, 78);
-            this.txt_nroTelefono.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_nroTelefono.Location = new System.Drawing.Point(209, 48);
             this.txt_nroTelefono.Name = "txt_nroTelefono";
-            this.txt_nroTelefono.Pp_ancho = 10;
-            this.txt_nroTelefono.Pp_decimales = 2;
-            this.txt_nroTelefono.Pp_Etiqueta = "Número de teléfono";
-            this.txt_nroTelefono.Pp_mensajeError = null;
-            this.txt_nroTelefono.Pp_nombre_campo = null;
-            this.txt_nroTelefono.Pp_nombre_tabla = "Telefono";
-            this.txt_nroTelefono.Pp_ReadOnly = false;
-            this.txt_nroTelefono.Pp_Text = "";
-            this.txt_nroTelefono.Pp_tipoDato = Clase11.Clases.LabelText02.TipoDato.texto;
-            this.txt_nroTelefono.Pp_validable = false;
-            this.txt_nroTelefono.Size = new System.Drawing.Size(228, 28);
-            this.txt_nroTelefono.TabIndex = 26;
+            this.txt_nroTelefono.Pp_EsPk = false;
+            this.txt_nroTelefono.Pp_MensajeError = null;
+            this.txt_nroTelefono.Pp_NombreCampo = null;
+            this.txt_nroTelefono.Pp_NombreTabla = null;
+            this.txt_nroTelefono.Size = new System.Drawing.Size(100, 20);
+            this.txt_nroTelefono.TabIndex = 37;
             // 
             // Frm_ABM_Teléfono
             // 
@@ -190,6 +193,7 @@ namespace TrabajoPrácticoPAV.Formularios.Teléfono
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(227)))), ((int)(((byte)(187)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(609, 426);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_nroTelefono);
             this.Controls.Add(this.chk_todos);
             this.Controls.Add(this.label1);
@@ -224,6 +228,7 @@ namespace TrabajoPrácticoPAV.Formularios.Teléfono
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox chk_todos;
         private System.Windows.Forms.Button btn_eliminar;
-        private Clase11.Clases.LabelText02 txt_nroTelefono;
+        private System.Windows.Forms.Label label2;
+        private Clase.TextBox_Aerolinea txt_nroTelefono;
     }
 }

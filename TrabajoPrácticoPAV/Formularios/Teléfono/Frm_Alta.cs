@@ -27,14 +27,14 @@ namespace TrabajoPrácticoPAV.Formularios.Teléfono
         private void btn_registrar_Click(object sender, EventArgs e)
         {
             NE_Telefonos telefono = new NE_Telefonos();
-            if (txt_nroTelefono.Pp_Text == " " | txt_nroDoc.Pp_Text == " " | txt_tipoDoc.Pp_Text == " ")
+            if (txt_nroTelefono.Text == " " | txt_nroDoc.Text == " " | txt_tipoDoc.Text == " ")
             {
                 MessageBox.Show("Debe ingresar un número de teléfono, tipo de documento y número de documento");
                 return;
             }
-            telefono.Pp_numeroTelefono = txt_nroTelefono.Pp_Text.ToString();
-            telefono.Pp_tipoDoc = int.Parse(txt_tipoDoc.Pp_Text.ToString());
-            telefono.Pp_numeroDoc = int.Parse(txt_nroDoc.Pp_Text.ToString());
+            telefono.Pp_numeroTelefono = txt_nroTelefono.Text.ToString();
+            telefono.Pp_tipoDoc = int.Parse(txt_tipoDoc.Text.ToString());
+            telefono.Pp_numeroDoc = int.Parse(txt_nroDoc.Text.ToString());
 
             telefono.Insertar();
             this.Close();

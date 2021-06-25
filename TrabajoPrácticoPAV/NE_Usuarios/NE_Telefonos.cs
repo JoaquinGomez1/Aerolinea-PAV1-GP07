@@ -25,11 +25,11 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
         }
         public void Modificar()
         {
-            string sqlInsertar = @"UPDATE Telefono (numeroTelefono, tipoDoc, numeroDoc)"
-                                + " SET ("
-                                + "'"+ Pp_numeroTelefono + "', "
-                                + Pp_tipoDoc + ", "
-                                + Pp_numeroDoc + ")";
+            string sqlInsertar = @"UPDATE Telefono "
+                                + " SET numeroTelefono = "
+                                + "'" + Pp_numeroTelefono + "', "
+                                + "tipoDoc = " + Pp_tipoDoc + ", "
+                                + "numeroDoc = " + Pp_numeroDoc ;
             _BD.Insertar(sqlInsertar, false);
 
         }

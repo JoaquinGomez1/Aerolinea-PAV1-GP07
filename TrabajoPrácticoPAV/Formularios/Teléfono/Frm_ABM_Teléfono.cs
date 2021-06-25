@@ -79,8 +79,9 @@ namespace TrabajoPrácticoPAV.Formularios.Teléfono
                 CargarGrilla(telefono.RecuperarTodos());
                 return;
             }
-            if (txt_nroTelefono.Pp_Text != "")
+            if (txt_nroTelefono.Text != "")
             {
+                telefono.Pp_numeroTelefono = txt_nroTelefono.Text;
                 CargarGrilla(telefono.Recuperar_x_numero());
                 return;
             }
