@@ -62,9 +62,5 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.ViajesPorPais
             rv_1.LocalReport.DataSources.Add(PaqueteDatos);
             rv_1.RefreshReport();
         }
-
-        private void textBox_Aerolinea1_TextChanged(object sender, EventArgs e)
-        {
-        }
     }
 }

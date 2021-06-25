@@ -49,10 +49,10 @@
             // 
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "TrabajoPrácticoPAV.Formularios.Listados.Pasajeros.Frm_ReporteFamiliareXPasajero.r" +
     "dlc";
-            this.reportViewer1.Location = new System.Drawing.Point(12, 157);
+            this.reportViewer1.Location = new System.Drawing.Point(12, 134);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(776, 281);
+            this.reportViewer1.Size = new System.Drawing.Size(725, 272);
             this.reportViewer1.TabIndex = 0;
             // 
             // label3
@@ -91,9 +91,10 @@
             this.groupBox1.Controls.Add(this.rbu01);
             this.groupBox1.Controls.Add(this.rbu03);
             this.groupBox1.Controls.Add(this.rbu02);
-            this.groupBox1.Location = new System.Drawing.Point(410, 14);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.groupBox1.Location = new System.Drawing.Point(405, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(211, 113);
+            this.groupBox1.Size = new System.Drawing.Size(231, 113);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tipo Cálculo";
@@ -101,10 +102,10 @@
             // rbu04
             // 
             this.rbu04.AutoSize = true;
-            this.rbu04.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.rbu04.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.rbu04.Location = new System.Drawing.Point(17, 83);
             this.rbu04.Name = "rbu04";
-            this.rbu04.Size = new System.Drawing.Size(66, 21);
+            this.rbu04.Size = new System.Drawing.Size(71, 24);
             this.rbu04.TabIndex = 3;
             this.rbu04.Text = "Todos";
             this.rbu04.UseVisualStyleBackColor = true;
@@ -112,10 +113,10 @@
             // rbu01
             // 
             this.rbu01.AutoSize = true;
-            this.rbu01.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.rbu01.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.rbu01.Location = new System.Drawing.Point(17, 19);
             this.rbu01.Name = "rbu01";
-            this.rbu01.Size = new System.Drawing.Size(184, 21);
+            this.rbu01.Size = new System.Drawing.Size(203, 24);
             this.rbu01.TabIndex = 0;
             this.rbu01.Text = "Por documento del titular";
             this.rbu01.UseVisualStyleBackColor = true;
@@ -123,10 +124,10 @@
             // rbu03
             // 
             this.rbu03.AutoSize = true;
-            this.rbu03.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.rbu03.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.rbu03.Location = new System.Drawing.Point(17, 62);
             this.rbu03.Name = "rbu03";
-            this.rbu03.Size = new System.Drawing.Size(123, 21);
+            this.rbu03.Size = new System.Drawing.Size(135, 24);
             this.rbu03.TabIndex = 1;
             this.rbu03.Text = "Por parentesco";
             this.rbu03.UseVisualStyleBackColor = true;
@@ -134,10 +135,10 @@
             // rbu02
             // 
             this.rbu02.AutoSize = true;
-            this.rbu02.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.rbu02.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.rbu02.Location = new System.Drawing.Point(17, 43);
             this.rbu02.Name = "rbu02";
-            this.rbu02.Size = new System.Drawing.Size(194, 21);
+            this.rbu02.Size = new System.Drawing.Size(214, 24);
             this.rbu02.TabIndex = 2;
             this.rbu02.Text = "Por documento del familiar";
             this.rbu02.UseVisualStyleBackColor = true;
@@ -189,10 +190,12 @@
             // 
             // btn_consultar
             // 
-            this.btn_consultar.Location = new System.Drawing.Point(678, 104);
+            this.btn_consultar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_consultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_consultar.Location = new System.Drawing.Point(642, 78);
             this.btn_consultar.Name = "btn_consultar";
             this.btn_consultar.Pp_Presionado = false;
-            this.btn_consultar.Size = new System.Drawing.Size(75, 33);
+            this.btn_consultar.Size = new System.Drawing.Size(95, 41);
             this.btn_consultar.TabIndex = 1;
             this.btn_consultar.Text = "Calcular";
             this.btn_consultar.UseVisualStyleBackColor = true;
@@ -202,7 +205,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(749, 418);
             this.Controls.Add(this.Msktxt_NumDocFamiliar);
             this.Controls.Add(this.Msktxt_NumDocTitular);
             this.Controls.Add(this.label4);

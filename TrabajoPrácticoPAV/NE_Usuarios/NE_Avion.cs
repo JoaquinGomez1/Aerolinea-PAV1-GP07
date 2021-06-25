@@ -1,20 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data;
+﻿using System.Data;
 using TrabajoPrácticoPAV.Backend;
 
 namespace TrabajoPrácticoPAV.NE_Usuarios
 {
-    class NE_Avion
+    internal class NE_Avion
     {
         public int Pp_numero_modelo { get; set; }
         public int Pp_id_modelo { get; set; }
 
-        Conexion_DB _BD = new Conexion_DB();
-
+        private Conexion_DB _BD = new Conexion_DB();
 
         public DataTable RecuperarTodos()
         {
@@ -39,7 +33,7 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             string sqlInsertar = @"INSERT INTO Avion (numeroPorModelo, idModelo) " + " VALUES ( " + Pp_numero_modelo + ", " + Pp_id_modelo + ")";
             _BD.Insertar(sqlInsertar, false);
         }
- 
+
         public DataTable Recuperar_Mixto(string numero, string modelo)
         {
             string sql = @"SELECT Avion.numeroPorModelo, Modelo.nombre,  Avion.idModelo from Avion "
@@ -55,23 +49,22 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             + " where Modelo.nombre = '" + modelo + "'";
             return _BD.EjecutarSelect(sql);
         }
-        
+
         public DataTable Recuperar_x_numero(string patronNumero)
         {
             string sql = @"SELECT Avion.numeroPorModelo, Modelo.nombre,  Avion.idModelo from Avion "
             + " inner join Modelo on Avion.idModelo = Modelo.idModelo "
-            + " where Avion.numeroPorModelo LIKE " + "'"+ patronNumero+ "%'" ;
+            + " where Avion.numeroPorModelo LIKE " + "'" + patronNumero + "%'";
             return _BD.EjecutarSelect(sql);
         }
 
-        public void Remover_avion(string numero , object idModelo)
+        public void Remover_avion(string numero, object idModelo)
         {
             string sql = @"delete from Avion where numeroPorModelo = '" + numero + "' and  idModelo= " + idModelo;
             _BD.EjecutarSelect(sql);
-             
+
             //_BD.Borrar(sql, false);
         }
-
 
         //public DataTable Editar_avion (string numero , object idModelo)
         // {
@@ -95,7 +88,7 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
                 "from Avion inner join Modelo on Avion.idModelo = Modelo.idModelo " +
                  " WHERE numeroPorModelo BETWEEN ("
                 + desde + ") AND (" + hasta + ")" +
-                " group by (Modelo.nombre)";  
+                " group by (Modelo.nombre)";
             DataTable tabla = new DataTable();
             tabla = _BD.EjecutarSelect(sql);
             return tabla;
@@ -121,7 +114,7 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
                 "JOIN Vuelo v ON v.codigoAeropuertoDestino=t.codigoAeropuertoDestino AND " +
                 "v.codigoAeropuertoSalida=t.codigoAeropuertoSalida " +
                 "JOIN Avion av ON av.numeroPorModelo=v.numeroPorModelo AND av.idModelo=v.idModelo " +
-                "WHERE av.numeroPorModelo BETWEEN (" + desde +") AND (" + hasta + ") " +
+                "WHERE av.numeroPorModelo BETWEEN (" + desde + ") AND (" + hasta + ") " +
                 "GROUP BY a.codigo,a.nombre";
             DataTable tabla = new DataTable();
             tabla = _BD.EjecutarSelect(sql);
@@ -129,5 +122,3 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
         }
     }
 }
-
-

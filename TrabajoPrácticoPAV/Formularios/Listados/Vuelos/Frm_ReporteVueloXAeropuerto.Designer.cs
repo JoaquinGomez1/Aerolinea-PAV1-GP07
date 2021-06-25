@@ -61,7 +61,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(116, 70);
+            this.label2.Location = new System.Drawing.Point(160, 60);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 20);
             this.label2.TabIndex = 22;
@@ -71,7 +71,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(26, 44);
+            this.label1.Location = new System.Drawing.Point(70, 34);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(149, 20);
             this.label1.TabIndex = 21;
@@ -83,8 +83,8 @@
             this.groupBox1.Controls.Add(this.Rbu_Todos);
             this.groupBox1.Controls.Add(this.Rbu_Nombre);
             this.groupBox1.Controls.Add(this.Rbu_Codigo);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(358, 13);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.groupBox1.Location = new System.Drawing.Point(404, 6);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 105);
             this.groupBox1.TabIndex = 20;
@@ -94,10 +94,10 @@
             // Rbu_Numero
             // 
             this.Rbu_Numero.AutoSize = true;
-            this.Rbu_Numero.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Rbu_Numero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.Rbu_Numero.Location = new System.Drawing.Point(17, 61);
             this.Rbu_Numero.Name = "Rbu_Numero";
-            this.Rbu_Numero.Size = new System.Drawing.Size(158, 21);
+            this.Rbu_Numero.Size = new System.Drawing.Size(172, 24);
             this.Rbu_Numero.TabIndex = 4;
             this.Rbu_Numero.Text = "Por número de vuelo";
             this.Rbu_Numero.UseVisualStyleBackColor = true;
@@ -105,10 +105,10 @@
             // Rbu_Todos
             // 
             this.Rbu_Todos.AutoSize = true;
-            this.Rbu_Todos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Rbu_Todos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.Rbu_Todos.Location = new System.Drawing.Point(17, 82);
             this.Rbu_Todos.Name = "Rbu_Todos";
-            this.Rbu_Todos.Size = new System.Drawing.Size(66, 21);
+            this.Rbu_Todos.Size = new System.Drawing.Size(71, 24);
             this.Rbu_Todos.TabIndex = 3;
             this.Rbu_Todos.Text = "Todos";
             this.Rbu_Todos.UseVisualStyleBackColor = true;
@@ -116,10 +116,10 @@
             // Rbu_Nombre
             // 
             this.Rbu_Nombre.AutoSize = true;
-            this.Rbu_Nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Rbu_Nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.Rbu_Nombre.Location = new System.Drawing.Point(17, 19);
             this.Rbu_Nombre.Name = "Rbu_Nombre";
-            this.Rbu_Nombre.Size = new System.Drawing.Size(100, 21);
+            this.Rbu_Nombre.Size = new System.Drawing.Size(109, 24);
             this.Rbu_Nombre.TabIndex = 0;
             this.Rbu_Nombre.Text = "Por nombre";
             this.Rbu_Nombre.UseVisualStyleBackColor = true;
@@ -127,10 +127,10 @@
             // Rbu_Codigo
             // 
             this.Rbu_Codigo.AutoSize = true;
-            this.Rbu_Codigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Rbu_Codigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.Rbu_Codigo.Location = new System.Drawing.Point(17, 40);
             this.Rbu_Codigo.Name = "Rbu_Codigo";
-            this.Rbu_Codigo.Size = new System.Drawing.Size(94, 21);
+            this.Rbu_Codigo.Size = new System.Drawing.Size(102, 24);
             this.Rbu_Codigo.TabIndex = 2;
             this.Rbu_Codigo.Text = "Por código";
             this.Rbu_Codigo.UseVisualStyleBackColor = true;
@@ -138,17 +138,17 @@
             // reportViewer1
             // 
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "TrabajoPrácticoPAV.Formularios.Listados.Vuelos.Reporte_VuelosXAeropuerto.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(45, 149);
+            this.reportViewer1.Location = new System.Drawing.Point(12, 124);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(648, 246);
+            this.reportViewer1.Size = new System.Drawing.Size(725, 282);
             this.reportViewer1.TabIndex = 30;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label3.Location = new System.Drawing.Point(47, 96);
+            this.label3.Location = new System.Drawing.Point(91, 86);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(128, 20);
             this.label3.TabIndex = 31;
@@ -158,7 +158,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.label5.Location = new System.Drawing.Point(237, 89);
+            this.label5.Location = new System.Drawing.Point(281, 79);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(21, 29);
             this.label5.TabIndex = 35;
@@ -166,7 +166,7 @@
             // 
             // Txt_Hasta
             // 
-            this.Txt_Hasta.Location = new System.Drawing.Point(263, 96);
+            this.Txt_Hasta.Location = new System.Drawing.Point(307, 86);
             this.Txt_Hasta.Name = "Txt_Hasta";
             this.Txt_Hasta.Pp_EsPk = false;
             this.Txt_Hasta.Pp_MensajeError = null;
@@ -177,7 +177,7 @@
             // 
             // Txt_Desde
             // 
-            this.Txt_Desde.Location = new System.Drawing.Point(181, 96);
+            this.Txt_Desde.Location = new System.Drawing.Point(225, 86);
             this.Txt_Desde.Name = "Txt_Desde";
             this.Txt_Desde.Pp_EsPk = false;
             this.Txt_Desde.Pp_MensajeError = null;
@@ -188,10 +188,12 @@
             // 
             // Btn_Buscar
             // 
-            this.Btn_Buscar.Location = new System.Drawing.Point(598, 70);
+            this.Btn_Buscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Btn_Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Btn_Buscar.Location = new System.Drawing.Point(642, 77);
             this.Btn_Buscar.Name = "Btn_Buscar";
             this.Btn_Buscar.Pp_Presionado = false;
-            this.Btn_Buscar.Size = new System.Drawing.Size(95, 48);
+            this.Btn_Buscar.Size = new System.Drawing.Size(95, 41);
             this.Btn_Buscar.TabIndex = 28;
             this.Btn_Buscar.Text = "Buscar";
             this.Btn_Buscar.UseVisualStyleBackColor = true;
@@ -199,7 +201,7 @@
             // 
             // Txt_Codigo
             // 
-            this.Txt_Codigo.Location = new System.Drawing.Point(181, 70);
+            this.Txt_Codigo.Location = new System.Drawing.Point(225, 60);
             this.Txt_Codigo.Name = "Txt_Codigo";
             this.Txt_Codigo.Pp_EsPk = false;
             this.Txt_Codigo.Pp_MensajeError = null;
@@ -210,7 +212,7 @@
             // 
             // Txt_Nombre
             // 
-            this.Txt_Nombre.Location = new System.Drawing.Point(181, 46);
+            this.Txt_Nombre.Location = new System.Drawing.Point(225, 36);
             this.Txt_Nombre.Name = "Txt_Nombre";
             this.Txt_Nombre.Pp_EsPk = false;
             this.Txt_Nombre.Pp_MensajeError = null;

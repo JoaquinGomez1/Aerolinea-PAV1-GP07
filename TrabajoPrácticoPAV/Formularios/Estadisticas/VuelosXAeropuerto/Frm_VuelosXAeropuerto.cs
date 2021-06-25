@@ -45,5 +45,10 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.VuelosXAeropuerto
             reportViewer1.LocalReport.DataSources.Add(datos);
             reportViewer1.RefreshReport();
         }
+
+        private void button_Aerolinea1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

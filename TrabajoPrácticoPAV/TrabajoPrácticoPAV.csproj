@@ -334,11 +334,12 @@
     </Compile>
     <Compile Include="Formularios\Estadisticas\ViajesXFecha\Ds_ViajesXFecha.cs">
       <DependentUpon>Ds_ViajesXFecha.xsd</DependentUpon>
+      <SubType>code</SubType>
     </Compile>
     <Compile Include="Formularios\Estadisticas\ViajesXFecha\Ds_ViajesXFecha.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
       <DependentUpon>Ds_ViajesXFecha.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Formularios\Estadisticas\ViajesXFecha\Frm_viajesXFecha.cs">
       <SubType>Form</SubType>
@@ -438,6 +439,17 @@
     </Compile>
     <Compile Include="Formularios\Listados\Avion Por Modelo\Frm_AvionPorModelo.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Listados\FacturasXPasajero\Ds_FacuraPorPasajero.Designer.cs">
+      <DependentUpon>Ds_FacuraPorPasajero.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Formularios\Listados\FacturasXPasajero\Frm_facturaXPasajero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Listados\FacturasXPasajero\Frm_facturaXPasajero.Designer.cs">
+      <DependentUpon>Frm_facturaXPasajero.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Listados\Factura\DataSet_FactuaPorFecha.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1071,6 +1083,10 @@
       <DependentUpon>Frm_EquipajeXPasajero.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Listados\EquipajeXPasajero\ReporteEquipaje.rdlc" />
+    <EmbeddedResource Include="Formularios\Listados\FacturasXPasajero\Frm_facturaXPasajero.resx">
+      <DependentUpon>Frm_facturaXPasajero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Listados\FacturasXPasajero\Rp_FxP.rdlc" />
     <EmbeddedResource Include="Formularios\Listados\Pasajeros\Frm_ReporteFamiliareXPasajero.resx">
       <DependentUpon>Frm_ReporteFamiliareXPasajero.cs</DependentUpon>
     </EmbeddedResource>
@@ -1541,6 +1557,17 @@
     </None>
     <None Include="Formularios\Listados\EquipajeXPasajero\Ds_EquipajeXPasajero.xss">
       <DependentUpon>Ds_EquipajeXPasajero.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Listados\FacturasXPasajero\Ds_FacuraPorPasajero.xsc">
+      <DependentUpon>Ds_FacuraPorPasajero.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Listados\FacturasXPasajero\Ds_FacuraPorPasajero.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Ds_FacuraPorPasajero.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Formularios\Listados\FacturasXPasajero\Ds_FacuraPorPasajero.xss">
+      <DependentUpon>Ds_FacuraPorPasajero.xsd</DependentUpon>
     </None>
     <None Include="Formularios\Listados\Factura\DataSet_FactuaPorFecha.xsc">
       <DependentUpon>DataSet_FactuaPorFecha.xsd</DependentUpon>

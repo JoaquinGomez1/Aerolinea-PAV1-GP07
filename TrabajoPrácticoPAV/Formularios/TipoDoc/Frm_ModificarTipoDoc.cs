@@ -1,22 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using TrabajoPrácticoPAV.Backend;
 using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.NE_Usuarios;
 
 namespace TrabajoPrácticoPAV.Formularios.TipoDoc
 {
     public partial class Frm_ModificarTipoDoc : Form
-    { 
-        public string Pp_documento {get; set;}
+    {
+        public string Pp_documento { get; set; }
         public object Pp_id_documento { get; set; }
+
         public Frm_ModificarTipoDoc()
         {
             this.BackColor = Estilo.ColorFondoForms;
@@ -27,12 +20,8 @@ namespace TrabajoPrácticoPAV.Formularios.TipoDoc
 
         private void Frm_ModificarTipoDoc_Load(object sender, EventArgs e)
         {
-            
             txt_documento.Text = Pp_documento;
-
         }
-
-
 
         private void textBox_Aerolinea1_TextChanged(object sender, EventArgs e)
         {

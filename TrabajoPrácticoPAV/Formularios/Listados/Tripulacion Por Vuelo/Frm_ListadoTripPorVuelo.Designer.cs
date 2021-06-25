@@ -41,26 +41,27 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Tripulacion_Por_Vuelo
             this.Mtxt_tripulante = new System.Windows.Forms.MaskedTextBox();
             this.Mtxt_vuelo = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(129, 54);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label2.Location = new System.Drawing.Point(160, 74);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 18);
+            this.label2.Size = new System.Drawing.Size(71, 20);
             this.label2.TabIndex = 13;
             this.label2.Text = "ID Vuelo";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(102, 26);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label1.Location = new System.Drawing.Point(133, 46);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 18);
+            this.label1.Size = new System.Drawing.Size(100, 20);
             this.label1.TabIndex = 12;
             this.label1.Text = "ID Tripulante";
             // 
@@ -72,15 +73,16 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Tripulacion_Por_Vuelo
             this.panel1.Controls.Add(this.Rb_Vuelo);
             this.panel1.Location = new System.Drawing.Point(414, 22);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(150, 74);
+            this.panel1.Size = new System.Drawing.Size(150, 77);
             this.panel1.TabIndex = 11;
             // 
             // Rb_Todos
             // 
             this.Rb_Todos.AutoSize = true;
+            this.Rb_Todos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.Rb_Todos.Location = new System.Drawing.Point(18, 52);
             this.Rb_Todos.Name = "Rb_Todos";
-            this.Rb_Todos.Size = new System.Drawing.Size(55, 17);
+            this.Rb_Todos.Size = new System.Drawing.Size(71, 24);
             this.Rb_Todos.TabIndex = 3;
             this.Rb_Todos.TabStop = true;
             this.Rb_Todos.Text = "Todos";
@@ -89,9 +91,10 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Tripulacion_Por_Vuelo
             // Rb_tripulante
             // 
             this.Rb_tripulante.AutoSize = true;
+            this.Rb_tripulante.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.Rb_tripulante.Location = new System.Drawing.Point(18, 3);
             this.Rb_tripulante.Name = "Rb_tripulante";
-            this.Rb_tripulante.Size = new System.Drawing.Size(86, 17);
+            this.Rb_tripulante.Size = new System.Drawing.Size(118, 24);
             this.Rb_tripulante.TabIndex = 2;
             this.Rb_tripulante.TabStop = true;
             this.Rb_tripulante.Text = "ID Tripulante";
@@ -100,9 +103,10 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Tripulacion_Por_Vuelo
             // Rb_Vuelo
             // 
             this.Rb_Vuelo.AutoSize = true;
+            this.Rb_Vuelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.Rb_Vuelo.Location = new System.Drawing.Point(18, 26);
             this.Rb_Vuelo.Name = "Rb_Vuelo";
-            this.Rb_Vuelo.Size = new System.Drawing.Size(66, 17);
+            this.Rb_Vuelo.Size = new System.Drawing.Size(89, 24);
             this.Rb_Vuelo.TabIndex = 1;
             this.Rb_Vuelo.TabStop = true;
             this.Rb_Vuelo.Text = "ID Vuelo";
@@ -110,9 +114,11 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Tripulacion_Por_Vuelo
             // 
             // btn_search
             // 
-            this.btn_search.Location = new System.Drawing.Point(651, 68);
+            this.btn_search.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_search.Location = new System.Drawing.Point(642, 60);
             this.btn_search.Name = "btn_search";
-            this.btn_search.Size = new System.Drawing.Size(87, 30);
+            this.btn_search.Size = new System.Drawing.Size(95, 41);
             this.btn_search.TabIndex = 10;
             this.btn_search.Text = "Buscar";
             this.btn_search.UseVisualStyleBackColor = true;
@@ -125,15 +131,15 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Tripulacion_Por_Vuelo
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "TrabajoPrácticoPAV.Formularios.Listados.Reservas.ReporteReservasPorPasajeros.rdlc" +
     "";
-            this.reportViewer1.Location = new System.Drawing.Point(12, 102);
+            this.reportViewer1.Location = new System.Drawing.Point(12, 105);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(726, 299);
+            this.reportViewer1.Size = new System.Drawing.Size(726, 301);
             this.reportViewer1.TabIndex = 9;
             // 
             // Mtxt_tripulante
             // 
-            this.Mtxt_tripulante.Location = new System.Drawing.Point(199, 26);
+            this.Mtxt_tripulante.Location = new System.Drawing.Point(230, 46);
             this.Mtxt_tripulante.Mask = "00000";
             this.Mtxt_tripulante.Name = "Mtxt_tripulante";
             this.Mtxt_tripulante.Size = new System.Drawing.Size(53, 20);
@@ -142,7 +148,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Tripulacion_Por_Vuelo
             // 
             // Mtxt_vuelo
             // 
-            this.Mtxt_vuelo.Location = new System.Drawing.Point(198, 52);
+            this.Mtxt_vuelo.Location = new System.Drawing.Point(229, 72);
             this.Mtxt_vuelo.Mask = "00000";
             this.Mtxt_vuelo.Name = "Mtxt_vuelo";
             this.Mtxt_vuelo.Size = new System.Drawing.Size(54, 20);
@@ -152,18 +158,29 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Tripulacion_Por_Vuelo
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label3.Location = new System.Drawing.Point(420, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 17);
+            this.label3.Size = new System.Drawing.Size(95, 20);
             this.label3.TabIndex = 16;
             this.label3.Text = "Tipo Calculo";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label5.Location = new System.Drawing.Point(12, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(257, 21);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "Listado de tripulación por cargo";
             // 
             // Frm_ListadoTripPorVuelo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(750, 413);
+            this.ClientSize = new System.Drawing.Size(749, 418);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Mtxt_vuelo);
             this.Controls.Add(this.Mtxt_tripulante);
@@ -175,6 +192,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Tripulacion_Por_Vuelo
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_ListadoTripPorVuelo";
             this.Text = "Frm_ListadoTripPorVuelo";
+            this.Load += new System.EventHandler(this.Frm_ListadoTripPorVuelo_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -195,5 +213,6 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Tripulacion_Por_Vuelo
         private System.Windows.Forms.MaskedTextBox Mtxt_tripulante;
         private System.Windows.Forms.MaskedTextBox Mtxt_vuelo;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
     }
 }

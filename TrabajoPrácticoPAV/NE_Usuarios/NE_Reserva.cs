@@ -196,16 +196,16 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             return (_DB.EjecutarSelect(sql));
         }
 
-        public DataTable E_ResuperarPorMes(string msk_Mes)
+        public DataTable E_ResuperarPorMes(string desde, string hasta)
         {
-            string[] dato = msk_Mes.Split('/');
-            string sql= @"SELECT MONTH(r.fechaSalida) as denominacion, COUNT(*) FROM Reserva r where MONTH(r.fechaSalida) = " + dato[1] +  "GROUP BY MONTH(r.fechaSalida)";
+            //string[] dato = msk_Mes.Split('/');
+            string sql = @"SELECT MONTH(r.fechaSalida) as denominacion, COUNT(*) as valor FROM Reserva r where MONTH(r.fechaSalida) between "+ desde + " and "+ hasta +
+                            @" GROUP BY MONTH(r.fechaSalida)";
             return _DB.EjecutarSelect(sql);
         }
         public DataTable ES_RecuperarTodosReservas()
         {
-            string sql = @"SELECT MONTH(r.fechaSalida) as denominicacion, COUNT(*) as valor FROM Reserva r  GROUP BY MONTH(r.fechaSalida)";
-           // MessageBox.Show("2");
+            string sql = @"SELECT MONTH(r.fechaSalida) as denominacion,COUNT(*)*100/(SELECT COUNT(*) FROM Reserva) as valor FROM Reserva r  GROUP BY MONTH(r.fechaSalida)";
             return _DB.EjecutarSelect(sql);
 
         }

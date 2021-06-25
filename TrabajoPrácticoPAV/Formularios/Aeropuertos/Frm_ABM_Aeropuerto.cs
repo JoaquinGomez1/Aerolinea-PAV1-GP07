@@ -1,14 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.NE_Usuarios;
-using TrabajoPrácticoPAV.Formularios;
 using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.Backend;
 
@@ -16,10 +9,10 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
 {
     public partial class Frm_ABM_Aeropuerto : Form
     {
-
-        Conexion_DB _BD = new Conexion_DB();
+        private Conexion_DB _BD = new Conexion_DB();
 
         public string Id_codigo { get; set; }
+
         public Frm_ABM_Aeropuerto()
         {
             InitializeComponent();
@@ -32,11 +25,12 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
             btn_modificar.Enabled = false;
             btn_eliminar.Enabled = false;
 
-            NE_Aeropuertos aeropuerto = new NE_Aeropuertos();
             Tratamientos_Especiales _TE = new Tratamientos_Especiales();
 
             CargarGrilla(_TE.ConstructorSelect(this.Controls, "JOIN Ciudad ON Ciudad.idCiudad = Aeropuerto.idCiudad", "Aeropuerto"));
         }
+
+
         private void CargarGrilla(string sql)
         {
             DataTable tabla = new DataTable();
@@ -59,8 +53,8 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
 
         private void btn_agregar_Click(object sender, EventArgs e)
         {
-              Frm_Alta_Aeropuerto alta = new Frm_Alta_Aeropuerto();
-              alta.ShowDialog();
+            Frm_Alta_Aeropuerto alta = new Frm_Alta_Aeropuerto();
+            alta.ShowDialog();
             grid_aeropuertos.Rows.Clear();
         }
 
@@ -74,16 +68,16 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
 
         private void grid_aeropuertos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-                Id_codigo = grid_aeropuertos.CurrentRow.Cells[0].Value.ToString();
-                btn_modificar.Enabled = true;
-                btn_eliminar.Enabled = true;   
+            Id_codigo = grid_aeropuertos.CurrentRow.Cells[0].Value.ToString();
+            btn_modificar.Enabled = true;
+            btn_eliminar.Enabled = true;
         }
 
         private void btn_modificar_Click(object sender, EventArgs e)
         {
-                Frm_Modificación_Aeropuerto modificar = new Frm_Modificación_Aeropuerto();
-                modificar.Id_codigo = Id_codigo;
-                modificar.ShowDialog();
+            Frm_Modificación_Aeropuerto modificar = new Frm_Modificación_Aeropuerto();
+            modificar.Id_codigo = Id_codigo;
+            modificar.ShowDialog();
             grid_aeropuertos.Rows.Clear();
         }
 

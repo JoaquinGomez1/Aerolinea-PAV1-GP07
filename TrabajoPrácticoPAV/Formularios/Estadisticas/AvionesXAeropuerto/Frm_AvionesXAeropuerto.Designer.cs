@@ -43,20 +43,20 @@
             // 
             // rp_aero
             // 
-            this.rp_aero.Location = new System.Drawing.Point(12, 171);
+            this.rp_aero.Location = new System.Drawing.Point(9, 102);
+            this.rp_aero.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rp_aero.Name = "rp_aero";
             this.rp_aero.ServerReport.BearerToken = null;
-            this.rp_aero.Size = new System.Drawing.Size(971, 267);
+            this.rp_aero.Size = new System.Drawing.Size(729, 295);
             this.rp_aero.TabIndex = 0;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(13, 9);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(10, 7);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(356, 28);
+            this.label4.Size = new System.Drawing.Size(286, 21);
             this.label4.TabIndex = 53;
             this.label4.Text = "Reporte de Aviones por Aeropuerto";
             // 
@@ -64,18 +64,23 @@
             // 
             this.groupBox1.Controls.Add(this.btn_todo);
             this.groupBox1.Controls.Add(this.btn_rangoAv);
-            this.groupBox1.Location = new System.Drawing.Point(486, 31);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.groupBox1.Location = new System.Drawing.Point(379, 11);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(225, 87);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(212, 73);
             this.groupBox1.TabIndex = 60;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Selección";
             // 
             // btn_todo
             // 
             this.btn_todo.AutoSize = true;
-            this.btn_todo.Location = new System.Drawing.Point(18, 49);
+            this.btn_todo.Location = new System.Drawing.Point(14, 40);
+            this.btn_todo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_todo.Name = "btn_todo";
-            this.btn_todo.Size = new System.Drawing.Size(69, 21);
+            this.btn_todo.Size = new System.Drawing.Size(71, 24);
             this.btn_todo.TabIndex = 0;
             this.btn_todo.TabStop = true;
             this.btn_todo.Text = "Todos";
@@ -84,9 +89,10 @@
             // btn_rangoAv
             // 
             this.btn_rangoAv.AutoSize = true;
-            this.btn_rangoAv.Location = new System.Drawing.Point(18, 22);
+            this.btn_rangoAv.Location = new System.Drawing.Point(14, 18);
+            this.btn_rangoAv.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_rangoAv.Name = "btn_rangoAv";
-            this.btn_rangoAv.Size = new System.Drawing.Size(181, 21);
+            this.btn_rangoAv.Size = new System.Drawing.Size(196, 24);
             this.btn_rangoAv.TabIndex = 0;
             this.btn_rangoAv.TabStop = true;
             this.btn_rangoAv.Text = "Rango número de avión";
@@ -96,10 +102,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label3.Location = new System.Drawing.Point(13, 55);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(91, 42);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(160, 25);
+            this.label3.Size = new System.Drawing.Size(128, 20);
             this.label3.TabIndex = 61;
             this.label3.Text = "Número de avión";
             // 
@@ -107,44 +112,43 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.label5.Location = new System.Drawing.Point(240, 50);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(261, 38);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(25, 36);
+            this.label5.Size = new System.Drawing.Size(21, 29);
             this.label5.TabIndex = 64;
             this.label5.Text = "-";
             // 
             // Txt_Hasta
             // 
-            this.Txt_Hasta.Location = new System.Drawing.Point(261, 58);
-            this.Txt_Hasta.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_Hasta.Location = new System.Drawing.Point(277, 44);
             this.Txt_Hasta.Name = "Txt_Hasta";
             this.Txt_Hasta.Pp_EsPk = false;
             this.Txt_Hasta.Pp_MensajeError = null;
             this.Txt_Hasta.Pp_NombreCampo = "codigo";
             this.Txt_Hasta.Pp_NombreTabla = "aeropuerto";
-            this.Txt_Hasta.Size = new System.Drawing.Size(56, 22);
+            this.Txt_Hasta.Size = new System.Drawing.Size(43, 20);
             this.Txt_Hasta.TabIndex = 63;
             // 
             // Txt_Desde
             // 
-            this.Txt_Desde.Location = new System.Drawing.Point(185, 58);
-            this.Txt_Desde.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_Desde.Location = new System.Drawing.Point(220, 44);
             this.Txt_Desde.Name = "Txt_Desde";
             this.Txt_Desde.Pp_EsPk = false;
             this.Txt_Desde.Pp_MensajeError = null;
             this.Txt_Desde.Pp_NombreCampo = "codigo";
             this.Txt_Desde.Pp_NombreTabla = "aeropuerto";
-            this.Txt_Desde.Size = new System.Drawing.Size(56, 22);
+            this.Txt_Desde.Size = new System.Drawing.Size(43, 20);
             this.Txt_Desde.TabIndex = 62;
             // 
             // btn_calcular
             // 
+            this.btn_calcular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_calcular.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_calcular.Location = new System.Drawing.Point(486, 124);
+            this.btn_calcular.Location = new System.Drawing.Point(628, 57);
+            this.btn_calcular.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_calcular.Name = "btn_calcular";
             this.btn_calcular.Pp_Presionado = false;
-            this.btn_calcular.Size = new System.Drawing.Size(108, 33);
+            this.btn_calcular.Size = new System.Drawing.Size(95, 41);
             this.btn_calcular.TabIndex = 59;
             this.btn_calcular.Text = "Calcular";
             this.btn_calcular.UseVisualStyleBackColor = true;
@@ -152,9 +156,9 @@
             // 
             // Frm_AvionesXAeropuerto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(995, 450);
+            this.ClientSize = new System.Drawing.Size(749, 418);
             this.Controls.Add(this.Txt_Hasta);
             this.Controls.Add(this.Txt_Desde);
             this.Controls.Add(this.label3);
@@ -164,6 +168,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.rp_aero);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Frm_AvionesXAeropuerto";
             this.Text = "Frm_AvionesXAeropuerto";
             this.Load += new System.EventHandler(this.Frm_AvionesXAeropuerto_Load);

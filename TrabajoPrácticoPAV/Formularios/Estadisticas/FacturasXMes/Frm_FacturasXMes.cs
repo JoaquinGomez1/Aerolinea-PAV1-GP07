@@ -70,9 +70,5 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.FacturasXMes
             rv_1.LocalReport.DataSources.Add(PaqueteDatos);
             rv_1.RefreshReport();
         }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-        }
     }
 }

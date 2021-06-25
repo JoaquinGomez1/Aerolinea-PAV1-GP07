@@ -1,24 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Clase;
-using TrabajoPrácticoPAV.Formularios;
 using TrabajoPrácticoPAV.NE_Usuarios;
 using Microsoft.Reporting.WinForms;
-using TrabajoPrácticoPAV.Formularios.Listados.Aeropuertos;
 
 namespace TrabajoPrácticoPAV.Formularios.Listados.Pasajeros
 {
     public partial class Frm_ReporteFamiliareXPasajero : Form
     {
-        NE_GrupoFamiliar grupo = new NE_GrupoFamiliar();
-        DataTable tabla = new DataTable();
+        private NE_GrupoFamiliar grupo = new NE_GrupoFamiliar();
+        private DataTable tabla = new DataTable();
 
         public Frm_ReporteFamiliareXPasajero()
         {
@@ -27,13 +19,13 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Pasajeros
 
         private void Frm_ReporteFamiliareXPasajero_Load(object sender, EventArgs e)
         {
-            //InitializeComponent();
+            
             this.BackColor = Estilo.ColorFondoForms;
             Estilo.FormatearEstilo(this.Controls);
 
             tabla = grupo.RecuperarTodos();
-
         }
+
         private void ArmarReportePasajeroxfamiliar()
         {
             MessageBox.Show("tabla " + tabla.Rows.Count);
@@ -42,8 +34,8 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Pasajeros
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.DataSources.Add(datos);
             reportViewer1.RefreshReport();
-            
         }
+
         private void btn_consultar_Click(object sender, EventArgs e)
         {
             if (rbu04.Checked == true)
@@ -57,12 +49,10 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Pasajeros
                     reportViewer1.RefreshReport();
                     MessageBox.Show("No se encontraron resultados para la búsqueda");
                 }
-                   
             }
-
             else if (rbu01.Checked == true)
             {
-                if(Msktxt_NumDocTitular.Text != "")
+                if (Msktxt_NumDocTitular.Text != "")
                 {
                     tabla = grupo.Reporte_recuperarNumDocTitular(Msktxt_NumDocTitular.Text);
                     if (tabla.Rows.Count != 0)
@@ -73,11 +63,8 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Pasajeros
                         reportViewer1.RefreshReport();
                         MessageBox.Show("No se encontraron resultados para la búsqueda");
                     }
-                } 
-                    
-
+                }
             }
-
             else if (rbu02.Checked == true)
             {
                 if (Msktxt_NumDocFamiliar.Text != "")
@@ -92,8 +79,6 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Pasajeros
                         MessageBox.Show("No se encontraron resultados para la búsqueda");
                     }
                 }
-                   
-
             }
             else if (rbu03.Checked == true)
             {
@@ -109,7 +94,6 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Pasajeros
                         MessageBox.Show("No se encontraron resultados para la búsqueda");
                     }
                 }
-                   
             }
             else
             {
@@ -118,9 +102,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Pasajeros
                 {
                     MessageBox.Show("No realizo selección para la búsqueda");
                 }
-                    
             }
-
         }
     }
 }

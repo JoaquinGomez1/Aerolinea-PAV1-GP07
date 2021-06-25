@@ -1,15 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.NE_Usuarios;
 using TrabajoPrácticoPAV.Clase;
-using TrabajoPrácticoPAV.Backend;
 using System.Runtime.InteropServices;
 
 namespace TrabajoPrácticoPAV.Formularios.Vuelo
@@ -44,7 +37,7 @@ namespace TrabajoPrácticoPAV.Formularios.Vuelo
             cmb_AeropSalida.CargarCombo();
 
             this.BackColor = Estilo.ColorFondoForms;
-                Estilo.FormatearEstilo(this.Controls);
+            Estilo.FormatearEstilo(this.Controls);
 
             NE_Vuelos vuelo = new NE_Vuelos();
             MostrarDatos1(vuelo.RecuperarXId(Id_vuelo1));
@@ -74,7 +67,5 @@ namespace TrabajoPrácticoPAV.Formularios.Vuelo
                     @"= Avion.idModelo WHERE Avion.idModelo = " + cmb_nomModelo.SelectedValue;
             cmb_numAvion.CargarComboJoin(Condicion);
         }
-
-        
     }
 }

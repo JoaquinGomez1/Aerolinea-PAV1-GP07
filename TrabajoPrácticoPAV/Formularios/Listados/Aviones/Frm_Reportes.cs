@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Reporting.WinForms;
 using TrabajoPrácticoPAV.NE_Usuarios;
@@ -14,7 +8,8 @@ namespace TrabajoPrácticoPAV.Formularios.Listados
 {
     public partial class Frm_Reportes : Form
     {
-        NE_Avion aviones = new NE_Avion();
+        private NE_Avion aviones = new NE_Avion();
+
         public Frm_Reportes()
         {
             InitializeComponent();
@@ -22,21 +17,16 @@ namespace TrabajoPrácticoPAV.Formularios.Listados
 
         private void Frm_Reportes_Load(object sender, EventArgs e)
         {
-
             this.reportViewer1.RefreshReport();
             cmb_modelos.CargarCombo();
             cmb_modelos.SelectedIndex = -1;
             this.reportViewer1.RefreshReport();
         }
-        private void btn_buscar_Click_1(object sender, EventArgs e)
-        {
-            BuscarAviones();
-        }
+
         private void BuscarAviones()
         {
             string id = txt_id.Text;
             string modelo = cmb_modelos.Text;
-            DataTable tabla = new DataTable();
             // Busca Por Modelo
             if (rbu01.Checked == true)
             {
@@ -46,7 +36,6 @@ namespace TrabajoPrácticoPAV.Formularios.Listados
                 }
                 else
                 {
-
                     ArmarReporteUsuario01(aviones.Recuperar_x_modelo(modelo));
                 }
             }
@@ -65,8 +54,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados
             // Busca Todos
             if (rbu03.Checked == true)
             {
-                MessageBox.Show("si");
-                tabla = aviones.RecuperarTodosReporte(); // BuscarAviones() anda
+                DataTable tabla = aviones.RecuperarTodosReporte(); 
                 ArmarReporteUsuario01(tabla);
             }
         }
@@ -81,24 +69,9 @@ namespace TrabajoPrácticoPAV.Formularios.Listados
             reportViewer1.RefreshReport();
         }
 
-        private void Rv_01_Load(object sender, EventArgs e)
+        private void button_Aerolinea1_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cmb_modelos_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            BuscarAviones();
         }
     }
 }

@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Reporting.WinForms;
 using TrabajoPrácticoPAV.Clase;
@@ -15,9 +9,8 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Aeropuertos
 {
     public partial class Frm_ReporteVueloXAeropuerto : Form
     {
-        Tratamientos_Especiales tratamientos = new Tratamientos_Especiales();
-        NE_Vuelos vuelo = new NE_Vuelos();
-        DataTable tabla = new DataTable();
+        private NE_Vuelos vuelo = new NE_Vuelos();
+        private DataTable tabla = new DataTable();
 
         public Frm_ReporteVueloXAeropuerto()
         {
@@ -104,9 +97,10 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Aeropuertos
                     reportViewer1.LocalReport.DataSources.Clear();
                     reportViewer1.RefreshReport();
                     MessageBox.Show("No se encontraron resultados");
-                }     
+                }
             }
         }
+
         public void ArmarReporteVuelo()
         {
             ReportDataSource datos = new ReportDataSource("DataSet1", tabla);
@@ -114,7 +108,6 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Aeropuertos
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.DataSources.Add(datos);
             reportViewer1.RefreshReport();
-
         }
     }
 }

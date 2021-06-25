@@ -38,5 +38,10 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.ViajesPorSemana
         {
             return _NE.GetViajesPorSemana();
         }
+
+        private void button_Aerolinea1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

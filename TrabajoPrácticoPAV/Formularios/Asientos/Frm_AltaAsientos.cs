@@ -1,15 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.NE_Usuarios;
-using TrabajoPrácticoPAV.Backend;
 using System.Runtime.InteropServices;
 
 namespace TrabajoPrácticoPAV.Formularios.Asientos
@@ -18,6 +10,7 @@ namespace TrabajoPrácticoPAV.Formularios.Asientos
     {
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
+
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWind, int wMsg, int wParam, int lParam);
 
@@ -27,7 +20,7 @@ namespace TrabajoPrácticoPAV.Formularios.Asientos
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        NE_Asiento asiento = new NE_Asiento();
+        private NE_Asiento asiento = new NE_Asiento();
 
         public Frm_AltaAsientos()
         {
@@ -56,15 +49,12 @@ namespace TrabajoPrácticoPAV.Formularios.Asientos
             if (Tratamiento.Validar(this.Controls) == Tratamientos_Especiales.Resultado.correcto
                  && Tratamiento.Validar(this.panel1.Controls) == Tratamientos_Especiales.Resultado.correcto)
             {
-
                 for (int i = 0; i < Int32.Parse(mtxt_cantidad.Text); i++)
                 {
-
                     //string sql = Tratamiento.CostructorInsert("Asientos", panel1.Controls);
                     //_BD.Insertar(sql, false);
                     asiento.Insertar(this.Controls);
                     this.Close();
-
                 }
             }
         }
@@ -77,8 +67,5 @@ namespace TrabajoPrácticoPAV.Formularios.Asientos
                        @"= Avion.idModelo WHERE Modelo.idModelo = " + cmb_nombreModelo.SelectedValue;
             cmb_numeroAvion.CargarComboJoin(CondicionAvion);
         }
-
-        
-        
     }
 }

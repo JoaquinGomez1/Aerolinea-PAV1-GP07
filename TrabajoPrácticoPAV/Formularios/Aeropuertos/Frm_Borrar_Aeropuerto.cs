@@ -1,14 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using TrabajoPrácticoPAV.Formularios;
 using TrabajoPrácticoPAV.NE_Usuarios;
 using TrabajoPrácticoPAV.Clase;
 
@@ -16,9 +9,9 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
 {
     public partial class Frm_Borrar_Aeropuerto : Form
     {
-
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
+
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWind, int wMsg, int wParam, int lParam);
 
@@ -29,6 +22,7 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
         }
 
         public string Id_codigo { get; set; }
+
         public Frm_Borrar_Aeropuerto()
         {
             InitializeComponent();
@@ -52,6 +46,7 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
             NE_Aeropuertos aeropuerto = new NE_Aeropuertos();
             MostrarDatos(aeropuerto.Recuperar_por_Codigo(Id_codigo));
         }
+
         private void MostrarDatos(DataTable tabla)
         {
             if (tabla.Rows.Count > 0)

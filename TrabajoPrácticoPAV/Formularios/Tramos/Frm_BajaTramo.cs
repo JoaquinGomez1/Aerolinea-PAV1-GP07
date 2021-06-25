@@ -16,16 +16,18 @@ namespace TrabajoPrácticoPAV.Formularios.Tramos
 {
     public partial class Frm_BajaTramo : Form
     {
-        NE_Tramos _NE = new NE_Tramos();
-        Conexion_DB _BD = new Conexion_DB();
-        Tratamientos_Especiales _TE = new Tratamientos_Especiales();
+        private Conexion_DB _BD = new Conexion_DB();
+        private Tratamientos_Especiales _TE = new Tratamientos_Especiales();
 
         #region Movimiento desde la barra
+
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
+
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWind, int wMsg, int wParam, int lParam);
-        #endregion
+
+        #endregion Movimiento desde la barra
 
         public string codigoASalida { get; set; }
         public string codigoADestino { get; set; }
@@ -64,8 +66,8 @@ namespace TrabajoPrácticoPAV.Formularios.Tramos
 
         private void BarraSuperior_MouseMove(object sender, MouseEventArgs e)
         {
-                ReleaseCapture();
-                SendMessage(this.Handle, 0x112, 0xf012, 0);
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }
