@@ -52,6 +52,8 @@ using TrabajoPrácticoPAV.Formularios.Listados.FacturasXPasajero;
 using TrabajoPrácticoPAV.Formularios.Listados.Factura;
 using TrabajoPrácticoPAV.Formularios.Listados;
 using TrabajoPrácticoPAV.Formularios.Listados.EquipajeXPasajero;
+using TrabajoPrácticoPAV.Formularios.Teléfono;
+
 
 namespace TrabajoPrácticoPAV
 {
@@ -528,6 +530,12 @@ namespace TrabajoPrácticoPAV
         {
             CerrarTodosLosMenuStrip();
             AbrirFormulario<Frm_EquipajeXPasajero>();
+        }
+
+        private void teléfonosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_ABM_Teléfono>();
         }
     }
 }

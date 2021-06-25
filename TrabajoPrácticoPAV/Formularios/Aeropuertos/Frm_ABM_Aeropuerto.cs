@@ -30,6 +30,7 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
             CargarGrilla(_TE.ConstructorSelect(this.Controls, "JOIN Ciudad ON Ciudad.idCiudad = Aeropuerto.idCiudad", "Aeropuerto"));
         }
 
+
         private void CargarGrilla(string sql)
         {
             DataTable tabla = new DataTable();

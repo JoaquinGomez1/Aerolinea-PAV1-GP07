@@ -113,6 +113,7 @@
             this.cargosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tripulaciónToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.teléfonosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BarraSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Cerrar)).BeginInit();
@@ -300,9 +301,9 @@
             this.PanelFormularios.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.PanelFormularios.BackgroundImage = global::TrabajoPrácticoPAV.Properties.Resources.ElbpHR6W0AAInBS;
             this.PanelFormularios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PanelFormularios.Controls.Add(this.menuStrip2);
             this.PanelFormularios.Controls.Add(this.menuStrip3);
             this.PanelFormularios.Controls.Add(this.menuStrip4);
-            this.PanelFormularios.Controls.Add(this.menuStrip2);
             this.PanelFormularios.Controls.Add(this.menuStrip1);
             this.PanelFormularios.Controls.Add(this.pictureBox1);
             this.PanelFormularios.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -801,7 +802,8 @@
             this.pasajerosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.pasajeroToolStripMenuItem,
             this.grupoFamiliarToolStripMenuItem,
-            this.tipoDeDocumentosToolStripMenuItem});
+            this.tipoDeDocumentosToolStripMenuItem,
+            this.teléfonosToolStripMenuItem});
             this.pasajerosToolStripMenuItem.Name = "pasajerosToolStripMenuItem";
             this.pasajerosToolStripMenuItem.Size = new System.Drawing.Size(110, 24);
             this.pasajerosToolStripMenuItem.Text = "Pasajeros";
@@ -872,21 +874,21 @@
             // vueloToolStripMenuItem
             // 
             this.vueloToolStripMenuItem.Name = "vueloToolStripMenuItem";
-            this.vueloToolStripMenuItem.Size = new System.Drawing.Size(165, 24);
+            this.vueloToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.vueloToolStripMenuItem.Text = "Vuelo";
             this.vueloToolStripMenuItem.Click += new System.EventHandler(this.vueloToolStripMenuItem_Click);
             // 
             // tramosToolStripMenuItem
             // 
             this.tramosToolStripMenuItem.Name = "tramosToolStripMenuItem";
-            this.tramosToolStripMenuItem.Size = new System.Drawing.Size(165, 24);
+            this.tramosToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.tramosToolStripMenuItem.Text = "Tramos";
             this.tramosToolStripMenuItem.Click += new System.EventHandler(this.tramosToolStripMenuItem_Click);
             // 
             // viajesToolStripMenuItem1
             // 
             this.viajesToolStripMenuItem1.Name = "viajesToolStripMenuItem1";
-            this.viajesToolStripMenuItem1.Size = new System.Drawing.Size(165, 24);
+            this.viajesToolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
             this.viajesToolStripMenuItem1.Text = "Viajes";
             this.viajesToolStripMenuItem1.Click += new System.EventHandler(this.viajesToolStripMenuItem1_Click);
             // 
@@ -896,7 +898,7 @@
             this.cargosToolStripMenuItem,
             this.tripulaciónToolStripMenuItem1});
             this.tripulaciónToolStripMenuItem.Name = "tripulaciónToolStripMenuItem";
-            this.tripulaciónToolStripMenuItem.Size = new System.Drawing.Size(165, 24);
+            this.tripulaciónToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.tripulaciónToolStripMenuItem.Text = "Tripulación";
             // 
             // cargosToolStripMenuItem
@@ -926,6 +928,13 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            // 
+            // teléfonosToolStripMenuItem
+            // 
+            this.teléfonosToolStripMenuItem.Name = "teléfonosToolStripMenuItem";
+            this.teléfonosToolStripMenuItem.Size = new System.Drawing.Size(243, 24);
+            this.teléfonosToolStripMenuItem.Text = "Teléfonos";
+            this.teléfonosToolStripMenuItem.Click += new System.EventHandler(this.teléfonosToolStripMenuItem_Click);
             // 
             // Frm_Principal
             // 
@@ -1051,5 +1060,6 @@
         private System.Windows.Forms.ToolStripMenuItem facturaPorPasajeroToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem facturasPorFechaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aviónToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem teléfonosToolStripMenuItem;
     }
 }

@@ -749,6 +749,30 @@
     <Compile Include="Formularios\Provincia\Frm_ModificarProvincia.Designer.cs">
       <DependentUpon>Frm_ModificarProvincia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Teléfono\Frm_ABM_Teléfono.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Teléfono\Frm_ABM_Teléfono.Designer.cs">
+      <DependentUpon>Frm_ABM_Teléfono.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Teléfono\Frm_Alta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Teléfono\Frm_Alta.Designer.cs">
+      <DependentUpon>Frm_Alta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Teléfono\Frm_Borrar_Telefono.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Teléfono\Frm_Borrar_Telefono.Designer.cs">
+      <DependentUpon>Frm_Borrar_Telefono.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Teléfono\Frm_ModificacionTelefono.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Teléfono\Frm_ModificacionTelefono.Designer.cs">
+      <DependentUpon>Frm_ModificacionTelefono.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Tipo_Asientos\Frm_ABMTipoAsientos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -914,6 +938,7 @@
     <Compile Include="NE_Usuarios\NE_Equipaje.cs" />
     <Compile Include="NE_Usuarios\NE_Facturacion.cs" />
     <Compile Include="NE_Usuarios\NE_Reserva.cs" />
+    <Compile Include="NE_Usuarios\NE_Telefonos.cs" />
     <Compile Include="NE_Usuarios\NE_TipoAsiento.cs" />
     <Compile Include="NE_Usuarios\NE_GrupoFamiliar.cs" />
     <Compile Include="NE_Usuarios\NE_Modelo.cs" />
@@ -1187,6 +1212,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Provincia\Frm_ModificarProvincia.resx">
       <DependentUpon>Frm_ModificarProvincia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Teléfono\Frm_ABM_Teléfono.resx">
+      <DependentUpon>Frm_ABM_Teléfono.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Teléfono\Frm_Alta.resx">
+      <DependentUpon>Frm_Alta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Teléfono\Frm_Borrar_Telefono.resx">
+      <DependentUpon>Frm_Borrar_Telefono.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Teléfono\Frm_ModificacionTelefono.resx">
+      <DependentUpon>Frm_ModificacionTelefono.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Tipo_Asientos\Frm_ABMTipoAsientos.resx">
       <DependentUpon>Frm_ABMTipoAsientos.cs</DependentUpon>
