@@ -140,7 +140,7 @@ namespace TrabajoPrácticoPAV.Formularios.TipoDoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(669, 314);
+            this.ClientSize = new System.Drawing.Size(489, 234);
             this.Controls.Add(this.btn_eliminar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_modificar);
@@ -149,6 +149,7 @@ namespace TrabajoPrácticoPAV.Formularios.TipoDoc
             this.Controls.Add(this.btn_alta);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmb_tipoDoc);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_ABMTipoDoc";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Frm_ABMTipoDoc_Load);

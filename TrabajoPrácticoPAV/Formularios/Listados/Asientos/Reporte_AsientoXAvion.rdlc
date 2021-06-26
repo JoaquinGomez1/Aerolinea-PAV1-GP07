@@ -165,7 +165,7 @@
         <Top>0.03528cm</Top>
         <Left>2.51369cm</Left>
         <Height>0.6cm</Height>
-        <Width>10.73356cm</Width>
+        <Width>10.73357cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -190,7 +190,22 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Listado de Vuelos por Aeropuerto</Value>
+                  <Value>Listado de Asientos por Avión</Value>
+                  <Style>
+                    <FontFamily>microsoft sans Serif</FontFamily>
+                    <FontSize>15pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value />
                   <Style>
                     <FontFamily>microsoft sans Serif</FontFamily>
                     <FontSize>15pt</FontSize>
