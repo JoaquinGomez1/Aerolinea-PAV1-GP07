@@ -116,7 +116,7 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
             this.btn_volver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
             this.btn_volver.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_volver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_volver.Location = new System.Drawing.Point(41, 380);
+            this.btn_volver.Location = new System.Drawing.Point(23, 361);
             this.btn_volver.Name = "btn_volver";
             this.btn_volver.Size = new System.Drawing.Size(76, 28);
             this.btn_volver.TabIndex = 2;
@@ -160,7 +160,7 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
             this.btn_limpiarr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
             this.btn_limpiarr.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_limpiarr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_limpiarr.Location = new System.Drawing.Point(121, 380);
+            this.btn_limpiarr.Location = new System.Drawing.Point(103, 361);
             this.btn_limpiarr.Name = "btn_limpiarr";
             this.btn_limpiarr.Size = new System.Drawing.Size(76, 28);
             this.btn_limpiarr.TabIndex = 12;
@@ -176,8 +176,10 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.grid_aeropuertos);
             this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.btn_limpiarr);
+            this.panel1.Controls.Add(this.btn_volver);
             this.panel1.Location = new System.Drawing.Point(10, 12);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(728, 394);
             this.panel1.TabIndex = 64;
@@ -203,7 +205,7 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Location = new System.Drawing.Point(24, 30);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(583, 91);
             this.panel3.TabIndex = 0;
@@ -252,11 +254,9 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
             this.Controls.Add(this.txt_Codigo);
             this.Controls.Add(this.txt_Nombre);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.btn_limpiarr);
             this.Controls.Add(this.chk_todos);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.btn_volver);
             this.Controls.Add(this.btn_eliminar);
             this.Controls.Add(this.btn_modificar);
             this.Controls.Add(this.btn_agregar);

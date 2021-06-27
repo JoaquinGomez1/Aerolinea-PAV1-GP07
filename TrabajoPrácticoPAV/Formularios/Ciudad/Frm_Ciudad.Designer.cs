@@ -434,7 +434,7 @@ namespace TrabajoPrácticoPAV.Formularios.Ciudad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(749, 418);
             this.Controls.Add(this.btn_cerrar);
             this.Controls.Add(this.btn_eliminar);
             this.Controls.Add(this.btn_editar);

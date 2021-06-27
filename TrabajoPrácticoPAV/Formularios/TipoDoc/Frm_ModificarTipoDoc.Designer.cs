@@ -36,7 +36,7 @@ namespace TrabajoPrácticoPAV.Formularios.TipoDoc
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(150, 190);
+            this.button1.Location = new System.Drawing.Point(122, 114);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
@@ -47,7 +47,7 @@ namespace TrabajoPrácticoPAV.Formularios.TipoDoc
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 101);
+            this.label1.Location = new System.Drawing.Point(30, 69);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 13);
             this.label1.TabIndex = 4;
@@ -55,7 +55,7 @@ namespace TrabajoPrácticoPAV.Formularios.TipoDoc
             // 
             // txt_documento
             // 
-            this.txt_documento.Location = new System.Drawing.Point(111, 98);
+            this.txt_documento.Location = new System.Drawing.Point(122, 66);
             this.txt_documento.Name = "txt_documento";
             this.txt_documento.Pp_EsPk = false;
             this.txt_documento.Pp_MensajeError = null;
@@ -69,10 +69,11 @@ namespace TrabajoPrácticoPAV.Formularios.TipoDoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(363, 264);
+            this.ClientSize = new System.Drawing.Size(325, 200);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_documento);
             this.Controls.Add(this.button1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_ModificarTipoDoc";
             this.Text = "Frm_ModificarTipoDoc";
             this.Load += new System.EventHandler(this.Frm_ModificarTipoDoc_Load);

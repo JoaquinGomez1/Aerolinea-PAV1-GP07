@@ -6,16 +6,16 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.75776cm</Width>
+              <Width>2.65734cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.81cm</Width>
+              <Width>3.60446cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.65667cm</Width>
+              <Width>5.77673cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>5.67267cm</Width>
+              <Width>4.45382cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -50,7 +50,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -165,7 +164,7 @@
         <DataSetName>DataSet1</DataSetName>
         <Left>0.03528cm</Left>
         <Height>0.6cm</Height>
-        <Width>15.8971cm</Width>
+        <Width>16.49236cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -176,7 +175,7 @@
     <Height>0.34792in</Height>
     <Style />
   </Body>
-  <Width>6.51389in</Width>
+  <Width>6.50694in</Width>
   <Page>
     <PageHeader>
       <Height>3.02626cm</Height>
@@ -225,7 +224,21 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Código</Value>
+                  <Value>ID equipaje</Value>
+                  <Style>
+                    <FontFamily>microsoft sans Serif</FontFamily>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value />
                   <Style>
                     <FontFamily>microsoft sans Serif</FontFamily>
                     <FontWeight>Bold</FontWeight>
@@ -238,10 +251,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox10</rd:DefaultName>
-          <Top>1.90122cm</Top>
-          <Left>0.01764cm</Left>
+          <Top>2.0908cm</Top>
+          <Left>0cm</Left>
           <Height>0.6cm</Height>
-          <Width>4.63021cm</Width>
+          <Width>2.69262cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border />
@@ -270,7 +283,21 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Nombre</Value>
+                  <Value>Número de documento</Value>
+                  <Style>
+                    <FontFamily>Microsoft Sans Serif</FontFamily>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value />
                   <Style>
                     <FontFamily>Microsoft Sans Serif</FontFamily>
                     <FontWeight>Bold</FontWeight>
@@ -283,10 +310,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox11</rd:DefaultName>
-          <Top>1.86855cm</Top>
-          <Left>4.64785cm</Left>
+          <Top>2.0908cm</Top>
+          <Left>6.29709cm</Left>
           <Height>0.6cm</Height>
-          <Width>7.42597cm</Width>
+          <Width>5.77673cm</Width>
           <ZIndex>2</ZIndex>
           <Style>
             <Border>
@@ -309,7 +336,21 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Ciudad</Value>
+                  <Value>Peso</Value>
+                  <Style>
+                    <FontFamily>Microsoft Sans Serif</FontFamily>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value />
                   <Style>
                     <FontFamily>Microsoft Sans Serif</FontFamily>
                     <FontWeight>Bold</FontWeight>
@@ -322,7 +363,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox11</rd:DefaultName>
-          <Top>1.91886cm</Top>
+          <Top>2.0908cm</Top>
           <Left>12.07382cm</Left>
           <Height>0.6cm</Height>
           <Width>4.45382cm</Width>
@@ -354,6 +395,79 @@
             </Border>
           </Style>
         </Line>
+        <Textbox Name="Textbox13">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Tipo Documento</Value>
+                  <Style>
+                    <FontFamily>microsoft sans Serif</FontFamily>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value />
+                  <Style>
+                    <FontFamily>microsoft sans Serif</FontFamily>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value />
+                  <Style>
+                    <FontFamily>microsoft sans Serif</FontFamily>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox10</rd:DefaultName>
+          <Top>2.0908cm</Top>
+          <Left>2.7279cm</Left>
+          <Height>0.6cm</Height>
+          <Width>3.56918cm</Width>
+          <ZIndex>5</ZIndex>
+          <Style>
+            <Border />
+            <TopBorder>
+              <Style>None</Style>
+            </TopBorder>
+            <BottomBorder>
+              <Style>Solid</Style>
+            </BottomBorder>
+            <LeftBorder>
+              <Style>None</Style>
+            </LeftBorder>
+            <RightBorder>
+              <Style>None</Style>
+            </RightBorder>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
       </ReportItems>
       <Style>
         <Border>
