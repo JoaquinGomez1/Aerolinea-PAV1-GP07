@@ -53,6 +53,7 @@ using TrabajoPrácticoPAV.Formularios.Listados.Factura;
 using TrabajoPrácticoPAV.Formularios.Listados;
 using TrabajoPrácticoPAV.Formularios.Listados.EquipajeXPasajero;
 using TrabajoPrácticoPAV.Formularios.Teléfono;
+using TrabajoPrácticoPAV.Formularios.Tripulacion_x_vuelo;
 
 
 namespace TrabajoPrácticoPAV
@@ -536,6 +537,12 @@ namespace TrabajoPrácticoPAV
         {
             CerrarTodosLosMenuStrip();
             AbrirFormulario<Frm_ABM_Teléfono>();
+        }
+
+        private void tripulaciónPorVueloToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_ABM_TripulacionxVuelo>();
         }
     }
 }
