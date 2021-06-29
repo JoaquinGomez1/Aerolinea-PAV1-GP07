@@ -17,7 +17,6 @@ namespace TrabajoPrácticoPAV.Formularios.Ciudad
 
         public Frm_Ciudad()
         {
-
             this.BackColor = Estilo.ColorFondoForms;
             Estilo.FormatearEstilo(this.Controls);
             InitializeComponent();
@@ -64,7 +63,7 @@ namespace TrabajoPrácticoPAV.Formularios.Ciudad
             DataTable TableCiudades = _NE.GetTodosLasCiudades();
             CargarDataGrid(TableCiudades);
         }
- 
+
         private void btn_registrar_Click(object sender, EventArgs e)
         {
             bool esValido = tratamientos.Validar(panel_registrar.Controls) == Resultado.correcto;
@@ -82,7 +81,6 @@ namespace TrabajoPrácticoPAV.Formularios.Ciudad
             }
         }
 
-        
         private void btn_refrescar_Click_1(object sender, EventArgs e)
         {
             CargarDataGrid();
@@ -90,7 +88,6 @@ namespace TrabajoPrácticoPAV.Formularios.Ciudad
 
         private void btn_editar_Click(object sender, EventArgs e)
         {
-           
             comboBox_pais_modify.CargarCombo();
             panel_modify.Visible = true;
             lbl_title_modify.Visible = true;
@@ -113,8 +110,6 @@ namespace TrabajoPrácticoPAV.Formularios.Ciudad
             txt_nombre_modify.Text = ciudad.Nombre;
             comboBox_pais_modify.SelectedValue = ciudad.IdPais;
             comboBox_Aerolinea2.SelectedValue = ciudad.IdProvincia;
-
-
         }
 
         private void btn_modify_Click_1(object sender, EventArgs e)
@@ -128,14 +123,11 @@ namespace TrabajoPrácticoPAV.Formularios.Ciudad
                     Nombre = txt_nombre_modify.Text,
                     IdProvincia = Int32.Parse(comboBox_Aerolinea2.SelectedValue.ToString()),
                     IdPais = Int32.Parse(comboBox_pais_modify.SelectedValue.ToString()),
-
                 };
                 _NE.ModificarCiudad(ciudad);
                 CargarDataGrid();
-        };
-
+            };
         }
-
 
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
@@ -157,9 +149,8 @@ namespace TrabajoPrácticoPAV.Formularios.Ciudad
             {
                 provincia = comboBox_Aerolinea1.SelectedValue.ToString();
             }
-            
 
-            DataTable tabla = _NE.GetCiudad(nombre,pais,provincia);
+            DataTable tabla = _NE.GetCiudad(nombre, pais, provincia);
             if (tabla != null)
             { CargarGridCiudades(tabla); }
             else { MessageBox.Show("Complete los campos para realizar la busqueda"); }

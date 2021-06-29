@@ -2,7 +2,6 @@
 using System.Data;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Clase;
-using TrabajoPrácticoPAV.Clase.Modelos;
 using TrabajoPrácticoPAV.Backend;
 using TrabajoPrácticoPAV.NE_Usuarios;
 
@@ -15,8 +14,7 @@ namespace TrabajoPrácticoPAV.Formularios.Facturaciones
         public DataTable pasajero { get; set; }
         public DataTable vuelo { get; set; }
 
-        NE_Facturacion facturacion = new NE_Facturacion();
-        Conexion_DB _BD = new Conexion_DB();
+        private NE_Facturacion facturacion = new NE_Facturacion();
 
         public Frm_Facturacion()
         {
@@ -24,26 +22,27 @@ namespace TrabajoPrácticoPAV.Formularios.Facturaciones
             this.BackColor = Estilo.ColorFondoForms;
             Estilo.FormatearEstilo(this.Controls);
         }
+
         private void btn_cancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
         private void Frm_Facturacion_Load(object sender, EventArgs e)
         {
             grid_vuelo.Formatear();
             btn_GenerarFactura.Enabled = false;
         }
+
         private void btn_buscarReserva_Click(object sender, EventArgs e)
         {
             grid_vuelo.Rows.Clear();
             Id_reserva = txt_numeroReserva.Text;
             pasajero = facturacion.RecuperarPasajero(txt_numeroReserva.Text);
             vuelo = facturacion.RecuperarVueloxReserva(txt_numeroReserva.Text);
-           
+
             if (vuelo.Rows.Count != 0)
-            {
                 facturacion.CargarGrillaVuelos(vuelo, grid_vuelo);
-            }
             if (pasajero.Rows.Count != 0)
             {
                 txt_numeroDoc.Text = pasajero.Rows[0][0].ToString();
@@ -54,11 +53,9 @@ namespace TrabajoPrácticoPAV.Formularios.Facturaciones
                 btn_eliminar.Enabled = true;
                 button_Aerolinea1.Enabled = true;
             }
-
             else
-            {
                 MessageBox.Show("No se ha encontrado una reserva con el número de reserva ingresado.");
-            }
+
         }
 
         private void btn_GenerarFactura_Click(object sender, EventArgs e)

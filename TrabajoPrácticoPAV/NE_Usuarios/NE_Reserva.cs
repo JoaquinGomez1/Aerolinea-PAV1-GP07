@@ -113,7 +113,18 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
         public void EliminarReserva(string id)
         {
             string sql = $"DELETE FROM Reserva WHERE numeroDeReserva = {id}";
+            
+            _DB.InicioTransaccion();
             _DB.Borrar(sql, false);
+
+            if (_DB.FinalTransaccion() == Conexion_DB.EstadoTransaccion.correcto)
+            {
+                MessageBox.Show("Se grabó correctamente todo");
+            }
+            else
+            {
+                MessageBox.Show("No se realizó la grabación de los datos, hubo un error");
+            }
         }
 
         public void InsertarReserva(Reserva reserva)
@@ -123,7 +134,18 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
                          $"numeroDocTitular, tipoDocTitular, precio) " +
                          $"VALUES ('{reserva.fechaDeReserva}','{reserva.fechaDeSalida}',0," +
                          $"{reserva.numeroDeViaje},{reserva.numeroDocTitular},{reserva.tipoDocTitular},{reserva.precio})";
+            _DB.InicioTransaccion();
             _DB.Insertar(sql, false);
+            
+            if (_DB.FinalTransaccion()== Conexion_DB.EstadoTransaccion.correcto)
+            {
+                MessageBox.Show("Se grabó correctamente todo");
+            }
+            else
+            {
+                MessageBox.Show("No se realizó la grabación de los datos, hubo un error");
+            }
+
         }
 
         public void Insertar_RXP(Pasajero pasajero, Reserva reserva, string tipo_clase,
@@ -135,15 +157,27 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
                         $"tipoClase, numeroAsiento, numeroPorModelo, idModelo) VALUES " +
                         $"({pasajero.tipoDoc}, {pasajero.numeroDoc},{reserva.numeroDeReserva},'{fechaVen}'," +
                         $"{tipo_clase},{numero_asiento},{numeroModelo},{idModelo})";
-            //_DB.InicioTransaccion();
-            _DB.Insertar(sql, true);
+            _DB.InicioTransaccion();
+            _DB.Insertar(sql, false);
+
+            if (_DB.FinalTransaccion() != Conexion_DB.EstadoTransaccion.correcto)
+            {       
+                MessageBox.Show("No se realizó la grabación de los datos, hubo un error");
+            }
 
         }
 
         public void ModificarReserva(Reserva reserva)
         {
             string sql = $"UPDATE Reserva SET fechaSalida='{reserva.fechaDeSalida}', numeroDeViaje={reserva.numeroDeViaje}, numeroDocTitular={reserva.numeroDocTitular}, tipoDocTitular={reserva.tipoDocTitular}, precio={reserva.precio} WHERE numeroDeReserva={reserva.numeroDeReserva}";
+            
+            _DB.InicioTransaccion();
             _DB.Modificar(sql, false);
+
+            if (_DB.FinalTransaccion() != Conexion_DB.EstadoTransaccion.correcto)
+            {
+                MessageBox.Show("No se realizó la grabación de los datos, hubo un error");
+            }
         }
 
         public string Numero_reserva()
@@ -196,6 +230,19 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             return (_DB.EjecutarSelect(sql));
         }
 
+        public DataTable E_ResuperarPorMes(string desde, string hasta)
+        {
+            //string[] dato = msk_Mes.Split('/');
+            string sql = @"SELECT MONTH(r.fechaSalida) as denominacion, COUNT(*) as valor FROM Reserva r where MONTH(r.fechaSalida) between "+ desde + " and "+ hasta +
+                            @" GROUP BY MONTH(r.fechaSalida)";
+            return _DB.EjecutarSelect(sql);
+        }
+        public DataTable ES_RecuperarTodosReservas()
+        {
+            string sql = @"SELECT MONTH(r.fechaSalida) as denominacion,COUNT(*)*100/(SELECT COUNT(*) FROM Reserva) as valor FROM Reserva r  GROUP BY MONTH(r.fechaSalida)";
+            return _DB.EjecutarSelect(sql);
+
+        }
 
     }
 }

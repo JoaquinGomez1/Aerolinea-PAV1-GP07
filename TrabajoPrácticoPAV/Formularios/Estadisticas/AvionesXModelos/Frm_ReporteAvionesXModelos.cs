@@ -21,13 +21,13 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.AvionesXModelos
         public Frm_ReporteAvionesXModelos()
         {
             InitializeComponent();
-            this.BackColor = Estilo.ColorFondoForms;
-            Estilo.FormatearEstilo(this.Controls);
+           
         }
 
         private void Frm_ReporteAvionesXModelos_Load(object sender, EventArgs e)
         {
-            
+            this.BackColor = Estilo.ColorFondoForms;
+            Estilo.FormatearEstilo(this.Controls);
             this.reportViewer1.RefreshReport();
         }
 

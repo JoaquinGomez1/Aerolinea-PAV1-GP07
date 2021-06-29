@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.RepAeroPaisBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Ds_ReporteAeroPais = new TrabajoPrácticoPAV.Formularios.Listados.Aeropuertos.Ds_ReporteAeroPais();
             this.label1 = new System.Windows.Forms.Label();
@@ -67,7 +67,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(67, 33);
+            this.label1.Location = new System.Drawing.Point(119, 43);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 20);
             this.label1.TabIndex = 2;
@@ -77,7 +77,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(45, 56);
+            this.label2.Location = new System.Drawing.Point(97, 66);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(98, 20);
             this.label2.TabIndex = 3;
@@ -87,7 +87,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label3.Location = new System.Drawing.Point(104, 80);
+            this.label3.Location = new System.Drawing.Point(156, 90);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(39, 20);
             this.label3.TabIndex = 4;
@@ -96,10 +96,10 @@
             // rbu01
             // 
             this.rbu01.AutoSize = true;
-            this.rbu01.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.rbu01.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.rbu01.Location = new System.Drawing.Point(17, 19);
             this.rbu01.Name = "rbu01";
-            this.rbu01.Size = new System.Drawing.Size(100, 21);
+            this.rbu01.Size = new System.Drawing.Size(109, 24);
             this.rbu01.TabIndex = 0;
             this.rbu01.Text = "Por nombre";
             this.rbu01.UseVisualStyleBackColor = true;
@@ -107,10 +107,10 @@
             // rbu03
             // 
             this.rbu03.AutoSize = true;
-            this.rbu03.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.rbu03.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.rbu03.Location = new System.Drawing.Point(17, 61);
             this.rbu03.Name = "rbu03";
-            this.rbu03.Size = new System.Drawing.Size(78, 21);
+            this.rbu03.Size = new System.Drawing.Size(84, 24);
             this.rbu03.TabIndex = 1;
             this.rbu03.Text = "Por pais";
             this.rbu03.UseVisualStyleBackColor = true;
@@ -118,10 +118,10 @@
             // rbu02
             // 
             this.rbu02.AutoSize = true;
-            this.rbu02.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.rbu02.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.rbu02.Location = new System.Drawing.Point(17, 40);
             this.rbu02.Name = "rbu02";
-            this.rbu02.Size = new System.Drawing.Size(181, 21);
+            this.rbu02.Size = new System.Drawing.Size(199, 24);
             this.rbu02.TabIndex = 2;
             this.rbu02.Text = "Primer letra desde/hasta";
             this.rbu02.UseVisualStyleBackColor = true;
@@ -129,10 +129,10 @@
             // rbu04
             // 
             this.rbu04.AutoSize = true;
-            this.rbu04.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.rbu04.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.rbu04.Location = new System.Drawing.Point(17, 82);
             this.rbu04.Name = "rbu04";
-            this.rbu04.Size = new System.Drawing.Size(66, 21);
+            this.rbu04.Size = new System.Drawing.Size(71, 24);
             this.rbu04.TabIndex = 3;
             this.rbu04.Text = "Todos";
             this.rbu04.UseVisualStyleBackColor = true;
@@ -143,24 +143,24 @@
             this.groupBox1.Controls.Add(this.rbu01);
             this.groupBox1.Controls.Add(this.rbu03);
             this.groupBox1.Controls.Add(this.rbu02);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(299, 3);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.groupBox1.Location = new System.Drawing.Point(364, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(311, 113);
+            this.groupBox1.Size = new System.Drawing.Size(236, 113);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tipo Cálculo";
             // 
             // reportViewer1
             // 
-            reportDataSource1.Name = "DataSet01";
-            reportDataSource1.Value = this.RepAeroPaisBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            reportDataSource2.Name = "DataSet01";
+            reportDataSource2.Value = this.RepAeroPaisBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "TrabajoPrácticoPAV.Formularios.Listados.Aeropuertos.ReporteAeroPais.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(13, 122);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(708, 246);
+            this.reportViewer1.Size = new System.Drawing.Size(724, 284);
             this.reportViewer1.TabIndex = 8;
             // 
             // label4
@@ -177,7 +177,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.label5.Location = new System.Drawing.Point(198, 49);
+            this.label5.Location = new System.Drawing.Point(250, 59);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(21, 29);
             this.label5.TabIndex = 22;
@@ -186,7 +186,7 @@
             // cmb_pais
             // 
             this.cmb_pais.FormattingEnabled = true;
-            this.cmb_pais.Location = new System.Drawing.Point(149, 82);
+            this.cmb_pais.Location = new System.Drawing.Point(201, 92);
             this.cmb_pais.Name = "cmb_pais";
             this.cmb_pais.Pp_CampoAceptaNull = false;
             this.cmb_pais.Pp_EsPk = false;
@@ -200,7 +200,7 @@
             // 
             // txt_codigohasta
             // 
-            this.txt_codigohasta.Location = new System.Drawing.Point(223, 55);
+            this.txt_codigohasta.Location = new System.Drawing.Point(275, 65);
             this.txt_codigohasta.Name = "txt_codigohasta";
             this.txt_codigohasta.Pp_EsPk = false;
             this.txt_codigohasta.Pp_MensajeError = null;
@@ -211,7 +211,9 @@
             // 
             // button_Aerolinea1
             // 
-            this.button_Aerolinea1.Location = new System.Drawing.Point(626, 80);
+            this.button_Aerolinea1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_Aerolinea1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button_Aerolinea1.Location = new System.Drawing.Point(642, 81);
             this.button_Aerolinea1.Name = "button_Aerolinea1";
             this.button_Aerolinea1.Pp_Presionado = false;
             this.button_Aerolinea1.Size = new System.Drawing.Size(95, 35);
@@ -222,7 +224,7 @@
             // 
             // txt_codigodesde
             // 
-            this.txt_codigodesde.Location = new System.Drawing.Point(149, 56);
+            this.txt_codigodesde.Location = new System.Drawing.Point(201, 66);
             this.txt_codigodesde.Name = "txt_codigodesde";
             this.txt_codigodesde.Pp_EsPk = false;
             this.txt_codigodesde.Pp_MensajeError = null;
@@ -233,7 +235,7 @@
             // 
             // Txt_nombres
             // 
-            this.Txt_nombres.Location = new System.Drawing.Point(149, 33);
+            this.Txt_nombres.Location = new System.Drawing.Point(201, 43);
             this.Txt_nombres.Name = "Txt_nombres";
             this.Txt_nombres.Pp_EsPk = false;
             this.Txt_nombres.Pp_MensajeError = null;
@@ -246,7 +248,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(733, 379);
+            this.ClientSize = new System.Drawing.Size(749, 418);
             this.Controls.Add(this.cmb_pais);
             this.Controls.Add(this.txt_codigohasta);
             this.Controls.Add(this.label4);

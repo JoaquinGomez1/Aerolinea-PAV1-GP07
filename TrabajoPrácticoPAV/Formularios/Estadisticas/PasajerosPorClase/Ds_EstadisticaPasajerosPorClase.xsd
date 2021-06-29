@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ds_EstadisticaPasajerosPorViaje" targetNamespace="http://tempuri.org/Ds_EstadisticaPasajerosPorViaje.xsd" xmlns:mstns="http://tempuri.org/Ds_EstadisticaPasajerosPorViaje.xsd" xmlns="http://tempuri.org/Ds_EstadisticaPasajerosPorViaje.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BD3K6G07_2021ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BD3K6G07_2021ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.TrabajoPrácticoPAV.Properties.Settings.GlobalReference.Default.BD3K6G07_2021ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ds_EstadisticaPasajerosPorViaje" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Ds_EstadisticaPasajerosPorViaje" msprop:Generator_UserDSName="Ds_EstadisticaPasajerosPorViaje">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="EstadisticaPasajerosPorClase" msprop:Generator_TableClassName="EstadisticaPasajerosPorClaseDataTable" msprop:Generator_TableVarName="tableEstadisticaPasajerosPorClase" msprop:Generator_TablePropName="EstadisticaPasajerosPorClase" msprop:Generator_RowDeletingName="EstadisticaPasajerosPorClaseRowDeleting" msprop:Generator_RowChangingName="EstadisticaPasajerosPorClaseRowChanging" msprop:Generator_RowEvHandlerName="EstadisticaPasajerosPorClaseRowChangeEventHandler" msprop:Generator_RowDeletedName="EstadisticaPasajerosPorClaseRowDeleted" msprop:Generator_UserTableName="EstadisticaPasajerosPorClase" msprop:Generator_RowChangedName="EstadisticaPasajerosPorClaseRowChanged" msprop:Generator_RowEvArgName="EstadisticaPasajerosPorClaseRowChangeEvent" msprop:Generator_RowClassName="EstadisticaPasajerosPorClaseRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Cantidad" msprop:Generator_ColumnVarNameInTable="columnCantidad" msprop:Generator_ColumnPropNameInRow="Cantidad" msprop:Generator_ColumnPropNameInTable="CantidadColumn" msprop:Generator_UserColumnName="Cantidad" type="xs:string" minOccurs="0" />
+              <xs:element name="Clase" msprop:Generator_ColumnVarNameInTable="columnClase" msprop:Generator_ColumnPropNameInRow="Clase" msprop:Generator_ColumnPropNameInTable="ClaseColumn" msprop:Generator_UserColumnName="Clase" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

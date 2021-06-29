@@ -30,50 +30,47 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.PasajerosMayores
         private void InitializeComponent()
         {
             this.rv_pasajerosMayores = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.btn_calcular = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.btn_cerrar = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // rv_pasajerosMayores
             // 
-            this.rv_pasajerosMayores.Location = new System.Drawing.Point(12, 12);
+            this.rv_pasajerosMayores.Location = new System.Drawing.Point(12, 71);
             this.rv_pasajerosMayores.Name = "rv_pasajerosMayores";
             this.rv_pasajerosMayores.ServerReport.BearerToken = null;
-            this.rv_pasajerosMayores.Size = new System.Drawing.Size(727, 355);
+            this.rv_pasajerosMayores.Size = new System.Drawing.Size(727, 335);
             this.rv_pasajerosMayores.TabIndex = 0;
-            // 
-            // btn_calcular
-            // 
-            this.btn_calcular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_calcular.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.btn_calcular.Location = new System.Drawing.Point(526, 373);
-            this.btn_calcular.Name = "btn_calcular";
-            this.btn_calcular.Pp_Presionado = false;
-            this.btn_calcular.Size = new System.Drawing.Size(90, 28);
-            this.btn_calcular.TabIndex = 17;
-            this.btn_calcular.Text = "Calcular";
-            this.btn_calcular.UseVisualStyleBackColor = true;
-            this.btn_calcular.Click += new System.EventHandler(this.btn_calcular_Click);
             // 
             // btn_cerrar
             // 
-            this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.btn_cerrar.Location = new System.Drawing.Point(649, 373);
+            this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_cerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_cerrar.Location = new System.Drawing.Point(644, 12);
             this.btn_cerrar.Name = "btn_cerrar";
             this.btn_cerrar.Pp_Presionado = false;
-            this.btn_cerrar.Size = new System.Drawing.Size(90, 28);
+            this.btn_cerrar.Size = new System.Drawing.Size(95, 41);
             this.btn_cerrar.TabIndex = 16;
             this.btn_cerrar.Text = "Cerrar";
             this.btn_cerrar.UseVisualStyleBackColor = true;
             this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label5.Location = new System.Drawing.Point(12, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(331, 21);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "Estadistica de Pasajeros mayores de Edad";
+            // 
             // Frm_PasajerosMayores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(751, 413);
-            this.Controls.Add(this.btn_calcular);
+            this.ClientSize = new System.Drawing.Size(749, 418);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btn_cerrar);
             this.Controls.Add(this.rv_pasajerosMayores);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -81,6 +78,7 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.PasajerosMayores
             this.Text = "Frm_PasajerosMayores";
             this.Load += new System.EventHandler(this.Frm_PasajerosMayores_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -88,6 +86,6 @@ namespace TrabajoPrácticoPAV.Formularios.Estadisticas.PasajerosMayores
 
         private Microsoft.Reporting.WinForms.ReportViewer rv_pasajerosMayores;
         private Clase.Button_Aerolinea btn_cerrar;
-        private Clase.Button_Aerolinea btn_calcular;
+        private System.Windows.Forms.Label label5;
     }
 }

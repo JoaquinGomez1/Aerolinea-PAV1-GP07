@@ -1,12 +1,6 @@
 ﻿using Microsoft.Reporting.WinForms;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.NE_Usuarios;
@@ -15,18 +9,16 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.EquipajeXPasajero
 {
     public partial class Frm_EquipajeXPasajero : Form
     {
-        NE_Equipaje tripulacion = new NE_Equipaje();
-        DataTable tabla = new DataTable();
+        private NE_Equipaje Equipaje = new NE_Equipaje();
+        private DataTable tabla = new DataTable();
 
         public Frm_EquipajeXPasajero()
         {
             InitializeComponent();
         }
 
-
         private void Frm_EquipajeXPasajero_Load(object sender, EventArgs e)
         {
-
             this.reportViewer1.RefreshReport();
             this.BackColor = Estilo.ColorFondoForms;
             Estilo.FormatearEstilo(this.Controls);
@@ -39,24 +31,20 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.EquipajeXPasajero
             reportViewer1.LocalReport.ReportEmbeddedResource = "TrabajoPrácticoPAV.Formularios.Listados.EquipajeXPasajero.ReporteEquipaje.rdlc";
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.DataSources.Add(PaqueteDatos);
-            reportViewer1.RefreshReport();            
-            MessageBox.Show(tabla.Rows.Count.ToString());
-            
+            reportViewer1.RefreshReport();
         }
 
         private void btn_Buscar_Click(object sender, EventArgs e)
         {
-            
             if (rbu_Pasajero.Checked && cmb_TipoDoc.SelectedIndex != -1 && msk_NroDoc.Text != " ")
             {
-                tabla = tripulacion.RecuperarPorPasajero(cmb_TipoDoc.Text, msk_NroDoc.Text);
+                tabla = Equipaje.RecuperarPorPasajero(cmb_TipoDoc.Text, msk_NroDoc.Text);
                 if (tabla.Rows.Count != 0)
                     ArmarReporteEquipaje01();
-
                 else
                 {
                     reportViewer1.LocalReport.DataSources.Clear();
-                    reportViewer1.RefreshReport();                    
+                    reportViewer1.RefreshReport();
                     MessageBox.Show("No se encontraron resultados");
                 }
             }
@@ -74,7 +62,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.EquipajeXPasajero
                 else
                     hasta = txt_Hasta.Text;
 
-                tabla = tripulacion.RecuperarPorRango(desde, hasta);
+                tabla = Equipaje.RecuperarPorRango(desde, hasta);
                 if (tabla.Rows.Count != 0)
                     ArmarReporteEquipaje01();
                 else
@@ -84,23 +72,19 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.EquipajeXPasajero
                     MessageBox.Show("No se encontraron resultados");
                 }
             }
-        
-                if (rbu_Todos.Checked)
+
+            if (rbu_Todos.Checked)
+            {
+                tabla = Equipaje.RecuperarEquipaje();
+                if (tabla.Rows.Count != 0)
+                    ArmarReporteEquipaje01();
+                else
                 {
-                    tabla = tripulacion.RecuperarEquipaje();
-                    if (tabla.Rows.Count != 0)
-                        ArmarReporteEquipaje01();
-                    else
-                    {
-                        reportViewer1.LocalReport.DataSources.Clear();
-                        reportViewer1.RefreshReport();
-                        MessageBox.Show("No se encontraron resultados");
-                    }
+                    reportViewer1.LocalReport.DataSources.Clear();
+                    reportViewer1.RefreshReport();
+                    MessageBox.Show("No se encontraron resultados");
                 }
             }
         }
     }
-
-        
-
-
+}

@@ -34,9 +34,27 @@ using TrabajoPrácticoPAV.Formularios.Listados.Viajes;
 using TrabajoPrácticoPAV.Formularios.Listados.Asientos;
 using TrabajoPrácticoPAV.Formularios.Listados.Tramos_por_viaje;
 using TrabajoPrácticoPAV.Formularios.Estadisticas.PasajerosMayores;
+using TrabajoPrácticoPAV.Formularios.Estadisticas.PasajerosPorViaje;
 using TrabajoPrácticoPAV.Formularios.Estadisticas.ViajesPorMes;
 using TrabajoPrácticoPAV.Formularios.Estadisticas.AvionesXModelos;
 using TrabajoPrácticoPAV.Formularios.Estadisticas.AvionesXAeropuerto;
+using TrabajoPrácticoPAV.Formularios.Estadisticas.ViajesPorSemana;
+using TrabajoPrácticoPAV.Formularios.Estadisticas.AeropuertoPais;
+using TrabajoPrácticoPAV.Formularios.Estadisticas.TripulacionXcargo;
+using TrabajoPrácticoPAV.Formularios.Estadisticas.VueloPorAvion;
+using TrabajoPrácticoPAV.Formularios.Estadisticas.VuelosXTripulacion;
+using TrabajoPrácticoPAV.Formularios.Estadisticas.VuelosXAeropuerto;
+using TrabajoPrácticoPAV.Formularios.Estadisticas.FacturasXPago;
+using TrabajoPrácticoPAV.Formularios.Estadisticas.FacturasXMes;
+using TrabajoPrácticoPAV.Formularios.Estadisticas.ViajesPorPais;
+using TrabajoPrácticoPAV.Formularios.Estadisticas.ViajesXFecha;
+using TrabajoPrácticoPAV.Formularios.Listados.FacturasXPasajero;
+using TrabajoPrácticoPAV.Formularios.Listados.Factura;
+using TrabajoPrácticoPAV.Formularios.Listados;
+using TrabajoPrácticoPAV.Formularios.Listados.EquipajeXPasajero;
+using TrabajoPrácticoPAV.Formularios.Teléfono;
+using TrabajoPrácticoPAV.Formularios.Tripulacion_x_vuelo;
+using TrabajoPrácticoPAV.Formularios.Estadisticas.ReservasMes;
 
 namespace TrabajoPrácticoPAV
 {
@@ -417,6 +435,121 @@ namespace TrabajoPrácticoPAV
         {
             CerrarTodosLosMenuStrip();
             AbrirFormulario<Frm_AvionesXAeropuerto>();
+        }
+
+        private void porcentajeDeViajesPorDíaDeSemanaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_EViajesPorSemana>();
+        }
+
+        private void porcentajeDePasajerosPorVueloEnUnAñoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_PasajerosPorViaje>();
+        }
+
+        private void cantidadDeAeropuertosPorPaísToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_EstadisticaAeroPais>();
+        }
+
+        private void porcentajeDeTripulaciónPorCargoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_TripulacionXcargo>();
+        }
+
+        private void cantidadDeVuelosRealizadosPorAviónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_EVueloPorAvion>();
+        }
+
+        private void cantidadDeVuelosRealizadosPorTripulaciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_VuelosXTripulacion>();
+        }
+
+        private void porcentajeDeVuelosPorAeropuertoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_VuelosXAeropuerto>();
+        }
+
+        private void cantidadDeViajesRealizadosPorPaisToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_ViajesPorPais>();
+        }
+
+        private void cantidadDeFacturasPorTipoDePagoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_FacturasXPago>();
+        }
+
+        private void cantidadFacturadaPorMesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_FacturasXMes>();
+        }
+
+        private void facturasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_Facturacion>();
+        }
+
+        private void cantidadDeViajesVendidosPorAeropuertoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_viajesXFecha>();
+        }
+
+        private void facturasPorFechaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_facturaXPasajero>();
+        }
+
+        private void facturaPorPasajeroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_Reporte_FacturasPorFecha>();
+        }
+
+        private void aviónToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_Reportes>();
+        }
+
+        private void equipajePorPasajeroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_EquipajeXPasajero>();
+        }
+
+        private void teléfonosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_ABM_Teléfono>();
+        }
+
+        private void tripulaciónPorVueloToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_ABM_TripulacionxVuelo>();
+        }
+
+        private void porcentajeDeLosMesesConMayoresReservasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CerrarTodosLosMenuStrip();
+            AbrirFormulario<Frm_EReservasMes>();
+
         }
     }
 }

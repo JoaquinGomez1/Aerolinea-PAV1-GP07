@@ -1,31 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Clase;
-using TrabajoPrácticoPAV.Formularios;
 using TrabajoPrácticoPAV.NE_Usuarios;
 using Microsoft.Reporting.WinForms;
+
 namespace TrabajoPrácticoPAV.Formularios.Listados.Aeropuertos
 {
     public partial class Frm_ReporteAeroPais : Form
     {
-        Tratamientos_Especiales tratamientos = new Tratamientos_Especiales();
-        NE_Aeropuertos aeropuerto = new NE_Aeropuertos();
-        DataTable tabla = new DataTable();
-        string restriccion = "";
-
+        private NE_Aeropuertos aeropuerto = new NE_Aeropuertos();
+        private DataTable tabla = new DataTable();
 
         public Frm_ReporteAeroPais()
         {
             InitializeComponent();
         }
-        
 
         private void Frm_ReporteAeroPais_Load_1(object sender, EventArgs e)
         {
@@ -39,17 +29,16 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Aeropuertos
         private void btn_calcular_Click(object sender, EventArgs e)
         {
             tabla = aeropuerto.Reporte_recuperarTodos();
-                ArmarReporteAeropuertos();
-
+            ArmarReporteAeropuertos();
         }
-        public void ArmarReporteAeropuertos() 
+
+        public void ArmarReporteAeropuertos()
         {
             ReportDataSource datos = new ReportDataSource("DataSet01", tabla);
             reportViewer1.LocalReport.ReportEmbeddedResource = "TrabajoPrácticoPAV.Formularios.Listados.Aeropuertos.ReporteAeroPais.rdlc";
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.DataSources.Add(datos);
             reportViewer1.RefreshReport();
-
         }
 
         private void button_Aerolinea1_Click(object sender, EventArgs e)
@@ -82,7 +71,6 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Aeropuertos
                 }
                 else
                     MessageBox.Show("Por favor ingrese un nombre para realizar la búsqueda");
-
             }
             else if (rbu02.Checked == true)
             {
@@ -96,7 +84,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Aeropuertos
                     hasta = "Z";
                 else
                     hasta = txt_codigohasta.Text;
-                
+
                 tabla = aeropuerto.Reporte_recuperarXCodigoRango(desde, hasta);
                 if (tabla.Rows.Count != 0)
                     ArmarReporteAeropuertos();
@@ -107,7 +95,6 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Aeropuertos
                     MessageBox.Show("No se encontraron resultados para la búsqueda");
                 }
             }
-
             else if (rbu03.Checked == true)
             {
                 if (cmb_pais.SelectedIndex != -1)
@@ -129,17 +116,12 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Aeropuertos
                 if (Tratamiento.Validar(this.Controls) == Tratamientos_Especiales.Resultado.error)
                     MessageBox.Show("No realizo selección para la búsqueda");
             }
-           
         }
 
         private void btn_cerrar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
-        private void cmb_ciudad_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data;
+﻿using System.Data;
 using TrabajoPrácticoPAV.Clase;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Backend;
@@ -21,7 +16,7 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             return _BD.EjecutarSelect(sql);
         }
 
-        public void CargarGrilla_vuelo1( DataGridView_Aerolinea grilla_ABM_vuelo1, string join, Control.ControlCollection controls)
+        public void CargarGrilla_vuelo1(DataGridView_Aerolinea grilla_ABM_vuelo1, string join, Control.ControlCollection controls)
         {
             string sql = tratamiento.ConstructorSelect(controls, join, "Vuelo");
             DataTable tabla = _BD.EjecutarSelect(sql);
@@ -42,6 +37,7 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
                 MessageBox.Show("No se encontraron vuelos.");
             }
         }
+
 
         public void Insertar(Control.ControlCollection controles)
         {
@@ -120,6 +116,55 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             $" WHERE idVuelo BETWEEN {idDesde} AND {idHasta}";
 
             return _BD.EjecutarSelect(sql);
+        }
+
+        public DataTable Estadistica_RecuperarPorcentajes()
+        {
+            string sql = $"SELECT a.nombre as descripcion, " +
+                        "COUNT(*)*100/(SELECT COUNT(*) FROM Vuelo) as valor " +
+                        "FROM Vuelo v JOIN Aeropuerto a ON a.codigo = v.codigoAeropuertoSalida " +
+                        "GROUP BY a.nombre";
+            return _BD.EjecutarSelect(sql);
+        }
+
+
+        public DataTable Estadistica_VuelosXTodosTripulantes()
+        {
+            string sql = $"SELECT CONCAT(t.nombre, ' ', t.apellido) as descripcion, " +
+                        "COUNT(*) as valor FROM Tripulacion_X_Vuelo tv " +
+                        "JOIN Tripulacion t ON tv.idTripulacion = t.idTripulacion " +
+                        "GROUP BY t.idCargoTripulacion, t.nombre, t.apellido";
+            return _BD.EjecutarSelect(sql);
+        }
+
+        public DataTable Estadistica_VuelosXTripulantesCargo(int id)
+        {
+            string sql = $"SELECT CONCAT(t.nombre, ' ', t.apellido) as descripcion, " +
+                        "COUNT(*) as valor FROM Tripulacion_X_Vuelo tv " +
+                        "JOIN Tripulacion t ON tv.idTripulacion = t.idTripulacion " +
+                        $"WHERE t.idCargoTripulacion = {id}" +
+                        "GROUP BY t.idCargoTripulacion, t.nombre, t.apellido";
+            return _BD.EjecutarSelect(sql);
+        }
+        public DataTable E_RecuperarPorModelo(string NomModelo)
+        {
+            string sql = @"SELECT  CONCAT((SELECT nombre FROM Modelo WHERE idModelo = v.idModelo), ' ',v.numeroPorModelo) as denominacion, 
+                        COUNT(*) as valor
+                        from Vuelo v
+                        WHERE v.idModelo = " + NomModelo + " group by v.numeroPorModelo, v.idModelo";
+
+            return _BD.EjecutarSelect(sql);
+        }
+        public DataTable E_RecuperarTodos()
+        {
+            string sql = @"SELECT  CONCAT((SELECT nombre FROM Modelo WHERE idModelo = v.idModelo), ' ',v.numeroPorModelo) as denominacion, 
+                        COUNT(*) as valor
+                        from Vuelo v
+                        group by v.numeroPorModelo, v.idModelo";
+
+            return _BD.EjecutarSelect(sql);
+
+
         }
     }
 }

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Backend;
 using TrabajoPrácticoPAV.Clase;
@@ -91,7 +85,23 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
 
         public DataTable RecuperarTodos()
         {
-            string sql = @"select nombre, apellido, fechaNacimiento FROM Pasajero";
+            string sql = @"SELECT 'Mayores' as descripcion, COUNT(numeroDoc) as cantidad FROM Pasajero WHERE DATEDIFF(year, fechaNacimiento, GETDATE()) >= 18 
+            UNION 
+            SELECT 'Menores' as descripcion, COUNT(numeroDoc) as cantidad FROM Pasajero WHERE DATEDIFF(year, fechaNacimiento, GETDATE()) < 18
+             ";
+            return _BD.EjecutarSelect(sql);
+        }
+
+        public DataTable RecuperarPasajerosPorClase()
+        {
+            string sql = @"Select nombre as Clase ,
+            COUNT(nombre) as Cantidad FROM Tipo_Asiento JOIN Reservas_X_Pasajero ON idTipo = Reservas_X_Pasajero.tipoClase group by nombre";
+            return _BD.EjecutarSelect(sql);
+        }
+
+        public DataTable RecuperarPorAño(int año)
+        {
+            string sql = $"Select nombre as Clase, COUNT(nombre) as Cantidad FROM Tipo_Asiento JOIN Reservas_X_Pasajero ON idTipo = Reservas_X_Pasajero.tipoClase WHERE YEAR(Reservas_X_Pasajero.fechaHoraVencimiento) = {año} group by nombre";
             return _BD.EjecutarSelect(sql);
         }
     }

@@ -10,6 +10,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Tripulacion_Por_Vuelo
     public partial class Frm_ListadoTripPorVuelo : Form
     {
         private readonly NE_Tripulacion _NE = new NE_Tripulacion();
+
         public Frm_ListadoTripPorVuelo()
         {
             InitializeComponent();
@@ -24,7 +25,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Tripulacion_Por_Vuelo
         }
 
         // Carga Report Viewer
-        private void ArmarReporteUsuario(DataTable tabla) // Aca hay algo mal 
+        private void ArmarReporteUsuario(DataTable tabla) // Aca hay algo mal
         {
             ReportDataSource PaqueteDatos = new ReportDataSource("Ds_TripulacionPorVuelo", tabla);
             reportViewer1.LocalReport.ReportEmbeddedResource = "TrabajoPrácticoPAV.Formularios.Listados.Tripulacion_Por_Vuelo.ReporteTripulacionPorVuelo.rdlc";
@@ -61,6 +62,11 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Tripulacion_Por_Vuelo
                 }
             }
             return table;
+        }
+
+        private void Frm_ListadoTripPorVuelo_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

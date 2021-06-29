@@ -1,12 +1,6 @@
 ﻿using Microsoft.Reporting.WinForms;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.NE_Usuarios;
@@ -15,9 +9,8 @@ namespace TrabajoPrácticoPAV.Formularios.Listados.Asientos
 {
     public partial class Frm_ReporteAsientoXAvion : Form
     {
-        Tratamientos_Especiales tratamientos = new Tratamientos_Especiales();
-        NE_Asiento asiento = new NE_Asiento();
-        DataTable tabla = new DataTable();
+        private NE_Asiento asiento = new NE_Asiento();
+        private DataTable tabla = new DataTable();
 
         public Frm_ReporteAsientoXAvion()
         {

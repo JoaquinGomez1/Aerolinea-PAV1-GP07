@@ -57,7 +57,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(58, 44);
+            this.label7.Location = new System.Drawing.Point(90, 50);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(152, 17);
             this.label7.TabIndex = 17;
@@ -122,7 +122,7 @@
             // cmb_Clase
             // 
             this.cmb_Clase.FormattingEnabled = true;
-            this.cmb_Clase.Location = new System.Drawing.Point(272, 101);
+            this.cmb_Clase.Location = new System.Drawing.Point(272, 90);
             this.cmb_Clase.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_Clase.Name = "cmb_Clase";
             this.cmb_Clase.Pp_CampoAceptaNull = true;
@@ -152,7 +152,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(218, 101);
+            this.label1.Location = new System.Drawing.Point(218, 91);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 20);
             this.label1.TabIndex = 20;
@@ -178,7 +178,7 @@
             // chb_Todos
             // 
             this.chb_Todos.AutoSize = true;
-            this.chb_Todos.Location = new System.Drawing.Point(520, 101);
+            this.chb_Todos.Location = new System.Drawing.Point(520, 117);
             this.chb_Todos.Margin = new System.Windows.Forms.Padding(2);
             this.chb_Todos.Name = "chb_Todos";
             this.chb_Todos.Size = new System.Drawing.Size(56, 17);
@@ -191,7 +191,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(227)))), ((int)(((byte)(187)))));
-            this.ClientSize = new System.Drawing.Size(749, 418);
+            this.ClientSize = new System.Drawing.Size(734, 398);
             this.Controls.Add(this.btn_cerrar);
             this.Controls.Add(this.btn_limpiar);
             this.Controls.Add(this.btn_eliminar);

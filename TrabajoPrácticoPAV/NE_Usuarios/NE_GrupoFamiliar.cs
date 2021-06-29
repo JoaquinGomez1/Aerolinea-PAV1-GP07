@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Backend;
 using TrabajoPrácticoPAV.Clase;
@@ -65,7 +60,7 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
         {
             string sql = $"SELECT apellido FROM Pasajero WHERE tipoDoc = {tipoDoc} AND " +
                 $"numeroDoc = {numeroDoc}";
-            return  _BD.EjecutarSelect(sql).Rows[0]["apellido"].ToString();
+            return _BD.EjecutarSelect(sql).Rows[0]["apellido"].ToString();
         }
 
 
@@ -86,7 +81,7 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
                 if (item.GetType().ToString() == "TrabajoPrácticoPAV.Clase.TextBox_Aerolinea")
                 {
                     TextBox_Aerolinea txt = (TextBox_Aerolinea)item;
-                    if(txt.Text != "")
+                    if (txt.Text != "")
                         condicion = $" p.{txt.Pp_NombreCampo} LIKE {_TE.FormatearDato(txt.Text, true)}";
 
                 }
@@ -100,7 +95,7 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
                 {
                     ComboBox_Aerolinea cmb = (ComboBox_Aerolinea)item;
                     if (cmb.SelectedIndex != -1)
-                        condicion = $" p.{cmb.Pp_NombreCampoInsert} = {_TE.FormatearDato(cmb.SelectedValue.ToString(),false)}";
+                        condicion = $" p.{cmb.Pp_NombreCampoInsert} = {_TE.FormatearDato(cmb.SelectedValue.ToString(), false)}";
                 }
                 if (item.GetType().ToString() == "System.Windows.Forms.CheckBox")
                 {
@@ -165,7 +160,7 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
         public DataTable Reporte_recuperarNumDocTitularRango(string dniDesde, string dniHasta, string atributo)
         {
             string sql = @" SELECT tipoDocPrimerPasajero, numerodocPrimerPasajero, tipoDocSegundoPasajero,numerodocSegundoPasajero,tipoParentesco from Familiar_X_Pasajero "
-            +" WHERE "+ atributo + " in ("+ dniDesde + ","+ dniHasta + ")";
+            + " WHERE " + atributo + " in (" + dniDesde + "," + dniHasta + ")";
             return _BD.EjecutarSelect(sql);
         }
     }

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TrabajoPrácticoPAV.Clase;
+﻿using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.Backend;
 using System.Data;
 using System.Windows.Forms;
@@ -22,13 +17,13 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
                                     + " FROM Reserva R JOIN Pasajero P ON R.numeroDocTitular = P.numeroDoc "
                                     + " AND R.tipoDocTitular = P.tipoDoc WHERE numeroDeReserva = " + reserva);
         }
-        
+
         public DataTable RecuperarVueloxReserva(string reserva)
         {
             return _BD.EjecutarSelect(@"SELECT V.idVuelo, V.codigoAeropuertoDestino, V.codigoAeropuertoSalida"
                                       + " FROM Reserva R JOIN Viaje_X_Tramo VT ON R.numeroDeViaje = VT.numeroDeViaje "
                                       + " JOIN Vuelo V ON V.codigoAeropuertoDestino = VT.codigoAeropuertoDestino"
-                                      + " AND V.codigoAeropuertoSalida = VT.codigoAeropuertoSalida " 
+                                      + " AND V.codigoAeropuertoSalida = VT.codigoAeropuertoSalida "
                                       + " WHERE R.numeroDeReserva = " + reserva);
         }
 
@@ -45,14 +40,21 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
                                     "JOIN Reserva r ON r.numeroDeReserva=f.numeroDeReserva " +
                                     "JOIN Tipo_Documento doc ON r.tipoDocTitular=doc.tipoDoc " +
                                     "WHERE r.numeroDocTitular = " + numeroDoc +
-                                    " AND r.tipoDocTitular="+tipoDoc);
+                                    " AND r.tipoDocTitular=" + tipoDoc);
         }
 
         public void Insertar(string valores)
         {
             string sql = $"INSERT INTO Factura (fechaPago, numeroDeReserva, idTipoPago) VALUES "
                             + $"(CONVERT(DATE, GETDATE(), 110), {valores})";
+            
+            _BD.InicioTransaccion();
             _BD.Insertar(sql, false);
+
+            if (_BD.FinalTransaccion() != Conexion_DB.EstadoTransaccion.correcto)
+            {
+               MessageBox.Show("No se realizó la grabación de los datos, hubo un error");
+            }
         }
         public void CargarGrillaVuelos(DataTable vuelo, DataGridView_Aerolinea grid_vuelo)
         {
@@ -72,7 +74,7 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
                                      "FROM Factura f JOIN Tipo_Pago tp ON tp.idTipoPago=f.idTipoPago " +
                                      "JOIN Reserva r ON r.numeroDeReserva=f.numeroDeReserva " +
                                      "JOIN Tipo_Documento doc ON r.tipoDocTitular=doc.tipoDoc " +
-                                     "WHERE r.numeroDocTitular BETWEEN ("+desde+") AND ("+hasta+")" );
+                                     "WHERE r.numeroDocTitular BETWEEN (" + desde + ") AND (" + hasta + ")");
         }
 
         public string RecuperarFechaActual()
@@ -83,7 +85,16 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
         public void Eliminar(string idFactura)
         {
             string sql = $"DELETE FROM Factura WHERE idFactura = {idFactura}";
-            _BD.Borrar(sql, false);
+            
+            _BD.InicioTransaccion();
+            _BD.Borrar(sql, false); ;
+
+            if (_BD.FinalTransaccion() != Conexion_DB.EstadoTransaccion.correcto)
+            {
+
+                MessageBox.Show("No se realizó la grabación de los datos, hubo un error");
+            }
+
         }
         public DataTable Reporte_Factura_Todas()
         {
@@ -106,6 +117,31 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
         public DataTable Reporte_Factura_PorFecha(string fechaDesde, string fechaHasta)
         {
             return _BD.EjecutarSelect("SELECT * FROM Factura WHERE fechaPago BETWEEN '" + fechaDesde + "' AND '" + fechaHasta + "'");
+        }
+        public DataTable RecuperarFacturasXMesTodas()
+        {
+            return _BD.EjecutarSelect("SELECT COUNT(*) as valor, MONTH(fechaPago) as denominacion From Factura " +
+                "f JOIN Tipo_Pago t ON t.idTipoPago = f.idTipoPago GROUP BY MONTH(f.fechaPago)");
+        }
+        public DataTable RecuperarFacturasXMes(string desde, string hasta)
+        {
+            return _BD.EjecutarSelect($"SELECT COUNT(*) as valor, MONTH(fechaPago) as denominacion From Factura f JOIN Tipo_Pago t ON t.idTipoPago = f.idTipoPago WHERE YEAR(f.fechaPago) BETWEEN {desde} AND {hasta} GROUP BY MONTH(f.fechaPago)");
+
+        }
+        public DataTable RecuperarFacturasXPagoTodas()
+        {
+
+            return _BD.EjecutarSelect("SELECT COUNT(*) as valor, Tipo_Pago.descripcion from Factura inner  " +
+                                        $"join Tipo_Pago on Factura.idTipoPago = Tipo_Pago.idTipoPago" +
+                                        $" GROUP BY factura.idTipoPago, Tipo_Pago.descripcion");
+        }
+
+        public DataTable RecuperarFacturasXPago(string annoDesde, string annoHasta)
+        {
+            string sql = "SELECT COUNT(*) as valor, Tipo_Pago.descripcion from Factura inner  " +
+                                        $"join Tipo_Pago on Factura.idTipoPago = Tipo_Pago.idTipoPago WHERE YEAR(Factura.fechaPago) BETWEEN {annoDesde} AND {annoHasta}" +
+                                        $" GROUP BY factura.idTipoPago, Tipo_Pago.descripcion";
+            return _BD.EjecutarSelect(sql);
         }
     }
 }

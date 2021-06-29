@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data;
+﻿using System.Data;
 using TrabajoPrácticoPAV.Clase;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.Backend;
@@ -14,7 +9,7 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
     {
         Conexion_DB _BD = new Conexion_DB();
         Tratamientos_Especiales tratamiento = new Tratamientos_Especiales();
-     
+
         public DataTable RecuperarXId(string id_Modelo)
         {
             string sql = "SELECT * FROM modelo WHERE idModelo =" + id_Modelo;
@@ -60,5 +55,16 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
             }
 
         }
+
+        //public DataTable CompararVuelosPorAviones(string NomModelo)
+        //{
+        //    string sql = @"SELECT  v.numeroPorModelo, v.idModelo, COUNT(*) 
+        //                  from Vuelo v, Modelo m
+        //                  WHERE v.idModelo = " + NomModelo + " group by v.numeroPorModelo, v.idModelo ";
+
+
+        //}
+
+
     }
 }

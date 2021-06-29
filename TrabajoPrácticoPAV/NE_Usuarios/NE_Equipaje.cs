@@ -33,7 +33,6 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
         public DataTable RecuperarPorPasajero(string tipoDoc, string numeroDoc)
         {
             string sql = @"SELECT * FROM Equipaje WHERE tipoDoc = " + tipoDoc + " AND numeroDoc = " + numeroDoc;
-            MessageBox.Show(sql);
             return _DB.EjecutarSelect(sql);
         }
     }

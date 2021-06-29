@@ -421,7 +421,7 @@
         <Top>0.14111cm</Top>
         <Left>0.68962cm</Left>
         <Height>1.2cm</Height>
-        <Width>17.34819cm</Width>
+        <Width>17.3482cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -429,7 +429,7 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>0.96667in</Height>
+    <Height>0.55in</Height>
     <Style />
   </Body>
   <Width>7.3in</Width>
@@ -459,7 +459,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>0.97cm</Top>
+          <Top>0.52021cm</Top>
           <Left>1.07569cm</Left>
           <Height>0.6cm</Height>
           <Width>16.39062cm</Width>
@@ -546,7 +546,7 @@
           <rd:DefaultName>Textbox15</rd:DefaultName>
           <Top>0.97882cm</Top>
           <Left>15.92762cm</Left>
-          <Height>0.52944cm</Height>
+          <Height>0.75874cm</Height>
           <Width>1.53869cm</Width>
           <ZIndex>2</ZIndex>
           <Style>

@@ -40,11 +40,61 @@
             this.Btn_Listado = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.Btn_Estadistica = new TrabajoPrácticoPAV.Clase.Button_Aerolinea();
             this.PanelFormularios = new System.Windows.Forms.Panel();
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.reservasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.facturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.aeropuertosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.avionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aviónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modeloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tipoDeAsientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.asientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modeloToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pasajerosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pasajeroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.grupoFamiliarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tipoDeDocumentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.teléfonosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ubicacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.paísToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.provinciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ciudadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viajesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vueloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tramosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viajesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tripulaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cargosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tripulaciónToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tripulaciónPorVueloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip3 = new System.Windows.Forms.MenuStrip();
+            this.próximosVuelosEnUnAeropuertoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.proximosVuelosEnUnAeropuertoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aeropuertoPorPaisToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.estadoDeCadaAsientoPorCadaAvionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.estadoDeCadaAsientoPorCadaAvionToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.avionPorModeloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aviónToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.aeropuertoPorPaisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.familiaresPorPasajeroToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pasajerosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.equipajePorPasajeroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.familiaresPorPasajeroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tripulacionToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tripulacionPorVueloToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tripulacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tramosPorViajeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viajesEntreFechaInicialYFechaFinalPorDestinoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tramoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reservaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.facturasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.facturaPorPasajeroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.facturasPorFechaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip4 = new System.Windows.Forms.MenuStrip();
             this.avionesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.porcentajeDeAvionesPorModeloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.porcentajeDeAvionesPorAeropuertoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.porcentajeDeAsientosOcupadosPorVueloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aeropuertosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.cantidadDeAeropuertosPorPaísToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.facturacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,66 +111,20 @@
             this.porcentajeDeViajesPorMesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.porcentajeDeViajesPorDíaDeSemanaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vuelosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.porcentajeDeAsientosOcupadosPorVueloToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.cantidadDeVuelosRealizadosPorAviónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.porcentajeDeVuelosPorAeropuertoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cantidadDeVuelosRealizadosPorTripulaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip3 = new System.Windows.Forms.MenuStrip();
-            this.próximosVuelosEnUnAeropuertoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.proximosVuelosEnUnAeropuertoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aeropuertoPorPaisToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.estadoDeCadaAsientoPorCadaAvionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.estadoDeCadaAsientoPorCadaAvionToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.avionPorModeloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aeropuertoPorPaisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.familiaresPorPasajeroToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.pasajerosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.telefonoPorPasajeroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.familiaresPorPasajeroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tripulacionToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.tripulacionPorCargoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.tripulacionPorVueloToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.tripulacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tramosPorViajeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viajesEntreFechaInicialYFechaFinalPorDestinoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tramoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reservaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            this.reservasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.facturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.aeropuertosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.avionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aviónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modeloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tipoDeAsientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.asientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modeloToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.pasajerosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pasajeroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.grupoFamiliarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tipoDeDocumentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ubicacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.paísToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.provinciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ciudadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viajesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.vueloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tramosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viajesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.tripulaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cargosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tripulaciónToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.porcentajeDeLosMesesConMayoresReservasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BarraSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Cerrar)).BeginInit();
             this.PanelMenu.SuspendLayout();
             this.PanelFormularios.SuspendLayout();
-            this.menuStrip4.SuspendLayout();
-            this.menuStrip3.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.menuStrip3.SuspendLayout();
+            this.menuStrip4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -301,9 +305,9 @@
             this.PanelFormularios.BackgroundImage = global::TrabajoPrácticoPAV.Properties.Resources.ElbpHR6W0AAInBS;
             this.PanelFormularios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PanelFormularios.Controls.Add(this.menuStrip4);
-            this.PanelFormularios.Controls.Add(this.menuStrip3);
             this.PanelFormularios.Controls.Add(this.menuStrip2);
             this.PanelFormularios.Controls.Add(this.menuStrip1);
+            this.PanelFormularios.Controls.Add(this.menuStrip3);
             this.PanelFormularios.Controls.Add(this.pictureBox1);
             this.PanelFormularios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelFormularios.Location = new System.Drawing.Point(200, 44);
@@ -311,364 +315,6 @@
             this.PanelFormularios.Name = "PanelFormularios";
             this.PanelFormularios.Size = new System.Drawing.Size(1000, 509);
             this.PanelFormularios.TabIndex = 2;
-            // 
-            // menuStrip4
-            // 
-            this.menuStrip4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.menuStrip4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.menuStrip4.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.avionesToolStripMenuItem1,
-            this.aeropuertosToolStripMenuItem1,
-            this.facturacionesToolStripMenuItem,
-            this.viajesToolStripMenuItem2,
-            this.tripulacionToolStripMenuItem1,
-            this.viajesToolStripMenuItem3,
-            this.vuelosToolStripMenuItem});
-            this.menuStrip4.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip4.Name = "menuStrip4";
-            this.menuStrip4.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menuStrip4.Size = new System.Drawing.Size(168, 509);
-            this.menuStrip4.TabIndex = 7;
-            this.menuStrip4.Text = "menuStrip4";
-            this.menuStrip4.Visible = false;
-            // 
-            // avionesToolStripMenuItem1
-            // 
-            this.avionesToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.porcentajeDeAvionesPorModeloToolStripMenuItem,
-            this.porcentajeDeAvionesPorAeropuertoToolStripMenuItem,
-            this.porcentajeDeAsientosOcupadosPorVueloToolStripMenuItem});
-            this.avionesToolStripMenuItem1.Name = "avionesToolStripMenuItem1";
-            this.avionesToolStripMenuItem1.Size = new System.Drawing.Size(151, 29);
-            this.avionesToolStripMenuItem1.Text = "Aviones";
-            // 
-            // porcentajeDeAvionesPorModeloToolStripMenuItem
-            // 
-            this.porcentajeDeAvionesPorModeloToolStripMenuItem.Name = "porcentajeDeAvionesPorModeloToolStripMenuItem";
-            this.porcentajeDeAvionesPorModeloToolStripMenuItem.Size = new System.Drawing.Size(505, 30);
-            this.porcentajeDeAvionesPorModeloToolStripMenuItem.Text = "Porcentaje de aviones por modelo";
-            this.porcentajeDeAvionesPorModeloToolStripMenuItem.Click += new System.EventHandler(this.porcentajeDeAvionesPorModeloToolStripMenuItem_Click);
-            // 
-            // porcentajeDeAvionesPorAeropuertoToolStripMenuItem
-            // 
-            this.porcentajeDeAvionesPorAeropuertoToolStripMenuItem.Name = "porcentajeDeAvionesPorAeropuertoToolStripMenuItem";
-            this.porcentajeDeAvionesPorAeropuertoToolStripMenuItem.Size = new System.Drawing.Size(505, 30);
-            this.porcentajeDeAvionesPorAeropuertoToolStripMenuItem.Text = "Porcentaje de aviones por aeropuerto";
-            this.porcentajeDeAvionesPorAeropuertoToolStripMenuItem.Click += new System.EventHandler(this.porcentajeDeAvionesPorAeropuertoToolStripMenuItem_Click);
-            // 
-            // porcentajeDeAsientosOcupadosPorVueloToolStripMenuItem
-            // 
-            this.porcentajeDeAsientosOcupadosPorVueloToolStripMenuItem.Name = "porcentajeDeAsientosOcupadosPorVueloToolStripMenuItem";
-            this.porcentajeDeAsientosOcupadosPorVueloToolStripMenuItem.Size = new System.Drawing.Size(505, 30);
-            this.porcentajeDeAsientosOcupadosPorVueloToolStripMenuItem.Text = "Porcentaje de asientos ocupados por vuelo";
-            // 
-            // aeropuertosToolStripMenuItem1
-            // 
-            this.aeropuertosToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cantidadDeAeropuertosPorPaísToolStripMenuItem});
-            this.aeropuertosToolStripMenuItem1.Name = "aeropuertosToolStripMenuItem1";
-            this.aeropuertosToolStripMenuItem1.Size = new System.Drawing.Size(151, 29);
-            this.aeropuertosToolStripMenuItem1.Text = "Aeropuertos";
-            // 
-            // cantidadDeAeropuertosPorPaísToolStripMenuItem
-            // 
-            this.cantidadDeAeropuertosPorPaísToolStripMenuItem.Name = "cantidadDeAeropuertosPorPaísToolStripMenuItem";
-            this.cantidadDeAeropuertosPorPaísToolStripMenuItem.Size = new System.Drawing.Size(411, 30);
-            this.cantidadDeAeropuertosPorPaísToolStripMenuItem.Text = "Cantidad de aeropuertos por país";
-            // 
-            // facturacionesToolStripMenuItem
-            // 
-            this.facturacionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cantidadFacturadaPorMesToolStripMenuItem,
-            this.cantidadDeFacturasPorTipoDePagoToolStripMenuItem});
-            this.facturacionesToolStripMenuItem.Name = "facturacionesToolStripMenuItem";
-            this.facturacionesToolStripMenuItem.Size = new System.Drawing.Size(151, 29);
-            this.facturacionesToolStripMenuItem.Text = "Facturaciones";
-            // 
-            // cantidadFacturadaPorMesToolStripMenuItem
-            // 
-            this.cantidadFacturadaPorMesToolStripMenuItem.Name = "cantidadFacturadaPorMesToolStripMenuItem";
-            this.cantidadFacturadaPorMesToolStripMenuItem.Size = new System.Drawing.Size(452, 30);
-            this.cantidadFacturadaPorMesToolStripMenuItem.Text = "Cantidad facturada por mes";
-            // 
-            // cantidadDeFacturasPorTipoDePagoToolStripMenuItem
-            // 
-            this.cantidadDeFacturasPorTipoDePagoToolStripMenuItem.Name = "cantidadDeFacturasPorTipoDePagoToolStripMenuItem";
-            this.cantidadDeFacturasPorTipoDePagoToolStripMenuItem.Size = new System.Drawing.Size(452, 30);
-            this.cantidadDeFacturasPorTipoDePagoToolStripMenuItem.Text = "Cantidad de facturas por tipo de pago";
-            // 
-            // viajesToolStripMenuItem2
-            // 
-            this.viajesToolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.porcentajeDePasajerosMayoresDeEdadToolStripMenuItem,
-            this.porcentajeDePasajerosPorVueloEnUnAñoToolStripMenuItem});
-            this.viajesToolStripMenuItem2.Name = "viajesToolStripMenuItem2";
-            this.viajesToolStripMenuItem2.Size = new System.Drawing.Size(151, 29);
-            this.viajesToolStripMenuItem2.Text = "Pasajeros";
-            // 
-            // porcentajeDePasajerosMayoresDeEdadToolStripMenuItem
-            // 
-            this.porcentajeDePasajerosMayoresDeEdadToolStripMenuItem.Name = "porcentajeDePasajerosMayoresDeEdadToolStripMenuItem";
-            this.porcentajeDePasajerosMayoresDeEdadToolStripMenuItem.Size = new System.Drawing.Size(520, 30);
-            this.porcentajeDePasajerosMayoresDeEdadToolStripMenuItem.Text = "Porcentaje de pasajeros mayores de edad";
-            this.porcentajeDePasajerosMayoresDeEdadToolStripMenuItem.Click += new System.EventHandler(this.porcentajeDePasajerosMayoresDeEdadToolStripMenuItem_Click);
-            // 
-            // porcentajeDePasajerosPorVueloEnUnAñoToolStripMenuItem
-            // 
-            this.porcentajeDePasajerosPorVueloEnUnAñoToolStripMenuItem.Name = "porcentajeDePasajerosPorVueloEnUnAñoToolStripMenuItem";
-            this.porcentajeDePasajerosPorVueloEnUnAñoToolStripMenuItem.Size = new System.Drawing.Size(520, 30);
-            this.porcentajeDePasajerosPorVueloEnUnAñoToolStripMenuItem.Text = "Porcentaje de pasajeros por vuelo en un año";
-            // 
-            // tripulacionToolStripMenuItem1
-            // 
-            this.tripulacionToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.porcentajeDeTripulaciónPorCargoToolStripMenuItem});
-            this.tripulacionToolStripMenuItem1.Name = "tripulacionToolStripMenuItem1";
-            this.tripulacionToolStripMenuItem1.Size = new System.Drawing.Size(151, 29);
-            this.tripulacionToolStripMenuItem1.Text = "Tripulacion";
-            // 
-            // porcentajeDeTripulaciónPorCargoToolStripMenuItem
-            // 
-            this.porcentajeDeTripulaciónPorCargoToolStripMenuItem.Name = "porcentajeDeTripulaciónPorCargoToolStripMenuItem";
-            this.porcentajeDeTripulaciónPorCargoToolStripMenuItem.Size = new System.Drawing.Size(425, 30);
-            this.porcentajeDeTripulaciónPorCargoToolStripMenuItem.Text = "Porcentaje de tripulación por cargo";
-            // 
-            // viajesToolStripMenuItem3
-            // 
-            this.viajesToolStripMenuItem3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cantidadDeViajesVendidosPorAeropuertoToolStripMenuItem,
-            this.cantidadDeViajesRealizadosPorPaisToolStripMenuItem,
-            this.porcentajeDeViajesPorMesToolStripMenuItem,
-            this.porcentajeDeViajesPorDíaDeSemanaToolStripMenuItem});
-            this.viajesToolStripMenuItem3.Name = "viajesToolStripMenuItem3";
-            this.viajesToolStripMenuItem3.Size = new System.Drawing.Size(151, 29);
-            this.viajesToolStripMenuItem3.Text = "Viajes";
-            // 
-            // cantidadDeViajesVendidosPorAeropuertoToolStripMenuItem
-            // 
-            this.cantidadDeViajesVendidosPorAeropuertoToolStripMenuItem.Name = "cantidadDeViajesVendidosPorAeropuertoToolStripMenuItem";
-            this.cantidadDeViajesVendidosPorAeropuertoToolStripMenuItem.Size = new System.Drawing.Size(509, 30);
-            this.cantidadDeViajesVendidosPorAeropuertoToolStripMenuItem.Text = "Cantidad de viajes vendidos por aeropuerto";
-            // 
-            // cantidadDeViajesRealizadosPorPaisToolStripMenuItem
-            // 
-            this.cantidadDeViajesRealizadosPorPaisToolStripMenuItem.Name = "cantidadDeViajesRealizadosPorPaisToolStripMenuItem";
-            this.cantidadDeViajesRealizadosPorPaisToolStripMenuItem.Size = new System.Drawing.Size(509, 30);
-            this.cantidadDeViajesRealizadosPorPaisToolStripMenuItem.Text = "Cantidad de viajes realizados por pais";
-            // 
-            // porcentajeDeViajesPorMesToolStripMenuItem
-            // 
-            this.porcentajeDeViajesPorMesToolStripMenuItem.Name = "porcentajeDeViajesPorMesToolStripMenuItem";
-            this.porcentajeDeViajesPorMesToolStripMenuItem.Size = new System.Drawing.Size(509, 30);
-            this.porcentajeDeViajesPorMesToolStripMenuItem.Text = "Porcentaje de viajes por mes";
-            this.porcentajeDeViajesPorMesToolStripMenuItem.Click += new System.EventHandler(this.porcentajeDeViajesPorMesToolStripMenuItem_Click);
-            // 
-            // porcentajeDeViajesPorDíaDeSemanaToolStripMenuItem
-            // 
-            this.porcentajeDeViajesPorDíaDeSemanaToolStripMenuItem.Name = "porcentajeDeViajesPorDíaDeSemanaToolStripMenuItem";
-            this.porcentajeDeViajesPorDíaDeSemanaToolStripMenuItem.Size = new System.Drawing.Size(509, 30);
-            this.porcentajeDeViajesPorDíaDeSemanaToolStripMenuItem.Text = "Porcentaje de viajes por día de semana";
-            // 
-            // vuelosToolStripMenuItem
-            // 
-            this.vuelosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.porcentajeDeAsientosOcupadosPorVueloToolStripMenuItem1,
-            this.cantidadDeVuelosRealizadosPorAviónToolStripMenuItem,
-            this.porcentajeDeVuelosPorAeropuertoToolStripMenuItem,
-            this.cantidadDeVuelosRealizadosPorTripulaciónToolStripMenuItem});
-            this.vuelosToolStripMenuItem.Name = "vuelosToolStripMenuItem";
-            this.vuelosToolStripMenuItem.Size = new System.Drawing.Size(151, 29);
-            this.vuelosToolStripMenuItem.Text = "Vuelos";
-            // 
-            // porcentajeDeAsientosOcupadosPorVueloToolStripMenuItem1
-            // 
-            this.porcentajeDeAsientosOcupadosPorVueloToolStripMenuItem1.Name = "porcentajeDeAsientosOcupadosPorVueloToolStripMenuItem1";
-            this.porcentajeDeAsientosOcupadosPorVueloToolStripMenuItem1.Size = new System.Drawing.Size(523, 30);
-            this.porcentajeDeAsientosOcupadosPorVueloToolStripMenuItem1.Text = "Porcentaje de asientos ocupados por vuelo";
-            // 
-            // cantidadDeVuelosRealizadosPorAviónToolStripMenuItem
-            // 
-            this.cantidadDeVuelosRealizadosPorAviónToolStripMenuItem.Name = "cantidadDeVuelosRealizadosPorAviónToolStripMenuItem";
-            this.cantidadDeVuelosRealizadosPorAviónToolStripMenuItem.Size = new System.Drawing.Size(523, 30);
-            this.cantidadDeVuelosRealizadosPorAviónToolStripMenuItem.Text = "Cantidad de vuelos realizados por avión";
-            // 
-            // porcentajeDeVuelosPorAeropuertoToolStripMenuItem
-            // 
-            this.porcentajeDeVuelosPorAeropuertoToolStripMenuItem.Name = "porcentajeDeVuelosPorAeropuertoToolStripMenuItem";
-            this.porcentajeDeVuelosPorAeropuertoToolStripMenuItem.Size = new System.Drawing.Size(523, 30);
-            this.porcentajeDeVuelosPorAeropuertoToolStripMenuItem.Text = "Porcentaje de vuelos por aeropuerto";
-            // 
-            // cantidadDeVuelosRealizadosPorTripulaciónToolStripMenuItem
-            // 
-            this.cantidadDeVuelosRealizadosPorTripulaciónToolStripMenuItem.Name = "cantidadDeVuelosRealizadosPorTripulaciónToolStripMenuItem";
-            this.cantidadDeVuelosRealizadosPorTripulaciónToolStripMenuItem.Size = new System.Drawing.Size(523, 30);
-            this.cantidadDeVuelosRealizadosPorTripulaciónToolStripMenuItem.Text = "Cantidad de vuelos realizados por tripulación";
-            // 
-            // menuStrip3
-            // 
-            this.menuStrip3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
-            this.menuStrip3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.menuStrip3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.menuStrip3.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.próximosVuelosEnUnAeropuertoToolStripMenuItem,
-            this.estadoDeCadaAsientoPorCadaAvionToolStripMenuItem,
-            this.aeropuertoPorPaisToolStripMenuItem,
-            this.familiaresPorPasajeroToolStripMenuItem,
-            this.tripulacionToolStripMenuItem,
-            this.reservaToolStripMenuItem});
-            this.menuStrip3.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip3.Name = "menuStrip3";
-            this.menuStrip3.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menuStrip3.Size = new System.Drawing.Size(168, 508);
-            this.menuStrip3.TabIndex = 6;
-            this.menuStrip3.Text = "menuStrip3";
-            this.menuStrip3.Visible = false;
-            // 
-            // próximosVuelosEnUnAeropuertoToolStripMenuItem
-            // 
-            this.próximosVuelosEnUnAeropuertoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.proximosVuelosEnUnAeropuertoToolStripMenuItem,
-            this.aeropuertoPorPaisToolStripMenuItem1});
-            this.próximosVuelosEnUnAeropuertoToolStripMenuItem.Name = "próximosVuelosEnUnAeropuertoToolStripMenuItem";
-            this.próximosVuelosEnUnAeropuertoToolStripMenuItem.Size = new System.Drawing.Size(133, 29);
-            this.próximosVuelosEnUnAeropuertoToolStripMenuItem.Text = "Aeropuertos";
-            // 
-            // proximosVuelosEnUnAeropuertoToolStripMenuItem
-            // 
-            this.proximosVuelosEnUnAeropuertoToolStripMenuItem.Name = "proximosVuelosEnUnAeropuertoToolStripMenuItem";
-            this.proximosVuelosEnUnAeropuertoToolStripMenuItem.Size = new System.Drawing.Size(327, 30);
-            this.proximosVuelosEnUnAeropuertoToolStripMenuItem.Text = "Vuelos en un aeropuerto";
-            this.proximosVuelosEnUnAeropuertoToolStripMenuItem.Click += new System.EventHandler(this.proximosVuelosEnUnAeropuertoToolStripMenuItem_Click);
-            // 
-            // aeropuertoPorPaisToolStripMenuItem1
-            // 
-            this.aeropuertoPorPaisToolStripMenuItem1.Name = "aeropuertoPorPaisToolStripMenuItem1";
-            this.aeropuertoPorPaisToolStripMenuItem1.Size = new System.Drawing.Size(327, 30);
-            this.aeropuertoPorPaisToolStripMenuItem1.Text = "Aeropuerto por pais";
-            this.aeropuertoPorPaisToolStripMenuItem1.Click += new System.EventHandler(this.aeropuertoPorPaisToolStripMenuItem1_Click);
-            // 
-            // estadoDeCadaAsientoPorCadaAvionToolStripMenuItem
-            // 
-            this.estadoDeCadaAsientoPorCadaAvionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.estadoDeCadaAsientoPorCadaAvionToolStripMenuItem1,
-            this.avionPorModeloToolStripMenuItem});
-            this.estadoDeCadaAsientoPorCadaAvionToolStripMenuItem.Name = "estadoDeCadaAsientoPorCadaAvionToolStripMenuItem";
-            this.estadoDeCadaAsientoPorCadaAvionToolStripMenuItem.Size = new System.Drawing.Size(133, 29);
-            this.estadoDeCadaAsientoPorCadaAvionToolStripMenuItem.Text = "Aviones";
-            // 
-            // estadoDeCadaAsientoPorCadaAvionToolStripMenuItem1
-            // 
-            this.estadoDeCadaAsientoPorCadaAvionToolStripMenuItem1.Name = "estadoDeCadaAsientoPorCadaAvionToolStripMenuItem1";
-            this.estadoDeCadaAsientoPorCadaAvionToolStripMenuItem1.Size = new System.Drawing.Size(470, 30);
-            this.estadoDeCadaAsientoPorCadaAvionToolStripMenuItem1.Text = "Estado de  cada asiento por cada avion";
-            this.estadoDeCadaAsientoPorCadaAvionToolStripMenuItem1.Click += new System.EventHandler(this.estadoDeCadaAsientoPorCadaAvionToolStripMenuItem1_Click);
-            // 
-            // avionPorModeloToolStripMenuItem
-            // 
-            this.avionPorModeloToolStripMenuItem.Name = "avionPorModeloToolStripMenuItem";
-            this.avionPorModeloToolStripMenuItem.Size = new System.Drawing.Size(470, 30);
-            this.avionPorModeloToolStripMenuItem.Text = "Avion por modelo";
-            this.avionPorModeloToolStripMenuItem.Click += new System.EventHandler(this.avionPorModeloToolStripMenuItem_Click);
-            // 
-            // aeropuertoPorPaisToolStripMenuItem
-            // 
-            this.aeropuertoPorPaisToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.familiaresPorPasajeroToolStripMenuItem1,
-            this.pasajerosToolStripMenuItem1,
-            this.telefonoPorPasajeroToolStripMenuItem});
-            this.aeropuertoPorPaisToolStripMenuItem.Name = "aeropuertoPorPaisToolStripMenuItem";
-            this.aeropuertoPorPaisToolStripMenuItem.Size = new System.Drawing.Size(133, 29);
-            this.aeropuertoPorPaisToolStripMenuItem.Text = "Pasajeros";
-            // 
-            // familiaresPorPasajeroToolStripMenuItem1
-            // 
-            this.familiaresPorPasajeroToolStripMenuItem1.Name = "familiaresPorPasajeroToolStripMenuItem1";
-            this.familiaresPorPasajeroToolStripMenuItem1.Size = new System.Drawing.Size(315, 30);
-            this.familiaresPorPasajeroToolStripMenuItem1.Text = "Familiares por pasajero";
-            this.familiaresPorPasajeroToolStripMenuItem1.Click += new System.EventHandler(this.familiaresPorPasajeroToolStripMenuItem1_Click);
-            // 
-            // pasajerosToolStripMenuItem1
-            // 
-            this.pasajerosToolStripMenuItem1.Name = "pasajerosToolStripMenuItem1";
-            this.pasajerosToolStripMenuItem1.Size = new System.Drawing.Size(315, 30);
-            this.pasajerosToolStripMenuItem1.Text = "Pasajeros";
-            this.pasajerosToolStripMenuItem1.Click += new System.EventHandler(this.pasajerosToolStripMenuItem1_Click);
-            // 
-            // telefonoPorPasajeroToolStripMenuItem
-            // 
-            this.telefonoPorPasajeroToolStripMenuItem.Name = "telefonoPorPasajeroToolStripMenuItem";
-            this.telefonoPorPasajeroToolStripMenuItem.Size = new System.Drawing.Size(315, 30);
-            this.telefonoPorPasajeroToolStripMenuItem.Text = "Telefono por pasajero";
-            // 
-            // familiaresPorPasajeroToolStripMenuItem
-            // 
-            this.familiaresPorPasajeroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tripulacionToolStripMenuItem2,
-            this.tripulacionPorCargoToolStripMenuItem1,
-            this.tripulacionPorVueloToolStripMenuItem1});
-            this.familiaresPorPasajeroToolStripMenuItem.Name = "familiaresPorPasajeroToolStripMenuItem";
-            this.familiaresPorPasajeroToolStripMenuItem.Size = new System.Drawing.Size(133, 29);
-            this.familiaresPorPasajeroToolStripMenuItem.Text = "Tripulacion";
-            // 
-            // tripulacionToolStripMenuItem2
-            // 
-            this.tripulacionToolStripMenuItem2.Name = "tripulacionToolStripMenuItem2";
-            this.tripulacionToolStripMenuItem2.Size = new System.Drawing.Size(294, 30);
-            this.tripulacionToolStripMenuItem2.Text = "Tripulacion";
-            this.tripulacionToolStripMenuItem2.Click += new System.EventHandler(this.tripulacionToolStripMenuItem2_Click);
-            // 
-            // tripulacionPorCargoToolStripMenuItem1
-            // 
-            this.tripulacionPorCargoToolStripMenuItem1.Name = "tripulacionPorCargoToolStripMenuItem1";
-            this.tripulacionPorCargoToolStripMenuItem1.Size = new System.Drawing.Size(294, 30);
-            this.tripulacionPorCargoToolStripMenuItem1.Text = "Tripulacion por cargo";
-            // 
-            // tripulacionPorVueloToolStripMenuItem1
-            // 
-            this.tripulacionPorVueloToolStripMenuItem1.Name = "tripulacionPorVueloToolStripMenuItem1";
-            this.tripulacionPorVueloToolStripMenuItem1.Size = new System.Drawing.Size(294, 30);
-            this.tripulacionPorVueloToolStripMenuItem1.Text = "Tripulacion por vuelo";
-            this.tripulacionPorVueloToolStripMenuItem1.Click += new System.EventHandler(this.tripulacionPorVueloToolStripMenuItem1_Click);
-            // 
-            // tripulacionToolStripMenuItem
-            // 
-            this.tripulacionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tramosPorViajeToolStripMenuItem,
-            this.viajesEntreFechaInicialYFechaFinalPorDestinoToolStripMenuItem,
-            this.tramoToolStripMenuItem});
-            this.tripulacionToolStripMenuItem.Name = "tripulacionToolStripMenuItem";
-            this.tripulacionToolStripMenuItem.Size = new System.Drawing.Size(133, 29);
-            this.tripulacionToolStripMenuItem.Text = "Viajes";
-            // 
-            // tramosPorViajeToolStripMenuItem
-            // 
-            this.tramosPorViajeToolStripMenuItem.Name = "tramosPorViajeToolStripMenuItem";
-            this.tramosPorViajeToolStripMenuItem.Size = new System.Drawing.Size(560, 30);
-            this.tramosPorViajeToolStripMenuItem.Text = "Tramos por viaje";
-            this.tramosPorViajeToolStripMenuItem.Click += new System.EventHandler(this.tramosPorViajeToolStripMenuItem_Click);
-            // 
-            // viajesEntreFechaInicialYFechaFinalPorDestinoToolStripMenuItem
-            // 
-            this.viajesEntreFechaInicialYFechaFinalPorDestinoToolStripMenuItem.Name = "viajesEntreFechaInicialYFechaFinalPorDestinoToolStripMenuItem";
-            this.viajesEntreFechaInicialYFechaFinalPorDestinoToolStripMenuItem.Size = new System.Drawing.Size(560, 30);
-            this.viajesEntreFechaInicialYFechaFinalPorDestinoToolStripMenuItem.Text = "Viajes entre fecha inicial y fecha final por destino";
-            this.viajesEntreFechaInicialYFechaFinalPorDestinoToolStripMenuItem.Click += new System.EventHandler(this.viajesEntreFechaInicialYFechaFinalPorDestinoToolStripMenuItem_Click);
-            // 
-            // tramoToolStripMenuItem
-            // 
-            this.tramoToolStripMenuItem.Name = "tramoToolStripMenuItem";
-            this.tramoToolStripMenuItem.Size = new System.Drawing.Size(560, 30);
-            this.tramoToolStripMenuItem.Text = "Tramo";
-            this.tramoToolStripMenuItem.Click += new System.EventHandler(this.tramoToolStripMenuItem_Click);
-            // 
-            // reservaToolStripMenuItem
-            // 
-            this.reservaToolStripMenuItem.Name = "reservaToolStripMenuItem";
-            this.reservaToolStripMenuItem.Size = new System.Drawing.Size(133, 29);
-            this.reservaToolStripMenuItem.Text = "Reservas";
-            this.reservaToolStripMenuItem.Click += new System.EventHandler(this.reservaToolStripMenuItem_Click);
             // 
             // menuStrip2
             // 
@@ -699,6 +345,7 @@
             this.facturasToolStripMenuItem.Name = "facturasToolStripMenuItem";
             this.facturasToolStripMenuItem.Size = new System.Drawing.Size(101, 29);
             this.facturasToolStripMenuItem.Text = "Facturas";
+            this.facturasToolStripMenuItem.Click += new System.EventHandler(this.facturasToolStripMenuItem_Click);
             // 
             // menuStrip1
             // 
@@ -779,7 +426,8 @@
             this.pasajerosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.pasajeroToolStripMenuItem,
             this.grupoFamiliarToolStripMenuItem,
-            this.tipoDeDocumentosToolStripMenuItem});
+            this.tipoDeDocumentosToolStripMenuItem,
+            this.teléfonosToolStripMenuItem});
             this.pasajerosToolStripMenuItem.Name = "pasajerosToolStripMenuItem";
             this.pasajerosToolStripMenuItem.Size = new System.Drawing.Size(129, 29);
             this.pasajerosToolStripMenuItem.Text = "Pasajeros";
@@ -804,6 +452,13 @@
             this.tipoDeDocumentosToolStripMenuItem.Size = new System.Drawing.Size(289, 30);
             this.tipoDeDocumentosToolStripMenuItem.Text = "Tipo de Documentos";
             this.tipoDeDocumentosToolStripMenuItem.Click += new System.EventHandler(this.tipoDeDocumentosToolStripMenuItem_Click);
+            // 
+            // teléfonosToolStripMenuItem
+            // 
+            this.teléfonosToolStripMenuItem.Name = "teléfonosToolStripMenuItem";
+            this.teléfonosToolStripMenuItem.Size = new System.Drawing.Size(289, 30);
+            this.teléfonosToolStripMenuItem.Text = "Teléfonos";
+            this.teléfonosToolStripMenuItem.Click += new System.EventHandler(this.teléfonosToolStripMenuItem_Click);
             // 
             // ubicacionesToolStripMenuItem
             // 
@@ -872,7 +527,8 @@
             // 
             this.tripulaciónToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cargosToolStripMenuItem,
-            this.tripulaciónToolStripMenuItem1});
+            this.tripulaciónToolStripMenuItem1,
+            this.tripulaciónPorVueloToolStripMenuItem});
             this.tripulaciónToolStripMenuItem.Name = "tripulaciónToolStripMenuItem";
             this.tripulaciónToolStripMenuItem.Size = new System.Drawing.Size(197, 30);
             this.tripulaciónToolStripMenuItem.Text = "Tripulación";
@@ -880,16 +536,405 @@
             // cargosToolStripMenuItem
             // 
             this.cargosToolStripMenuItem.Name = "cargosToolStripMenuItem";
-            this.cargosToolStripMenuItem.Size = new System.Drawing.Size(197, 30);
+            this.cargosToolStripMenuItem.Size = new System.Drawing.Size(292, 30);
             this.cargosToolStripMenuItem.Text = "Cargos";
             this.cargosToolStripMenuItem.Click += new System.EventHandler(this.cargosToolStripMenuItem_Click);
             // 
             // tripulaciónToolStripMenuItem1
             // 
             this.tripulaciónToolStripMenuItem1.Name = "tripulaciónToolStripMenuItem1";
-            this.tripulaciónToolStripMenuItem1.Size = new System.Drawing.Size(197, 30);
+            this.tripulaciónToolStripMenuItem1.Size = new System.Drawing.Size(292, 30);
             this.tripulaciónToolStripMenuItem1.Text = "Tripulación";
             this.tripulaciónToolStripMenuItem1.Click += new System.EventHandler(this.tripulaciónToolStripMenuItem1_Click);
+            // 
+            // tripulaciónPorVueloToolStripMenuItem
+            // 
+            this.tripulaciónPorVueloToolStripMenuItem.Name = "tripulaciónPorVueloToolStripMenuItem";
+            this.tripulaciónPorVueloToolStripMenuItem.Size = new System.Drawing.Size(292, 30);
+            this.tripulaciónPorVueloToolStripMenuItem.Text = "Tripulación por vuelo";
+            this.tripulaciónPorVueloToolStripMenuItem.Click += new System.EventHandler(this.tripulaciónPorVueloToolStripMenuItem_Click);
+            // 
+            // menuStrip3
+            // 
+            this.menuStrip3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(133)))), ((int)(((byte)(74)))));
+            this.menuStrip3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.menuStrip3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.menuStrip3.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.próximosVuelosEnUnAeropuertoToolStripMenuItem,
+            this.estadoDeCadaAsientoPorCadaAvionToolStripMenuItem,
+            this.aeropuertoPorPaisToolStripMenuItem,
+            this.familiaresPorPasajeroToolStripMenuItem,
+            this.tripulacionToolStripMenuItem,
+            this.reservaToolStripMenuItem,
+            this.facturasToolStripMenuItem1});
+            this.menuStrip3.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip3.Name = "menuStrip3";
+            this.menuStrip3.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.menuStrip3.Size = new System.Drawing.Size(168, 508);
+            this.menuStrip3.TabIndex = 6;
+            this.menuStrip3.Text = "menuStrip3";
+            this.menuStrip3.Visible = false;
+            // 
+            // próximosVuelosEnUnAeropuertoToolStripMenuItem
+            // 
+            this.próximosVuelosEnUnAeropuertoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.proximosVuelosEnUnAeropuertoToolStripMenuItem,
+            this.aeropuertoPorPaisToolStripMenuItem1});
+            this.próximosVuelosEnUnAeropuertoToolStripMenuItem.Name = "próximosVuelosEnUnAeropuertoToolStripMenuItem";
+            this.próximosVuelosEnUnAeropuertoToolStripMenuItem.Size = new System.Drawing.Size(133, 29);
+            this.próximosVuelosEnUnAeropuertoToolStripMenuItem.Text = "Aeropuertos";
+            // 
+            // proximosVuelosEnUnAeropuertoToolStripMenuItem
+            // 
+            this.proximosVuelosEnUnAeropuertoToolStripMenuItem.Name = "proximosVuelosEnUnAeropuertoToolStripMenuItem";
+            this.proximosVuelosEnUnAeropuertoToolStripMenuItem.Size = new System.Drawing.Size(327, 30);
+            this.proximosVuelosEnUnAeropuertoToolStripMenuItem.Text = "Vuelos en un aeropuerto";
+            this.proximosVuelosEnUnAeropuertoToolStripMenuItem.Click += new System.EventHandler(this.proximosVuelosEnUnAeropuertoToolStripMenuItem_Click);
+            // 
+            // aeropuertoPorPaisToolStripMenuItem1
+            // 
+            this.aeropuertoPorPaisToolStripMenuItem1.Name = "aeropuertoPorPaisToolStripMenuItem1";
+            this.aeropuertoPorPaisToolStripMenuItem1.Size = new System.Drawing.Size(327, 30);
+            this.aeropuertoPorPaisToolStripMenuItem1.Text = "Aeropuerto por pais";
+            this.aeropuertoPorPaisToolStripMenuItem1.Click += new System.EventHandler(this.aeropuertoPorPaisToolStripMenuItem1_Click);
+            // 
+            // estadoDeCadaAsientoPorCadaAvionToolStripMenuItem
+            // 
+            this.estadoDeCadaAsientoPorCadaAvionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.estadoDeCadaAsientoPorCadaAvionToolStripMenuItem1,
+            this.avionPorModeloToolStripMenuItem,
+            this.aviónToolStripMenuItem1});
+            this.estadoDeCadaAsientoPorCadaAvionToolStripMenuItem.Name = "estadoDeCadaAsientoPorCadaAvionToolStripMenuItem";
+            this.estadoDeCadaAsientoPorCadaAvionToolStripMenuItem.Size = new System.Drawing.Size(133, 29);
+            this.estadoDeCadaAsientoPorCadaAvionToolStripMenuItem.Text = "Aviones";
+            // 
+            // estadoDeCadaAsientoPorCadaAvionToolStripMenuItem1
+            // 
+            this.estadoDeCadaAsientoPorCadaAvionToolStripMenuItem1.Name = "estadoDeCadaAsientoPorCadaAvionToolStripMenuItem1";
+            this.estadoDeCadaAsientoPorCadaAvionToolStripMenuItem1.Size = new System.Drawing.Size(470, 30);
+            this.estadoDeCadaAsientoPorCadaAvionToolStripMenuItem1.Text = "Estado de  cada asiento por cada avion";
+            this.estadoDeCadaAsientoPorCadaAvionToolStripMenuItem1.Click += new System.EventHandler(this.estadoDeCadaAsientoPorCadaAvionToolStripMenuItem1_Click);
+            // 
+            // avionPorModeloToolStripMenuItem
+            // 
+            this.avionPorModeloToolStripMenuItem.Name = "avionPorModeloToolStripMenuItem";
+            this.avionPorModeloToolStripMenuItem.Size = new System.Drawing.Size(470, 30);
+            this.avionPorModeloToolStripMenuItem.Text = "Avion por modelo";
+            this.avionPorModeloToolStripMenuItem.Click += new System.EventHandler(this.avionPorModeloToolStripMenuItem_Click);
+            // 
+            // aviónToolStripMenuItem1
+            // 
+            this.aviónToolStripMenuItem1.Name = "aviónToolStripMenuItem1";
+            this.aviónToolStripMenuItem1.Size = new System.Drawing.Size(470, 30);
+            this.aviónToolStripMenuItem1.Text = "Avión";
+            this.aviónToolStripMenuItem1.Click += new System.EventHandler(this.aviónToolStripMenuItem1_Click);
+            // 
+            // aeropuertoPorPaisToolStripMenuItem
+            // 
+            this.aeropuertoPorPaisToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.familiaresPorPasajeroToolStripMenuItem1,
+            this.pasajerosToolStripMenuItem1,
+            this.equipajePorPasajeroToolStripMenuItem});
+            this.aeropuertoPorPaisToolStripMenuItem.Name = "aeropuertoPorPaisToolStripMenuItem";
+            this.aeropuertoPorPaisToolStripMenuItem.Size = new System.Drawing.Size(133, 29);
+            this.aeropuertoPorPaisToolStripMenuItem.Text = "Pasajeros";
+            // 
+            // familiaresPorPasajeroToolStripMenuItem1
+            // 
+            this.familiaresPorPasajeroToolStripMenuItem1.Name = "familiaresPorPasajeroToolStripMenuItem1";
+            this.familiaresPorPasajeroToolStripMenuItem1.Size = new System.Drawing.Size(315, 30);
+            this.familiaresPorPasajeroToolStripMenuItem1.Text = "Familiares por pasajero";
+            this.familiaresPorPasajeroToolStripMenuItem1.Click += new System.EventHandler(this.familiaresPorPasajeroToolStripMenuItem1_Click);
+            // 
+            // pasajerosToolStripMenuItem1
+            // 
+            this.pasajerosToolStripMenuItem1.Name = "pasajerosToolStripMenuItem1";
+            this.pasajerosToolStripMenuItem1.Size = new System.Drawing.Size(315, 30);
+            this.pasajerosToolStripMenuItem1.Text = "Pasajeros";
+            this.pasajerosToolStripMenuItem1.Click += new System.EventHandler(this.pasajerosToolStripMenuItem1_Click);
+            // 
+            // equipajePorPasajeroToolStripMenuItem
+            // 
+            this.equipajePorPasajeroToolStripMenuItem.Name = "equipajePorPasajeroToolStripMenuItem";
+            this.equipajePorPasajeroToolStripMenuItem.Size = new System.Drawing.Size(315, 30);
+            this.equipajePorPasajeroToolStripMenuItem.Text = "Equipaje por Pasajero";
+            this.equipajePorPasajeroToolStripMenuItem.Click += new System.EventHandler(this.equipajePorPasajeroToolStripMenuItem_Click);
+            // 
+            // familiaresPorPasajeroToolStripMenuItem
+            // 
+            this.familiaresPorPasajeroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tripulacionToolStripMenuItem2,
+            this.tripulacionPorVueloToolStripMenuItem1});
+            this.familiaresPorPasajeroToolStripMenuItem.Name = "familiaresPorPasajeroToolStripMenuItem";
+            this.familiaresPorPasajeroToolStripMenuItem.Size = new System.Drawing.Size(133, 29);
+            this.familiaresPorPasajeroToolStripMenuItem.Text = "Tripulacion";
+            // 
+            // tripulacionToolStripMenuItem2
+            // 
+            this.tripulacionToolStripMenuItem2.Name = "tripulacionToolStripMenuItem2";
+            this.tripulacionToolStripMenuItem2.Size = new System.Drawing.Size(299, 30);
+            this.tripulacionToolStripMenuItem2.Text = "Tripulacion por Cargo";
+            this.tripulacionToolStripMenuItem2.Click += new System.EventHandler(this.tripulacionToolStripMenuItem2_Click);
+            // 
+            // tripulacionPorVueloToolStripMenuItem1
+            // 
+            this.tripulacionPorVueloToolStripMenuItem1.Name = "tripulacionPorVueloToolStripMenuItem1";
+            this.tripulacionPorVueloToolStripMenuItem1.Size = new System.Drawing.Size(299, 30);
+            this.tripulacionPorVueloToolStripMenuItem1.Text = "Tripulacion por vuelo";
+            this.tripulacionPorVueloToolStripMenuItem1.Click += new System.EventHandler(this.tripulacionPorVueloToolStripMenuItem1_Click);
+            // 
+            // tripulacionToolStripMenuItem
+            // 
+            this.tripulacionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tramosPorViajeToolStripMenuItem,
+            this.viajesEntreFechaInicialYFechaFinalPorDestinoToolStripMenuItem,
+            this.tramoToolStripMenuItem});
+            this.tripulacionToolStripMenuItem.Name = "tripulacionToolStripMenuItem";
+            this.tripulacionToolStripMenuItem.Size = new System.Drawing.Size(133, 29);
+            this.tripulacionToolStripMenuItem.Text = "Viajes";
+            // 
+            // tramosPorViajeToolStripMenuItem
+            // 
+            this.tramosPorViajeToolStripMenuItem.Name = "tramosPorViajeToolStripMenuItem";
+            this.tramosPorViajeToolStripMenuItem.Size = new System.Drawing.Size(560, 30);
+            this.tramosPorViajeToolStripMenuItem.Text = "Tramos por viaje";
+            this.tramosPorViajeToolStripMenuItem.Click += new System.EventHandler(this.tramosPorViajeToolStripMenuItem_Click);
+            // 
+            // viajesEntreFechaInicialYFechaFinalPorDestinoToolStripMenuItem
+            // 
+            this.viajesEntreFechaInicialYFechaFinalPorDestinoToolStripMenuItem.Name = "viajesEntreFechaInicialYFechaFinalPorDestinoToolStripMenuItem";
+            this.viajesEntreFechaInicialYFechaFinalPorDestinoToolStripMenuItem.Size = new System.Drawing.Size(560, 30);
+            this.viajesEntreFechaInicialYFechaFinalPorDestinoToolStripMenuItem.Text = "Viajes entre fecha inicial y fecha final por destino";
+            this.viajesEntreFechaInicialYFechaFinalPorDestinoToolStripMenuItem.Click += new System.EventHandler(this.viajesEntreFechaInicialYFechaFinalPorDestinoToolStripMenuItem_Click);
+            // 
+            // tramoToolStripMenuItem
+            // 
+            this.tramoToolStripMenuItem.Name = "tramoToolStripMenuItem";
+            this.tramoToolStripMenuItem.Size = new System.Drawing.Size(560, 30);
+            this.tramoToolStripMenuItem.Text = "Tramo";
+            this.tramoToolStripMenuItem.Click += new System.EventHandler(this.tramoToolStripMenuItem_Click);
+            // 
+            // reservaToolStripMenuItem
+            // 
+            this.reservaToolStripMenuItem.Name = "reservaToolStripMenuItem";
+            this.reservaToolStripMenuItem.Size = new System.Drawing.Size(133, 29);
+            this.reservaToolStripMenuItem.Text = "Reservas";
+            this.reservaToolStripMenuItem.Click += new System.EventHandler(this.reservaToolStripMenuItem_Click);
+            // 
+            // facturasToolStripMenuItem1
+            // 
+            this.facturasToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.facturaPorPasajeroToolStripMenuItem,
+            this.facturasPorFechaToolStripMenuItem});
+            this.facturasToolStripMenuItem1.Name = "facturasToolStripMenuItem1";
+            this.facturasToolStripMenuItem1.Size = new System.Drawing.Size(133, 29);
+            this.facturasToolStripMenuItem1.Text = "Facturas";
+            // 
+            // facturaPorPasajeroToolStripMenuItem
+            // 
+            this.facturaPorPasajeroToolStripMenuItem.Name = "facturaPorPasajeroToolStripMenuItem";
+            this.facturaPorPasajeroToolStripMenuItem.Size = new System.Drawing.Size(291, 30);
+            this.facturaPorPasajeroToolStripMenuItem.Text = "Factura por Pasajero";
+            this.facturaPorPasajeroToolStripMenuItem.Click += new System.EventHandler(this.facturaPorPasajeroToolStripMenuItem_Click);
+            // 
+            // facturasPorFechaToolStripMenuItem
+            // 
+            this.facturasPorFechaToolStripMenuItem.Name = "facturasPorFechaToolStripMenuItem";
+            this.facturasPorFechaToolStripMenuItem.Size = new System.Drawing.Size(291, 30);
+            this.facturasPorFechaToolStripMenuItem.Text = "Facturas por Fecha";
+            this.facturasPorFechaToolStripMenuItem.Click += new System.EventHandler(this.facturasPorFechaToolStripMenuItem_Click);
+            // 
+            // menuStrip4
+            // 
+            this.menuStrip4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.menuStrip4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.menuStrip4.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.avionesToolStripMenuItem1,
+            this.aeropuertosToolStripMenuItem1,
+            this.facturacionesToolStripMenuItem,
+            this.viajesToolStripMenuItem2,
+            this.tripulacionToolStripMenuItem1,
+            this.viajesToolStripMenuItem3,
+            this.vuelosToolStripMenuItem});
+            this.menuStrip4.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip4.Name = "menuStrip4";
+            this.menuStrip4.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.menuStrip4.Size = new System.Drawing.Size(168, 509);
+            this.menuStrip4.TabIndex = 7;
+            this.menuStrip4.Text = "menuStrip4";
+            this.menuStrip4.Visible = false;
+            // 
+            // avionesToolStripMenuItem1
+            // 
+            this.avionesToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.porcentajeDeAvionesPorModeloToolStripMenuItem,
+            this.porcentajeDeAvionesPorAeropuertoToolStripMenuItem});
+            this.avionesToolStripMenuItem1.Name = "avionesToolStripMenuItem1";
+            this.avionesToolStripMenuItem1.Size = new System.Drawing.Size(151, 29);
+            this.avionesToolStripMenuItem1.Text = "Aviones";
+            // 
+            // porcentajeDeAvionesPorModeloToolStripMenuItem
+            // 
+            this.porcentajeDeAvionesPorModeloToolStripMenuItem.Name = "porcentajeDeAvionesPorModeloToolStripMenuItem";
+            this.porcentajeDeAvionesPorModeloToolStripMenuItem.Size = new System.Drawing.Size(451, 30);
+            this.porcentajeDeAvionesPorModeloToolStripMenuItem.Text = "Porcentaje de aviones por modelo";
+            this.porcentajeDeAvionesPorModeloToolStripMenuItem.Click += new System.EventHandler(this.porcentajeDeAvionesPorModeloToolStripMenuItem_Click);
+            // 
+            // porcentajeDeAvionesPorAeropuertoToolStripMenuItem
+            // 
+            this.porcentajeDeAvionesPorAeropuertoToolStripMenuItem.Name = "porcentajeDeAvionesPorAeropuertoToolStripMenuItem";
+            this.porcentajeDeAvionesPorAeropuertoToolStripMenuItem.Size = new System.Drawing.Size(451, 30);
+            this.porcentajeDeAvionesPorAeropuertoToolStripMenuItem.Text = "Porcentaje de aviones por aeropuerto";
+            this.porcentajeDeAvionesPorAeropuertoToolStripMenuItem.Click += new System.EventHandler(this.porcentajeDeAvionesPorAeropuertoToolStripMenuItem_Click);
+            // 
+            // aeropuertosToolStripMenuItem1
+            // 
+            this.aeropuertosToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cantidadDeAeropuertosPorPaísToolStripMenuItem});
+            this.aeropuertosToolStripMenuItem1.Name = "aeropuertosToolStripMenuItem1";
+            this.aeropuertosToolStripMenuItem1.Size = new System.Drawing.Size(151, 29);
+            this.aeropuertosToolStripMenuItem1.Text = "Aeropuertos";
+            // 
+            // cantidadDeAeropuertosPorPaísToolStripMenuItem
+            // 
+            this.cantidadDeAeropuertosPorPaísToolStripMenuItem.Name = "cantidadDeAeropuertosPorPaísToolStripMenuItem";
+            this.cantidadDeAeropuertosPorPaísToolStripMenuItem.Size = new System.Drawing.Size(411, 30);
+            this.cantidadDeAeropuertosPorPaísToolStripMenuItem.Text = "Cantidad de aeropuertos por país";
+            this.cantidadDeAeropuertosPorPaísToolStripMenuItem.Click += new System.EventHandler(this.cantidadDeAeropuertosPorPaísToolStripMenuItem_Click);
+            // 
+            // facturacionesToolStripMenuItem
+            // 
+            this.facturacionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cantidadFacturadaPorMesToolStripMenuItem,
+            this.cantidadDeFacturasPorTipoDePagoToolStripMenuItem});
+            this.facturacionesToolStripMenuItem.Name = "facturacionesToolStripMenuItem";
+            this.facturacionesToolStripMenuItem.Size = new System.Drawing.Size(151, 29);
+            this.facturacionesToolStripMenuItem.Text = "Facturaciones";
+            // 
+            // cantidadFacturadaPorMesToolStripMenuItem
+            // 
+            this.cantidadFacturadaPorMesToolStripMenuItem.Name = "cantidadFacturadaPorMesToolStripMenuItem";
+            this.cantidadFacturadaPorMesToolStripMenuItem.Size = new System.Drawing.Size(452, 30);
+            this.cantidadFacturadaPorMesToolStripMenuItem.Text = "Cantidad facturada por mes";
+            this.cantidadFacturadaPorMesToolStripMenuItem.Click += new System.EventHandler(this.cantidadFacturadaPorMesToolStripMenuItem_Click);
+            // 
+            // cantidadDeFacturasPorTipoDePagoToolStripMenuItem
+            // 
+            this.cantidadDeFacturasPorTipoDePagoToolStripMenuItem.Name = "cantidadDeFacturasPorTipoDePagoToolStripMenuItem";
+            this.cantidadDeFacturasPorTipoDePagoToolStripMenuItem.Size = new System.Drawing.Size(452, 30);
+            this.cantidadDeFacturasPorTipoDePagoToolStripMenuItem.Text = "Cantidad de facturas por tipo de pago";
+            this.cantidadDeFacturasPorTipoDePagoToolStripMenuItem.Click += new System.EventHandler(this.cantidadDeFacturasPorTipoDePagoToolStripMenuItem_Click);
+            // 
+            // viajesToolStripMenuItem2
+            // 
+            this.viajesToolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.porcentajeDePasajerosMayoresDeEdadToolStripMenuItem,
+            this.porcentajeDePasajerosPorVueloEnUnAñoToolStripMenuItem,
+            this.porcentajeDeLosMesesConMayoresReservasToolStripMenuItem});
+            this.viajesToolStripMenuItem2.Name = "viajesToolStripMenuItem2";
+            this.viajesToolStripMenuItem2.Size = new System.Drawing.Size(151, 29);
+            this.viajesToolStripMenuItem2.Text = "Pasajeros";
+            // 
+            // porcentajeDePasajerosMayoresDeEdadToolStripMenuItem
+            // 
+            this.porcentajeDePasajerosMayoresDeEdadToolStripMenuItem.Name = "porcentajeDePasajerosMayoresDeEdadToolStripMenuItem";
+            this.porcentajeDePasajerosMayoresDeEdadToolStripMenuItem.Size = new System.Drawing.Size(544, 30);
+            this.porcentajeDePasajerosMayoresDeEdadToolStripMenuItem.Text = "Porcentaje de pasajeros mayores de edad";
+            this.porcentajeDePasajerosMayoresDeEdadToolStripMenuItem.Click += new System.EventHandler(this.porcentajeDePasajerosMayoresDeEdadToolStripMenuItem_Click);
+            // 
+            // porcentajeDePasajerosPorVueloEnUnAñoToolStripMenuItem
+            // 
+            this.porcentajeDePasajerosPorVueloEnUnAñoToolStripMenuItem.Name = "porcentajeDePasajerosPorVueloEnUnAñoToolStripMenuItem";
+            this.porcentajeDePasajerosPorVueloEnUnAñoToolStripMenuItem.Size = new System.Drawing.Size(544, 30);
+            this.porcentajeDePasajerosPorVueloEnUnAñoToolStripMenuItem.Text = "Porcentaje de pasajeros por clase";
+            this.porcentajeDePasajerosPorVueloEnUnAñoToolStripMenuItem.Click += new System.EventHandler(this.porcentajeDePasajerosPorVueloEnUnAñoToolStripMenuItem_Click);
+            // 
+            // tripulacionToolStripMenuItem1
+            // 
+            this.tripulacionToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.porcentajeDeTripulaciónPorCargoToolStripMenuItem});
+            this.tripulacionToolStripMenuItem1.Name = "tripulacionToolStripMenuItem1";
+            this.tripulacionToolStripMenuItem1.Size = new System.Drawing.Size(151, 29);
+            this.tripulacionToolStripMenuItem1.Text = "Tripulacion";
+            // 
+            // porcentajeDeTripulaciónPorCargoToolStripMenuItem
+            // 
+            this.porcentajeDeTripulaciónPorCargoToolStripMenuItem.Name = "porcentajeDeTripulaciónPorCargoToolStripMenuItem";
+            this.porcentajeDeTripulaciónPorCargoToolStripMenuItem.Size = new System.Drawing.Size(425, 30);
+            this.porcentajeDeTripulaciónPorCargoToolStripMenuItem.Text = "Porcentaje de tripulación por cargo";
+            this.porcentajeDeTripulaciónPorCargoToolStripMenuItem.Click += new System.EventHandler(this.porcentajeDeTripulaciónPorCargoToolStripMenuItem_Click);
+            // 
+            // viajesToolStripMenuItem3
+            // 
+            this.viajesToolStripMenuItem3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cantidadDeViajesVendidosPorAeropuertoToolStripMenuItem,
+            this.cantidadDeViajesRealizadosPorPaisToolStripMenuItem,
+            this.porcentajeDeViajesPorMesToolStripMenuItem,
+            this.porcentajeDeViajesPorDíaDeSemanaToolStripMenuItem});
+            this.viajesToolStripMenuItem3.Name = "viajesToolStripMenuItem3";
+            this.viajesToolStripMenuItem3.Size = new System.Drawing.Size(151, 29);
+            this.viajesToolStripMenuItem3.Text = "Viajes";
+            // 
+            // cantidadDeViajesVendidosPorAeropuertoToolStripMenuItem
+            // 
+            this.cantidadDeViajesVendidosPorAeropuertoToolStripMenuItem.Name = "cantidadDeViajesVendidosPorAeropuertoToolStripMenuItem";
+            this.cantidadDeViajesVendidosPorAeropuertoToolStripMenuItem.Size = new System.Drawing.Size(469, 30);
+            this.cantidadDeViajesVendidosPorAeropuertoToolStripMenuItem.Text = "Cantidad de viajes vendidos por fecha";
+            this.cantidadDeViajesVendidosPorAeropuertoToolStripMenuItem.Click += new System.EventHandler(this.cantidadDeViajesVendidosPorAeropuertoToolStripMenuItem_Click);
+            // 
+            // cantidadDeViajesRealizadosPorPaisToolStripMenuItem
+            // 
+            this.cantidadDeViajesRealizadosPorPaisToolStripMenuItem.Name = "cantidadDeViajesRealizadosPorPaisToolStripMenuItem";
+            this.cantidadDeViajesRealizadosPorPaisToolStripMenuItem.Size = new System.Drawing.Size(469, 30);
+            this.cantidadDeViajesRealizadosPorPaisToolStripMenuItem.Text = "Cantidad de viajes realizados por pais";
+            this.cantidadDeViajesRealizadosPorPaisToolStripMenuItem.Click += new System.EventHandler(this.cantidadDeViajesRealizadosPorPaisToolStripMenuItem_Click);
+            // 
+            // porcentajeDeViajesPorMesToolStripMenuItem
+            // 
+            this.porcentajeDeViajesPorMesToolStripMenuItem.Name = "porcentajeDeViajesPorMesToolStripMenuItem";
+            this.porcentajeDeViajesPorMesToolStripMenuItem.Size = new System.Drawing.Size(469, 30);
+            this.porcentajeDeViajesPorMesToolStripMenuItem.Text = "Porcentaje de viajes por mes";
+            this.porcentajeDeViajesPorMesToolStripMenuItem.Click += new System.EventHandler(this.porcentajeDeViajesPorMesToolStripMenuItem_Click);
+            // 
+            // porcentajeDeViajesPorDíaDeSemanaToolStripMenuItem
+            // 
+            this.porcentajeDeViajesPorDíaDeSemanaToolStripMenuItem.Name = "porcentajeDeViajesPorDíaDeSemanaToolStripMenuItem";
+            this.porcentajeDeViajesPorDíaDeSemanaToolStripMenuItem.Size = new System.Drawing.Size(469, 30);
+            this.porcentajeDeViajesPorDíaDeSemanaToolStripMenuItem.Text = "Porcentaje de viajes por día de semana";
+            this.porcentajeDeViajesPorDíaDeSemanaToolStripMenuItem.Click += new System.EventHandler(this.porcentajeDeViajesPorDíaDeSemanaToolStripMenuItem_Click);
+            // 
+            // vuelosToolStripMenuItem
+            // 
+            this.vuelosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cantidadDeVuelosRealizadosPorAviónToolStripMenuItem,
+            this.porcentajeDeVuelosPorAeropuertoToolStripMenuItem,
+            this.cantidadDeVuelosRealizadosPorTripulaciónToolStripMenuItem});
+            this.vuelosToolStripMenuItem.Name = "vuelosToolStripMenuItem";
+            this.vuelosToolStripMenuItem.Size = new System.Drawing.Size(151, 29);
+            this.vuelosToolStripMenuItem.Text = "Vuelos";
+            // 
+            // cantidadDeVuelosRealizadosPorAviónToolStripMenuItem
+            // 
+            this.cantidadDeVuelosRealizadosPorAviónToolStripMenuItem.Name = "cantidadDeVuelosRealizadosPorAviónToolStripMenuItem";
+            this.cantidadDeVuelosRealizadosPorAviónToolStripMenuItem.Size = new System.Drawing.Size(523, 30);
+            this.cantidadDeVuelosRealizadosPorAviónToolStripMenuItem.Text = "Cantidad de vuelos realizados por avión";
+            this.cantidadDeVuelosRealizadosPorAviónToolStripMenuItem.Click += new System.EventHandler(this.cantidadDeVuelosRealizadosPorAviónToolStripMenuItem_Click);
+            // 
+            // porcentajeDeVuelosPorAeropuertoToolStripMenuItem
+            // 
+            this.porcentajeDeVuelosPorAeropuertoToolStripMenuItem.Name = "porcentajeDeVuelosPorAeropuertoToolStripMenuItem";
+            this.porcentajeDeVuelosPorAeropuertoToolStripMenuItem.Size = new System.Drawing.Size(523, 30);
+            this.porcentajeDeVuelosPorAeropuertoToolStripMenuItem.Text = "Porcentaje de vuelos por aeropuerto";
+            this.porcentajeDeVuelosPorAeropuertoToolStripMenuItem.Click += new System.EventHandler(this.porcentajeDeVuelosPorAeropuertoToolStripMenuItem_Click);
+            // 
+            // cantidadDeVuelosRealizadosPorTripulaciónToolStripMenuItem
+            // 
+            this.cantidadDeVuelosRealizadosPorTripulaciónToolStripMenuItem.Name = "cantidadDeVuelosRealizadosPorTripulaciónToolStripMenuItem";
+            this.cantidadDeVuelosRealizadosPorTripulaciónToolStripMenuItem.Size = new System.Drawing.Size(523, 30);
+            this.cantidadDeVuelosRealizadosPorTripulaciónToolStripMenuItem.Text = "Cantidad de vuelos realizados por tripulación";
+            this.cantidadDeVuelosRealizadosPorTripulaciónToolStripMenuItem.Click += new System.EventHandler(this.cantidadDeVuelosRealizadosPorTripulaciónToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
@@ -898,13 +943,20 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.Enabled = false;
             this.pictureBox1.Image = global::TrabajoPrácticoPAV.Properties.Resources.Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(-147, 79);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(-147, 76);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1307, 325);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            // 
+            // porcentajeDeLosMesesConMayoresReservasToolStripMenuItem
+            // 
+            this.porcentajeDeLosMesesConMayoresReservasToolStripMenuItem.Name = "porcentajeDeLosMesesConMayoresReservasToolStripMenuItem";
+            this.porcentajeDeLosMesesConMayoresReservasToolStripMenuItem.Size = new System.Drawing.Size(544, 30);
+            this.porcentajeDeLosMesesConMayoresReservasToolStripMenuItem.Text = "Porcentaje de los meses con mayores reservas";
+            this.porcentajeDeLosMesesConMayoresReservasToolStripMenuItem.Click += new System.EventHandler(this.porcentajeDeLosMesesConMayoresReservasToolStripMenuItem_Click);
             // 
             // Frm_Principal
             // 
@@ -930,20 +982,20 @@
             this.PanelMenu.ResumeLayout(false);
             this.PanelFormularios.ResumeLayout(false);
             this.PanelFormularios.PerformLayout();
-            this.menuStrip4.ResumeLayout(false);
-            this.menuStrip4.PerformLayout();
-            this.menuStrip3.ResumeLayout(false);
-            this.menuStrip3.PerformLayout();
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.menuStrip3.ResumeLayout(false);
+            this.menuStrip3.PerformLayout();
+            this.menuStrip4.ResumeLayout(false);
+            this.menuStrip4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
-        #endregion
+        #endregion Código generado por el Diseñador de Windows Forms
 
         private System.Windows.Forms.Panel BarraSuperior;
         private System.Windows.Forms.PictureBox Btn_Cerrar;
@@ -996,9 +1048,7 @@
         private System.Windows.Forms.ToolStripMenuItem familiaresPorPasajeroToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem avionPorModeloToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pasajerosToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem telefonoPorPasajeroToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tripulacionToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem tripulacionPorCargoToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem tripulacionPorVueloToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem tramosPorViajeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viajesEntreFechaInicialYFechaFinalPorDestinoToolStripMenuItem;
@@ -1008,7 +1058,6 @@
         private System.Windows.Forms.ToolStripMenuItem avionesToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem porcentajeDeAvionesPorModeloToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem porcentajeDeAvionesPorAeropuertoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem porcentajeDeAsientosOcupadosPorVueloToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aeropuertosToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem cantidadDeAeropuertosPorPaísToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem facturacionesToolStripMenuItem;
@@ -1025,10 +1074,16 @@
         private System.Windows.Forms.ToolStripMenuItem porcentajeDeViajesPorMesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem porcentajeDeViajesPorDíaDeSemanaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem vuelosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem porcentajeDeAsientosOcupadosPorVueloToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem cantidadDeVuelosRealizadosPorAviónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem porcentajeDeVuelosPorAeropuertoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cantidadDeVuelosRealizadosPorTripulaciónToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem equipajePorPasajeroToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem facturasToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem facturaPorPasajeroToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem facturasPorFechaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aviónToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem teléfonosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tripulaciónPorVueloToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem porcentajeDeLosMesesConMayoresReservasToolStripMenuItem;
     }
 }
-

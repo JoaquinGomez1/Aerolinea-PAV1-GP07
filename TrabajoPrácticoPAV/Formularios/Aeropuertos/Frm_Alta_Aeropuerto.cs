@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoPrácticoPAV.NE_Usuarios;
 using TrabajoPrácticoPAV.Clase;
@@ -17,6 +10,7 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
     {
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
+
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWind, int wMsg, int wParam, int lParam);
 
@@ -41,9 +35,9 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
         private void btn_aceptar_Click(object sender, EventArgs e)
         {
             Tratamientos_Especiales Tratamiento = new Tratamientos_Especiales();
-            if(Tratamiento.Validar(this.Controls) == Tratamientos_Especiales.Resultado.correcto)
+            if (Tratamiento.Validar(this.Controls) == Tratamientos_Especiales.Resultado.correcto)
             {
-                if(txt_codigo.TextLength < 4 && txt_nombre.TextLength < 51)
+                if (txt_codigo.TextLength < 4 && txt_nombre.TextLength < 51)
                 {
                     NE_Aeropuertos aeropuerto = new NE_Aeropuertos();
                     aeropuerto.Pp_codigo = txt_codigo.Text;
