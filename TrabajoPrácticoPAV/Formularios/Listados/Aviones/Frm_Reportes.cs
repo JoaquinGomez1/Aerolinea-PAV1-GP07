@@ -2,6 +2,7 @@
 using System.Data;
 using System.Windows.Forms;
 using Microsoft.Reporting.WinForms;
+using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.NE_Usuarios;
 
 namespace TrabajoPrácticoPAV.Formularios.Listados
@@ -13,6 +14,8 @@ namespace TrabajoPrácticoPAV.Formularios.Listados
         public Frm_Reportes()
         {
             InitializeComponent();
+            this.BackColor = Estilo.ColorFondoForms;
+            Estilo.FormatearEstilo(this.Controls);
         }
 
         private void Frm_Reportes_Load(object sender, EventArgs e)
@@ -54,7 +57,7 @@ namespace TrabajoPrácticoPAV.Formularios.Listados
             // Busca Todos
             if (rbu03.Checked == true)
             {
-                DataTable tabla = aviones.RecuperarTodosReporte(); 
+                DataTable tabla = aviones.RecuperarTodosReporte();
                 ArmarReporteUsuario01(tabla);
             }
         }
