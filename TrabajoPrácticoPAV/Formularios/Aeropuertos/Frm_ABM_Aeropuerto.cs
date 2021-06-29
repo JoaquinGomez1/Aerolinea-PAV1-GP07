@@ -114,5 +114,10 @@ namespace TrabajoPrácticoPAV.Formularios.Aeropuertos
             btn_modificar.Enabled = false;
             btn_eliminar.Enabled = false;
         }
+
+        private void button_Aerolinea1_Click(object sender, EventArgs e)
+        {
+            printDialog1.ShowDialog();
+        }
     }
 }
