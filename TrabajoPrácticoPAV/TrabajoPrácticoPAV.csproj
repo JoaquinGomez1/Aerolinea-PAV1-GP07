@@ -875,6 +875,24 @@
     <Compile Include="Formularios\Tripulacion\Frm_ABMTripulacion.Designer.cs">
       <DependentUpon>Frm_ABMTripulacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Tripulacion_x_vuelo\Frm_ABM_TripulacionxVuelo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Tripulacion_x_vuelo\Frm_ABM_TripulacionxVuelo.Designer.cs">
+      <DependentUpon>Frm_ABM_TripulacionxVuelo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Tripulacion_x_vuelo\Frm_Alta_TripulacionxVuelo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Tripulacion_x_vuelo\Frm_Alta_TripulacionxVuelo.Designer.cs">
+      <DependentUpon>Frm_Alta_TripulacionxVuelo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Tripulacion_x_vuelo\Frm_Eliminar_TripulacionxVuelo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Tripulacion_x_vuelo\Frm_Eliminar_TripulacionxVuelo.Designer.cs">
+      <DependentUpon>Frm_Eliminar_TripulacionxVuelo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Viajes\Frm_ConsultarTramosPorViaje.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -945,6 +963,7 @@
     <Compile Include="NE_Usuarios\NE_TipoDoc.cs" />
     <Compile Include="NE_Usuarios\NE_Tramos.cs" />
     <Compile Include="NE_Usuarios\NE_Tripulacion.cs" />
+    <Compile Include="NE_Usuarios\NE_TripulacionxVuelo.cs" />
     <Compile Include="NE_Usuarios\NE_Viajes.cs" />
     <Compile Include="NE_Usuarios\NE_Vuelos.cs" />
     <Compile Include="Program.cs" />
@@ -1276,6 +1295,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Tripulacion\Frm_ABMTripulacion.resx">
       <DependentUpon>Frm_ABMTripulacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Tripulacion_x_vuelo\Frm_ABM_TripulacionxVuelo.resx">
+      <DependentUpon>Frm_ABM_TripulacionxVuelo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Tripulacion_x_vuelo\Frm_Alta_TripulacionxVuelo.resx">
+      <DependentUpon>Frm_Alta_TripulacionxVuelo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Tripulacion_x_vuelo\Frm_Eliminar_TripulacionxVuelo.resx">
+      <DependentUpon>Frm_Eliminar_TripulacionxVuelo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Viajes\Frm_ConsultarTramosPorViaje.resx">
       <DependentUpon>Frm_ConsultarTramosPorViaje.cs</DependentUpon>
