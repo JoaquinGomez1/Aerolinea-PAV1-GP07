@@ -77,9 +77,7 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
         public DataTable RecuperarTodosReporte()
         {
             string sql = @"SELECT Modelo.nombre, count(*) as 'Valor' from Avion inner join  Modelo on Avion.idModelo = Modelo.idModelo group by (Modelo.nombre)";
-            DataTable tabla = new DataTable();
-            tabla = _BD.EjecutarSelect(sql);
-            return tabla;
+            return _BD.EjecutarSelect(sql);
         }
 
         public DataTable RecuperarAvionesPorRango(string desde, string hasta)
