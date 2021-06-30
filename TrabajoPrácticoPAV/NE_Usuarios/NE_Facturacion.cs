@@ -1,6 +1,7 @@
 ﻿using TrabajoPrácticoPAV.Clase;
 using TrabajoPrácticoPAV.Backend;
 using System.Data;
+using System.Windows.Forms;
 
 namespace TrabajoPrácticoPAV.NE_Usuarios
 {
@@ -46,7 +47,14 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
         {
             string sql = $"INSERT INTO Factura (fechaPago, numeroDeReserva, idTipoPago) VALUES "
                             + $"(CONVERT(DATE, GETDATE(), 110), {valores})";
+            
+            _BD.InicioTransaccion();
             _BD.Insertar(sql, false);
+
+            if (_BD.FinalTransaccion() != Conexion_DB.EstadoTransaccion.correcto)
+            {
+               MessageBox.Show("No se realizó la grabación de los datos, hubo un error");
+            }
         }
         public void CargarGrillaVuelos(DataTable vuelo, DataGridView_Aerolinea grid_vuelo)
         {
@@ -77,7 +85,16 @@ namespace TrabajoPrácticoPAV.NE_Usuarios
         public void Eliminar(string idFactura)
         {
             string sql = $"DELETE FROM Factura WHERE idFactura = {idFactura}";
-            _BD.Borrar(sql, false);
+            
+            _BD.InicioTransaccion();
+            _BD.Borrar(sql, false); ;
+
+            if (_BD.FinalTransaccion() != Conexion_DB.EstadoTransaccion.correcto)
+            {
+
+                MessageBox.Show("No se realizó la grabación de los datos, hubo un error");
+            }
+
         }
         public DataTable Reporte_Factura_Todas()
         {

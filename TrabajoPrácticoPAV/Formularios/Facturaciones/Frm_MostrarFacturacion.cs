@@ -89,6 +89,8 @@ namespace TrabajoPrácticoPAV.Formularios.Facturaciones
 
             if (Tratamiento.Validar(this.Controls) == Resultado.correcto)
                 facturacion.Insertar($"{txt_numeroReserva.Text}, {cmb_formaPago.SelectedValue}");
+            this.Close();
         }
+        
     }
 }

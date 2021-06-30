@@ -194,7 +194,8 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             }
         }
 
-        private void btn_modify_Click(object sender, EventArgs e)
+
+        private void btn_modify_Click_1(object sender, EventArgs e)
         {
             double precioDouble = Convert.ToDouble(lbl_precio.Text);
 
@@ -211,6 +212,5 @@ namespace TrabajoPrácticoPAV.Formularios.Reservas
             _NE.ModificarReserva(reserva);
             this.Close();
         }
-
     }
 }
